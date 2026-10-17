@@ -39,7 +39,12 @@ class TesteRotasELexico(unittest.TestCase):
 class TesteAlertaEValidacao(unittest.TestCase):
     def test_alerta_diario_nomeia_problema_e_acao(self):
         a = json.loads((ROOT / "estado/alerta_motores.json").read_text(encoding="utf-8"))
-        self.assertEqual(a["total"], a["funcionando"] + a["em_alerta"])
+        # 16/10: o motor com bloqueio permanente conhecido (config/sensores.json) fica À PARTE — nem funcionando nem em
+        # alerta; a conta tem de fechar com as três partes, e o painel tem de dizer quantos estão à parte
+        self.assertEqual(a["total"], a["funcionando"] + a["em_alerta"] + len(a.get("bloqueio_conhecido") or []))
+        for b in a.get("bloqueio_conhecido") or []:
+            self.assertTrue(b["id"] and b["problema"])
+        self.assertIn("com bloqueio conhecido (à parte", (ROOT / "docs/dashboard.html").read_text(encoding="utf-8"))
         for x in a["alertas"]:
             self.assertIn(x["gravidade"], ("alta", "media")); self.assertTrue(x["problema"] and x["acao"])
         self.assertTrue((ROOT / "docs/dados/alerta_motores.json").exists())
@@ -50,24 +55,51 @@ class TesteAlertaEValidacao(unittest.TestCase):
         self.assertTrue(_aguarda_local({"saude": [], "diagnostico": {"motivo_zero": "aguardando coleta local (Brasil): ..."}}))
         self.assertFalse(_aguarda_local({"saude": [{"erro": "HTTPError"}], "diagnostico": {"motivo_zero": "x"}}))
         m = json.loads((ROOT / "docs/dados/motores.json").read_text(encoding="utf-8"))
+        # 17/10: o DO de Goiânia voltou a ler pelo GitHub (10 edições, HTTP 200) e deixou de aguardar coleta local; a
+        # regra vale para TODO motor oficial, pelo estado da esquadra que o gerou — não para um motor fixo
+        esq = json.loads((ROOT / "estado/esquadra.json").read_text(encoding="utf-8")).get("sensores") or {}
+        conferidos = 0
+        for o in m["oficiais"]:
+            s = esq.get(o["id"])
+            if not s:
+                continue
+            conferidos += 1
+            if _aguarda_local(s):
+                self.assertEqual(o["situacao"], "aguardando coleta local", o["id"])
+            else:
+                self.assertNotEqual(o["situacao"], "aguardando coleta local", o["id"])
+        self.assertGreaterEqual(conferidos, 1)
         goiania = [o for o in m["oficiais"] if o["id"] == "do-goiania"][0]
-        self.assertEqual(goiania["situacao"], "aguardando coleta local")
+        self.assertNotEqual(goiania["situacao"], "bloqueado")
 
     def test_validacao_do_mes_dia_a_dia(self):
         v = json.loads((ROOT / "estado/validacao_motores_mes.json").read_text(encoding="utf-8"))
-        self.assertEqual(v["mes"], "2026-09"); self.assertGreaterEqual(v["dias_no_periodo"], 20)
+        # a validação é refeita todo dia para o MÊS CORRENTE, do dia 1 até 'ate' (o teste de 20/09 fixava setembro)
+        ate = datetime.date.fromisoformat(v["ate"][:10])
+        self.assertEqual(v["mes"], ate.strftime("%Y-%m")); self.assertEqual(v["dias_no_periodo"], ate.day)
         r = v["resumo"]; self.assertEqual(r["integros"] + r["com_lacunas"] + r["nao_executaram"], len(v["motores"]))
         for k, g in v["motores"].items():
             self.assertIn(g["veredito"], ("íntegro", "lacunas", "não executou"))
             self.assertEqual(len(g["dias"]), v["dias_no_periodo"])
-        self.assertGreaterEqual(v["motores"]["dou"]["dias_executados"], 15)      # o DOU leu quase todo dia
+            self.assertEqual([x["dia"] for x in g["dias"]],
+                             [(ate.replace(day=1) + datetime.timedelta(days=i)).isoformat() for i in range(ate.day)], k)
+        self.assertGreaterEqual(v["motores"]["dou"]["dias_executados"], 0.75 * v["dias_no_periodo"])  # o DOU leu quase todo dia
 
     def test_pacote_do_desktop_cobre_o_que_falta(self):
         t = (ROOT / "estado/pacote_desktop.md").read_text(encoding="utf-8")
-        for x in ("Etapa 1", "Etapa 2", "Etapa 3", "Etapa 4", "Etapa 5", "Opus 5", "coleta_brasil.py", "ingerir_navegador", "Nunca estime datas"):
+        for x in ("Etapa 1", "Etapa 2", "Etapa 3", "Etapa 4", "Etapa 5", "Opus 5", "ingerir_navegador", "Nunca estime datas"):
             self.assertIn(x, t, x)
         j = json.loads((ROOT / "estado/pacote_desktop.json").read_text(encoding="utf-8"))
-        self.assertGreaterEqual(j["motores_coleta_local"] + j["motores_em_alerta"], 1)
+        # 17/10: dia sem motor parado é um estado legítimo; o pacote tem de DIZER isso, e o script de coleta local
+        # continua no pacote enquanto houver motor ou oportunidade em portal que recusa IP estrangeiro
+        if j["motores_coleta_local"] == 0:
+            self.assertIn("Nenhum motor aguardando coleta local hoje.", t)
+        if j["motores_em_alerta"] == 0:
+            self.assertIn("Nenhum motor em alerta.", t)
+        if j["motores_coleta_local"] + j["oportunidades_ip_brasil"]:
+            self.assertIn("python scripts/coleta_brasil.py", t)
+        else:
+            self.assertNotIn("python scripts/coleta_brasil.py", t)
         self.assertIn("pacote_desktop.md", (ROOT / "docs/claude/ARRANQUE-CLAUDE-DESKTOP.md").read_text(encoding="utf-8"))
         html = (ROOT / "docs/dashboard.html").read_text(encoding="utf-8")
         self.assertIn("ALERTA DIÁRIO DOS MOTORES", html); self.assertIn("Validação dia a dia", html)

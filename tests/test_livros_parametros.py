@@ -24,7 +24,11 @@ class TestArquivo(unittest.TestCase):
 
     def test_dez_blocos_e_todos_decididos(self):
         self.assertEqual(len(self.d["blocos"]), 10)
-        self.assertGreaterEqual(len(self.itens), 300)
+        # 16/10/2026: o expurgo (fora de Goiás só estaduais e capitais) tirou livros municipais de outros estados; a
+        # pesquisa de 29/09 continua com os 300+: o que ficou mais o que saiu (bloco "expurgo" da própria base)
+        saiu = (self.d.get("expurgo") or {}).get("ids") or []
+        self.assertFalse(set(saiu) & {r["id"] for r in self.itens}, "registro dado como expurgado continua na base")
+        self.assertGreaterEqual(len(self.itens) + len(saiu), 300)
         self.assertEqual(len({r["id"] for r in self.itens}), len(self.itens), "id repetido")
         self.assertEqual(sum(self.d["contagem"].values()), len(self.itens))
         for r in self.itens:

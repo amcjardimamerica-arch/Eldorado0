@@ -1,3 +1,4 @@
+"""Revisão das normas: baixa a URL oficial de cada lei do catálogo (biblioteca/leis/catalogo.json), guarda o hash em estado/leis/ e aponta as que mudaram desde a consulta anterior."""
 from __future__ import annotations
 import json
 from urllib.error import HTTPError, URLError

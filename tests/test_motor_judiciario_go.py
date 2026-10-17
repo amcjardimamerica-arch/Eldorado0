@@ -388,3 +388,24 @@ class Motor11CNJ(unittest.TestCase):
         from src import status_motores as S
         self.assertTrue(str(S.PROPRIOS["judiciario-cnj"]).endswith("estado/judiciario_cnj.json"))
         self.assertTrue(str(S.PROPRIOS["judiciario-tjgo"]).endswith("estado/judiciario_tjgo.json"))
+
+
+class TesteRepublicacaoDoCnjDeOutroEstado(unittest.TestCase):
+    """17/10: "Santana — Justiça do Amapá destina…" entrava como GO/Santana e o livro misturava GO e AP."""
+
+    def _reg(self, titulo, comarca=None, fonte="C"):
+        c = {"veredito": "ACOMPANHAR", "motivos": [], **({"comarca": comarca} if comarca else {})}
+        return J._registro(c, {"fonte": fonte, "titulo": titulo, "url": "https://www.cnj.jus.br/x"}, ["k"])
+
+    def test_estado_nomeado_no_titulo_vence(self):
+        r = self._reg("Justiça do Amapá destina mais de R$ 450 mil em verbas pecuniárias a projetos sociais", "Santana")
+        self.assertEqual((r["uf"], r["territorio"], r["municipio"]), ("AP", "AP/Santana", "AP/Santana"))
+
+    def test_goias_continua_goias(self):
+        self.assertEqual(self._reg("Comarca de Anápolis destina prestações pecuniárias", "Anápolis")["uf"], "GO")
+        self.assertEqual(self._reg("TJGO e Justiça do Pará trocam experiências", "Goiânia")["uf"], "GO")
+        self.assertEqual(self._reg("Edital da 1ª Vara", "Anápolis", fonte="A")["uf"], "GO")
+
+    def test_nacional_sem_comarca(self):
+        r = self._reg("CNJ edita resolução sobre prestações pecuniárias")
+        self.assertEqual((r["uf"], r["territorio"]), (None, "BR"))

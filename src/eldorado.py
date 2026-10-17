@@ -1,3 +1,4 @@
+"""Coletor genérico de fontes: baixa cada fonte com política de rede segura (HTTPS público, robots, redirecionamento controlado), extrai candidatos a edital por termos e links e registra o histórico de cada edital."""
 from __future__ import annotations
 
 import html

@@ -1170,6 +1170,12 @@ def _integrar_analise(e: dict) -> None:
     except Exception:
         return
     itens = ex.get("itens") or {}; fontes = ex.get("fontes_itens") or {}
+    # 17/10/2026: o edital pode trazer "ciclo": null (ou "inscricao": null) — setdefault devolvia None e a montagem do
+    # painel inteiro quebrava (TypeError) na primeira edição com prazo apurado
+    if "ciclo" in e and not isinstance(e["ciclo"], dict):
+        e.pop("ciclo")                                     # nulo: o setdefault abaixo recria quando houver o que pôr
+    if isinstance(e.get("ciclo"), dict) and "inscricao" in e["ciclo"] and not isinstance(e["ciclo"]["inscricao"], dict):
+        e["ciclo"].pop("inscricao")
     fim = _data_de(itens.get("Prazo de inscrição")); ini = _data_de(itens.get("Início das inscrições"))
     origem = fontes.get("Prazo de inscrição") or "análise"
     ver = ex.get("verificacao_externa") or {}
@@ -1593,7 +1599,8 @@ def coletar(hoje: date | None = None) -> dict:
         "esquadra": esquadra,
         "associacoes_cruzamento": _cruzamento_associacoes(editais, hoje),
         "marcacoes_ia": (lambda m: {k: {kk: v[kk] for kk in ("titulo", "uf", "modo", "motivo", "desde", "vezes_vistas", "link_oficial") if kk in v} for k, v in m.items() if not v.get("resolvido_em")}
-                          if m else {})(load_json(ROOT / "dados/editais/marcacoes_ia.json") if (ROOT / "dados/editais/marcacoes_ia.json").exists() else None),
+                          if m else {})(load_json(ROOT / "dados/editais/marcacoes_ia.json")       # 17/10: o arquivo foi absorvido nos livros
+                                        if __import__("src.livro_arquivo", fromlist=["x"]).existe(ROOT / "dados/editais/marcacoes_ia.json") else None),
         "fora_das_50": (lambda f: (f or {}).get("fora_das_50_maiores"))(
             load_json(ROOT / "biblioteca_alexandria/livros/_vistas/fila_verificacao.json") if (ROOT / "biblioteca_alexandria/livros/_vistas/fila_verificacao.json").exists() else None),
         "fluxo_verificacao": (lambda f: {k: (v if k != "aguardando_acao_externa" else {kk: vv for kk, vv in v.items() if kk != "itens"}) for k, v in f.items()} if f else None)(
@@ -1676,7 +1683,11 @@ def coletar(hoje: date | None = None) -> dict:
                    "Detecção de resultado/prorrogação é textual — conferir na página."],
     }
 
-LIMITE_TOTAL_MB = 20      # orçamento total do painel (núcleo + fragmentos)
+LIMITE_TOTAL_MB = 20      # orçamento total do painel (núcleo + fragmentos), fora as listas completas abaixo
+# 17/10/2026 (titular): "o painel deve manter todos os dados. Nada deve ser tirado, compactado ou apresentado
+# parcialmente. Esta lista deve ter o limite removido quando for acessá-la." As listas COMPLETAS que o painel só busca
+# quando a página é aberta não entram no orçamento de tamanho: vão inteiras, sem corte nem compactação.
+LISTAS_SEM_LIMITE = ("ranking_apoiadores.json", "motores.json")
 LIMITE_NUCLEO_MB = 3      # o que carrega na abertura; o resto vem sob demanda
 
 
@@ -1781,12 +1792,14 @@ def publicar_fragmentos(dados: dict, hoje: date) -> dict:
         except Exception:  # noqa: BLE001 — o saneamento nunca derruba a geração da caixa
             _san, _san_base, _san_dups = None, [], {}
         _san_desc, _san_ok = [], []
+        _n_pert = 0                                    # 17/10: contabilidade da caixa (pertinentes fora do núcleo)
         for o in ops.values():
             if o["id"] in ids_nucleo:
                 continue
             v = _pert(o)
             if not v["ok"]:
                 continue
+            _n_pert += 1
             _s = None
             if _san:
                 try:
@@ -1845,6 +1858,7 @@ def publicar_fragmentos(dados: dict, hoje: date) -> dict:
         campos_a = ["id", "titulo", "url", "fonte_nome", "orgao", "uf", "nivel", "area", "fim", "prazo_texto",
                     "valor_texto", "coletado_em", "campanha", "campanha_dia", "pertinencia", "situacao", "objeto", "confirmacao",
                     "tipo_registro", "motivo_tipo", "selo_validacao", "validacao"]
+        _antes_terr = len(abertas)
         try:                                           # 16/10/2026 (titular): outros estados, só estaduais e capitais
             from .repositorio_unico import municipal_fora_de_goias as _fora
             abertas = [e for e in abertas if not _fora(e)]
@@ -1852,6 +1866,10 @@ def publicar_fragmentos(dados: dict, hoje: date) -> dict:
             pass
         pac_a = compactar(abertas, campos_a)
         pac_a["total"] = len(abertas)
+        # 17/10: CONTABILIDADE da caixa — o que é identificado e pertinente (fora do núcleo) ou está aqui, ou saiu com
+        # motivo: descarte do saneamento (estado/saneamento_motores.json) ou a regra territorial de 16/10
+        pac_a["contabilidade"] = {"pertinentes_fora_do_nucleo": _n_pert, "descartadas_saneamento": len(_san_desc),
+                                  "fora_da_regra_territorial": _antes_terr - len(abertas), "publicadas": len(abertas)}
         _grava_se_mudou(pasta / "abertas.json", pac_a, separators=(",", ":"))
         tamanhos["abertas.json"] = tamanho(pac_a)
         dados["abertas_total"] = len(abertas)
@@ -1958,12 +1976,21 @@ def run(hoje: date | None = None) -> dict:
     (ROOT / "docs/dashboard-dados.js").write_text("window.DADOS=" + conteudo + ";\n", encoding="utf-8")
     import os
     nucleo = os.path.getsize(ROOT / "docs/dashboard-dados.js")
+    # 17/10: o orçamento conta TODO fragmento que o painel busca em docs/dados/ (motores, ranking, cartório…), não só
+    # os deste gerador — antes o relatório dizia 3,5 MB com o painel em 51 MB
+    em_dados = sorted(((os.path.getsize(f), f.name) for f in (ROOT / "docs/dados").glob("*.json")), reverse=True)
+    sem_limite = {n: s for s, n in em_dados if n in LISTAS_SEM_LIMITE}
+    frag_total = sum(s for s, n in em_dados if n not in LISTAS_SEM_LIMITE)
     return {"gerado_em": dados["gerado_em"], "editais": len(dados["editais"]),
             "eventos_calendario": len(dados["eventos"]),
             "dias_com_busca": len(dados["bussola"]["dias"]),
             "publicacao": {"nucleo_mb": round(nucleo / 1048576, 2),
-                           "fragmentos_mb": round(frag["total_bytes"] / 1048576, 2),
-                           "total_mb": round((nucleo + frag["total_bytes"]) / 1048576, 2),
+                           "fragmentos_mb": round(frag_total / 1048576, 2),
+                           "fragmentos_deste_gerador_mb": round(frag["total_bytes"] / 1048576, 2),
+                           "total_mb": round((nucleo + frag_total) / 1048576, 2),
+                           "acima_do_limite": (nucleo + frag_total) >= LIMITE_TOTAL_MB * 1048576,
+                           "maiores_fragmentos": {n: round(s / 1048576, 2) for s, n in em_dados[:5]},
+                           "listas_completas_sem_limite_mb": {n: round(v / 1048576, 2) for n, v in sem_limite.items()},
                            "limite_total_mb": LIMITE_TOTAL_MB,
                            "portao_fidelidade": {"classes": portao["classes"], "removidos": portao["removidos"]},
                            "limite_nucleo_mb": LIMITE_NUCLEO_MB,

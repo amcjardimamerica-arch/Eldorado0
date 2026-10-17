@@ -187,7 +187,10 @@ def consolidar() -> list[dict]:
                 _u = em.get("url") or ""
                 if "dadosabertos.camara.leg.br/api" in _u:      # endereço de API não é página para a entidade abrir
                     _u = "https://www.camara.leg.br/deputados/quem-sao"
-                brutos.append(("calendário legislativo · emendas", {"id": em["id"], "titulo": em.get("titulo"), "url": _u,
+                # 17/10: na FRENTE da fila — a mesma emenda também chega dos livros (pelo Interceptador, com outro id, sem
+                # datas e com a decisão automática "pendente"); vindo antes, ela ganhava a deduplicação pelo endereço e a
+                # emenda estadual e a municipal (validadas, com a janela 01/10–30/11) saíam do calendário
+                brutos.insert(0, ("calendário legislativo · emendas", {"id": em["id"], "titulo": em.get("titulo"), "url": _u,
                                "orgao": em.get("orgao") or em.get("fonte_nome"), "uf": em.get("uf"), "objeto": em.get("objeto"),
                                "fim": em.get("fim"), "inicio": em.get("inicio"), "data_publicacao": em.get("inicio"),
                                "fonte_id": em.get("fonte_id"), "nivel": em.get("nivel"), "_emenda": True}))
@@ -633,6 +636,45 @@ def deduplicar(itens: list[dict]) -> tuple[list[dict], dict]:
     return fica, {"duplicatas_fundidas_antes_do_registro": fundidas}
 
 
+def _livro_do_repositorio(x: dict, r: dict | None) -> dict:
+    """17/10: o livro da oportunidade vem do REPOSITÓRIO (fonte única) quando o item da lista não o trouxe — passagem
+    antiga gravava 'opressor' (nome antigo) e a contagem nova lia 'livro_vinculado', dando 262 'abertas sem livro'."""
+    if r and not x.get("livro_vinculado") and r.get("livro"):
+        x["livro_vinculado"] = r["livro"]
+    if r and not x.get("livro_vinculado") and not x.get("livro_dispensa") and r.get("motivo_sem_livro"):
+        x["livro_dispensa"] = r["motivo_sem_livro"]
+    if not x.get("area"):                     # 17/10: o tema também para o que entrou pelo repositório (era None)
+        _it = (r or {}).get("itens") or {}
+        _ck = x.get("checklist") or {}
+        x["area"] = area_tematica(str((_it.get("Área de atuação") or {}).get("valor") or (_ck.get("Área de atuação") or {}).get("v") or ""),
+                                  str(x.get("objeto") or (r or {}).get("objeto") or ""), str(x.get("titulo") or (r or {}).get("titulo") or ""),
+                                  str(x.get("orgao") or (r or {}).get("orgao") or ""))
+    return x
+
+
+def _sem_decisao_publicadas(res: dict) -> int:
+    """28/09: o mapa não sai com oportunidade sem decisão. 17/10: conta-se o que é PUBLICADO (a lista que segue o
+    repositório) — antes contava o conjunto da montagem, antes do filtro do repositório, e uma oportunidade que nem ia
+    para a tela (a curadoria só decide o publicado) deixava o mapa com 'sem_decisao: 1' para sempre. A decisão da
+    validação de quem entrou pelo repositório é anexada pelo id (ou pelo id de origem)."""
+    try:
+        from . import validacao_mapa as _vm
+        _V = _vm.carregar()
+    except Exception:  # noqa: BLE001
+        _V = {}
+    n = 0
+    for v in (res.get("itens_por_uf") or {}).values():
+        for x in v:
+            if not x.get("validacao"):
+                d = next((_V[i] for i in [x.get("id"), x.get("id_origem"), *(x.get("ids_origem") or [])] if i and i in _V), None)
+                if d and d.get("decisao"):
+                    x["validacao"] = {"decisao": d["decisao"], "motivo": d.get("motivo"), "em": d.get("validado_em")}
+            if not x.get("validacao") and not x.get("confirmada"):
+                n += 1
+    res.setdefault("validacao", {})["sem_decisao"] = n
+    return n
+
+
 def incluir_do_repositorio(res: dict) -> int:
     """11/10/2026 (titular): a tela inicial contava a lista do fluxo (465) e a Bússola o repositório único (558) — as
     oportunidades que vêm só da caixa dos motores não estavam na lista. Elas entram aqui, com o estado do repositório,
@@ -650,7 +692,7 @@ def incluir_do_repositorio(res: dict) -> int:
                     fica.append(x); continue
                 if r.get("estado") == "fechada" or r.get("arquivada") or r["id"] in vistos:
                     continue
-                vistos.add(r["id"]); x["estado"] = r.get("estado"); fica.append(x)
+                vistos.add(r["id"]); x["estado"] = r.get("estado"); _livro_do_repositorio(x, r); fica.append(x)
             por_uf[uf] = fica
     ja = {str(x.get("id")) for L in por_uf.values() for x in L} | {str(i) for L in por_uf.values() for x in L for i in (x.get("ids_origem") or [])}
     n = 0
@@ -664,7 +706,11 @@ def incluir_do_repositorio(res: dict) -> int:
         item = {"id": r["id"], "titulo": r.get("titulo"), "url": r.get("url"), "link_oficial": r.get("link_oficial"), "fim": r.get("fim"),
                 "orgao": r.get("orgao"), "uf": r.get("uf"), "origem": r.get("origem") or "repositório único", "estado": r.get("estado"),
                 "confirmada": r.get("estado") == "validada", "checklist": ck, "livro": r.get("livro"), "ids_origem": r.get("ids_origem"),
+                # 17/10: a contagem dos livros (abertas com livro / dispensadas) lê livro_vinculado e livro_dispensa; com só
+                # 'livro', toda oportunidade que vinha do repositório contava como "aberta sem livro nem dispensa"
+                "livro_vinculado": r.get("livro"), "livro_dispensa": None if r.get("livro") else r.get("motivo_sem_livro"),
                 "do_repositorio": True}
+        _livro_do_repositorio(item, r)
         por_uf.setdefault(r.get("uf") or "__nac__", []).append(item)
         n += 1
     return n
@@ -738,6 +784,7 @@ def montar() -> dict:
             for _k in ("confirmadas", "possiveis_sem_minimo"):
                 res[_k] = [x for x in res.get(_k) or [] if x.get("id") in _ab]
             res["fora_do_repositorio_retiradas"] = _antes - sum(len(v) for v in res["itens_por_uf"].values())
+        _sem_decisao_publicadas(res)
         res["parametro"] = {**(res.get("parametro") or {}), **{k: _r[k] for k in ("abertas", "validadas", "em_verificacao", "validacao_manual")},
                             "estantes": _r.get("estantes"), "fonte": "repositório único (biblioteca_alexandria/livros/_vistas/repositorio_unico.json)",
                             "auditoria": _r.get("auditoria")}
@@ -754,9 +801,12 @@ def sincronizar_catalogo(gravar: bool = True) -> dict:
     res = _j(SAIDA, {}) or {}
     if not res:
         return {"sincronizado": False}
+    from .trava_livros import renomear as _renomear          # 17/10: passagem antiga grava 'opressor…' — lido com o nome novo
+    res = _renomear(res)
     itens = [x for v in (res.get("itens_por_uf") or {}).values() for x in v]
     antes = (res.get("livros_do_sistema") or {}).get("catalogo")
     res.pop("opressores", None)                               # 17/10: o nome antigo sai (passagem antiga pode recolocá-lo)
+    _sem_decisao_publicadas(res)
     res["livros_do_sistema"] = _resumo_livros(itens)
     res.setdefault("etapas", {})["livros_total"] = res["livros_do_sistema"].get("catalogo")
     if gravar:
@@ -784,6 +834,9 @@ def sincronizar_com_repositorio() -> dict:
     res = _j(SAIDA, {}) or {}
     if not ab or not res:
         return {"sincronizado": False}
+    from .trava_livros import renomear as _renomear          # 17/10: passagem antiga grava 'opressor…' — lido com o nome novo
+    res = _renomear(res)
+    por_id_rep = {r["id"]: r for r in regs}
     try:
         res["incluidas_do_repositorio"] = incluir_do_repositorio(res)     # o que o repositório tem e a lista não
     except Exception:  # noqa: BLE001
@@ -798,12 +851,13 @@ def sincronizar_com_repositorio() -> dict:
                 vistos.add(rid)
                 if x.get("id") != rid:
                     x["id_origem"], x["id"] = x.get("id"), rid
-                novo.setdefault(u, []).append(x)
+                novo.setdefault(u, []).append(_livro_do_repositorio(x, por_id_rep.get(rid)))
     for r in regs:                                    # o que o repositório tem aberto e ainda falta: entra do próprio registro
         if r["id"] in ab and r["id"] not in vistos:
             vistos.add(r["id"])
             novo.setdefault(r.get("uf") or "__nac__", []).append({k: r.get(k) for k in ("id", "titulo", "url", "link_oficial", "fim", "inicio",
-                                                                     "origem", "estado", "uf", "area", "objeto")} | {"confirmada": r.get("estado") == "validada"})
+                                                                     "origem", "estado", "uf", "area", "objeto")} | {"confirmada": r.get("estado") == "validada"}
+                                                                  | _livro_do_repositorio({}, r))
     res["itens_por_uf"] = novo
     for k in ("confirmadas", "possiveis_sem_minimo"):
         res[k] = [x for x in res.get(k) or [] if dono.get(str(x.get("id"))) in ab]
@@ -812,6 +866,7 @@ def sincronizar_com_repositorio() -> dict:
             "validacao_manual": sum(1 for x in regs if x["id"] in ab and x.get("estado") == "validacao_manual")}
     res["parametro"] = {**(res.get("parametro") or {}), **cont, "fonte": "repositório único (dos livros), no fechamento da passagem"}
     res["fora_do_repositorio_retiradas"] = antes - sum(len(v) for v in res["itens_por_uf"].values())
+    _sem_decisao_publicadas(res)
     SAIDA.write_text(json.dumps(res, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     lista = sum(len(v) for v in res["itens_por_uf"].values())
     return {**cont, "lista": lista, "retiradas": res["fora_do_repositorio_retiradas"], "abertas_fora_da_lista": len(ab) - lista}

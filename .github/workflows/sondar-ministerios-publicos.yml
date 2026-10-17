@@ -8,6 +8,9 @@ on:
         default: ""
 permissions:
   contents: write
+concurrency:
+  group: sondar-ministerios-publicos
+  cancel-in-progress: false
 jobs:
   sondar:
     runs-on: ubuntu-24.04   # 17/10: fixo (o ubuntu-latest vira Ubuntu 26 em 19/10)

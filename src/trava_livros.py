@@ -99,9 +99,12 @@ def reconciliar(antes: dict, depois: dict, st: dict, nivel: int = 0) -> dict:
 
 
 def _juntados(livros: list[dict]) -> set[str]:
+    """Ids que saíram por união registrada. 17/10: vale também o registro da curadoria de 01/10 ('ids_juntados', lista
+    de ids) — sem ele, a trava devolvia ao catálogo os livros que o gerador dos motores tirou por união, e o painel dos
+    motores (sem eles) e o catálogo (com eles) nunca davam o mesmo número."""
     out = set()
     for lv in livros:
-        for j in lv.get("juntados") or []:
+        for j in [*(lv.get("juntados") or []), *(lv.get("ids_juntados") or [])]:
             out.add(str(j.get("id") if isinstance(j, dict) else j))
     return out
 

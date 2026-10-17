@@ -15,6 +15,28 @@ class TestePesquisadosProtegidos(unittest.TestCase):
         perdidos = [i for i, r in carregar().items() if r.get("decisao") != "D" and i in C and not (C[i].get("parametros") or (L.get(i) or {}).get("parametros"))]
         self.assertEqual(perdidos, [], "livro pesquisado perdeu os parâmetros")
 
+    def test_a_pesquisa_nao_e_desviada_de_livro_que_continua_no_catalogo(self):
+        """17/10: a fusão de 17/10 04:19 pôs os pesquisados (Impactarte, Emenda de Goiânia) em ids_juntados de livros
+        novos sem parâmetros; o mapa de ids desviava a pesquisa para eles, embora o pesquisado continuasse no catálogo."""
+        from src.livros_parametros import carregar, PASTA
+        C = {x["id"] for x in json.loads((ROOT / "biblioteca_alexandria/fontes/motores.json").read_text(encoding="utf-8"))["motores"]}
+        gravados = {r.get("id") for a in PASTA.glob("parametros_*.json")
+                    for r in json.loads(a.read_text(encoding="utf-8")).get("itens") or []}
+        desviados = [i for i, r in carregar().items() if i not in gravados and r.get("id_pesquisado") in C]
+        self.assertEqual(desviados, [])
+
+    def test_juntar_leva_os_parametros_do_pesquisado(self):
+        from src.curadoria_biblioteca import _juntar
+        fica = {"id": "novo", "historico": []}
+        _juntar(fica, {"id": "pesquisado", "parametros": {"Objeto": "x"}, "parametros_em": "2026-10-01", "historico": []})
+        self.assertEqual(fica["parametros"], {"Objeto": "x"})
+        self.assertEqual(fica["parametros_em"], "2026-10-01")
+        self.assertIn("pesquisado", fica["ids_juntados"])
+
+    def test_unificacao_mantem_o_pesquisado(self):
+        for trecho in ('return (not m.get("parametros"), not tem', 'return (not m.get("parametros"), not oficial'):
+            self.assertIn(trecho, (ROOT / "src/unificar_livros.py").read_text(encoding="utf-8"))
+
     def test_todo_ligado_tem_livro(self):
         L = json.loads((ROOT / "estado/livros_monitoramento.json").read_text(encoding="utf-8"))["ligados"]
         C = {x["id"] for x in json.loads((ROOT / "biblioteca_alexandria/fontes/motores.json").read_text(encoding="utf-8"))["motores"]}

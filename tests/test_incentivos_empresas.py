@@ -248,8 +248,12 @@ class TesteAplicacaoNoRanking(unittest.TestCase):
     def test_etiqueta_so_mostra_o_que_esta_na_janela(self):
         itens = [{"nome": "Cargill", "cnpj": "60.498.706/0001-57", "pontos": 50, "incentivos": ["FIA", "Rouanet"], "por": []}]
         cargill = I.aplicar_em_ranking(itens, "destinacao_tributaria", self.bases)[0]
-        self.assertIsNone(cargill["incentivos"])  # última doação à Rouanet antes do corte
+        self.assertNotIn("Rouanet", cargill["incentivos"] or [])  # última doação à Rouanet antes do corte
         self.assertEqual(cargill["incentivos_historico"], ["Rouanet"])
+        # 29/09 (titular): a inscrição VIGENTE no PAT (MTE, até 31/03/2026) entra na etiqueta como indício do incentivo
+        # fiscal da empresa; fora isso, a etiqueta só tem o que está na janela
+        pat = ((cargill["incentivos_verificados"].get("mecanismos") or {}).get("PAT") or {}).get("status")
+        self.assertEqual(cargill["incentivos"], ["PAT"] if pat in ("inscrita", "inscrita_por_estabelecimento") else None)
 
 
 class TesteSaidasGravadas(unittest.TestCase):
@@ -282,7 +286,10 @@ class TesteSaidasGravadas(unittest.TestCase):
             d = json.loads((ROOT / f"biblioteca_alexandria/livros/especiais/empresas/ranking_{cat}.json").read_text(encoding="utf-8"))
             for e in d["empresas"]:
                 for m in e.get("incentivos") or []:
-                    self.assertIn(m, ("Rouanet", "Goyazes"), (cat, e["nome"]))
+                    self.assertIn(m, ("Rouanet", "Goyazes", "PAT"), (cat, e["nome"]))
+                    if m == "PAT":                    # 29/09: só com inscrição vigente verificada no MTE
+                        st = (((e.get("incentivos_verificados") or {}).get("mecanismos") or {}).get("PAT") or {}).get("status")
+                        self.assertIn(st, ("inscrita", "inscrita_por_estabelecimento"), (cat, e["nome"]))
 
 
 class TesteMotorDeEmpresas(unittest.TestCase):

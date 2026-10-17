@@ -8,6 +8,38 @@ from src.correcoes_motor_23_09 import (ABRANGENCIA, alcance, territorio_do_objet
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 ANALISES = json.loads((ROOT / "biblioteca_alexandria/livros/_acervo/editais/analises.json").read_text(encoding="utf-8"))
 
+# 16/10/2026 (titular): em outros estados só ESTADUAIS e CAPITAIS. O expurgo de 16/10 00:56 tirou do acervo 10 dos
+# rebaixados pelo parecer (todos reverificados em 23/09); 9 são municipais de fora de Goiás e saíram pela regra, o 10º
+# (UNICENTRO/PR, estadual) foi perda indevida e voltou do git. Identificação de cada saída: (órgão, UF).
+EXPURGADOS = {
+    "0b2e6b2eabe51d022e5e": ("MUNICIPIO DE LAGOA VERMELHA", "RS"),
+    "2ba35f9a49970753e57d": ("MUNICIPIO DE IPU", "CE"),
+    "02beaaeb": ("MUNICIPIO DE INDAIATUBA", "SP"),
+    "8ed7377b": ("MUNICIPIO DE MONTES CLAROS", "MG"),
+    "b858a9eb": ("MUNICIPIO DE PERUIBE", "SP"),
+    "8d68b63a": ("MUNICIPIO DE CANOAS", "RS"),
+    "42d12155e382f973b4a6": ("MUNICIPIO DE PORTO FELIZ", "SP"),
+    "d54cfaf8f5934750f912": ("MUNICIPIO DE GUAIRA", "PR"),
+    "f0808d006f8c34765c9a": ("MUNICIPIO DE ITATINGA", "SP"),
+}
+CAMINHOS = ("dados/editais/analises.json", "biblioteca_alexandria/livros/_acervo/editais/analises.json")   # 16/10: realocado
+
+
+def _saidos() -> set:
+    """Os rebaixados que o expurgo tirou — conferidos um a um com o portão de captação e com o registro diário."""
+    from src.expurgo import classificar
+    saidos = {k for k in EXPURGADOS if k not in ANALISES}
+    for k in saidos:
+        ruim, motivo = classificar({"titulo": EXPURGADOS[k][0], "orgao": EXPURGADOS[k][0], "uf": EXPURGADOS[k][1]})
+        assert ruim and str(motivo).startswith("município de outro estado"), (k, motivo)
+    n = 0
+    for arq in (ROOT / "estado/expurgo").glob("*.json"):
+        r = json.loads(arq.read_text(encoding="utf-8"))
+        n += sum(int((r.get("registros_removidos_por_arquivo") or {}).get(c) or 0) for c in CAMINHOS)
+        n -= sum(1 for x in r.get("restaurados") or [] if x.get("arquivo") in CAMINHOS and not x.get("campo"))
+    assert n == len(saidos), f"registro do expurgo conta {n}, faltam {len(saidos)} no acervo"
+    return saidos
+
 
 class TesteAtualizacaoAplicada(unittest.TestCase):
     def test_o_registro_da_aplicacao_existe(self):
@@ -28,14 +60,14 @@ class TesteAtualizacaoAplicada(unittest.TestCase):
     def test_rebaixado_diz_quando_volta(self):
         reb = [v for v in ANALISES.values() if isinstance(v, dict)
                and v.get("alcance") == "fora_de_abrangencia"]
-        self.assertEqual(len(reb), 238)
+        self.assertEqual(len(reb) + len(_saidos()), 238)
         for v in reb[:20]:
             self.assertTrue(v["uf_do_edital"])
             self.assertIn("abrangência aprovada", v["volta_se"])
 
     def test_atualizado_guarda_a_data_da_confirmacao(self):
         at = [v for v in ANALISES.values() if isinstance(v, dict) and v.get("reverificado_em")]
-        self.assertGreaterEqual(len(at), 19)
+        self.assertGreaterEqual(len(at) + len(_saidos()), 19)
         for v in at[:10]:
             self.assertIn("parecer de oportunidades 23/09", v["reverificado_por"])
 
@@ -73,6 +105,9 @@ class TesteM1_AbrangenciaAntes(unittest.TestCase):
             e["uf"] = v.get("uf_do_edital")
             if alcance(e)[0] == "fora":
                 fora += 1
+        for k in _saidos():                       # os que o expurgo tirou eram de outra UF: o filtro os rebaixa
+            self.assertEqual(alcance({"uf": EXPURGADOS[k][1], "titulo": EXPURGADOS[k][0]})[0], "fora", k)
+            fora += 1
         self.assertEqual(fora, 238)
 
 

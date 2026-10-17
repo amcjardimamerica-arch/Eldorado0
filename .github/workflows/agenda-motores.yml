@@ -10,6 +10,7 @@ permissions:
 jobs:
   agenda:
     runs-on: ubuntu-24.04   # 17/10: fixo (o ubuntu-latest vira Ubuntu 26 em 19/10)
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - name: Motores da vez

@@ -19,16 +19,84 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "docs/dados/verificacao_63_2026-09-15.json"
 
+# 16/10/2026 (titular): em outros estados só ESTADUAIS e CAPITAIS; o expurgo tirou da base os 26 registros municipais
+# de fora de Goiás (20 às 00:56 e 6 às 11:00 UTC — estado/expurgo/2026-10-16.json). A identificação de cada um fica
+# aqui para o teste conferir, com o portão de captação, que a saída foi pela regra e não por perda.
+EXPURGADOS = {
+    "8c6a2a0e25ff8b32702d": ("MUNICIPIO DE JARU", "RO"),
+    "ccf2796183121fdbd963": ("MUNICIPIO DE JARU", "RO"),
+    "2ba35f9a49970753e57d": ("MUNICIPIO DE IPU", "CE"),
+    "0b2e6b2eabe51d022e5e": ("MUNICIPIO DE LAGOA VERMELHA", "RS"),
+    "20ec3e11386b87af1e16": ("MUNICIPIO DE FARROUPILHA", "RS"),
+    "bf89ef0c39788a84b9d1": ("MUNICIPIO DE GUAIRA", "PR"),
+    "7c1d235d56365c9c24b4": ("IPOJUCA CAMARA MUNICIPAL", "PE"),
+    "d297e885025d1befc94d": ("MUNICIPIO DE TRIUNFO", "RS"),
+    "6110c2223fa6ce0f8e0e": ("MUNICIPIO DE GRAVATAI", "RS"),
+    "97e10cdefb4a772fb529": ("MUNICIPIO DE GRAVATAI", "RS"),
+    "ae150797cb8ff2c5fa0f": ("FUNDO MUNICIPAL DOS DIREITOS DA CRIANCA E DO ADOLESCENTE DE GUARAMIRIM", "SC"),
+    "b8c90c7a8928773bd959": ("MUNICIPIO DE ROSARIO DO SUL", "RS"),
+    "42d12155e382f973b4a6": ("MUNICIPIO DE PORTO FELIZ", "SP"),
+    "d54cfaf8f5934750f912": ("MUNICIPIO DE GUAIRA", "PR"),
+    "e59147d5c5bbf24f3208": ("BOM JESUS DO ITABAPOANA PREFEITURA", "RJ"),
+    "f0808d006f8c34765c9a": ("MUNICIPIO DE ITATINGA", "SP"),
+    "4e8961e172feb22c5227": ("MUNICIPIO DE MAMBORE", "PR"),
+    "80283fe7346eec3fae05": ("MUNICIPIO DE ALVORADA", "RS"),
+    "95ca296b9b2eb1502b2f": ("FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL", "SC"),
+    "eaa12d99fc473fb7ac68": ("MUNICIPIO DE VILA RICA", "MT"),
+    "81a444690ae9d6a7fc56": ("MUNICIPIO DE OSORIO", "RS"),
+    "30ec946c0da038e039cc": ("MUNICIPIO DE IBIAPINA", "CE"),
+    "f1ca92b53138bf67e586": ("MUNICIPIO DE CARIRE", "CE"),
+    "ddf352133bbf37885a89": ("MUNICIPIO DE QUIXERAMOBIM", "CE"),
+    "5b2002af84d7311550c8": ("MUNICIPIO DE XANXERE", "SC"),
+    "a36ee8a76017ea615080": ("MUNICIPIO DE RONDONOPOLIS", "MT"),
+}
+
 
 def base():
     return json.loads(BASE.read_text(encoding="utf-8"))
 
 
+def municipal_de_fora(orgao: str, uf: str) -> bool:
+    """O portão de captação (o mesmo que o expurgo usa) reprova pela regra territorial de 16/10."""
+    from src.expurgo import classificar
+    ruim, motivo = classificar({"titulo": orgao, "orgao": orgao, "uf": uf})
+    return ruim and str(motivo).startswith("município de outro estado")
+
+
+def registrado_no_expurgo(caminho: str) -> int:
+    """Quanto os registros diários do expurgo dizem ter tirado deste arquivo (menos o que foi restaurado depois)."""
+    n = 0
+    for arq in sorted((ROOT / "estado/expurgo").glob("*.json")):
+        r = json.loads(arq.read_text(encoding="utf-8"))
+        n += int((r.get("registros_removidos_por_arquivo") or {}).get(caminho) or 0)
+        n -= sum(1 for x in r.get("restaurados") or [] if x.get("arquivo") == caminho and not x.get("campo"))
+    return n
+
+
 class TesteBaseDaVerificacao(unittest.TestCase):
     def test_a_base_existe_e_tem_os_63(self):
+        """O universo verificado em 15/09 continua 63: o que ficou mais o que o expurgo tirou."""
         d = base()
         self.assertEqual(d["total"], 63)
-        self.assertEqual(len(d["itens"]), 63)
+        saiu = (d.get("expurgo") or {}).get("ids") or []
+        self.assertEqual(len(saiu), len(set(saiu)), "id repetido na contabilidade do expurgo")
+        self.assertFalse(set(saiu) & set(d["itens"]), "registro dado como expurgado continua na base")
+        self.assertEqual(len(d["itens"]) + len(saiu), 63)
+        self.assertEqual(d["expurgo"]["removidos"], len(saiu))
+        self.assertEqual(registrado_no_expurgo("docs/dados/verificacao_63_2026-09-15.json"), len(saiu),
+                         "o registro diário do expurgo (estado/expurgo) tem de contar o mesmo que a base")
+
+    def test_todo_ausente_saiu_pela_regra_territorial(self):
+        """Nenhum dos 63 some sem motivo: cada ausente é municipal de outro estado, fora das capitais."""
+        saiu = set(base()["expurgo"]["ids"])
+        self.assertEqual(saiu, set(EXPURGADOS), "saída sem identificação conferida neste teste")
+        for chave, (orgao, uf) in EXPURGADOS.items():
+            self.assertNotEqual(uf, "GO", chave)
+            self.assertTrue(municipal_de_fora(orgao, uf), f"{chave} ({orgao}/{uf}) não é municipal de fora de Goiás")
+        # o portão não reprova qualquer coisa: Goiás, capital de outro estado e órgão estadual de fora ficam
+        self.assertFalse(municipal_de_fora("MUNICIPIO DE GOIANIA", "GO"))
+        self.assertFalse(municipal_de_fora("MUNICIPIO DE PORTO ALEGRE", "RS"))
+        self.assertFalse(municipal_de_fora("SANTA CATARINA TRIBUNAL DE JUSTICA", "SC"))
 
     def test_resumo_bate_com_a_lista(self):
         d = base()
@@ -36,6 +104,10 @@ class TesteBaseDaVerificacao(unittest.TestCase):
         for item in d["itens"].values():
             vere[item["veredito"]] = vere.get(item["veredito"], 0) + 1
         self.assertEqual(vere, d["resumo"]["veredito"])
+
+    def test_todo_registro_que_ficou_e_desta_verificacao(self):
+        for chave, item in base()["itens"].items():
+            self.assertEqual(item.get("verificado_em"), "2026-09-15", chave)
 
     def test_todo_item_declara_a_rota_e_a_observacao(self):
         for chave, item in base()["itens"].items():
@@ -65,15 +137,30 @@ class TesteCorrecoesQueNaoPodemSePerder(unittest.TestCase):
         self.assertNotIn("fundacaomariaemilia.org.br", item["pagina_oficial"])
 
     def test_ipu_fecha_um_dia_antes_do_que_a_base_tinha(self):
-        item = base()["itens"]["2ba35f9a49970753e57d"]
+        """16/10: IPU/CE e municipal de fora de Goias — saiu pela regra territorial. Se voltar (mudanca de regra),
+        volta com a correcao de prazo desta verificacao."""
+        d = base()
+        item = d["itens"].get("2ba35f9a49970753e57d")
+        if item is None:
+            self.assertIn("2ba35f9a49970753e57d", d["expurgo"]["ids"])
+            self.assertTrue(municipal_de_fora("MUNICIPIO DE IPU", "CE"))
+            return
         self.assertEqual(item["fim"], "2026-09-23")
         self.assertEqual(item["fim_anterior"], "2026-09-24")
         self.assertTrue(item["mudou_prazo"])
 
     def test_jaru_sao_dois_editais_diferentes(self):
-        itens = base()["itens"]
-        self.assertNotEqual(itens["8c6a2a0e25ff8b32702d"]["fim"],
-                            itens["ccf2796183121fdbd963"]["fim"],
+        """16/10: os dois de Jaru/RO sairam juntos pela regra territorial; se voltarem, voltam como dois."""
+        d = base()
+        itens, ids = d["itens"], ("8c6a2a0e25ff8b32702d", "ccf2796183121fdbd963")
+        presentes = [i for i in ids if i in itens]
+        if not presentes:
+            for i in ids:
+                self.assertIn(i, d["expurgo"]["ids"])
+            self.assertTrue(municipal_de_fora("MUNICIPIO DE JARU", "RO"))
+            return
+        self.assertEqual(len(presentes), 2, "os dois chamamentos de Jaru entram e saem juntos")
+        self.assertNotEqual(itens[ids[0]]["fim"], itens[ids[1]]["fim"],
                             "196 e 197 sao chamamentos distintos, com prazos distintos")
 
 

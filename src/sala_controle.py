@@ -40,7 +40,7 @@ def _horas(ts: str | None, agora: datetime) -> float | None:
         t = datetime.fromisoformat(_s + "T12:00:00+00:00" if len(_s) == 10 else _s)   # 14/10: data só com o dia
         if t.tzinfo is None:
             t = t.replace(tzinfo=timezone.utc)
-        return round((agora - t).total_seconds() / 3600, 2)
+        return max(0.0, round((agora - t).total_seconds() / 3600, 2))   # 17/10: registro gravado depois do início da passagem não tem idade negativa
     except ValueError:
         return None
 
@@ -127,7 +127,7 @@ def montar(agora: datetime | None = None) -> dict:
 
     # ── NÚCLEO · rede neural
     _instr(I, agora, id="rn_auc", sub="Núcleo · rede neural", nome="Discernimento (AUC)", valor=vc.get("auc"), unidade="", escala=[0.5, 1],
-           faixa={"normal": [0.8, None], "alarme": [0.7, None]}, quando=rn.get("em"), cadencia_h=2,
+           faixa={"normal": [0.85, None], "alarme": [0.7, None]}, quando=rn.get("em"), cadencia_h=2,
            faz="Separa oportunidade real de ruído; 1 é perfeito, 0,5 é sorte.",
            efeito=f"{rn.get('rotulados', 0)} decisões humanas e do Chrome usadas para aprender ({rn.get('positivos', 0)} oportunidades reais)",
            resultado=f"AUC {vc.get('auc')} em validação cruzada de 5 partes")
@@ -191,20 +191,21 @@ def montar(agora: datetime | None = None) -> dict:
     pend = _j(ROOT / "docs/dados/cartorio_pendencias.json") or {}
     pg = pend.get("para_o_chrome_por_grupo") or {}
     _instr(I, agora, id="ve_para_o_chrome", sub="Verificação externa", nome="Para o Claude no Chrome", valor=pend.get("para_o_chrome"),
-           unidade="oportunidades", escala=None, quando=pend.get("em"), cadencia_h=2,
+           unidade="oportunidades", faixa={"normal": [None, 50], "alarme": [None, 200]}, escala=None, quando=pend.get("em"), cadencia_h=2,
            faz="O Cartório reúne o que falta em cada oportunidade; o que parou na fonte vai ao Claude no Chrome, que arquiva, elimina ou completa.",
            efeito=" · ".join(f"{g} {n}" for g, n in pg.items()) or "sem pendências publicadas",
            resultado="docs/dados/cartorio_pendencias.json — prompts 1 (Goiás), 2 (Nacional) e 3 (Sem site oficial)")
     _instr(I, agora, id="ve_bloqueadas", sub="Verificação externa", nome="Documentos bloqueados para o robô", valor=pend.get("bloqueadas_na_fonte"),
-           unidade="oportunidades", escala=None, quando=pend.get("em"), cadencia_h=2,
+           unidade="oportunidades", faixa={"normal": [None, 10], "alarme": [None, 30]}, escala=None, quando=pend.get("em"), cadencia_h=2,
            faz="Documento oficial que o site bloqueia (403, 401, 429, ponte) não abre na 5ª tentativa: vai direto ao Chrome.",
            efeito=f"{pend.get('paginas_bloqueadas_do_cartorio') or 0} página(s) do Cartório bloqueadas", resultado="entregues ao Chrome")
     _instr(I, agora, id="ve_completas", sub="Verificação externa", nome="Oportunidades com os 12 itens", valor=pend.get("completas"),
-           unidade="oportunidades", escala=None, quando=pend.get("em"), cadencia_h=2,
+           unidade="oportunidades", faixa={"normal": [50, None], "alarme": [10, None]}, escala=None, quando=pend.get("em"), cadencia_h=2,
            faz="Cada item certificado no documento oficial (valor, trecho, documento); o link de publicação é só referência.",
            efeito=f"{pend.get('completas') or 0} de {pend.get('abertas') or 0} abertas", resultado="nada é suposto")
-    _instr(I, agora, id="ve_importado", sub="Verificação externa", nome="Última importação do Chrome", valor=None,
-           unidade="", escala=None, quando=pend.get("ultima_importacao_do_chrome"), cadencia_h=168,
+    _instr(I, agora, id="ve_importado", sub="Verificação externa", nome="Última importação do Chrome",
+           valor=(lambda h: None if h is None else round(h / 24, 1))(_horas(pend.get("ultima_importacao_do_chrome"), agora)),   # 17/10: dias desde a última importação (antes valor fixo None = sempre cinza)
+           unidade="dias", faixa={"normal": [None, 7], "alarme": [None, 14]}, escala=None, quando=pend.get("ultima_importacao_do_chrome"), cadencia_h=168,
            faz="O resultado do Chrome entra nas certidões (nos livros) e atualiza na hora repositório, fluxo e pendências.",
            efeito=str(pend.get("ultima_importacao_do_chrome") or "nenhuma importação ainda")[:19], resultado=pend.get("como_importar") or "")
     cl = _j(ROOT / "biblioteca_alexandria/livros/_vistas/curadoria_links.json") or {}
@@ -217,7 +218,7 @@ def montar(agora: datetime | None = None) -> dict:
            resultado=f"{cl.get('mesmo_link_e_oficial', 0)} captadas direto na fonte oficial · {cl.get('trecho_do_documento_oficial', 0)} com trecho do documento oficial")
     parciais = [r for r in (fret.get("fila") or {}).values() if r.get("escopo") == "cartorio" and str(r.get("erro") or "").startswith(("parcial", "sem link"))]
     _instr(I, agora, id="es_parcial", sub="Esteira", nome="Oportunidades em leitura parcial (voltam à fila)", valor=len(parciais),
-           unidade="oportunidades", escala=[0, 300], quando=fret.get("em"), cadencia_h=2,
+           unidade="oportunidades", faixa={"normal": [None, 100], "alarme": [None, 500]}, escala=[0, 300], quando=fret.get("em"), cadencia_h=2,
            faz="Leitura parcial volta ao Cartório em 30 min até ser lida por completo; 5 passagens sem progresso vão à conferência humana.",
            efeito=f"fora da fila por leitura parcial: {sum(1 for r in (fret.get('fora_da_fila') or {}).values() if r.get('escopo') == 'cartorio')}",
            resultado="voltam ao Cartório em 30 min até a leitura total")
@@ -239,11 +240,11 @@ def montar(agora: datetime | None = None) -> dict:
 
     # ── ESTEIRA · coleta, repositório, livros
     fu = li.get("funil") or {}
-    _instr(I, agora, id="es_coleta", sub="Esteira", nome="Coletado pelos motores", valor=fu.get("coletados"), unidade="registros", escala=None, quando=li.get("em"), cadencia_h=2,
+    _instr(I, agora, id="es_coleta", sub="Esteira", nome="Coletado pelos motores", valor=fu.get("coletados"), unidade="registros", faixa={"normal": [50, None], "alarme": [1, None]}, escala=None, quando=li.get("em"), cadencia_h=2,
            faz="Junta tudo o que os motores e Pilotos trouxeram e separa as oportunidades distintas.",
            efeito=f"{fu.get('oportunidades_distintas', 0)} oportunidades distintas · {fu.get('entidades_em_2_ou_mais_canais', 0)} vistas em 2+ canais",
            resultado=" · ".join(f"{k.lower()} {v}" for k, v in (fu.get("etapas") or {}).items()))
-    _instr(I, agora, id="es_abertas", sub="Esteira", nome="Oportunidades abertas", valor=rp.get("abertas"), unidade="abertas", escala=None, quando=rp.get("em"), cadencia_h=2,
+    _instr(I, agora, id="es_abertas", sub="Esteira", nome="Oportunidades abertas", valor=rp.get("abertas"), unidade="abertas", faixa={"normal": [50, None], "alarme": [1, None]}, escala=None, quando=rp.get("em"), cadencia_h=2,
            faz="O repositório único: um registro por oportunidade, a mesma contagem em todas as telas.",
            efeito=f"validadas {rp.get('validadas', 0)} · em verificação {rp.get('em_verificacao', 0)} · validação manual {rp.get('validacao_manual', 0)}",
            resultado=f"arquivadas (municipais de fora de GO, 11/10) {rp.get('arquivadas_municipais_fora_de_goias', 0)} · prontas para o Farol {rp.get('prontas_para_o_farol', 0)}")
@@ -255,7 +256,7 @@ def montar(agora: datetime | None = None) -> dict:
            efeito=f"{cz.get('com_livro', 0)} com livro · {cz.get('com_livro_de_editais_anteriores', 0)} com editais anteriores",
            resultado=f"{cz.get('em_verificacao_com_onde_buscar_do_livro', 0)} em verificação já sabem onde buscar pelo livro")
     mon = op.get("monitoramento") or {}
-    _instr(I, agora, id="es_vigilancia", sub="Esteira", nome="Livros vigiados pelo próprio motor", valor=len(op.get("ligados") or {}) or None, unidade="livros", escala=None,
+    _instr(I, agora, id="es_vigilancia", sub="Esteira", nome="Livros vigiados pelo próprio motor", valor=len(op.get("ligados") or {}) or None, unidade="livros", faixa={"normal": [100, None], "alarme": [1, None]}, escala=None,
            quando=mon.get("em") or op.get("atualizado_em") or None, cadencia_h=26,
            faz="Liga o livro com edital aberto, prestes a abrir ou de fluxo contínuo, com pesquisa focada.",
            efeito=(f"abertos {mon.get('abertos')} · prestes a abrir {mon.get('prestes_a_abrir')} · contínuos {mon.get('fluxo_continuo')}" if mon
@@ -271,30 +272,30 @@ def montar(agora: datetime | None = None) -> dict:
            resultado=f"certificados {rs.get('pontos_certificados', 0)} · dispensados {rs.get('pontos_dispensados', 0)} · faltam {rs.get('pontos_faltam', 0)}")
 
     # ── PILOTOS
-    _instr(I, agora, id="pi_interceptador", sub="Pilotos", nome="Interceptador", valor=rp.get("fila_interceptador"), unidade="na fila", escala=None,
+    _instr(I, agora, id="pi_interceptador", sub="Pilotos", nome="Interceptador", valor=rp.get("fila_interceptador"), unidade="na fila", faixa={"normal": [None, 50], "alarme": [None, 200]}, escala=None,
            quando=it.get("ultimo_voo") or it.get("em"), cadencia_h=2,
            faz="Pesquisa na web o que o Cartório não alcança, guiado pelo banco.",
            efeito=f"estado: {it.get('estado') or '—'} · modelo {it.get('modelo') or '—'}",
            resultado=json.dumps(it.get("contagem") or {}, ensure_ascii=False)[:200])
-    _instr(I, agora, id="pi_espiao", sub="Pilotos", nome="Espião", valor=es.get("empresas_novas"), unidade="empresas novas", escala=None, quando=es.get("em"), cadencia_h=3,
+    _instr(I, agora, id="pi_espiao", sub="Pilotos", nome="Espião", valor=es.get("empresas_novas"), unidade="empresas novas", faixa={"normal": [1, None]}, escala=None, quando=es.get("em"), cadencia_h=3,
            faz="Descobre editais de empresas e chamadas internacionais; alimenta o banco de empresas.",
            efeito=f"{es.get('voos', 0)} voos · {es.get('candidatas_privadas_internacionais', 0)} candidatas privadas e internacionais",
            resultado=f"próxima avaliação em {es.get('proxima_avaliacao_em_voos', '—')} voos")
-    _instr(I, agora, id="pi_piloto", sub="Pilotos", nome="Piloto (voos do dia)", valor=pi.get("voo_do_dia"), unidade="voos", escala=None, quando=pi.get("em"), cadencia_h=3,
+    _instr(I, agora, id="pi_piloto", sub="Pilotos", nome="Piloto (voos do dia)", valor=pi.get("voo_do_dia"), unidade="voos", faixa={"normal": [10, None], "alarme": [1, None]}, escala=None, quando=pi.get("em"), cadencia_h=3,
            faz="Voa as missões do dia com a IA local e registra o que aprendeu.", efeito=f"abates {pi.get('abates', 0)} · propostas {pi.get('propostas', 0)}",
            resultado=f"ocupante {pi.get('ocupante') or '—'}")
 
     # ── EMPRESAS e HIGIENE
     tt = ei.get("totais") or {}
     _instr(I, agora, id="em_rankings", sub="Empresas", nome="Rankings de empresas", valor=sum(v for v in tt.values() if isinstance(v, int)) or None, unidade="empresas",
-           escala=None, quando=ei.get("gerado_em"), cadencia_h=26, faz="Destinação tributária e doação/patrocínio, refeitos todo dia.",
+           faixa={"normal": [50, None], "alarme": [1, None]}, escala=None, quando=ei.get("gerado_em"), cadencia_h=26, faz="Destinação tributária e doação/patrocínio, refeitos todo dia.",
            efeito=" · ".join(f"{k.replace('_', ' ')} {v}" for k, v in tt.items()), resultado="lista de doação e patrocínio alimentada pelo Espião e por chamamentos")
     _instr(I, agora, id="hi_uso", sub="Higiene", nome="Arquivos sem uso há 30 dias", valor=us.get("alertas"), unidade="arquivos", escala=[0, 50],
            faixa={"normal": [None, 0], "alarme": [None, 50]}, quando=us.get("em"), cadencia_h=26,
            faz="Mede o uso dos arquivos (fora o banco de dados) e alerta o que não é usado.",
            efeito=f"{us.get('monitorados', 0)} arquivos medidos · {us.get('nao_citados_dentro_do_prazo', 0)} não citados, dentro do prazo",
            resultado=f"{us.get('mb_em_alerta', 0)} MB em alerta")
-    _instr(I, agora, id="hi_frio", sub="Higiene", nome="Pacotes no arquivo frio", valor=len(fr) or None, unidade="pacotes", escala=None,
+    _instr(I, agora, id="hi_frio", sub="Higiene", nome="Pacotes no arquivo frio", valor=len(fr) or None, unidade="pacotes", faixa={"normal": [None, 50], "alarme": [None, 200]}, escala=None,
            quando=(fr[-1].get("criado_em") or fr[-1].get("em") or None) if fr else None, cadencia_h=24 * 8,
            faz="Guarda sem perda, fora do repositório, o que é grande e de uso esporádico.",
            efeito=f"{sum(int(x.get('arquivos') or 0) for x in fr)} arquivos guardados",
@@ -316,7 +317,7 @@ def montar(agora: datetime | None = None) -> dict:
     dec = _j(ROOT / "estado/decisoes_editais.json"); dec = dec.get("decisoes") if isinstance(dec.get("decisoes"), dict) else {}
     fila = _j(D / "fila_revisao_exclusao.json")
     _instr(I, agora, id="de_decisoes", sub="Esteira", nome="Livros aguardando o Claude (descartes)", valor=len(fila.get("pendentes") or []), unidade="livros",
-           escala=None, quando=fila.get("em") or dec and max((v.get("em") or "") for v in dec.values()) or None, cadencia_h=26,
+           faixa={"normal": [None, 10], "alarme": [None, 50]}, escala=None, quando=fila.get("em") or dec and max((v.get("em") or "") for v in dec.values()) or None, cadencia_h=26,
            faz="Descarte da titular não apaga o livro: sinaliza para o Claude analisar a exclusão.",
            efeito=f"{sum(1 for v in dec.values() if v.get('estado') == 'descartado')} descartadas · {sum(1 for v in dec.values() if v.get('estado') == 'inscrito')} inscritas",
            resultado=f"{len(fila.get('pendentes') or [])} livros sinalizados aguardando análise")

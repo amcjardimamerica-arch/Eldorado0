@@ -1,3 +1,4 @@
+"""Triagem antes do Farol: decide se uma oportunidade verificada na fonte primária aciona o Farol para a associação, com razões, riscos e bloqueio político (emenda parlamentar só por pedido expresso)."""
 from __future__ import annotations
 import json
 from .nucleo import ROOT, load_json, now_iso, write_json

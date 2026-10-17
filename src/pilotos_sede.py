@@ -79,19 +79,11 @@ def brasil_ativo(piloto: str, agora: datetime | None = None) -> tuple[bool, str]
 
 
 def dentro_da_janela(piloto: str, agora: datetime | None = None) -> tuple[bool, str]:
-    """08/10 (titular): o Piloto só voa na sua janela de sucesso (config/parametros_pilotos.json › janelas_de_voo)."""
-    import json as _json
-    from datetime import timedelta as _td, timezone as _tz
-    try:
-        J = (_json.loads((ROOT / "config/parametros_pilotos.json").read_text(encoding="utf-8")).get("janelas_de_voo") or {}).get(piloto)
-    except Exception:  # noqa: BLE001
-        J = None
-    if not J:
-        return True, "sem janela configurada"
-    t = (agora or datetime.now(_tz.utc)).astimezone(_tz.utc) - _td(hours=3)          # horário de Brasília
-    if t.weekday() in (J.get("dias") or range(7)) and t.hour in (J.get("horas_brt") or range(24)):
-        return True, f"dentro da janela ({t:%a %Hh} BRT)"
-    return False, f"fora da janela de voo ({t:%a %Hh} BRT) — {J.get('porque', '')[:120]}"
+    """17/10/2026 (titular): os Pilotos NÃO têm horário de voo — voam de forma permanente, um voo após o outro;
+    3 segundos de inatividade (pátio) acionam o próximo voo e a sua rotina. A "janela de voo" de 08/10
+    (config/parametros_pilotos.json › janelas_de_voo) deixou de existir: mesmo que a chave reapareça no config,
+    ela não prende o Piloto em terra. Mantida a assinatura para quem consulta."""
+    return True, "voo permanente: sem horário de voo (3 s de pátio e decola de novo)"
 
 
 def nuvem_deve_voar(piloto: str, agora: datetime | None = None) -> tuple[bool, str]:

@@ -53,14 +53,21 @@ def carregar() -> dict[str, dict]:
     _reg = out
     # 30/09: a curadoria dos livros pode ter juntado/renomeado o livro pesquisado — segue o mapa de identificadores
     _m = dict((_j(PASTA / "mapa_ids_2026-09-30.json", {}) or {}).get("mapa") or {})
+    _existe: set = set()
     try:                                       # 01/10: livro juntado a outro na conferência — a pesquisa segue para o que ficou
-        for _x in (_j(ROOT / "biblioteca_alexandria/fontes/motores.json", {}) or {}).get("motores") or []:
+        _ms = (_j(ROOT / "biblioteca_alexandria/fontes/motores.json", {}) or {}).get("motores") or []
+        _existe = {_x.get("id") for _x in _ms}
+        # 17/10 (chat de testes): o livro que já guarda os parâmetros vem primeiro — antes, um livro novo que listava o
+        # pesquisado em ids_juntados (fusão de 17/10 04:19) "herdava" a pesquisa sem os parâmetros
+        for _x in sorted(_ms, key=lambda x: not x.get("parametros")):
             for _i in _x.get("ids_juntados") or []:
-                _m.setdefault(_i, _x["id"])
+                if _i != _x["id"]:
+                    _m.setdefault(_i, _x["id"])
     except Exception:
         pass
     for _a, _n in _m.items():
-        if _a in _reg and _n not in _reg:
+        # o livro pesquisado que continua no catálogo é o dono da pesquisa: ela não é desviada para outro livro
+        if _a in _reg and _n not in _reg and _a not in _existe:
             _reg[_n] = {**_reg[_a], "id": _n, "id_pesquisado": _a}
     return _reg
 

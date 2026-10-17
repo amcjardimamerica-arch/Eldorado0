@@ -114,6 +114,9 @@ def _coletar_registros(obj, out: dict):
             for f in ("orgao", "uf", "municipio", "esfera", "modalidade"):
                 if obj.get(f) and not r.get(f):
                     r[f] = obj[f]
+            uf = str(obj.get("uf") or "").strip().upper()[:2]
+            if len(uf) == 2 and uf.isalpha() and uf not in ("BR", "NO"):
+                r.setdefault("_ufs", set()).add(uf)           # 17/10: todas as UFs declaradas para a mesma compra
         for v in obj.values():
             if isinstance(v, (dict, list)):
                 _coletar_registros(v, out)
@@ -181,13 +184,176 @@ def _filtrar(obj, inval: set, cont: Counter):
             novo.append(_filtrar(v, inval, cont) if isinstance(v, (dict, list)) and not isinstance(v, list) or registros else v)
         return novo
     if isinstance(obj, dict):
-        novo = {}
+        novo, colecao = {}, _eh_colecao(obj)
         for k, v in obj.items():
-            if isinstance(v, dict) and _invalido(v, inval):
+            if (colecao or k not in _CAMPOS_DO_REGISTRO) and isinstance(v, dict) and _eh_registro(v) and _invalido(v, inval):
                 cont["removidos"] += 1; continue
             novo[k] = _filtrar(v, inval, cont)
         return novo
     return obj
+
+
+_CAMPOS_DE_REGISTRO = TITULO + ("url", "link_oficial", "pagina", "site_oficial", "link_documento", "veredito", "fim", "prazo")
+
+
+def _eh_registro(v: dict) -> bool:
+    """17/10/2026 (chat de testes): só um REGISTRO pode ser removido inteiro; uma COLEÇÃO (dicionário cujos valores são
+    todos dicionários/listas, ex.: {"derivadas": {...}} ou {"itens": {...}}) é percorrida item a item. Antes, uma coleção
+    em que a ÚNICA compra do PNCP citada era inválida saía inteira — assim as 28 derivadas da revisão humana
+    (dados/editais/derivadas_revisao.json) sumiram no expurgo de 16/10 00:56 por causa de um único registro.
+    Ainda 17/10: um BLOCO de uma ficha sem campo que identifique um registro (ex.: "historico_5_anos" = {ocorrencias,
+    por_ano, por_mes, ultimas} ou "local_publicacao" = {pagina_de_publicacao, vetores_observados…}) também é
+    percorrido, não removido: antes bastava um valor escalar para o bloco contar como registro, e o expurgo de 16/10
+    00:56 tirou esses dois blocos de 166 das 260 fichas de parâmetros das fontes porque as edições citadas eram compras
+    inválidas do PNCP — a contagem de 5 anos e a página oficial de publicação da fonte se perderam junto."""
+    return any(isinstance(v.get(f), str) for f in _CAMPOS_DE_REGISTRO + ("id",))
+
+
+
+def _eh_colecao(obj: dict) -> bool:
+    """Dicionário cujos valores são todos dicionários/listas (ex.: {"itens": {...}}, analises.json por id)."""
+    return bool(obj) and all(isinstance(x, (dict, list)) for x in obj.values())
+
+
+def _uf_em_disputa(info: dict, motivo: str | None) -> bool:
+    """17/10/2026 (chat de testes): a mesma compra citada com UFs diferentes não é "município de outro estado" com
+    certeza — é dúvida, e dúvida não é apagada. Antes, o primeiro registro lido decidia: um registro de extração errada
+    (Alvorada do Norte/GO gravado como "Alvora do Norte/BA") condenou em 16/10 dois chamamentos válidos de Goiás em todo o
+    sistema. Só vale para o motivo territorial; os motivos de objeto (compra, credenciamento remunerado…) seguem."""
+    ufs = info.get("_ufs") or set()
+    return str(motivo or "").startswith("município de outro estado") and ("GO" in ufs or len(ufs) > 1)
+
+
+_COLECOES = ("itens", "registros")
+_TOTAIS = ("total", "quantidade")
+
+
+def _ids(col) -> list:
+    if isinstance(col, dict):
+        return list(col)
+    return [str(x.get("id")) for x in col if isinstance(x, dict) and x.get("id") is not None]
+
+
+def _registros(col) -> list:
+    return [x for x in (col.values() if isinstance(col, dict) else col) if isinstance(x, dict)]
+
+
+def _campo_do_contador(cont: dict, itens: list) -> str | None:
+    """O campo dos registros que o contador (valor → quantidade) conta — só se batia EXATAMENTE antes do expurgo."""
+    if not cont or not itens or not all(isinstance(n, int) and not isinstance(n, bool) for n in cont.values()):
+        return None
+    for f in {f for x in itens for f in x}:
+        c = Counter(str(x.get(f)) for x in itens if x.get(f) is not None)
+        if c and dict(c) == {str(k): n for k, n in cont.items() if n}:
+            return f
+    return None
+
+
+def recontar(antes: dict, depois: dict, em: str | None = None, removidos_antes: list | None = None) -> list:
+    """17/10/2026 (chat de testes): o expurgo tirava registros de uma base e deixava o resumo velho (verificacao_63:
+    37 itens e resumo de 63; abertos_sem_informacao: total 107 e 19 itens; validacao_2026-09-27: contagem 1046 e 1031
+    itens). Agora, em toda base com coleção ("itens"/"registros") e metadados:
+      • o que no resumo/contagem era RECALCULÁVEL e batia com a lista antes (total da lista, contador de um campo) é
+        recontado sobre a lista que ficou;
+      • o "total" de primeiro nível é o universo HISTÓRICO da base (o que foi verificado naquele dia) e não muda: a
+        base ganha o bloco "expurgo" com os ids que saíram, e total = itens + expurgo.removidos;
+      • os demais números do resumo (que não dá para recalcular a partir da lista) ficam como o dia os gravou.
+    Devolve os ids que saíram (para o CSV que acompanha a base)."""
+    if not isinstance(antes, dict) or not isinstance(depois, dict) or _eh_colecao(antes):
+        return []
+    saiu_total: list = []
+    for ck in _COLECOES:
+        a, d = antes.get(ck), depois.get(ck)
+        if not isinstance(a, (dict, list)) or not isinstance(d, (dict, list)):
+            continue
+        ficou = set(_ids(d))
+        saiu = [i for i in _ids(a) if i not in ficou] if removidos_antes is None else list(removidos_antes)
+        if not saiu:
+            continue
+        ia, idp = _registros(a), _registros(d)
+        for sk in ("resumo", "contagem", "contagens", "totais"):
+            S = depois.get(sk)
+            if not isinstance(S, dict):
+                continue
+            f = _campo_do_contador(S, ia)
+            if f:                                                   # o próprio bloco é um contador
+                novo = Counter(str(x.get(f)) for x in idp if x.get(f) is not None)
+                depois[sk] = {k: novo[str(k)] for k in S if novo[str(k)]}
+                continue
+            for k, v in list(S.items()):
+                if k in _TOTAIS and isinstance(v, int) and v == len(a):
+                    S[k] = len(d)
+                elif isinstance(v, dict):
+                    f = _campo_do_contador(v, ia)
+                    if f:
+                        novo = Counter(str(x.get(f)) for x in idp if x.get(f) is not None)
+                        S[k] = {kk: novo[str(kk)] for kk in v if novo[str(kk)]}
+        bloco = dict(depois.get("expurgo") or antes.get("expurgo") or {})
+        ids = list(bloco.get("ids") or [])
+        ids += [i for i in saiu if i not in ids]
+        bloco.update({"regra": "registros que o expurgo tirou desta base (o que não é oportunidade sai por completo; "
+                               "o id fica para a contabilidade: total = itens + removidos)",
+                      "colecao": ck, "removidos": len(ids), "ids": ids,
+                      "execucoes": (bloco.get("execucoes") or []) + [{"em": em or date.today().isoformat(), "removidos": len(saiu)}]})
+        depois["expurgo"] = bloco
+        saiu_total += saiu
+    return saiu_total
+
+
+def _csv_irmao(p: Path, saiu: list, simular: bool) -> int:
+    """O CSV que acompanha a base (mesmo nome) perde as mesmas linhas, pela coluna id."""
+    import csv
+    import io
+    c = p.with_suffix(".csv")
+    if not saiu or not c.exists():
+        return 0
+    bruto = c.read_bytes()
+    bom = bruto.startswith(b"\xef\xbb\xbf")
+    txt = bruto.decode("utf-8-sig", errors="replace")
+    cab = txt.splitlines()[0] if txt else ""
+    sep = ";" if cab.count(";") >= cab.count(",") else ","
+    linhas = list(csv.reader(io.StringIO(txt), delimiter=sep))
+    if not linhas or "id" not in linhas[0]:
+        return 0
+    i, fora = linhas[0].index("id"), set(map(str, saiu))
+    novas = [linhas[0]] + [l for l in linhas[1:] if not (len(l) > i and l[i] in fora)]
+    n = len(linhas) - len(novas)
+    if n and not simular:
+        out = io.StringIO(); csv.writer(out, delimiter=sep, lineterminator="\r\n").writerows(novas)
+        c.write_bytes((b"\xef\xbb\xbf" if bom else b"") + out.getvalue().encode("utf-8"))
+    return n
+
+
+# campos que fazem parte do próprio registro: nunca saem sozinhos (o registro sai inteiro ou fica inteiro). Uma
+# referência a um registro inválido dentro de uma ficha (ex.: "ultimo_edital") é removida.
+_CAMPOS_DO_REGISTRO = {"dados", "doze_itens", "edital_referencia", "itens", "checklist12", "prazo"}
+
+
+def _gravar_registro_do_dia(arq: Path, novo: dict) -> None:
+    """17/10/2026 (chat de testes): o expurgo roda mais de uma vez no mesmo dia (mudança de regra → roda de novo) e cada
+    execução SOBRESCREVIA o registro do dia: o de 16/10 perdeu o que saiu às 00:56 (verificacao_63: 20, derivadas…).
+
+
+    Agora o registro do dia ACUMULA: contagens somadas por arquivo, listas unidas e a lista das execuções."""
+    ant = {}
+    if arq.exists():
+        try:
+            ant = json.loads(arq.read_text(encoding="utf-8"))
+        except ValueError:
+            ant = {}
+    desta = int(novo.get("total_registros_removidos") or 0)
+    if ant and not ant.get("simulacao"):
+        por = Counter(ant.get("registros_removidos_por_arquivo") or {}); por.update(novo.get("registros_removidos_por_arquivo") or {})
+        novo["registros_removidos_por_arquivo"] = dict(sorted(por.items(), key=lambda x: -x[1]))
+        novo["total_registros_removidos"] = sum(por.values())
+        for campo in ("livros_removidos", "pastas_de_livros_removidas", "chaves_invalidas"):
+            novo[campo] = sorted(set(ant.get(campo) or []) | set(novo.get(campo) or []))
+        banco = Counter(ant.get("linhas_do_banco_removidas") or {}); banco.update(novo.get("linhas_do_banco_removidas") or {})
+        novo["linhas_do_banco_removidas"] = dict(banco)
+        novo["registro_de_releitura"] = int(ant.get("registro_de_releitura") or 0) + int(novo.get("registro_de_releitura") or 0)
+        novo["execucoes"] = (ant.get("execucoes") or [{"versao": ant.get("versao"), "removidos": ant.get("total_registros_removidos")}]) + \
+            [{"versao": novo.get("versao"), "removidos": desta}]
+    arq.write_text(json.dumps(novo, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 def executar(simular: bool = True) -> dict:
@@ -222,6 +388,8 @@ def executar(simular: bool = True) -> dict:
         if k in inval:
             continue
         ruim, mot = classificar(info)
+        if ruim and _uf_em_disputa(info, mot):
+            motivos["dúvida: registros dão UFs diferentes (não apagada)"] += 1; continue
         if ruim:
             inval.add(k); g = mot.split(" (")[0].split(" —")[0][:60]; motivos[g] += 1
             if len(exemplos[g]) < 5:
@@ -233,6 +401,8 @@ def executar(simular: bool = True) -> dict:
             novo = [l for l in obj if not (isinstance(l, dict) and _invalido(l, inval) and (cont.update(removidos=1) or True))]
         else:
             novo = _filtrar(obj, inval, cont)
+            if cont["removidos"]:
+                _csv_irmao(p, recontar(obj, novo), simular)
         if cont["removidos"]:
             rel = str(p.relative_to(ROOT)); por_arquivo[rel] = cont["removidos"]
             if rel.endswith("fontes/motores.json"):
@@ -296,7 +466,7 @@ def executar(simular: bool = True) -> dict:
            "linhas_do_banco_removidas": banco, "registro_de_releitura": nv}
     if not simular:
         d = ROOT / "estado/expurgo"; d.mkdir(parents=True, exist_ok=True)
-        (d / f"{res['em']}.json").write_text(json.dumps({**res, "chaves_invalidas": sorted(inval)}, ensure_ascii=False, indent=1), encoding="utf-8")
+        _gravar_registro_do_dia(d / f"{res['em']}.json", {**res, "chaves_invalidas": sorted(inval)})
     return res
 
 

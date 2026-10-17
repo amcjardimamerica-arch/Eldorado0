@@ -79,7 +79,22 @@ def _analises(r, cert, cur, dos, inter, piloto, val) -> list:
 def _novo_livro(r: dict, k: str) -> dict:
     return {"id": "op-" + hashlib.sha1(k.encode()).hexdigest()[:12], "programa": r.get("titulo"), "orgao": r.get("orgao"), "uf": r.get("uf"),
             "tipo": "repositorio_de_oportunidade", "motor": "banco de livros", "pagina": r.get("link_oficial") or r.get("url"),
-            "criado_em": _agora()[:10], "motivo_status": "criado a partir da oportunidade (os livros são o banco)", "historico": []}
+            "criado_em": _agora()[:10], "motivo_status": "criado a partir da oportunidade (os livros são o banco)", "historico": [],
+            # 17/10/2026: os campos neutros que o gerador dos motores dá às capas (_neutro em src/motores.py) — sem eles a
+            # capa criada ENTRE duas passagens do gerador quebrava quem lê o catálogo (KeyError 'familia')
+            "familia": "Oportunidade com seleção", "segmento": "", "ativa": True, "camadas": [],
+            "diagnostico": {"faltam": [], "causa": None, "acao": None, "estado": "repositorio"}}
+
+
+def _titulo_orgao(programa, orgao) -> str:
+    """A mesma chave do catálogo sem duplicados (programa + órgão, só letras e números)."""
+    return re.sub(r"[^a-z0-9]", "", f"{programa}{orgao}".lower())[:80]
+
+
+def _uf_compativel(lv: dict, r: dict) -> bool:
+    """14/10: livro de OUTRO ESTADO não é reutilizado; livro nacional (BR/INT/sem UF) serve a qualquer UF."""
+    a, b = str(lv.get("uf") or "").upper(), str(r.get("uf") or "").upper()
+    return a in ("", "BR", "INT") or b in ("", "BR", "INT") or a == b
 
 
 def consolidar(gravar: bool = True) -> dict:
@@ -107,6 +122,11 @@ def consolidar(gravar: bool = True) -> dict:
     except Exception:  # noqa: BLE001
         _IDX = None
     pelo_indice = 0
+    # 17/10: o livro também é achado pelo PROGRAMA + ÓRGÃO (a chave do catálogo sem duplicados). A mesma notícia
+    # republicada em outro endereço criava um segundo livro com o mesmo programa e órgão, e o histórico ia para os dois.
+    por_titulo = {}
+    for lv in L:
+        por_titulo.setdefault(_titulo_orgao(lv.get("programa"), lv.get("orgao")), lv)
     for r in regs:
         k = chave(r)
         lid = r.get("livro") if r.get("livro") in por_id else (idx.get(k) or (idx.get(chave({"url": r["link_oficial"]})) if r.get("link_oficial") else None))
@@ -114,10 +134,15 @@ def consolidar(gravar: bool = True) -> dict:
             _lid, _s, _mot = _IDX.encontrar(r)
             if _lid in por_id:
                 lid = _lid; pelo_indice += 1
+        if lid not in por_id:                         # 17/10: mesmo programa + órgão já tem livro → vincula, não duplica
+            _lt = por_titulo.get(_titulo_orgao(r.get("titulo"), r.get("orgao")))
+            if _lt is not None and _uf_compativel(_lt, r):
+                lid = _lt.get("id")
         if lid in por_id:
             lv = por_id[lid]; vinculados += 1
         else:
             lv = _novo_livro(r, k); L.append(lv); por_id[lv["id"]] = lv; criados += 1
+            por_titulo.setdefault(_titulo_orgao(r.get("titulo"), r.get("orgao")), lv)
         idx[k] = lv["id"]
         c, cu = certs.get(r["id"]), cur.get(r["id"])
         it12 = {}
@@ -504,13 +529,17 @@ def renomear_modalidade_nos_dados(simular: bool = False) -> dict:
     associação (convênio, termo de fomento/colaboração, contrato, doação, prêmio, incentivo fiscal…), que diz ao Farol
     qual legislação se aplica, quais documentos, como é a inscrição e a prestação de contas. Uma vez, em todos os dados:
     CHAVES 'Destinação' e o NOME do item em listas; texto livre ('Destinação judicial', 'de prestações…') não muda."""
-    if MARCO_MODALIDADE.exists() and not simular:
+    if migracao_modalidade_feita() and not simular:
         return {"migracao": "já feita"}
     from collections import Counter
 
     def trocar(o, c):
         if isinstance(o, dict):
-            return {("Modalidade" if k == "Destinação" and not c.update(chaves=1) else k): trocar(v, c) for k, v in o.items()}
+            # 17/10/2026 (v2): também o NOME do item como valor ({"item": "Destinação"}) — a v1 só trocava chaves e
+            # elementos de lista e deixou 371 itens com o nome antigo (as 260 fichas de parâmetros das fontes…)
+            return {("Modalidade" if k == "Destinação" and not c.update(chaves=1) else k):
+                    ("Modalidade" if k in ("item", "nome") and v == "Destinação" and not c.update(nomes=1) else trocar(v, c))
+                    for k, v in o.items()}
         if isinstance(o, list):
             return [("Modalidade" if v == "Destinação" and not c.update(nomes=1) else trocar(v, c)) for v in o]
         return o
@@ -547,8 +576,21 @@ def renomear_modalidade_nos_dados(simular: bool = False) -> dict:
     r = {"arquivos": arquivos, **dict(tot)}
     if not simular:
         MARCO_MODALIDADE.parent.mkdir(parents=True, exist_ok=True)
-        MARCO_MODALIDADE.write_text(json.dumps({"em": _agora(), **r}, ensure_ascii=False, indent=1), encoding="utf-8")
+        MARCO_MODALIDADE.write_text(json.dumps({"em": _agora(), "versao": VERSAO_MODALIDADE, **r}, ensure_ascii=False, indent=1), encoding="utf-8")
     return r
+
+
+VERSAO_MODALIDADE = 2
+
+
+def migracao_modalidade_feita() -> bool:
+    """A troca do nome só conta como feita na versão atual (a v1, de 16/10, não trocava {"item": "Destinação"})."""
+    if not MARCO_MODALIDADE.exists():
+        return False
+    try:
+        return int(json.loads(MARCO_MODALIDADE.read_text(encoding="utf-8")).get("versao") or 1) >= VERSAO_MODALIDADE
+    except (ValueError, TypeError):
+        return False
 
 
 def _modalidade_do_texto(*textos) -> tuple[str, str, str] | None:
