@@ -370,6 +370,8 @@ def fases(ctx: dict) -> list[dict]:
          "cmds": [
                   # 17/10 (titular): MOTOR CRIA LIVRO OU LIGA — o que os motores guardaram só no estado vai ao livro (índice)
                   [py, "-c", "import json; from src import banco_livros as B; r=B.registrar_do_estado_dos_motores(); print(json.dumps({k: v for k, v in r.items() if k != 'fora_dos_livros_por_arquivo'}, ensure_ascii=False))"],
+                  # 17/10 (titular): MIGRAÇÃO ÚNICA da pesquisa externa para os livros (idempotente; aplicada pela própria passagem)
+                  [py, "scripts/migracoes/pesquisa_externa_nos_livros_2026_10_17.py"],
                   # 17/10 (titular): os "opressores" viraram LIVROS — junta o que uma passagem antiga gravou com o nome antigo
                   [py, "-c", "import json; from src import livros_monitoramento as M; print(json.dumps(M.migrar_nome_antigo(), ensure_ascii=False))"],
                   # 17/10 (testes P0): as fontes de Outras oportunidades são ATUALIZADAS aqui (consultar não grava)
@@ -378,15 +380,15 @@ def fases(ctx: dict) -> list[dict]:
                   [py, "-c", "import json; from src import banco_livros as B; print(json.dumps(B.sincronizar_fontes_260(), ensure_ascii=False))"],
                   # 17/10 (titular): REAPLICA a restauração dos livros retirados em massa às 02:28 (idempotente)
                   [py, "scripts/restaurar_livros.py", "--aplicar"],
-                  # 17/10 (titular): REAPLICA as importações do Chrome (idempotente) — uma passagem que começou antes de uma
-                  # importação gravava a sua versão dos livros por cima e apagava as certidões do Chrome
-                  ["bash", "-c", "for d in biblioteca_alexandria/livros/especiais/pesquisa_externa/entradas/chrome_* entrada_manual/chrome_*; do [ -d \"$d\" ] && " + py + " scripts/importar_revisao_abertas.py \"$d\" --sem-atualizar | tail -c 300; done; true"],[py, "-c", "import json; from src import repositorio_unico as R; print(json.dumps({k: v for k, v in R.construir().items() if not isinstance(v, (list, dict))}, ensure_ascii=False))"],
+                  # 17/10 (titular): a pesquisa externa está NOS LIVROS (protegida pela trava): não há o que reaplicar[py, "-c", "import json; from src import repositorio_unico as R; print(json.dumps({k: v for k, v in R.construir().items() if not isinstance(v, (list, dict))}, ensure_ascii=False))"],
                   [py, "-c", "import json; from src import fila_retentativa as FR; print(json.dumps(FR.dar_destino(), ensure_ascii=False))"],
                   [py, "-c", "import json; from src import fluxo_oportunidades as F; print(json.dumps(F.sincronizar_com_repositorio(), ensure_ascii=False))"],
                   [py, "-c", "import json; from src import cartorio as C; print(json.dumps(C.pendencias(), ensure_ascii=False))"],
                   [py, "-c", "import json; from src import qualidade_motores as Q; print(json.dumps(Q.montar(), ensure_ascii=False))"],
                   # 17/10/2026 (titular): TRAVA DOS LIVROS — por último: nenhum livro apagado nem sobrescrito, só acrescido
                   [py, "-m", "src.trava_livros"],
+                  # 17/10: o monitoramento de livro UNIDO passa para o livro que ficou
+                  [py, "-c", "import json; from src import livros_monitoramento as M; print(json.dumps(M.remapear_unidos(), ensure_ascii=False))"],
                   # 17/10 (titular): a BASE DO PAINEL (calendário e dias da Bússola) refeita a cada passagem, a partir do
                   # repositório e dos livros — antes só fluxos diários/mensais a refaziam e os dias ficavam vazios
                   [py, "-m", "src.dashboard_dados"],

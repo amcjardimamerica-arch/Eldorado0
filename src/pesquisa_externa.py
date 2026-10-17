@@ -4,9 +4,11 @@ Toda consulta externa (Claude no Chrome) é gravada DIRETAMENTE no livro da opor
   livro["pesquisa_externa"]  veredito, parecer, site oficial, documento, prazo, itens (com "como_encontrou"), dispensas
   livro["aprendizados"]      o aprendizado da busca, INDIVIDUAL por livro (onde estava, tipo de documento, busca que
                              funcionou, bloqueio, sugestão para o motor, skill necessária) — é com ele que os motores melhoram
-A oportunidade que nunca teve livro (ruído descartado) fica no LIVRO ESPECIAL "Pesquisa externa". O arquivo coletivo de
-vereditos e o relatório de aprendizado passam a ser VISTAS regeradas a partir dos livros. A trava dos livros protege tudo
-(nada apagado nem sobrescrito).
+NÃO HÁ LIVRO ESPECIAL (titular): resultado sem livro passa pelo ÍNDICE DOS LIVROS (título, órgão, endereço, local,
+objeto) — liga ao livro existente ou, se é oportunidade, CRIA o livro pelo caminho normal (portão, triagem, índice). O que
+o Chrome eliminou (ruído, fora do perfil, duplicata, encerrada) e nunca teve livro não vira livro (o portão não cria livro
+de ruído): fica só a MEMÓRIA DE CONTROLE "resolvido, não reenviar" e, se veio de piloto, o descarte no Manual do Piloto.
+O arquivo coletivo de vereditos e o relatório de aprendizado são VISTAS dos livros. A trava protege tudo.
 """
 from __future__ import annotations
 
@@ -19,8 +21,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CAT = ROOT / "biblioteca_alexandria/fontes/motores.json"
 REP = ROOT / "biblioteca_alexandria/livros/_vistas/repositorio_unico.json"
-ESPECIAL = ROOT / "biblioteca_alexandria/livros/especiais/pesquisa_externa"
-SEM_LIVRO = ESPECIAL / "livro.json"
+RESOLVIDOS = ROOT / "estado/pesquisa_externa_resolvidos.json"   # controle: "resolvido, não reenviar" (sem dado)
+ELIMINADOS = ("ruido", "fora_perfil", "duplicata", "encerrada")
 VEREDITOS = ROOT / "biblioteca_alexandria/livros/_acervo/editais/vereditos_revisao.json"
 APRENDIZADO = ROOT / "docs/dados/aprendizado_chrome.json"
 CAMPOS = ("veredito", "parecer", "site_oficial", "link_documento", "prazo", "itens", "dispensas")
@@ -63,9 +65,11 @@ def gravar(registros: list[dict], origem: str, gravar_: bool = True) -> dict:
     cat = _j(CAT, {"motores": []}); L = cat.setdefault("motores", [])
     por_id = {x.get("id"): x for x in L}
     mapa = _mapa_livros(L)
-    esp = _j(SEM_LIVRO, {}) or {"id": "pesquisa-externa", "tipo": "livro_especial",
-                                 "regra": "resultados da pesquisa externa de oportunidades que nunca tiveram livro",
-                                 "resultados": {}}
+    res_ctl = _j(RESOLVIDOS, {}) or {"regra": "controle: o Chrome resolveu de forma definitiva; não reenviar", "ids": {}}
+    from .indice_livros import Indice, entrada
+    from .banco_livros import registrar_achados
+    ind = Indice([entrada(x) for x in L if x.get("id")])
+    novos: list = []
     st = collections.Counter()
     for x in registros:
         oid = str(x.get("id") or "")
@@ -76,11 +80,22 @@ def gravar(registros: list[dict], origem: str, gravar_: bool = True) -> dict:
                "definitivo": x.get("veredito") not in (None, "pendente")}
         ap = x.get("aprendizado") if isinstance(x.get("aprendizado"), dict) else None
         lv = por_id.get(mapa.get(oid))
+        op = {"id": oid, "titulo": x.get("titulo") or "", "orgao": x.get("orgao"), "uf": x.get("uf"), "objeto": x.get("objeto"),
+              "url": x.get("url") or x.get("site_oficial") or x.get("link_documento"), "link_oficial": x.get("link_oficial") or x.get("site_oficial")}
+        if lv is None and (op["titulo"] or op["url"]):
+            lv = por_id.get(ind.encontrar(op)[0])             # o ÍNDICE liga ao livro existente
+            if lv is not None:
+                st["ligados_pelo_indice"] += 1
         if lv is None:
-            chave = f"{oid}|{origem}"
-            if chave not in esp["resultados"]:
-                esp["resultados"][chave] = {**ent, **({"aprendizado": ap} if ap else {})}
-                st["no_livro_especial"] += 1
+            if x.get("veredito") in ELIMINADOS or x.get("veredito") is None:
+                res_ctl["ids"][oid] = {"veredito": x.get("veredito"), "origem": origem, "em": ent["em"]}
+                st["eliminados_sem_livro_controle"] += 1
+                continue
+            if op["titulo"] or op["url"]:
+                novos.append((op, ent, ap))                   # oportunidade sem livro: cria pelo caminho normal
+                continue
+            res_ctl["ids"][oid] = {"veredito": x.get("veredito"), "origem": origem, "em": ent["em"], "sem_identidade": True}
+            st["sem_identidade_controle"] += 1
             continue
         pe = lv.setdefault("pesquisa_externa", [])
         if not any(p.get("id") == oid and p.get("origem") == origem for p in pe):
@@ -92,8 +107,22 @@ def gravar(registros: list[dict], origem: str, gravar_: bool = True) -> dict:
                 st["aprendizados_no_livro"] += 1
     if gravar_:
         CAT.write_text(json.dumps(cat, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-        ESPECIAL.mkdir(parents=True, exist_ok=True)
-        SEM_LIVRO.write_text(json.dumps(esp, ensure_ascii=False, indent=1), encoding="utf-8")
+        RESOLVIDOS.parent.mkdir(parents=True, exist_ok=True)
+        RESOLVIDOS.write_text(json.dumps(res_ctl, ensure_ascii=False, indent=1), encoding="utf-8")
+    if novos:                                                 # livro NOVO pelo caminho normal (portão, triagem, índice)
+        r = registrar_achados([{**op, "sensor": "pesquisa-externa"} for op, _e, _a in novos], motor="pesquisa-externa", gravar=gravar_)
+        st["livros_criados"] += int(r.get("livros_criados") or 0); st["ligados_na_criacao"] += int(r.get("vinculados") or 0)
+        if gravar_:                                           # e o resultado entra no livro recém-ligado/criado
+            cat = _j(CAT, {"motores": []}); mapa = _mapa_livros(cat["motores"]); por_id = {x.get("id"): x for x in cat["motores"]}
+            for op, e, a in novos:
+                lv = por_id.get(mapa.get(op["id"]))
+                if lv is None:
+                    continue
+                if not any(p.get("id") == op["id"] and p.get("origem") == origem for p in lv.setdefault("pesquisa_externa", [])):
+                    lv["pesquisa_externa"].append(e); st["gravados_no_livro_novo"] += 1
+                if a and not any(x.get("id") == op["id"] for x in lv.setdefault("aprendizados", [])):
+                    lv["aprendizados"].append({"id": op["id"], "origem": origem, "em": e["em"], "veredito": e.get("veredito"), **a})
+            CAT.write_text(json.dumps(cat, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return dict(st)
 
 
@@ -118,7 +147,7 @@ def vista_vereditos(gravar_: bool = True) -> dict:
     atual = _j(VEREDITOS, {}) or {}
     V = dict(atual.get("vereditos") or {})
     fontes = [(p, lv.get("id")) for lv in (_j(CAT, {}) or {}).get("motores") or [] for p in lv.get("pesquisa_externa") or []]
-    fontes += [(p, None) for p in ((_j(SEM_LIVRO, {}) or {}).get("resultados") or {}).values()]
+    fontes += [({"id": i, **v}, None) for i, v in ((_j(RESOLVIDOS, {}) or {}).get("ids") or {}).items()]
     for p, lid in sorted(fontes, key=lambda t: str(t[0].get("em") or "")):
         if p.get("veredito"):
             V[p["id"]] = {**(V.get(p["id"]) or {}), "veredito": p["veredito"], "motivo": str(p.get("parecer") or "")[:300],
@@ -133,8 +162,7 @@ def vista_vereditos(gravar_: bool = True) -> dict:
 def vista_aprendizado(gravar_: bool = True) -> dict:
     """O relatório de aprendizado, regerado a partir dos aprendizados de CADA LIVRO (e do livro especial)."""
     itens = [(lv.get("id"), a) for lv in (_j(CAT, {}) or {}).get("motores") or [] for a in lv.get("aprendizados") or []]
-    itens += [(None, {**(p.get("aprendizado") or {}), "veredito": p.get("veredito")})
-              for p in ((_j(SEM_LIVRO, {}) or {}).get("resultados") or {}).values() if p.get("aprendizado")]
+
     def cont(c):
         return collections.Counter(str(a.get(c)).strip()[:120] for _l, a in itens if a.get(c)).most_common(25)
     out = {"em": _agora(), "livros_com_aprendizado": len({l for l, _a in itens if l}), "aprendizados": len(itens),
@@ -147,3 +175,20 @@ def vista_aprendizado(gravar_: bool = True) -> dict:
         APRENDIZADO.parent.mkdir(parents=True, exist_ok=True)
         APRENDIZADO.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     return {k: out[k] for k in ("livros_com_aprendizado", "aprendizados")}
+
+
+def livro_a_identificar(oid: str, veredito: str | None, pistas: str, aprendizado: dict | None = None, origem: str = "") -> dict:
+    """17/10/2026 (titular): resultado de pesquisa externa com veredito, mas SEM identidade (nem no histórico) — cria o
+    LIVRO com o que se sabe, marcado 'identidade_a_completar'; o Cartório o põe nas pendências do Chrome (grupo próprio)
+    para a pesquisa individual suplementar título, órgão, site oficial e os itens."""
+    cat = _j(CAT, {"motores": []}); L = cat.setdefault("motores", [])
+    lid = f"idc-{oid}"
+    if any(x.get("id") == lid for x in L):
+        return {"ja_existia": lid}
+    L.append({"id": lid, "programa": f"Oportunidade a identificar — {pistas[:90]}", "orgao": None, "criado_em": _agora()[:10],
+              "origem": "pesquisa externa (identidade a completar)", "identidade_a_completar": True, "pistas": pistas,
+              "historico": [], "coleta": {},
+              "pesquisa_externa": [{"id": oid, "origem": origem, "em": _agora(), "veredito": veredito, "definitivo": False}],
+              **({"aprendizados": [{"id": oid, "origem": origem, **aprendizado}]} if aprendizado else {})})
+    CAT.write_text(json.dumps(cat, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    return {"livro_criado": lid}

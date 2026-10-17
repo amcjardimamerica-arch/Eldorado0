@@ -982,6 +982,10 @@ if __name__ == "__main__":
 PENDENCIAS = ROOT / "docs/dados/cartorio_pendencias.json"
 
 
+_DOZE_PEND = ["Objeto", "Prazo de inscrição", "Resultado", "Prazo de recurso", "Valor", "Órgão / financiador", "Território",
+              "Esfera", "Requisitos", "Anexos", "Modalidade", "Área de atuação"]
+
+
 def pendencias(gravar: bool = True, lote_chrome: bool = True) -> dict:
     """Para cada oportunidade aberta: o que está CERTIFICADO (com o documento oficial) e o que FALTA, e o próximo passo
     — Cartório na fonte ou Claude no Chrome. O lote do Chrome sai DAQUI (o mesmo universo do repositório)."""
@@ -1044,6 +1048,16 @@ def pendencias(gravar: bool = True, lote_chrome: bool = True) -> dict:
                     "selo": r.get("selo") or r.get("estado"),
                     "motivo_chrome": ("documento oficial bloqueado para o robô" if r["id"] in _bloq_op else
                                       "parado na fonte" if r["id"] in chrome else None)})
+    # 17/10 (titular): livro com a IDENTIDADE A COMPLETAR (veredito sem título nem endereço) — pesquisa individual no Chrome
+    for lv in (_j(ROOT / "biblioteca_alexandria/fontes/motores.json", {}) or {}).get("motores") or []:
+        if lv.get("identidade_a_completar") and not any(o["id"] == lv["id"] for o in out):
+            out.append({"id": lv["id"], "titulo": lv.get("programa"), "uf": None, "link_oficial": None, "link_publicacao_referencia": None,
+                        "documentos_oficiais": [], "certificados": {}, "faltam": ["título, órgão e site oficial", *_DOZE_PEND],
+                        "proximo_passo": "Claude no Chrome", "retorno": True, "grupo": "Identidade a completar",
+                        "pistas": lv.get("pistas"), "aprendizado_anterior": (lv.get("aprendizados") or [None])[-1],
+                        "resolver_cada_item": {"identidade": "a partir das pistas, achar o programa, o órgão/financiador e o site oficial; "
+                                                             "depois resolver os 12 itens como nas demais"},
+                        "ou_eliminar": "encerrada | ruido | fora_perfil | duplicata (com o id)", "selo": None, "motivo_chrome": "identidade a completar"})
     out.sort(key=lambda x: (x["proximo_passo"] != "Claude no Chrome", -len(x["faltam"])))
     res = {"em": _agora(), "regra": "o Cartório reúne o que falta em cada oportunidade; só documento oficial (link oficial, "
            "anexos, registro oficial) certifica — o link de publicação é só referência; nada é suposto",
@@ -1053,7 +1067,7 @@ def pendencias(gravar: bool = True, lote_chrome: bool = True) -> dict:
            "regra_unica": "cada oportunidade é resolvida UMA vez: todo item que falta termina certificado, dispensado com "
                           "justificativa, ou a oportunidade é eliminada; 'pendente' só quando não existe fonte oficial",
            "para_o_chrome_por_grupo": {g: sum(1 for x in out if x["proximo_passo"] == "Claude no Chrome" and x["grupo"] == g)
-                                       for g in ("Goiás", "Nacional", "Sem site oficial")},
+                                       for g in ("Goiás", "Nacional", "Sem site oficial", "Identidade a completar")},
            "bloqueadas_na_fonte": len(_bloq_op), "paginas_bloqueadas_do_cartorio": len(bloqueadas),
            # 17/10 (titular): a LISTA das páginas que o robô não abre (nem pela ponte) — para a rotina no computador do titular
            "paginas_para_o_navegador_local": _paginas_bloqueadas(_fr, regs, certs),
