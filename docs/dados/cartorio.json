@@ -1,30 +1,30 @@
 {
- "em": "2026-10-17T22:19:19+00:00",
+ "em": "2026-10-17T22:46:11+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
  "resumo": {
   "pontos_12_total": 4800,
-  "pontos_certificados": 3145,
-  "pontos_dispensados": 178,
-  "pontos_ja_constavam": 1310,
-  "pontos_faltam": 167,
-  "pct_certificado_12": 0.6923,
-  "certidoes_12_de_12": 133,
-  "certidoes_sem_item_faltando": 254,
+  "pontos_certificados": 3131,
+  "pontos_dispensados": 177,
+  "pontos_ja_constavam": 1331,
+  "pontos_faltam": 161,
+  "pct_certificado_12": 0.6892,
+  "certidoes_12_de_12": 134,
+  "certidoes_sem_item_faltando": 258,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
-  "certidoes": 2562,
-  "nesta_execucao": 30,
-  "fila_estrelas": 124,
-  "fila_livros": 2512,
-  "itens_que_faltavam": 23646,
-  "itens_obtidos": 8761,
+  "certidoes": 2576,
+  "nesta_execucao": 27,
+  "fila_estrelas": 152,
+  "fila_livros": 2515,
+  "itens_que_faltavam": 23736,
+  "itens_obtidos": 8812,
   "itens_dispensados": 503,
   "eficiencia_itens": 0.392,
-  "com_link_oficial": 1733,
-  "taxa_link_oficial": 0.676,
-  "certidoes_completas": 235,
-  "para_o_interceptador": 1863,
+  "com_link_oficial": 1747,
+  "taxa_link_oficial": 0.678,
+  "certidoes_completas": 239,
+  "para_o_interceptador": 1873,
   "para_o_chrome": 463,
   "selos_que_mudaram": {
    "bronze → ouro": 6,
@@ -36,8 +36,8 @@
    "prata → ouro": 3
   },
   "por_degrau": {
-   "degrau 0": 1658,
-   "degrau 1": 116
+   "degrau 0": 1670,
+   "degrau 1": 118
   }
  },
  "cinza_conferidos": {
@@ -47,76 +47,76 @@
  },
  "por_item": {
   "Objeto": {
-   "faltavam": 1669,
-   "obtidos": 541,
+   "faltavam": 1676,
+   "obtidos": 546,
    "dispensados": 0,
-   "eficiencia": 0.324
+   "eficiencia": 0.326
   },
   "Prazo de inscrição": {
-   "faltavam": 1783,
-   "obtidos": 549,
+   "faltavam": 1790,
+   "obtidos": 552,
    "dispensados": 141,
    "eficiencia": 0.387
   },
   "Resultado": {
-   "faltavam": 2304,
-   "obtidos": 585,
+   "faltavam": 2312,
+   "obtidos": 588,
    "dispensados": 225,
    "eficiencia": 0.352
   },
   "Prazo de recurso": {
-   "faltavam": 2261,
-   "obtidos": 514,
+   "faltavam": 2271,
+   "obtidos": 515,
    "dispensados": 45,
    "eficiencia": 0.247
   },
   "Valor": {
-   "faltavam": 2017,
-   "obtidos": 655,
+   "faltavam": 2025,
+   "obtidos": 661,
    "dispensados": 60,
-   "eficiencia": 0.354
+   "eficiencia": 0.356
   },
   "Órgão / financiador": {
-   "faltavam": 1531,
-   "obtidos": 922,
+   "faltavam": 1537,
+   "obtidos": 927,
    "dispensados": 0,
-   "eficiencia": 0.602
+   "eficiencia": 0.603
   },
   "Território": {
-   "faltavam": 1801,
-   "obtidos": 562,
+   "faltavam": 1809,
+   "obtidos": 565,
    "dispensados": 0,
    "eficiencia": 0.312
   },
   "Esfera": {
-   "faltavam": 2055,
-   "obtidos": 1267,
+   "faltavam": 2061,
+   "obtidos": 1272,
    "dispensados": 0,
    "eficiencia": 0.617
   },
   "Requisitos": {
-   "faltavam": 2240,
-   "obtidos": 586,
+   "faltavam": 2248,
+   "obtidos": 589,
    "dispensados": 0,
    "eficiencia": 0.262
   },
   "Anexos": {
-   "faltavam": 1609,
-   "obtidos": 352,
+   "faltavam": 1615,
+   "obtidos": 353,
    "dispensados": 4,
    "eficiencia": 0.221
   },
   "Modalidade": {
-   "faltavam": 2219,
-   "obtidos": 756,
+   "faltavam": 2229,
+   "obtidos": 766,
    "dispensados": 28,
-   "eficiencia": 0.353
+   "eficiencia": 0.356
   },
   "Área de atuação": {
-   "faltavam": 2157,
-   "obtidos": 1472,
+   "faltavam": 2163,
+   "obtidos": 1478,
    "dispensados": 0,
-   "eficiencia": 0.682
+   "eficiencia": 0.683
   }
  },
  "por_balcao": {
@@ -129,12 +129,12 @@
    "taxa_link_oficial": 0.761
   },
   "pncp": {
-   "certidoes": 101,
-   "com_link_oficial": 73,
-   "faltavam": 931,
-   "resolvidos": 489,
-   "eficiencia": 0.525,
-   "taxa_link_oficial": 0.723
+   "certidoes": 103,
+   "com_link_oficial": 75,
+   "faltavam": 944,
+   "resolvidos": 502,
+   "eficiencia": 0.532,
+   "taxa_link_oficial": 0.728
   },
   "?": {
    "certidoes": 3,
@@ -145,12 +145,12 @@
    "taxa_link_oficial": 1.0
   },
   "orgao": {
-   "certidoes": 1188,
-   "com_link_oficial": 949,
-   "faltavam": 10697,
-   "resolvidos": 4890,
+   "certidoes": 1198,
+   "com_link_oficial": 959,
+   "faltavam": 10750,
+   "resolvidos": 4914,
    "eficiencia": 0.457,
-   "taxa_link_oficial": 0.799
+   "taxa_link_oficial": 0.801
   },
   "privado": {
    "certidoes": 569,
@@ -161,12 +161,12 @@
    "taxa_link_oficial": 0.696
   },
   "pista": {
-   "certidoes": 339,
-   "com_link_oficial": 59,
-   "faltavam": 3054,
-   "resolvidos": 703,
-   "eficiencia": 0.23,
-   "taxa_link_oficial": 0.174
+   "certidoes": 341,
+   "com_link_oficial": 61,
+   "faltavam": 3078,
+   "resolvidos": 717,
+   "eficiencia": 0.233,
+   "taxa_link_oficial": 0.179
   },
   "diario": {
    "certidoes": 152,
@@ -187,20 +187,20 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2048,
-   "faltavam": 17887,
-   "resolvidos": 6235,
-   "eficiencia": 0.349,
-   "com_link_oficial": 1308,
+   "certidoes": 2052,
+   "faltavam": 17857,
+   "resolvidos": 6250,
+   "eficiencia": 0.35,
+   "com_link_oficial": 1312,
    "taxa_link_oficial": 0.639
   },
   "refeitas": {
-   "certidoes": 514,
-   "faltavam": 5759,
-   "resolvidos": 2913,
-   "eficiencia": 0.506,
-   "com_link_oficial": 425,
-   "taxa_link_oficial": 0.827
+   "certidoes": 524,
+   "faltavam": 5879,
+   "resolvidos": 2949,
+   "eficiencia": 0.502,
+   "com_link_oficial": 435,
+   "taxa_link_oficial": 0.83
   }
  },
  "por_versao": {
@@ -221,12 +221,12 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2339,
-   "faltavam": 21047,
-   "resolvidos": 7916,
-   "eficiencia": 0.376,
-   "com_link_oficial": 1561,
-   "taxa_link_oficial": 0.667
+   "certidoes": 2353,
+   "faltavam": 21137,
+   "resolvidos": 7967,
+   "eficiencia": 0.377,
+   "com_link_oficial": 1575,
+   "taxa_link_oficial": 0.669
   },
   "revisão manual": {
    "certidoes": 209,
@@ -240,27 +240,27 @@
  "por_abordagem": {
   "1": {
    "nome": "documento na mão",
-   "vezes": 2439,
-   "renderam": 1601,
-   "itens": 8369,
-   "links_oficiais": 1510,
-   "taxa_de_acerto": 0.656
+   "vezes": 2453,
+   "renderam": 1612,
+   "itens": 8420,
+   "links_oficiais": 1524,
+   "taxa_de_acerto": 0.657
   },
   "2": {
    "nome": "anexos completos",
-   "vezes": 209,
+   "vezes": 211,
    "renderam": 40,
    "itens": 163,
    "links_oficiais": 4,
-   "taxa_de_acerto": 0.191
+   "taxa_de_acerto": 0.19
   },
   "3": {
    "nome": "página oficial e citados",
-   "vezes": 320,
+   "vezes": 330,
    "renderam": 82,
    "itens": 468,
    "links_oficiais": 53,
-   "taxa_de_acerto": 0.256
+   "taxa_de_acerto": 0.248
   },
   "4": {
    "nome": "biblioteca de sites",
@@ -304,11 +304,11 @@
   },
   "9": {
    "nome": "leitura profunda",
-   "vezes": 77,
+   "vezes": 78,
    "renderam": 15,
    "itens": 62,
    "links_oficiais": 9,
-   "taxa_de_acerto": 0.195
+   "taxa_de_acerto": 0.192
   },
   "10": {
    "nome": "busca no domínio",
@@ -322,29 +322,29 @@
  "por_balcao_selo": {
   "sem_estrela": {
    "nome": "Sem estrela → bronze",
-   "certidoes": 1330,
-   "faltavam": 12075,
-   "resolvidos": 3707,
-   "eficiencia": 0.307,
-   "entraram_aqui": 1479,
+   "certidoes": 1339,
+   "faltavam": 12155,
+   "resolvidos": 3751,
+   "eficiencia": 0.309,
+   "entraram_aqui": 1488,
    "esgotadas": 0
   },
   "bronze": {
    "nome": "Bronze → prata",
-   "certidoes": 64,
-   "faltavam": 559,
-   "resolvidos": 376,
-   "eficiencia": 0.673,
-   "entraram_aqui": 27,
+   "certidoes": 65,
+   "faltavam": 564,
+   "resolvidos": 380,
+   "eficiencia": 0.674,
+   "entraram_aqui": 28,
    "esgotadas": 0
   },
   "prata": {
    "nome": "Prata → ouro",
-   "certidoes": 961,
-   "faltavam": 8750,
-   "resolvidos": 3641,
+   "certidoes": 965,
+   "faltavam": 8755,
+   "resolvidos": 3644,
    "eficiencia": 0.416,
-   "entraram_aqui": 933,
+   "entraram_aqui": 937,
    "esgotadas": 0
   },
   "ouro": {
@@ -358,16 +358,16 @@
   }
  },
  "gabarito": {
-  "orgaos_com_gabarito": 1220,
+  "orgaos_com_gabarito": 1222,
   "itens_achados_pelo_gabarito": {
    "Prazo de recurso": 20,
-   "Objeto": 64,
-   "Requisitos": 56,
+   "Objeto": 67,
+   "Requisitos": 58,
    "Valor": 3,
    "Modalidade": 12,
    "Resultado": 5
   },
-  "certidoes_ajudadas": 143
+  "certidoes_ajudadas": 146
  },
  "certidoes": [
   {
@@ -5425,6 +5425,92 @@
     "ja_constavam": 0,
     "faltam": 0,
     "pct_certificado_12": 1.0,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-a085e88d0902",
+   "tipo": "livro",
+   "titulo": "CREDENCIAMENTO DE ARTISTAS PARA A CARAVANA DA CULTURA 2026/2027 — MUNICIPIO DE VITORIA DA CONQUISTA",
+   "balcao": "pncp",
+   "link_oficial": "https://pncp.gov.br/pncp-api/v1/orgaos/14239578000100/compras/2027/3/arquivos/1",
+   "degrau": 0,
+   "como": "PNCP: arquivo anexado pelo órgão (Edital)",
+   "faltavam": [
+    "Objeto"
+   ],
+   "resolvidos": [
+    "Objeto"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T22:44:34+00:00",
+   "prazo": null,
+   "uf": "BA",
+   "orgao": null,
+   "fim": null,
+   "itens": {
+    "Objeto": {
+     "valor": "CHAMAMENTO PÚBLICO PARA CREDENCIAMENTO DE",
+     "trecho": "EDITAL DE CREDENCIAMENTO PÚBLICO Nº 010/2026 QUADRO RESUMO 1. OBJETO: CHAMAMENTO PÚBLICO PARA CREDENCIAMENTO DE ARTISTAS, GRUPOS ARTÍSTICOS, MESTRES DA CULTURA, COLETIVOS E PROFISS",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/14239578000100/compras/2027/3/arquivos/1",
+     "metodo": "texto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T22:44:34+00:00",
+     "ganhou": [
+      "Objeto"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/14239578000100/compras/2027/3/arquivos/1",
+     "degrau": 0,
+     "como": "PNCP: arquivo anexado pelo órgão (Edital)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 31,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "ja_constava",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "ja_constava",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
     "pct_cobertura_12": 1.0
    }
   },
@@ -27375,6 +27461,92 @@
    }
   },
   {
+   "id": "op-ebedc19f5258",
+   "tipo": "livro",
+   "titulo": "Edital de Intercâmbio Cultural - Circulação e Participação Audiovisual no Exterior",
+   "balcao": "orgao",
+   "link_oficial": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-em-andamento/edital-de-intercambio-cultural-circulacao-e-participacao-audiovisual-no-exterior",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Modalidade"
+   ],
+   "resolvidos": [
+    "Modalidade"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "prata",
+   "estagio_inicio": "prata",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T22:44:57+00:00",
+   "prazo": null,
+   "uf": "BR",
+   "orgao": "Ministério da Cultura",
+   "fim": "2026-06-15",
+   "itens": {
+    "Modalidade": {
+     "valor": "Termo de Execução Cultural",
+     "trecho": "O edital tem como objetivo conceder apoio financeiro, por meio de termo de execução cultural, para a participação e circulação de agentes do ecossistema do audiovisual brasileiro em eventos do set",
+     "pagina": 1,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-em-andamento/edital-de-intercambio-cultural-circulacao-e-participacao-audiovisual-no-exterior",
+     "metodo": "modalidade de recebimento"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T22:44:57+00:00",
+     "ganhou": [
+      "Modalidade"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-em-andamento/edital-de-intercambio-cultural-circulacao-e-participacao-audiovisual-no-exterior",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "ja_constava",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "certificado",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "op-159af8a8ebc7",
    "tipo": "livro",
    "titulo": "Edital de Mobilidade Cultural - MinC / Funarte - Programa de Intercâmbio Cultural",
@@ -36489,6 +36661,202 @@
    }
   },
   {
+   "id": "op-5db535d1909b",
+   "tipo": "livro",
+   "titulo": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA — CREDENCIAMENTO de associações e cooperativas para coleta de material e… — Brasil",
+   "balcao": "pncp",
+   "link_oficial": "https://pncp.gov.br/pncp-api/v1/orgaos/00508903000188/compras/2024/293/arquivos/1",
+   "degrau": 0,
+   "como": "PNCP: arquivo anexado pelo órgão (Edital)",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T22:42:32+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+   "fim": "2024-03-11",
+   "itens": {
+    "Prazo de inscrição": {
+     "valor": "até 11/03/2024",
+     "trecho": "os de Compromisso distintos para cada objeto. II – DO LOCAL E PRAZO DE ENTREGA DAS PROPOSTAS 2.1 Os interessados deverão encaminhar o requerimento de credenciamento por mensagem eletrônica a partir do dia 11/03/2024, para o e-mail sei-selita@cjf.jus.br ou através do protocolo do Con",
+     "pagina": 2,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/00508903000188/compras/2024/293/arquivos/1",
+     "metodo": "cronograma"
+    },
+    "Resultado": {
+     "valor": "O resultado será publicado no sítio da Internet do CJF e no Diário Oficial da União.",
+     "trecho": "venção da Covid -19, previstas na Portaria CJF n. 590/2021. 11.12 O resultado será publicado no sítio da Internet do CJF e no Diário Oficial da União. 11.13 Os casos omissos serão resolvidos com base nas disposições c",
+     "pagina": 8,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/00508903000188/compras/2024/293/arquivos/1",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "3 (três) dias úteis",
+     "trecho": "CONSELHO DA JUSTIÇA FEDERAL IX – DOS RECURSOS 9.1 Cabe recurso da decisão que habilitou ou inabilitou a interessada, no prazo de 3 (três) dias úteis, contado da data de intimação, nos termos do art. 165, inciso I, alín",
+     "pagina": 7,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/00508903000188/compras/2024/293/arquivos/1",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "o credenciamento de associações e cooperativas para: 1.",
+     "trecho": "023) 1.1 DEFINIÇÃO DO OBJETO 1.1 – O presente termo de referência tem por objeto o credenciamento de associações e cooperativas para: 1.1.1 Objeto 1: Coleta de produtos eletroeletrônicos para destinação de",
+     "pagina": 28,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/00508903000188/compras/2024/293/arquivos/1",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "federal",
+     "trecho": "domínio/órgão: pncp.gov.br · JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/00508903000188/compras/2024/293/arquivos/1",
+     "metodo": "domínio e órgão"
+    },
+    "Requisitos": {
+     "valor": "Poderão participar deste credenciamento exclusivamente cooperativas ou outras",
+     "trecho": "a, exceto feriados. III – DAS CONDIÇÕES DE PARTICIPAÇÃO 3.1 Poderão participar deste credenciamento exclusivamente cooperativas ou outras formas de associação de catadores de materiais recicláveis e de produ",
+     "pagina": 2,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/00508903000188/compras/2024/293/arquivos/1",
+     "metodo": "texto"
+    },
+    "Anexos": {
+     "valor": "ANEXO I MODELO DE REQUERIMENTO DE HABILITAÇÃO; ANEXO II MODELO DE REQUERIMENTO DE HABILITAÇÃO; ANEXO III ITENS AVALIADOS NA VISITAÇÃO TÉCNICA; ANEXO IV MODELO DE RELATÓRIO MENSAL DE COLETA; ANEXO V MODELO DE RELATÓRIO DE COLETA DE RESÍDUOS; ANEXO VI MINUTA DE TERMO DE COMPROMISSO; ANEXO VII TERMO DE",
+     "trecho": "ras leis que se prestem a suprir eventuais lacunas. XII – DOS ANEXOS 12.1 São partes integrantes deste edital os seguintes anexos: a) Anexo I – Modelo de Requerimento de Habilitação (Objeto 1 - Materiais recicláveis); b) Anexo II – Modelo de R",
+     "pagina": 8,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/00508903000188/compras/2024/293/arquivos/1",
+     "metodo": "lista de anexos"
+    },
+    "Modalidade": {
+     "valor": "Credenciamento (contratação) — Lei n. 14.133",
+     "trecho": "a Lei n. 14.133, de 1º de abril de 2021, torna público que realizará CREDENCIAMENTO de associações e cooperativas para coleta de material eletroeletrônico para destinação de logística reversa e co",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/00508903000188/compras/2024/293/arquivos/1",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Meio ambiente",
+     "trecho": "termos do objeto e do título: Meio ambiente",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/00508903000188/compras/2024/293/arquivos/1",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Órgão / financiador": {
+     "valor": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA — SECRETARIA DO CONSELHO DA JUSTICA FEDERAL-DF",
+     "trecho": "orgaoEntidade.razaoSocial: JUSTICA FEDERAL DE PRIMEIRA INSTANCIA — SECRETARIA DO CONSELHO DA JUSTICA FEDERAL-DF",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/00508903000188/compras/2024/293",
+     "metodo": "metadados oficiais do PNCP"
+    },
+    "Valor": {
+     "valor": "R$ 0,20",
+     "trecho": "valorTotalEstimado: R$ 0,20",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/00508903000188/compras/2024/293",
+     "metodo": "metadados oficiais do PNCP"
+    },
+    "Território": {
+     "valor": "Brasília/DF",
+     "trecho": "unidadeOrgao.municipioNome/ufSigla: Brasília/DF",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/00508903000188/compras/2024/293",
+     "metodo": "metadados oficiais do PNCP"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T22:42:32+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/00508903000188/compras/2024/293/arquivos/1",
+     "degrau": 0,
+     "como": "PNCP: arquivo anexado pelo órgão (Edital)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 44,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 12,
+    "dispensados": 0,
+    "ja_constavam": 0,
+    "faltam": 0,
+    "pct_certificado_12": 1.0,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "4b30661ea4d6e01e0607",
    "tipo": "estrela",
    "titulo": "Janela anual da Lei Rouanet (Pronac): pela IN MinC nº 29/2026, propostas culturais de pessoas físicas ou jurídicas de natureza cultural são apresentadas no Salic de 1º/02 a 31/10 de cada ano; aprovada",
@@ -37937,7 +38305,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-17T21:34:59+00:00",
+   "em": "2026-10-17T22:35:46+00:00",
    "prazo": "2027-08-07",
    "uf": null,
    "orgao": "MUNICIPIO DE TRINDADE",
@@ -40904,6 +41272,92 @@
      "Requisitos": "ja_constava",
      "Anexos": "ja_constava",
      "Modalidade": "ja_constava",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-183ade3a4be3",
+   "tipo": "livro",
+   "titulo": "PNAB DIVINO SÃO LOURENÇO - 02/2026 - Seleção de projetos para firmar termo de execução cultural",
+   "balcao": "orgao",
+   "link_oficial": "https://mapa.cultura.es.gov.br/files/opportunity/2578/whatsapp-image-2026-09-11-at-11-00-34.jpeg",
+   "degrau": 0,
+   "como": "Mapas Culturais: arquivo da oportunidade (API pública)",
+   "faltavam": [
+    "Modalidade"
+   ],
+   "resolvidos": [
+    "Modalidade"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "prata",
+   "estagio_inicio": "prata",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T22:42:45+00:00",
+   "prazo": null,
+   "uf": "BR",
+   "orgao": "",
+   "fim": null,
+   "itens": {
+    "Modalidade": {
+     "valor": "Termo de Execução Cultural",
+     "trecho": "título: PNAB DIVINO SÃO LOURENÇO - 02/2026 - Seleção de projetos para firmar termo de execução cultural",
+     "pagina": 1,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2578/whatsapp-image-2026-09-11-at-11-00-34.jpeg",
+     "metodo": "modalidade de recebimento"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T22:42:45+00:00",
+     "ganhou": [
+      "Modalidade"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://mapa.cultura.es.gov.br/files/opportunity/2578/whatsapp-image-2026-09-11-at-11-00-34.jpeg",
+     "degrau": 0,
+     "como": "Mapas Culturais: arquivo da oportunidade (API pública)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "ja_constava",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "certificado",
      "Área de atuação": "ja_constava"
     },
     "certificados": 1,
@@ -47221,7 +47675,7 @@
    "encaminhado": null,
    "selo_antes": "bronze",
    "selo_depois": "ouro",
-   "em": "2026-10-17T21:36:55+00:00",
+   "em": "2026-10-17T22:37:28+00:00",
    "prazo": "2028-12-04",
    "uf": null,
    "orgao": "TRIBUNAL SUPERIOR DO TRABALHO",
@@ -81670,1109 +82124,35 @@
     "pct_certificado_12": 0.8333,
     "pct_cobertura_12": 0.8333
    }
-  },
-  {
-   "id": "affa35c4234765879175",
-   "tipo": "estrela",
-   "titulo": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/chamada-publica-cnpq-N-34-2026",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Prazo de recurso",
-    "Anexos"
-   ],
-   "tentativa": 2,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": "prata",
-   "em": "2026-10-17T13:47:59+00:00",
-   "prazo": null,
-   "uf": null,
-   "orgao": null,
-   "fim": "2026-12-04",
-   "itens": {
-    "Prazo de inscrição": {
-     "valor": "14/10/2026 a 04/12/2026",
-     "trecho": "vimento científico e tecnológico e a inovação do País. Chamada Inscrições: 14/10/2026 a 04/12/2026 FAQ Tags: #chamadas #abertas",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/chamada-publica-cnpq-N-34-2026",
-     "metodo": "cronograma"
-    },
-    "Objeto": {
-     "valor": "a poiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a ",
-     "trecho": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a poiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País. Chamada Inscriç",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/chamada-publica-cnpq-N-34-2026",
-     "metodo": "texto"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.gov.br · ",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/chamada-publica-cnpq-N-34-2026",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/chamada-publica-cnpq-N-34-2026",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Órgão / financiador": {
-     "valor": "fundação pública vinculada ao Ministério da Ciência",
-     "trecho": "o Nacional de Desenvolvimento Científico e Tecnológico – CNPq, é uma fundação pública vinculada ao Ministério da Ciência, Tecnologia e Inovações e tem como principais atribuições fomentar a",
-     "pagina": 2,
-     "documento": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos-06-25.pdf",
-     "metodo": "cabeçalho"
-    },
-    "Requisitos": {
-     "valor": "Podem participar do DGP as instituições, cadastradas no Diretório",
-     "trecho": "ou atualizar dados sobre os grupos de pesquisa existentes no Brasil. Podem participar do DGP as instituições, cadastradas no Diretório 12 de Instituições -DI do CNPq, que atendam a um dos requisitos prev",
-     "pagina": 11,
-     "documento": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos-06-25.pdf",
-     "metodo": "texto"
-    },
-    "Modalidade": {
-     "valor": "Credenciamento (contratação)",
-     "trecho": "sa estão abrigados; usuárias de serviços prestados pelo CNPq, como o credenciamento para importação pela Lei 8.010/90; instituições que pleiteiam participar desses programas e serviços etc.). Que",
-     "pagina": 9,
-     "documento": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos-06-25.pdf",
-     "metodo": "modalidade de recebimento"
-    },
-    "Resultado": {
-     "valor": "15/03/2027",
-     "trecho": "propostas 04/12/2026 Período de Julgamento 01/02/2027 a 19/02/2027 Divulgação do resultado preliminar do julgamento no Diário Oficial da União, por extrato, e na página do CNPq na internet 15/03/2027 Prazo final para interposição de recurso administrativo 25/03/2027",
-     "pagina": 3,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/Chamada_ARC_34_2026.pdf",
-     "metodo": "seção"
-    },
-    "Valor": {
-     "valor": "R$ 200.000,00",
-     "trecho": ": Faixa Intervalo de Financiamento Linha 1 – Eventos Mundiais Até R$ 200.000,00 Linha 2 – Eventos Tradicionais Até R$ 200.000,00 Linha 3 – Eventos",
-     "pagina": 5,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/Chamada_ARC_34_2026.pdf",
-     "metodo": "seção"
-    },
-    "Território": {
-     "valor": "abrangência nacional",
-     "trecho": "s, nos termos desta Chamada, os eventos regulares de grande porte de abrangência nacional ou internacional, que cumpram as seguintes condições: a) possuam hi",
-     "pagina": 2,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/Chamada_ARC_34_2026.pdf",
-     "metodo": "texto"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-17T13:47:35+00:00",
-     "ganhou": [
-      "Esfera",
-      "Modalidade",
-      "Objeto",
-      "Prazo de inscrição",
-      "Requisitos",
-      "Resultado",
-      "Território",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    },
-    {
-     "n": 3,
-     "nome": "página oficial e citados",
-     "em": "2026-10-17T13:47:59+00:00",
-     "ganhou": [],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/chamada-publica-cnpq-N-34-2026",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos-06-25.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 40,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/Chamada_ARC_34_2026.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 15,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/FAQ_Chamada_ARC_34_2026.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/planejamento-e-governanca",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Planejamento, Governança e Orçamento",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/planejamento-e-governanca/orcamento-1",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Orçamento",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/pt-br/temas/transparencia-fiscal-orcamento-nacional",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Orçamento Nacional",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/chamada-publica-cnpq-N-34-2026",
-     "degrau": 1,
-     "como": "página oficial e documentos citados nela",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos-06-25.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 40,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/Chamada_ARC_34_2026.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 15,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/FAQ_Chamada_ARC_34_2026.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/planejamento-e-governanca",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Planejamento, Governança e Orçamento",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/planejamento-e-governanca/orcamento-1",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Orçamento",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/pt-br/temas/transparencia-fiscal-orcamento-nacional",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Orçamento Nacional",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/pt-br/temas/politica-e-orcamento-educacional",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Política e Orçamento Educacionais",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/planejamento-e-governanca/loa-2022.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/pt-br/orgaos/ministerio-do-planejamento-e-orcamento",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Ministério do Planejamento e Orçamento (MPO)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "falta",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "falta",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 10,
-    "dispensados": 0,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "op-f64dcf92b24b",
-   "tipo": "livro",
-   "titulo": "Chamada CNPq Universal 2026 — R$ 300 milhões",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-06-2026/ChamadaUniversal062026.pdf",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Esfera",
-    "Requisitos",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Modalidade"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-13T13:31:07+00:00",
-   "prazo": null,
-   "uf": "DF",
-   "orgao": "CNPq / FNDCT",
-   "fim": null,
-   "itens": {
-    "Resultado": {
-     "valor": "03/11/2026",
-     "trecho": "para submissão 03/08/2026 Período de Julgamento 14/09 a 09/10/2026 Divulgação do resultado preliminar 03/11/2026 Prazo final para recurso 13/11/2026 Divulgação da decisão final 04/",
-     "pagina": 3,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-06-2026/ChamadaUniversal062026.pdf",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "13/11/2026",
-     "trecho": "2026 Divulgação do resultado preliminar 03/11/2026 Prazo final para recurso 13/11/2026 Divulgação da decisão final 04/12/2026 3 Critérios de Elegibilida",
-     "pagina": 3,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-06-2026/ChamadaUniversal062026.pdf",
-     "metodo": "seção"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.gov.br · CNPq / FNDCT",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-06-2026/ChamadaUniversal062026.pdf",
-     "metodo": "domínio e órgão"
-    },
-    "Requisitos": {
-     "valor": "poderão participar de outra proposta submetida à presente chamada.",
-     "trecho": "3.2 Os membros da equipe de uma proposta, incluindo o proponente, não poderão participar de outra proposta submetida à presente chamada. 3.3.2.1 Caso seja constatada a participação de membros ou do propone",
-     "pagina": 4,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-06-2026/ChamadaUniversal062026.pdf",
-     "metodo": "texto"
-    },
-    "Área de atuação": {
-     "valor": "Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-06-2026/ChamadaUniversal062026.pdf",
-     "metodo": "palavras-chave do objeto"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-13T13:31:07+00:00",
-     "ganhou": [
-      "Esfera",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-06-2026/ChamadaUniversal062026.pdf",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 18,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "ja_constava",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "falta",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 5,
-    "dispensados": 0,
-    "ja_constavam": 6,
-    "faltam": 1,
-    "pct_certificado_12": 0.4167,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "2cf3652dbd2fd9bcc3c0",
-   "tipo": "estrela",
-   "titulo": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Objeto",
-    "Território"
-   ],
-   "tentativa": 2,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-17T14:22:03+00:00",
-   "prazo": null,
-   "uf": null,
-   "orgao": null,
-   "fim": "2026-12-11",
-   "itens": {
-    "Prazo de inscrição": {
-     "valor": "19/08/2026 a 11/12/2026",
-     "trecho": "Anexo IV: Carta de Concordância da Instituição Parceira FAQ Inscrições: 19/08/2026 a 11/12/2026 Tags: #chamadas #abertas",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
-     "metodo": "cronograma"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.gov.br · ",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Órgão / financiador": {
-     "valor": "fundação pública vinculada ao Ministério da Ciência",
-     "trecho": "o Nacional de Desenvolvimento Científico e Tecnológico – CNPq, é uma fundação pública vinculada ao Ministério da Ciência, Tecnologia e Inovações e tem como principais atribuições fomentar a",
-     "pagina": 2,
-     "documento": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos-06-25.pdf",
-     "metodo": "cabeçalho"
-    },
-    "Requisitos": {
-     "valor": "Podem participar do DGP as instituições, cadastradas no Diretório",
-     "trecho": "ou atualizar dados sobre os grupos de pesquisa existentes no Brasil. Podem participar do DGP as instituições, cadastradas no Diretório 12 de Instituições -DI do CNPq, que atendam a um dos requisitos prev",
-     "pagina": 11,
-     "documento": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos-06-25.pdf",
-     "metodo": "texto"
-    },
-    "Modalidade": {
-     "valor": "Credenciamento (contratação)",
-     "trecho": "sa estão abrigados; usuárias de serviços prestados pelo CNPq, como o credenciamento para importação pela Lei 8.010/90; instituições que pleiteiam participar desses programas e serviços etc.). Que",
-     "pagina": 9,
-     "documento": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos-06-25.pdf",
-     "metodo": "modalidade de recebimento"
-    },
-    "Prazo de recurso": {
-     "valor": "10 (dez) dias",
-     "trecho": "ina do CNPq e da CAPES na internet Janeiro 2027 Prazo final para interposição de recurso administrativo 10 (dez) dias após a divulgação do resultado preliminar Divulgação da decisão no",
-     "pagina": 3,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamadapublica30_2026_MAIDAI_2766773.pdf",
-     "metodo": "seção"
-    },
-    "Valor": {
-     "valor": "R$ 62.440.000,00 (sessenta e dois milhões e quatrocentos e quarenta mil reais)",
-     "trecho": "eiros 6.1 – As propostas aprovadas serão financiadas com recursos no valor global de R$ 62.440.000,00 (sessenta e dois milhões e quatrocentos e quarenta mil reais), sendo R$ 55.000.000,00 (cinquenta e cinco milhões) oriundos do orça",
-     "pagina": 5,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamadapublica30_2026_MAIDAI_2766773.pdf",
-     "metodo": "seção"
-    },
-    "Anexos": {
-     "valor": "ANEXO I – Diretrizes para Funcionamento do Programa de Mestrado e; ANEXO I – Diretrizes para Funcionamento; ANEXO II – Plano de Trabalho Programa MAI/DAI; ANEXO III – Declaração Institucional do Representante MAI/DAI; ANEXO IV – Carta de Concordância da Instituição Parceira; ANEXO V – Termo de Compr",
-     "trecho": "selecionadas para executar o Programa MAI/DAI estão apresentadas no ANEXO I – Diretrizes para Funcionamento do Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI. 3 – Objeto Apoiar propostas de ICTs, que demonstrem capacidade para a execu",
-     "pagina": 2,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamadapublica30_2026_MAIDAI_2766773.pdf",
-     "metodo": "lista de anexos"
-    }
-   },
-   "dispensas": {
-    "Resultado": {
-     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
-     "trecho": "a ou indireta, sob pena de indeferimento. 5.2.2.1 – Caso constatada, a qualquer tempo, a falsidade da declaração, o CNPq adotará as providências cabíveis",
-     "pagina": 3,
-     "documento": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamadapublica30_2026_MAIDAI_2766773.pdf"
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-17T13:41:08+00:00",
-     "ganhou": [
-      "Anexos",
-      "Esfera",
-      "Modalidade",
-      "Prazo de inscrição",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    },
-    {
-     "n": 3,
-     "nome": "página oficial e citados",
-     "em": "2026-10-17T14:22:03+00:00",
-     "ganhou": [],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos-06-25.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 40,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamadapublica30_2026_MAIDAI_2766773.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 29,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/FAQ_MAIDAI_2783876.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/Anexo_IIChamada30_2026MAIDAI.docx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Anexo II: Plano de Trabalho Programa MAI/DAI",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/Anexo_IIIChamada30_2026MAIDAI.docx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Anexo III: Declaração Institucional do Representante MAI/DAI",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/Anexo_IVChamada30_2026MAIDAI.docx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Anexo IV: Carta de Concordância da Instituição Parceira",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
-     "degrau": 1,
-     "como": "página oficial e documentos citados nela",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos-06-25.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 40,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamadapublica30_2026_MAIDAI_2766773.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 29,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/FAQ_MAIDAI_2783876.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/Anexo_IIChamada30_2026MAIDAI.docx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Anexo II: Plano de Trabalho Programa MAI/DAI",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/Anexo_IIIChamada30_2026MAIDAI.docx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Anexo III: Declaração Institucional do Representante MAI/DAI",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/Anexo_IVChamada30_2026MAIDAI.docx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Anexo IV: Carta de Concordância da Instituição Parceira",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/planejamento-e-governanca",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Planejamento, Governança e Orçamento",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cnpq/pt-br/acesso-a-informacao/planejamento-e-governanca/orcamento-1",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Orçamento",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/pt-br/temas/transparencia-fiscal-orcamento-nacional",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Orçamento Nacional",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/pt-br/temas/politica-e-orcamento-educacional",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Política e Orçamento Educacionais",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "falta",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "dispensado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "falta",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 9,
-    "dispensados": 1,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "op-8c3d45a9a560",
-   "tipo": "livro",
-   "titulo": "Chamada Pública FAPEG nº 17/2026 – complementar à Chamada CONFAP/WBI",
-   "balcao": "orgao",
-   "link_oficial": "https://goias.gov.br/fapeg/prazo-para-submeter-propostas-a-chamada-confap-wbi-belgica-e-ate-dia-22/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Esfera",
-    "Requisitos",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Modalidade"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-11T06:14:02+00:00",
-   "prazo": null,
-   "uf": "GO",
-   "orgao": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
-   "fim": "2024-07-22",
-   "itens": {
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: goias.gov.br · Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/fapeg/prazo-para-submeter-propostas-a-chamada-confap-wbi-belgica-e-ate-dia-22/",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Saúde, Meio ambiente, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Saúde, Meio ambiente, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/fapeg/prazo-para-submeter-propostas-a-chamada-confap-wbi-belgica-e-ate-dia-22/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Resultado": {
-     "valor": "5 dias",
-     "trecho": "o Dezembro de 2026 Prazo para interposição de recurso contra o Resultado Preliminar da etapa I – enquadramento Até 5 dias úteis após a publicação do resultado preliminar Publicação do Resu",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2026/08/Chamada_Publica_FAPEG_17_2026_complementar_a_Chamada_CONFAP_WBI.pdf",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "5 dias úteis",
-     "trecho": "I - enquadramento Dezembro de 2026 Prazo para interposição de recurso contra o Resultado Preliminar da etapa I – enquadramento Até 5 dias úteis após a publicação do resultado preliminar Publicação do Resultado",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2026/08/Chamada_Publica_FAPEG_17_2026_complementar_a_Chamada_CONFAP_WBI.pdf",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "poderão participar das missões no exterior, como membros da equipe do projeto, pesquisadores vinculados à instituição do proponente, e estudantes de mestrado ou doutorado.",
-     "trecho": "(3) Seguro Viagem. 5.2 Além do proponente principal brasileiro, poderão participar das missões no exterior, como membros da equipe do projeto, pesquisadores vinculados à instituição do proponente, e estudantes de mestrado ou doutorado. 5.3 No caso de estudantes de mestrado ou doutorado, estes devem esta",
-     "pagina": 3,
-     "documento": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2026/08/Chamada_Publica_FAPEG_17_2026_complementar_a_Chamada_CONFAP_WBI.pdf",
-     "metodo": "texto"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-11T06:14:02+00:00",
-     "ganhou": [
-      "Esfera",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://goias.gov.br/fapeg/prazo-para-submeter-propostas-a-chamada-confap-wbi-belgica-e-ate-dia-22/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2026/08/Chamada_Publica_FAPEG_17_2026_complementar_a_Chamada_CONFAP_WBI.pdf",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 26,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2022/05/bolsas-lei.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2023/09/Decreto-Numerado_10.322_2023_Novo-Estatuto_FAPEG.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 41,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2022/06/Decreto-no-10.041_2022_Altercoes_Estatuto_FAPEG.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2025/03/Resolucao-Normativa-1-2024.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 13,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2024/12/SEI_67757622_Portaria_Normativa_01_PRES.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 11,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://confap.org.br/news/wp-content/uploads/2024/05/Pontos-de-Contato-das-FAPs-Chamada-CONFAP-WBI-%E2%80%93-Belgica-2024.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "ja_constava",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "falta",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 5,
-    "dispensados": 0,
-    "ja_constavam": 6,
-    "faltam": 1,
-    "pct_certificado_12": 0.4167,
-    "pct_cobertura_12": 0.9167
-   }
   }
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2337,
-   "bronze": 123,
-   "prata": 176
+   "sem_estrela": 2364,
+   "bronze": 121,
+   "prata": 182
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 108,
-    "bronze": 9,
-    "prata": 7
+    "sem_estrela": 133,
+    "bronze": 8,
+    "prata": 11
    },
    "livro": {
-    "sem_estrela": 2229,
-    "bronze": 114,
-    "prata": 169
+    "sem_estrela": 2231,
+    "bronze": 113,
+    "prata": 171
    }
   },
-  "fila_oportunidades": 124,
-  "fila_livros": 2512,
-  "devidas_nesta_hora": 2402,
-  "promovidas_nesta_execucao": 2,
-  "sem_material_agora": 12,
+  "fila_oportunidades": 152,
+  "fila_livros": 2515,
+  "devidas_nesta_hora": 2393,
+  "promovidas_nesta_execucao": 0,
+  "sem_material_agora": 13,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
-   "chaves": 1050,
-   "sites": 2256
+   "chaves": 1051,
+   "sites": 2260
   },
   "intervalo_horas": 12,
   "limite": 10,

@@ -1,15 +1,15 @@
 {
- "em": "2026-10-17T22:20:40+00:00",
+ "em": "2026-10-17T22:47:28+00:00",
  "regra": "LINHA DE PRODUÇÃO DE INFORMAÇÃO (titular, 02/10/2026).\n\nCada canal (motor ou Piloto) só COLETA. As etapas seguintes são comuns e nada é eliminado:\n  (02/10: os nomes BRONZE/PRATA/OURO passaram a ser só os SELOS da esteira — src/esteira.py; aqui as etapas são:)\n  COLETADO    o registro coletado, como chegou (base dados/oportunidades/oportunidades.jsonl)\n  CONSOLIDADO canal canônico + contrato de dados conferido + ENTIDADE resolvida entre canais (a mesma oportunidade vista\n              em vários canais vira uma entidade só, e o número de canais é a CORROBORAÇÃO)\n  EM_LIVRO    a entidade chegou ao mapa ou a um livro da Biblioteca\n  QUALIFICADO o livro recebeu veredito (APLICÁVEL / EM REVISÃO / NÃO APLICA) — arquivamento só manual\nRegistro que viola o contrato vai à FILA DE REPROCESSAMENTO (nunca ao lixo) com o plano de correção.\nO LIVRO-RAZÃO (estado/linha/razao-AAAA-MM.jsonl.gz) guarda só acréscimos: cada mudança de etapa, com data e motivo.",
  "funil": {
-  "coletados": 1278,
+  "coletados": 1280,
   "oportunidades_distintas": 518,
   "entidades_em_2_ou_mais_canais": 74,
   "etapas": {
-   "EM_LIVRO": 699,
-   "CONSOLIDADO": 34,
-   "QUALIFICADO": 58,
-   "REPROCESSAR": 487
+   "EM_LIVRO": 700,
+   "CONSOLIDADO": 33,
+   "QUALIFICADO": 59,
+   "REPROCESSAR": 488
   },
   "fila_de_reprocessamento": {
    "URL de buscador (falta o site oficial)": 7,
@@ -21,14 +21,14 @@
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-03-12 → reler o prazo na fonte": 1,
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-05-14 → reler o prazo na fonte": 1,
    "sem fonte_id": 325,
-   "sem url": 148
+   "sem url": 149
   }
  },
  "canais": [
   {
    "canal": "piloto-interceptador",
    "familia": "pilotos",
-   "registros": 470,
+   "registros": 471,
    "entidades": 326,
    "exclusivas": 256,
    "corroboradas": 70,
