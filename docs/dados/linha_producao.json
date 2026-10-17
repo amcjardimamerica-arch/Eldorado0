@@ -1,15 +1,15 @@
 {
- "em": "2026-10-17T17:38:54+00:00",
+ "em": "2026-10-17T18:09:23+00:00",
  "regra": "LINHA DE PRODUÇÃO DE INFORMAÇÃO (titular, 02/10/2026).\n\nCada canal (motor ou Piloto) só COLETA. As etapas seguintes são comuns e nada é eliminado:\n  (02/10: os nomes BRONZE/PRATA/OURO passaram a ser só os SELOS da esteira — src/esteira.py; aqui as etapas são:)\n  COLETADO    o registro coletado, como chegou (base dados/oportunidades/oportunidades.jsonl)\n  CONSOLIDADO canal canônico + contrato de dados conferido + ENTIDADE resolvida entre canais (a mesma oportunidade vista\n              em vários canais vira uma entidade só, e o número de canais é a CORROBORAÇÃO)\n  EM_LIVRO    a entidade chegou ao mapa ou a um livro da Biblioteca\n  QUALIFICADO o livro recebeu veredito (APLICÁVEL / EM REVISÃO / NÃO APLICA) — arquivamento só manual\nRegistro que viola o contrato vai à FILA DE REPROCESSAMENTO (nunca ao lixo) com o plano de correção.\nO LIVRO-RAZÃO (estado/linha/razao-AAAA-MM.jsonl.gz) guarda só acréscimos: cada mudança de etapa, com data e motivo.",
  "funil": {
-  "coletados": 945,
-  "oportunidades_distintas": 516,
+  "coletados": 952,
+  "oportunidades_distintas": 515,
   "entidades_em_2_ou_mais_canais": 76,
   "etapas": {
    "EM_LIVRO": 716,
    "CONSOLIDADO": 31,
    "QUALIFICADO": 59,
-   "REPROCESSAR": 139
+   "REPROCESSAR": 146
   },
   "fila_de_reprocessamento": {
    "URL de buscador (falta o site oficial)": 7,
@@ -20,14 +20,14 @@
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-01-15 → reler o prazo na fonte": 1,
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-03-12 → reler o prazo na fonte": 1,
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-05-14 → reler o prazo na fonte": 1,
-   "sem fonte_id": 125
+   "sem fonte_id": 132
   }
  },
  "canais": [
   {
    "canal": "piloto-interceptador",
    "familia": "pilotos",
-   "registros": 481,
+   "registros": 482,
    "entidades": 328,
    "exclusivas": 257,
    "corroboradas": 71,
@@ -63,9 +63,9 @@
   {
    "canal": "piloto-aberto",
    "familia": "pilotos",
-   "registros": 39,
-   "entidades": 35,
-   "exclusivas": 28,
+   "registros": 38,
+   "entidades": 34,
+   "exclusivas": 27,
    "corroboradas": 7,
    "validadas_como_reais": 3
   },
