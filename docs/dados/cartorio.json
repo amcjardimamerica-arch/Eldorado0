@@ -1,43 +1,43 @@
 {
- "em": "2026-10-17T21:47:38+00:00",
+ "em": "2026-10-17T22:19:19+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
  "resumo": {
   "pontos_12_total": 4800,
-  "pontos_certificados": 3164,
-  "pontos_dispensados": 179,
-  "pontos_ja_constavam": 1281,
-  "pontos_faltam": 176,
-  "pct_certificado_12": 0.6965,
+  "pontos_certificados": 3145,
+  "pontos_dispensados": 178,
+  "pontos_ja_constavam": 1310,
+  "pontos_faltam": 167,
+  "pct_certificado_12": 0.6923,
   "certidoes_12_de_12": 133,
-  "certidoes_sem_item_faltando": 251,
+  "certidoes_sem_item_faltando": 254,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
-  "certidoes": 2549,
-  "nesta_execucao": 35,
-  "fila_estrelas": 155,
-  "fila_livros": 2519,
-  "itens_que_faltavam": 23560,
-  "itens_obtidos": 8686,
-  "itens_dispensados": 499,
-  "eficiencia_itens": 0.39,
-  "com_link_oficial": 1718,
-  "taxa_link_oficial": 0.674,
-  "certidoes_completas": 232,
-  "para_o_interceptador": 1857,
-  "para_o_chrome": 459,
+  "certidoes": 2562,
+  "nesta_execucao": 30,
+  "fila_estrelas": 124,
+  "fila_livros": 2512,
+  "itens_que_faltavam": 23646,
+  "itens_obtidos": 8761,
+  "itens_dispensados": 503,
+  "eficiencia_itens": 0.392,
+  "com_link_oficial": 1733,
+  "taxa_link_oficial": 0.676,
+  "certidoes_completas": 235,
+  "para_o_interceptador": 1863,
+  "para_o_chrome": 463,
   "selos_que_mudaram": {
    "bronze → ouro": 6,
    "bronze → prata": 1,
    "sem selo → ouro": 82,
-   "sem selo → bronze": 50,
-   "sem selo → prata": 43,
+   "sem selo → bronze": 49,
+   "sem selo → prata": 45,
    "prata → bronze": 1,
    "prata → ouro": 3
   },
   "por_degrau": {
-   "degrau 0": 1646,
-   "degrau 1": 115
+   "degrau 0": 1658,
+   "degrau 1": 116
   }
  },
  "cinza_conferidos": {
@@ -47,94 +47,94 @@
  },
  "por_item": {
   "Objeto": {
-   "faltavam": 1660,
-   "obtidos": 536,
+   "faltavam": 1669,
+   "obtidos": 541,
    "dispensados": 0,
-   "eficiencia": 0.323
+   "eficiencia": 0.324
   },
   "Prazo de inscrição": {
-   "faltavam": 1779,
-   "obtidos": 544,
-   "dispensados": 140,
-   "eficiencia": 0.384
+   "faltavam": 1783,
+   "obtidos": 549,
+   "dispensados": 141,
+   "eficiencia": 0.387
   },
   "Resultado": {
-   "faltavam": 2296,
-   "obtidos": 578,
-   "dispensados": 223,
-   "eficiencia": 0.349
+   "faltavam": 2304,
+   "obtidos": 585,
+   "dispensados": 225,
+   "eficiencia": 0.352
   },
   "Prazo de recurso": {
-   "faltavam": 2253,
-   "obtidos": 509,
+   "faltavam": 2261,
+   "obtidos": 514,
    "dispensados": 45,
-   "eficiencia": 0.246
+   "eficiencia": 0.247
   },
   "Valor": {
-   "faltavam": 2011,
-   "obtidos": 651,
-   "dispensados": 59,
-   "eficiencia": 0.353
+   "faltavam": 2017,
+   "obtidos": 655,
+   "dispensados": 60,
+   "eficiencia": 0.354
   },
   "Órgão / financiador": {
-   "faltavam": 1525,
-   "obtidos": 915,
+   "faltavam": 1531,
+   "obtidos": 922,
    "dispensados": 0,
-   "eficiencia": 0.6
+   "eficiencia": 0.602
   },
   "Território": {
-   "faltavam": 1793,
-   "obtidos": 559,
+   "faltavam": 1801,
+   "obtidos": 562,
    "dispensados": 0,
    "eficiencia": 0.312
   },
   "Esfera": {
-   "faltavam": 2048,
-   "obtidos": 1259,
+   "faltavam": 2055,
+   "obtidos": 1267,
    "dispensados": 0,
-   "eficiencia": 0.615
+   "eficiencia": 0.617
   },
   "Requisitos": {
-   "faltavam": 2233,
-   "obtidos": 578,
+   "faltavam": 2240,
+   "obtidos": 586,
    "dispensados": 0,
-   "eficiencia": 0.259
+   "eficiencia": 0.262
   },
   "Anexos": {
-   "faltavam": 1601,
-   "obtidos": 348,
+   "faltavam": 1609,
+   "obtidos": 352,
    "dispensados": 4,
-   "eficiencia": 0.22
+   "eficiencia": 0.221
   },
   "Modalidade": {
-   "faltavam": 2210,
-   "obtidos": 746,
+   "faltavam": 2219,
+   "obtidos": 756,
    "dispensados": 28,
-   "eficiencia": 0.35
+   "eficiencia": 0.353
   },
   "Área de atuação": {
-   "faltavam": 2151,
-   "obtidos": 1463,
+   "faltavam": 2157,
+   "obtidos": 1472,
    "dispensados": 0,
-   "eficiencia": 0.68
+   "eficiencia": 0.682
   }
  },
  "por_balcao": {
   "revisão": {
-   "certidoes": 210,
-   "com_link_oficial": 158,
-   "faltavam": 2520,
-   "resolvidos": 1183,
-   "eficiencia": 0.469,
-   "taxa_link_oficial": 0.752
+   "certidoes": 209,
+   "com_link_oficial": 159,
+   "faltavam": 2508,
+   "resolvidos": 1184,
+   "eficiencia": 0.472,
+   "taxa_link_oficial": 0.761
   },
   "pncp": {
-   "certidoes": 98,
-   "com_link_oficial": 70,
-   "faltavam": 908,
-   "resolvidos": 469,
-   "eficiencia": 0.517,
-   "taxa_link_oficial": 0.714
+   "certidoes": 101,
+   "com_link_oficial": 73,
+   "faltavam": 931,
+   "resolvidos": 489,
+   "eficiencia": 0.525,
+   "taxa_link_oficial": 0.723
   },
   "?": {
    "certidoes": 3,
@@ -145,28 +145,28 @@
    "taxa_link_oficial": 1.0
   },
   "orgao": {
-   "certidoes": 1182,
-   "com_link_oficial": 941,
-   "faltavam": 10654,
-   "resolvidos": 4853,
-   "eficiencia": 0.456,
-   "taxa_link_oficial": 0.796
+   "certidoes": 1188,
+   "com_link_oficial": 949,
+   "faltavam": 10697,
+   "resolvidos": 4890,
+   "eficiencia": 0.457,
+   "taxa_link_oficial": 0.799
   },
   "privado": {
-   "certidoes": 567,
-   "com_link_oficial": 394,
-   "faltavam": 4827,
-   "resolvidos": 1453,
-   "eficiencia": 0.301,
-   "taxa_link_oficial": 0.695
+   "certidoes": 569,
+   "com_link_oficial": 396,
+   "faltavam": 4835,
+   "resolvidos": 1461,
+   "eficiencia": 0.302,
+   "taxa_link_oficial": 0.696
   },
   "pista": {
-   "certidoes": 336,
-   "com_link_oficial": 58,
-   "faltavam": 3030,
-   "resolvidos": 699,
-   "eficiencia": 0.231,
-   "taxa_link_oficial": 0.173
+   "certidoes": 339,
+   "com_link_oficial": 59,
+   "faltavam": 3054,
+   "resolvidos": 703,
+   "eficiencia": 0.23,
+   "taxa_link_oficial": 0.174
   },
   "diario": {
    "certidoes": 152,
@@ -187,20 +187,20 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2039,
-   "faltavam": 17849,
-   "resolvidos": 6192,
-   "eficiencia": 0.347,
-   "com_link_oficial": 1297,
-   "taxa_link_oficial": 0.636
+   "certidoes": 2048,
+   "faltavam": 17887,
+   "resolvidos": 6235,
+   "eficiencia": 0.349,
+   "com_link_oficial": 1308,
+   "taxa_link_oficial": 0.639
   },
   "refeitas": {
-   "certidoes": 510,
-   "faltavam": 5711,
-   "resolvidos": 2886,
-   "eficiencia": 0.505,
-   "com_link_oficial": 421,
-   "taxa_link_oficial": 0.825
+   "certidoes": 514,
+   "faltavam": 5759,
+   "resolvidos": 2913,
+   "eficiencia": 0.506,
+   "com_link_oficial": 425,
+   "taxa_link_oficial": 0.827
   }
  },
  "por_versao": {
@@ -221,30 +221,30 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2325,
-   "faltavam": 20949,
-   "resolvidos": 7847,
-   "eficiencia": 0.375,
-   "com_link_oficial": 1547,
-   "taxa_link_oficial": 0.665
+   "certidoes": 2339,
+   "faltavam": 21047,
+   "resolvidos": 7916,
+   "eficiencia": 0.376,
+   "com_link_oficial": 1561,
+   "taxa_link_oficial": 0.667
   },
   "revisão manual": {
-   "certidoes": 210,
-   "faltavam": 2520,
-   "resolvidos": 1183,
-   "eficiencia": 0.469,
-   "com_link_oficial": 158,
-   "taxa_link_oficial": 0.752
+   "certidoes": 209,
+   "faltavam": 2508,
+   "resolvidos": 1184,
+   "eficiencia": 0.472,
+   "com_link_oficial": 159,
+   "taxa_link_oficial": 0.761
   }
  },
  "por_abordagem": {
   "1": {
    "nome": "documento na mão",
-   "vezes": 2426,
-   "renderam": 1589,
-   "itens": 8296,
-   "links_oficiais": 1495,
-   "taxa_de_acerto": 0.655
+   "vezes": 2439,
+   "renderam": 1601,
+   "itens": 8369,
+   "links_oficiais": 1510,
+   "taxa_de_acerto": 0.656
   },
   "2": {
    "nome": "anexos completos",
@@ -256,19 +256,19 @@
   },
   "3": {
    "nome": "página oficial e citados",
-   "vezes": 316,
-   "renderam": 79,
-   "itens": 462,
+   "vezes": 320,
+   "renderam": 82,
+   "itens": 468,
    "links_oficiais": 53,
-   "taxa_de_acerto": 0.25
+   "taxa_de_acerto": 0.256
   },
   "4": {
    "nome": "biblioteca de sites",
-   "vezes": 67,
+   "vezes": 68,
    "renderam": 28,
    "itens": 103,
    "links_oficiais": 15,
-   "taxa_de_acerto": 0.418
+   "taxa_de_acerto": 0.412
   },
   "5": {
    "nome": "mídia do WordPress",
@@ -304,11 +304,11 @@
   },
   "9": {
    "nome": "leitura profunda",
-   "vezes": 76,
+   "vezes": 77,
    "renderam": 15,
    "itens": 62,
    "links_oficiais": 9,
-   "taxa_de_acerto": 0.197
+   "taxa_de_acerto": 0.195
   },
   "10": {
    "nome": "busca no domínio",
@@ -322,29 +322,29 @@
  "por_balcao_selo": {
   "sem_estrela": {
    "nome": "Sem estrela → bronze",
-   "certidoes": 1317,
-   "faltavam": 11976,
-   "resolvidos": 3638,
-   "eficiencia": 0.304,
-   "entraram_aqui": 1465,
+   "certidoes": 1330,
+   "faltavam": 12075,
+   "resolvidos": 3707,
+   "eficiencia": 0.307,
+   "entraram_aqui": 1479,
    "esgotadas": 0
   },
   "bronze": {
    "nome": "Bronze → prata",
-   "certidoes": 65,
-   "faltavam": 571,
-   "resolvidos": 387,
-   "eficiencia": 0.678,
+   "certidoes": 64,
+   "faltavam": 559,
+   "resolvidos": 376,
+   "eficiencia": 0.673,
    "entraram_aqui": 27,
    "esgotadas": 0
   },
   "prata": {
    "nome": "Prata → ouro",
-   "certidoes": 958,
-   "faltavam": 8727,
-   "resolvidos": 3629,
+   "certidoes": 961,
+   "faltavam": 8750,
+   "resolvidos": 3641,
    "eficiencia": 0.416,
-   "entraram_aqui": 932,
+   "entraram_aqui": 933,
    "esgotadas": 0
   },
   "ouro": {
@@ -358,16 +358,16 @@
   }
  },
  "gabarito": {
-  "orgaos_com_gabarito": 1217,
+  "orgaos_com_gabarito": 1220,
   "itens_achados_pelo_gabarito": {
-   "Prazo de recurso": 18,
+   "Prazo de recurso": 20,
    "Objeto": 64,
-   "Requisitos": 54,
+   "Requisitos": 56,
    "Valor": 3,
    "Modalidade": 12,
    "Resultado": 5
   },
-  "certidoes_ajudadas": 139
+  "certidoes_ajudadas": 143
  },
  "certidoes": [
   {
@@ -5191,7 +5191,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-17T20:34:22+00:00",
+   "em": "2026-10-17T21:57:02+00:00",
    "prazo": "2026-10-21",
    "uf": null,
    "orgao": "CONSELHO DE ARQUITETURA E URBANISMO DO ESTADO DE MINAS GERAIS",
@@ -21543,6 +21543,192 @@
    }
   },
   {
+   "id": "op-66df27bacfb4",
+   "tipo": "livro",
+   "titulo": "Edital Fundação Aperam Acesita Social 2026 — Fundação Aperam Acesita",
+   "balcao": "privado",
+   "link_oficial": "https://brasil.aperam.com/sustentabilidade/social/fundacao-aperam-acesita/editaldeprojetos",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Resultado",
+    "Prazo de recurso",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Resultado",
+    "Prazo de recurso",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T22:13:58+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": "Fundação Aperam Acesita",
+   "fim": "2026-10-04",
+   "itens": {
+    "Esfera": {
+     "valor": "privada",
+     "trecho": "domínio/órgão: brasil.aperam.com · Fundação Aperam Acesita &gt Fundação Aperam Acesita",
+     "pagina": 1,
+     "documento": "https://brasil.aperam.com/sustentabilidade/social/fundacao-aperam-acesita/editaldeprojetos",
+     "metodo": "domínio e órgão"
+    },
+    "Requisitos": {
+     "valor": "podem participar do processo seletivo instituições localizadas nos municípios de Capelinha, Carbonita, Itamarandiba, Minas Novas, Turmalina e Veredinha, região de abrangência da Aperam BioEnergia.",
+     "trecho": "As inscrições vão até o dia 4 de outubro . No Vale do Jequitinhonha, podem participar do processo seletivo instituições localizadas nos municípios de Capelinha, Carbonita, Itamarandiba, Minas Novas, Turmalina e Veredinha, região de abrangência da Aperam BioEnergia. Já no Vale do Aço podem participar organizações localizadas em Timót",
+     "pagina": 1,
+     "documento": "https://brasil.aperam.com/sustentabilidade/social/fundacao-aperam-acesita/editaldeprojetos",
+     "metodo": "texto"
+    },
+    "Área de atuação": {
+     "valor": "Educação, Meio ambiente, Direitos humanos",
+     "trecho": "termos do objeto e do título: Educação, Meio ambiente, Direitos humanos",
+     "pagina": 1,
+     "documento": "https://brasil.aperam.com/sustentabilidade/social/fundacao-aperam-acesita/editaldeprojetos",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Território": {
+     "valor": "do Estado de Minas Gerais",
+     "trecho": "- Instituto Parkinsoniano e de Doenças Neurológicas e Degenerativas do Estado de Minas Gerais Timóteo Redescobrindo Caminhos * Relação dos projetos em ordem",
+     "pagina": 3,
+     "documento": "https://brasil.aperam.com/wp-content/uploads/documentos-edital/EDITAL%20DE%20PROJETOS%20FUNDA%C3%87%C3%83O%20APERAM%20ACESITA%20-%20SOCIAL%202025.pdf",
+     "metodo": "texto"
+    },
+    "Resultado": {
+     "valor": "21/12/2026",
+     "trecho": "opostas (Etapas 2 e 3) 12/10/2026 a 18/12/2026 3. Divulgação Oficial dos Resultados 21/12/2026 NOTAS IMPORTANTES: A oficina do Vale do Aço ocorrerá em Timóte",
+     "pagina": 8,
+     "documento": "https://brasil.aperam.com/wp-content/uploads/documentos-edital/Regulamento%20Geral_Edital%20Social%202026.pdf",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "2 (dois) dias úteis",
+     "trecho": "da FUNDAÇÃO. 15.9 Recursos: Após a publicação do resultado final, caberá recurso adm inistrativo direcionado ao Conselho Diretor, no prazo improrrogável de até 2 (dois) dias úteis, contados a partir da data da publicação. O recurso não poderá conte",
+     "pagina": 11,
+     "documento": "https://brasil.aperam.com/wp-content/uploads/documentos-edital/Regulamento%20Geral_Edital%20Social%202026.pdf",
+     "metodo": "seção"
+    },
+    "Modalidade": {
+     "valor": "Convênio",
+     "trecho": "divulgada nos canais oficiais da FUNDAÇÃO. 11. FORMALIZAÇÃO DOS CONVÊNIOS 11.1 Após a divulgação, todas as organizações receberão e-mail com a comunicação do resultado final. 11.2 As prop",
+     "pagina": 8,
+     "documento": "https://brasil.aperam.com/wp-content/uploads/documentos-edital/Regulamento%20Geral_Edital%20Social%202026.pdf",
+     "metodo": "modalidade de recebimento"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T22:13:58+00:00",
+     "ganhou": [
+      "Esfera",
+      "Modalidade",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Área de atuação"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://brasil.aperam.com/sustentabilidade/social/fundacao-aperam-acesita/editaldeprojetos",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://brasil.aperam.com/wp-content/uploads/documentos-edital/Planilha%20de%20Or%C3%A7amento_Edital%202022.xls",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Planilha de Orçamento",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.aperam.com/sites/default/files/documents/Aperam%20ESG%20presentation.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 19,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://brasil.aperam.com/wp-content/uploads/documentos-edital/EDITAL%20DE%20PROJETOS%20FUNDA%C3%87%C3%83O%20APERAM%20ACESITA%20-%20SOCIAL%202025.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 3,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://brasil.aperam.com/wp-content/uploads/documentos-edital/Regulamento%20Geral_Edital%20Social%202026.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 12,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "ja_constava",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 7,
+    "dispensados": 0,
+    "ja_constavam": 5,
+    "faltam": 0,
+    "pct_certificado_12": 0.5833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "a98c4d91f7500fe564d2",
    "tipo": "estrela",
    "titulo": "Edital Mapfre 2026 de patrocínio incentivado: só a janela de PRONAS/PCD e PRONON segue aberta até 15/12/2026 (as demais leis fecharam em 30/09); ouro para OSC com projeto já aprovado nesses programas.",
@@ -27189,6 +27375,132 @@
    }
   },
   {
+   "id": "op-159af8a8ebc7",
+   "tipo": "livro",
+   "titulo": "Edital de Mobilidade Cultural - MinC / Funarte - Programa de Intercâmbio Cultural",
+   "balcao": "orgao",
+   "link_oficial": "https://www.gov.br/funarte/pt-br/editais/2024/edital-de-mobilidade-cultural-minc-funarte-programa-de-intercambio-cultural",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Modalidade"
+   ],
+   "resolvidos": [
+    "Modalidade"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "prata",
+   "estagio_inicio": "prata",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T22:13:16+00:00",
+   "prazo": null,
+   "uf": "",
+   "orgao": "Ministério da Cultura / Funarte",
+   "fim": "2024-12-02",
+   "itens": {
+    "Modalidade": {
+     "valor": "Bolsa",
+     "trecho": "andidatura Quan\u0000dade de Integrantes do Des\u0000no Amazônia Legal Valor da Bolsa Cotas Trajetória Cultural Reconhecimento da ins\u0000tuição/evento Ação apoiada Pontuação Final 31/12/2024, 10:30 SEI/MinC - 2080",
+     "pagina": 1,
+     "documento": "https://www.gov.br/funarte/pt-br/editais/2024/edital-de-mobilidade-cultural-minc-funarte-programa-de-intercambio-cultural/SEI_MinC2080180Comunicado.pdf",
+     "metodo": "modalidade de recebimento"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T22:13:16+00:00",
+     "ganhou": [
+      "Modalidade"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://www.gov.br/funarte/pt-br/editais/2024/edital-de-mobilidade-cultural-minc-funarte-programa-de-intercambio-cultural",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": "pagina_vazia",
+     "falha": null,
+     "oficial": null,
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/funarte/pt-br/editais/2024/edital-de-mobilidade-cultural-minc-funarte-programa-de-intercambio-cultural/SEI_2111176_Comunicado_6.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 9,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/funarte/pt-br/editais/2024/edital-de-mobilidade-cultural-minc-funarte-programa-de-intercambio-cultural/editaldemobilidadeculturaln012024sei.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 14,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/funarte/pt-br/editais/2024/edital-de-mobilidade-cultural-minc-funarte-programa-de-intercambio-cultural/SEI_MinC2080180Comunicado.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 56,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "ja_constava",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "certificado",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "2397dc5f784a8d1c4e25",
    "tipo": "estrela",
    "titulo": "Edital de Patrocínios 2026 da Brasilcap (BB Seguros) para projetos aprovados em leis federais de incentivo (Rouanet, LIE, FIA, Idoso, PRONON, PRONAS/PCD), nacional, sem valor fixo (conforme orçamento)",
@@ -29444,7 +29756,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-17T20:57:55+00:00",
+   "em": "2026-10-17T22:05:11+00:00",
    "prazo": "2026-11-01",
    "uf": null,
    "orgao": "FUNDO MUNICIPAL DA CULTURA DE COLINAS DO SUL",
@@ -33226,6 +33538,92 @@
     "ja_constavam": 3,
     "faltam": 0,
     "pct_certificado_12": 0.75,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-a2b31191581c",
+   "tipo": "livro",
+   "titulo": "Fundo Brasil oferece apoio emergencial a defensores de direitos humanos em risco",
+   "balcao": "privado",
+   "link_oficial": "https://www.fundobrasil.org.br/nosso-trabalho/apoio-a-sociedade-civil/apoio-emergencial/",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Modalidade"
+   ],
+   "resolvidos": [
+    "Modalidade"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T22:18:09+00:00",
+   "prazo": null,
+   "uf": "BR",
+   "orgao": "",
+   "fim": null,
+   "itens": {
+    "Modalidade": {
+     "valor": "Doação",
+     "trecho": "Ajude a transformar o país! Faça sua doação",
+     "pagina": 1,
+     "documento": "https://www.fundobrasil.org.br/nosso-trabalho/apoio-a-sociedade-civil/apoio-emergencial/",
+     "metodo": "modalidade de recebimento"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T22:18:09+00:00",
+     "ganhou": [
+      "Modalidade"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://www.fundobrasil.org.br/nosso-trabalho/apoio-a-sociedade-civil/apoio-emergencial/",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 1,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "ja_constava",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "certificado",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
     "pct_cobertura_12": 1.0
    }
   },
@@ -58004,6 +58402,270 @@
    }
   },
   {
+   "id": "op-op-b0d4f2e6bbf0",
+   "tipo": "estrela",
+   "titulo": "Edital Rouanet nas Favelas 2 (2026): Guia de Captação —",
+   "balcao": "orgao",
+   "link_oficial": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/programa-rouanet-nas-favelas-2",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [
+    "Território"
+   ],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": {
+    "orgao": "orgao:secretaria de fomento e incentivo a cultura",
+    "itens_pelo_gabarito": [
+     "Requisitos"
+    ]
+   },
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 0.917,
+   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T22:11:55+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": "Secretaria de Fomento e Incentivo à Cultura",
+   "fim": "2026-08-15",
+   "itens": {
+    "Prazo de inscrição": {
+     "valor": "até 15/08/2026",
+     "trecho": "ção Etapa do processo Prazo Início das inscrições no sistema Salic 15/08/2026 Encerramento do prazo de inscrição 13/10/2026, às 2",
+     "pagina": 1,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/programa-rouanet-nas-favelas-2",
+     "metodo": "cronograma"
+    },
+    "Resultado": {
+     "valor": "27/11/2026",
+     "trecho": "to do prazo de inscrição 13/10/2026, às 23h59min59s Divulgação do resultado provisório Até 27/11/2026 Período para apresentação de recursos Até 07/12/202",
+     "pagina": 1,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/programa-rouanet-nas-favelas-2",
+     "metodo": "seção"
+    },
+    "Valor": {
+     "valor": "R$ 200.000,00 (duzentos mil reais)",
+     "trecho": "dições financeiras e participação Cada proponente pode solicitar o valor máximo de R$ 200.000,00 (duzentos mil reais) por proposta. O programa garante a seleção de, no mínimo, 50 proposta",
+     "pagina": 1,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/programa-rouanet-nas-favelas-2",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "selecionar propostas culturais para financiamento por meio de recursos incentivados, no âmbito do Programa Nacional de Apoio à Cultura (Pronac).",
+     "trecho": "er até R$ 200 mil em recursos de incentivo. Objetivo O programa tem por objetivo selecionar propostas culturais para financiamento por meio de recursos incentivados, no âmbito do Programa Nacional de Apoio à Cultura (Pronac). As propostas devem atender aos critérios estabelecidos no regulame",
+     "pagina": 1,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/programa-rouanet-nas-favelas-2",
+     "metodo": "texto"
+    },
+    "Órgão / financiador": {
+     "valor": "Ministério da Cultura",
+     "trecho": "Programa Rouanet nas Favelas 2 — Ministério da Cultura",
+     "pagina": 1,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/programa-rouanet-nas-favelas-2",
+     "metodo": "cabeçalho"
+    },
+    "Esfera": {
+     "valor": "federal",
+     "trecho": "domínio/órgão: www.gov.br · Ministério da Cultura Secretaria de Fomento e Incentivo à Cultura",
+     "pagina": 1,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/programa-rouanet-nas-favelas-2",
+     "metodo": "domínio e órgão"
+    },
+    "Modalidade": {
+     "valor": "Incentivo fiscal",
+     "trecho": "idos no regulamento da seleção e às normas aplicáveis ao mecanismo de incentivo fiscal previsto na Lei Rouanet. Territórios atendidos e áreas culturais Os projetos inscritos devem ocorrer obriga",
+     "pagina": 1,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/programa-rouanet-nas-favelas-2",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Cultura, Ciência e tecnologia",
+     "trecho": "termos do objeto e do título: Cultura, Ciência e tecnologia",
+     "pagina": 1,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/programa-rouanet-nas-favelas-2",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Requisitos": {
+     "valor": "2 — Ministério da Cultura",
+     "trecho": "Programa Rouanet nas Favelas 2 — Ministério da Cultura",
+     "pagina": 1,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/programa-rouanet-nas-favelas-2",
+     "metodo": "gabarito do órgão (rótulo “rograma rouanet nas favelas”)"
+    },
+    "Prazo de recurso": {
+     "valor": "10 (dez) dias corridos",
+     "trecho": "iniciantes; 7. Data e horário de envio da proposta ao MinC. DO RECURSO AO RESULTADO DA SELEÇÃO E CLASSIFICAÇÃO Caberá recurso da decisão da Comissão de Seleção, no prazo de 10 (dez) dias corridos, a contar do dia seguinte à publicação do resultado provisório.",
+     "pagina": 46,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/manual_programa_rouanet_favelas_2-com-territorios-de-favela-definitivo.pdf",
+     "metodo": "seção"
+    },
+    "Anexos": {
+     "valor": "ANEXO I TERRITÓRIOS DE FAVELA",
+     "trecho": "ultura.gov.br/comparar [TABELA] | 50 ANEXO I TERRITÓRIOS DE FAVELA Territórios classificados pelo Instituto Brasileiro de Geografia e Estatística (IBGE) como favelas e comunidades urbanas, conforme o Censo Demográfico 20",
+     "pagina": 50,
+     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/manual_programa_rouanet_favelas_2-com-territorios-de-favela-definitivo.pdf",
+     "metodo": "lista de anexos"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T22:11:55+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/programa-rouanet-nas-favelas-2",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": "pagina_vazia",
+     "falha": null,
+     "oficial": null,
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/manual_programa_rouanet_favelas_2-com-territorios-de-favela-definitivo.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 60,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/cultura/pt-br/assuntos/editais",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Editais de Chamamento Público",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/edital-escolas-livres-de-formacao-em-arte-e-cultura",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Edital Escolas Livres de Formação em Arte e Cultura",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-nas-favelas-2/edital_de_chamamento_publico_minc_rouanet-nas-favelas-2",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Edital - Rouanet nas Favelas",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 14,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/pt-br/temas/transparencia-fiscal-orcamento-nacional",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Orçamento Nacional",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/pt-br/temas/politica-e-orcamento-educacional",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Política e Orçamento Educacionais",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "falta",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 11,
+    "dispensados": 0,
+    "ja_constavam": 0,
+    "faltam": 1,
+    "pct_certificado_12": 0.9167,
+    "pct_cobertura_12": 0.9167
+   }
+  },
+  {
    "id": "op-9281538c94de",
    "tipo": "livro",
    "titulo": "Edital Suplementar FAPESC N.º 66/2025 — Programa Horizonte Europa (2026–2027)",
@@ -61684,6 +62346,194 @@
    }
   },
   {
+   "id": "op-98ee31165271",
+   "tipo": "livro",
+   "titulo": "O presente procedimento tem por objeto subsidiar o Chamamento Público para a seleção de associações e/ou cooperativas para a coleta e destinação de resíduos rec",
+   "balcao": "pncp",
+   "link_oficial": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [
+    "Anexos"
+   ],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 0.917,
+   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T22:12:45+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": null,
+   "fim": null,
+   "itens": {
+    "Prazo de recurso": {
+     "valor": "05 (cinco) dias úteis",
+     "trecho": "stado do Rio de Janeiro (Parte I – DETRAN-RJ). 9.2. Será concedido o prazo de 05 (cinco) dias úteis, após a divulgação do resultado, para a apresentação de recurso administrativo contra o resultado das aprovações das inscrições. 9.",
+     "pagina": 3,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "subsidiar o Chamamento Público para a seleção de Associações e/ou Cooperativas para a coleta e destinação de resíduos recicláveis gerados nas unidades do Departamento de Trânsito do Estado do Rio de Janeiro - DETRAN-RJ, conforme lotes relacionados no anexo C.",
+     "trecho": "1. OBJETO 1.1. O presente Termo de Referência tem como objetivo subsidiar o Chamamento Público para a seleção de Associações e/ou Cooperativas para a coleta e destinação de resíduos recicláveis gerados nas unidades do Departamento de Trânsito do Estado do Rio de Janeiro - DETRAN-RJ, conforme lotes relacionados no anexo C. 2. JUSTIFICATIVA 2.1. O encaminhamento dos recicláveis produzidos p",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2",
+     "metodo": "texto"
+    },
+    "Órgão / financiador": {
+     "valor": "Governo do Estado do Rio de Janeiro",
+     "trecho": "Governo do Estado do Rio de Janeiro Secretaria de Estado da Casa Civil Departamento de Trânsito do Estad",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2",
+     "metodo": "cabeçalho"
+    },
+    "Território": {
+     "valor": "do Estado do Rio de Janeiro",
+     "trecho": "Governo do Estado do Rio de Janeiro Secretaria de Estado da Casa Civil Departamento de Trânsito do Esta",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "estadual",
+     "trecho": "domínio/órgão: pncp.gov.br · Governo do Estado do Rio de Janeiro",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2",
+     "metodo": "domínio e órgão"
+    },
+    "Requisitos": {
+     "valor": "Poderão participar do processo seletivo as associações e/ou cooperativas",
+     "trecho": "do do Rio de Janeiro – DETRAN-RJ. 6. DAS CONDIÇÕES GERAIS 6.1. Poderão participar do processo seletivo as associações e/ou cooperativas de catadores de materiais recicláveis que atenderem aos seguintes req",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2",
+     "metodo": "texto"
+    },
+    "Modalidade": {
+     "valor": "Acordo de Cooperação (sem repasse)",
+     "trecho": "ções de degradação. 14.3. Acompanhar as atividades de execução deste Acordo de Cooperação, avaliando os resultados por intermédio da Comissão de Coleta Seletiva Solidária (CCSS), e no caso das plac",
+     "pagina": 9,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Cultura, Meio ambiente",
+     "trecho": "termos do objeto e do título: Cultura, Meio ambiente",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Prazo de inscrição": {
+     "valor": "2025-09-02 a 2025-09-17",
+     "trecho": "dataAberturaProposta/dataEncerramentoProposta: 2025-09-02T17:09:00 — 2025-09-17T17:09:00",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/42498600000171/compras/2025/4383",
+     "metodo": "metadados oficiais do PNCP"
+    }
+   },
+   "dispensas": {
+    "Resultado": {
+     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
+     "trecho": "16. RESCISÃO 16.1. O termo de compromisso poderá ser reincidido a qualquer tempo: a) Por iniciativa de qualquer das partes, mediante comunicação fo",
+     "pagina": 10,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2"
+    },
+    "Valor": {
+     "motivo": "dispensado pelo Cartório — não se aplica: sem repasse financeiro (cooperação, cessão ou habilitação sem recurso)",
+     "trecho": "aneiro 10. VALOR ESTIMADO DA CONTRATAÇÃO 10.1. Não haverá transferência de recursos financeiros entre as partes para execução do objeto de presente Term",
+     "pagina": 4,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2"
+    }
+   },
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T22:12:45+00:00",
+     "ganhou": [
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2025/4383/arquivos/2",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 12,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "dispensado",
+     "Prazo de recurso": "certificado",
+     "Valor": "dispensado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "falta",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 9,
+    "dispensados": 2,
+    "ja_constavam": 0,
+    "faltam": 1,
+    "pct_certificado_12": 0.9167,
+    "pct_cobertura_12": 0.9167
+   }
+  },
+  {
    "id": "captacao-022",
    "tipo": "livro",
    "titulo": "PNAB Goiás - Dança",
@@ -63088,17 +63938,17 @@
    "ainda_faltam": [
     "Prazo de recurso"
    ],
-   "tentativa": 3,
+   "tentativa": 5,
    "versao": "cartório v5 · linha de produção (09/10/2026)",
    "gabarito": null,
-   "estagio": "bronze",
+   "estagio": "prata",
    "estagio_inicio": "sem_estrela",
    "esgotada": null,
    "eficiencia": 0.917,
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": null,
-   "selo_depois": "bronze",
-   "em": "2026-10-17T21:07:54+00:00",
+   "selo_depois": "prata",
+   "em": "2026-10-17T22:11:33+00:00",
    "prazo": "2030-09-07T18:00",
    "uf": "SP",
    "orgao": null,
@@ -63177,10 +64027,10 @@
    },
    "dispensas": {
     "Valor": {
-     "motivo": "pagamento por tabela ou valor fixado pela Administração, igual para todos os credenciados",
-     "trecho": null,
-     "pagina": null,
-     "documento": null
+     "motivo": "dispensado pelo Cartório — não se aplica: sem repasse financeiro (cooperação, cessão ou habilitação sem recurso)",
+     "trecho": "ªo de terceiros na consecuçªo do objeto do presente Termo, ainda que a título gratuito ou mediante relaçªo empregatícia; f) permanecer nas dependŒncias do",
+     "pagina": 30,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/2"
     }
    },
    "abordagens": [
@@ -63215,6 +64065,20 @@
       "Resultado",
       "Área de atuação"
      ],
+     "legado": null
+    },
+    {
+     "n": 9,
+     "nome": "leitura profunda",
+     "em": "2026-10-17T22:10:47+00:00",
+     "ganhou": [],
+     "legado": null
+    },
+    {
+     "n": 4,
+     "nome": "biblioteca de sites",
+     "em": "2026-10-17T22:11:33+00:00",
+     "ganhou": [],
      "legado": null
     }
    ],
@@ -63297,6 +64161,76 @@
      "falha": null,
      "oficial": null,
      "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/2",
+     "degrau": 0,
+     "como": "leitura profunda (até 150 páginas e tabelas)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 83,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/3",
+     "degrau": 0,
+     "como": "leitura profunda (até 150 páginas e tabelas)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 15,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/4",
+     "degrau": 0,
+     "como": "leitura profunda (até 150 páginas e tabelas)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 7,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/5",
+     "degrau": 0,
+     "como": "leitura profunda (até 150 páginas e tabelas)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 7,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.tjsp.jus.br/adm/portal-servicos-frontend/portal-servicos-scl/edital/4801",
+     "degrau": 1,
+     "como": "biblioteca de sites oficiais conhecidos do órgão",
+     "motivo": "pagina_vazia",
+     "falha": null,
+     "oficial": null,
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/api/consulta/v1/orgaos/51174001000193/compras/2025/260",
+     "degrau": 1,
+     "como": "biblioteca de sites oficiais conhecidos do órgão",
+     "motivo": "formato_desconhecido",
+     "falha": null,
+     "oficial": null,
+     "paginas": 0,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/2",
+     "degrau": 1,
+     "como": "biblioteca de sites oficiais conhecidos do órgão",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 60,
      "edicao_inteira": null
     }
    ],
@@ -65681,6 +66615,175 @@
      "Requisitos": "certificado",
      "Anexos": "ja_constava",
      "Modalidade": "falta",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 9,
+    "dispensados": 0,
+    "ja_constavam": 2,
+    "faltam": 1,
+    "pct_certificado_12": 0.75,
+    "pct_cobertura_12": 0.9167
+   }
+  },
+  {
+   "id": "op-662c854db2d6",
+   "tipo": "livro",
+   "titulo": "FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL DE INHUMAS - FMAS — CHAMAMENTO PÚBLICO O CREDENCIAMENTO DE INSTITUIÇÕES DE LONGA PERMANÊNCIA PARA IDOSOS  ILPIS, REGULARM",
+   "balcao": "pncp",
+   "link_oficial": "https://pncp.gov.br/pncp-api/v1/orgaos/11598317000198/compras/2026/36/arquivos/1",
+   "degrau": 0,
+   "como": "PNCP: arquivo anexado pelo órgão (Aviso de Contratação Direta)",
+   "faltavam": [
+    "Objeto",
+    "Resultado",
+    "Prazo de recurso",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Resultado",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [
+    "Prazo de recurso"
+   ],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 0.9,
+   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T22:12:51+00:00",
+   "prazo": null,
+   "uf": "GO",
+   "orgao": "PNCP — FUNDO MUNICIPAL DE ASSISTENCIA SOCIAL DE INHUMAS - FMAS",
+   "fim": "2026-08-10",
+   "itens": {
+    "Resultado": {
+     "valor": "O resultado será divulgado na plataforma BNC.",
+     "trecho": "ja apresentação era obrigatória na data do protocolo do pedido. 8.5. O resultado será divulgado na plataforma BNC. 8.6. Incumbirá aos interessados acompanhar as operações no sistema e",
+     "pagina": 10,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/11598317000198/compras/2026/36/arquivos/1",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "CHAMAMENTO PÚBLICO O CREDENCIAMENTO DE INSTITUIÇÕES DE",
+     "trecho": "e setenta e cinco mil , oitocentos e sete reais e vinte centavos). Objeto: CHAMAMENTO PÚBLICO O CREDENCIAMENTO DE INSTITUIÇÕES DE LONGA PERMANÊNCIA PARA IDOSOS – ILPIS, REGULARMENTE CONSTITUÍDAS E L",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/11598317000198/compras/2026/36/arquivos/1",
+     "metodo": "texto"
+    },
+    "Órgão / financiador": {
+     "valor": "SECRETARIA MUNICIPAL DE DESENVOLVIMENTO SOCIAL DO MUNICIPIO",
+     "trecho": "EDENCIAMENTO Nº 001/2026. PROCESSO ADMINISTRATIVO Nº 1181/2026. A SECRETARIA MUNICIPAL DE DESENVOLVIMENTO SOCIAL DO MUNICIPIO DE INHUMAS , TORNA PÚBLICO QUE REALIZARÁ CHAMAMENTO PÚBLICO PARA CRE",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/11598317000198/compras/2026/36/arquivos/1",
+     "metodo": "cabeçalho"
+    },
+    "Território": {
+     "valor": "todo o território nacional",
+     "trecho": "que, por força de lei, tenha validade para fins de identificação em todo o território nacional, do representante ou presidente responsável pela instituição ou empr",
+     "pagina": 7,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/11598317000198/compras/2026/36/arquivos/1",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "municipal",
+     "trecho": "domínio/órgão: pncp.gov.br · SECRETARIA MUNICIPAL DE DESENVOLVIMENTO SOCIAL DO MUNICIPIO PNCP — FUNDO MUNICIP",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/11598317000198/compras/2026/36/arquivos/1",
+     "metodo": "domínio e órgão"
+    },
+    "Requisitos": {
+     "valor": "Poderão participar pessoas jurídicas de direito privado, com ou sem fins lucrativos, que:",
+     "trecho": "o, utilizando a plataforma da Bolsa Nacional de Compras – BNC. 4.3. Poderão participar pessoas jurídicas de direito privado, com ou sem fins lucrativos, que: possuam objeto social compatível; estejam regularmente constituídas",
+     "pagina": 3,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/11598317000198/compras/2026/36/arquivos/1",
+     "metodo": "texto"
+    },
+    "Anexos": {
+     "valor": "ANEXO I – TERMO DE REFERÊNCIA E ESTUDO TÉCNICO PRELIMINAR; ANEXO II – ESTUDO TÉCNICO PRELIMINAR – ETP;; ANEXO III – MINUTA DO CONTRATO DE CREDENCIAMENTO;; ANEXO IV – DECLARAÇÃO CONJUNTA;; ANEXO V – DECLARAÇÃO DE CAPACIDADE DE ATENDIMENTO:; ANEXO I – TERMO DE REFERÊNCIA PARA PROCESSO DE CREDENCIAMENT",
+     "trecho": "s competências legais dos órgãos de controle e do Poder Judiciário. ANEXO I – TERMO DE REFERÊNCIA E ESTUDO TÉCNICO PRELIMINAR ANEXO II – ESTUDO TÉCNICO PRELIMINAR – ETP; ANEXO III – MINUTA DO CONTRATO DE CREDENCIAMENTO; ANEXO IV – DECLARAÇÃO CONJUNTA;",
+     "pagina": 18,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/11598317000198/compras/2026/36/arquivos/1",
+     "metodo": "lista de anexos"
+    },
+    "Modalidade": {
+     "valor": "Credenciamento (contratação) — Lei nº 14.133/2021",
+     "trecho": "izados. 7.3. A contratação ocorrerá mediante Chamamento Público para Credenciamento, nos termos do artigo 79 da Lei Federal nº 14.133/2021, de forma contínua, paralela e não excludente, permitindo",
+     "pagina": 53,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/11598317000198/compras/2026/36/arquivos/1",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Assistência social, Idosos",
+     "trecho": "termos do objeto e do título: Assistência social, Idosos",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/11598317000198/compras/2026/36/arquivos/1",
+     "metodo": "palavras-chave do objeto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T22:12:51+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/11598317000198/compras/2026/36/arquivos/1",
+     "degrau": 0,
+     "como": "PNCP: arquivo anexado pelo órgão (Aviso de Contratação Direta)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 60,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "certificado",
+     "Prazo de recurso": "falta",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
      "Área de atuação": "certificado"
     },
     "certificados": 9,
@@ -81641,1800 +82744,35 @@
     "pct_certificado_12": 0.4167,
     "pct_cobertura_12": 0.9167
    }
-  },
-  {
-   "id": "nova-153fe0f09a1a",
-   "tipo": "livro",
-   "titulo": "Chamadas Públicas",
-   "balcao": "orgao",
-   "link_oficial": "https://www.cnj.jus.br/poder-judiciario/chamadas-publicas",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Prazo de recurso",
-    "Esfera"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-15T06:17:39+00:00",
-   "prazo": null,
-   "uf": "BR",
-   "orgao": "TJGO - penas pecuniárias 1ª Vara de Execução Penal de Goiânia",
-   "fim": "2026-10-13",
-   "itens": {
-    "Prazo de inscrição": {
-     "valor": "até 13 de outubro de 2026",
-     "trecho": "ional da Pessoa Idosa Tema 2: Diagnóstico da Justiça Restaurativa Prazo para submissão de propostas: 13 de outubro de 2026 Divulgação do resultado final: 18 de novembro de 2026 Link para en",
-     "pagina": 1,
-     "documento": "https://www.cnj.jus.br/poder-judiciario/chamadas-publicas",
-     "metodo": "cronograma"
-    },
-    "Resultado": {
-     "valor": "18 de novembro de 2026",
-     "trecho": "aurativa Prazo para submissão de propostas: 13 de outubro de 2026 Divulgação do resultado final: 18 de novembro de 2026 Link para envio de propostas: Acesse o formulário eletrônico 1º E",
-     "pagina": 1,
-     "documento": "https://www.cnj.jus.br/poder-judiciario/chamadas-publicas",
-     "metodo": "seção"
-    },
-    "Objeto": {
-     "valor": "identificar imóveis aptos a atender às necessidades da Administração, subsidiando eventual contratação direta, na forma da legislação aplicável, não constituindo procedimento licitatório, promessa de contratação ou qualquer direito subjetivo à celebração de contrato.",
-     "trecho": "esente Chamamento Público possui caráter exclusivamente prospectivo e tem por finalidade identificar imóveis aptos a atender às necessidades da Administração, subsidiando eventual contratação direta, na forma da legislação aplicável, não constituindo procedimento licitatório, promessa de contratação ou qualquer direito subjetivo à celebração de contrato. Resultado do Chamamento Público n. 1/2026 E",
-     "pagina": 1,
-     "documento": "https://www.cnj.jus.br/poder-judiciario/chamadas-publicas",
-     "metodo": "texto"
-    },
-    "Área de atuação": {
-     "valor": "Meio ambiente, Criança e adolescente, Idosos",
-     "trecho": "termos do objeto e do título: Meio ambiente, Criança e adolescente, Idosos",
-     "pagina": 1,
-     "documento": "https://www.cnj.jus.br/poder-judiciario/chamadas-publicas",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Órgão / financiador": {
-     "valor": "Secretaria de Auditoria",
-     "trecho": "oria de Gestão de Serviços Notariais e de Registro SECRETARIA-GERAL Secretaria de Auditoria Gabinete da Presidência Secretaria de Comunicação Social DIRETORI",
-     "pagina": 1,
-     "documento": "https://www.cnj.jus.br/wp-content/uploads/2026/10/organograma-completo-06-10-2026.pdf",
-     "metodo": "cabeçalho"
-    },
-    "Território": {
-     "valor": "todo o território nacional",
-     "trecho": "no dia 14 de junho de 2005, órgão do Poder Judiciário com atuação em todo o território nacional, com sede em Brasília-DF, compõe-se de quinze membros, nos termos do",
-     "pagina": 23,
-     "documento": "https://www.cnj.jus.br/wp-content/uploads/2026/09/regimento-interno-anotado-v4-2026-09-23.pdf",
-     "metodo": "texto"
-    },
-    "Modalidade": {
-     "valor": "Convênio",
-     "trecho": "2016 – DJe n. 150/2016, em 26/8/2016, p. 10-12). XXXIV 19 - Celebrar convênios e assinar contratos, dando-se ciência imediata aos Conselheiros; XXXV - praticar os demais atos previstos em lei e neste",
-     "pagina": 59,
-     "documento": "https://www.cnj.jus.br/wp-content/uploads/2026/09/regimento-interno-anotado-v4-2026-09-23.pdf",
-     "metodo": "modalidade de recebimento"
-    },
-    "Requisitos": {
-     "valor": "São requisitos obrigatórios para participar do processo de cadastro no Banco de Instrutores(as) da ANPJ: I -- ser servidor(a) público federal;",
-     "trecho": "SSO DE CADASTRAMENTO Seção I -- Dos requisitos obrigatórios Art. 1º São requisitos obrigatórios para participar do processo de cadastro no Banco de Instrutores(as) da ANPJ: I -- ser servidor(a) público federal; II -- ser magistrado(a); III -- ser profissional com notória especi",
-     "pagina": 1,
-     "documento": "https://www.cnj.jus.br/wp-content/uploads/2026/07/edital-chamamento-banco-instrutores-anpj-revisado-v2-1-30-06.pdf",
-     "metodo": "texto"
-    },
-    "Anexos": {
-     "valor": "ANEXO I -- MODELO DE PLANO DE AULA (AULA-TESTE); ANEXO II -- CRONOGRAMA DE ATIVIDADES; ANEXO III -- RESOLUÇÕES QUE NORMATIZAM A POLÍCIA JUDICIAL",
-     "trecho": "aio Diretora-Executiva da Academia Nacional de Polícia Judicial ANEXO I -- MODELO DE PLANO DE AULA (AULA-TESTE) 1. IDENTIFICAÇÃO DO CANDIDATO • Nome Completo: • Disciplina Pretendida: (Ex: Armamento e Tiro, Inteligência, Direitos Humanos etc.) • Tema",
-     "pagina": 8,
-     "documento": "https://www.cnj.jus.br/wp-content/uploads/2026/07/edital-chamamento-banco-instrutores-anpj-revisado-v2-1-30-06.pdf",
-     "metodo": "lista de anexos"
-    },
-    "Valor": {
-     "valor": "R$ 500.000,00 (quinhentos mil reais)",
-     "trecho": ". Às condutas praticadas durante o procedimento licitatório em que o valor estimado da contratação supere R$ 500.000,00 (quinhentos mil reais), poderá ser cumulativamente aplicada 20 a penalidade de multa no",
-     "pagina": 19,
-     "documento": "https://www.cnj.jus.br/wp-content/uploads/2026/09/1o-edital-8a-justica-pesquisa.pdf",
-     "metodo": "seção"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-15T06:17:39+00:00",
-     "ganhou": [
-      "Anexos",
-      "Modalidade",
-      "Objeto",
-      "Prazo de inscrição",
-      "Requisitos",
-      "Resultado",
-      "Território",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.cnj.jus.br/poder-judiciario/chamadas-publicas",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cnj.jus.br/wp-content/uploads/2026/10/organograma-completo-06-10-2026.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cnj.jus.br/wp-content/uploads/2026/09/regimento-interno-anotado-v4-2026-09-23.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 60,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cnj.jus.br/wp-content/uploads/2026/07/edital-chamamento-banco-instrutores-anpj-revisado-v2-1-30-06.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 11,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cnj.jus.br/wp-content/uploads/2026/09/1o-edital-8a-justica-pesquisa.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 60,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cnj.jus.br/wp-content/uploads/2026/08/aviso-de-chamamento-publico-n-1-2026.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 13,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cnj.jus.br/wp-content/uploads/2026/09/resultado-chamamento-publico-01-2026-prospeccao-de-imoveis.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cnj.jus.br/wp-content/uploads/2026/07/sei-2671841-edital.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 4,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "falta",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "certificado",
-     "Esfera": "falta",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 10,
-    "dispensados": 0,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "der-inc-c73c51f26253",
-   "tipo": "estrela",
-   "titulo": "Chamamento Público nº 06/2026 – SE/MS – PRONON: seleção de propostas e habilitação de OSC (R$ 300 mil a R$ 18 milhões; inscrição pelo Transferegov)",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Território",
-    "Modalidade"
-   ],
-   "tentativa": 6,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-13T19:38:44+00:00",
-   "prazo": "2026-10-26",
-   "uf": null,
-   "orgao": "Ministério da Saúde (DECOOP/SE)",
-   "fim": "2026-10-26",
-   "itens": {
-    "Prazo de inscrição": {
-     "valor": "05/10/2026 a 26/10/2026",
-     "trecho": "ionais, contatar: cpron@saude.gov.br . Período para disponível para envio das propostas: 05/10/2026 a 26/10/2026 Anexos: Edital Extrato do Edital - DOU",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-     "metodo": "cronograma"
-    },
-    "Valor": {
-     "valor": "R$ 18.000.000,00 (dezoito milhões de reais)",
-     "trecho": "a proposta de projeto será de R$ 300.000,00 (trezentos mil reais) e o valor máximo de R$ 18.000.000,00 (dezoito milhões de reais) . Os objetivos específicos da parceria, por campo de atuação, estão d",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-     "metodo": "seção"
-    },
-    "Objeto": {
-     "valor": "a seleção de propostas e a habilitação de pessoas jurídicas de direito privado, associativas ou fundacionais, sem fins lucrativos, para a execução de projetos, no âmbito do PRONON.",
-     "trecho": "SE) | PRONON Status: Aberto | Chamamento Público que tem por finalidade a seleção de propostas e a habilitação de pessoas jurídicas de direito privado, associativas ou fundacionais, sem fins lucrativos, para a execução de projetos, no âmbito do PRONON. Compartilhe: Compartilhe por Facebook",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-     "metodo": "texto"
-    },
-    "Órgão / financiador": {
-     "valor": "Ministério da Saúde",
-     "trecho": "Chamamento Público nº 06/2026 - Secretaria Executiva (SE) | PRONON — Ministério da Saúde",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-     "metodo": "cabeçalho"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.gov.br · Ministério da Saúde Ministério da Saúde (DECOOP/SE)",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Saúde, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Saúde, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Resultado": {
-     "valor": "03/12/2026",
-     "trecho": "solicitação de habilitação pela Instituição 27/10/2026 a 25/11/2026 6 Divulgação do resultado preliminar 03/12/2026 7 Interposição de recursos contra o resultado preliminar 04/12/20",
-     "pagina": 11,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon/edital",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "04/12/2026",
-     "trecho": "6 6 Divulgação do resultado preliminar 03/12/2026 7 Interposição de recursos contra o resultado preliminar 04/12/2026 a 14/12/2026 8 Publicação do resultado definitivo da fase de seleção",
-     "pagina": 11,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon/edital",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "Poderão participar deste Edital as pessoas jurídicas de direito privado, associativas ou fundacionais, sem fins lucrativos: I - certiﬁcadas como Entidades Beneﬁcentes de Assistência Social, na forma da Lei Complementar n.",
-     "trecho": "pesquisa em oncologia. 3 . PARTICIPAÇÃO NO CHAMAMENTO PÚBLICO 3 . 1 . Poderão participar deste Edital as pessoas jurídicas de direito privado, associativas ou fundacionais, sem fins lucrativos: I - certiﬁcadas como Entidades Beneﬁcentes de Assistência Social, na forma da Lei Complementar n.º 187, de 16 de dezembro de 2021; ou II - qualiﬁcadas como Organizaçõ",
-     "pagina": 4,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon/edital",
-     "metodo": "texto"
-    },
-    "Anexos": {
-     "valor": "ANEXO I DECLARAÇÃO DE CIÊNCIA E CONCORDÂNCIA; ANEXO II Minuta 0058520655 SEI 25000.153724/2025-42 / pg. 30; ANEXO III FORMULÁRIO DE APRESENTAÇÃO DE PROJETOS; ANEXO IV DECLARAÇÃO DE CAPACIDADE TÉCNICO-OPERATIVA; ANEXO V MODELO DE ORÇAMENTO; ANEXO VI FORMULÁRIO DE INFORMAÇÕES COMPLEMENTARES PARA PROPO",
-     "trecho": "s. l ) Anexo XII – Minuta de Termo de Compromisso. (MODELO) ANEXO I DECLARAÇÃO DE CIÊNCIA E CONCORDÂNCIA Declaro que a [identificação da Instituição] está ciente e concorda com as disposições previstas no Edital de Chamamento Público nº .........",
-     "pagina": 30,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon/edital",
-     "metodo": "lista de anexos"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-11T14:26:37+00:00",
-     "ganhou": [
-      "Anexos",
-      "Esfera",
-      "Objeto",
-      "Prazo de inscrição",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    },
-    {
-     "n": 2,
-     "nome": "anexos completos",
-     "em": "2026-10-11T15:31:23+00:00",
-     "ganhou": [],
-     "legado": null
-    },
-    {
-     "n": 9,
-     "nome": "leitura profunda",
-     "em": "2026-10-12T04:29:20+00:00",
-     "ganhou": [],
-     "legado": null
-    },
-    {
-     "n": 7,
-     "nome": "releitura com gabarito",
-     "em": "2026-10-12T18:01:55+00:00",
-     "ganhou": [],
-     "legado": null
-    },
-    {
-     "n": 3,
-     "nome": "página oficial e citados",
-     "em": "2026-10-13T06:12:43+00:00",
-     "ganhou": [],
-     "legado": null
-    },
-    {
-     "n": 4,
-     "nome": "biblioteca de sites",
-     "em": "2026-10-13T19:38:44+00:00",
-     "ganhou": [],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.in.gov.br/web/dou/-/edital-de-chamamento-publico-n-6/2026-736401965",
-     "degrau": 0,
-     "como": "leitura profunda (até 150 páginas e tabelas)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-     "degrau": 0,
-     "como": "releitura com o gabarito do órgão atualizado",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos",
-     "degrau": 0,
-     "como": "releitura com o gabarito do órgão atualizado",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon/edital",
-     "degrau": 0,
-     "como": "releitura com o gabarito do órgão atualizado",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 60,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.in.gov.br/web/dou/-/edital-de-chamamento-publico-n-6/2026-736401965",
-     "degrau": 0,
-     "como": "releitura com o gabarito do órgão atualizado",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-     "degrau": 1,
-     "como": "página oficial e documentos citados nela",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamentos Públicos",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon/edital",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital nº 6/2026",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 60,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.in.gov.br/web/dou/-/edital-de-chamamento-publico-n-6/2026-736401965",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Extrato do Edital - DOU",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/licitacoes-e-contratos/chamamentos-publicos/abertos",
-     "degrau": 1,
-     "como": "documento citado na página oficial: 📄 Chamamentos Públicos Abertos",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/licitacoes-e-contratos/chamamentos-publicos/encerrados",
-     "degrau": 1,
-     "como": "documento citado na página oficial: 📑 Chamamentos Públicos Encerrados",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-82-2026-sgtes",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamento Público nº 82/2026 - Secretaria de Gestão do Trabalho e da Educação na Saúde (SGTES)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamento Público nº 07/2026 - Secretaria Executiva (SE) | PRONAS/PCD",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-55-2026-dsei-cuiaba-sesai",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamento Público nº 55/2026 - DSEI - Cuiabá - Secretária de Saúde Indígena (SESAI)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-49-2026-dsei-cuiaba-sesai",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamento Público nº 49/2026 - DSEI - Cuiabá - Secretária de Saúde Indígena (SESAI)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-     "degrau": 1,
-     "como": "biblioteca de sites oficiais conhecidos do órgão",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-     "degrau": 1,
-     "como": "biblioteca de sites oficiais conhecidos do órgão",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamentos Públicos",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon/edital",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital nº 6/2026",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 60,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.in.gov.br/web/dou/-/edital-de-chamamento-publico-n-6/2026-736401965",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Extrato do Edital - DOU",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas/edital",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital nº 7/2026",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 57,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.in.gov.br/web/dou/-/edital-de-chamamento-publico-n-7/2026-736462157",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Extrato do Edital - DOU",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "falta",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "falta",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 10,
-    "dispensados": 0,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "der-inc-e179e7a83eab",
-   "tipo": "estrela",
-   "titulo": "Chamamento Público nº 07/2026 – SE/MS – PRONAS/PCD: seleção de propostas de OSC (R$ 250 mil a R$ 4 milhões; inscrição pelo Transferegov)",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Território",
-    "Modalidade"
-   ],
-   "tentativa": 6,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-13T21:24:43+00:00",
-   "prazo": "2026-10-26",
-   "uf": null,
-   "orgao": "Ministério da Saúde (DECOOP/SE)",
-   "fim": "2026-10-26",
-   "itens": {
-    "Prazo de inscrição": {
-     "valor": "05/10/2026 a 26/10/2026",
-     "trecho": "ionais, contatar: cpron@saude.gov.br . Período para disponível para envio das propostas: 05/10/2026 a 26/10/2026 Anexos: Edital Extrato do Edital - DOU",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-     "metodo": "cronograma"
-    },
-    "Valor": {
-     "valor": "R$ 4.000.000,00 (quatro milhões de reais)",
-     "trecho": "e projeto será de R$ 250.000,00 (duzentos e cinquenta mil reais) e o valor máximo de R$ 4.000.000,00 (quatro milhões de reais) . Os objetivos específicos da parceria, por campo de atuação, estão d",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-     "metodo": "seção"
-    },
-    "Objeto": {
-     "valor": "a seleção de propostas e a habilitação de pessoas jurídicas de direito privado, associativas ou fundacionais, sem fins lucrativos, para a execução de projetos, no âmbito do PRONAS/PCD.",
-     "trecho": "| PRONAS/PCD Status: Aberto | Chamamento Público que tem por finalidade a seleção de propostas e a habilitação de pessoas jurídicas de direito privado, associativas ou fundacionais, sem fins lucrativos, para a execução de projetos, no âmbito do PRONAS/PCD. Compartilhe: Compartilhe por Facebook",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-     "metodo": "texto"
-    },
-    "Órgão / financiador": {
-     "valor": "Ministério da Saúde",
-     "trecho": "mamento Público nº 07/2026 - Secretaria Executiva (SE) | PRONAS/PCD — Ministério da Saúde",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-     "metodo": "cabeçalho"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.gov.br · Ministério da Saúde Ministério da Saúde (DECOOP/SE)",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Saúde, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Saúde, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Resultado": {
-     "valor": "03/12/2026",
-     "trecho": "solicitação de habilitação pela Instituição 27/10/2026 a 25/11/2026 6 Divulgação do resultado preliminar 03/12/2026 7 Interposição de recursos contra o resultado preliminar 04/12/20",
-     "pagina": 11,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas/edital",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "04/12/2026",
-     "trecho": "6 6 Divulgação do resultado preliminar 03/12/2026 7 Interposição de recursos contra o resultado preliminar 04/12/2026 a 14/12/2026 8 Publicação do resultado definitivo da fase de seleção",
-     "pagina": 11,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas/edital",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "Poderão participar deste Edital as pessoas jurídicas de direito privado, associativas ou fundacionais, sem fins lucrativos: I - Certiﬁcadas como Entidades Beneﬁcentes de Assistência Social, na forma da Lei Complementar nº 187, de 16 de dezembro de 2021;",
-     "trecho": "essoa com deficiência. 3 . PARTICIPAÇÃO NO CHAMAMENTO PÚBLICO 3 . 1 . Poderão participar deste Edital as pessoas jurídicas de direito privado, associativas ou fundacionais, sem fins lucrativos: I - Certiﬁcadas como Entidades Beneﬁcentes de Assistência Social, na forma da Lei Complementar nº 187, de 16 de dezembro de 2021; ou II - Qualiﬁcadas como Organizações Sociais (OS), na forma da Lei",
-     "pagina": 4,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas/edital",
-     "metodo": "texto"
-    },
-    "Anexos": {
-     "valor": "ANEXO I DECLARAÇÃO DE CIÊNCIA E CONCORDÂNCIA; ANEXO II DECLARAÇÃO DE CIÊNCIA, CONCORDÂNCIA E ANUÊNCIA DO GESTOR; ANEXO III FORMULÁRIO DE APRESENTAÇÃO DE PROJETOS; ANEXO IV DECLARAÇÃO DE CAPACIDADE TÉCNICO-OPERATIVA; ANEXO V Minuta 0058521548 SEI 25000.153724/2025-42 / pg. 33; ANEXO VI FORMULÁRIO DE ",
-     "trecho": "ateriais l ) Anexo XII – Minuta de Termo de Compromisso. (MODELO) ANEXO I DECLARAÇÃO DE CIÊNCIA E CONCORDÂNCIA Declaro que a [identificação da Instituição] está ciente e concorda com as disposições previstas no Edital de Chamamento Público nº .........",
-     "pagina": 27,
-     "documento": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas/edital",
-     "metodo": "lista de anexos"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-11T14:27:20+00:00",
-     "ganhou": [
-      "Anexos",
-      "Esfera",
-      "Objeto",
-      "Prazo de inscrição",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    },
-    {
-     "n": 2,
-     "nome": "anexos completos",
-     "em": "2026-10-11T15:32:01+00:00",
-     "ganhou": [],
-     "legado": null
-    },
-    {
-     "n": 9,
-     "nome": "leitura profunda",
-     "em": "2026-10-12T04:29:47+00:00",
-     "ganhou": [],
-     "legado": null
-    },
-    {
-     "n": 7,
-     "nome": "releitura com gabarito",
-     "em": "2026-10-12T18:06:41+00:00",
-     "ganhou": [],
-     "legado": null
-    },
-    {
-     "n": 3,
-     "nome": "página oficial e citados",
-     "em": "2026-10-13T08:04:29+00:00",
-     "ganhou": [],
-     "legado": null
-    },
-    {
-     "n": 4,
-     "nome": "biblioteca de sites",
-     "em": "2026-10-13T21:24:43+00:00",
-     "ganhou": [],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.in.gov.br/web/dou/-/edital-de-chamamento-publico-n-7/2026-736462157",
-     "degrau": 0,
-     "como": "leitura profunda (até 150 páginas e tabelas)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-     "degrau": 0,
-     "como": "releitura com o gabarito do órgão atualizado",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos",
-     "degrau": 0,
-     "como": "releitura com o gabarito do órgão atualizado",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas/edital",
-     "degrau": 0,
-     "como": "releitura com o gabarito do órgão atualizado",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 57,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.in.gov.br/web/dou/-/edital-de-chamamento-publico-n-7/2026-736462157",
-     "degrau": 0,
-     "como": "releitura com o gabarito do órgão atualizado",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-     "degrau": 1,
-     "como": "página oficial e documentos citados nela",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamentos Públicos",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas/edital",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital nº 7/2026",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 57,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.in.gov.br/web/dou/-/edital-de-chamamento-publico-n-7/2026-736462157",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Extrato do Edital - DOU",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/licitacoes-e-contratos/chamamentos-publicos/abertos",
-     "degrau": 1,
-     "como": "documento citado na página oficial: 📄 Chamamentos Públicos Abertos",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/licitacoes-e-contratos/chamamentos-publicos/encerrados",
-     "degrau": 1,
-     "como": "documento citado na página oficial: 📑 Chamamentos Públicos Encerrados",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-82-2026-sgtes",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamento Público nº 82/2026 - Secretaria de Gestão do Trabalho e da Educação na Saúde (SGTES)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamento Público nº 06/2026 - Secretaria Executiva (SE) | PRONON",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-55-2026-dsei-cuiaba-sesai",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamento Público nº 55/2026 - DSEI - Cuiabá - Secretária de Saúde Indígena (SESAI)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-49-2026-dsei-cuiaba-sesai",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamento Público nº 49/2026 - DSEI - Cuiabá - Secretária de Saúde Indígena (SESAI)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon",
-     "degrau": 1,
-     "como": "biblioteca de sites oficiais conhecidos do órgão",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas",
-     "degrau": 1,
-     "como": "biblioteca de sites oficiais conhecidos do órgão",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamentos Públicos",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-06-2026-se-pronon/edital",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital nº 6/2026",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 60,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.in.gov.br/web/dou/-/edital-de-chamamento-publico-n-6/2026-736401965",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Extrato do Edital - DOU",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-07-2026-se-pronas/edital",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital nº 7/2026",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 57,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.in.gov.br/web/dou/-/edital-de-chamamento-publico-n-7/2026-736462157",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Extrato do Edital - DOU",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "falta",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "falta",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 10,
-    "dispensados": 0,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "op-c4f3be1eb5b6",
-   "tipo": "livro",
-   "titulo": "Continue lendo Instituto Lojas Renner abre edital para fortalecer organizações sociais em três estados",
-   "balcao": "pista",
-   "link_oficial": "https://www.institutolojasrenner.org.br/edital-encantando-comunidades/",
-   "degrau": 1,
-   "como": "link de saída da pista para o site do financiador",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Anexos",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Requisitos",
-    "Modalidade"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-11T07:43:34+00:00",
-   "prazo": null,
-   "uf": "BR",
-   "orgao": "ABCR — Associação Brasileira de Captadores",
-   "fim": "2026-10-05",
-   "itens": {
-    "Prazo de recurso": {
-     "valor": "28 de janeiro de 2026",
-     "trecho": "Fundação Abrinq abre vaga para Analista de Captação de Recursos 28 de janeiro de 2026 Todos Pela Educação abre vaga para",
-     "pagina": 1,
-     "documento": "https://captadores.org.br/editais/instituto-lojas-renner-abre-edital-para-fortalecer-organizacoes-sociais-em-tres-estados",
-     "metodo": "seção"
-    },
-    "Órgão / financiador": {
-     "valor": "Instituto Lojas Renner abre edital para fortalecer organizações sociais em três estados &#8211",
-     "trecho": "Instituto Lojas Renner abre edital para fortalecer organizações sociais em três estados &#8211; ABCR &#8211; Associação Brasileira de Captadores de Recursos",
-     "pagina": 1,
-     "documento": "https://captadores.org.br/editais/instituto-lojas-renner-abre-edital-para-fortalecer-organizacoes-sociais-em-tres-estados",
-     "metodo": "cabeçalho"
-    },
-    "Esfera": {
-     "valor": "privada",
-     "trecho": "domínio/órgão: captadores.org.br · Instituto Lojas Renner abre edital para fortalecer organizações sociais em três ",
-     "pagina": 1,
-     "documento": "https://captadores.org.br/editais/instituto-lojas-renner-abre-edital-para-fortalecer-organizacoes-sociais-em-tres-estados",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Educação, Meio ambiente, Direitos humanos",
-     "trecho": "termos do objeto e do título: Educação, Meio ambiente, Direitos humanos",
-     "pagina": 1,
-     "documento": "https://captadores.org.br/editais/instituto-lojas-renner-abre-edital-para-fortalecer-organizacoes-sociais-em-tres-estados",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Prazo de inscrição": {
-     "valor": "até 05/10/2026",
-     "trecho": "02/09/2026 Live tira-dúvidas 21/09/2026 Término do período de inscrições 05/10/2026 Divulgação do resultado O Edital Enc",
-     "pagina": 1,
-     "documento": "https://www.institutolojasrenner.org.br/edital-encantando-comunidades/",
-     "metodo": "cronograma"
-    },
-    "Resultado": {
-     "valor": "12/08/2026",
-     "trecho": "09/2026 Término do período de inscrições 05/10/2026 Divulgação do resultado O Edital Encantando Comunidades teve lançamento no dia 12/08/2026. Live tira-dúvidas para responder aos princ",
-     "pagina": 1,
-     "documento": "https://www.institutolojasrenner.org.br/edital-encantando-comunidades/",
-     "metodo": "seção"
-    },
-    "Valor": {
-     "valor": "R$ 10.000,00 (dez mil reais)",
-     "trecho": "RANGÊNCIA DO APOIO 3.1. Cada proposta selecionada poderá receber até R$ 10.000,00 (dez mil reais) em doação única; 3.2. Estima-se a seleção de até 30 (trinta) propos",
-     "pagina": 3,
-     "documento": "https://www.institutolojasrenner.org.br/wp-content/uploads/2026/09/EDITAL-ENCANTANDO-COMUNIDADES-RECURSOS-FLEXIVEIS-Retificacao.pdf",
-     "metodo": "seção"
-    },
-    "Objeto": {
-     "valor": "impulsionar o desenvolvimento das organizações, e não o financiamento de projetos ou atividades finalísticas específicas, reconhecendo que instituições mais estruturadas e sustentáveis ampliam sua capacidade de gerar impacto social e qualificar o atendimento às comunidades onde atuam.",
-     "trecho": "nexo I e às necessidades específicas de cada organização. O recurso tem como finalidade impulsionar o desenvolvimento das organizações, e não o financiamento de projetos ou atividades finalísticas específicas, reconhecendo que instituições mais estruturadas e sustentáveis ampliam sua capacidade de gerar impacto social e qualificar o atendimento às comunidades onde atuam. 1.1. Sobre o Instituto Loj",
-     "pagina": 1,
-     "documento": "https://www.institutolojasrenner.org.br/wp-content/uploads/2026/09/EDITAL-ENCANTANDO-COMUNIDADES-RECURSOS-FLEXIVEIS-Retificacao.pdf",
-     "metodo": "texto"
-    },
-    "Anexos": {
-     "valor": "ANEXO I Os exemplos abaixo estão organizados de acordo com as dimensões de Des",
-     "trecho": "spondidas em até 72h úteis 8 Classificação: Público ANEXO I Os exemplos abaixo estão organizados de acordo com as dimensões de Desenvolvimento Institucional. As ações são ilustrativas e devem ser adaptadas à realidade de cada organização,",
-     "pagina": 8,
-     "documento": "https://www.institutolojasrenner.org.br/wp-content/uploads/2026/09/EDITAL-ENCANTANDO-COMUNIDADES-RECURSOS-FLEXIVEIS-Retificacao.pdf",
-     "metodo": "lista de anexos"
-    },
-    "Território": {
-     "valor": "no Município de Porto Alegre",
-     "trecho": "privada, inscrita no CNPJ/ME sob o nº 10.243.599/0001 - 48, com sede no Município de Porto Alegre, Estado do Rio Grande Sul, à Rua Joaquim Porto Villanova, 40 1, Bair",
-     "pagina": 1,
-     "documento": "https://www.institutolojasrenner.org.br/wp-content/uploads/2025/10/Instituto-Lojas-Renner-Politica-de-Privacidade.pdf",
-     "metodo": "texto"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-11T07:43:34+00:00",
-     "ganhou": [
-      "Anexos",
-      "Esfera",
-      "Objeto",
-      "Prazo de inscrição",
-      "Prazo de recurso",
-      "Resultado",
-      "Território",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://captadores.org.br/editais/instituto-lojas-renner-abre-edital-para-fortalecer-organizacoes-sociais-em-tres-estados",
-     "degrau": 0,
-     "como": "pista (vetor): lida só para achar o link do financiador",
-     "motivo": null,
-     "falha": null,
-     "oficial": "vetor (anúncio, republicador ou agregador) — não é fonte",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.institutolojasrenner.org.br/edital-encantando-comunidades/",
-     "degrau": 1,
-     "como": "link de saída da pista para o site do financiador",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.institutolojasrenner.org.br/wp-content/uploads/2026/10/Organizacoes-Sociais-Selecionadas-Edital-de-Recursos-Flexiveis-1.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.institutolojasrenner.org.br/wp-content/uploads/2026/09/EDITAL-ENCANTANDO-COMUNIDADES-RECURSOS-FLEXIVEIS-Retificacao.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 13,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.institutolojasrenner.org.br/wp-content/uploads/2026/09/Espelho_Formulario_Inscricao-1.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 7,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.institutolojasrenner.org.br/wp-content/uploads/2025/10/Instituto-Lojas-Renner-Politica-de-Privacidade.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 8,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.institutolojasrenner.org.br/wp-content/uploads/2026/08/ANEXO_Edital-Encantado-Comunidades-Recursos-Flexiveis.xlsx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Clique aqui",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "falta",
-     "Anexos": "certificado",
-     "Modalidade": "falta",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 10,
-    "dispensados": 0,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "op-8daf9662dea1",
-   "tipo": "livro",
-   "titulo": "Credenciamento/chamamento público na area da saúde. — Goiás",
-   "balcao": "pncp",
-   "link_oficial": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4",
-   "degrau": 0,
-   "como": "PNCP: arquivo anexado pelo órgão (Edital)",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Prazo de recurso",
-    "Modalidade"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-14T18:37:46+00:00",
-   "prazo": null,
-   "uf": "BR",
-   "orgao": "null",
-   "fim": null,
-   "itens": {
-    "Valor": {
-     "valor": "R$ 1.631,00",
-     "trecho": "LOR PROPOSTO VAGA 01 AUXILIAR DE HIGIENE BUCAL 40 horas semanais R$ 1.631,00 1 02 ENFERMEIRO(A) SUPERVISOR(A) 44 horas semanais R$ 4.750,00 1",
-     "pagina": 14,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4",
-     "metodo": "seção"
-    },
-    "Objeto": {
-     "valor": "l tem por objeto credenciar  pessoas físicas e jurídicas, mediante \ndocumentação, para prestação de serviços especializados na área da saúde com fins de \natendimento aos usuários do Sistema Único de Saúde – SUS a nível ambulatorial em \nconsultas, procedimentos e exames, com disponibilidades técnicas",
-     "trecho": "as ou jurídicas que atuarão junto ao Fundo Municipal de Saúde. 1. DO OBJETO 1.1. O presente edital tem por objeto credenciar pessoas físicas e jurídicas, mediante documentação, para prestação de serviços especializados na área da saúde com fins de atendimento aos usuários do Sistema Único de Saúde – SUS a nível ambulatorial em consultas, procedimentos e exames, com disponibilidades técnicas confor",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4",
-     "metodo": "seção"
-    },
-    "Órgão / financiador": {
-     "valor": "FUNDO MUNICIPAL DE SAÚDE do Município de Palestina de Goiás",
-     "trecho": "POR TEMPO DETERMINADO EDITAL CREDENCIAMENTO Nº 001/2025 O FUNDO MUNICIPAL DE SAÚDE do Município de Palestina de Goiás, Estado de Goiás, pessoa jurídica de direito público interno, co m s",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4",
-     "metodo": "cabeçalho"
-    },
-    "Território": {
-     "valor": "do Município de Palestina de Goiás",
-     "trecho": "EDITAL CREDENCIAMENTO Nº 001/2025 O FUNDO MUNICIPAL DE SAÚDE do Município de Palestina de Goiás, Estado de Goiás, pessoa jurídica de direito público interno, co m s",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4",
-     "metodo": "texto"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: pncp.gov.br · FUNDO MUNICIPAL DE SAÚDE do Município de Palestina de Goiás null",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4",
-     "metodo": "domínio e órgão"
-    },
-    "Requisitos": {
-     "valor": "poderão participar do credenciamento: 2.",
-     "trecho": "3662-1230 – e-mail: prefeituradepalestinago@outlook.com 2.2. Não poderão participar do credenciamento: 2.2.1. Profissionais que tenham sido declarados inidôneos para licitar o",
-     "pagina": 2,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4",
-     "metodo": "texto"
-    },
-    "Anexos": {
-     "valor": "ANEXO I);; ANEXO II), dirigido ao F undo; ANEXO III);; ANEXO IV), (caso possua outro cargo; ANEXO II), dirigido ao Fundo; ANEXO V);; ANEXO VI).; ANEXO I) do presente edital e será realizada após a verificação e; ANEXO VII).; ANEXO I – TERMO DE REFERÊNCIA; ANEXO IV), (caso possua outro; ANEXO I - Ter",
-     "trecho": "e valores a serem pagos serão os constantes no Termo de Referência (ANEXO I); 1.1.3. O número de vagas para cada área será limitado pela disponibilidade de cada cargo, ou seja, após o preenchimento das vagas os demais profissionais ficarão no cadastro d",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4",
-     "metodo": "lista de anexos"
-    },
-    "Área de atuação": {
-     "valor": "Saúde",
-     "trecho": "termos do objeto e do título: Saúde",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4",
-     "metodo": "palavras-chave do objeto"
-    }
-   },
-   "dispensas": {
-    "Prazo de inscrição": {
-     "motivo": "dispensado pelo Cartório — não se aplica: inscrição em fluxo contínuo (cadastro permanente, sem data-limite)",
-     "trecho": "ue caibam reclamações ou indenizações. 12.6. O credenciado poderá a qualquer tempo, denunciar o ajuste, bastando notificar a Administração, com a antec",
-     "pagina": 6,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4"
-    },
-    "Resultado": {
-     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
-     "trecho": "ue caibam reclamações ou indenizações. 12.6. O credenciado poderá a qualquer tempo, denunciar o ajuste, bastando notificar a Administração, com a antec",
-     "pagina": 6,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4"
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-14T18:37:46+00:00",
-     "ganhou": [
-      "Anexos",
-      "Esfera",
-      "Objeto",
-      "Prazo de inscrição",
-      "Requisitos",
-      "Resultado",
-      "Território",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/4",
-     "degrau": 0,
-     "como": "PNCP: arquivo anexado pelo órgão (Edital)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
-     "paginas": 29,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/2",
-     "degrau": 0,
-     "como": "PNCP: arquivo anexado pelo órgão (Termo de Referência)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
-     "paginas": 9,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/10842697000100/compras/2025/1/arquivos/1",
-     "degrau": 0,
-     "como": "PNCP: arquivo anexado pelo órgão (Aviso de Contratação Direta)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "dispensado",
-     "Resultado": "dispensado",
-     "Prazo de recurso": "falta",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "falta",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 8,
-    "dispensados": 2,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "nova-6915dc9b1493",
-   "tipo": "livro",
-   "titulo": "Diário Oficial de Salvador (BA) 2026-09-28 — \"chamamento público\" \"organizações da sociedade civil\"",
-   "balcao": "orgao",
-   "link_oficial": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Órgão / financiador",
-    "Modalidade"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-14T22:48:37+00:00",
-   "prazo": null,
-   "uf": "BA",
-   "orgao": "Prefeitura de Salvador — Secretaria Municipal de Sustentabilidade, Resiliência, Bem-Estar e Proteção Animal (SECIS)",
-   "fim": null,
-   "itens": {
-    "Resultado": {
-     "valor": "30 (trinta) dias",
-     "trecho": "terá o prazo estabelecido na Tabela 1 para conclusão e divulgação do resultado preliminar, podendo tal prazo ser prorrogado, de forma devidamente justificada, por até mais 30 (trinta) dias. 7.5.3. Serão inabilitadas aquelas propostas: a) Que não conte",
-     "pagina": 13,
-     "documento": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "30 (trinta) dias",
-     "trecho": ".019/2014. 17. FORMA DE REPASSE DOS RECURSOS 17.1. O repasse de recursos referente à execução dos serviços prestados, será feito pelo MUNICÍPIO à OSC dentro de um prazo máximo de 30 (trinta) dias mediante de prestação de contas e relatórios de execução. 17.2. O",
-     "pagina": 35,
-     "documento": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf",
-     "metodo": "seção"
-    },
-    "Valor": {
-     "valor": "R$ 2.413.421,76",
-     "trecho": "ão das parcerias nos orçamentos dos exercícios seguintes. 9.3. O valor total de recursos disponibilizados será de R$ 2.413.421,76 (dois milhões, quatrocentos e treze mil, quatrocentos e vinte e um r",
-     "pagina": 18,
-     "documento": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf",
-     "metodo": "seção"
-    },
-    "Objeto": {
-     "valor": "Os créditos orçamentários necessários ao custeio de despesas relativas ao presente Edital são \nprovenientes da seguinte Dotação Orçamentária:  \n \n \n \nRua da Grécia, nº 14, Comércio.",
-     "trecho": ". 9. PROGRAMAÇÃO ORÇAMENTÁRIA E VALOR PREVISTO PARA A REALIZAÇÃO DO OBJETO 9.1. Os créditos orçamentários necessários ao custeio de despesas relativas ao presente Edital são provenientes da seguinte Dotação Orçamentária: Rua da Grécia, nº 14, Comércio. Salvador – BA CEP: 41.010-010 18 • Unidade Ges",
-     "pagina": 17,
-     "documento": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf",
-     "metodo": "seção"
-    },
-    "Território": {
-     "valor": "do Município de Salvador",
-     "trecho": "es será realizada nas regiões administrativas das Prefeituras- Bairro do Município de Salvador, cabendo às Organizações da Sociedade Civil (OSCs) a execução dos se",
-     "pagina": 3,
-     "documento": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf",
-     "metodo": "texto"
-    },
-    "Esfera": {
-     "valor": "municipal",
-     "trecho": "domínio/órgão: www.compras.salvador.ba.gov.br · Prefeitura de Salvador — Secretaria Municipal de Sustentabilidade, Resiliência, ",
-     "pagina": 1,
-     "documento": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf",
-     "metodo": "domínio e órgão"
-    },
-    "Requisitos": {
-     "valor": "Poderão participar as Organizações da Sociedade Civil - OSCs, que atendam às exigências contidas na Lei n°13.",
-     "trecho": "ão dos serviços públicos. 4. PARTICIPAÇÃO NO CREDENCIAMENTO 4.1. Poderão participar as Organizações da Sociedade Civil - OSCs, que atendam às exigências contidas na Lei n°13.019/2014, e Decreto Municipal de n° 29.129/2017. Para os fins deste Ed",
-     "pagina": 5,
-     "documento": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf",
-     "metodo": "texto"
-    },
-    "Anexos": {
-     "valor": "ANEXO I TERMO DE REFERÊNCIA; ANEXO II REQUERIMENTO DE CREDENCIAMENTO; ANEXO III DECLARAÇÃO DE CIÊNCIA E CONCORDÂNCIA; ANEXO IV DECLARAÇÃO SOBRE INSTALAÇÕES E CONDIÇÕES MATERIAIS; ANEXO V DECLARAÇÃO DO ART. 39 DECRETO Nº 29.129/2017; ANEXO VI DECLARAÇÃO DA NÃO OCORRÊNCIA DE IMPEDIMENTOS; ANEXO VII CA",
-     "trecho": ", Comércio. Salvador – BA CEP: 41.010-010 22 ANEXO I TERMO DE REFERÊNCIA CREDENCIAMENTO DE ORGANIZAÇÕES DA SOCIEDADE CIVIL PARA ATUAR NO CONTROLE DA POPULAÇÃO DE CÃES E GATOS ERRANTES E COMUNITÁRIOS, ATRAVÉS DE COLETA, CASTRAÇÃO",
-     "pagina": 22,
-     "documento": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf",
-     "metodo": "lista de anexos"
-    },
-    "Área de atuação": {
-     "valor": "Meio ambiente",
-     "trecho": "termos do objeto e do título: Meio ambiente",
-     "pagina": 1,
-     "documento": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf",
-     "metodo": "palavras-chave do objeto"
-    }
-   },
-   "dispensas": {
-    "Prazo de inscrição": {
-     "motivo": "dispensado pelo Cartório — não se aplica: inscrição em fluxo contínuo (cadastro permanente, sem data-limite)",
-     "trecho": "s legais e os princípios que regem a Administração Pública. 11.4. A qualquer tempo, o presente Edital poderá ser revogado por interesse público ou anula",
-     "pagina": 20,
-     "documento": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf"
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-14T22:48:37+00:00",
-     "ganhou": [
-      "Anexos",
-      "Esfera",
-      "Objeto",
-      "Prazo de inscrição",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Território",
-      "Valor",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.compras.salvador.ba.gov.br/memorial/EDITAL%20DE%20CREDENCIAMENTO%20001-2026.pdf",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 60,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "dispensado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "falta",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "falta",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 9,
-    "dispensados": 1,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
   }
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2375,
-   "bronze": 120,
-   "prata": 179
+   "sem_estrela": 2337,
+   "bronze": 123,
+   "prata": 176
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 138,
-    "bronze": 7,
-    "prata": 10
+    "sem_estrela": 108,
+    "bronze": 9,
+    "prata": 7
    },
    "livro": {
-    "sem_estrela": 2237,
-    "bronze": 113,
+    "sem_estrela": 2229,
+    "bronze": 114,
     "prata": 169
    }
   },
-  "fila_oportunidades": 155,
-  "fila_livros": 2519,
-  "devidas_nesta_hora": 2430,
-  "promovidas_nesta_execucao": 4,
-  "sem_material_agora": 8,
+  "fila_oportunidades": 124,
+  "fila_livros": 2512,
+  "devidas_nesta_hora": 2402,
+  "promovidas_nesta_execucao": 2,
+  "sem_material_agora": 12,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
    "chaves": 1050,
-   "sites": 2260
+   "sites": 2256
   },
   "intervalo_horas": 12,
   "limite": 10,

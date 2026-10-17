@@ -1,6 +1,6 @@
 {
  "dia": "2026-10-17",
- "em": "2026-10-17T21:24:12+00:00",
+ "em": "2026-10-17T21:52:03+00:00",
  "regra": "MAESTRO — A MÃO DA REDE NEURAL DE COMANDO (titular, 02/10/2026; unificado em 15/10/2026).\n\n15/10/2026 (titular): maestro e rede neural são UMA coisa só. Quem decide o caminho do fluxo inteiro é src/comando.py\n(a rede neural de comando); este módulo é a parte que MEDE e EXECUTA para ela:\n  · planejar()   quais motores rodam hoje (agenda) com a prioridade de rendimento — matéria-prima da decisão do comando;\n  · cobertura()  completa · parcial · pendente · pendente_local de cada motor no dia;\n  · controlar()  pendentes e parciais a disparar (até 3 tentativas), dia fechado ou não;\n  · relatorio_etapas() o relatório do dia que o painel mostra.\nO comando chama planejar/controlar antes de acionar os motores (decidir) e depois deles (avaliar e reacionar).",
  "planejados": 129,
  "cobertura": {
@@ -11,8 +11,8 @@
  "a_disparar": [],
  "esgotaram_tentativas": [
   "plat-prefeituras-50-go",
-  "plat-empresas-editais-incentivados",
   "outras-oportunidades-7",
+  "plat-empresas-editais-incentivados",
   "judiciario-cnj-tjgo",
   "plataforma-mapas-culturais",
   "empresas-incentivadas",
@@ -63,9 +63,9 @@
   },
   {
    "motor": "pncp-api",
-   "prioridade": 0.8563,
+   "prioridade": 0.8963,
    "diagnostico": "saudavel",
-   "livros_com_abertura_proxima": 38,
+   "livros_com_abertura_proxima": 40,
    "horarios": "08:53,13:53,19:53",
    "coleta": "nuvem",
    "dia_anterior": "observado",
@@ -128,17 +128,6 @@
    "tentativas_hoje": 0
   },
   {
-   "motor": "plat-empresas-editais-incentivados",
-   "prioridade": 0.2421,
-   "diagnostico": "falha_parcial",
-   "livros_com_abertura_proxima": 12,
-   "horarios": "10:23",
-   "coleta": "nuvem",
-   "dia_anterior": "observado",
-   "cobertura": "parcial",
-   "tentativas_hoje": 6
-  },
-  {
    "motor": "outras-oportunidades-7",
    "prioridade": 0.235,
    "diagnostico": "saudavel",
@@ -146,6 +135,17 @@
    "horarios": "08:23,13:23,18:23",
    "coleta": "nuvem",
    "dia_anterior": "nao_observado",
+   "cobertura": "parcial",
+   "tentativas_hoje": 6
+  },
+  {
+   "motor": "plat-empresas-editais-incentivados",
+   "prioridade": 0.2221,
+   "diagnostico": "falha_parcial",
+   "livros_com_abertura_proxima": 11,
+   "horarios": "10:23",
+   "coleta": "nuvem",
+   "dia_anterior": "observado",
    "cobertura": "parcial",
    "tentativas_hoje": 6
   },
