@@ -32,12 +32,19 @@ def montar() -> dict:
     L = [f"# Pacote para o Claude Desktop — {hoje}", "",
          "Você está no computador do titular, com IP brasileiro, navegador e o repositório Eldorado clonado. Use o modelo mais forte disponível (Opus 5) para validar. Trabalhe nesta ordem, sem pular etapa, e devolva os arquivos no formato indicado. Nunca estime datas; quando não houver base, escreva o motivo.",
          "", "## Etapa 1 — motores que aguardam coleta local (portais que recusam IP estrangeiro)", ""]
-    if locais:
+    # 17/10: oportunidade cujo portal recusa o IP estrangeiro (Etapa 3) também pede a coleta local — sem isso o pacote
+    # dizia "nenhum motor aguardando coleta local" e omitia o script, com 19 editais de goias.gov.br e Goiânia parados
+    ip_br = [x for x in externa if "IP fora do Brasil" in str(x.get("motivo_texto") or "")]
+    if locais or ip_br:
         L.append("Rode uma vez, na raiz do repositório:"); L.append(""); L.append("```"); L.append("python scripts/coleta_brasil.py"); L.append("```"); L.append("")
-        L.append("Ele lê com o seu IP e envia ao repositório. Motores atendidos:")
+        L.append("Ele lê com o seu IP e envia ao repositório." + (" Motores atendidos:" if locais else ""))
         for a in locais:
             m = (rotas.get("motores") or {}).get(a["id"]) or {}
             L.append(f"- **{a['nome']}** — rotas: " + "; ".join(r["nome"] for r in (m.get("rotas") or [])[:3]))
+        if not locais:
+            L.append("Nenhum motor aguardando coleta local hoje.")
+        if ip_br:
+            L.append(f"- {len(ip_br)} oportunidade(s) da Etapa 3 em portal que recusa o robô do GitHub (IP fora do Brasil) — abrir depois da coleta.")
     else:
         L.append("Nenhum motor aguardando coleta local hoje.")
     L += ["", "## Etapa 2 — motores em alerta (não leram, falharam ou passaram da cadência)", ""]
@@ -75,6 +82,7 @@ def montar() -> dict:
     (ROOT / "estado/pacote_desktop.md").write_text(texto, encoding="utf-8")
     (ROOT / "docs/dados/pacote_desktop.md").write_text(texto, encoding="utf-8")
     res = {"em": now_iso(), "motores_coleta_local": len(locais), "motores_em_alerta": len(outros),
+           "oportunidades_ip_brasil": len(ip_br),
            "oportunidades_acao_externa": len(externa), "oportunidades_parciais": len(parciais), "arquivo": "estado/pacote_desktop.md"}
     write_json(ROOT / "estado/pacote_desktop.json", res)
     return res

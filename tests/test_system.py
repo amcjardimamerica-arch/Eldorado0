@@ -12,6 +12,27 @@ from src.triagem import assess
 from src.conselho import assignment
 from scripts.ingestao_associacao import sanitize_tables
 from src.qualidade import avaliar
+
+
+def _acervo_historico():
+    """16/10/2026 (titular, src/banco.py historico_para_livros): o acervo de histórico só guarda a edição LIGADA ao
+    livro de uma oportunidade; o que não se liga sai. As contagens fixas da época do acervo completo (9 mil+) viram a
+    contabilidade do que está no export versionado — a fonte de reconstrução do banco."""
+    import gzip
+    exp=pathlib.Path("biblioteca_alexandria/livros/_acervo/banco/historico_export.jsonl.gz")
+    with gzip.open(exp,"rt",encoding="utf-8") as gz:
+        linhas=[json.loads(l) for l in gz if l.strip()]
+    return [d for d in linhas if d.get("_t")=="historico"], linhas
+
+
+def _expurgados(*caminhos):
+    """Registros que o expurgo (src/expurgo.py) tirou destes arquivos, somando todos os dias de estado/expurgo/."""
+    import glob
+    n=0
+    for f in glob.glob("estado/expurgo/*.json"):
+        r=load_json(pathlib.Path(f)).get("registros_removidos_por_arquivo") or {}
+        n+=sum(int(r.get(c) or 0) for c in caminhos)
+    return n
 from src.prazos import classificar, data_do_prazo
 from src.fichas import render as render_ficha
 from src.relatorio_amplitude import _etapas_com_ia
@@ -595,7 +616,7 @@ class SystemTests(unittest.TestCase):
             self.assertIn(item,html,item)
         # painel de monitoramento da Bússola
         self.assertIn("bus-mets",html)
-        for rotulo in ("Buscas executadas","Fontes respondendo","Fontes com falha","Itens novos captados"):
+        for rotulo in ("Dias com busca","Fontes respondendo","Fontes com falha","Descobertas no mês"):   # rótulos de 28/09
             self.assertIn(rotulo,html,rotulo)
 
 
@@ -702,11 +723,24 @@ class SystemTests(unittest.TestCase):
         arquivo chegou a 37 MB; o painel passa a publicar só o recorte
         operacional e a base completa fica no JSONL + SQLite."""
         import os
-        from src.dashboard_dados import LIMITE_TOTAL_MB, LIMITE_NUCLEO_MB
+        from src.dashboard_dados import LIMITE_TOTAL_MB, LIMITE_NUCLEO_MB, LISTAS_SEM_LIMITE
         nucleo=os.path.getsize("docs/dashboard-dados.js")
-        frags=sum(os.path.getsize(f) for f in pathlib.Path("docs/dados").glob("*.json"))
+        # 17/10 (titular): as listas completas carregadas ao abrir a página não têm limite — vão INTEIRAS
+        frags=sum(os.path.getsize(f) for f in pathlib.Path("docs/dados").glob("*.json") if f.name not in LISTAS_SEM_LIMITE)
         self.assertLess(nucleo,LIMITE_NUCLEO_MB*1_048_576,"núcleo acima do limite")
-        self.assertLess(nucleo+frags,LIMITE_TOTAL_MB*1_048_576,"painel acima de 20 MB")
+        self.assertLess(nucleo+frags,LIMITE_TOTAL_MB*1_048_576,"painel acima de 20 MB (fora as listas completas)")
+        rk=json.loads(pathlib.Path("docs/dados/ranking_apoiadores.json").read_text(encoding="utf-8"))
+        self.assertEqual(rk["total"],len(rk["empresas"]),"o ranking vai inteiro: nada tirado nem apresentado em parte")
+        mot=json.loads(pathlib.Path("docs/dados/motores.json").read_text(encoding="utf-8"))
+        cat=json.loads(pathlib.Path("biblioteca_alexandria/fontes/motores.json").read_text(encoding="utf-8"))
+        livro_cat={m["id"]:m.get("livro") for m in cat["motores"] if m.get("livro")}
+        c=mot["campos"]; il,ii=c.index("livro"),c.index("id")
+        conferidos=0
+        for r in mot["linhas"]:
+            if r[ii] in livro_cat:
+                conferidos+=1
+                self.assertEqual(r[il],livro_cat[r[ii]],"o livro vai inteiro no cartão: "+str(r[ii]))
+        self.assertGreater(conferidos,1000)
         d=dash_coletar(date(2026,9,2))
         tot=d["bussola_painel"]["totais"]
         self.assertGreaterEqual(tot["base_completa"],tot["no_painel"])
@@ -825,7 +859,7 @@ class SystemTests(unittest.TestCase):
         html=open("docs/dashboard.html",encoding="utf-8").read()
         # a tabela 'Monitoramentos encontrados' foi UNIFICADA em 'Fontes com edital aberto'
         for trecho in ("monitoramentos em campanha de 30 dias","campanha de completude","dia \"+camp.dia+\"/30",
-                       "verificação dupla","motores ativos / total"):
+                       "verificação dupla","livros monitorados (lidos todos os dias"):   # 12/10: Fontes monitoradas = livros monitorados / total
             self.assertIn(trecho,html,trecho)
         wf=open(".github/workflows/monitoramento-diario.yml",encoding="utf-8").read()
         self.assertIn("python -m src.completude",wf)
@@ -1693,8 +1727,10 @@ class SystemTests(unittest.TestCase):
         self.assertNotIn("monitoramento das buscas",sec)
         i_grade=sec.find('id="mp-grade"'); i_mets=sec.find('id="bus-mets"')
         self.assertGreater(i_mets,i_grade,"métricas devem vir abaixo dos dias do mês")
-        for m in ("Buscas executadas","Fontes respondendo","Fontes com falha",
-                  "Itens novos captados"):
+        # 28/09 (titular): "Buscas executadas"/"Itens novos captados" somavam o mesmo item dia a dia;
+        # viraram dias com busca e descobertas do mês (sem repetição)
+        for m in ("Dias com busca","Fontes respondendo","Fontes com falha",
+                  "Descobertas no mês"):
             self.assertIn(m,html,m)
         # Fontes com edital aberto é a última caixa de conteúdo
         ordem=[n for n,_ in _re.findall(r"<!-- (\d) · ([A-ZÀ-Ú][^-]*?) -->",sec)]
@@ -1935,7 +1971,11 @@ class SystemTests(unittest.TestCase):
             self.assertTrue(pathlib.Path("docs/dados",f).exists(),f)
         h=load_json(pathlib.Path("docs/dados/historico.json"))
         self.assertIn("campos",h); self.assertIn("linhas",h)
-        self.assertGreater(len(h["linhas"]),1000)          # muito mais que o núcleo
+        hist,_=_acervo_historico(); ids={d["id"] for d in hist}
+        from src.compacto import expandir
+        pub=expandir(h)
+        self.assertGreater(len(pub),0); self.assertLessEqual(len(pub),min(4000,len(hist)))
+        self.assertTrue(all(x["id"] in ids for x in pub))    # o fragmento publica o acervo (só o ligado a livro, 16/10)
         html=open("docs/dashboard.html",encoding="utf-8").read()
         for f in ("expandeCompacto","carregaFragmento","garantePrevisoes",
                   "garanteHistorico","garanteParlamentares"):
@@ -1971,7 +2011,10 @@ class SystemTests(unittest.TestCase):
             if chave: os.environ["FAROL_AI_API_KEY"]=chave
         self.assertEqual(B._cfg()["cadencia_dias"],3)
         wf=open(".github/workflows/busca-ativa.yml",encoding="utf-8").read()
-        self.assertIn("*/3",wf); self.assertIn("src.busca_ativa",wf)
+        # 27/09: o fluxo 05 perdeu o agendamento (cancelado por tempo 8 vezes seguidas); roda só sob demanda e o
+        # Piloto - Interceptador faz a busca no dia a dia
+        self.assertNotIn("schedule:",wf); self.assertNotIn("cron:",wf); self.assertIn("workflow_dispatch:",wf)
+        self.assertIn("Interceptador",wf); self.assertIn("src.busca_ativa",wf)
         ia_cfg=load_json(pathlib.Path("config/ia.json"))
         self.assertIn("haiku",ia_cfg["modelos"]["busca"]["padrao"])
 
@@ -2039,18 +2082,26 @@ class SystemTests(unittest.TestCase):
         self.assertEqual([i["item"] for i in r["itens"]],list(ITENS))
         by={i["item"]:i for i in r["itens"]}
         for ok in ("Objeto","Prazo de inscrição","Valor","Órgão / financiador","Território",
-                   "Esfera","Requisitos","Anexos","Modalidade"):
+                   "Esfera","Requisitos","Anexos"):
             self.assertTrue(by[ok]["comprovado"],ok)
-        for lac in ("Resultado","Prazo de recurso"):
+        # 16/10 (titular): Modalidade é a forma como o recurso chega — a elegibilidade ("fomento") NÃO a comprova
+        for lac in ("Resultado","Prazo de recurso","Modalidade"):
             self.assertFalse(by[lac]["comprovado"]); self.assertIsNone(by[lac]["valor"])
             self.assertIn("não consta",by[lac]["lacuna"])
-        self.assertEqual(r["comprovados"],10)   # 9 + Área de atuação (12º item)
+        self.assertEqual(r["comprovados"],9)    # 8 + Área de atuação (12º item)
+        escrita=onze_itens({**ficha,"evidencia":ficha["evidencia"]+" A parceria será formalizada mediante Termo de Fomento."})
+        mod={i["item"]:i for i in escrita["itens"]}["Modalidade"]
+        self.assertTrue(mod["comprovado"]); self.assertEqual(mod["valor"],"Termo de Fomento")   # escrita → comprovada
+        self.assertEqual(escrita["comprovados"],10)
         rel=pathlib.Path("biblioteca_alexandria/livros/_acervo/historico/completude_11_itens.json")
         self.assertTrue(rel.exists())
         d=load_json(rel)
         self.assertEqual(set(d["completude_por_item"]),set(ITENS))
         sh=load_json(pathlib.Path("biblioteca_alexandria/fontes/sites_historicos.json"))
-        self.assertGreater(sh["dominios"],25)   # a base pertinente (sem editais de empresa) tem menos domínios
+        from src.completude_biblioteca import _dominio
+        hist,_=_acervo_historico()
+        self.assertEqual(sh["dominios"],len({_dominio(d.get("url")) for d in hist if _dominio(d.get("url"))}))   # todo domínio do acervo
+        self.assertGreater(sh["dominios"],0)
         self.assertTrue(sh["sites"][0]["goias"] or sh["goias"]>=1)   # Goiás primeiro
         wf=open(".github/workflows/monitoramento-diario.yml",encoding="utf-8").read()
         for m in ("src.fontes260","src.completude_biblioteca"): self.assertIn(m,wf)
@@ -2226,7 +2277,8 @@ class SystemTests(unittest.TestCase):
         f3={**f1,"destinacao":{"elegivel":False,"motivo":"comercial"}}
         self.assertEqual(diagnosticar(f3,onze_itens(f3),sens)["causa_principal"],"fonte_fora_do_escopo")
         rel=load_json(pathlib.Path("biblioteca_alexandria/livros/_acervo/historico/auditoria_individual.json"))
-        self.assertGreater(rel["editais_auditados"],1000)
+        hist,_=_acervo_historico()
+        self.assertEqual(rel["editais_auditados"],len(hist))   # todo o acervo (só o histórico ligado a livro, 16/10) é auditado
         self.assertTrue(rel["causas"])
         self.assertTrue(all(c["causa"] and c["editais"] for c in rel["causas"]))
         self.assertTrue(pathlib.Path("biblioteca_alexandria/livros/_acervo/historico/auditoria_editais.jsonl").exists())
@@ -2637,9 +2689,15 @@ class SystemTests(unittest.TestCase):
         self.assertIn("bloqueada",d3["causa"]); self.assertIn("escada",d3["acao"])
         m=load_json(pathlib.Path("biblioteca_alexandria/fontes/motores.json"))
         self.assertGreaterEqual(m["total"],241)             # 241 fontes das 260 (menos emendas) + oportunidades mapeadas que viram motor
-        pn=[x for x in m["motores"] if x["familia"]=="PNAB / Aldir Blanc"]
+        # 16/10 (titular): o catálogo é também a CAPA dos livros — as capas de oportunidade (repositório, sem
+        # diagnóstico de motor) não são pontos de busca; os MOTORES (as fontes) seguem com família e as 12 camadas
+        capa=lambda x: x.get("tipo")=="repositorio_de_oportunidade" or (x.get("diagnostico") or {}).get("estado") in (None,"repositorio")
+        fontes_m=[x for x in m["motores"] if not capa(x)]
+        self.assertGreaterEqual(len(fontes_m),241)
+        pn=[x for x in fontes_m if x["familia"]=="PNAB / Aldir Blanc"]
         self.assertTrue({"Estadual GO","Municipal Goiânia"} <= {x["segmento"] for x in pn})   # + PNABs municipais mapeados de outras cidades
-        self.assertTrue(all(len(x["camadas"])==12 for x in m["motores"]))
+        self.assertTrue(all(len(x["camadas"])==12 and x["familia"] and x["segmento"] is not None for x in fontes_m))
+        self.assertTrue(all(x.get("id") and x.get("motivo_status") for x in m["motores"] if capa(x)))
         self.assertTrue(pathlib.Path("docs/dados/motores.json").exists())
         html=open("docs/dashboard.html",encoding="utf-8").read()
         self.assertIn("Motores de Busca",html); self.assertNotIn("Esquadra de sensores",html)
@@ -2760,8 +2818,12 @@ class SystemTests(unittest.TestCase):
         self.assertFalse(gen["ativa"])                       # 'cultural' é genérico; 'ocupação' não consta
         self.assertNotIn("cultural",_toks("ocupação cultural"))
         mo=load_json(pathlib.Path("biblioteca_alexandria/fontes/motores.json"))
-        self.assertFalse(any(x["familia"]=="Emendas parlamentares" for x in mo["motores"]))
-        for x in mo["motores"]:
+        self.assertFalse(any(x.get("familia")=="Emendas parlamentares" for x in mo["motores"]))
+        # 16/10: as capas dos livros de oportunidade (repositório) não são fontes — natureza/esfera/ativação valem para os motores
+        capa=lambda x: x.get("tipo")=="repositorio_de_oportunidade" or (x.get("diagnostico") or {}).get("estado") in (None,"repositorio")
+        fontes_m=[x for x in mo["motores"] if not capa(x)]
+        self.assertGreaterEqual(len(fontes_m),241)
+        for x in fontes_m:
             self.assertIn(x["natureza"],("publica","privada"))
             self.assertIn(x["esfera"],("Brasil","Estado","Município","Internacional"))
             self.assertIn("ativa",x); self.assertTrue(x["motivo_status"])
@@ -2818,13 +2880,14 @@ class SystemTests(unittest.TestCase):
         self.assertNotIn("justica",d["areas"])          # traduzida para as 13 canônicas
         html=open("docs/dashboard.html",encoding="utf-8").read()
         for x in ("calendarioMotor","mt-cal","mtd-amarelo","@keyframes pisca-borda","mt-ico oleo",'class="folha"',"@keyframes folha-vento",
-                  "rotArea","Acesos (fogo)","Apagados (poça de óleo)"):
-            self.assertIn(x,html,x)
+                  "rotArea","agrupados pelo OBJETO classificado",'livro(s)</span>','"em leitura":"na estante"'):
+            self.assertIn(x,html,x)   # 29/09 (titular): os grupos "Acesos (fogo)/Apagados" viraram áreas do objeto; o estado vai no cartão
         self.assertNotIn("Ativar motor nos marcados",html)          # ativação é individual ou automática
         self.assertIn('class="folha"',html)                          # apagado = fogueira sem acender
         self.assertNotIn("mt-segt",html.split("const listaFontes")[1].split("const novas")[0])   # sem subgrupo de território
         # ícone reflete a ativação automática quando não há decisão manual
-        self.assertIn("const m=MT.find(x=>x.id===id);return m?!!m.ativa:true;",html)
+        # 28/09 (titular): aceso = LIGADO (disjuntor de 30 dias ou fonte permanente), não mais a marca 'ativa' do catálogo
+        self.assertIn('const m=MT.find(x=>x.id===id);return m?m.proximidade==="ligado":true;',html)
 
 
     def test_areas_canonicas_unificadas_em_todo_o_painel(self):
@@ -2963,15 +3026,24 @@ class SystemTests(unittest.TestCase):
         html=open("docs/dashboard.html",encoding="utf-8").read()
         self.assertIn("garanteAbertas",html); self.assertIn("faMais",html)
         a=load_json(pathlib.Path("docs/dados/abertas.json"))
-        self.assertGreater(a["total"],1000)                          # tudo que foi identificado
+        # tudo que foi identificado: o número fixo (> 1000) caiu com o portão de oportunidade e a limpeza da base
+        # bruta (16/10, #266: 18 mil → 1,7 mil), a regra territorial (16/10) e o expurgo (15/10). Vale a contabilidade:
+        # todo pertinente fora do núcleo está na caixa ou saiu com motivo registrado.
         from src.compacto import expandir
         rows=expandir(a)
+        k=a["contabilidade"]
+        self.assertEqual(a["total"],len(rows)); self.assertEqual(k["publicadas"],a["total"]); self.assertGreater(a["total"],0)
+        self.assertEqual(k["publicadas"]+k["descartadas_saneamento"]+k["fora_da_regra_territorial"],k["pertinentes_fora_do_nucleo"])
+        from src.repositorio_unico import municipal_fora_de_goias
+        self.assertFalse([r["id"] for r in rows if municipal_fora_de_goias(r)])
         from collections import Counter
         c=Counter(r["area"] for r in rows)
         self.assertLess(c["outros"]/len(rows),0.5)                   # área inferida pelo texto
         self.assertTrue(all(r["area"] for r in rows))
         d=load_json(pathlib.Path("docs/dashboard-dados.json"))
-        self.assertGreater(len(d["editais"]),100)                    # núcleo íntegro
+        # núcleo íntegro: tudo que o recorte pôs no painel está lá, menos o que o portão de fidelidade tirou (registrado)
+        self.assertGreater(len(d["editais"]),0)
+        self.assertEqual(len(d["editais"])+d["portao_fidelidade"]["removidos"],d["bussola_painel"]["totais"]["no_painel"])
 
     def test_inferir_area_pelo_texto(self):
         from src.dashboard_dados import inferir_area
@@ -3022,7 +3094,7 @@ class SystemTests(unittest.TestCase):
         self.assertNotIn('src="arte/rosa-ventos.png"',html)       # PNG quebrado saiu
         for x in ('svg class="bz-rosa"',
                   "function mpDadosUF","function desenhaBzLateral","bz-indices","uf-cidades",
-                  "clique para ver as cidades","path.com-abertas"):
+                  "clique para ver a lista ao lado do mapa","path.com-abertas"):   # 08/09: o painel lateral lista os editais abertos, não as cidades
             self.assertIn(x,html,x)
         self.assertIn("oportunidade(s)</strong>",html)   # 08/09: o painel do estado passou a listar só os editais abertos
         self.assertNotIn('id="mp-legenda"',html)                       # índices só no detalhe do estado
@@ -3033,8 +3105,10 @@ class SystemTests(unittest.TestCase):
         ativos/total; abas centralizadas com ícones e nomes novos; Em andamento
         usa o mesmo motor da Bússola; arquivados em linha, com filtros, sem descarte."""
         html=open("docs/dashboard.html",encoding="utf-8").read()
-        for x in ('"Base legal"',"normas na Biblioteca",'id="bz-motores-ativos"',"motores ativos / total","function atualizaMotoresAtivos",
-                  '<span>Em andamento</span>','<span>Arquivados — Encerrados / Descartados</span>',
+        # 12/10 (titular): "Fontes monitoradas" = livros monitorados / livros na Biblioteca (só os números, do fluxo validado);
+        # a aba de arquivados passou a incluir os inscritos
+        for x in ('"Base legal"',"normas na Biblioteca",'"Fontes monitoradas",fr(OP.ligados??0,OP.catalogo??0)',"livros monitorados (lidos todos os dias","function atualizaMotoresAtivos",
+                  '<span>Em andamento</span>','<span>Arquivados — Inscritos / Encerrados / Descartados</span>',
                   'class="abas abas-ed"',"function montaOportunidadesPorArea","desenhaFontesAbertas();",
                   'id="ed-filtros"','id="ed-area"','id="ed-uf"',"ed-linha",'data-acao="detalhe"','data-acao="recuperar"',
                   'salvaDecisao(e.id,"em_andamento"'):
@@ -3315,7 +3389,11 @@ class SystemTests(unittest.TestCase):
             con=B.conectar(pathlib.Path(tmp)/"novo.db",reconstruir=True)
             n={tb:con.execute(f"SELECT COUNT(*) FROM {tb}").fetchone()[0] for tb in ("historico","confirmacao","itens11")}
             con.close()
-        self.assertGreater(n["historico"],9000); self.assertEqual(n["historico"],n["confirmacao"])
+        hist,linhas=_acervo_historico()
+        self.assertGreater(len(hist),0)
+        self.assertEqual(n["historico"],len({(d["chave"],str(d["ano"]),d["id"]) for d in hist}))   # o export reconstrói o acervo INTEIRO
+        self.assertEqual(n["historico"],n["confirmacao"])
+        self.assertEqual(n["itens11"],sum(1 for d in linhas if d.get("_t")=="itens11"))
         wf=open(".github/workflows/monitoramento-diario.yml",encoding="utf-8").read()
         self.assertIn("from src.banco import exportar",wf)
 
@@ -3484,8 +3562,17 @@ class SystemTests(unittest.TestCase):
         m=load_json(pathlib.Path("biblioteca_alexandria/fontes/motores.json")); reg=sorted(m["oficiais"]+m["plataformas"],key=lambda o:o["rank"])
         fixos=set((load_json(pathlib.Path("config/ordem_motores.json")).get("posicoes") or {}))           # 02/10: posições fixas do titular
         grupos=[o["grupo"] for o in reg if o["id"] not in fixos]; self.assertEqual(grupos,sorted(grupos))   # ordem por tipo
-        self.assertEqual(reg[0]["tipo"],"diario_oficial"); self.assertEqual(reg[-1]["tipo"],"empresas_privado"); self.assertEqual(reg[-2]["tipo"],"empresas_fiscal")
-        self.assertEqual([o["id"] for o in reg if o["grupo"]==2],["pncp-api"])
+        self.assertEqual(reg[0]["tipo"],"diario_oficial")
+        # 02/10 (titular): as posições fixas de config/ordem_motores.json valem como número do selo — as empresas
+        # (fiscal e patrocínio) saíram do fim da lista e ocupam a posição pedida
+        pos=load_json(pathlib.Path("config/ordem_motores.json"))["posicoes"]
+        for o in reg:
+            if o["id"] in pos: self.assertEqual(o["rank"],pos[o["id"]],o["id"])
+        tipo={o["id"]:o.get("tipo") for o in reg}
+        self.assertEqual(tipo["motor-gife"],"empresas_fiscal"); self.assertEqual(tipo["motor-patrocinio"],"empresas_privado")
+        # grupo 2 = APIs: o PNCP e os adaptadores por plataforma do conselho de 10/10 (src/motor_plataformas.py)
+        self.assertEqual(sorted(o["id"] for o in reg if o["grupo"]==2),["plataforma-mapas-culturais","plataforma-wordpress","pncp-api"])
+        self.assertTrue(all(o.get("tipo")=="api" for o in reg if o["grupo"]==2))
 
 
     def test_unificacao_captamos_abcr_desativacoes_e_motores_go(self):
@@ -3495,7 +3582,9 @@ class SystemTests(unittest.TestCase):
         c=load_json(pathlib.Path("config/investigacao.json")); lst=c.get("plataformas",c.get("fontes",[])); ids={x["id"]:x for x in lst}
         self.assertNotIn("captamos",ids); self.assertIn("captadores.org.br/editais",ids["abcr"]["url"])
         self.assertNotIn("rede-filantropia",ids)
-        self.assertFalse(ids["mapa-osc"]["ativa"]); self.assertIn("não publica editais",ids["mapa-osc"]["motivo_inativa"])
+        # 02/10: o Mapa das OSC foi reunido ao motor Indexadores (a página de editais só embute o widget do Prosas)
+        self.assertFalse(ids["mapa-osc"]["ativa"]); self.assertIn("reunido ao motor Indexadores",ids["mapa-osc"]["motivo_inativa"])
+        self.assertIn("Prosas",ids["mapa-osc"]["motivo_inativa"])
         from src.sensores import registro, _sites_empresas_go
         r={s["id"]:s for s in registro()}
         self.assertNotIn("plat-captamos",r); self.assertNotIn("plat-rede-filantropia",r); self.assertNotIn("plat-mapa-osc",r)
@@ -3531,13 +3620,17 @@ class SystemTests(unittest.TestCase):
             fs=mapear_novas([{"titulo":"Chamamento inédito X","url":"https://x.gov.br/e1","fonte_nome":"Prefeitura X","uf":"GO","coletado_em":"2026-09-04T10:00:00","evidencia":"projetos culturais"}],[])
             self.assertTrue(any(f["programa"]=="Chamamento inédito X" and f["origem"].startswith("anunciada") and f["area"]=="cultura" for f in fs))
             fid=[f["id"] for f in fs if f["programa"]=="Chamamento inédito X"][0]
-            self.assertTrue((ROOT/"biblioteca_alexandria/oportunidades_mapeadas"/fid/"ficha.json").exists())
-            shutil.rmtree(ROOT/"biblioteca_alexandria/oportunidades_mapeadas"/fid,ignore_errors=True)
+            # 16/10: as fichas das mapeadas viraram anexos dos livros (biblioteca_alexandria/livros/anexos/mapeadas)
+            ficha=ROOT/"biblioteca_alexandria/livros/anexos/mapeadas"/fid/"ficha.json"
+            self.assertTrue(ficha.exists()); self.assertEqual(load_json(ficha)["url"],"https://x.gov.br/e1")
+            self.assertFalse((ROOT/"biblioteca_alexandria/oportunidades_mapeadas"/fid).exists())   # pasta antiga não volta
+            shutil.rmtree(ficha.parent,ignore_errors=True)
         finally:
             if bk is not None: MAPEADAS.write_text(bk)
             else: MAPEADAS.unlink(missing_ok=True)
         html=open("docs/dashboard.html",encoding="utf-8").read()
-        for x in ('class="folha"',"@keyframes folha-vento","@keyframes vento-passa","fogueira sem acender",'id="ed-farol-caixa"','id="ed-assoc-caixa"',"function desenhaAssociacoes","assoc-farol","Farol de Alexandria — aderência"):
+        # 10/10 (fogo manual dos motores): o título do motor apagado passou de "fogueira sem acender" a "motor DESLIGADO"
+        for x in ('class="folha"',"@keyframes folha-vento","@keyframes vento-passa","motor DESLIGADO (fogueira sem acender) — nenhum acionamento automático o executa",'id="ed-farol-caixa"','id="ed-assoc-caixa"',"function desenhaAssociacoes","assoc-farol","Farol de Alexandria — aderência"):
             self.assertIn(x,html,x)
         sec_b=html.split('<section id="v-bussola"')[1].split("</section>")[0]; self.assertNotIn('id="bz-gauge"',sec_b)
         d=load_json(pathlib.Path("docs/dashboard-dados.json")); cz=d["associacoes_cruzamento"]
@@ -3884,7 +3977,9 @@ class SystemTests(unittest.TestCase):
         src=open("src/sensores.py",encoding="utf-8").read(); self.assertIn("def _local_conhecido",src)
         for cat in ("destinacao_tributaria","patrocinio_privado"):
             r=load_json(pathlib.Path(f"biblioteca_alexandria/livros/especiais/empresas/ranking_{cat}.json"))
-            self.assertEqual(r["total"],100); self.assertEqual(r["empresas"][0]["posicao"],1)
+            # 11/10 (titular): sem teto — conhecidas + observadas, e o ICMS completa até AO MENOS 100
+            self.assertGreaterEqual(r["total"],100); self.assertEqual(r["total"],len(r["empresas"])); self.assertEqual(r["empresas"][0]["posicao"],1)
+            self.assertEqual([e["posicao"] for e in r["empresas"]],list(range(1,r["total"]+1)))
             self.assertTrue(all(e["pontos"]>=r["empresas"][i+1]["pontos"] for i,e in enumerate(r["empresas"][:-1])))
             self.assertTrue(all(e.get("por") for e in r["empresas"][:20]))
             self.assertTrue(pathlib.Path(f"docs/dados/ranking_{cat}.json").exists())
@@ -3925,7 +4020,12 @@ class SystemTests(unittest.TestCase):
         self.assertFalse(_apto_ao_calendario({"id":"y","publicado_em":"2026-09-01"}))                       # sem fim confirmado: fora
         self.assertFalse(_apto_ao_calendario({"id":"z","ciclo":{"inscricao":{"fim":"2026-10-01","projetado":True}}}))  # projetado: fora
         d=load_json(pathlib.Path("docs/dashboard-dados.json")); ap=[x for x in d["editais"] if x.get("calendario_ok")]
-        self.assertGreaterEqual(len(ap),50); self.assertTrue(any(x.get("origem_fim") for x in d["editais"]) or True)
+        # o número fixo (>= 50) caiu com o núcleo: depois do portão de oportunidade e da limpeza da base bruta (16/10)
+        # o painel tem ~40 editais. Vale a regra: TODO edital com fim confirmado (não projetado) está no calendário,
+        # e só eles
+        self.assertGreater(len(ap),0)
+        for x in d["editais"]:
+            self.assertEqual(bool(x.get("calendario_ok")),_apto_ao_calendario(dict(x)),x["id"])
         html=open("docs/dashboard.html",encoding="utf-8").read(); self.assertNotIn('.filter(e=>estadoDe(e.id)==="em_andamento" && e.ciclo && e.ciclo',html)
         src=open("src/dashboard_dados.py",encoding="utf-8").read(); self.assertIn("def _integrar_analise",src); self.assertIn("_integrar_analise(e)",src)
 
@@ -3953,7 +4053,11 @@ class SystemTests(unittest.TestCase):
         from src.enquadramento import fila_verificacao, FILA_VERIF
         r=fila_verificacao()
         self.assertGreater(r["total"],100); self.assertLess(r["total"],5000)              # editais de fato, não as 18 mil edições de diário
-        self.assertGreater(r["edicoes_de_diario_sem_ato"],1000); self.assertIn("GO",r["por_uf"])
+        # 16/10 (titular): a fila é calculada DOS LIVROS (repositório), não das 18 mil edições de diário do painel — a
+        # edição inteira de diário sem ato continua fora da fila (contada à parte), mas quase não chega mais ao universo
+        self.assertIsInstance(r["edicoes_de_diario_sem_ato"],int); self.assertIn("GO",r["por_uf"])
+        _rx_ed=re.compile(r"Di[áa]rio Oficial de .+\d{4}-\d{2}-\d{2}")
+        self.assertFalse(any(_rx_ed.match(x.get("titulo") or "") and x["sem_prazo"] and "Objeto" in (x.get("faltam") or []) for x in load_json(FILA_VERIF)["itens"]))
         f=load_json(FILA_VERIF); it=f["itens"][0]
         self.assertEqual(it["prioridade"],0)                                              # Goiás/nacional primeiro
         self.assertTrue(all(x.get("motivo") for x in f["itens"][:20]))
@@ -3982,7 +4086,9 @@ class SystemTests(unittest.TestCase):
         self.assertTrue(all(x["prioridade"]>=2 for x in f["itens"] if x["modo"]=="leve"))       # leves sempre depois
         html=open("docs/dashboard.html",encoding="utf-8").read()
         for x in ("_semPrazoHome","prazo a confirmar — marcado para a IA",'id="cal-sem-prazo"',"Abertos sem prazo final confirmado",
-                  'Oportunidades ativas',"Oportunidades inativas (prazo encerrado","editais, emendas, leis de incentivo, doações, fundos"): self.assertIn(x,html,x)
+                  'Oportunidades ativas',"Oportunidades inativas (prazo encerrado",
+                  # a nota "editais, emendas, leis de incentivo, doações, fundos" saiu da tela; a regra ficou no filtro do mapa
+                  "todas as\n     formas de captação — edital, emenda, lei de incentivo, doação, fundo, destinação judicial"): self.assertIn(x,html,x)
         self.assertNotIn("Todas as frentes (fontes)",html)
         d=load_json(pathlib.Path("docs/dashboard-dados.json")); self.assertIn("marcacoes_ia",d); self.assertGreater(len(d["marcacoes_ia"]),50)
 
@@ -4004,7 +4110,8 @@ class SystemTests(unittest.TestCase):
         self.assertIn('<select id="mp-mes" style="display:none"',html)
         self.assertIn("Oportunidades ativas (inscrição em curso ou possível)",html)
         self.assertIn("Oportunidades inativas (prazo encerrado ou descartadas em Oportunidades Abertas)",html)
-        self.assertIn("prazo de encerramento da inscrição",html)
+        # calendário redesenhado: cada inscrição na sua linha, ordenada pelo prazo final (o encerramento da inscrição)
+        self.assertIn("do prazo final mais próximo ao mais distante",html); self.assertIn("<b>■</b> último dia",html)
         self.assertIn("/* 07/09: o mapa não filtra por mês",html)
 
 
@@ -4021,16 +4128,26 @@ class SystemTests(unittest.TestCase):
         self.assertEqual(fora["escopo"],"municipal_fora"); self.assertIn("rosa",fora["motivo"])
         self.assertEqual(classificar_geografia({"uf":"GO","titulo":"Edital estadual de cultura"},M)["escopo"],"estadual")
         f=load_json(pathlib.Path("biblioteca_alexandria/livros/_vistas/fila_verificacao.json"))
-        self.assertGreater(f["fora_das_50_maiores"]["total"],50); self.assertIn("escopo",f)
+        # 16/10 (titular): fora de Goiás só estaduais e capitais — o município pequeno de outro estado sai no portão e
+        # no expurgo, antes da fila; o que sobra fora das 50 maiores (Goiás) segue listado em rosa, com motivo
+        fo=f["fora_das_50_maiores"]; self.assertEqual(fo["total"],len(fo["itens"])) if fo["total"]<=400 else None
+        self.assertTrue(all("não está entre as 50 maiores" in x["motivo"] and "rosa" in x["motivo"] for x in fo["itens"])); self.assertIn("escopo",f)
         self.assertTrue(all(x["escopo"]!="municipal_fora" for x in f["itens"]))
         self.assertTrue(all(x["modo"]=="completo" for x in f["itens"] if x["escopo"]=="nacional"))
-        fichas=[x for x in glob.glob("biblioteca_alexandria/oportunidades_sem_prazo/*/ficha.json") if "/_" not in x]
-        self.assertGreaterEqual(len(fichas),f["total"]-30)   # fichas acompanham a fila com folga
-        fi=load_json(pathlib.Path(fichas[0]))
-        self.assertEqual([i["item"] for i in fi["itens_14"]],__import__("src.parametros",fromlist=["ITENS_14"]).ITENS_14)
-        self.assertGreaterEqual(len(fi["documentos"]),20); self.assertIn("passos",fi["confirmacao_do_prazo"])
-        self.assertTrue(all(p.get("onde") and p.get("o_que") for p in fi["confirmacao_do_prazo"]["passos"]))
-        self.assertIn("nunca como fonte do prazo",json.dumps(fi["confirmacao_do_prazo"],ensure_ascii=False)) if fi.get("id") else None
+        # 16/10: as fichas sem prazo viraram anexos dos livros (a pasta antiga é proibida e não volta)
+        self.assertFalse(pathlib.Path("biblioteca_alexandria/oportunidades_sem_prazo").exists())
+        fichas=[x for x in glob.glob("biblioteca_alexandria/livros/anexos/sem_prazo/*/ficha.json") if "/_" not in x]
+        self.assertTrue(fichas)
+        _vet=re.compile(r"pncp\.gov|queridodiario|diariooficial|in\.gov\.br",re.I); com_vetor=0
+        for _f in fichas:                                    # todas as fichas (antes só a primeira do glob)
+            fi=load_json(pathlib.Path(_f))
+            self.assertEqual([i["item"] for i in fi["itens_14"]],__import__("src.parametros",fromlist=["ITENS_14"]).ITENS_14)
+            self.assertGreaterEqual(len(fi["documentos"]),20); self.assertIn("passos",fi["confirmacao_do_prazo"])
+            self.assertTrue(all(p.get("onde") and p.get("o_que") for p in fi["confirmacao_do_prazo"]["passos"]))
+            for p in fi["confirmacao_do_prazo"]["passos"]:   # o anúncio em vetor nunca é fonte do prazo
+                if _vet.search(p["onde"]):
+                    com_vetor+=1; self.assertIn("nunca como fonte do prazo",p["o_que"])
+        self.assertGreater(com_vetor,0)
         html=open("docs/dashboard.html",encoding="utf-8").read()
         self.assertIn("fora das 50 maiores do estado foram retiradas da fila",html); self.assertIn("nacionais (sem restrição geográfica, prioridade)",html)
 
@@ -4076,21 +4193,35 @@ class SystemTests(unittest.TestCase):
         import json as J
         from src.enquadramento import ingerir_navegador
         from src.fonte_edital import EXTRAIDOS
+        from src import livro_arquivo as LA
+        # 16/10 (titular): os livros são o único banco — a coleta do navegador completa a EDIÇÃO que já está num livro;
+        # id sem livro não cria dado fora dos livros
+        org=LA._origens_ro()
+        alvos=[pathlib.Path(r).stem for r,g in sorted(org.items()) if r.startswith("dados/editais/extraidos/") and (g.get("inteiro") or [None])[0]]
+        alvos=[i for i in alvos if not (load_json(EXTRAIDOS/f"{i}.json") or {}).get("pagina_travada")][:2]
+        self.assertEqual(len(alvos),2); i1,i2=alvos
+        antes={i:load_json(EXTRAIDOS/f"{i}.json") for i in alvos}
         pasta=ROOT/"biblioteca_alexandria/livros/_acervo/editais/coleta_navegador"; pasta.mkdir(parents=True,exist_ok=True)
         arq=pasta/"teste_unit.json"
-        arq.write_text(J.dumps({"lab-t1":{"objeto":"Chamamento de cultura","inicio":"2026-10-01","fim":"2026-11-30","pagina_oficial":"https://orgao.gov.br/editais"},
-                                "lab-t2":{"objeto":"y","fim":"2026-12-01","pagina_oficial":"https://pncp.gov.br/app/editais/9"}}),encoding="utf-8")
+        arq.write_text(J.dumps({i1:{"objeto":"Chamamento de cultura","inicio":"2026-10-01","fim":"2026-11-30","pagina_oficial":"https://orgao.gov.br/editais"},
+                                i2:{"objeto":"y","fim":"2026-12-01","pagina_oficial":"https://pncp.gov.br/app/editais/9"},
+                                "lab-sem-livro":{"objeto":"z","fim":"2026-12-01","pagina_oficial":"https://orgao.gov.br/z"}}),encoding="utf-8")
         try:
             r=ingerir_navegador()
             self.assertGreaterEqual(r["ingeridos"],2)
             self.assertTrue(any("vetor" in x["motivo"] for x in r["recusados"]))          # PNCP recusado como página oficial
-            e1=load_json(EXTRAIDOS/"lab-t1.json"); self.assertEqual(e1["itens"]["Prazo de inscrição"],"2026-11-30")
+            e1=load_json(EXTRAIDOS/f"{i1}.json"); self.assertEqual(e1["itens"]["Prazo de inscrição"],"2026-11-30")
             self.assertEqual(e1["pagina_divulgacao"],"https://orgao.gov.br/editais")
             self.assertIn("navegador",e1["fontes_itens"]["Objeto"])
-            e2=load_json(EXTRAIDOS/"lab-t2.json"); self.assertIsNone(e2.get("pagina_divulgacao"))
+            self.assertTrue((LA._origens_ro()[f"dados/editais/extraidos/{i1}.json"].get("inteiro") or [None])[0])   # continua num livro
+            e2=load_json(EXTRAIDOS/f"{i2}.json"); self.assertEqual(e2.get("pagina_divulgacao"),antes[i2].get("pagina_divulgacao"))   # o vetor não entra
+            self.assertEqual(e2["itens"]["Prazo de inscrição"],"2026-12-01")
+            self.assertFalse((EXTRAIDOS/f"{i1}.json").exists())                               # nada fica fora dos livros
+            self.assertFalse(LA.existe(EXTRAIDOS/"lab-sem-livro.json"))                        # sem livro: não cria dado
         finally:
             for f in pasta.glob("teste_unit.json*"): f.unlink()
-            for i in ("lab-t1","lab-t2"): (EXTRAIDOS/f"{i}.json").unlink(missing_ok=True)
+            for i,v in antes.items(): write_json(EXTRAIDOS/f"{i}.json",v)
+            (EXTRAIDOS/"lab-sem-livro.json").unlink(missing_ok=True)
         self.assertTrue(pathlib.Path("docs/claude/COLETA-PELO-NAVEGADOR.md").exists())
         guia=open("docs/claude/COLETA-PELO-NAVEGADOR.md",encoding="utf-8").read()
         self.assertIn("fila_verificacao.json",guia); self.assertIn("Nunca use PNCP",guia); self.assertIn("ingerir_navegador",guia)
@@ -4125,12 +4256,25 @@ class SystemTests(unittest.TestCase):
         from src.compacto import expandir
         amp=expandir(load_json(pathlib.Path("docs/dados/abertas.json")))
         self.assertTrue(all("tipo_registro" in x for x in amp[:50]))
-        go=[x for x in amp if x.get("uf")=="GO"]
-        editais=[x for x in go if x["tipo_registro"]=="edital"]
-        self.assertLess(len(editais),40); self.assertGreater(len(go),200)          # o ruído existe, mas não conta como oportunidade
-        an=load_json(pathlib.Path("biblioteca_alexandria/livros/_acervo/editais/analises.json"))
+        go=[x for x in amp if x.get("uf")=="GO"]; self.assertTrue(go)
+        # 16/10 (#266, portão de oportunidade e limpeza da base bruta): as 306 edições inteiras de diário que inflavam
+        # Goiás saíram da base — os números fixos de 07/09 (> 200 registros, < 40 editais) deixaram de valer.
+        # O que importa continua: edição de diário nunca conta como edital
+        for x in amp:
+            if x["tipo_registro"]=="edicao_diario":
+                self.assertEqual(classificar_registro({"titulo":x["titulo"]})["tipo_registro"],"edicao_diario",x["id"])
+            if re.match(r"(?i)^di[áa]rio oficial d[eo] [^—]+—\s*\d{4}-\d{2}-\d{2}\s*$",x.get("titulo") or ""):
+                self.assertNotEqual(x["tipo_registro"],"edital",x["id"])
+        # TODAS as de Goiás verificadas uma a uma: a análise manual de 07–09/09 (analises.json) não recebe registros
+        # novos; a verificação individual de cada uma é o selo de 07/09 (objeto + prazo + site oficial) — sem os três,
+        # vai para a verificação semanal da IA ou para a validação manual
         nao_diario=[x for x in go if x["tipo_registro"]!="edicao_diario"]
-        self.assertTrue(all(x["id"] in an for x in nao_diario))                     # TODAS as de Goiás verificadas uma a uma
+        for x in nao_diario:
+            v=x.get("validacao") or {}
+            for c in ("objeto","prazo","site_oficial"): self.assertIn(c,v,x["id"])
+            self.assertIn(x["selo_validacao"],("validada","nao_verificada","validacao_manual"),x["id"])
+            if x["selo_validacao"]=="nao_verificada": self.assertTrue(v.get("para_ia_semanal"),x["id"])
+            if x["selo_validacao"]=="validada": self.assertTrue(v["objeto"] and v["prazo"] and v["site_oficial"],x["id"])
         html=open("docs/dashboard.html",encoding="utf-8").read()
         self.assertIn('!["edital","regra_anual"].includes(item.tipo_registro)',html)
         self.assertIn('!["edital","regra_anual"].includes(item.tipo_registro)',html)   # a nota saiu da tela; a regra permanece
@@ -4182,14 +4326,19 @@ class SystemTests(unittest.TestCase):
         self.assertGreaterEqual(len(arqs)+sum(1 for v in an.values() if "titular" in (v.get("por") or "")),5)
         ver=[v for v in an.values() if "verificação externa" in (v.get("por") or "")]
         self.assertGreaterEqual(sum(1 for v in an.values() if "titular" in (v.get("por") or "")),200)   # todas as rodadas de verificação do titular
-        self.assertGreaterEqual(sum(1 for v in an.values() if "15/09" in (v.get("por") or "")),60)   # a rodada dos 63
+        # a rodada dos 63: o expurgo de 16/10 tirou das análises as que só citavam compra inválida do PNCP — o que ficou +
+        # o que o expurgo registrou fecha com a rodada e com as 817 análises de antes
+        sai=_expurgados("dados/editais/analises.json","biblioteca_alexandria/livros/_acervo/editais/analises.json")
+        self.assertGreaterEqual(sum(1 for v in an.values() if "15/09" in (v.get("por") or ""))+sai,60)
+        self.assertGreaterEqual(len(an)+sai,817)
         self.assertTrue(all(v.get("motivo") for v in ver))
         self.assertTrue(any(v["selo"]=="conformidade" for v in ver)); self.assertTrue(any(v["selo"]=="inconformidade" for v in ver))
         from src.fonte_edital import EXTRAIDOS
         import glob as _g
-        cand=[f for f in _g.glob("dados/editais/extraidos/*.json") if "verificacao_externa" in open(f,encoding="utf-8").read()]
+        from src import livro_arquivo as LA
+        cand=[v for v in LA.ler_pasta(EXTRAIDOS).values() if isinstance(v.get("verificacao_externa"),dict)]   # 16/10: nos livros
         self.assertGreaterEqual(len(cand),100)
-        ex=load_json(pathlib.Path([f for f in cand if load_json(pathlib.Path(f)).get("verificacao_externa",{}).get("prazo")][0]))
+        ex=[v for v in cand if v["verificacao_externa"].get("prazo") and v.get("mini_parecer")][0]
         if ex:
             self.assertIn("VERIFICAÇÃO",ex["mini_parecer"]); self.assertTrue(ex["verificacao_externa"]["prazo"])
         src=open("src/dashboard_dados.py",encoding="utf-8").read()
@@ -4275,8 +4424,12 @@ class SystemTests(unittest.TestCase):
             self.assertFalse(avaliar(t0)["ok"],t0)
         self.assertTrue(avaliar("Chamamento público para seleção de OSC para termo de fomento em cultura")["ok"])
         f=load_json(pathlib.Path("biblioteca_alexandria/livros/_vistas/fila_verificacao.json"))
-        self.assertIn("reprovados_por_objeto",f); self.assertGreaterEqual(f["reprovados_por_objeto"]["total"],8)
-        self.assertTrue(all(x.get("familia") and x.get("motivo") for x in f["reprovados_por_objeto"]["itens"][:10]))
+        # 15/10 (expurgo): o que não é oportunidade (credenciamento, compra, contrato…) sai antes, no portão e no expurgo;
+        # a fila não traz nada que o filtro de objeto reprove e o que ele ainda pega fica listado com família e motivo
+        self.assertIn("reprovados_por_objeto",f); ro=f["reprovados_por_objeto"]
+        self.assertEqual(ro["total"],len(ro["itens"])) if ro["total"]<=300 else None
+        self.assertTrue(all(x.get("familia") and x.get("motivo") for x in ro["itens"][:10]))
+        self.assertTrue(f["itens"]); self.assertTrue(all(avaliar(x["titulo"])["ok"] for x in f["itens"]))
         d=load_json(pathlib.Path("docs/dashboard-dados.json"))
         self.assertIn("reprovados_por_objeto",d["fila_verificacao"])
 
@@ -4294,9 +4447,14 @@ class SystemTests(unittest.TestCase):
         self.assertNotIn('id="mp-triagem"',html)
         self.assertNotIn("Motores de busca neste território",html)
         self.assertNotIn("Cidades com oportunidade",html)
-        i=html.index("oportunidade(s)</strong>"); bloco=html[i-1200:i+2200]
+        # 27/09 (titular): com o fluxo validado carregado, o painel lista exatamente as oportunidades que o mapa conta
+        # (window.htmlPainelUF: nome, prazo e link); sem ele, a lista de reserva separa as abertas confirmadas
+        i=html.index("${univUF.length} oportunidade(s)</strong>"); bloco=html[i-1200:i+2200]
         self.assertNotIn("Encontrado (varredura) <b>",html)         # contadores de situação fora do painel do estado
         self.assertIn('situacaoDe(e)==="aberta"',bloco)
+        self.assertIn("if(FX){ L.innerHTML=htmlPainelUF(rotUF,FX); return; }",bloco)
+        fx=html.split("window.htmlPainelUF=function")[1].split("\n};")[0]
+        for x in ('class="uf-fx-p"','class="uf-fx-a"',"prazo a confirmar"): self.assertIn(x,fx,x)
 
 
     def test_validacao_individual_dos_467(self):
@@ -4310,16 +4468,26 @@ class SystemTests(unittest.TestCase):
         self.assertGreaterEqual(sum(1 for v in v9 if (v.get("verificacoes") or {}).get("aberto")),40)
         from src.fonte_edital import EXTRAIDOS
         import glob as _g
-        com=[f for f in _g.glob("dados/editais/extraidos/*.json") if "validacao_individual" in open(f,encoding="utf-8").read()]
-        self.assertGreaterEqual(len(com),400)
-        ex=load_json(pathlib.Path(com[0])); self.assertIn("VALIDAÇÃO INDIVIDUAL",ex["mini_parecer"])
-        self.assertIn(ex["validacao_individual"]["veredito"],("aprovado","atencao","reprovado","pendencia","vetor","ruido"))
+        from src import livro_arquivo as LA
+        # 16/10: as edições extraídas estão NOS LIVROS (só fica a edição ligada a um livro); o veredito do titular de
+        # todas continua nas análises (acima, ≥400)
+        self.assertEqual(_g.glob("dados/editais/extraidos/*.json"),[])
+        com=[v for v in LA.ler_pasta(EXTRAIDOS).values() if isinstance(v.get("validacao_individual"),dict)]
+        self.assertTrue(com)
+        self.assertTrue(all((v.get("edital_id") or v.get("id")) in an for v in com))
+        for ex in com:
+            self.assertIn("VALIDAÇÃO INDIVIDUAL",ex["mini_parecer"])
+            self.assertIn(ex["validacao_individual"]["veredito"],("aprovado","atencao","reprovado","pendencia","vetor","ruido"))
         self.assertGreaterEqual(len(_g.glob("biblioteca_alexandria/livros/_acervo/acervo/INDICE-*.json")),18)
         b=load_json(pathlib.Path("biblioteca_alexandria/livros/_acervo/acervo/BANCO-EDITAIS-HISTORICOS-v2.json"))
-        self.assertGreaterEqual(len(b.get("itens") or b.get("editais") or b),100)
+        # 15–16/10: o expurgo tirou do banco histórico o que não é oportunidade — o que ficou + o que o expurgo registrou
+        # (estado/expurgo/) fecha com as 130 pastas do acervo
+        sai=_expurgados("dados/acervo/BANCO-EDITAIS-HISTORICOS-v2.json","biblioteca_alexandria/livros/_acervo/acervo/BANCO-EDITAIS-HISTORICOS-v2.json")
+        self.assertGreater(len(b["itens"]),0); self.assertGreaterEqual(len(b["itens"])+sai,b["total_pastas"]); self.assertEqual(b["total_pastas"],130)
         r=load_json(pathlib.Path("config/rotas_de_coleta.json")); self.assertIn("rotas",r)
         f=load_json(pathlib.Path("biblioteca_alexandria/livros/_vistas/fila_verificacao.json"))
-        self.assertGreaterEqual(f["reprovados_por_objeto"]["total"],25)      # o filtro limpa a fila
+        from src.inconformidade import avaliar as _obj
+        self.assertTrue(all(_obj(x["titulo"])["ok"] for x in f["itens"]))      # o filtro limpa a fila (15/10: o expurgo tira antes)
         self.assertLessEqual(f["total"],400)   # a fila cresce quando os motores novos capturam (16 de Goiás em 21/09) — e encolhe quando o Piloto completa
         for arq in ("RELATORIO-VALIDACAO-INDIVIDUAL-2026-09-09.md","RELATORIO-VERIFICACAO-2026-09-09.md"):
             self.assertTrue(pathlib.Path("biblioteca_alexandria")/arq)

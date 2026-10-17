@@ -122,7 +122,22 @@ class TesteIntegridadePainel(unittest.TestCase):
         self.assertIn("cv-vaga", cal, "cada oportunidade precisa de linha fixa (vaga vazia nos dias em que não está aberta)")
         F = json.loads((ROOT / "docs/dados/fluxo_oportunidades.json").read_text(encoding="utf-8"))
         em = [x for x in F.get("calendario", []) if "Emenda Parlamentar" in x.get("titulo", "")]
-        self.assertGreaterEqual(len(em), 3, "emendas parlamentares fora do calendário")
+        # 17/10: a revisão humana (Chrome, vereditos_revisao.json) pode fechar uma emenda — a municipal de Goiânia foi
+        # julgada ruído (notícia da LOA, sem procedimento). Toda emenda do calendário legislativo (config/emendas.json)
+        # que a revisão NÃO fechou tem de estar no calendário, com início, fim e link oficial.
+        import datetime as _dt
+        from src.emendas import _cfg, oportunidade
+        from src.fluxo_oportunidades import FECHADAS
+        class _Lev(dict):
+            def __missing__(self, k):
+                return [] if k == "parlamentares" else 0
+        _hj = _dt.date.today()
+        cfg = [oportunidade(t, _hj.year, _Lev(), _hj) for t in (_cfg().get("tipos") or [])]
+        cfg = [e for e in cfg if e.get("area") == "emendas_parlamentares" and e.get("fim") and e["fim"] >= _hj.isoformat()]
+        V = json.loads((ROOT / "biblioteca_alexandria/livros/_acervo/editais/vereditos_revisao.json").read_text(encoding="utf-8")).get("vereditos") or {}
+        esperadas = {e["id"] for e in cfg if (V.get(e["id"]) or {}).get("veredito") not in FECHADAS}
+        self.assertGreaterEqual(len(esperadas), 2, "o calendário legislativo deixou de ter as emendas federal e estadual")
+        self.assertEqual(esperadas - {x["id"] for x in em}, set(), "emendas parlamentares fora do calendário")
         for x in em:
             self.assertTrue(x.get("inicio") and x.get("fim") and x.get("link_oficial"))
 

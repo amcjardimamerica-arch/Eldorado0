@@ -288,7 +288,7 @@ def fases(ctx: dict) -> list[dict]:
         {"etapa": "modalidade", "finalidade": "uma vez: o item 'Destinação' vira 'Modalidade' em todos os dados guardados",
          "cmds": [[py, "-c", "import json; from src import banco_livros as B; print(json.dumps(B.renomear_modalidade_nos_dados(), ensure_ascii=False)); "
                    "print(json.dumps(B.revisar_modalidade_uma_vez(), ensure_ascii=False))"]],
-         "t": 900, "pular": "já feita" if (ROOT / "estado/modalidade_migracao.json").exists() and (ROOT / "estado/modalidade_revisao.json").exists() else None},
+         "t": 900, "pular": "já feita" if __import__("src.banco_livros", fromlist=["x"]).migracao_modalidade_feita() and (ROOT / "estado/modalidade_revisao.json").exists() else None},
         {"etapa": "catalogar", "finalidade": "achados por motor, status de cada motor e repositório único das oportunidades",
          "cmds": [[py, "-m", "src.achados_motores"], [py, "-c", "import src.motores as M; M.run()"], [py, "-m", "src.status_motores"],
                   [py, "-m", "src.fluxo_oportunidades", "--completo"]], "t": 900,
@@ -383,6 +383,8 @@ def fases(ctx: dict) -> list[dict]:
                   # 17/10 (titular): a pesquisa externa está NOS LIVROS (protegida pela trava): não há o que reaplicar[py, "-c", "import json; from src import repositorio_unico as R; print(json.dumps({k: v for k, v in R.construir().items() if not isinstance(v, (list, dict))}, ensure_ascii=False))"],
                   [py, "-c", "import json; from src import fila_retentativa as FR; print(json.dumps(FR.dar_destino(), ensure_ascii=False))"],
                   [py, "-c", "import json; from src import fluxo_oportunidades as F; print(json.dumps(F.sincronizar_com_repositorio(), ensure_ascii=False))"],
+                  # 17/10: o que entrou no fechamento também recebe decisão (28/09: o mapa não sai com oportunidade sem decisão)
+                  [py, "-c", "import json; from src import curadoria_automatica as CA; print(json.dumps(CA.run(), ensure_ascii=False))"],
                   [py, "-c", "import json; from src import cartorio as C; print(json.dumps(C.pendencias(), ensure_ascii=False))"],
                   [py, "-c", "import json; from src import qualidade_motores as Q; print(json.dumps(Q.montar(), ensure_ascii=False))"],
                   # 17/10/2026 (titular): TRAVA DOS LIVROS — por último: nenhum livro apagado nem sobrescrito, só acrescido

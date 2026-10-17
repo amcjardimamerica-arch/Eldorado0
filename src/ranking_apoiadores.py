@@ -144,18 +144,6 @@ def montar() -> dict:
             e["faixa"] = "A" if n <= 25 else "B" if n <= 60 else "C"
         listas[cat] = itens
 
-    # quem está nas duas listas ganha a marca, com a posição em cada uma
-    por_nome = {}
-    for cat, itens in listas.items():
-        for e in itens:
-            por_nome.setdefault(e["_chave"], {})[cat] = e["n_na_lista"]
-    nas_duas = {k: v for k, v in por_nome.items() if len(v) == 2}
-    for cat, itens in listas.items():
-        for e in itens:
-            if e["_chave"] in nas_duas:
-                outra = next(c for c in nas_duas[e["_chave"]] if c != cat)
-                e["tambem_em"] = {"lista": outra, "posicao": nas_duas[e["_chave"]][outra]}
-
     # DOADORAS DA ROUANET NA MESMA LISTA (titular, 25/09): as 23.498 incentivadoras da base pública entram
     # na lista de destinação tributária — não numa segunda lista. Quem já estava (curadoria ou Piloto) é
     # ENRIQUECIDO com CNPJ, total e histórico; quem não estava entra como registro leve, pontuado pelos
@@ -223,6 +211,20 @@ def montar() -> dict:
         itens.sort(key=lambda x: (-x["pontos_lista"], -((x.get("salic") or {}).get("total") or 0), x["nome"]))
         for n, e in enumerate(itens, 1):
             e["n_na_lista"] = n; e["uid"] = f"{cat}:{n}"; e["faixa"] = e["nivel"]
+    # quem está nas duas listas ganha a marca, com a posição em cada uma. 17/10: calculado DEPOIS da numeração final —
+    # antes vinha da primeira ordenação, e a entrada do SALIC e a pontuação pela doação renumeravam as listas: a marca
+    # "também está na outra lista, posição N" apontava para outra empresa em todas as 18 linhas
+    por_nome = {}
+    for cat, itens in listas.items():
+        for e in itens:
+            por_nome.setdefault(e["_chave"], {}).setdefault(cat, e["n_na_lista"])
+    nas_duas = {k: v for k, v in por_nome.items() if len(v) == 2}
+    for cat, itens in listas.items():
+        for e in itens:
+            e.pop("tambem_em", None)
+            if e["_chave"] in nas_duas and nas_duas[e["_chave"]][cat] == e["n_na_lista"]:
+                outra = next(c for c in nas_duas[e["_chave"]] if c != cat)
+                e["tambem_em"] = {"lista": outra, "posicao": nas_duas[e["_chave"]][outra]}
     # ÍCONE DO PAT (titular, 29/09): incentivo fiscal da empresa — indício, não fonte para associações. Aceso quando a
     # MATRIZ tem adesão (MTE, até 31/03/2026), pelo catálogo único de incentivos; nenhuma empresa entra por causa dele.
     try:

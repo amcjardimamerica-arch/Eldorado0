@@ -348,10 +348,17 @@ def construir(gravar: bool = True, hoje: str | None = None) -> dict:
         a = certs.get(k) or {}
         certs[k] = {**a, **m, "itens": {**(a.get("itens") or {}), **(m.get("itens") or {})}, "dispensas": {**(a.get("dispensas") or {}), **(m.get("dispensas") or {})}}
     livros = {}
-    for m in (_j(ROOT / "biblioteca_alexandria/fontes/motores.json", {}) or {}).get("motores") or []:
+    _cat_livros = (_j(ROOT / "biblioteca_alexandria/fontes/motores.json", {}) or {}).get("motores") or []
+    for m in _cat_livros:
         for h in m.get("historico") or []:
             if isinstance(h, dict) and h.get("id"):
                 livros.setdefault(str(h["id"]), m)
+    # 17/10: o banco de livros (15/10) vincula a oportunidade ao livro pela seção 'oportunidade' (id_repositorio), sem
+    # edição no histórico — sem esta leitura, a oportunidade com livro criado aparecia como "sem livro" no repositório
+    for m in _cat_livros:
+        _op = m.get("oportunidade") if isinstance(m.get("oportunidade"), dict) else {}
+        if _op.get("id_repositorio"):
+            livros.setdefault(str(_op["id_repositorio"]), m)
     skills = (_j(ROOT / "config/skills_extracao_origem.json", {}) or {}).get("skills") or {}
     # 11/10 (titular): arquivamento ÚNICO — só as municipais de fora de GO abertas em 11/10 (lista fixa); as novas entram normalmente
     from .decisoes_titular import decisoes as _decisoes

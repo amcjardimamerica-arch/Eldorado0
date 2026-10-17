@@ -39,6 +39,23 @@ def _j(p: Path, padrao):
         return padrao
 
 
+_INDICE_SO_LEITURA: dict = {}
+
+
+def _indice_so_leitura() -> dict:
+    """17/10/2026 (chat de testes): o índice _origens.json (≈10 MB) era lido e decodificado a cada existe()/idade —
+    uma vez por edital na montagem do painel. Para CONSULTA (sem gravar), o índice decodificado fica em memória enquanto
+    o arquivo não muda (mesmo mtime e tamanho). Nunca alterar o que esta função devolve."""
+    try:
+        st = ORIGENS.stat()
+    except OSError:
+        return {}
+    k = (str(ORIGENS), st.st_mtime_ns, st.st_size)
+    if k not in _INDICE_SO_LEITURA:
+        _INDICE_SO_LEITURA.clear(); _INDICE_SO_LEITURA[k] = _j(ORIGENS, {}) or {}
+    return _INDICE_SO_LEITURA[k]
+
+
 class IndiceIlegivel(RuntimeError):
     """O índice dos livros existe mas não pôde ser lido: gravar por cima apagaria milhares de ligações."""
 
@@ -397,7 +414,7 @@ def _carregar(caminho, padrao=None):
 def arquivos_de(pasta) -> list[str]:
     """Os 'arquivos' antigos de uma pasta (agora dentro dos livros), para quem fazia glob."""
     pre = _rel(pasta).rstrip("/") + "/"
-    return sorted(k for k in (_j(ORIGENS, {}) or {}) if k.startswith(pre))
+    return sorted(k for k in _indice_so_leitura() if k.startswith(pre))
 
 
 def guardar(caminho, obj, controle_sem_livro: bool = False) -> dict:
@@ -498,7 +515,7 @@ def idade_h(caminho) -> float:
     p = Path(caminho)
     if p.exists():
         return (time.time() - p.stat().st_mtime) / 3600
-    g = ((_j(ORIGENS, {}) or {}).get(_rel(p)) or {}).get("gravado_em")
+    g = (_indice_so_leitura().get(_rel(p)) or {}).get("gravado_em")
     if not g:
         return 10 ** 6
     return (datetime.now(timezone.utc) - datetime.fromisoformat(g)).total_seconds() / 3600
@@ -509,7 +526,7 @@ def existe(caminho) -> bool:
     p = Path(caminho)
     if p.exists():
         return True
-    o = (_j(ORIGENS, {}) or {}).get(_rel(p))            # 16/10: só existe se houver conteúdo para montar
+    o = _indice_so_leitura().get(_rel(p))              # 16/10: só existe se houver conteúdo para montar
     return bool(o and (o.get("inteiro") or "controle" in o or any(c.get("entradas") for c in (o.get("conteineres") or {}).values())))
 
 

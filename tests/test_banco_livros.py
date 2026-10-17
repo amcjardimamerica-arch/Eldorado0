@@ -259,14 +259,19 @@ class Modalidade16_10(unittest.TestCase):
         (r / "estado/c.json").write_text(json.dumps({"certidoes": {"x": {"itens": {"Destinação": {"valor": "Termo de Fomento"}},
                                                                         "ainda_faltam": ["Valor", "Destinação"], "tipo": "Destinação judicial"}}}))
         (r / "dados/b.jsonl").write_text(json.dumps({"id": "1", "checklist": {"Destinação": {"s": "ok"}}}) + "\n")
+        (r / "biblioteca_alexandria/p.json").write_text(json.dumps({"itens_14": [{"item": "Destinação", "situacao": "previsto"},
+                                                                               {"item": "Valor", "obs": "Destinação"}]}))
+        (r / "estado/m.json").write_text(json.dumps({"em": "2026-10-16"}))           # marco da v1: não conta como feita
         with mock.patch.object(B, "ROOT", r), mock.patch.object(B, "MARCO_MODALIDADE", r / "estado/m.json"):
             res = B.renomear_modalidade_nos_dados()
             self.assertEqual(B.renomear_modalidade_nos_dados()["migracao"], "já feita")
+        p = json.loads((r / "biblioteca_alexandria/p.json").read_text())["itens_14"]
+        self.assertEqual([i["item"] for i in p], ["Modalidade", "Valor"]); self.assertEqual(p[1]["obs"], "Destinação")   # 17/10: {"item": …}
         c = json.loads((r / "estado/c.json").read_text())["certidoes"]["x"]
         self.assertEqual(list(c["itens"]), ["Modalidade"]); self.assertEqual(c["ainda_faltam"], ["Valor", "Modalidade"])
         self.assertEqual(c["tipo"], "Destinação judicial")                                     # texto livre não muda
         self.assertIn("Modalidade", (r / "dados/b.jsonl").read_text())
-        self.assertEqual((res["chaves"], res["nomes"]), (2, 1))
+        self.assertEqual((res["chaves"], res["nomes"]), (2, 2))
 
     def test_codigo_sem_o_item_antigo(self):
         import glob, re

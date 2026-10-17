@@ -502,13 +502,22 @@ def _registro(c: dict, m: dict, ks: list[str]) -> dict:
     org = "Tribunal de Justiça do Estado de Goiás" + (f" — {c['vara']}" if c.get("vara") else "") if m.get("fonte") in ("A", "B") else \
         "Conselho Nacional de Justiça (republicação)" if m.get("fonte") == "C" else _ORIGEM.get(m.get("fonte"), "Judiciário")
     nacional = m.get("fonte") == "C" and not c.get("comarca") and not re.search(r"GOIAS|\(GO\)|GOIANIA", _N(m.get("titulo")))
+    uf, terr, mun = (None, "BR", None) if nacional else ("GO", f"GO/{c['comarca']}" if c.get("comarca") else "GO",
+                                                      f"GO/{c['comarca']}" if c.get("comarca") else None)
+    if m.get("fonte") == "C" and not nacional:
+        # 17/10/2026 (chat de testes): a republicação do CNJ de OUTRO estado não é de Goiás só porque a página cita Goiás
+        # em algum lugar — "Santana — Justiça do Amapá destina…" entrava como GO/Santana e o livro misturava GO e AP
+        from .repositorio_unico import _ESTADOS, _municipio_goiano
+        outros = {sig for nome, sig in _ESTADOS if sig != "GO" and re.search(rf"\b{nome}\b", titulo.lower())}
+        if len(outros) == 1 and not GOIAS.search(_N(titulo)) and not (c.get("comarca") and _municipio_goiano(f"município de {c['comarca']}")):
+            uf = outros.pop()
+            terr, mun = (f"{uf}/{c['comarca']}" if c.get("comarca") else uf), (f"{uf}/{c['comarca']}" if c.get("comarca") else None)
     return {
         "id": sha256(f"jud|{ks[0]}".encode())[:20], "status": "capturada",
         "titulo": (f"{c['comarca']} — " if c.get("comarca") else "") + titulo[:260],
         "url": pdf or m.get("url"), "url_noticia": m.get("url"), "url_documento": pdf,
         "fonte_id": MOTOR_ID, "fonte_nome": _ORIGEM.get(m.get("fonte"), "Judiciário"), "orgao": org,
-        "territorio": "BR" if nacional else (f"GO/{c['comarca']}" if c.get("comarca") else "GO"),
-        "uf": None if nacional else "GO", "municipio": f"GO/{c['comarca']}" if c.get("comarca") else None,
+        "territorio": terr, "uf": uf, "municipio": mun,
         "nivel": "federal" if nacional else "estadual", "comarca": c.get("comarca"), "vara": c.get("vara"),
         "tipo_fonte": "judiciario_destinacao", "confianca": "primaria" if m.get("fonte") in ("A", "B") else "secundaria",
         "forma_divulgacao": {"A": "noticia_tjgo", "B": "pdf_tjgo", "C": "noticia_cnj"}.get(m.get("fonte")),

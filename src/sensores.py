@@ -240,6 +240,9 @@ def _fogo_todos() -> set:
         return set()
 
 
+LEITURA_DIARIA = "leitura diária (titular, 10/10/2026): fonte específica sem época nem menção"
+
+
 def escala_do_dia(hoje: date | None = None) -> dict:
     """Quem sai hoje: diários/justiça/legislativo/API sempre; sites em rodízio
     por dia da semana; escalada para diário quando há previsão no mês."""
@@ -257,10 +260,17 @@ def escala_do_dia(hoje: date | None = None) -> dict:
         motivo = None
         if s["id"] in desligados or desligados & set(s.get("fontes_260") or []):
             ficam.append(dict(s, desligado_pelo_titular=True)); continue
-        if s["tipo"] in diarios or s["tipo"] in ("plataforma", "recorrencia"):
-            motivo = "motor regular e geral — todo dia"
-        elif s.get("fontes_260") and (set(s["fontes_260"]) & ativas):
+        # 17/10/2026: a fonte específica (dos 260 pontos) é classificada PRIMEIRO pela ativação — desde a leitura diária
+        # de 10/10 o tipo 'site_oficial' está na cadência diária e a ativação deixou de aparecer (e de ter prioridade
+        # no limite de sensores por execução: uma fonte ATIVA podia ser cortada por ordem alfabética)
+        if s.get("fontes_260") and (set(s["fontes_260"]) & ativas):
             motivo = "fonte específica ATIVA: época prevista ou menção em local oficial"
+        elif s.get("fontes_260") and cfg["cadencia"].get("escalada_por_previsao") and _casa_previsao(s, ativos):
+            motivo = "escalada: previsão de edital neste mês"
+        elif s.get("fontes_260") and s["tipo"] in diarios:
+            motivo = LEITURA_DIARIA
+        elif s["tipo"] in diarios or s["tipo"] in ("plataforma", "recorrencia"):
+            motivo = "motor regular e geral — todo dia"
         elif cfg["cadencia"].get("escalada_por_previsao") and _casa_previsao(s, ativos):
             motivo = "escalada: previsão de edital neste mês"
         elif not s.get("fontes_260") and zlib.crc32(s["id"].encode()) % 7 == dia:
@@ -273,7 +283,8 @@ def escala_do_dia(hoje: date | None = None) -> dict:
     # rodar (ABCR, GIFE, Observatório, Prosas). O limite vale só para os 260 pontos.
     regulares = [s for s in saem if not s.get("fontes_260")]
     pontos = [s for s in saem if s.get("fontes_260")]
-    pontos.sort(key=lambda s: (not s.get("goias"), s["id"]))            # entre os pontos, Goiás primeiro
+    # entre os pontos: ATIVOS e escalados primeiro (nunca cortados antes da leitura diária sem época), depois Goiás
+    pontos.sort(key=lambda s: (s["motivo"] == LEITURA_DIARIA, not s.get("goias"), s["id"]))
     sobra = max(0, lim - len(regulares))
     saem = regulares + pontos[:sobra]
     saem.sort(key=lambda s: (s["tipo"] not in diarios, s.get("fontes_260") is not None, not s.get("goias"), s["id"]))

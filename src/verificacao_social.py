@@ -1,3 +1,4 @@
+"""Verificação social: lê as páginas públicas oficiais de redes sociais dos emissores configurados e grava as pistas sociais encontradas na vista dos livros, com relatório de fontes ok e falhas."""
 from __future__ import annotations
 
 import json

@@ -3070,7 +3070,7 @@ function desenhaFilaVerificacao(){
         acervo compacto <b>${A.docs?A.docs.toLocaleString("pt-BR"):"—"}</b> docs em ${A.bytes_acervo?(A.bytes_acervo/1048576).toFixed(1)+" MB":"—"} (FTS5+zstd)
         ${E.ia_local?` · <b>IA local:</b> ${esc(E.ia_local.modelo)} via ${esc(E.ia_local.motor)}`:""}</div>`;})()}
     ${(()=>{const AL=D.alerta_motores;if(!AL)return "";const al=AL.alertas||[];
-      return `<div class="alerta-motores ${al.length?"tem":""}"><b>ALERTA DIÁRIO DOS MOTORES (${esc(AL.data||"")}):</b> ${AL.funcionando} de ${AL.total} funcionando${al.length?` · <b>${al.length} em alerta</b>`:" · todos íntegros"}
+      return `<div class="alerta-motores ${al.length?"tem":""}"><b>ALERTA DIÁRIO DOS MOTORES (${esc(AL.data||"")}):</b> ${AL.funcionando} de ${AL.total} funcionando${al.length?` · <b>${al.length} em alerta</b>`:" · nenhum em alerta"}${(AL.bloqueio_conhecido||[]).length?` · ${AL.bloqueio_conhecido.length} com bloqueio conhecido (à parte: ${AL.bloqueio_conhecido.map(b=>esc(b.id)).join(", ")})`:""}
         ${al.length?`<ul>${al.slice(0,12).map(a=>`<li><span class="grav ${a.gravidade}"></span><b>${esc(a.nome.slice(0,44))}</b> — ${esc(a.problema)}<small> → ${esc(a.acao)}</small></li>`).join("")}${al.length>12?`<li class=meta>+${al.length-12} — ver <a href="dados/alerta_motores.json" target=_blank rel="noopener noreferrer">lista completa</a></li>`:""}</ul>`:""}
         <div class=meta>O que falta é entregue ao <a href="dados/pacote_desktop.md" target=_blank rel="noopener noreferrer">pacote do Claude Desktop</a>: ao abrir o Claude no computador, ele roda a coleta local, abre as rotas dos motores parados e valida as oportunidades parciais com Opus 5.</div></div>`;})()}
     ${(()=>{const V=D.validacao_motores_mes;if(!V)return "";const R=V.resumo||{};
@@ -3785,13 +3785,13 @@ window.mtLigar=async function(id){
     return;
   }
   const e=mtEstado();e.ativos=e.ativos||{};const liga=!mtAtivo(id);e.ativos[id]=liga;e.ligados_em=e.ligados_em||{};if(liga)e.ligados_em[id]=new Date().toISOString();mtSalva(e);desenhaMotores();atualizaMotoresAtivos();};
-/* fogo com fumaça (ativo) / tonel azul (inativo) — clique alterna */
+/* fogo com fumaça (ativo) / fogueira sem acender — lenha empilhada, folha ao vento (inativo) — clique alterna */
 function iconeMotor(id,ativo){
   return ativo?`<button class="mt-ico fogo" onclick="mtLigar('${esc(id)}')" title="motor LIGADO — integra o workflow e a rede neural pode acioná-lo; clique para DESLIGAR (fica parado até você religar)">
       <svg viewBox="0 0 32 40" width="30" height="36"><g class="fumaca"><circle cx="16" cy="7" r="3"/><circle cx="21" cy="4" r="2.2"/><circle cx="11" cy="5" r="1.8"/></g>
       <path class="chama" d="M16 12c4 5 8 8 8 15a8 8 0 0 1-16 0c0-4 2-6 3-9 1 3 2 4 3 4 0-4 0-7 2-10z"/>
       <path class="chama2" d="M16 22c2 3 4 4 4 7a4 4 0 0 1-8 0c0-2 1-3 2-5 .5 1.5 1 2 2 2 0-2 0-3 0-4z"/></svg></button>`
-    :`<button class="mt-ico oleo" onclick="mtLigar('${esc(id)}')" title="motor DESLIGADO — nenhum acionamento automático o executa; clique para RELIGAR">
+    :`<button class="mt-ico oleo" onclick="mtLigar('${esc(id)}')" title="motor DESLIGADO (fogueira sem acender) — nenhum acionamento automático o executa; clique para RELIGAR">
       <svg viewBox="0 0 40 40" width="36" height="36" shape-rendering="geometricPrecision">
         <g stroke="#3a2a18" stroke-width=".8" stroke-linejoin="round">
           <path d="M6 31h28a2 2 0 0 1 0 4H6a2 2 0 0 1 0-4z" fill="#6b4a2b"/>
@@ -5017,7 +5017,7 @@ window.posicionarRotulosMapa=function(){
   });
   if(!fora.length) return;
   // coluna fora do mapa, na altura do estado, sem sobreposição entre os rótulos
-  let extE=0, extD=0; const NS="http://www.w3.org/2000/svg";
+  let extE=0, extD=0; const NS=svg.namespaceURI;   // o próprio mapa dá o namespace SVG (sem URL no painel offline)
   ["dir","esq"].forEach(lado=>{
     const L=fora.filter(f=>f.lado===lado).sort((a,b)=>a.ay-b.ay); if(!L.length) return;
     const larg=Math.max(...L.map(f=>f.w))+14;
@@ -5842,7 +5842,7 @@ function desenhaBzCards(){
   const fr=(a,b)=>`${a}<span class="bz-tot">/${b}</span>`;
   const cards=[
     [IC("#C77E12").rosa,"Oportunidades abertas",`${PR.abertas}`,"","vermelho",`${PR.validadas} validadas · ${PR.em_verificacao} em verificação · ${PR.validacao_manual} em validação manual (vermelho) — fechadas por veredito e prazos vencidos ficam fora`],
-    [IC("#0B4EA2").banco,"Fontes monitoradas",fr(OP.ligados??0,OP.catalogo??0),"","azul",`livros monitorados (lidos todos os dias pelo motor do próprio livro, com pesquisa focada) / total de livros na Biblioteca`],   // 12/10 (titular): só os números
+    [IC("#0B4EA2").banco,"Fontes monitoradas",fr(OP.ligados??0,OP.catalogo??0),"","azul",`livros monitorados (lidos todos os dias pelo motor do próprio livro, com pesquisa focada): ${OP.monitorados_abertos??0} com edital aberto · ${OP.monitorados_prestes??0} prestes a abrir · ${OP.monitorados_continuos??0} contínuas / total de livros na Biblioteca`],   // 12/10 (titular): só os números; 11/10: com a divisão
     [IC("#0B4EA2").escudo,"Validadas",fr(PR.validadas,PR.abertas),"","azul","validadas (objeto, prazo vigente e site oficial comprovados, ou ouro) / oportunidades abertas"],
     [IC("#C0392B").relogio,"Prazos urgentes",fr(urg.length,conf.length),"","vermelho","inscrições validadas terminando em até 7 dias / validadas"],
     [IC("#0B4EA2").farol,"Repositório",fr(OP.com_historico_de_edicoes??0,OP.catalogo??0),"","azul","livros com duas ou mais edições guardadas / livros de oportunidades na Biblioteca"],

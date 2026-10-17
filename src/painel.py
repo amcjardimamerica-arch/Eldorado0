@@ -1,3 +1,4 @@
+"""Página de transparência: reúne oportunidades dos livros, execução, catálogo, fontes, escopo, prestação de contas e casos do Farol em docs/dados.json e gera docs/transparencia.html."""
 from __future__ import annotations
 
 import json

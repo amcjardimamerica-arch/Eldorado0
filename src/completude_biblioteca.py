@@ -50,6 +50,14 @@ def _area_do_edital(ficha: dict, texto: str) -> str | None:
         return None
 
 
+def _modalidade_escrita(texto: str) -> str | None:
+    """17/10/2026: a Modalidade (forma como o recurso chega: termo de fomento, convênio, prêmio…) só é comprovada quando
+    está ESCRITA na evidência — nunca inferida da elegibilidade. Antes ficava sempre vazia, mesmo escrita."""
+    from .banco_livros import _modalidade_do_texto
+    achada = _modalidade_do_texto(texto)
+    return achada[0] if achada else None
+
+
 def onze_itens(ficha: dict, parecer: dict | None = None) -> dict:
     """Os 11 itens de análise sobre uma ficha histórica; lacuna declarada."""
     texto = " ".join(str(ficha.get(c) or "") for c in ("titulo", "evidencia"))
@@ -68,7 +76,7 @@ def onze_itens(ficha: dict, parecer: dict | None = None) -> dict:
         ("Esfera", ficha.get("nivel") if ficha.get("nivel") in ("federal", "estadual", "municipal") else None),
         ("Requisitos", ", ".join(ficha.get("exigencias_detectadas") or []) or None),
         ("Anexos", "menciona anexos/modelos" if _ANEXO.search(texto) else None),
-        ("Modalidade", None),                        # 16/10: elegibilidade não é modalidade
+        ("Modalidade", _modalidade_escrita(texto)),  # 16/10: elegibilidade não é modalidade; só a forma ESCRITA
         ("Área de atuação", _area_do_edital(ficha, texto)),
     ]
     saida = []

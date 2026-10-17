@@ -1,3 +1,4 @@
+"""Conselho de 7 pontos de vista do Farol: sorteia, de forma reprodutível por associação/oportunidade/rodada, as personalidades de config/conselho.json e grava o manifesto do conselho de cada caso."""
 from __future__ import annotations
 import hashlib, json, random
 from .nucleo import ROOT, load_json, now_iso, write_json

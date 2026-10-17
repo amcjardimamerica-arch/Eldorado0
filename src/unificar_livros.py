@@ -99,7 +99,8 @@ def unificar(gravar: bool = True) -> dict:
         if len(ids) > 1:
             def nota(lid):
                 m = por_id[lid]; tem = any(str(h.get("id")) == can for h in m.get("historico") or [] if isinstance(h, dict))
-                return (not tem, -len(m.get("historico") or []), str(m.get("criado_em") or "9999"))
+                # 17/10: o livro PESQUISADO (12 parâmetros) é sempre o sobrevivente (regra de 30/09 da curadoria)
+                return (not m.get("parametros"), not tem, -len(m.get("historico") or []), str(m.get("criado_em") or "9999"))
             ids.sort(key=nota); fica = por_id[ids[0]]
             for lid in ids[1:]:
                 _juntar(fica, por_id[lid]); sai.add(lid)
@@ -135,7 +136,8 @@ def unificar(gravar: bool = True) -> dict:
                 oficial = regua(str(m.get("pagina") or ""))[0]
             except Exception:  # noqa: BLE001
                 oficial = True
-            return (not oficial, m.get("atual") != oid, -SequenceMatcher(None, str(h.get("titulo") or "").lower(), str(m.get("programa") or "").lower()).ratio())
+            return (not m.get("parametros"), not oficial, m.get("atual") != oid,       # 17/10: o pesquisado fica
+                    -SequenceMatcher(None, str(h.get("titulo") or "").lower(), str(m.get("programa") or "").lower()).ratio())
         ids = [i for i in sorted(ids, key=compat) if i not in sai]
         if len(ids) < 2:
             continue

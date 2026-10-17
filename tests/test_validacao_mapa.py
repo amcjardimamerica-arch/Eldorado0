@@ -24,7 +24,18 @@ class TestArquivoDeValidacao(unittest.TestCase):
         cls.itens = cls.dados["itens"]
 
     def test_universo_inteiro_decidido(self):
-        self.assertGreaterEqual(len(self.itens), self.MINIMO)
+        # 16/10/2026: o expurgo (regra territorial: fora de Goiás só estaduais e capitais) tirou registros desta base; o
+        # universo decidido é o que ficou mais o que saiu, e cada saída está contada no registro diário do expurgo
+        saiu = (self.dados.get("expurgo") or {}).get("ids") or []
+        self.assertFalse(set(saiu) & {r["id"] for r in self.itens}, "registro dado como expurgado continua na base")
+        self.assertGreaterEqual(len(self.itens) + len(saiu), self.MINIMO)
+        rel = str(self.ARQUIVO.relative_to(ROOT)); antigo = rel.replace("biblioteca_alexandria/livros/_vistas/", "dados/oportunidades/")
+        registrado = 0
+        for arq in (ROOT / "estado/expurgo").glob("*.json"):
+            r = json.loads(arq.read_text(encoding="utf-8"))
+            registrado += sum(int((r.get("registros_removidos_por_arquivo") or {}).get(c) or 0) for c in (rel, antigo))
+            registrado -= sum(1 for x in r.get("restaurados") or [] if x.get("arquivo") == rel and not x.get("campo"))
+        self.assertGreaterEqual(registrado, len(saiu), "saída sem registro no expurgo")
         self.assertEqual(len({r["id"] for r in self.itens}), len(self.itens), "id repetido")
         for r in self.itens:
             self.assertIn(r["decisao"], VM.DECISOES)

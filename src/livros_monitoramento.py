@@ -232,7 +232,8 @@ def _orcamento(tarefa: str | None) -> dict:
             try:
                 r = json.loads(l)
                 if r.get("tarefa") == tarefa and (r.get("em") or "")[:7] == mes:
-                    u = r.get("uso") or {}; gasto += int(u.get("input_tokens", 0)) + int(u.get("output_tokens", 0))
+                    u = r.get("uso") or {}   # 17/10: src/ia.py grava tokens_entrada/tokens_saida (sem "uso"): o gasto dele não entrava no orçamento
+                    gasto += int(u.get("input_tokens", r.get("tokens_entrada", 0)) or 0) + int(u.get("output_tokens", r.get("tokens_saida", 0)) or 0)
             except Exception:
                 pass
     return {"limite_periodo": limite, "teto_tarefa": teto, "gasto_tarefa": gasto, "disponivel": max(0, teto - gasto)}

@@ -186,6 +186,13 @@ _AREA_FAM = {"PNAB / Aldir Blanc": "cultura", "Lei Rouanet": "cultura", "Lei Goy
              "Lei de Incentivo ao Esporte": "esporte", "Fundo da Criança (FMDCA/FIA)": "crianca_adolescente",
              "Assistência social (FMAS/FEAS)": "assistencia_social", "Fundo do Idoso": "pessoa_idosa",
              "PRONON / PRONAS": "saude", "Receita Federal (doação)": "doacao_bens"}
+_AREAS_13 = ("assistencia_social", "crianca_adolescente", "cultura", "direitos_humanos", "doacao_bens", "educacao",
+             "esporte", "infraestrutura", "meio_ambiente", "outros", "pessoa_idosa", "saude", "seguranca_alimentar")
+# objeto classificado do livro (src/livros_curadoria) → área canônica
+_OBJ_AREA = {"Cultura": "cultura", "Esporte": "esporte", "Saúde": "saude", "Educação": "educacao",
+             "Assistência social": "assistencia_social", "Criança e adolescente": "crianca_adolescente",
+             "Pessoa idosa": "pessoa_idosa", "Meio ambiente": "meio_ambiente", "Direitos humanos": "direitos_humanos",
+             "Desenvolvimento social": "assistencia_social"}
 # palavras do programa/órgão que decidem a área quando a família não decide
 _AREA_TXT = (("apreendid|receita federal", "doacao_bens"),
              ("aliment|fome|nutri|merenda|cesta", "seguranca_alimentar"),
@@ -589,8 +596,19 @@ def run() -> dict:
         _ult = (_rd[-1].get("em") if _rd else None)
         _val = sum(1 for v in _fe.values() if v.get("qualidade") in ("validada", "parcial", "fonte_confirmada"))
         _ag = (ROOT / "estado/interceptador/aguardando.json").exists()
+        # 17/10: o Interceptador também tem o seu calendário (era o único motor com "dias": []) — cada dia com alvos
+        # estudados: verde se comprovou um por inteiro, amarelo se só em parte, azul se estudou sem comprovar
+        _di = {}
+        for _v in _fe.values():
+            _d = str(_v.get("em") or "")[:10]
+            if not _d:
+                continue
+            _r = _di.setdefault(_d, {"achados": 0, "falhas": 0, "cor": "azul"})
+            if _v.get("qualidade") in ("validada", "parcial", "fonte_confirmada"):
+                _r["achados"] += 1
+                _r["cor"] = "verde" if _v.get("qualidade") == "validada" or _r["cor"] == "verde" else "amarelo"
         plataformas.append({"id": "piloto-interceptador", "nome": "Piloto - Interceptador — comprova na fonte oficial", "tipo": "piloto",
-                            "url": "docs/dados/interceptador.json", "dias": [], "ultima_leitura": _ult, "achados": _val,
+                            "url": "docs/dados/interceptador.json", "dias": _trinta_dias(_di, hoje), "ultima_leitura": _ult, "achados": _val,
                             "diagnostico": {"alvos_estudados": len(_fe), "validadas": sum(1 for v in _fe.values() if v.get("qualidade") == "validada"),
                                             "parciais": sum(1 for v in _fe.values() if v.get("qualidade") == "parcial"),
                                             "fontes_confirmadas": sum(1 for v in _fe.values() if v.get("qualidade") == "fonte_confirmada"),
@@ -828,6 +846,16 @@ def run() -> dict:
             _classificar(_m)
         except Exception:
             pass
+    # 17/10: os repositórios de oportunidade (op-/nova-) nasciam sem área de atuação e, muitos, sem esfera — 1.957
+    # livros fora do vocabulário único das 13 áreas e do filtro de esfera. A área vem do objeto classificado (ou
+    # do texto, pela mesma regra dos motores); a esfera, da abrangência classificada.
+    for _m in motores:
+        if _m.get("area_atuacao") not in _AREAS_13:
+            _m["area_atuacao"] = _OBJ_AREA.get(_m.get("objeto_area")) or area_da_fonte(_m, _m.get("familia") or "")
+        if _m.get("esfera") not in ("Município", "Estado", "Brasil", "Internacional"):
+            _m["esfera"] = ("Internacional" if _m.get("internacional") else
+                            {"municipal": "Município", "estadual": "Estado", "nacional": "Brasil"}.get(_m.get("abrangencia"))
+                            or ("Estado" if _m.get("uf") and _m.get("uf") != "BR" else "Brasil"))
     # RESUMO RECALCULADO (28/09): o resumo vinha dos 366 originais; agora conta o catálogo inteiro, e "ligado" vale
     # para todos (os repositórios incorporados não passavam pelo laço que marca os ligados)
     for _m in motores:
@@ -860,6 +888,8 @@ def run() -> dict:
                               "regime_prazo", "certeza_prazo", "obtidas", "area_atuacao", "natureza", "esfera",
                               "ativa", "motivo_status", "em_epoca", "proximidade")}
             | {"disjuntor": json.dumps(m["disjuntor"], ensure_ascii=False) if m.get("disjuntor") else None}
+            # 17/10 (titular): o painel mantém TODOS os dados — o livro vai inteiro no fragmento (nada é cortado,
+            # compactado ou apresentado em parte); a lista é carregada quando a página é aberta, sem limite de tamanho
             # 03/10 (titular): selo do LIVRO no cartão da Biblioteca — só o essencial (o detalhe fica no catálogo)
             | {"selo_livro": {k: (m.get("selo_livro") or {}).get(k) for k in ("selo", "anos_com_edicao", "preditivo", "bloco", "porque")}
                if m.get("selo_livro") else None}

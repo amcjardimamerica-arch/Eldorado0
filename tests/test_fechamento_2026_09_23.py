@@ -39,18 +39,59 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "docs/dados/verificacao_fechamento_2026-09-23.json"
 HOJE = date(2026, 9, 23)
 
+# 16/10/2026 (titular): em outros estados só ESTADUAIS e CAPITAIS. O expurgo de 16/10 00:56 tirou desta base os 7
+# registros de fora de Goiás; 6 são municipais de fora (saída pela regra) e o 7º — a UNICENTRO/PR, órgão ESTADUAL — foi
+# perda indevida e voltou do histórico do git (estado/expurgo/2026-10-16.json › restaurados). Identificação de cada
+# saída: (órgão, UF, município, situação do prazo em 23/09).
+EXPURGADOS = {
+    "02beaaeb": ("MUNICIPIO DE INDAIATUBA", "SP", "Indaiatuba", "aberto"),
+    "f0808d006f8c34765c9a": ("MUNICIPIO DE ITATINGA", "SP", "Itatinga", "aberto"),
+    "81a444690ae9d6a7fc56": ("MUNICIPIO DE OSORIO", "RS", "Osório", "aberto"),
+    "8ed7377b": ("MUNICIPIO DE MONTES CLAROS", "MG", "Montes Claros", "aberto"),
+    "8d68b63a": ("MUNICIPIO DE CANOAS", "RS", "Canoas", "aberto"),
+    "b858a9eb": ("MUNICIPIO DE PERUIBE", "SP", "Peruíbe", "aberto"),
+}
+
 
 def _base() -> dict:
     return json.loads(BASE.read_text(encoding="utf-8"))
+
+
+def _municipal_de_fora(orgao: str, uf: str) -> bool:
+    from src.expurgo import classificar
+    ruim, motivo = classificar({"titulo": orgao, "orgao": orgao, "uf": uf})
+    return ruim and str(motivo).startswith("município de outro estado")
+
+
+def _saiu() -> list:
+    return (_base().get("expurgo") or {}).get("ids") or []
 
 
 class TesteBaseDeFechamento(unittest.TestCase):
     """A base existe, tem forma conhecida e declara de onde cada dado veio."""
 
     def test_a_base_existe_e_tem_catorze_registros(self):
+        """Os 14 lidos pelo navegador local: o que ficou mais o que o expurgo tirou."""
         d = _base()
         self.assertEqual(d["total"], 14)
-        self.assertEqual(len(d["itens"]), 14)
+        saiu = _saiu()
+        self.assertFalse(set(saiu) & set(d["itens"]))
+        self.assertEqual(len(d["itens"]) + len(saiu), 14)
+        n = 0
+        for arq in (ROOT / "estado/expurgo").glob("*.json"):
+            r = json.loads(arq.read_text(encoding="utf-8"))
+            n += int((r.get("registros_removidos_por_arquivo") or {}).get(str(BASE.relative_to(ROOT))) or 0)
+            n -= sum(1 for x in r.get("restaurados") or [] if x.get("arquivo") == str(BASE.relative_to(ROOT)))
+        self.assertEqual(n, len(saiu), "o registro diário do expurgo tem de contar o mesmo que a base")
+
+    def test_toda_saida_e_municipal_de_outro_estado(self):
+        self.assertEqual(set(_saiu()), set(EXPURGADOS))
+        for chave, (orgao, uf, _mun, _sit) in EXPURGADOS.items():
+            self.assertNotEqual(uf, "GO", chave)
+            self.assertTrue(_municipal_de_fora(orgao, uf), f"{chave}: {orgao}/{uf}")
+        self.assertFalse(_municipal_de_fora("UNIVERSIDADE ESTADUAL DO CENTRO OESTE", "PR"),
+                         "órgão estadual de outro estado fica (regra de 16/10)")
+        self.assertIn("f5f21c7b", _base()["itens"], "a UNICENTRO/PR (estadual) não pode sair pela regra territorial")
 
     def test_todo_registro_declara_a_rota_e_a_data_da_leitura(self):
         for chave, item in _base()["itens"].items():
@@ -79,8 +120,13 @@ class TesteBaseDeFechamento(unittest.TestCase):
             self.assertEqual(item.get("prazo_situacao"), "encerrado", item.get("orgao"))
 
     def test_a_chave_de_osorio_foi_corrigida(self):
-        """A base apontava 88866396000155/2026/122, que devolve HTTP 400."""
-        osorio = next(i for i in _base()["itens"].values() if i.get("orgao", "").endswith("OSORIO"))
+        """A base apontava 88866396000155/2026/122, que devolve HTTP 400. Osório/RS saiu desta base pela regra
+        territorial de 16/10; onde o registro continua (o acervo de análises), a chave tem de ser a corrigida."""
+        osorio = next((i for i in _base()["itens"].values() if i.get("orgao", "").endswith("OSORIO")), None)
+        if osorio is None:
+            self.assertIn("81a444690ae9d6a7fc56", _saiu())
+            from src.nucleo import load_json
+            osorio = load_json(ROOT / "biblioteca_alexandria/livros/_acervo/editais/analises.json")["81a444690ae9d6a7fc56"]
         self.assertEqual(osorio["chave_pncp"]["cnpj"], "88814181000130")
         self.assertEqual(osorio["chave_pncp"]["seq"], 450)
 
@@ -90,7 +136,10 @@ class TestePaginaOficialDosAbertos(unittest.TestCase):
 
     def test_todo_registro_aberto_aponta_para_arquivo_do_proprio_orgao(self):
         abertos = [i for i in _base()["itens"].values() if i.get("prazo_situacao") == "aberto"]
-        self.assertEqual(len(abertos), 7)
+        # eram 7 abertos em 23/09; os que o expurgo tirou estão em EXPURGADOS com a situação daquele dia
+        saidos_abertos = [k for k in _saiu() if EXPURGADOS.get(k, (None,) * 4)[3] == "aberto"]
+        self.assertEqual(len(abertos) + len(saidos_abertos), 7)
+        self.assertTrue(abertos, "a UNICENTRO/PR continua aberta até 10/12/2026")
         for item in abertos:
             oficial, _ = A.e_pagina_oficial(item["pagina_oficial"])
             self.assertTrue(oficial, item.get("orgao"))
@@ -154,7 +203,10 @@ class TesteChaveCurta(unittest.TestCase):
         for chave in indice:
             self.assertFalse(ID_LONGO.match(chave) and len(chave) > 8,
                              f"chave nao normalizada no indice: {chave}")
-        self.assertIn("81a44469", indice)
+        # 16/10: Osório/RS (81a44469) saiu pela regra territorial; o Alvorada do Norte/GO, gravado com a chave inteira
+        # (5b991f651a1905c579de), cumpre o mesmo papel
+        self.assertIn("5b991f651a1905c579de", _base()["itens"])
+        self.assertIn("5b991f65", indice)
         self.assertIn("77be3a1f", indice)
 
 
@@ -321,10 +373,17 @@ class TesteLeiturasLocaisAplicadas(unittest.TestCase):
         cls.reg = _j.loads((ROOT / "estado/leituras_locais_23_09_aplicadas.json").read_text(encoding="utf-8"))
 
     def test_as_catorze_desceram_aos_registros(self):
+        """As 14 leituras desceram; 6 registros (municipais de fora de Goiás) saíram depois pelo expurgo de 16/10."""
         self.assertEqual(self.reg["aplicadas"], 14)
         self.assertEqual(self.reg["com_hora"], 14)
-        com_hora = [v for v in self.an.values() if isinstance(v, dict) and v.get("hora_encerramento")]
-        self.assertGreaterEqual(len(com_hora), 14)
+        com_hora = {k for k, v in self.an.items() if isinstance(v, dict) and v.get("hora_encerramento")}
+        sairam = {k for k in EXPURGADOS if k not in self.an}
+        self.assertEqual(sairam, set(EXPURGADOS) - {"81a444690ae9d6a7fc56"},
+                         "Osório continua no acervo (cita também a chave antiga); os outros 5 saíram")
+        for k in sairam:
+            self.assertTrue(_municipal_de_fora(EXPURGADOS[k][0], EXPURGADOS[k][1]), k)
+        self.assertGreaterEqual(len(com_hora) + len(sairam), 14)
+        self.assertIn("f5f21c7b", com_hora, "a UNICENTRO/PR (estadual) voltou com a hora de encerramento")
 
     def test_a_hora_decide_se_ainda_esta_aberto(self):
         """Formosa encerrou 22/07 às 16h45, não 'em 22/07'."""

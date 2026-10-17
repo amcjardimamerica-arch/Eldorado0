@@ -1,3 +1,4 @@
+"""Casos do Farol: monta, para cada oportunidade que aciona o Farol, a pasta do caso com o rascunho do plano de trabalho e o manual do presidente (gravados uma vez só) e o conselho de 7 pontos de vista."""
 from __future__ import annotations
 import json
 from pathlib import Path

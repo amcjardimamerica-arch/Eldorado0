@@ -1,3 +1,4 @@
+"""Enquadramento do Farol: avalia uma oportunidade contra o perfil da associação (natureza jurídica, território, área, tempo de existência, certificações) e calcula a pontuação preliminar pelos pesos dos critérios."""
 from __future__ import annotations
 
 import json

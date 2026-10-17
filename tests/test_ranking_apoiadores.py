@@ -8,7 +8,8 @@ class TesteRanking(unittest.TestCase):
     def test_duas_listas_cada_uma_ordenada_pela_sua_nota(self):
         r = json.loads((ROOT / "docs/dados/ranking_apoiadores.json").read_text(encoding="utf-8"))
         E = r["empresas"]
-        self.assertEqual(r["total"], 200)                                     # duas listas inteiras
+        # duas listas inteiras, com o total real (25/09: SALIC na destinação; 11/10: sem teto) — não mais 100 + 100
+        self.assertEqual(r["total"], len(E)); self.assertEqual(r["total"], sum(l["total"] for l in r["listas"].values()))
         for origem in r["por_origem"]:
             L = [x for x in E if x["origem"] == origem]
             self.assertTrue(all(L[i]["pontos_lista"] >= L[i+1]["pontos_lista"] for i in range(len(L)-1)), origem)
@@ -35,7 +36,13 @@ class TesteRanking(unittest.TestCase):
         for c in ("cnpj", "cnae_principal", "qsa", "telefone", "razao_social"):
             self.assertTrue(com.get(c), c)
         self.assertTrue(all(isinstance(s.get("nome"), str) for s in com["qsa"]))
-        self.assertTrue(all("a_completar" in e["cadastro"] for e in r["empresas"]))   # o que falta é declarado
+        # o que falta é declarado: no registro completo, pela lista a_completar; no registro LEVE do SALIC (25/09; enxuto
+        # desde 27/09 por causa do tamanho do arquivo), pela marca 'leve' — só CNPJ, UF e histórico, o resto a completar
+        for e in r["empresas"]:
+            if e.get("leve"):
+                self.assertTrue(e["cadastro"].get("cnpj") and e.get("salic"), e["nome"])
+            else:
+                self.assertIn("a_completar", e["cadastro"], e["nome"])
         h = (ROOT / "docs/dashboard.html").read_text(encoding="utf-8")
         for x in ("Quem responde pela empresa", "Atividade principal", "Outras atividades",
                   "Natureza jurídica", "Como chegar até ela", "Identificação"):

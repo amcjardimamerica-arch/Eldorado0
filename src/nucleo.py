@@ -1,3 +1,4 @@
+"""Núcleo comum do sistema: raiz do repositório, leitura e gravação de JSON, datas, hash, slug, URL canônica, validação de URL pública, detecção de prompt injection, identificadores e acesso aos achados dos livros."""
 from __future__ import annotations
 
 import hashlib

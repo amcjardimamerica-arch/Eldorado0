@@ -8,15 +8,38 @@ R = json.loads((ROOT / "docs/dados/ranking_apoiadores.json").read_text(encoding=
 
 class TesteListasIndependentes(unittest.TestCase):
     def test_sao_duas_listas_inteiras_e_nao_uma_dividida(self):
-        self.assertEqual(R["total"], 200)
-        self.assertEqual(R["por_origem"]["destinação tributária"], 100)
-        self.assertEqual(R["por_origem"]["doação e patrocínio"], 100)
+        # 25/09 (titular): as incentivadoras da base pública (SALIC) entram NA lista de destinação tributária, como
+        # registro leve; 11/10 (titular): sem teto — conhecidas + observadas, e o ICMS completa até ao menos 100.
+        # "páginas de 100, com o total real": a conta tem de fechar entre o total, as listas e as linhas.
+        E = R["empresas"]
+        self.assertEqual(R["total"], len(E))
+        self.assertEqual(sum(R["por_origem"].values()), R["total"])
+        self.assertEqual(set(R["por_origem"]), {"destinação tributária", "doação e patrocínio"})
+        for cat, l in R["listas"].items():
+            self.assertEqual(l["total"], R["por_origem"][l["rotulo"]], cat)
+            self.assertEqual(l["total"], sum(1 for e in E if e["origem"] == l["rotulo"]), cat)
+        curadas = {o: sum(1 for e in E if e["origem"] == o and not e.get("leve")) for o in R["por_origem"]}
+        self.assertGreaterEqual(curadas["destinação tributária"], 100)
+        self.assertGreaterEqual(curadas["doação e patrocínio"], 100)
+        leves = [e for e in E if e.get("leve")]
+        self.assertTrue(leves)
+        self.assertTrue(all(e["origem"] == "destinação tributária" and e.get("fonte") == "SALIC" and e.get("salic") for e in leves))
         self.assertIn("duas listas independentes", R["regra"])
 
     def test_empresa_pode_estar_nas_duas(self):
-        self.assertGreater(R["nas_duas_listas"], 20)
+        # 11/10: a lista de patrocínio passou a ter mais de 100 conhecidas e observadas, e deixou de ser completada pelo
+        # ICMS — as empresas do ICMS que enchiam as duas listas (e davam > 20 em comum) saíram dela. O que importa: a
+        # contagem declarada bate com as linhas marcadas, e cada marca aponta para a mesma empresa na outra lista.
+        self.assertGreaterEqual(R["nas_duas_listas"], 1)
         nas_duas = [e for e in R["empresas"] if e.get("tambem_em")]
-        self.assertTrue(nas_duas)
+        self.assertEqual(len(nas_duas), 2 * R["nas_duas_listas"])
+        cat_de = {"destinação tributária": "destinacao_tributaria", "doação e patrocínio": "patrocinio_privado"}
+        por_lugar = {(cat_de[x["origem"]], x["n_na_lista"]): x for x in R["empresas"]}
+        for x in nas_duas:
+            outra = por_lugar.get((x["tambem_em"]["lista"], x["tambem_em"]["posicao"]))
+            self.assertIsNotNone(outra, x["nome"])
+            self.assertNotEqual(outra["origem"], x["origem"])
+            self.assertEqual(outra["tambem_em"]["posicao"], x["n_na_lista"], x["nome"])
         e = nas_duas[0]
         self.assertIn(e["tambem_em"]["lista"], ("destinacao_tributaria", "patrocinio_privado"))
         self.assertGreaterEqual(e["tambem_em"]["posicao"], 1)

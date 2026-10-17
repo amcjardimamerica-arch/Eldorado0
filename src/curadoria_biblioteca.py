@@ -173,6 +173,11 @@ def mesma_oportunidade(a: dict, b: dict, p: dict) -> bool:
         (_host(a.get("pagina")) and _host(a.get("pagina")) == _host(b.get("pagina")))
 
 def _juntar(s: dict, o: dict) -> None:
+    if o.get("parametros") and not s.get("parametros"):     # 17/10: os 12 parâmetros pesquisados nunca se perdem na junção
+        s["parametros"] = o["parametros"]
+        for k in ("parametros_em", "parametros_fonte"):
+            if o.get(k) and not s.get(k):
+                s[k] = o[k]
     ids = {h.get("id") or h.get("titulo") for h in s.get("historico") or []}
     s.setdefault("historico", []).extend(h for h in o.get("historico") or [] if (h.get("id") or h.get("titulo")) not in ids)
     ck_s = s.setdefault("livro", {}).setdefault("checklist", {})

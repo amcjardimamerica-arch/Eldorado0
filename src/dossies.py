@@ -1,3 +1,4 @@
+"""Dossiês por financiador e doador: agrupa os achados dos livros por fonte e grava, em dados/financiadores|doadores/<fonte>/, os eventos compactos, as verificadas e as pistas por ano."""
 from __future__ import annotations
 
 import json

@@ -134,7 +134,11 @@ class TestParametros1001(unittest.TestCase):
         c = self.d["composicao"]
         self.assertEqual(c["novos"], 79)
         self.assertEqual(c["completados"], 57)
-        self.assertEqual(len(self.itens), c["novos"] + c["completados"] + c["v_para_a_por_prazo_vencido_na_base"])
+        # 16/10/2026: o expurgo (fora de Goiás só estaduais e capitais) tirou registros; a composição de 01/10 é o que
+        # ficou mais o que saiu (bloco "expurgo" da própria base)
+        saiu = (self.d.get("expurgo") or {}).get("ids") or []
+        self.assertFalse(set(saiu) & {r["id"] for r in self.itens}, "registro dado como expurgado continua na base")
+        self.assertEqual(len(self.itens) + len(saiu), c["novos"] + c["completados"] + c["v_para_a_por_prazo_vencido_na_base"])
         self.assertEqual(sum(self.d["contagem"].values()), len(self.itens))
         self.assertEqual(len({r["id"] for r in self.itens}), len(self.itens))
 

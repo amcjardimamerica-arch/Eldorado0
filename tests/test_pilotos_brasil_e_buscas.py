@@ -190,12 +190,31 @@ if __name__ == "__main__":
 
 
 class JanelaDeVoo(__import__("unittest").TestCase):
-    """08/10: os Pilotos só voam na janela de sucesso (config/parametros_pilotos.json › janelas_de_voo)."""
+    """17/10 (titular): os Pilotos não têm horário de voo — voam de forma permanente, um voo após o outro, e 3 segundos
+    de pátio acionam o próximo voo. Nenhuma hora, dia ou janela no config prende o Piloto em terra."""
     def test_janela(self):
-        from datetime import datetime, timezone
-        from src.pilotos_sede import dentro_da_janela as J, nuvem_deve_voar as N
-        d = lambda s: datetime.fromisoformat(s).replace(tzinfo=timezone.utc)   # noqa: E731
-        self.assertTrue(J("espiao", d("2026-10-08T13:00:00"))[0])          # quinta, 10h BRT
-        self.assertFalse(J("espiao", d("2026-10-10T13:00:00"))[0])         # sábado
-        self.assertTrue(J("interceptador", d("2026-10-09T02:00:00"))[0])   # 23h BRT
-        self.assertFalse(N("interceptador", d("2026-10-08T21:00:00"))[0])  # 18h BRT: não voa
+        import json
+        from datetime import datetime, timedelta, timezone
+        from pathlib import Path
+        from unittest import mock
+        import src.pilotos_sede as S
+        base = datetime(2026, 10, 5, tzinfo=timezone.utc)                 # segunda-feira
+        for h in range(0, 24 * 7, 5):                                       # toda a semana, de 5 em 5 horas
+            t = base + timedelta(hours=h)
+            for p in ("espiao", "interceptador", "piloto"):
+                self.assertTrue(S.dentro_da_janela(p, t)[0], (p, t))
+        # mesmo que uma janela antiga volte ao config, ela não prende o Piloto
+        antigo = {"janelas_de_voo": {"espiao": {"dias": [0], "horas_brt": [10]}}}
+        with mock.patch.object(Path, "read_text", return_value=json.dumps(antigo)):
+            self.assertTrue(S.dentro_da_janela("espiao", base + timedelta(days=5, hours=3))[0])
+        # a nuvem só deixa de voar quando o Piloto já está voando no Brasil (sede), nunca por horário
+        with mock.patch.object(S, "cfg", return_value={"sede": "nuvem"}):
+            self.assertTrue(S.nuvem_deve_voar("interceptador", base + timedelta(hours=21))[0])
+
+    def test_tres_segundos_de_patio_e_decola_de_novo(self):
+        from pathlib import Path
+        R = Path(__file__).resolve().parents[1] / ".github/workflows"
+        for wf in ("piloto.yml", "interceptador.yml"):
+            y = (R / wf).read_text(encoding="utf-8")
+            self.assertIn("sleep 3", y, wf)
+            self.assertIn(f"actions/workflows/{wf}/dispatches", y, wf)
