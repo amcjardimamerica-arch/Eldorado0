@@ -72,27 +72,24 @@ def do_pncp(x: dict) -> bool:
 
 
 def fora_da_abrangencia(x: dict) -> bool:
-    """Público MUNICIPAL só de Goiás — inclusive quando o estado não foi identificado (geo nacional).
-    Exceção (02/10): o que vem do PNCP ganha livro em qualquer estado; e o edital de OSC validado no parecer das 238
-    (titular, 02/10: edital de OSC de outro município é oportunidade para OSC e compõe um livro próprio)."""
-    # 14/10/2026 (titular, decisão definitiva): livro de município de outro estado que não seja capital NÃO EXISTE —
-    # caem as exceções de 02/10 (PNCP em qualquer estado; edital de OSC de outro município validado no parecer)
-    from .regra_abrangencia import capital_citada       # 14/10 (titular): livro municipal de CAPITAL de outro estado fica
-    if capital_citada(f"{_txt(x)} {x.get('pagina') or ''}"):
-        return False
-    from .repositorio_unico import _municipio_goiano    # 14/10: os 246 municípios de Goiás (IBGE) — nunca apaga livro goiano
-    if _municipio_goiano(f"{_txt(x)} {x.get('orgao') or ''}"):
-        return False
-    from .livros_curadoria import uf_do_dominio
+    """17/10/2026 (titular): A MESMA REGRA TERRITORIAL DO REPOSITÓRIO — livro municipal de OUTRO ESTADO, com a cidade
+    VERIFICADA, que não seja capital. Estaduais, federais, internacionais, capitais e o DF ficam; SEM UF É AVALIADO, NÃO
+    ELIMINADO. (A regra anterior era própria: tirava o municipal sem UF que não fosse de cidade goiana e marcava
+    estaduais — FAPESC, ProAC, Fundação Araucária — e capitais pelo domínio.)"""
+    from .repositorio_unico import municipal_fora_de_goias, _CAPITAIS_SEM_ESPACO
+    if municipal_fora_de_goias({"titulo": x.get("programa"), "orgao": x.get("orgao"), "uf": x.get("uf"), "url": x.get("pagina"),
+                                "nivel": x.get("esfera")}):
+        return True
+    from .livros_curadoria import uf_do_dominio            # site oficial de prefeitura/câmara de outro estado, NÃO capital
     _uf, _niv = uf_do_dominio(x.get("pagina"))
-    if _niv == "municipal" and _uf != "GO":
-        return True                                    # site oficial de prefeitura/câmara de outro estado
-    forte = bool(MUN.search(_txt(x)))                  # texto com órgão municipal: é público municipal, mesmo em blog
-    if (natureza(x) != "publica" and not forte) or not municipal(x) or x.get("geo") in ("GO", "INT"):
-        return False
-    if x.get("geo") in ("BR", None):
-        return not GO_CIDADES.search(_txt(x))          # municipal sem estado: fica só se for de cidade goiana
-    return True
+    # pelo endereço só se distingue prefeitura de órgão estadual quando o endereço DIZ que é prefeitura/câmara
+    # (fapesc.sc.gov.br tem a mesma forma de cidade.sc.gov.br)
+    if _niv == "municipal" and _uf and _uf not in ("GO", "DF") and \
+            re.search(r"(?i)prefeitura|camara|\bpm[a-z]*\.|\bcm[a-z]*\.|municipio|diariomunicipal", str(x.get("pagina") or "")):
+        _h = re.sub(r"^https?://(www\.)?", "", str(x.get("pagina") or "")).split("/")[0].split(".")
+        _cid = re.sub(r"[^a-z]", "", (_h[0] if _h[0] not in ("prefeitura", "camara", "pm", "cm", "portal", "transparencia", "dom") else (_h[1] if len(_h) > 1 else "")).lower())
+        return _cid not in _CAPITAIS_SEM_ESPACO
+    return False
 
 
 def empresa_sem_edital(x: dict) -> bool:
