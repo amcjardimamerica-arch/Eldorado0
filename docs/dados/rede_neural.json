@@ -1,9 +1,9 @@
 {
- "em": "2026-10-17T16:45:11+00:00",
+ "em": "2026-10-17T17:12:03+00:00",
  "regra": "REDE NEURAL DA LINHA DE PRODUÇÃO (titular, 02/10/2026) — Python puro, sem dependência nova, sem GPU.\n\nO que faz: estima a probabilidade de um registro ser OPORTUNIDADE REAL para OSC. É APOIO, nunca filtro (identificar\nprimeiro, qualificar depois): ordena a fila de validação, dá a nota dos livros e aponta rótulos suspeitos.\n\nArquitetura: rede de 1 camada oculta (ReLU) sobre entradas esparsas; saída sigmoide; Adam; pesos por classe.\nEntradas (técnicas de referência no GitHub):\n  · TEXTO — palavras e pares de palavras do título e da evidência, por *feature hashing* (2^13 posições);\n  · SUPERVISÃO FRACA (snorkel-team/snorkel) — as regras atuais do sistema viram \"rotuladores\": veredito e regra de\n    restrição dos livros (regras_restricao.avaliar), sinais de OSC, de abertura e de prazo, link oficial, família do canal;\n  · CORROBORAÇÃO — quantos canais viram a mesma entidade (linha_producao).\nRótulos: as decisões da validação individual (válida/arquivada = 1; descartada = 0; pendente = sem rótulo).\nAvaliação: validação cruzada em 5 partes (AUC, precisão, revocação, Brier) contra a linha de base das regras sozinhas.\nRÓTULOS SUSPEITOS (cleanlab/cleanlab, *confident learning*): decisão que a rede, fora da amostra, contradiz com mais de\n90% de confiança vai à revisão. APRENDIZADO ATIVO (argilla-io/argilla): os pendentes de maior incerteza vêm primeiro.",
- "rotulados": 1684,
- "positivos": 581,
- "pendentes": 733,
+ "rotulados": 1688,
+ "positivos": 585,
+ "pendentes": 777,
  "validacao_cruzada": {
   "auc": 0.843,
   "precisao": 0.74,
@@ -193,6 +193,12 @@
    "incerteza": 0.981
   },
   {
+   "titulo": "MDS (desenvolvimento e assistência social) — TERMO DE FOMENTO Nº 999689/2026 — \"Promover a capacitação profissional, o des...",
+   "url": "https://www.in.gov.br/web/dou/-/termo-de-fomento-n-999689/2026-733563258",
+   "nota": 0.51,
+   "incerteza": 0.981
+  },
+  {
    "titulo": "Chamada nº 009/2026 – FAPESPA/CNPq/CAPES",
    "url": "https://www.fapespa.pa.gov.br/2026/07/01/chamada-n-o-009-2026-fapespa-cnpq-capes",
    "nota": 0.49,
@@ -227,6 +233,12 @@
    "url": "https://cidadeocidental.go.gov.br/cidade-ocidental-abre-as-inscricoes-para-o-edital-da-lei-paulo-gustavo/",
    "nota": 0.489,
    "incerteza": 0.978
+  },
+  {
+   "titulo": "Prefeitura de Goiânia — KENIA HABERL DE LIMA Gerente da I mprensa Oficial Prefeitura de Goiânia Secretaria Municip",
+   "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261002_000008876.pdf",
+   "nota": 0.489,
+   "incerteza": 0.977
   },
   {
    "titulo": "BNDES Data",
@@ -271,6 +283,12 @@
    "incerteza": 0.974
   },
   {
+   "titulo": "SES-GO (saúde) — Edital nº 25/2026",
+   "url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7393/#e:7393",
+   "nota": 0.487,
+   "incerteza": 0.974
+  },
+  {
    "titulo": "Edital Centralizadora 2026: Guia para Captar Recursos · Capitaai",
    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8666cons.htm",
    "nota": 0.486,
@@ -307,22 +325,16 @@
    "incerteza": 0.965
   },
   {
-   "titulo": "Aberta Chamada de Projetos 2026 no Instituto Mahle",
-   "url": "https://riodeimpacto.com.br/noticias/aberta-chamada-de-projetos-2026-no-instituto-mahle",
-   "nota": 0.483,
-   "incerteza": 0.965
-  },
-  {
    "titulo": "Anápolis — CRAS Leste 1 recebe inscrições para o Programa Bombeiro Mirim em Anápolis",
    "url": "https://www.anapolis.go.gov.br/cras-leste-1-recebe-inscricoes-para-o-programa-bombeiro-mirim-em-anapolis/",
    "nota": 0.482,
    "incerteza": 0.965
   },
   {
-   "titulo": "Mapa de donantes y convocatorias para organizaciones | Terraetica",
-   "url": "https://terraetica.com/mapa-de-donantes",
-   "nota": 0.481,
-   "incerteza": 0.963
+   "titulo": "01_inscricao.php",
+   "url": "https://app.filantropia.ong/treinamentos/01_inscricao.php?Id_Turma=3133&Id_Treinamento=1256",
+   "nota": 0.518,
+   "incerteza": 0.964
   },
   {
    "titulo": "Diário Oficial de Alcobaça (BA) 2026-09-22 — \"termo de execução cultural\"",
@@ -333,6 +345,12 @@
   {
    "titulo": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
    "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
+   "nota": 0.519,
+   "incerteza": 0.962
+  },
+  {
+   "titulo": "Secretaria de Governança e Gestão Estratégica — EDITAL SGE/AGU Nº 1, DE 6 DE OUTUBRO DE 2026 — Chamamento público de interessados na seleção",
+   "url": "https://www.in.gov.br/web/dou/-/edital-sge/agu-n-1-de-6-de-outubro-de-2026-737293277",
    "nota": 0.519,
    "incerteza": 0.962
   },
@@ -353,25 +371,7 @@
    "url": "https://itaberai.go.gov.br/chamamento-publico-para-audiencia-publica-lei-aldir-blanc-ii/",
    "nota": 0.48,
    "incerteza": 0.96
-  },
-  {
-   "titulo": "Edital Educação e Trabalho 2026 – Escola e Território",
-   "url": "https://www.itausocial.org.br/editais/edital-educacao-e-trabalho-2026-escola-e-territorio",
-   "nota": 0.48,
-   "incerteza": 0.96
-  },
-  {
-   "titulo": "Processo de Seleção de Gestor Escolar",
-   "url": "https://goias.gov.br/educacao?page_id=27121",
-   "nota": 0.521,
-   "incerteza": 0.959
-  },
-  {
-   "titulo": "Prorrogadas as inscrições de trabalhos técnicos para o IX CBUC",
-   "url": "https://fundacaogrupoboticario.org.br/prorrogadas-as-inscricoes-de-trabalhos-tecnicos-para-o-ix-cbuc",
-   "nota": 0.479,
-   "incerteza": 0.958
   }
  ],
- "pendentes_provaveis_reais": 352
+ "pendentes_provaveis_reais": 380
 }
