@@ -1,15 +1,15 @@
 {
- "em": "2026-10-17T21:21:17+00:00",
+ "em": "2026-10-17T21:49:28+00:00",
  "regra": "LINHA DE PRODUÇÃO DE INFORMAÇÃO (titular, 02/10/2026).\n\nCada canal (motor ou Piloto) só COLETA. As etapas seguintes são comuns e nada é eliminado:\n  (02/10: os nomes BRONZE/PRATA/OURO passaram a ser só os SELOS da esteira — src/esteira.py; aqui as etapas são:)\n  COLETADO    o registro coletado, como chegou (base dados/oportunidades/oportunidades.jsonl)\n  CONSOLIDADO canal canônico + contrato de dados conferido + ENTIDADE resolvida entre canais (a mesma oportunidade vista\n              em vários canais vira uma entidade só, e o número de canais é a CORROBORAÇÃO)\n  EM_LIVRO    a entidade chegou ao mapa ou a um livro da Biblioteca\n  QUALIFICADO o livro recebeu veredito (APLICÁVEL / EM REVISÃO / NÃO APLICA) — arquivamento só manual\nRegistro que viola o contrato vai à FILA DE REPROCESSAMENTO (nunca ao lixo) com o plano de correção.\nO LIVRO-RAZÃO (estado/linha/razao-AAAA-MM.jsonl.gz) guarda só acréscimos: cada mudança de etapa, com data e motivo.",
  "funil": {
-  "coletados": 946,
+  "coletados": 1269,
   "oportunidades_distintas": 517,
   "entidades_em_2_ou_mais_canais": 74,
   "etapas": {
-   "EM_LIVRO": 695,
+   "EM_LIVRO": 699,
    "CONSOLIDADO": 33,
-   "QUALIFICADO": 57,
-   "REPROCESSAR": 161
+   "QUALIFICADO": 58,
+   "REPROCESSAR": 479
   },
   "fila_de_reprocessamento": {
    "URL de buscador (falta o site oficial)": 7,
@@ -20,14 +20,15 @@
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-01-15 → reler o prazo na fonte": 1,
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-03-12 → reler o prazo na fonte": 1,
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-05-14 → reler o prazo na fonte": 1,
-   "sem fonte_id": 147
+   "sem fonte_id": 317,
+   "sem url": 148
   }
  },
  "canais": [
   {
    "canal": "piloto-interceptador",
    "familia": "pilotos",
-   "registros": 466,
+   "registros": 469,
    "entidades": 325,
    "exclusivas": 255,
    "corroboradas": 70,
@@ -72,10 +73,10 @@
   {
    "canal": "piloto-aberto",
    "familia": "pilotos",
-   "registros": 36,
-   "entidades": 33,
+   "registros": 38,
+   "entidades": 34,
    "exclusivas": 28,
-   "corroboradas": 5,
+   "corroboradas": 6,
    "validadas_como_reais": 3
   },
   {
@@ -468,6 +469,14 @@
  },
  "corroboradas": [
   {
+   "entidade": "1078158fdb0136be112b",
+   "canais": [
+    "gife",
+    "piloto-aberto",
+    "piloto-interceptador"
+   ]
+  },
+  {
    "entidade": "9e37b9ad76d2ce6ca86c",
    "canais": [
     "do-goias",
@@ -527,13 +536,6 @@
    "entidade": "09590060f0bad9ff9a05",
    "canais": [
     "abcr",
-    "piloto-interceptador"
-   ]
-  },
-  {
-   "entidade": "1078158fdb0136be112b",
-   "canais": [
-    "gife",
     "piloto-interceptador"
    ]
   },
