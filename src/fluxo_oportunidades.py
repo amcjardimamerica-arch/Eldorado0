@@ -761,6 +761,16 @@ def sincronizar_catalogo(gravar: bool = True) -> dict:
     res.setdefault("etapas", {})["livros_total"] = res["livros_do_sistema"].get("catalogo")
     if gravar:
         SAIDA.write_text(json.dumps(res, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    # 17/10: a tela dos motores (docs/dados/motores.json) também mostra o número do catálogo gravado e dos monitorados
+    _pm = ROOT / "docs/dados/motores.json"
+    if gravar and _pm.exists():
+        try:
+            _m = json.loads(_pm.read_text(encoding="utf-8")); _cat = (_j(ROOT / "biblioteca_alexandria/fontes/motores.json", {}) or {}).get("motores") or []
+            _lig = ((_j(ROOT / "estado/livros_monitoramento.json", {}) or {}).get("ligados") or {})
+            _m.setdefault("resumo", {}).update({"total": len(_cat), "ligados": len(_lig)})
+            _pm.write_text(json.dumps(_m, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        except Exception:  # noqa: BLE001
+            pass
     return {"livros_na_bussola_antes": antes, "livros_na_bussola": res["livros_do_sistema"].get("catalogo")}
 
 

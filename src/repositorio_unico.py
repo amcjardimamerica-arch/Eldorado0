@@ -175,7 +175,7 @@ def nao_e_oportunidade(r: dict) -> str | None:
     # 17/10/2026 (amostra dos 744 achados fora dos livros): EXTRATO de parceria já firmada e ato de execução não são
     # oportunidade — o DOU publicava centenas como "achado"
     if re.search(r"(?i)\bextrato (?:de |do |da )?(?:termo|contrato|conv[eê]nio|compromisso|doa[çc][ãa]o|distrato|prorroga|"
-                 r"apostilamento|rescis|aditiv|acordo|parceria)|\bextrato_aditivo|\bdistrato\b|prorroga[çc][ãa]o de of[íi]cio|"
+                 r"apostilamento|rescis|aditiv|acordo|parceria|autoriza)|\bextrato_aditivo|\bdistrato\b|prorroga[çc][ãa]o de of[íi]cio|"
                  r"^\W*termo aditivo\b|apostilamento", tit):
         return "extrato/ato de execução de parceria já firmada — não é oportunidade"
     if re.search(r"(?i)\bextratos? (?:de |do |da |dos |das )?(?:fomento|colabora[çc][ãa]o|termos?\b)|parceria celebrada|"
