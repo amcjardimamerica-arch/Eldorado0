@@ -1,29 +1,29 @@
-# Diagnóstico do sistema · 2026-10-17 20:35 UTC
+# Diagnóstico do sistema · 2026-10-17 21:01 UTC
 
-## Cumprimento da finalidade · índice geral 67%
+## Cumprimento da finalidade · índice geral 65%
 - Motores: 100% (ok) — todo motor ativo lê dentro da sua cadência
 - Maestro: 79% (atencao) — cobertura completa do dia planejado
 - Rede neural: 99% (ok) — discernimento (AUC) de pelo menos 0,85
-- Biblioteca: 100% (ok) — toda oportunidade aberta aplicável com livro existente
-- Validação: 34% (falha) — toda oportunidade aberta validada
-- Site oficial: 70% (atencao) — toda aberta com site oficial
-- Prazo: 32% (falha) — toda aberta com prazo (ou fluxo contínuo)
-- Cartório: 62% (falha) — 12 de 12 itens certificados na fonte oficial
-- Tela e fichas: 99% (ok) — tudo que está aberto aparece na tela e tem ficha
+- Biblioteca: 99% (ok) — toda oportunidade aberta aplicável com livro existente
+- Validação: 31% (falha) — toda oportunidade aberta validada
+- Site oficial: 60% (falha) — toda aberta com site oficial
+- Prazo: 30% (falha) — toda aberta com prazo (ou fluxo contínuo)
+- Cartório: 61% (falha) — 12 de 12 itens certificados na fonte oficial
+- Tela e fichas: 96% (ok) — tudo que está aberto aparece na tela e tem ficha
 - Integração: 70% (atencao) — mesmas contagens e dados em dia em todos os sistemas
 - Fluxos automáticos: 55% (falha) — todo fluxo agendado roda na cadência e sem falha
 - Execução sem falha silenciosa: 0% (falha) — nenhuma etapa falha em silêncio
 
 ## Execução · fluxos: {'falha': 3, 'ok': 30, 'atencao': 7, 'atrasado': 2, 'manual': 2}
-- 00 · Verificar prontidão: falha · última 2026-10-17T20:09 · sucesso 0% · cadência 24.0 h
+- 00 · Verificar prontidão: falha · última 2026-10-17T20:35 · sucesso 0% · cadência 24.0 h
 - 35 · Alimentação diária externa (editais abertos): atencao · última 2026-10-17T13:10 · sucesso 30% · cadência 24.0 h
 - 06 · Alimentação manual (arquivos e links do titular): atencao · última 2026-10-17T18:15 · sucesso 40% · cadência None h
 - 05 · Busca ativa (a cada 3 dias): atencao · última 2026-10-15T17:32 · sucesso 10% · cadência None h
 - 09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes: atrasado · última 2026-10-03T11:56 · sucesso 100% · cadência 24.0 h
 - 10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar: atencao · última 2026-10-15T16:09 · sucesso 25% · cadência None h
-- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: falha · última 2026-10-17T20:23 · sucesso 0% · cadência 1.0 h
+- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: falha · última 2026-10-17T20:48 · sucesso 0% · cadência 1.0 h
 - 01 · Eldorado — motores por hora (00h–06h BRT): atencao · última 2026-10-17T12:52 · sucesso 50% · cadência 24.0 h
-- 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): atencao · última 2026-10-17T20:19 · sucesso 67% · cadência 1.0 h
+- 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): atencao · última 2026-10-17T20:51 · sucesso 78% · cadência 1.0 h
 - 34 · Motores de empresas (semanal, com recuperação): atencao · última 2026-10-17T10:57 · sucesso 67% · cadência 24.0 h
 - 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): falha · última 2026-10-17T20:16 · sucesso 50% · cadência 6.0 h
 - 02 · Alexandria — revisão mensal de leis e procedimentos: atrasado · última 2026-10-01T10:36 · sucesso 50% · cadência 24.0 h
@@ -37,37 +37,38 @@
 - sugestões de apresentação: ['decisões da titular (descartadas/inscritas aguardando aplicação e livros sinalizados para o Claude)']
 
 ## Oportunidades
-- abertas: 188 · validadas: 63 (33.5%) · por estado: {'em_verificacao': 113, 'validada': 63, 'validacao_manual': 12}
-- com livro: 186 · sem livro (problema): 0 · sem livro por regra: 2 {'não é seleção aberta a associações (dispensa/inexigibilidade de chamamento, credenciamento': 1, 'fora da abrangência: oportunidade pública municipal de outro estado (só Goiás tem livros m': 1} · livro inexistente: 0
-- sem site oficial: 56 · sem prazo: 128 · prazo vencido ainda aberta: 0
-- fora da tela: 2 · sem ficha: 0
-- itens que mais faltam: {'Prazo de recurso': 109, 'Anexos': 108, 'Objeto': 97, 'Requisitos': 95, 'Valor': 95, 'Resultado': 94, 'Território': 91, 'Prazo de inscrição': 88, 'Modalidade': 60, 'Órgão / financiador': 50, 'Esfera': 50, 'Área de atuação': 46}
+- abertas: 204 · validadas: 64 (31.4%) · por estado: {'em_verificacao': 120, 'validada': 64, 'validacao_manual': 20}
+- com livro: 202 · sem livro (problema): 2 · sem livro por regra: 0 {} · livro inexistente: 0
+- sem site oficial: 81 · sem prazo: 142 · prazo vencido ainda aberta: 0
+- fora da tela: 9 · sem ficha: 0
+- itens que mais faltam: {'Prazo de recurso': 120, 'Anexos': 118, 'Valor': 104, 'Objeto': 102, 'Requisitos': 102, 'Resultado': 101, 'Território': 98, 'Prazo de inscrição': 92, 'Modalidade': 60, 'Órgão / financiador': 45, 'Esfera': 45, 'Área de atuação': 42}
 
 ## Sistemas
 - motores: 43 funcionando · 0 em falha · 2 inativos · 4 com leitura parcial
 - maestro: cobertura 79.1% · esgotados 27
 - rede neural: AUC 0.843 · rotulados 1694 · treinada em 2026-10-14T05:54:08+00:00
-- Cartório: 0.619 certificado · fluxos do GitHub com falha: ['00 · Verificar prontidão', '03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)', '06 · Alimentação manual (arquivos e links do titular)']
+- Cartório: 0.6138 certificado · fluxos do GitHub com falha: ['00 · Verificar prontidão', '03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)', '06 · Alimentação manual (arquivos e links do titular)']
 - saúde: 7 alerta(s) · índice da sala de controle: 83
 
 ## Integração
-- contagens: {'repositorio_abertas': 188, 'diagnostico_abertas': 188, 'tela_cartoes': 186, 'fichas': 193, 'sala_controle_abertas': 188}
-- idade (h): {'repositorio': 0.0, 'fluxo': 0.0, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 0.9, 'rede_neural': 0.3, 'saude': 6.3}
+- contagens: {'repositorio_abertas': 204, 'diagnostico_abertas': 204, 'tela_cartoes': 196, 'fichas': 210, 'sala_controle_abertas': 204}
+- idade (h): {'repositorio': 0.0, 'fluxo': 0.2, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 0.7, 'rede_neural': 0.2, 'saude': 6.8}
 - decisões da titular: 0 · não aplicadas: 0
 
-## Problemas (23)
+## Problemas (24)
 - [alta] 8 etapa(s) com erro nos ciclos de hoje: recalcular: recalcular:1: código 124 | recalcular: recalcular:1: código 124 | recalcular: recalcular:1: código 124 → investigar a etapa (sem correção automática)
 - [alta] 2 etapa(s) falharam em silêncio na última execução de motor-agregadores.yml: "rede: robots.txt inacessível: URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)" | "rede: robots.txt inacessível: URLError: timed out", → investigar a etapa (sem correção automática)
 - [alta] 9 etapa(s) falharam em silêncio na última execução de monitoramento-diario.yml: "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu → investigar a etapa (sem correção automática)
 - [alta] fluxo '00 · Verificar prontidão' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
 - [alta] fluxo '12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
 - [alta] fluxo '03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)' falhou nas últimas execuções (50% de sucesso) → investigar o fluxo (sem correção automática)
-- [alta] 2 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
-- [alta] tela mostra 186 oportunidades e o repositório conta 188 → refazer a tela
+- [alta] 9 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
+- [alta] 2 de 204 oportunidades abertas sem livro e sem regra que justifique → criar/vincular livros
+- [alta] tela mostra 196 oportunidades e o repositório conta 204 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 344.7 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 394.0 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] 103 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
+- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 345.1 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 394.4 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] 56 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 84 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 244 item(ns) esperando a análise do Claude (próxima: 2026-10-17) → ver o fluxo/arquivo indicado
 - [media] saúde · coerência: mapa e lista divergem em GO, __nac__, AM, SC, MG → refazer tela e indicadores
@@ -76,26 +77,26 @@
 - [media] saúde · opressores: 34 opressor(es) duplicado(s) no catálogo → ver o fluxo/arquivo indicado
 - [media] saúde · workflows: 00 · Verificar prontidão: últimas 5 execuções sem sucesso → ver o fluxo/arquivo indicado
 - [media] saúde · workflows: 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: últimas 4 execuções sem sucesso → ver o fluxo/arquivo indicado
-- [media] 56 abertas ainda sem site oficial → Cartório/Interceptador (sem correção automática imediata)
-- [baixa] 128 abertas sem prazo de inscrição conhecido → Cartório/Interceptador (sem correção automática imediata)
+- [media] 81 abertas ainda sem site oficial → Cartório/Interceptador (sem correção automática imediata)
+- [baixa] 142 abertas sem prazo de inscrição conhecido → Cartório/Interceptador (sem correção automática imediata)
 - [baixa] 18 módulos de teste em quarentena (envelhecidos) → atualizar o teste à regra atual (sem correção automática)
 
 ## Workflow (estrutura de 15/10)
-- comando único: 26 ciclo(s) hoje · 6 vermelho(s) · 8 etapa(s) com erro · fases puladas {'modalidade': 26, 'treinar_rede': 26, 'expurgo': 25, 'migracao_livros': 26, 'unir_livros': 25, 'biblioteca_diaria': 25, 'vigilancia_diaria': 25, 'recalcular': 4}
+- comando único: 27 ciclo(s) hoje · 6 vermelho(s) · 8 etapa(s) com erro · fases puladas {'modalidade': 26, 'treinar_rede': 27, 'expurgo': 26, 'migracao_livros': 27, 'unir_livros': 26, 'biblioteca_diaria': 26, 'vigilancia_diaria': 26, 'recalcular': 4}
 - cobertura do dia: 79.1% de 129 motores
-- retentativa: {'aguardando_retentativa': 987, 'fora_da_fila': 84, 'fora_da_fila_por_escopo': {'outras-oportunidades-1': 4, 'outras-oportunidades-6': 4, 'recorrencia': 4, 'outras-oportunidades-5': 5, 'outras-oportunidades-8': 3, 'outras-oportunidades-3': 4, 'f260-captacao-044': 1, 'outras-oportunidades-2': 2, 'plat-empresas-editais-incentivados': 2, 'f260-captacao-238': 2, 'cartorio': 42, 'outras-oportunidades-7': 3, 'f260-captacao-242': 1, 'f260-captacao-224': 1, 'empresas-incentivadas': 1, 'f260-espalhado-sistema-mirassoldoeste-mt-gov-br': 1, 'f260-captacao-218': 1, 'f260-captacao-113': 3}, 'regra': 'volta em 30 min; sai após 5 tentativas com o mesmo erro', 'destinos': {'Claude no Chrome': 42, 'rota quebrada': 0, 'ponte ou Chrome': 40, 'sem destino': 2}} · leitura parcial na fila: 847
-- curadoria do link oficial: {'reprovado': 45, 'em curadoria': 72, 'sem link oficial': 23, 'aprovado': 41}
+- retentativa: {'aguardando_retentativa': 1013, 'fora_da_fila': 84, 'fora_da_fila_por_escopo': {'outras-oportunidades-1': 4, 'outras-oportunidades-6': 4, 'recorrencia': 4, 'outras-oportunidades-5': 5, 'outras-oportunidades-8': 3, 'outras-oportunidades-3': 4, 'f260-captacao-044': 1, 'outras-oportunidades-2': 2, 'plat-empresas-editais-incentivados': 2, 'f260-captacao-238': 2, 'cartorio': 42, 'outras-oportunidades-7': 3, 'f260-captacao-242': 1, 'f260-captacao-224': 1, 'empresas-incentivadas': 1, 'f260-espalhado-sistema-mirassoldoeste-mt-gov-br': 1, 'f260-captacao-218': 1, 'f260-captacao-113': 3}, 'regra': 'volta em 30 min; sai após 5 tentativas com o mesmo erro', 'destinos': {'Claude no Chrome': 42, 'rota quebrada': 0, 'ponte ou Chrome': 40, 'sem destino': 2}} · leitura parcial na fila: 871
+- curadoria do link oficial: {'reprovado': 67, 'em curadoria': 72, 'aprovado': 43, 'sem link oficial': 14}
 - validação por exceção: trava fechada: acerto do Cartório 77.4% < 85.0% — candidatas vão à frente da conferência humana
 - auditorias: {'gabarito_do_cartorio': {'em': '2026-10-15T19:53:25+00:00', 'acerto_pct': 77.4, 'documentos_lidos': 142}, 'varredura_referencia': '2026-10-01_2026-10-15', 'robots': {'em': '2026-10-15T10:07:53+00:00', 'motores_com_bloqueio': 5}, 'ponte': {'ponte_ok': 7, 'direto_ok': 5, 'so_pela_ponte': ['ALEGO · SPL (proposições)', 'MPGO'], 'nenhum': ['TJGO · portal'], 'total': 8}}
-- legislativo: {'atualizado_em': '2026-10-17T20:15:15+00:00', 'proposicoes': 12}
+- legislativo: {'atualizado_em': '2026-10-17T20:48:35+00:00', 'proposicoes': 12}
 
 ## Decisões do Eldorado: agiu como deveria?
 - decidir · motores escolhidos para ler na passagem: **correto** (0 de 129) — regra: todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)
-- qualificar · oportunidades abertas para associação: **correto** (0 de 188) — regra: pregão, registro de preços, credenciamento de prestadores, contratação de empresa, OS da saúde e seleção de pessoal não são oportunidade (ruído ou acompanhar)
-- legislativo · atos legislativos fora das oportunidades: **correto** (0 de 188) — regra: projeto de lei, utilidade pública e orçamento vão ao acompanhamento legislativo, nunca às abertas
-- prazo · oportunidades contadas como abertas: **correto** (0 de 188) — regra: prazo vencido sai das abertas
-- site_oficial · link oficial gravado no repositório: **correto** (0 de 132) — regra: agregador ou replicador nunca é link oficial
-- certificar · itens certificados pelo Cartório: **correto** (0 de 524) — regra: todo item certificado tem trecho literal e documento
+- qualificar · oportunidades abertas para associação: **correto** (0 de 204) — regra: pregão, registro de preços, credenciamento de prestadores, contratação de empresa, OS da saúde e seleção de pessoal não são oportunidade (ruído ou acompanhar)
+- legislativo · atos legislativos fora das oportunidades: **correto** (0 de 204) — regra: projeto de lei, utilidade pública e orçamento vão ao acompanhamento legislativo, nunca às abertas
+- prazo · oportunidades contadas como abertas: **correto** (0 de 204) — regra: prazo vencido sai das abertas
+- site_oficial · link oficial gravado no repositório: **correto** (0 de 123) — regra: agregador ou replicador nunca é link oficial
+- certificar · itens certificados pelo Cartório: **correto** (0 de 555) — regra: todo item certificado tem trecho literal e documento
 - validar · validação por exceção: **correto** (0 de 0) — regra: só valida sozinho com acerto do Cartório ≥ 85% no gabarito e link oficial aprovado na curadoria
 - farol · oportunidades prontas para o Farol: **correto** (0 de 21) — regra: pronta só com prazo vigente e link oficial aprovado na curadoria
-- biblioteca · livros da Biblioteca: **correto** (0 de 2339) — regra: ato legislativo não gera livro
+- biblioteca · livros da Biblioteca: **correto** (0 de 2413) — regra: ato legislativo não gera livro
