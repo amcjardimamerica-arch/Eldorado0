@@ -232,6 +232,13 @@ def importar(pasta: Path, origem: str, gravar: bool = True, externa: bool = Fals
         CERTIDOES.parent.mkdir(parents=True, exist_ok=True)
         base["em"] = _agora()
         _LA.guardar_lote([(CERTIDOES, base)])                    # 16/10: no livro
+        # 17/10/2026 (titular): A PESQUISA EXTERNA É GRAVADA NOS LIVROS — cada resultado (veredito, parecer, itens com
+        # "como_encontrou", dispensas) e o APRENDIZADO, individual por livro, vão para o livro da oportunidade; o arquivo
+        # coletivo de vereditos e o relatório de aprendizado são regerados como VISTAS a partir dos livros
+        sys.path.insert(0, str(ROOT))
+        from src import pesquisa_externa as _P
+        _lista = [{"id": k, **v} if isinstance(v, dict) and "id" not in v else v for k, v in regs.items()] if isinstance(regs, dict) else list(regs)
+        rel["nos_livros"] = {**_P.gravar(_lista, origem), **_P.vista_vereditos(), **_P.vista_aprendizado()}
     return rel
 
 
@@ -331,7 +338,7 @@ def atualizar_ja() -> dict:
     for nome, f in (("repositorio", lambda: __import__("src.repositorio_unico", fromlist=["x"]).construir(gravar=True)),
                     ("fluxo", lambda: __import__("src.fluxo_oportunidades", fromlist=["x"]).sincronizar_com_repositorio()),   # 17/10: rápido
                     ("pendencias", lambda: __import__("src.cartorio", fromlist=["x"]).pendencias()),
-                    ("aprendizado", gerar_aprendizado),
+                    ("aprendizado", lambda: __import__("src.pesquisa_externa", fromlist=["x"]).vista_aprendizado()),
                     ("sala", lambda: __import__("src.sala_controle", fromlist=["x"]).run())):   # 17/10: a página inicial lê a sala
         try:
             r = f(); out[nome] = "ok" if not isinstance(r, dict) else {k: v for k, v in r.items() if not isinstance(v, (list, dict))}
