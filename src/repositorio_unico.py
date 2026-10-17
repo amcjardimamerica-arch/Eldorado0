@@ -295,6 +295,8 @@ def municipal_fora_de_goias(r: dict, uf_agregador: str | None = None) -> str | N
         if _m and re.sub(r"[^a-z]", "", _m.group(1)) in _CAPITAIS_SEM_ESPACO:
             return None
     uf = str(r.get("uf") or uf_agregador or "").upper()
+    if uf == "BR":                                     # 17/10: "BR" é nacional, não é estado
+        uf = ""
     if uf not in UFS:
         uf = uf_por_municipio(f"{r.get('titulo') or ''} {r.get('orgao') or ''}") or uf
     if uf not in UFS:
@@ -306,8 +308,55 @@ def municipal_fora_de_goias(r: dict, uf_agregador: str | None = None) -> str | N
         if len(achados) == 1:
             uf = achados.pop()
     if uf and uf != "GO":
+        # 17/10/2026 (titular): SEM CIDADE VERIFICADA NÃO SE ELIMINA — deve ser estadual. Só sai quando o município é
+        # NOMEADO (no texto ou no endereço do site oficial); "Chamamento Público nº 005/2026 (BA)" sem cidade fica.
+        _cid = cidade_verificada(r)
+        if not _cid:
+            return None
+        if _cid not in ("nomeado no texto",) and _municipio_goiano(f"município de {_cid}"):
+            return None                                # a cidade nomeada é de Goiás: fica
         return f"arquivada: municipal fora de Goiás ({uf}) — o livro fica guardado na Biblioteca"
     return None
+
+
+_CIDADE_NOMEADA = re.compile(r"(?i)\b(?:munic[íi]pio|prefeitura(?:\s+municipal)?|c[âa]mara\s+municipal|fundo\s+municipal[\wÀ-ú ]{0,40}?|"
+                             r"secretaria\s+municipal[\wÀ-ú ]{0,40}?|di[áa]rio\s+oficial)\s+d[eoa]s?\s+([A-ZÀ-Úa-zà-ú][\wÀ-ú'\- ]{2,40})")
+
+
+def cidade_verificada(r: dict) -> str | None:
+    """O nome do município, quando o texto ou o endereço do site oficial o NOMEIA; senão None (não se elimina)."""
+    t = f"{r.get('titulo') or ''} {r.get('orgao') or ''}"
+    m = _CIDADE_NOMEADA.search(t)
+    if m:
+        nome = re.split(r"\s+[-—–(|:,]|\s+-\s+|\s{2,}", m.group(1).strip())[0].strip()
+        if len(re.sub(r"[^A-Za-zÀ-ú]", "", nome)) >= 3 and not re.match(r"(?i)(?:estado|uni[ãa]o|governo|munic|prefeitura)\b", nome):
+            return nome
+    if uf_por_municipio(t):                            # cita pelo nome um município conhecido
+        return "nomeado no texto"
+    # PELO ENDEREÇO DO SITE OFICIAL: a parte do domínio é o NOME de um município daquela UF (lista do IBGE) — juatuba.mg.gov.br
+    # é a Prefeitura de Juatuba; fapesc.sc.gov.br não (FAPESC não é município). Não vale para fonte/entidade nacional
+    # (ABCR, Querido Diário, associação, instituto, fundação): a página guardada no livro dela é só exemplo.
+    if re.search(r"(?i)querido di[áa]rio|\babcr\b|associa[çc][ãa]o|instituto|funda[çc][ãa]o|— oportunidades", t) and not _MUN.search(t):
+        return None
+    if not _MUN_BR:
+        _MUN_BR.update((_j(ROOT / "config/municipios_brasil.json", {}) or {}).get("municipios") or {"-": []})
+    import unicodedata as _ud
+    _sem = lambda x: re.sub(r"[^a-z]", "", _ud.normalize("NFKD", str(x)).encode("ascii", "ignore").decode().lower())  # noqa: E731
+    for u in (r.get("url"), r.get("link_oficial")):
+        _m = re.search(r"https?://(?:[\w-]+\.)*?([a-z-]{3,})\.([a-z]{2})\.(?:gov|leg)\.br", str(u or ""))
+        if not _m or _m.group(2) == "go":
+            continue
+        rot, ufd = _sem(_m.group(1)), _m.group(2).upper()
+        if not _MUN_POR_ROTULO:
+            for nome, ufs in _MUN_BR.items():
+                _MUN_POR_ROTULO.setdefault(_sem(nome), []).append((nome, set(ufs if isinstance(ufs, list) else [ufs])))
+        for nome, ufs in _MUN_POR_ROTULO.get(rot, []):
+            if ufd in ufs:
+                return nome
+    return None
+
+
+_MUN_POR_ROTULO: dict = {}
 
 
 def _oficial(url: str) -> bool:
