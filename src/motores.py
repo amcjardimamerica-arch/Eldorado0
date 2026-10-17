@@ -819,8 +819,10 @@ def run() -> dict:
                 _cl0(_m)
             except Exception:
                 pass
-            if _m.get("id") in _arq or _m.get("id") in _juntados or fora_da_abrangencia(_m):   # 14/10 (titular, confirmado): só Goiás tem livros municipais
+            if _m.get("id") in _juntados:                  # unido a outro: o conteúdo está no que ficou (a trava o guarda inteiro)
                 continue
+            if _m.get("id") in _arq or fora_da_abrangencia(_m):   # 17/10 (titular, trava): MARCA, não retira — livro não some
+                _m["fora_da_abrangencia"] = "município de outro estado (não capital), cidade verificada"
             if empresa_sem_edital(_m):
                 _m["papel"] = "fonte_de_busca"
             _f.append(_m)

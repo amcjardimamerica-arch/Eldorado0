@@ -280,6 +280,7 @@ def absorver(caminhos: list, gravar_: bool = True, apagar: bool = True, controle
     """controle_sem_livro=True: a parte que não é oportunidade (ex.: diagnóstico e aposta do voo do piloto) fica no
     CONTROLE (_origens), não nos livros nem descartada — é memória operacional, não dado de oportunidade."""
     from .banco_livros import _novo_livro
+    _ini_descartes = len(DESCARTES)                         # 17/10: os descartes DESTA absorção são gravados no fim
     idx = indice()
     _IDX_ATUAL.clear(); _IDX_ATUAL.update(idx)
     cat = _j(CAT, {"motores": []}); L = cat.setdefault("motores", [])
@@ -358,7 +359,28 @@ def absorver(caminhos: list, gravar_: bool = True, apagar: bool = True, controle
         if apagar:
             for p in arquivos:
                 p.unlink()                                 # o banco paralelo é APAGADO (à força)
+    if gravar_ and len(DESCARTES) > _ini_descartes:
+        registrar_descartes(DESCARTES[_ini_descartes:], "absorção")
     return {"arquivos": len(arquivos), "livros_tocados": len(livros), "livros_criados": criados, **dict(st)}
+
+
+def registrar_descartes(itens: list, origem: str) -> int:
+    """17/10/2026 (titular): DESCARTE SEMPRE DEIXA RASTRO. A absorção guardava os descartes só em memória — foi assim que
+    2.153 certidões do Cartório sumiram em 16/10 sem registro (1.659 eram de livros que existiam). Cada descarte vai,
+    com o arquivo de origem, a chave e o registro inteiro, para estado/descartes_absorcao/AAAA-MM-DD.jsonl: dá para
+    rever e, se foi indevido, restaurar."""
+    from datetime import date as _d
+    pasta = ROOT / "estado/descartes_absorcao"; pasta.mkdir(parents=True, exist_ok=True)
+    arq = pasta / f"{_d.today().isoformat()}.jsonl"
+    with arq.open("a", encoding="utf-8") as fh:
+        for it in itens:
+            if isinstance(it, (list, tuple)) and len(it) == 4:
+                rel, cam, k, v = it
+                reg = {"origem": origem, "arquivo": rel, "caminho": cam, "chave": k, "registro": v}
+            else:
+                reg = {"origem": origem, **(it if isinstance(it, dict) else {"registro": it})}
+            fh.write(json.dumps({"em": _agora(), **reg}, ensure_ascii=False, default=str) + "\n")
+    return len(itens)
 
 
 # ── leitura pelos módulos antigos ─────────────────────────────────────────────────────────────────────────────────

@@ -372,6 +372,8 @@ def fases(ctx: dict) -> list[dict]:
                   [py, "-c", "import json; from src import banco_livros as B; r=B.registrar_do_estado_dos_motores(); print(json.dumps({k: v for k, v in r.items() if k != 'fora_dos_livros_por_arquivo'}, ensure_ascii=False))"],
                   # 17/10 (titular): MIGRAÇÃO ÚNICA da pesquisa externa para os livros (idempotente; aplicada pela própria passagem)
                   [py, "scripts/migracoes/pesquisa_externa_nos_livros_2026_10_17.py"],
+                  # 17/10 (titular): MIGRAÇÃO ÚNICA — as certidões do Cartório descartadas sem rastro em 16/10 voltam aos livros
+                  [py, "scripts/migracoes/certidoes_restauradas_2026_10_17.py"],
                   # 17/10 (titular): os "opressores" viraram LIVROS — junta o que uma passagem antiga gravou com o nome antigo
                   [py, "-c", "import json; from src import livros_monitoramento as M; print(json.dumps(M.migrar_nome_antigo(), ensure_ascii=False))"],
                   # 17/10 (testes P0): as fontes de Outras oportunidades são ATUALIZADAS aqui (consultar não grava)
