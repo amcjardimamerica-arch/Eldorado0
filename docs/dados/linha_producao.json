@@ -1,15 +1,15 @@
 {
- "em": "2026-10-17T19:39:01+00:00",
+ "em": "2026-10-17T20:14:46+00:00",
  "regra": "LINHA DE PRODUÇÃO DE INFORMAÇÃO (titular, 02/10/2026).\n\nCada canal (motor ou Piloto) só COLETA. As etapas seguintes são comuns e nada é eliminado:\n  (02/10: os nomes BRONZE/PRATA/OURO passaram a ser só os SELOS da esteira — src/esteira.py; aqui as etapas são:)\n  COLETADO    o registro coletado, como chegou (base dados/oportunidades/oportunidades.jsonl)\n  CONSOLIDADO canal canônico + contrato de dados conferido + ENTIDADE resolvida entre canais (a mesma oportunidade vista\n              em vários canais vira uma entidade só, e o número de canais é a CORROBORAÇÃO)\n  EM_LIVRO    a entidade chegou ao mapa ou a um livro da Biblioteca\n  QUALIFICADO o livro recebeu veredito (APLICÁVEL / EM REVISÃO / NÃO APLICA) — arquivamento só manual\nRegistro que viola o contrato vai à FILA DE REPROCESSAMENTO (nunca ao lixo) com o plano de correção.\nO LIVRO-RAZÃO (estado/linha/razao-AAAA-MM.jsonl.gz) guarda só acréscimos: cada mudança de etapa, com data e motivo.",
  "funil": {
-  "coletados": 929,
-  "oportunidades_distintas": 511,
+  "coletados": 936,
+  "oportunidades_distintas": 514,
   "entidades_em_2_ou_mais_canais": 73,
   "etapas": {
-   "EM_LIVRO": 694,
-   "CONSOLIDADO": 31,
-   "QUALIFICADO": 58,
-   "REPROCESSAR": 146
+   "EM_LIVRO": 696,
+   "CONSOLIDADO": 33,
+   "QUALIFICADO": 59,
+   "REPROCESSAR": 148
   },
   "fila_de_reprocessamento": {
    "URL de buscador (falta o site oficial)": 7,
@@ -20,14 +20,14 @@
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-01-15 → reler o prazo na fonte": 1,
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-03-12 → reler o prazo na fonte": 1,
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-05-14 → reler o prazo na fonte": 1,
-   "sem fonte_id": 132
+   "sem fonte_id": 134
   }
  },
  "canais": [
   {
    "canal": "piloto-interceptador",
    "familia": "pilotos",
-   "registros": 474,
+   "registros": 476,
    "entidades": 327,
    "exclusivas": 258,
    "corroboradas": 69,
@@ -36,9 +36,9 @@
   {
    "canal": "pncp-api",
    "familia": "portal_chamamentos",
-   "registros": 26,
-   "entidades": 26,
-   "exclusivas": 17,
+   "registros": 27,
+   "entidades": 27,
+   "exclusivas": 18,
    "corroboradas": 9,
    "validadas_como_reais": 10
   },
@@ -270,9 +270,9 @@
   {
    "canal": "empresas-editais-incentivados",
    "familia": "empresas",
-   "registros": 20,
-   "entidades": 16,
-   "exclusivas": 12,
+   "registros": 21,
+   "entidades": 17,
+   "exclusivas": 13,
    "corroboradas": 4,
    "validadas_como_reais": 0
   },
@@ -328,6 +328,15 @@
    "entidades": 2,
    "exclusivas": 1,
    "corroboradas": 1,
+   "validadas_como_reais": 0
+  },
+  {
+   "canal": "f260-captacao-236",
+   "familia": "orgao_publico",
+   "registros": 2,
+   "entidades": 2,
+   "exclusivas": 2,
+   "corroboradas": 0,
    "validadas_como_reais": 0
   },
   {
@@ -440,15 +449,6 @@
   },
   {
    "canal": "f260-curadoria-007",
-   "familia": "orgao_publico",
-   "registros": 1,
-   "entidades": 1,
-   "exclusivas": 1,
-   "corroboradas": 0,
-   "validadas_como_reais": 0
-  },
-  {
-   "canal": "f260-captacao-236",
    "familia": "orgao_publico",
    "registros": 1,
    "entidades": 1,
