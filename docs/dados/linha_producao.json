@@ -1,15 +1,15 @@
 {
- "em": "2026-10-17T19:13:23+00:00",
+ "em": "2026-10-17T19:39:01+00:00",
  "regra": "LINHA DE PRODUÇÃO DE INFORMAÇÃO (titular, 02/10/2026).\n\nCada canal (motor ou Piloto) só COLETA. As etapas seguintes são comuns e nada é eliminado:\n  (02/10: os nomes BRONZE/PRATA/OURO passaram a ser só os SELOS da esteira — src/esteira.py; aqui as etapas são:)\n  COLETADO    o registro coletado, como chegou (base dados/oportunidades/oportunidades.jsonl)\n  CONSOLIDADO canal canônico + contrato de dados conferido + ENTIDADE resolvida entre canais (a mesma oportunidade vista\n              em vários canais vira uma entidade só, e o número de canais é a CORROBORAÇÃO)\n  EM_LIVRO    a entidade chegou ao mapa ou a um livro da Biblioteca\n  QUALIFICADO o livro recebeu veredito (APLICÁVEL / EM REVISÃO / NÃO APLICA) — arquivamento só manual\nRegistro que viola o contrato vai à FILA DE REPROCESSAMENTO (nunca ao lixo) com o plano de correção.\nO LIVRO-RAZÃO (estado/linha/razao-AAAA-MM.jsonl.gz) guarda só acréscimos: cada mudança de etapa, com data e motivo.",
  "funil": {
-  "coletados": 922,
-  "oportunidades_distintas": 509,
+  "coletados": 929,
+  "oportunidades_distintas": 511,
   "entidades_em_2_ou_mais_canais": 73,
   "etapas": {
-   "EM_LIVRO": 687,
-   "CONSOLIDADO": 32,
+   "EM_LIVRO": 694,
+   "CONSOLIDADO": 31,
    "QUALIFICADO": 58,
-   "REPROCESSAR": 145
+   "REPROCESSAR": 146
   },
   "fila_de_reprocessamento": {
    "URL de buscador (falta o site oficial)": 7,
@@ -20,14 +20,14 @@
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-01-15 → reler o prazo na fonte": 1,
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-03-12 → reler o prazo na fonte": 1,
    "PRAZO_IMPOSSIVEL: prazo impossível: 2035-05-14 → reler o prazo na fonte": 1,
-   "sem fonte_id": 131
+   "sem fonte_id": 132
   }
  },
  "canais": [
   {
    "canal": "piloto-interceptador",
    "familia": "pilotos",
-   "registros": 470,
+   "registros": 474,
    "entidades": 327,
    "exclusivas": 258,
    "corroboradas": 69,
@@ -144,9 +144,9 @@
   {
    "canal": "outras-oportunidades-2",
    "familia": "outros",
-   "registros": 5,
-   "entidades": 5,
-   "exclusivas": 4,
+   "registros": 6,
+   "entidades": 6,
+   "exclusivas": 5,
    "corroboradas": 1,
    "validadas_como_reais": 2
   },
@@ -202,6 +202,15 @@
    "entidades": 2,
    "exclusivas": 1,
    "corroboradas": 1,
+   "validadas_como_reais": 1
+  },
+  {
+   "canal": "do-goiania",
+   "familia": "diario_oficial",
+   "registros": 1,
+   "entidades": 1,
+   "exclusivas": 1,
+   "corroboradas": 0,
    "validadas_como_reais": 1
   },
   {
@@ -454,7 +463,7 @@
   "orgao_publico": 15,
   "terceiro_setor": 4,
   "outros": 18,
-  "diario_oficial": 3,
+  "diario_oficial": 4,
   "empresas": 2
  },
  "corroboradas": [
@@ -557,13 +566,6 @@
    ]
   },
   {
-   "entidade": "b629cc2bc40bb6443783",
-   "canais": [
-    "dou",
-    "piloto-interceptador"
-   ]
-  },
-  {
    "entidade": "4b30661ea4d6e01e0607",
    "canais": [
     "piloto-interceptador",
@@ -575,6 +577,13 @@
    "canais": [
     "piloto-interceptador",
     "recorrencia"
+   ]
+  },
+  {
+   "entidade": "b629cc2bc40bb6443783",
+   "canais": [
+    "dou",
+    "piloto-interceptador"
    ]
   },
   {
@@ -669,6 +678,13 @@
    ]
   },
   {
+   "entidade": "90de619cc79aa4de9634",
+   "canais": [
+    "piloto-interceptador",
+    "prefeituras-50-go"
+   ]
+  },
+  {
    "entidade": "987124decd52424971cc",
    "canais": [
     "abcr",
@@ -687,13 +703,6 @@
    "canais": [
     "piloto-interceptador",
     "pncp-api"
-   ]
-  },
-  {
-   "entidade": "90de619cc79aa4de9634",
-   "canais": [
-    "piloto-interceptador",
-    "prefeituras-50-go"
    ]
   },
   {
