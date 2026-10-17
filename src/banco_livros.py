@@ -370,6 +370,12 @@ def registrar_achados(achados: list[dict], motor: str | None = None, gravar: boo
                 pelo_indice += 1
         if lid not in por_id:
             lv = _novo_livro(a, k); L.append(lv); por_id[lv["id"]] = lv; idx[k] = lv["id"]; criados += 1
+            if _ind is not None:                          # 17/10: o livro novo ENTRA no índice — o 2º achado do mesmo
+                try:                                      # edital no mesmo lote liga a ele, em vez de abrir outro livro
+                    from .indice_livros import entrada as _ent
+                    _ind.adicionar(_ent(lv))
+                except Exception:  # noqa: BLE001
+                    _ind = None
             if _ind is not None:                          # 17/10: o próximo achado do MESMO lote já enxerga este livro
                 from .indice_livros import entrada
                 _ind.adicionar(entrada(lv))

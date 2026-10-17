@@ -350,3 +350,40 @@ def migrar_nome_antigo() -> dict:
         n.write_text(_json.dumps(dn, ensure_ascii=False, indent=1), encoding="utf-8"); a.unlink()
         out[antigo] = "juntado em " + novo
     return out
+
+
+def remapear_unidos(gravar: bool = True) -> dict:
+    """17/10/2026: livro UNIDO a outro (registrado em 'juntados' do que fica) — o monitoramento passa a apontar para o livro
+    que ficou (o histórico do monitoramento é juntado, nada se perde)."""
+    import json as _json
+    from pathlib import Path as _P
+    raiz = _P(__file__).resolve().parents[1]
+    p = raiz / "estado/livros_monitoramento.json"
+    if not p.exists():
+        return {}
+    m = _json.loads(p.read_text(encoding="utf-8"))
+    L = (_json.loads((raiz / "biblioteca_alexandria/fontes/motores.json").read_text(encoding="utf-8")).get("motores") or [])
+    ids = {x.get("id") for x in L}
+    mapa = {}
+    for x in L:
+        for j in x.get("juntados") or []:
+            jid = j.get("id") if isinstance(j, dict) else j
+            if jid:
+                mapa[jid] = x["id"]
+    n = 0
+    lig = m.get("ligados")
+    if isinstance(lig, dict):
+        for velho in [k for k in lig if k not in ids and k in mapa]:
+            novo = mapa[velho]
+            while novo not in ids and novo in mapa:          # união em cadeia
+                novo = mapa[novo]
+            v = lig.pop(velho)
+            if novo in lig and isinstance(lig[novo], dict) and isinstance(v, dict):
+                for kk, vv in v.items():
+                    lig[novo].setdefault(kk, vv)
+            else:
+                lig[novo] = v
+            n += 1
+    if gravar and n:
+        p.write_text(_json.dumps(m, ensure_ascii=False, indent=1), encoding="utf-8")
+    return {"monitoramento_remapeado": n}
