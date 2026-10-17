@@ -1,7 +1,7 @@
 {
- "em": "2026-10-17T20:15:37+00:00",
- "livros_com_aprendizado": 373,
- "aprendizados": 429,
+ "em": "2026-10-17T20:49:26+00:00",
+ "livros_com_aprendizado": 362,
+ "aprendizados": 414,
  "onde_estava": [
   [
    "notícia no site do órgão",
@@ -13,15 +13,11 @@
   ],
   [
    "Landing page própria da Zurich (zurich.com.br/leis-de-incentivo-2026) com regulamento PDF no CDN Sitecore",
-   7
+   8
   ],
   [
    "Notícia oficial da Prefeitura de Jataí",
    5
-  ],
-  [
-   "diário oficial",
-   4
   ],
   [
    "Página BNDES Periferias (accordion 'Chamada de Projetos para o 6º ciclo') + Roteiro PDF",
@@ -36,8 +32,12 @@
    4
   ],
   [
-   "notícia institucional",
-   4
+   "diário oficial",
+   3
+  ],
+  [
+   "https://www.zurich.com.br/leis-de-incentivo-2026",
+   3
   ],
   [
    "mossamedes.go.gov.br/politica-nacional-aldir-blanc-ciclo-ii/ (edital e 7 anexos em wp-content/uploads/2026/10)",
@@ -84,15 +84,15 @@
    3
   ],
   [
-   "https://www.zurich.com.br/leis-de-incentivo-2026",
+   "notícia institucional",
+   3
+  ],
+  [
+   "bndes.gov.br/periferias",
    2
   ],
   [
    "Modal 'Leia o Regulamento' na seção Cadastro de Organizações de impactarte.org.br",
-   2
-  ],
-  [
-   "bndes.gov.br/periferias",
    2
   ],
   [
@@ -107,7 +107,7 @@
  "tipo_de_documento": [
   [
    "PDF com texto",
-   16
+   15
   ],
   [
    "página HTML",
@@ -148,7 +148,7 @@
    4
   ],
   [
-   "mesmo PDF do DOM de 25/09/2026, busca por 'chamamento público'",
+   "raiz zurich.com.br → 'Edital Zurich de Leis de Incentivo 2026'",
    2
   ],
   [
@@ -168,19 +168,15 @@
    2
   ],
   [
-   "raiz bondinho.com.br → rodapé 'Programa de Incentivo a ONGs'; BeForms direto",
-   2
-  ],
-  [
    "abrir o DOM de 25/09/2026 e buscar 'EDITAL DE CHAMAMENTO PÚBLICO Nº 001/2026' (a íntegra do edital está publicada no pró",
    1
   ],
   [
-   "link do agregador IDIS → zurich.com.br/leis-de-incentivo-2026",
+   "mesmo PDF do DOM de 25/09/2026, busca por 'chamamento público'",
    1
   ],
   [
-   "raiz zurich.com.br → 'Edital Zurich de Leis de Incentivo 2026'",
+   "link do agregador IDIS → zurich.com.br/leis-de-incentivo-2026",
    1
   ],
   [
@@ -226,12 +222,16 @@
   [
    "API consulta PNCP + /arquivos",
    1
+  ],
+  [
+   "link Bússola citado no agregador",
+   1
   ]
  ],
  "bloqueios": [
   [
    "nenhum",
-   30
+   29
   ],
   [
    "documento só em imagem",
@@ -249,7 +249,7 @@
  "sugestao_para_o_motor": [
   [
    "monitorar zurich.com.br/leis-de-incentivo-AAAA a cada ano e aceitar edge.sitecorecloud.io como CDN oficial da Zurich",
-   7
+   8
   ],
   [
    "Notícias de resultado de editais PNAB 2024 de Goiânia apontam para editais com inscrições encerradas em 20/08/2024; desc",
@@ -300,7 +300,11 @@
    3
   ],
   [
-   "deduplicar registros que apontam para o mesmo PDF de diário e o mesmo número de edital",
+   "normalizar URLs !ut/p/z0 do portal BNDES para bndes.gov.br/periferias",
+   2
+  ],
+  [
+   "quando o financiador é empresa, abrir a raiz do domínio da marca e buscar 'edital'/'incentivo'",
    2
   ],
   [
@@ -312,19 +316,11 @@
    2
   ],
   [
-   "normalizar URLs !ut/p/z0 do portal BNDES para bndes.gov.br/periferias",
-   2
-  ],
-  [
    "Deduplicar por link_oficial idêntico",
    2
   ],
   [
    "quando o link for pasta do Drive, usar o nome da pasta/arquivos para buscar o post do financiador; Lei do ISS-RJ = restr",
-   2
-  ],
-  [
-   "deduplicar por financiador + nome do programa",
    2
   ],
   [
@@ -340,18 +336,22 @@
    2
   ],
   [
-   "Notícia com 'inscrições até DD de mês' sem ano: assumir o ano da publicação e descartar se a data já passou.",
+   "descartar PNAB municipais do Mapa Cultural do CE",
    2
   ],
   [
-   "descartar PNAB municipais do Mapa Cultural do CE",
+   "Para plataformas Mapas Culturais, consultar /api/opportunity/find?@select=id,name,registrationFrom,registrationTo em vez",
+   2
+  ],
+  [
+   "descartar oportunidades de mapacultural.secult.ce.gov.br (PNAB municipais do CE) por território",
    2
   ]
  ],
  "skill_necessaria": [
   [
    "nenhuma",
-   17
+   16
   ],
   [
    "mídia do WordPress",
@@ -381,19 +381,19 @@
  "por_veredito": [
   [
    "encerrada",
-   123
+   122
   ],
   [
    "fora_perfil",
-   104
+   99
   ],
   [
    "ruido",
-   84
+   76
   ],
   [
    "ouro",
-   42
+   41
   ],
   [
    "duplicata",
@@ -401,7 +401,7 @@
   ],
   [
    "validacao_manual",
-   24
+   23
   ],
   [
    "prata",
