@@ -1,71 +1,73 @@
 {
- "em": "2026-10-17T17:53:34+00:00",
+ "em": "2026-10-17T17:59:19+00:00",
  "regra": "um registro por oportunidade, num único lugar; abertas = validadas + em verificação + validação manual",
- "registros": 312,
- "abertas": 284,
- "validadas": 66,
- "em_verificacao": 208,
- "validacao_manual": 10,
- "fechadas": 23,
+ "registros": 299,
+ "abertas": 172,
+ "validadas": 62,
+ "em_verificacao": 99,
+ "validacao_manual": 11,
+ "fechadas": 122,
  "arquivadas_municipais_fora_de_goias": 5,
  "estantes": {
-  "bronze": 221,
-  "prata": 10,
-  "ouro": 43,
-  "sem_livro": 10
+  "bronze": 100,
+  "ouro": 62,
+  "prata": 2,
+  "sem_livro": 8
  },
  "proximo_passo": {
-  "Cartório: abordagem": 165,
-  "acompanhar o prazo": 66,
-  "Cartório: achar o site oficial": 23,
-  "Interceptador: achar o site oficial": 15,
-  "validação manual pela titular": 10,
+  "acompanhar o prazo": 62,
+  "Cartório: abordagem": 56,
+  "Cartório: achar o site oficial": 28,
+  "validação manual pela titular": 11,
+  "Interceptador: achar o site oficial": 10,
   "dispensar: não é seleção aberta a associações": 2,
   "Interceptador: completar 9 item": 1,
   "Interceptador: completar 7 item": 1,
   "Interceptador: completar 4 item": 1
  },
  "por_origem": {
-  "espiao": 9,
-  "agregador": 24,
-  "interceptador": 66,
-  "site_oficial": 99,
-  "pncp": 2,
-  "querido_diario": 7,
-  "diario_oficial": 1
+  "espiao": 5,
+  "site_oficial": 71,
+  "pncp": 4,
+  "interceptador": 9,
+  "agregador": 7,
+  "diario_oficial": 1,
+  "querido_diario": 2
  },
  "itens_em_verificacao": {
-  "nao_comprovado": 142,
-  "falta": 1496,
-  "comprovado": 832,
-  "dispensado": 26
+  "falta": 813,
+  "comprovado": 362,
+  "dispensado": 13
  },
  "fila_chrome": 0,
- "fila_interceptador": 18,
- "prontas_para_o_farol": 15,
+ "fila_interceptador": 13,
+ "prontas_para_o_farol": 16,
  "por_etapa": {
-  "7 · certificação dos 12 itens na fonte": 168,
-  "9 · pronta para o Farol de Alexandria": 64,
+  "9 · pronta para o Farol de Alexandria": 60,
+  "7 · certificação dos 12 itens na fonte": 59,
   "6 · site oficial": 38,
-  "8 · verificação externa definitiva": 10,
+  "8 · verificação externa definitiva": 11,
   "4 · pertinência a OSC": 2,
   "5 · livro na Biblioteca": 2
  },
  "fila_busca_externa": 0,
  "cruzamento": {
-  "com_certidao": 204,
-  "com_livro": 274,
-  "com_livro_de_editais_anteriores": 145,
-  "em_verificacao_com_onde_buscar_do_livro": 95
+  "com_certidao": 135,
+  "com_livro": 164,
+  "com_livro_de_editais_anteriores": 74,
+  "em_verificacao_com_onde_buscar_do_livro": 22
  },
  "dispensa_sugerida": 2,
  "motivo_sem_livro": {
-  "fora da abrangência": 8,
+  "fora da abrangência": 6,
   "não é seleção aberta a associações": 2
  },
  "auditoria": {
-  "ok": true,
-  "alertas": [],
+  "ok": false,
+  "alertas": [
+   "tela inicial (fluxo) conta 284 abertas; o repositório conta 172 — a tela passa a ler o repositório",
+   "fila do Cartório (271) maior que as abertas do repositório (172) — o Cartório passa a ler a fila do repositório"
+  ],
   "regra": "um único universo: tela, Cartório e Chrome derivam do repositório"
  }
 }

@@ -198,7 +198,8 @@ def importar(pasta: Path, origem: str, gravar: bool = True, externa: bool = Fals
                                  "reclassificar": {k: y for k, y in (x.get("reclassificar") or {}).items() if y},
                                  "fim": (x.get("prazo") or {}).get("fim"), "veredito_edicao": x.get("veredito_edicao") or None,
                                  "motivo": str(x.get("parecer") or "")[:300], "origem": origem, "em": _agora(),
-                                 "motor": _motor_de(rid)}   # 17/10: RASTRO — o motor que trouxe a oportunidade
+                                 "motor": _motor_de(rid),   # 17/10: RASTRO — o motor que trouxe a oportunidade
+                                 **({"aprendizado": x["aprendizado"]} if isinstance(x.get("aprendizado"), dict) else {})}
         n_ver += 1
         if v in VIGENTES:
             cert, av = certidao_de(x, origem)
@@ -297,6 +298,15 @@ def gerar_aprendizado() -> dict:
     from src.livro_arquivo import ler_arquivo as _ler
     certs = ((_ler(ROOT / "estado/cartorio/certidoes_manuais.json", {}) or {}).get("certidoes") or {})
     ap = [(k, c["aprendizado"]) for k, c in certs.items() if isinstance(c.get("aprendizado"), dict)]
+    # 17/10: também os VEREDITOS — a oportunidade eliminada (ruído, encerrada, fora do perfil) não gera certidão, e o
+    # aprendizado dela (por que o motor a trouxe) é o que mais ensina
+    _ja = {k.split(":", 1)[-1] for k, _a in ap}
+    try:
+        _ver = json.loads((ROOT / "biblioteca_alexandria/livros/_acervo/editais/vereditos_revisao.json").read_text(encoding="utf-8")).get("vereditos") or {}
+    except Exception:  # noqa: BLE001
+        _ver = {}
+    ap += [(i, {**v["aprendizado"], "veredito": v.get("veredito"), "motor": v.get("motor")}) for i, v in _ver.items()
+           if isinstance((v or {}).get("aprendizado"), dict) and i not in _ja]
     def cont(campo):
         return _c.Counter(str(a.get(campo)).strip()[:120] for _k, a in ap if a.get(campo)).most_common(25)
     dom = _c.Counter((_us(str(it.get("documento") or "")).hostname or "?").removeprefix("www.")
@@ -306,6 +316,9 @@ def gerar_aprendizado() -> dict:
            "busca_que_funcionou": cont("busca_que_funcionou"), "bloqueios": cont("bloqueio"),
            "sugestao_para_o_motor": cont("sugestao_para_o_motor"), "skill_necessaria": cont("skill_necessaria"),
            "dominios_dos_documentos": dom.most_common(30),
+           "por_veredito": _c.Counter(str(a.get("veredito")) for _k, a in ap if a.get("veredito")).most_common(),
+           "eliminadas_por_motor": _c.Counter(f"{a.get('motor')} → {a.get('veredito')}" for _k, a in ap
+                                              if a.get("veredito") in ("ruido", "encerrada", "fora_perfil", "duplicata")).most_common(20),
            "regra": "como o Claude no Chrome achou cada dado — base para melhorar os motores e criar skills"}
     p = ROOT / "docs/dados/aprendizado_chrome.json"; p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
