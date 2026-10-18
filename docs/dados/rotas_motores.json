@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T13:38:07+00:00",
+ "em": "2026-10-18T13:47:26+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 61,
   "rota_nova": 52,
   "via_ponte": 3,
-  "exemplos_da_rede": 18333
+  "exemplos_da_rede": 18412
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tld:br",
-    2.9151
+    3.07
    ],
    [
     "origem:rota original",
-    2.8012
+    2.7809
    ],
    [
     "tok:secult",
@@ -40,16 +40,16 @@
     2.2012
    ],
    [
-    "tok:feed",
-    2.1049
+    "origem:biblioteca",
+    2.0449
    ],
    [
-    "origem:biblioteca",
-    2.0158
+    "tok:feed",
+    2.0164
    ],
    [
     "tok:deputados",
-    1.9693
+    2.0018
    ],
    [
     "tok:leipaulogustavo",
@@ -63,7 +63,7 @@
   "piores_sinais": [
    [
     "via:ponte",
-    -1.9874
+    -1.991
    ],
    [
     "tok:2026",
@@ -86,12 +86,12 @@
     -2.9531
    ],
    [
-    "origem:câmara",
-    -3.191
+    "origem:padrão",
+    -3.2707
    ],
    [
-    "origem:padrão",
-    -3.4446
+    "origem:câmara",
+    -3.2757
    ]
   ]
  },
@@ -478,7 +478,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T13:03:11+00:00",
+    "em": "2026-10-18T13:47:09+00:00",
     "testes": 14,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -935,7 +935,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T13:07:28+00:00",
+    "em": "2026-10-18T13:47:22+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -962,7 +962,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T13:07:33+00:00",
+    "em": "2026-10-18T13:47:26+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1070,7 +1070,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T13:02:56+00:00",
+    "em": "2026-10-18T13:46:54+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1400,11 +1400,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 31,
-    "aprendido_em": "2026-10-18T13:02:42+00:00"
+    "aprendido_em": "2026-10-18T13:46:51+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T13:02:42+00:00",
-    "testes": 16,
+    "em": "2026-10-18T13:46:51+00:00",
+    "testes": 17,
     "melhor": {
      "url": "https://portal.al.go.leg.br/",
      "via": "direto",
@@ -2222,11 +2222,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-18T13:07:26+00:00"
+    "aprendido_em": "2026-10-18T13:47:19+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T13:07:26+00:00",
-    "testes": 13,
+    "em": "2026-10-18T13:47:19+00:00",
+    "testes": 12,
     "melhor": {
      "url": "https://www.detran.rj.gov.br/sitemap.xml",
      "via": "direto",
