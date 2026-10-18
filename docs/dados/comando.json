@@ -1,75 +1,60 @@
 {
- "atualizado_em": "2026-10-18T06:11:40+00:00",
+ "atualizado_em": "2026-10-18T06:33:51+00:00",
  "regra": "REDE NEURAL DE COMANDO — maestro e rede neural são UMA coisa só (titular, 15/10/2026).\n\nA rede neural determina o caminho de todo o fluxo; o maestro é a mão dela: aciona os motores de busca e devolve o que\nfoi coletado. A rede avalia o que voltou e direciona para a fase seguinte. Um ciclo, do começo ao fim:\n\n  1. DECIDIR    sem agenda: TODO motor ativo é lido TODO dia (premissa de 100% das informações disponíveis no dia);\n                a cada passagem entram os que ainda não completaram — adiado → nunca lido hoje → parcial — e, dentro\n                de cada grupo, o de maior valor esperado (nota média que a rede deu aos achados dele);\n  2. ACIONAR    o maestro roda os motores escolhidos e devolve um recibo (lidos, achados, falhas, adiados, erro);\n  3. AVALIAR    a rede mede a completude de cada motor (completa · parcial · pendente · só do Brasil) e o que entrou;\n  4. REACIONAR  parciais e pendentes voltam na mesma passagem enquanto houver tempo; o que só o Brasil/Chrome lê vai\n                para a fila de conferência humana (estado/comando/para_chrome.json);\n  5. DIRECIONAR as fases seguintes, em ordem, cada uma com RECIBO e PORTÃO (roda ou pula com motivo):\n                catalogar → treinar a rede → site oficial → certificar (trecho dos 12 itens) → curadoria do link\n                oficial (dois links, trecho exato, 6 critérios) → validar por exceção →\n                recalcular → biblioteca → fichas e Farol → legislativo → sala de controle → diagnóstico;\n  6. VEREDITO   etapa com erro torna o ciclo VERMELHO (o fluxo do GitHub falha à vista; acabou a falha silenciosa).",
  "ultimo_ciclo": {
-  "inicio": "2026-10-18T05:44:37+00:00",
+  "inicio": "2026-10-18T06:12:19+00:00",
   "recibos": [
    {
     "etapa": "acionar",
     "rc": 0,
-    "segundos": 1502.3,
+    "segundos": 1164.4,
     "erro": null,
     "livros_antes": 2521,
-    "livros_depois": 2521,
+    "livros_depois": 2524,
     "motores": [
-     "plat-prefeituras-50-go",
-     "f260-captacao-248",
+     "plataforma-wordpress",
+     "outras-oportunidades-3",
+     "outras-oportunidades-8",
+     "outras-oportunidades-6",
+     "f260-captacao-237",
+     "f260-captacao-001",
+     "f260-captacao-254",
+     "f260-captacao-227",
+     "outras-oportunidades-5",
+     "f260-espalhado-rouanet-cultura-gov-br",
+     "f260-captacao-240",
+     "f260-curadoria-005",
+     "f260-captacao-221",
+     "f260-captacao-224",
+     "f260-captacao-118",
      "outras-oportunidades-7",
      "outras-oportunidades-1",
+     "plat-prefeituras-50-go",
      "plat-empresas-editais-incentivados",
      "judiciario-cnj-tjgo",
      "plataforma-mapas-culturais",
-     "empresas-incentivadas",
      "judiciario-tjgo",
-     "plataforma-wordpress",
-     "outras-oportunidades-3",
-     "outras-oportunidades-8",
-     "outras-oportunidades-6",
+     "empresas-incentivadas",
      "plat-salic",
-     "f260-captacao-237",
-     "f260-captacao-001",
-     "f260-captacao-254",
-     "f260-captacao-227",
-     "outras-oportunidades-5",
-     "f260-espalhado-rouanet-cultura-gov-br",
-     "f260-captacao-228",
-     "f260-captacao-240",
-     "f260-curadoria-005",
-     "f260-captacao-221",
-     "f260-captacao-224",
-     "f260-captacao-118"
+     "f260-captacao-228"
     ],
-    "executados": 11,
-    "achados": 92,
-    "novos_na_base": 2,
+    "executados": 24,
+    "achados": 184,
+    "novos_na_base": 5,
     "adiados_por_tempo": [
-     "plataforma-wordpress",
-     "outras-oportunidades-3",
-     "outras-oportunidades-8",
-     "outras-oportunidades-6",
-     "f260-captacao-237",
-     "f260-captacao-001",
-     "f260-captacao-254",
-     "f260-captacao-227",
-     "outras-oportunidades-5",
-     "f260-espalhado-rouanet-cultura-gov-br",
-     "f260-captacao-240",
-     "f260-curadoria-005",
-     "f260-captacao-221",
-     "f260-captacao-224",
-     "f260-captacao-118"
+     "plat-prefeituras-50-go"
     ]
    },
    {
     "etapa": "catalogar",
     "finalidade": "achados por motor, status de cada motor e repositório único das oportunidades",
-    "segundos": 15.8,
+    "segundos": 16.0,
     "erro": "catalogar:4: KeyError: 'esqueleto'"
    },
    {
     "etapa": "site_oficial",
     "finalidade": "do replicador à fonte oficial e ao PDF do edital (navegação e PNCP)",
-    "segundos": 13.3,
+    "segundos": 11.6,
     "erro": null
    },
    {
@@ -81,19 +66,19 @@
    {
     "etapa": "pncp",
     "finalidade": "dossiê do PNCP: 12 de 12 com informação confirmada ou descarte justificado; o que faltar vai ao Interceptador",
-    "segundos": 0.6,
+    "segundos": 0.7,
     "erro": "pncp:1: KeyError: 'dado'"
    },
    {
     "etapa": "certificar",
     "finalidade": "trecho literal e página de cada um dos 12 itens no documento oficial (Cartório)",
-    "segundos": 1.2,
+    "segundos": 1.4,
     "erro": "certificar:1: KeyError: 'dado'"
    },
    {
     "etapa": "curadoria",
     "finalidade": "link de acesso, link oficial com curadoria objetiva (6 critérios) e trecho exato da oportunidade",
-    "segundos": 0.6,
+    "segundos": 0.7,
     "erro": "curadoria:1: KeyError: 'dado'"
    },
    {
@@ -105,62 +90,69 @@
    {
     "etapa": "livros",
     "finalidade": "os livros são o banco: cada oportunidade cria ou vincula o seu livro com links, checklist12, achados e análises",
-    "segundos": 1.3,
+    "segundos": 1.4,
     "erro": "livros:1: KeyError: 'dado'"
    },
    {
     "etapa": "banco_unico",
     "finalidade": "teste: bancos de dados que ainda existem fora dos livros",
-    "segundos": 2.8,
+    "segundos": 2.9,
     "erro": null
    },
    {
     "etapa": "legislativo",
     "finalidade": "projetos de lei, utilidades públicas e orçamento — acompanhamento sem livro",
-    "segundos": 0.0,
+    "segundos": 0.1,
     "erro": null
    },
    {
     "etapa": "fechamento",
     "finalidade": "repositório por último; fluxo e pendências do Cartório derivados dele (uma só fonte)",
-    "segundos": 49.1,
+    "segundos": 51.2,
     "erro": "fechamento:3: KeyError: 'dado'"
    },
    {
     "etapa": "fichas_farol",
     "finalidade": "ficha e janela de cada oportunidade aberta; o que está pronto vai ao Farol",
-    "segundos": 2.1,
+    "segundos": 2.2,
     "erro": null
    },
    {
     "etapa": "sala_de_controle",
     "finalidade": "instrumentos de cada etapa",
-    "segundos": 4.8,
+    "segundos": 5.5,
     "erro": null
    },
    {
     "etapa": "diagnostico",
     "finalidade": "diagnóstico da passagem (arquivo próprio; o relatório da análise não é sobrescrito)",
-    "segundos": 25.2,
+    "segundos": 29.4,
     "erro": null
    }
   ],
   "decisoes": [
    {
     "fase": "decidir",
-    "motores": 26,
+    "motores": 25,
     "adiados_primeiro": [
-     "plat-prefeituras-50-go"
+     "f260-captacao-001",
+     "f260-captacao-118",
+     "f260-captacao-221",
+     "f260-captacao-224",
+     "f260-captacao-227",
+     "f260-captacao-237",
+     "f260-captacao-240",
+     "f260-captacao-254",
+     "f260-curadoria-005",
+     "f260-espalhado-rouanet-cultura-gov-br",
+     "outras-oportunidades-3",
+     "outras-oportunidades-5",
+     "outras-oportunidades-6",
+     "outras-oportunidades-8",
+     "plataforma-wordpress"
     ],
-    "planejados_no_dia": 131,
-    "cobertura_antes_pct": 80.2
-   },
-   {
-    "fase": "reacionar",
-    "adiado_para_a_proxima_passagem": [
-     "f260-captacao-118"
-    ],
-    "motivo": "sem tempo nesta passagem"
+    "planejados_no_dia": 130,
+    "cobertura_antes_pct": 80.8
    },
    {
     "fase": "modalidade",
@@ -196,66 +188,63 @@
    }
   ],
   "avaliacao": {
-   "cobertura_do_dia_pct": 80.8,
+   "cobertura_do_dia_pct": 80.9,
    "estado": {
-    "plat-prefeituras-50-go": "parcial",
-    "f260-captacao-248": "completa",
-    "outras-oportunidades-7": "parcial",
-    "outras-oportunidades-1": "parcial",
-    "plat-empresas-editais-incentivados": "parcial",
-    "judiciario-cnj-tjgo": "parcial",
-    "plataforma-mapas-culturais": "parcial",
-    "empresas-incentivadas": "parcial",
-    "judiciario-tjgo": "parcial",
     "plataforma-wordpress": "parcial",
     "outras-oportunidades-3": "parcial",
     "outras-oportunidades-8": "parcial",
     "outras-oportunidades-6": "parcial",
-    "plat-salic": "parcial",
     "f260-captacao-237": "parcial",
     "f260-captacao-001": "parcial",
     "f260-captacao-254": "parcial",
     "f260-captacao-227": "parcial",
     "outras-oportunidades-5": "parcial",
     "f260-espalhado-rouanet-cultura-gov-br": "parcial",
-    "f260-captacao-228": "parcial",
     "f260-captacao-240": "parcial",
     "f260-curadoria-005": "parcial",
     "f260-captacao-221": "parcial",
     "f260-captacao-224": "parcial",
-    "f260-captacao-118": "parcial"
+    "f260-captacao-118": "parcial",
+    "outras-oportunidades-7": "parcial",
+    "outras-oportunidades-1": "parcial",
+    "plat-prefeituras-50-go": "parcial",
+    "plat-empresas-editais-incentivados": "parcial",
+    "judiciario-cnj-tjgo": "parcial",
+    "plataforma-mapas-culturais": "parcial",
+    "judiciario-tjgo": "parcial",
+    "empresas-incentivadas": "parcial",
+    "plat-salic": "parcial",
+    "f260-captacao-228": "parcial"
    },
-   "reacionar": [
-    "f260-captacao-118"
-   ],
+   "reacionar": [],
    "para_humano": [],
-   "completos": 1
+   "completos": 0
   },
-  "novos_na_base": 2,
-  "fim": "2026-10-18T06:11:40+00:00",
+  "novos_na_base": 5,
+  "fim": "2026-10-18T06:33:51+00:00",
   "erros": [
    {
     "etapa": "catalogar",
     "finalidade": "achados por motor, status de cada motor e repositório único das oportunidades",
-    "segundos": 15.8,
+    "segundos": 16.0,
     "erro": "catalogar:4: KeyError: 'esqueleto'"
    },
    {
     "etapa": "pncp",
     "finalidade": "dossiê do PNCP: 12 de 12 com informação confirmada ou descarte justificado; o que faltar vai ao Interceptador",
-    "segundos": 0.6,
+    "segundos": 0.7,
     "erro": "pncp:1: KeyError: 'dado'"
    },
    {
     "etapa": "certificar",
     "finalidade": "trecho literal e página de cada um dos 12 itens no documento oficial (Cartório)",
-    "segundos": 1.2,
+    "segundos": 1.4,
     "erro": "certificar:1: KeyError: 'dado'"
    },
    {
     "etapa": "curadoria",
     "finalidade": "link de acesso, link oficial com curadoria objetiva (6 critérios) e trecho exato da oportunidade",
-    "segundos": 0.6,
+    "segundos": 0.7,
     "erro": "curadoria:1: KeyError: 'dado'"
    },
    {
@@ -267,18 +256,18 @@
    {
     "etapa": "livros",
     "finalidade": "os livros são o banco: cada oportunidade cria ou vincula o seu livro com links, checklist12, achados e análises",
-    "segundos": 1.3,
+    "segundos": 1.4,
     "erro": "livros:1: KeyError: 'dado'"
    },
    {
     "etapa": "fechamento",
     "finalidade": "repositório por último; fluxo e pendências do Cartório derivados dele (uma só fonte)",
-    "segundos": 49.1,
+    "segundos": 51.2,
     "erro": "fechamento:3: KeyError: 'dado'"
    }
   ],
   "estado": "vermelho"
  },
- "ciclos_hoje": 7,
- "vermelhos_hoje": 6
+ "ciclos_hoje": 8,
+ "vermelhos_hoje": 7
 }
