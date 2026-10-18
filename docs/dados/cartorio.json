@@ -1,31 +1,31 @@
 {
- "em": "2026-10-18T00:27:32+00:00",
+ "em": "2026-10-18T00:51:19+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
  "resumo": {
   "pontos_12_total": 4800,
-  "pontos_certificados": 3106,
-  "pontos_dispensados": 171,
-  "pontos_ja_constavam": 1391,
-  "pontos_faltam": 132,
-  "pct_certificado_12": 0.6827,
-  "certidoes_12_de_12": 139,
-  "certidoes_sem_item_faltando": 272,
+  "pontos_certificados": 3122,
+  "pontos_dispensados": 168,
+  "pontos_ja_constavam": 1382,
+  "pontos_faltam": 128,
+  "pct_certificado_12": 0.6854,
+  "certidoes_12_de_12": 140,
+  "certidoes_sem_item_faltando": 276,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
-  "certidoes": 2638,
-  "nesta_execucao": 16,
-  "fila_estrelas": 152,
+  "certidoes": 2652,
+  "nesta_execucao": 14,
+  "fila_estrelas": 124,
   "fila_livros": 2517,
-  "itens_que_faltavam": 24198,
-  "itens_obtidos": 8999,
+  "itens_que_faltavam": 24319,
+  "itens_obtidos": 9079,
   "itens_dispensados": 509,
-  "eficiencia_itens": 0.393,
-  "com_link_oficial": 1788,
-  "taxa_link_oficial": 0.678,
-  "certidoes_completas": 253,
-  "para_o_interceptador": 1912,
-  "para_o_chrome": 472,
+  "eficiencia_itens": 0.394,
+  "com_link_oficial": 1800,
+  "taxa_link_oficial": 0.679,
+  "certidoes_completas": 257,
+  "para_o_interceptador": 1918,
+  "para_o_chrome": 476,
   "selos_que_mudaram": {
    "bronze → ouro": 6,
    "bronze → prata": 1,
@@ -36,8 +36,8 @@
    "prata → ouro": 3
   },
   "por_degrau": {
-   "degrau 0": 1711,
-   "degrau 1": 118
+   "degrau 0": 1721,
+   "degrau 1": 120
   }
  },
  "cinza_conferidos": {
@@ -47,86 +47,86 @@
  },
  "por_item": {
   "Objeto": {
-   "faltavam": 1714,
-   "obtidos": 559,
+   "faltavam": 1722,
+   "obtidos": 564,
    "dispensados": 0,
-   "eficiencia": 0.326
+   "eficiencia": 0.328
   },
   "Prazo de inscrição": {
-   "faltavam": 1828,
-   "obtidos": 564,
+   "faltavam": 1838,
+   "obtidos": 570,
    "dispensados": 145,
-   "eficiencia": 0.388
+   "eficiencia": 0.389
   },
   "Resultado": {
-   "faltavam": 2354,
-   "obtidos": 606,
+   "faltavam": 2366,
+   "obtidos": 613,
    "dispensados": 227,
-   "eficiencia": 0.354
+   "eficiencia": 0.355
   },
   "Prazo de recurso": {
-   "faltavam": 2316,
-   "obtidos": 526,
+   "faltavam": 2329,
+   "obtidos": 532,
    "dispensados": 45,
-   "eficiencia": 0.247
+   "eficiencia": 0.248
   },
   "Valor": {
-   "faltavam": 2065,
-   "obtidos": 678,
+   "faltavam": 2074,
+   "obtidos": 685,
    "dispensados": 60,
-   "eficiencia": 0.357
+   "eficiencia": 0.359
   },
   "Órgão / financiador": {
-   "faltavam": 1566,
-   "obtidos": 945,
+   "faltavam": 1573,
+   "obtidos": 951,
    "dispensados": 0,
-   "eficiencia": 0.603
+   "eficiencia": 0.605
   },
   "Território": {
-   "faltavam": 1858,
-   "obtidos": 583,
+   "faltavam": 1868,
+   "obtidos": 588,
    "dispensados": 0,
-   "eficiencia": 0.314
+   "eficiencia": 0.315
   },
   "Esfera": {
-   "faltavam": 2092,
-   "obtidos": 1291,
+   "faltavam": 2101,
+   "obtidos": 1299,
    "dispensados": 0,
-   "eficiencia": 0.617
+   "eficiencia": 0.618
   },
   "Requisitos": {
-   "faltavam": 2289,
-   "obtidos": 602,
+   "faltavam": 2302,
+   "obtidos": 609,
    "dispensados": 0,
-   "eficiencia": 0.263
+   "eficiencia": 0.265
   },
   "Anexos": {
-   "faltavam": 1655,
-   "obtidos": 360,
+   "faltavam": 1664,
+   "obtidos": 363,
    "dispensados": 4,
-   "eficiencia": 0.22
+   "eficiencia": 0.221
   },
   "Modalidade": {
-   "faltavam": 2264,
-   "obtidos": 786,
+   "faltavam": 2274,
+   "obtidos": 796,
    "dispensados": 28,
-   "eficiencia": 0.36
+   "eficiencia": 0.362
   },
   "Área de atuação": {
-   "faltavam": 2197,
-   "obtidos": 1499,
+   "faltavam": 2208,
+   "obtidos": 1509,
    "dispensados": 0,
-   "eficiencia": 0.682
+   "eficiencia": 0.683
   }
  },
  "por_balcao": {
   "revisão": {
-   "certidoes": 208,
-   "com_link_oficial": 158,
-   "faltavam": 2496,
-   "resolvidos": 1179,
-   "eficiencia": 0.472,
-   "taxa_link_oficial": 0.76
+   "certidoes": 209,
+   "com_link_oficial": 159,
+   "faltavam": 2508,
+   "resolvidos": 1191,
+   "eficiencia": 0.475,
+   "taxa_link_oficial": 0.761
   },
   "pncp": {
    "certidoes": 107,
@@ -145,28 +145,28 @@
    "taxa_link_oficial": 1.0
   },
   "orgao": {
-   "certidoes": 1231,
-   "com_link_oficial": 986,
-   "faltavam": 10979,
-   "resolvidos": 5055,
-   "eficiencia": 0.46,
+   "certidoes": 1240,
+   "com_link_oficial": 993,
+   "faltavam": 11044,
+   "resolvidos": 5097,
+   "eficiencia": 0.462,
    "taxa_link_oficial": 0.801
   },
   "privado": {
-   "certidoes": 580,
-   "com_link_oficial": 403,
-   "faltavam": 4904,
-   "resolvidos": 1469,
-   "eficiencia": 0.3,
-   "taxa_link_oficial": 0.695
+   "certidoes": 582,
+   "com_link_oficial": 405,
+   "faltavam": 4924,
+   "resolvidos": 1474,
+   "eficiencia": 0.299,
+   "taxa_link_oficial": 0.696
   },
   "pista": {
-   "certidoes": 352,
-   "com_link_oficial": 61,
-   "faltavam": 3188,
-   "resolvidos": 731,
-   "eficiencia": 0.229,
-   "taxa_link_oficial": 0.173
+   "certidoes": 354,
+   "com_link_oficial": 63,
+   "faltavam": 3212,
+   "resolvidos": 752,
+   "eficiencia": 0.234,
+   "taxa_link_oficial": 0.178
   },
   "diario": {
    "certidoes": 156,
@@ -187,12 +187,12 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2113,
-   "faltavam": 18307,
-   "resolvidos": 6435,
-   "eficiencia": 0.352,
-   "com_link_oficial": 1352,
-   "taxa_link_oficial": 0.64
+   "certidoes": 2127,
+   "faltavam": 18428,
+   "resolvidos": 6515,
+   "eficiencia": 0.354,
+   "com_link_oficial": 1364,
+   "taxa_link_oficial": 0.641
   },
   "refeitas": {
    "certidoes": 525,
@@ -221,30 +221,30 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2416,
-   "faltavam": 21611,
-   "resolvidos": 8172,
-   "eficiencia": 0.378,
-   "com_link_oficial": 1617,
-   "taxa_link_oficial": 0.669
+   "certidoes": 2429,
+   "faltavam": 21720,
+   "resolvidos": 8240,
+   "eficiencia": 0.379,
+   "com_link_oficial": 1628,
+   "taxa_link_oficial": 0.67
   },
   "revisão manual": {
-   "certidoes": 208,
-   "faltavam": 2496,
-   "resolvidos": 1179,
-   "eficiencia": 0.472,
-   "com_link_oficial": 158,
-   "taxa_link_oficial": 0.76
+   "certidoes": 209,
+   "faltavam": 2508,
+   "resolvidos": 1191,
+   "eficiencia": 0.475,
+   "com_link_oficial": 159,
+   "taxa_link_oficial": 0.761
   }
  },
  "por_abordagem": {
   "1": {
    "nome": "documento na mão",
-   "vezes": 2515,
-   "renderam": 1645,
-   "itens": 8613,
-   "links_oficiais": 1565,
-   "taxa_de_acerto": 0.654
+   "vezes": 2529,
+   "renderam": 1656,
+   "itens": 8693,
+   "links_oficiais": 1577,
+   "taxa_de_acerto": 0.655
   },
   "2": {
    "nome": "anexos completos",
@@ -322,20 +322,20 @@
  "por_balcao_selo": {
   "sem_estrela": {
    "nome": "Sem estrela → bronze",
-   "certidoes": 1394,
-   "faltavam": 12601,
-   "resolvidos": 3940,
-   "eficiencia": 0.313,
-   "entraram_aqui": 1543,
+   "certidoes": 1405,
+   "faltavam": 12709,
+   "resolvidos": 4018,
+   "eficiencia": 0.316,
+   "entraram_aqui": 1554,
    "esgotadas": 0
   },
   "bronze": {
    "nome": "Bronze → prata",
-   "certidoes": 70,
-   "faltavam": 588,
-   "resolvidos": 402,
-   "eficiencia": 0.684,
-   "entraram_aqui": 32,
+   "certidoes": 73,
+   "faltavam": 601,
+   "resolvidos": 404,
+   "eficiencia": 0.672,
+   "entraram_aqui": 35,
    "esgotadas": 0
   },
   "prata": {
@@ -358,7 +358,7 @@
   }
  },
  "gabarito": {
-  "orgaos_com_gabarito": 1229,
+  "orgaos_com_gabarito": 1231,
   "itens_achados_pelo_gabarito": {
    "Prazo de recurso": 20,
    "Objeto": 68,
@@ -5317,7 +5317,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-17T23:51:57+00:00",
+   "em": "2026-10-18T00:47:28+00:00",
    "prazo": "2026-10-21",
    "uf": null,
    "orgao": "CONSELHO DE ARQUITETURA E URBANISMO DO ESTADO DE MINAS GERAIS",
@@ -14532,6 +14532,202 @@
      "falha": null,
      "oficial": "documento oficial lido na revisão",
      "paginas": null,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 12,
+    "dispensados": 0,
+    "ja_constavam": 0,
+    "faltam": 0,
+    "pct_certificado_12": 1.0,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-1f58067544da",
+   "tipo": "livro",
+   "titulo": "Credenciamento/Chamamento 006/2026 de Adustina-BA ('Adustina Bem Cuidada'): seleção de OSC para termo de colaboração de ~R$ 9,69 mi/ano em zeladoria, cozinhas, monitoramento escolar e apoio à educação",
+   "balcao": "pncp",
+   "link_oficial": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T00:50:38+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": null,
+   "fim": "2026-09-21",
+   "itens": {
+    "Prazo de inscrição": {
+     "valor": "até 21/09/2026",
+     "trecho": "DO DE CREDENCIAMENTO: 1.11.1. O credenciamento será com prazo fixo e estará aberto das 8hs do dia 21/09/2026, às 17hs do dia 26/10/2026, para participação de interessados, a par",
+     "pagina": 3,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "cronograma"
+    },
+    "Resultado": {
+     "valor": "09/11/2026",
+     "trecho": "propostas pela Comissão de Seleção De 27/10/2026 a 06/11/2026 5 Divulgação do resultado preliminar 09/11/2026 6 Interposição de recursos contra o resultado preliminar De 10/11/20",
+     "pagina": 9,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "10/11/2026 a 14/11/2026",
+     "trecho": "26 a 06/11/2026 5 Divulgação do resultado preliminar 09/11/2026 6 Interposição de recursos contra o resultado preliminar De 10/11/2026 a 14/11/2026 7 Contrarrazões aos recursos De 15/11/2026 a 19/11/2026 8 Análise",
+     "pagina": 9,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "seção"
+    },
+    "Valor": {
+     "valor": "R$ 9.688.753,20",
+     "trecho": "zentos e noventa e seis reais e dez centavos) mensais, totalizando o montante anual de R$ 9.688.753,20 (Nove milhões, seiscentos e oitenta e oito mil , setecentos e cinque",
+     "pagina": 38,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "a seleção de proposta para a execução descentralizada do Programa denominado “Adustina Bem Cuidada”, focado estritamente no alcance de resultados qualitativos e quantitativos e no impacto comunitário.",
+     "trecho": "de Santana, s/n - Centro, Adustina, Bahia. 2. DO OBJETO 2.1. O objeto deste Edital é a seleção de proposta para a execução descentralizada do Programa denominado “Adustina Bem Cuidada”, focado estritamente no alcance de resultados qualitativos e quantitativos e no impacto comunitário. 2.2. A execução da parceria está estruturada em 4 (quatro) eixos",
+     "pagina": 3,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "texto"
+    },
+    "Órgão / financiador": {
+     "valor": "Município de Adustina",
+     "trecho": "BLICO EDITAL DE CREDENCIAMENTO Nº 006/2026 1. INTRODUÇÃO 1.1. O Município de Adustina, Bahia , TORNA PÚBLICO que realizará CHAMAMENTO PÚBLICO para seleçã",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "cabeçalho"
+    },
+    "Território": {
+     "valor": "do Município de Adustina",
+     "trecho": "tituída através da Portaria nº 001/2026, publicada no Diário Oficial do Município de Adustina, Bahia. 6.2. Os membros da Comissão de Seleção dever ão ser declara",
+     "pagina": 8,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "municipal",
+     "trecho": "domínio/órgão: pncp.gov.br · Município de Adustina",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "domínio e órgão"
+    },
+    "Requisitos": {
+     "valor": "Poderão participar deste Chamamento Público as Organizações da Sociedade Civil",
+     "trecho": "arte do ente público. 4. PARTICIPAÇÃO NO CHAMAMENTO PÚBLICO 4.1 Poderão participar deste Chamamento Público as Organizações da Sociedade Civil (OSCs), assim consideradas aquelas definidas pelo art. 2º, inciso I,",
+     "pagina": 4,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "texto"
+    },
+    "Anexos": {
+     "valor": "ANEXO X), e; ANEXO I Declaração de inexistência de impedimentos para celebrar parceria com; ANEXO II Declaração de ciência e concordância; ANEXO III Declaração sobre instalações e condições materiais; ANEXO IV Declaração relação dos dirigentes da entidade.; ANEXO V Carta de Credenciamento; ANEXO VI ",
+     "trecho": "s, caracterizadas e especificadas neste Edital; no Plano de Trabalho (ANEXO X), e demais anexos, partes integrantes do presente Ato Convocatório , que terá por objeto a execução do Programa Integrado de Ações Sociais, Educacionais e de Conservação Comunitá",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "lista de anexos"
+    },
+    "Modalidade": {
+     "valor": "Termo de Colaboração — Lei Federal nº 13.019/2014",
+     "trecho": "726, de 2016, caso em que deverão ser formalizados por aditamento ao termo de colaboração, sendo vedada a alteração do objeto da parceria. CLÁUSULA QUARTA– DO PRAZO DE VIGÊNCIA 4.1. O prazo do p",
+     "pagina": 53,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Cultura, Educação, Saúde",
+     "trecho": "termos do objeto e do título: Cultura, Educação, Saúde",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "metodo": "palavras-chave do objeto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T00:50:38+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 60,
      "edicao_inteira": null
     }
    ],
@@ -25484,6 +25680,212 @@
    }
   },
   {
+   "id": "op-0cec43f83f72",
+   "tipo": "livro",
+   "titulo": "Edital de Chamada Pública FAPESC/SCTI N.º 050/2026 – Programa SC Inovadora",
+   "balcao": "orgao",
+   "link_oficial": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-scti-n-o-50-2026-programa-de-ciencia-tecnologia-e-inovacao-sc-inovadora",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T00:48:44+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": null,
+   "fim": "2026-09-18",
+   "itens": {
+    "Prazo de inscrição": {
+     "valor": "14/08/2026 a 18/09/2026",
+     "trecho": "nto com as diretrizes estratégicas do Governo de Santa Catarina. Prazo para submissão: 14/08/2026 a 18/09/2026 Contato para dúvidas: inova.gov@fapesc.sc.gov.br ACESSE O",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-scti-n-o-50-2026-programa-de-ciencia-tecnologia-e-inovacao-sc-inovadora",
+     "metodo": "cronograma"
+    },
+    "Órgão / financiador": {
+     "valor": "FUNDAÇÃO DE AMPARO À PESQUISA E INOVAÇÃO DO ESTADO DE SANTA CATARINA (FAPESC)",
+     "trecho": "13/08/2026 15:10 A FUNDAÇÃO DE AMPARO À PESQUISA E INOVAÇÃO DO ESTADO DE SANTA CATARINA (FAPESC), em colaboração com a SECRETARIA DE ESTADO DA CIÊNCIA, TECNOLOGIA E I",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-scti-n-o-50-2026-programa-de-ciencia-tecnologia-e-inovacao-sc-inovadora",
+     "metodo": "cabeçalho"
+    },
+    "Esfera": {
+     "valor": "estadual",
+     "trecho": "domínio/órgão: fapesc.sc.gov.br · FUNDAÇÃO DE AMPARO À PESQUISA E INOVAÇÃO DO ESTADO DE SANTA CATARINA (FAPESC)",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-scti-n-o-50-2026-programa-de-ciencia-tecnologia-e-inovacao-sc-inovadora",
+     "metodo": "domínio e órgão"
+    },
+    "Área de atuação": {
+     "valor": "Cultura, Ciência e tecnologia",
+     "trecho": "termos do objeto e do título: Cultura, Ciência e tecnologia",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-scti-n-o-50-2026-programa-de-ciencia-tecnologia-e-inovacao-sc-inovadora",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Resultado": {
+     "valor": "23/09/2026",
+     "trecho": "2026 a 14/09/2026 Análise de admissibilidade 15/09/2026 a 18/09/2026 Resultado preliminar de admissibilidade 23/09/2026 Período para apresentação de recursos via e-mail 24/09/2026 a 28/09",
+     "pagina": 3,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/Edital-50.2026-SCTI.pdf",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "24/09/2026 a 28/09/2026",
+     "trecho": "26 Resultado preliminar de admissibilidade 23/09/2026 Período para apresentação de recursos via e-mail 24/09/2026 a 28/09/2026 Resultado final de admissibilidade 02/10/2026 Análise de mérito 0",
+     "pagina": 3,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/Edital-50.2026-SCTI.pdf",
+     "metodo": "seção"
+    },
+    "Valor": {
+     "valor": "R$ 1.008.000,00 (um milhão e oito mil reais)",
+     "trecho": "ão do(a) bolsista 03/11/2026 4. DOS RECURSOS FINANCEIROS 4.1. O valor global da presente Chamada Pública é de até R$ 1.008.000,00 (um milhão e oito mil reais), a ser aplicado em 6 (seis) bolsas, com duração de até 12 (doze) mese",
+     "pagina": 3,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/Edital-50.2026-SCTI.pdf",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "a promoção do ecossistema catarinense de Ciência, Tecnologia e Inovação (CT&I) para o avanço de todas as áreas do conhecimento, o equilíbrio regional, o desenvolvimento econômico sustentável e a melhoria da qualidade de vida da população do Estado;",
+     "trecho": "to executora da política estadual de ciência, tecnologia e inovação, tem como finalidade a promoção do ecossistema catarinense de Ciência, Tecnologia e Inovação (CT&I) para o avanço de todas as áreas do conhecimento, o equilíbrio regional, o desenvolvimento econômico sustentável e a melhoria da qualidade de vida da população do Estado; ● que compete à FAPESC fomentar o desenvolvimento tecnológico ",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/Edital-50.2026-SCTI.pdf",
+     "metodo": "texto"
+    },
+    "Território": {
+     "valor": "do Estado de Santa Catarina",
+     "trecho": "to dos Órgãos e Entidades da Administração Pública Direta e Indireta do Estado de Santa Catarina, para implementação de parcerias em projetos de Pesquisa, Desenvol v",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/Edital-50.2026-SCTI.pdf",
+     "metodo": "texto"
+    },
+    "Requisitos": {
+     "valor": "poderão participar das Chamadas Públicas os(as) Coordenadores de Projeto da",
+     "trecho": "inadimplência técnica e/ou financeira perante a FAPESC. 2.11. Não poderão participar das Chamadas Públicas os(as) Coordenadores de Projeto da FAPESC que possuam vínculo ativo ou que tenham sido desligados há men",
+     "pagina": 2,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/Edital-50.2026-SCTI.pdf",
+     "metodo": "texto"
+    },
+    "Anexos": {
+     "valor": "ANEXO I VAGAS E REQUISITOS DAS COTAS DE BOLSAS DISPONÍVEIS NESTA CHAMADA PÚBLI; ANEXO II AVALIAÇÃO DO MÉRITO TÉCNICO DO(A) CANDIDATO(A); ANEXO III TERMO DE COMPROMISSO DE BOLSA FAPESC; ANEXO IV PLANO DE TRABALHO DO(A) BOLSISTA; ANEXO V TERMO DE DISPONIBILIDADE DE CARGA HORÁRIA; ANEXO VI DECLARAÇÃO D",
+     "trecho": "informe o processo FAPESC 00001946/2026 e o código A252CW2R. 135 ANEXO I VAGAS E REQUISITOS DAS COTAS DE BOLSAS DISPONÍVEIS NESTA CHAMADA PÚBLICA Número Total de Bolsas: 6 (seis) Modalidade de Bolsa: Prevista na Tabela 1 - Bolsa Referência e Va",
+     "pagina": 14,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/Edital-50.2026-SCTI.pdf",
+     "metodo": "lista de anexos"
+    },
+    "Modalidade": {
+     "valor": "Bolsa",
+     "trecho": "al n.º 14.328/2008, do Decreto Estadual n.º 438/2024, da Política de Bolsas da FAPESC e demais decretos específicos vigentes, e considerando: ● que a FAPESC, agência de fomento executora da polític",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/Edital-50.2026-SCTI.pdf",
+     "metodo": "modalidade de recebimento"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T00:48:44+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-scti-n-o-50-2026-programa-de-ciencia-tecnologia-e-inovacao-sc-inovadora",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/Edital-50.2026-SCTI.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 33,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 12,
+    "dispensados": 0,
+    "ja_constavam": 0,
+    "faltam": 0,
+    "pct_certificado_12": 1.0,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "agr-252fc7f8bb39",
    "tipo": "estrela",
    "titulo": "Edital de Chamada Pública FAPESC/SED n.º 054/2026 – Programa de Fomento à Pesquisa e Inovação para o Desenvolvimento da Educação Catarinense",
@@ -26821,6 +27223,192 @@
     "ja_constavam": 7,
     "faltam": 0,
     "pct_certificado_12": 0.4167,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-88af3d4ca32a",
+   "tipo": "livro",
+   "titulo": "Edital de Chamamento Público de Instituições sem Fins Lucrativos para a ... — Goiás",
+   "balcao": "orgao",
+   "link_oficial": "https://goias.gov.br/social/chamamento-publico-2025/",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T00:49:29+00:00",
+   "prazo": null,
+   "uf": "GO",
+   "orgao": "Governo do Estado de Goiás",
+   "fim": "2026-01-23",
+   "itens": {
+    "Prazo de inscrição": {
+     "valor": "19/01/2026 a 23/01/2026",
+     "trecho": "zentos e quarenta e seis) municípios do Estado de Goiás. Envio e recebimento das propostas e declarações: 19/01/2026 à 23/01/2026 Edital Minuta Aviso Matriz de Riscos Anexo",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamento-publico-2025/",
+     "metodo": "cronograma"
+    },
+    "Território": {
+     "valor": "do Estado de Goiás",
+     "trecho": "nto Social de Goiás, Órgão integrante da Administração Pública Direta do Estado de Goiás, torna público o presente chamamento público, visando à seleção de Or",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamento-publico-2025/",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "federal",
+     "trecho": "domínio/órgão: goias.gov.br · Fundação de Promoção Social Governo do Estado de Goiás",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamento-publico-2025/",
+     "metodo": "domínio e órgão"
+    },
+    "Modalidade": {
+     "valor": "Termo de Colaboração — Lei nº 14.133/2021",
+     "trecho": "eção de Organização da Sociedade Civil (ESFL) interessada em celebrar Termo de Colaboração para o gerenciamento, a operacionalização e a execução do Programa de Aprendizagem Juvenil no âmbito deste Es",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamento-publico-2025/",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Assistência social, Educação, Criança e adolescente",
+     "trecho": "termos do objeto e do título: Assistência social, Educação, Criança e adolescente",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamento-publico-2025/",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Valor": {
+     "valor": "R$ 1.565.190,00 (um milhão, quinhentos e sessenta e cinco mil, cento e noventa reais)",
+     "trecho": "te será pra\u0000cado após a vigência deste termo de apos\u0000lamento. 4 - O valor global do Contrato nº 8/2021 passará de R$ 1.565.190,00 (um milhão, quinhentos e sessenta e cinco mil, cento e noventa reais) para R$ 1.612.568,64 (um milhão, seiscentos e doze mil, quinhentos e",
+     "pagina": 1,
+     "documento": "http://goias.gov.br/social/wp-content/uploads/sites/24/2024/01/apostila_2.pdf",
+     "metodo": "seção"
+    },
+    "Resultado": {
+     "valor": "16/01/2026",
+     "trecho": "opostas Técnicas pela Comissão de Seleção 12/01/2026 à 16/01/2026 4 Divulgação do resultado preliminar Até 16/01/2026 5 Interposição de recursos contra o resultado preliminar 19/01/202",
+     "pagina": 9,
+     "documento": "https://goias.gov.br/social/wp-content/uploads/sites/24/2025/11/Edital.pdf",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "19/01/2026 a 23/01/2026",
+     "trecho": "16/01/2026 4 Divulgação do resultado preliminar Até 16/01/2026 5 Interposição de recursos contra o resultado preliminar 19/01/2026 à 23/01/2026 6 Contrarrazões recursais 26/01/2026 à 30/01/2026 7 Análise dos re",
+     "pagina": 9,
+     "documento": "https://goias.gov.br/social/wp-content/uploads/sites/24/2025/11/Edital.pdf",
+     "metodo": "seção"
+    },
+    "Requisitos": {
+     "valor": "REQUISITOS PARA PARTICIPAÇÃO NO CHAMAMENTO PÚBLICO 7 .",
+     "trecho": "e segurança, caso haja necessidade, alimentação e transporte. 7 . DOS REQUISITOS PARA PARTICIPAÇÃO NO CHAMAMENTO PÚBLICO 7 . 1 . Nos termos da Lei Federal nº 13.019/2014, são reconhecidas como p",
+     "pagina": 5,
+     "documento": "https://goias.gov.br/social/wp-content/uploads/sites/24/2025/11/Edital.pdf",
+     "metodo": "texto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T00:49:29+00:00",
+     "ganhou": [
+      "Esfera",
+      "Modalidade",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://goias.gov.br/social/chamamento-publico-2025/",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "http://goias.gov.br/social/wp-content/uploads/sites/24/2024/01/apostila_2.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 2,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goias.gov.br/social/wp-content/uploads/sites/24/2025/11/Edital.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 29,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "ja_constava",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "ja_constava",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 9,
+    "dispensados": 0,
+    "ja_constavam": 3,
+    "faltam": 0,
+    "pct_certificado_12": 0.75,
     "pct_cobertura_12": 1.0
    }
   },
@@ -36139,233 +36727,6 @@
    }
   },
   {
-   "id": "52a1fdf5d0e54202eeb0",
-   "tipo": "estrela",
-   "titulo": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DO SUL DE MINAS GERAIS — O presente procedimento tem por objeto o credenciamento de asso",
-   "balcao": "pncp",
-   "link_oficial": "https://pncp.gov.br",
-   "degrau": 0,
-   "como": "revisão manual: leitura do documento oficial no Chrome da titular",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [],
-   "tentativa": 4,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "bronze",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 1.0,
-   "encaminhado": null,
-   "selo_antes": null,
-   "selo_depois": "bronze",
-   "em": "2026-10-18T00:23:29+00:00",
-   "prazo": "2035-01-15",
-   "uf": "MG",
-   "orgao": null,
-   "fim": "2025-01-14",
-   "itens": {
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: pncp.gov.br · Ministério da Educação",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
-     "metodo": "domínio e órgão"
-    },
-    "Órgão / financiador": {
-     "valor": "Ministério da Educação",
-     "trecho": "Ministério da Educação Secretaria de Educação Profissional e Tecnológica Instituto Federal",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
-     "metodo": "cabeçalho"
-    },
-    "Objeto": {
-     "valor": "selecionar as associações e/ou coopera tivas de catadores de materiais recicláveis e reutilizáveis para firmar termo de compromisso para fins de coleta dos resíduos recicláveis e/ou reutilizáveis descartados, produzidos pelos edifícios do campus Inconfidentes do IFSULDEMINAS, para fins de reciclagem",
-     "trecho": "ste Edital e seus Anexos. 1. DO OBJETO 1.1. O presente procedimento tem por objeto selecionar as associações e/ou coopera tivas de catadores de materiais recicláveis e reutilizáveis para firmar termo de compromisso para fins de coleta dos resíduos recicláveis e/ou reutilizáveis descartados, produzidos pelos edifícios do campus Inconfidentes do IFSULDEMINAS, para fins de reciclagem. 2. DO LOCAL E P",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
-     "metodo": "texto"
-    },
-    "Prazo de inscrição": {
-     "valor": "até 14/01/2025",
-     "trecho": "confidentes do IFSULDEMINAS, para fins de reciclagem. 2. DO LOCAL E PRAZO DE ENTREGA DAS PROPOSTAS 2.1 Os interessados deverão encaminhar o requerimento de credenciamento por mensagem eletrônica ou presencialmente a partir do dia 14/01/2025 , para o e-mail sissi.bueno@ifsuldeminas.edu.br ou entregar na Diret",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
-     "metodo": "cronograma"
-    },
-    "Território": {
-     "valor": "no Estado de Minas Gerais",
-     "trecho": "_____________________________, Município de ________________________, no Estado de Minas Gerais, neste ato representada pelo(a) Senhor(a) ___________________________",
-     "pagina": 9,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
-     "metodo": "texto"
-    },
-    "Anexos": {
-     "valor": "ANEXO I – Modelo de Ficha de Inscrição do Representante legal.; ANEXO II – Modelo de declaração de cumprimento dos requisitos de habilitação.; ANEXO III - Projeto Básico.; ANEXO IV - Minuta de Termo de Compromisso.; ANEXO I FICHA DE INSCRIÇÃO/DADOS DO REPRESENTANTE LEGAL; ANEXO II DECLARAÇÃO DE CUMP",
-     "trecho": "e em outras leis que se prestem a suprir eventuais lacunas. 13. DOS ANEXOS 13.1. Integram este Edital, para todos os fins e efeitos, os seguintes anexos: 9.8.1. ANEXO I – Modelo de Ficha de Inscrição do Representante legal. 9.8.2. ANEXO II – Modelo de d",
-     "pagina": 5,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
-     "metodo": "lista de anexos"
-    },
-    "Resultado": {
-     "valor": "lista de credenciadas que será publicada e mantida atualizada no portal do IFSULDEMINAS - Campus Inconfidentes, para cadastramento permanente de novos interessados, nos termos do art.",
-     "trecho": "l no Portal Nacional de Contratações Públicas. 7.3 Será feita uma lista de credenciadas que será publicada e mantida atualizada no portal do IFSULDEMINAS - Campus Inconfidentes, para cadastramento permanente de novos interessados, nos termos do art. 79, parágrafo único, inciso I, da Lei 14.133/2021. 7.4 As novas cr",
-     "pagina": 3,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "5 (cinco) dias úteis",
-     "trecho": "6.5. A partir da data de divulgação da referida lista, iniciar-se-á o prazo de 5 (cinco) dias úteis para interposição de recurso contra o resultado da habilitação, devendo o interessado apresentá-lo",
-     "pagina": 3,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "Poderão participar do procedimento de seleção as associações e cooperativas de catadores de",
-     "trecho": "de segunda a sexta-feira. 3. DAS CONDIÇÕES DE PARTICIPAÇÃO 3.1. Poderão participar do procedimento de seleção as associações e cooperativas de catadores de materiais recicláveis e reutilizáveis: 3.1.1. Declaração de cumprime",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
-     "metodo": "texto"
-    },
-    "Modalidade": {
-     "valor": "Credenciamento (contratação) — Lei 14.133",
-     "trecho": "25/DAP-INC/IFS/IFSULDEMINAS 10 de janeiro de 2025 EDITAL DE CREDENCIAMENTO - CHAMAMENTO PÚBLICO nº 90401/2025 COLETA SELETIVA CIDADÃ DECRETO Nº 10.936/2022 PROCESSO Nº 23344.000023.2025",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
-     "metodo": "modalidade de recebimento"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Educação, Meio ambiente",
-     "trecho": "termos do objeto e do título: Cultura, Educação, Meio ambiente",
-     "pagina": 1,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
-     "metodo": "palavras-chave do objeto"
-    }
-   },
-   "dispensas": {
-    "Valor": {
-     "motivo": "pagamento por tabela ou valor fixado pela Administração, igual para todos os credenciados",
-     "trecho": null,
-     "pagina": null,
-     "documento": null
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-17T10:38:01+00:00",
-     "ganhou": [
-      "Anexos",
-      "Esfera",
-      "Objeto",
-      "Prazo de inscrição",
-      "Território",
-      "Órgão / financiador"
-     ],
-     "legado": true
-    },
-    {
-     "n": 2,
-     "nome": "anexos completos",
-     "em": "2026-10-17T10:49:20+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Área de atuação"
-     ],
-     "legado": null
-    },
-    {
-     "n": 9,
-     "nome": "leitura profunda",
-     "em": "2026-10-17T12:07:58+00:00",
-     "ganhou": [],
-     "legado": null
-    },
-    {
-     "n": 7,
-     "nome": "releitura com gabarito",
-     "em": "2026-10-18T00:23:29+00:00",
-     "ganhou": [],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://pncp.gov.br/api/consulta/v1/orgaos/10648539000105/compras/2025/3",
-     "degrau": null,
-     "como": null,
-     "motivo": null,
-     "falha": null,
-     "oficial": "documento oficial lido na revisão",
-     "paginas": null,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://pncp.gov.br/api/consulta/v1/orgaos/10648539000105/compras/2025/3",
-     "degrau": 0,
-     "como": "releitura com o gabarito do órgão atualizado",
-     "motivo": "formato_desconhecido",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "dispensado",
-     "Órgão / financiador": "certificado",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 11,
-    "dispensados": 1,
-    "ja_constavam": 0,
-    "faltam": 0,
-    "pct_certificado_12": 1.0,
-    "pct_cobertura_12": 1.0
-   }
-  },
-  {
    "id": "op-88c2f74b9158",
    "tipo": "livro",
    "titulo": "Inscrições Abertas",
@@ -39634,7 +39995,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-17T23:43:18+00:00",
+   "em": "2026-10-18T00:38:56+00:00",
    "prazo": "2027-08-07",
    "uf": null,
    "orgao": "MUNICIPIO DE TRINDADE",
@@ -43430,6 +43791,102 @@
     "ja_constavam": 12,
     "faltam": 0,
     "pct_certificado_12": 0.0,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-f9a93601d4f8",
+   "tipo": "livro",
+   "titulo": "Programa Funarte Aberta 2026 - Centro Técnico de Artes",
+   "balcao": "orgao",
+   "link_oficial": "https://www.gov.br/funarte/pt-br/editais/2026/programa-funarte-aberta/programa-funarte-aberta-2026-2013-ocupacao-dos-espacos-culturais-da-funarte-centro-tecnico-de-artes",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto"
+   ],
+   "resolvidos": [
+    "Objeto"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T00:49:07+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": "Fundação Nacional de Artes",
+   "fim": "2027-04-30",
+   "itens": {
+    "Objeto": {
+     "valor": "reger os procedimentos relativos ao uso do espaço e dos equipamentos da SALA MULTIUSO - CENTRO TÉCNICO DAS ARTES, localizado na Rua do Lavradio 54 3° andar, Centro, Rio de Janeiro, RJ.",
+     "trecho": "ANEXO V - REGULAMENTO DE USO DO ESPAÇO O presente Regulamento tem por finalidade reger os procedimentos relativos ao uso do espaço e dos equipamentos da SALA MULTIUSO - CENTRO TÉCNICO DAS ARTES, localizado na Rua do Lavradio 54 3° andar, Centro, Rio de Janeiro, RJ. 1. DAS CONDIÇÕES E USOS 1.1. Toda e qualquer atividade realizada",
+     "pagina": 1,
+     "documento": "https://www.gov.br/funarte/pt-br/editais/2026/programa-funarte-aberta/programa-funarte-aberta-2026-2013-ocupacao-dos-espacos-culturais-da-funarte-centro-tecnico-de-artes/anexo-v-2013-regulamento-de-usos-do-espaco.pdf",
+     "metodo": "texto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T00:49:07+00:00",
+     "ganhou": [
+      "Objeto"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://www.gov.br/funarte/pt-br/editais/2026/programa-funarte-aberta/programa-funarte-aberta-2026-2013-ocupacao-dos-espacos-culturais-da-funarte-centro-tecnico-de-artes",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/funarte/pt-br/editais/2026/programa-funarte-aberta/programa-funarte-aberta-2026-2013-ocupacao-dos-espacos-culturais-da-funarte-centro-tecnico-de-artes/anexo-v-2013-regulamento-de-usos-do-espaco.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Anexo V – Regulamento de Uso do Espaço",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 7,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "ja_constava",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "ja_constava",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
     "pct_cobertura_12": 1.0
    }
   },
@@ -49498,7 +49955,7 @@
    "encaminhado": null,
    "selo_antes": "bronze",
    "selo_depois": "ouro",
-   "em": "2026-10-17T23:45:17+00:00",
+   "em": "2026-10-18T00:40:51+00:00",
    "prazo": "2028-12-04",
    "uf": null,
    "orgao": "TRIBUNAL SUPERIOR DO TRABALHO",
@@ -50157,6 +50614,182 @@
      "falha": null,
      "oficial": "domínio público oficial",
      "paginas": 24,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "ja_constava",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 10,
+    "dispensados": 0,
+    "ja_constavam": 2,
+    "faltam": 0,
+    "pct_certificado_12": 0.8333,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-a890f380756e",
+   "tipo": "livro",
+   "titulo": "Vila Pavão - EDITAL DE CHAMAMENTO PÚBLICO Nº 004/2026 - Oficinas de Artesanato",
+   "balcao": "orgao",
+   "link_oficial": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+   "degrau": 0,
+   "como": "Mapas Culturais: arquivo da oportunidade (API pública)",
+   "faltavam": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T00:51:10+00:00",
+   "prazo": null,
+   "uf": "ES",
+   "orgao": "",
+   "fim": "2026-09-17",
+   "itens": {
+    "Prazo de inscrição": {
+     "valor": "até 17/09/2026",
+     "trecho": ". Este edital é composto pelas seguintes etapas: 3.1.1. Lançamento e Inscrições – etapa de publicação do edital e apresentação dos projetos pelos agentes culturais: • 17/09/2026: Lançamento oficial do Edital • 22/09/2026 a 08/10/2026: Período",
+     "pagina": 3,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+     "metodo": "cronograma"
+    },
+    "Resultado": {
+     "valor": "21/10/2026",
+     "trecho": "o e análise das propostas pelas comissões • 16/10/2026 (sexta-feira): Resultado provisório da avaliação de mérito • 19/10 a 21/10/2026: Período de recursos da seleção • 22/10/2026: Julgamento dos recurso",
+     "pagina": 4,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "03 (três) dias úteis",
+     "trecho": "Cultura e Turismo, que atuará como instância de julgamento. 9.7.2. O recurso deve ser apresentado no prazo de 03 (três) dias úteis, a contar do primeiro dia útil posterior à publicação do resultado d",
+     "pagina": 11,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+     "metodo": "seção"
+    },
+    "Valor": {
+     "valor": "R$ 12.000,00",
+     "trecho": "2.3.1. Cada projeto receberá o valor descrito no Anexo I. 2.3.2. O valor total deste edital é de R$ 12.000,00. 2.3.3. A despesa correrá à conta da seguinte Dotação Orçamentária:",
+     "pagina": 2,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+     "metodo": "seção"
+    },
+    "Órgão / financiador": {
+     "valor": "MUNICÍPIO DE VILA PAVÃO",
+     "trecho": "estina -se a apoiar projetos apresentados pelos agentes culturais do MUNICÍPIO DE VILA PAVÃO. 1.4. Deste modo, a PREFEITURA DE VILA PAVÃO torna público o present",
+     "pagina": 1,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+     "metodo": "cabeçalho"
+    },
+    "Território": {
+     "valor": "no Município de Vila Pavão",
+     "trecho": "e se inscrever no Edital qualquer agente cultural que atua ou reside no Município de Vila Pavão/ES há pelo menos 2 (dois) anos. 2.5.2. Define-se, Agente Cultural é",
+     "pagina": 2,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "municipal",
+     "trecho": "domínio/órgão: mapa.cultura.es.gov.br · MUNICÍPIO DE VILA PAVÃO",
+     "pagina": 1,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+     "metodo": "domínio e órgão"
+    },
+    "Requisitos": {
+     "valor": "poderá concorrer neste edital com, no máximo 01 (um)",
+     "trecho": "te cultural pode apresentar neste edital 2.7.1. Cada agente cultural poderá concorrer neste edital com, no máximo 01 (um) projeto e poderá ser contemplado com no máximo 01 (um) projeto. 2.7.",
+     "pagina": 3,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+     "metodo": "texto"
+    },
+    "Modalidade": {
+     "valor": "Termo de Execução Cultural — Lei nº 14.399/2022",
+     "trecho": "NTE CULTURAL. 1.3. As partes qualificadas resolvem firmar o presente Termo de Execução Cultural, em mútua cooperação, mediante as cláusulas e condições estabelecidas neste instrumento. 2. DO PRO",
+     "pagina": 22,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Cultura",
+     "trecho": "termos do objeto e do título: Cultura",
+     "pagina": 1,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+     "metodo": "palavras-chave do objeto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T00:51:10+00:00",
+     "ganhou": [
+      "Esfera",
+      "Modalidade",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://mapa.cultura.es.gov.br/files/opportunity/2624/edital-chamamento-publico-004-2026-sectur-vila-pavao-2.pdf",
+     "degrau": 0,
+     "como": "Mapas Culturais: arquivo da oportunidade (API pública)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 36,
      "edicao_inteira": null
     }
    ],
@@ -62844,6 +63477,225 @@
    }
   },
   {
+   "id": "op-640e21522e76",
+   "tipo": "livro",
+   "titulo": "Edital de Chamamento Público nº 001/2025 – Programa Mentes Azuis Fundação de Amparo à Pesquisa do Estado do Ac… — Brasil",
+   "balcao": "pista",
+   "link_oficial": "https://fapac.ac.gov.br/wp-content/uploads/2025/05/Chamamento-publico-Programa-Mentes-Azuis.pdf",
+   "degrau": 1,
+   "como": "link de saída da pista para o site do financiador",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [
+    "Objeto"
+   ],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 0.917,
+   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T00:50:54+00:00",
+   "prazo": null,
+   "uf": "AC",
+   "orgao": "Instituto de Educação Profissional e Tecnológica – IEPTEC",
+   "fim": "2025-07-02",
+   "itens": {
+    "Órgão / financiador": {
+     "valor": "Fundação de Amparo à Pesquisa do Estado do Acre movimentou o terceiro setor regional",
+     "trecho": "ional. Em maio de 2025, o Edital de Chamamento Público nº 001/2025 da Fundação de Amparo à Pesquisa do Estado do Acre movimentou o terceiro setor regional, exigindo precisão cirúrgica de quem quer ver dinheiro na conta. Q",
+     "pagina": 1,
+     "documento": "https://capitaai.com.br/captacao/edital-chamamento-publico-0012025-programa-mentes-azuis-fundacao-vxdgbk",
+     "metodo": "cabeçalho"
+    },
+    "Território": {
+     "valor": "do Estado do Acre",
+     "trecho": "al de Chamamento Público nº 001/2025 da Fundação de Amparo à Pesquisa do Estado do Acre movimentou o terceiro setor regional, exigindo precisão cirúrgica de",
+     "pagina": 1,
+     "documento": "https://capitaai.com.br/captacao/edital-chamamento-publico-0012025-programa-mentes-azuis-fundacao-vxdgbk",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "privada",
+     "trecho": "domínio/órgão: capitaai.com.br · Fundação de Amparo à Pesquisa do Estado do Acre movimentou o terceiro setor regi",
+     "pagina": 1,
+     "documento": "https://capitaai.com.br/captacao/edital-chamamento-publico-0012025-programa-mentes-azuis-fundacao-vxdgbk",
+     "metodo": "domínio e órgão"
+    },
+    "Modalidade": {
+     "valor": "Termo de Colaboração",
+     "trecho": "icial do chamamento público. O financiamento ocorre via celebração de Termo de Colaboração, cujos limites orçamentários devem respeitar as diretrizes de execução da Meta 4 do programa Mentes Azuis.",
+     "pagina": 1,
+     "documento": "https://capitaai.com.br/captacao/edital-chamamento-publico-0012025-programa-mentes-azuis-fundacao-vxdgbk",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Cultura, Assistência social, Educação",
+     "trecho": "termos do objeto e do título: Cultura, Assistência social, Educação",
+     "pagina": 1,
+     "documento": "https://capitaai.com.br/captacao/edital-chamamento-publico-0012025-programa-mentes-azuis-fundacao-vxdgbk",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Prazo de inscrição": {
+     "valor": "até 2 de julho de 2025",
+     "trecho": "ia 26 de maio de 2025 Impugnação do edital De 26 a 30 de maio de 2025 Apresentação de propostas De 26 de maio a 26 junho de 2025 Divulgação do resultado preliminar Dia 2 de julho de 2025 Recurso contra o resultado preliminar De 2 a 6 de julho de 2025 Divul",
+     "pagina": 2,
+     "documento": "https://fapac.ac.gov.br/wp-content/uploads/2025/05/Chamamento-publico-Programa-Mentes-Azuis.pdf",
+     "metodo": "cronograma"
+    },
+    "Resultado": {
+     "valor": "2 de julho de 2025",
+     "trecho": "io de 2025 Apresentação de propostas De 26 de maio a 26 junho de 2025 Divulgação do resultado preliminar Dia 2 de julho de 2025 Recurso contra o resultado preliminar De 2 a 6 de julho de 2025 Divul",
+     "pagina": 2,
+     "documento": "https://fapac.ac.gov.br/wp-content/uploads/2025/05/Chamamento-publico-Programa-Mentes-Azuis.pdf",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "5 (dias) dias",
+     "trecho": "r 77 DIÁRIO OFICIALNº 14.02977 Segunda-feira, 26 de Maio de 2025 14� RECURSOS ADMINISTRATIVOS 14.1 Caso o candidato tenha justificativa para contestar o resultado preliminar do certame, poderá interpor recurso no prazo de 5 (dias) dias a contar da publicação. 14�2 As razões do recurso deverão ser encami",
+     "pagina": 4,
+     "documento": "https://fapac.ac.gov.br/wp-content/uploads/2025/05/Chamamento-publico-Programa-Mentes-Azuis.pdf",
+     "metodo": "seção"
+    },
+    "Valor": {
+     "valor": "R$ 4",
+     "trecho": ", inscrita no CNPJ nº 09�599�536/0001-40, vencedo- ra do LOTE I com o valor total de R$ 4�925�232,00 (quatro milhões, novecen- tos e vinte e cinco mil duzentos",
+     "pagina": 1,
+     "documento": "https://fapac.ac.gov.br/wp-content/uploads/2025/05/Chamamento-publico-Programa-Mentes-Azuis.pdf",
+     "metodo": "seção"
+    },
+    "Requisitos": {
+     "valor": "Poderão participar deste Chamamento Público Organizações da Sociedade",
+     "trecho": "rans- 75 DIÁRIO OFICIALNº 14.02975 Segunda-feira, 26 de Maio de 2025 Poderão participar deste Chamamento Público Organizações da Sociedade Civil (OSCs) que demonstrem, por meio de documentação comprobatória o",
+     "pagina": 2,
+     "documento": "https://fapac.ac.gov.br/wp-content/uploads/2025/05/Chamamento-publico-Programa-Mentes-Azuis.pdf",
+     "metodo": "texto"
+    },
+    "Anexos": {
+     "valor": "ANEXO X); ANEXO IV;; ANEXO V);; ANEXO VI); ANEXO VII); ANEXO VIII); ANEXO II, do Roteiro; ANEXO I – PROGRAMA; ANEXO II CRITÉRIOS DE SELEÇÃO; ANEXO III PLANO DE TRABALHO; ANEXO IV FORMULÁRIO DE EXPERIÊNCIA PRÉVIA NA REALIZAÇÃO DO OBJETO; ANEXO V Declaração substitutiva ao Comprovante de endereço da O",
+     "trecho": "ção disponíveis ao público, conforme memória de cálculo da Proposta (ANEXO X) 8�2�2 Cópia do estatuto registrado e suas alterações, devendo prever expressamente: I – Objetivos voltados à promoção de atividades e finalidades de relevância pública e social;",
+     "pagina": 3,
+     "documento": "https://fapac.ac.gov.br/wp-content/uploads/2025/05/Chamamento-publico-Programa-Mentes-Azuis.pdf",
+     "metodo": "lista de anexos"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T00:50:54+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://capitaai.com.br/captacao/edital-chamamento-publico-0012025-programa-mentes-azuis-fundacao-vxdgbk",
+     "degrau": 0,
+     "como": "pista (vetor): lida só para achar o link do financiador",
+     "motivo": null,
+     "falha": null,
+     "oficial": "vetor (anúncio, republicador ou agregador) — não é fonte",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://fapac.ac.gov.br/wp-content/uploads/2025/05/Chamamento-publico-Programa-Mentes-Azuis.pdf",
+     "degrau": 1,
+     "como": "link de saída da pista para o site do financiador",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 7,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/mcti/pt-br",
+     "degrau": 1,
+     "como": "link de saída da pista para o site do financiador",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2014/lei/l13019.htm",
+     "degrau": 1,
+     "como": "link de saída da pista para o site do financiador",
+     "motivo": null,
+     "falha": "erro_rede: HTTPError",
+     "oficial": null,
+     "paginas": null,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "falta",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 11,
+    "dispensados": 0,
+    "ja_constavam": 0,
+    "faltam": 1,
+    "pct_certificado_12": 0.9167,
+    "pct_cobertura_12": 0.9167
+   }
+  },
+  {
    "id": "op-c5350ddc8bac",
    "tipo": "livro",
    "titulo": "Edital de Fomento Pró-Restauro",
@@ -66984,7 +67836,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": null,
    "selo_depois": "prata",
-   "em": "2026-10-17T23:57:17+00:00",
+   "em": "2026-10-18T00:35:12+00:00",
    "prazo": "2030-09-07T18:00",
    "uf": "SP",
    "orgao": null,
@@ -67063,10 +67915,10 @@
    },
    "dispensas": {
     "Valor": {
-     "motivo": "dispensado pelo Cartório — não se aplica: sem repasse financeiro (cooperação, cessão ou habilitação sem recurso)",
-     "trecho": "ªo de terceiros na consecuçªo do objeto do presente Termo, ainda que a título gratuito ou mediante relaçªo empregatícia; f) permanecer nas dependŒncias do",
-     "pagina": 30,
-     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/2"
+     "motivo": "pagamento por tabela ou valor fixado pela Administração, igual para todos os credenciados",
+     "trecho": null,
+     "pagina": null,
+     "documento": null
     }
    },
    "abordagens": [
@@ -79310,1074 +80162,29 @@
     "pct_certificado_12": 0.5,
     "pct_cobertura_12": 0.9167
    }
-  },
-  {
-   "id": "op-5513f1928192",
-   "tipo": "livro",
-   "titulo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — Lançada Chamada Pública para apoiar projetos de pesquisa e inovação tecnológica entre o Brasil e a Espanha",
-   "balcao": "orgao",
-   "link_oficial": "https://goias.gov.br/fapeg/chamada-publica-fapeg-no-33-2025-apoio-a-projetos-para-o-enfrentamento-da-violencia-contra-mulheres-e-meninas/",
-   "degrau": 0,
-   "como": "documento entregue pelo motor",
-   "faltavam": [
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Território",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Prazo de inscrição",
-    "Resultado",
-    "Valor",
-    "Território",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Prazo de recurso"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-17T20:43:15+00:00",
-   "prazo": null,
-   "uf": "GO",
-   "orgao": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
-   "fim": null,
-   "itens": {
-    "Resultado": {
-     "valor": "05/08/2026",
-     "trecho": "o em 5 de agosto de 2026 Categoria Editais Resultado Final &#8211; (05/08/2026) Resultado Preliminar &#8211; (09/07/2026) 2ª Retificação",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/fapeg/chamada-publica-fapeg-no-33-2025-apoio-a-projetos-para-o-enfrentamento-da-violencia-contra-mulheres-e-meninas/",
-     "metodo": "seção"
-    },
-    "Modalidade": {
-     "valor": "Acordo de Cooperação (sem repasse)",
-     "trecho": "Em Andamento Encerrados Compras Governamentais Contratos Acordos de cooperação Comunicação Comunicação Setorial Especiais Notícias Links de interesse Comitê da Mulher",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/fapeg/chamada-publica-fapeg-no-33-2025-apoio-a-projetos-para-o-enfrentamento-da-violencia-contra-mulheres-e-meninas/",
-     "metodo": "modalidade de recebimento"
-    },
-    "Área de atuação": {
-     "valor": "Direitos humanos, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Direitos humanos, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/fapeg/chamada-publica-fapeg-no-33-2025-apoio-a-projetos-para-o-enfrentamento-da-violencia-contra-mulheres-e-meninas/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Território": {
-     "valor": "do Estado de Goiás",
-     "trecho": "setembro de 2009, que autoriza a Fundação de Amparo à Pesquisa do Estado de Goiás a conceder bolsa de pesquisa e formação cientíﬁca, de mestrado, de d",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2022/05/bolsas-lei.pdf",
-     "metodo": "texto"
-    },
-    "Valor": {
-     "valor": "R$ 10.000,00",
-     "trecho": "s bancários nos terminais de autoatendimento do Banco do Brasil até o limite de R$ 10.000,00 por dia e de R$ 60.000,00 mensais e, acima desse valor, diretamente n",
-     "pagina": 7,
-     "documento": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2024/12/SEI_67757622_Portaria_Normativa_01_PRES.pdf",
-     "metodo": "seção"
-    }
-   },
-   "dispensas": {
-    "Prazo de inscrição": {
-     "motivo": "dispensado pelo Cartório — não se aplica: inscrição em fluxo contínuo (cadastro permanente, sem data-limite)",
-     "trecho": "abilidade do contabilista legalmente credenciado, que estará sujeito, a qualquer tempo, à obrigatoriedade de prestar as informações que porventura forem sol",
-     "pagina": 27,
-     "documento": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2023/09/Decreto-Numerado_10.322_2023_Novo-Estatuto_FAPEG.pdf"
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-17T20:43:15+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Prazo de inscrição",
-      "Resultado",
-      "Território",
-      "Valor",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://goias.gov.br/fapeg/chamada-publica-fapeg-no-33-2025-apoio-a-projetos-para-o-enfrentamento-da-violencia-contra-mulheres-e-meninas/",
-     "degrau": 0,
-     "como": "documento entregue pelo motor",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2022/05/bolsas-lei.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2023/09/Decreto-Numerado_10.322_2023_Novo-Estatuto_FAPEG.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 41,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2022/06/Decreto-no-10.041_2022_Altercoes_Estatuto_FAPEG.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2025/03/Resolucao-Normativa-1-2024.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 13,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2024/12/SEI_67757622_Portaria_Normativa_01_PRES.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 11,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2026/08/RESULTADO_FINAL_nbsp__nbsp_CHAMADA_PUBLICA_FAPEG_33.2025_.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2026/07/RESULTADO_PRELIMINAR_nbsp__nbsp_CHAMADA_PUBLICA_FAPEG_33.2025__3_.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "dispensado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "falta",
-     "Valor": "certificado",
-     "Órgão / financiador": "ja_constava",
-     "Território": "certificado",
-     "Esfera": "ja_constava",
-     "Requisitos": "ja_constava",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 5,
-    "dispensados": 1,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "op-e634a89274a0",
-   "tipo": "livro",
-   "titulo": "Premiação PNCV nº 002/2026 (Cultura Viva) — prêmio a pontos/pontões de cultura com recursos da PNAB Ciclo II",
-   "balcao": "orgao",
-   "link_oficial": "https://piracanjuba.go.gov.br/lei-aldir-blanc-ciclo-i-i-2026/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Requisitos",
-    "Anexos",
-    "Modalidade"
-   ],
-   "resolvidos": [
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Requisitos",
-    "Modalidade"
-   ],
-   "ainda_faltam": [
-    "Anexos"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-17T20:04:15+00:00",
-   "prazo": null,
-   "uf": "BR",
-   "orgao": "Prefeitura de Piracanjuba — Secretaria Municipal de Cultura (recursos PNAB/MinC)",
-   "fim": "2026-10-09",
-   "itens": {
-    "Modalidade": {
-     "valor": "Prêmio",
-     "trecho": "Pular para o conteúdo Navegação principal Premiação PNCV n° 002/2026 &#8211; completo 01- Anexo 01 &#8211; Categorias e Cotas 02 &#8211; Anexos 02 &#8211; Crité",
-     "pagina": 1,
-     "documento": "https://piracanjuba.go.gov.br/lei-aldir-blanc-ciclo-i-i-2026/",
-     "metodo": "modalidade de recebimento"
-    },
-    "Prazo de inscrição": {
-     "valor": "até 09/10/2026",
-     "trecho": "ação neste edital. 6. ETAPA DE INSCRIÇÃO 6.1 As inscrições serão gratuitas e deverão ser realizadas no período de De 00:01 horas do dia 09/10/2026 até às 23:59 horas do dia 18/10/2026 , por meio d",
-     "pagina": 6,
-     "documento": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/premiacao-pncv-n-002-2026-piracanjuba-completo-1.pdf",
-     "metodo": "cronograma"
-    },
-    "Prazo de recurso": {
-     "valor": "3 DIAS ÚTEIS",
-     "trecho": "notas, caberá recurso destinado ao Secretaria de [TABELA] Cultura. O recurso deverá ser apresentado por meio de por meio da plataforma [TABELA] eletrônica https://agentecultural.com.br/ no prazo de DE 3 DIAS ÚTEIS, [TABELA] CONFORME INCISO III DO ART. 16 DO DECRETO 11.453/2023], a",
-     "pagina": 12,
-     "documento": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/premiacao-pncv-n-002-2026-piracanjuba-completo-1.pdf",
-     "metodo": "seção"
-    },
-    "Valor": {
-     "valor": "R$ 19.580,78 (dezenove mil, quinhentos e oitenta reais e setenta e oito [TABELA] centavos)",
-     "trecho": "ABELA] Piracanjuba por meio da Política Nacional Aldir Blanc, e tem o valor total de [TABELA] R$ 19.580,78 (dezenove mil, quinhentos e oitenta reais e setenta e oito [TABELA] centavos), para a premiação de 1 entidades e/ou coletivos, dividido entre as [",
-     "pagina": 3,
-     "documento": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/premiacao-pncv-n-002-2026-piracanjuba-completo-1.pdf",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "podem participar deste edital entidades e coletivos ainda não",
-     "trecho": "ções e Indicadores Culturais (SNIIC). [TABELA] 3.2 Como já indicado, podem participar deste edital entidades e coletivos ainda não [TABELA] certificadas como Ponto ou Pontão de Cultura. Para participa",
-     "pagina": 3,
-     "documento": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/premiacao-pncv-n-002-2026-piracanjuba-completo-1.pdf",
-     "metodo": "texto"
-    }
-   },
-   "dispensas": {
-    "Resultado": {
-     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
-     "trecho": "es relacionadas aos requisitos de participação, [TABELA] constatadas a qualquer tempo, implicará na inabilitação da inscrição. [TABELA] 13.3 Os casos não",
-     "pagina": 17,
-     "documento": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/premiacao-pncv-n-002-2026-piracanjuba-completo-1.pdf"
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-17T20:04:15+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Prazo de inscrição",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Valor"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://piracanjuba.go.gov.br/lei-aldir-blanc-ciclo-i-i-2026/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/premiacao-pncv-n-002-2026-piracanjuba-completo-1.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 45,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/01-anexo-01-categorias-e-cotas.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/02-anexo-02-criterios-de-avaliacao-da-etapa-de-selecao-1.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 4,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/03-anexo-03-formulario-de-inscricao-1.docx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: 03 &#8211; Anexos 03 &#8211; Formulário de Inscrição",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/04-anexo-04-declaracao-de-representacao-do-grupo-coletivo-cultural-1.docx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: 04 &#8211; Anexos 04 &#8211; Declaração de Representação do Grupo / Coletivo Cultural",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/05-anexo-05-modelo-de-autodeclaracao-etnico-racial.docx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: 05 &#8211; Anexo &#8211; Modelo de Autodeclaração Étnico-Racial",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://piracanjuba.go.gov.br/wp-content/uploads/2026/10/06-anexo-06-modelo-de-autodeclaracao-para-pessoa-com-deficiencia.docx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: 06 &#8211; Anexo 06 &#8211; Modelo de Autodeclaração para Pessoa com Deficiência",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "dispensado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "ja_constava",
-     "Requisitos": "certificado",
-     "Anexos": "falta",
-     "Modalidade": "certificado",
-     "Área de atuação": "ja_constava"
-    },
-    "certificados": 5,
-    "dispensados": 1,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "op-3aa3c41ab683",
-   "tipo": "livro",
-   "titulo": "Programa Funarte de Apoio a Ações Continuadas 2025 - Teatro",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Modalidade"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido (pagina_vazia)",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-10T13:21:20+00:00",
-   "prazo": null,
-   "uf": "",
-   "orgao": "Funarte",
-   "fim": "2025-08-08",
-   "itens": {
-    "Resultado": {
-     "valor": "19 de novembro de 2025",
-     "trecho": "ara acoescontinuadas.teatro@funarte.gov.br _____________________ Resultado final A Fundação Nacional de Artes (Funarte) divulga nesta quarta-feira, 19 de novembro de 2025, o resultado final do Programa Funarte de Apoio a Ações Continuadas 2",
-     "pagina": 1,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "14 de novembro de 2025",
-     "trecho": "___________ Resultado Provisório Etapa de Habilitação Prazo para Recursos até 14 de novembro de 2025 A Fundação Nacional de Artes (Funarte) publica nesta terça-feira, 1",
-     "pagina": 1,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro",
-     "metodo": "seção"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.gov.br · Fundação Nacional de Artes (Funarte) publica nesta quarta -feira Funarte",
-     "pagina": 1,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Cultura",
-     "trecho": "termos do objeto e do título: Cultura",
-     "pagina": 1,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Território": {
-     "valor": "abrangência nacional",
-     "trecho": "ditamos que esta rede será capaz de abordar agendas estruturantes de abrangência nacional, qualificando a política pública para além do financiamento e promov",
-     "pagina": 2,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro/teatro_minuta_tec_acoes-continuadas_1806-1.pdf",
-     "metodo": "texto"
-    },
-    "Requisitos": {
-     "valor": "Proponentes Pessoas Jurídicas de direito privado, de \nnatureza cultural, com ou sem fins lucrativos, conforme art.",
-     "trecho": "missão de Seleção, que deverá ser justificada em ata. 5 CONDIÇÕES DA PARTICIPAÇÃO 5.1 Poderão ser Proponentes Pessoas Jurídicas de direito privado, de natureza cultural, com ou sem fins lucrativos, conforme art. 44 do Código Civil (Lei 10.406/2002), com experiência no campo da cultura e das artes. 5.2 Não serão aceitas inscrições realizadas por Proponentes Pessoas Físicas, Microempreendedor Indivi",
-     "pagina": 6,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro/teatro_minuta_tec_acoes-continuadas_1806-1.pdf",
-     "metodo": "seção"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-10T13:21:20+00:00",
-     "ganhou": [
-      "Esfera",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Território",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro/teatro_minuta_tec_acoes-continuadas_1806-1.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 22,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro/acoes-continuadas-teatro-regulamento-retificado.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 22,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro/teatro-suplementacao-resultado-final.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro/copy_of_TeatroSelecionados.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro/Teatrosuplementao.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-apoio-a-acoes-continuadas-2025/programa-funarte-de-apoio-a-acoes-continuadas-2025-teatro/TEATRO_MINUTA_TEC_AESCONTINUADAS_1806.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 25,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "ja_constava",
-     "Órgão / financiador": "ja_constava",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "falta",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "op-789c308663e0",
-   "tipo": "livro",
-   "titulo": "Programa Funarte de Difusão Nacional 2025 - Circuito Myriam Muniz de Teatro",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Território",
-    "Esfera",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Requisitos"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-12T13:37:28+00:00",
-   "prazo": null,
-   "uf": "",
-   "orgao": "Funarte",
-   "fim": "2025-12-19",
-   "itens": {
-    "Resultado": {
-     "valor": "27 de maio de 2026",
-     "trecho": "muniz@funarte.gov.br ________________________________ RESULTADO FINAL A Fundação Nacional de Artes - Funarte publica, nesta quarta-feira, dia 27 de maio de 2026, o resultado final do Programa Funarte de Difusão Nacional 2025 - Cir",
-     "pagina": 1,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "07 de maio de 2026",
-     "trecho": "ica aos proponentes e demais interessados que o período de análise de recursos referente ao Circuito Myriam Muniz de Teatro , do Programa Funarte de Difusão Nacional 2025, fica prorrogado até o dia 07 de maio de 2026, quinta-feira. A presente prorrogação está fundamentada no",
-     "pagina": 1,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro",
-     "metodo": "seção"
-    },
-    "Território": {
-     "valor": "abrangência nacional",
-     "trecho": "zo final, como é feito em sistemas de quaisquer processos públicos de abrangência nacional. A Funarte permanece empenhada no aprimoramento contínuo das plataf",
-     "pagina": 1,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro",
-     "metodo": "texto"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.gov.br · Fundação Nacional de Artes (Funarte) publica nesta sexta-feira Funarte",
-     "pagina": 1,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Cultura, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Modalidade": {
-     "valor": null,
-     "trecho": "sos de natureza étnico -racial. Se o número permanecer insuficiente, os recursos serão destinados para a ampla concorrência, observando -se a ordem de classificação estabelecida pela Comissão de Seleção. 10 7.1.4. Na hipótese de não existirem propostas classifica",
-     "pagina": 9,
-     "documento": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro/DifusoNacional2025TeatroRetificado.pdf",
-     "metodo": "seção"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-12T13:37:28+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Prazo de recurso",
-      "Resultado",
-      "Território",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro/DifusoNacional2025TeatroRetificado.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 25,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro/Retificao_DifusoNacional_Teatro_DOU.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pdf_escaneado",
-     "falha": null,
-     "oficial": null,
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro/resultado-final-circuito-myriam-muniz.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro/programa-funarte-de-difusao-nacional-2025-circuito-myriam-muniz-de-teatro.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 26,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro/copy_of_ResultadosprovisriosTeatroselecionados.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/funarte/pt-br/editais/2025/programa-funarte-de-difusao-nacional-2025/circuito-myriam-muniz-de-teatro/copy2_of_ResultadosprovisriosTeatroclassificaogeral.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 29,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "ja_constava",
-     "Órgão / financiador": "ja_constava",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "falta",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "op-7716b6566aad",
-   "tipo": "livro",
-   "titulo": "Programa Rouanet Centro-Oeste",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-centro-oeste/programa-rouanet-centro-oeste",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Território"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-12T12:08:22+00:00",
-   "prazo": null,
-   "uf": "",
-   "orgao": "Ministério da Cultura",
-   "fim": "2026-06-16",
-   "itens": {
-    "Resultado": {
-     "valor": "20/8/2026",
-     "trecho": "as inscrições: 16/6/2026. Encerramento das inscrições: 13/8/2026. Divulgação do resultado das propostas inscritas: até 20/8/2026. Divulgação do resultado provisório da seleção: até 27/10/2026.",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-centro-oeste/programa-rouanet-centro-oeste",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "06/11/2026",
-     "trecho": "provisório da seleção: até 27/10/2026. Prazo para interposição de recursos da seleção: até 06/11/2026. Julgamento dos recursos da seleção: até 26/11/2026. Divulgação",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-centro-oeste/programa-rouanet-centro-oeste",
-     "metodo": "seção"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.gov.br · Ministério da Cultura Ministério da Cultura",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-centro-oeste/programa-rouanet-centro-oeste",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Educação, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Cultura, Educação, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-centro-oeste/programa-rouanet-centro-oeste",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Requisitos": {
-     "valor": "As propostas serão analisadas no sistema Salic desde que cumpram\ntodos os requisitos da legislação e deste Edital.",
-     "trecho": "eça a transmissão ou o recebimento adequado dos dados pelo Salic. 9 . DA HABILITAÇÃO INICIAL DAS PROPOSTAS 9 . 1 . As propostas serão analisadas no sistema Salic desde que cumpram todos os requisitos da legislação e deste Edital. 9 . 2 . A análise inicial verificará automaticamente os seguintes requisitos: 9 . 2 . 1 . Prazo de inscrição; 9 . 2 . 2 . Proponente ser pessoa jurídica; 9 . 2 . 3 . Área",
-     "pagina": 7,
-     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-em-andamento/programa-rouanet-centro-oeste/copy_of_SEI_2946078_Edital_03_2026_260616_085954.pdf",
-     "metodo": "seção"
-    },
-    "Modalidade": {
-     "valor": null,
-     "trecho": "lico - Programa Rouanet Centro-Oeste. O Programa Rouanet Centro-Oeste destina-se ao fortalecimento do setor, por meio de indução de investimentos em regiões especíﬁcas para seleção de projetos culturais a serem ﬁnanciados com recursos incentivados, em conformidade com o art. 50 do Decreto nº 11.453, de 23 de março de 2023. 1 . DO OBJETO 1 . 1",
-     "pagina": 1,
-     "documento": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-em-andamento/programa-rouanet-centro-oeste/copy_of_SEI_2946078_Edital_03_2026_260616_085954.pdf",
-     "metodo": "seção"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-12T12:08:22+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-abertas/programa-rouanet-centro-oeste/programa-rouanet-centro-oeste",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-em-andamento/programa-rouanet-centro-oeste/copy_of_SEI_2946078_Edital_03_2026_260616_085954.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 12,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-em-andamento/programa-rouanet-centro-oeste/manual-programa-rouanet-centro-oeste-final.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 47,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-em-andamento/programa-rouanet-centro-oeste/programa_rouanet_centro_oeste_propostas_habilitadas.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 60,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-em-andamento/programa-rouanet-centro-oeste/programa_rouanet_centro_oeste_propostas_desabilitadas.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 26,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cultura/pt-br/assuntos/editais",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Editais de Chamamento Público",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/edital-escolas-livres-de-formacao-em-arte-e-cultura",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Escolas Livres de Formação em Arte e Cultura",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "ja_constava",
-     "Órgão / financiador": "ja_constava",
-     "Território": "falta",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
   }
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2366,
+   "sem_estrela": 2341,
    "bronze": 121,
-   "prata": 182
+   "prata": 179
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 133,
+    "sem_estrela": 107,
     "bronze": 8,
-    "prata": 11
+    "prata": 9
    },
    "livro": {
-    "sem_estrela": 2233,
+    "sem_estrela": 2234,
     "bronze": 113,
-    "prata": 171
+    "prata": 170
    }
   },
-  "fila_oportunidades": 152,
+  "fila_oportunidades": 124,
   "fila_livros": 2517,
-  "devidas_nesta_hora": 2322,
+  "devidas_nesta_hora": 2307,
   "promovidas_nesta_execucao": 0,
   "sem_material_agora": 21,
   "esgotadas_10_abordagens": 0,
