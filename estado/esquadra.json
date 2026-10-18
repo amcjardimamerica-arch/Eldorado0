@@ -269,18 +269,18 @@
     "alego-pl": {
       "nome": "Assembleia Legislativa de Goiás — proposições",
       "tipo": "legislativo",
-      "leituras": 116,
+      "leituras": 117,
       "achados_total": 3,
-      "vazias_seguidas": 86,
-      "ultima": "2026-10-17T13:09:33+00:00",
-      "motivo": "motor regular e geral — todo dia",
+      "vazias_seguidas": 87,
+      "ultima": "2026-10-18T04:51:02+00:00",
+      "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 0,
       "saude": [
         {
           "url": "https://portal.al.go.leg.br/",
           "http": 200,
-          "bytes": 133710
+          "bytes": 133594
         },
         {
           "url": "https://portal.al.go.leg.br/credenciamento-imprensa",
@@ -291,7 +291,7 @@
       "alerta": "trocar URL: 3 leituras sem achados com página respondendo",
       "diagnostico": {
         "paginas_lidas": 2,
-        "links_total": 441,
+        "links_total": 440,
         "links_candidatos": 305,
         "descobertas": [
           {
@@ -317,8 +317,8 @@
         ],
         "pdf_links": 8,
         "motivo_zero": "página institucional; seguiu 4 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje",
-        "camada1_vetados": 18,
-        "camada1_direcionados": 10,
+        "camada1_vetados": 19,
+        "camada1_direcionados": 16,
         "paginas_alem_do_limite": 4,
         "robots_proibe": [
           "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
@@ -339,20 +339,14 @@
     "camara-goiania-pl": {
       "nome": "Câmara Municipal de Goiânia — projetos de lei",
       "tipo": "legislativo",
-      "leituras": 133,
+      "leituras": 134,
       "achados_total": 0,
-      "vazias_seguidas": 133,
-      "ultima": "2026-10-17T15:08:20+00:00",
+      "vazias_seguidas": 134,
+      "ultima": "2026-10-18T04:51:23+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
-      "falhas_ultima": 0,
+      "falhas_ultima": 1,
       "saude": [
-        {
-          "url": "https://www.goiania.go.leg.br",
-          "http": 200,
-          "bytes": 284282,
-          "itens": 24
-        },
         {
           "url": "https://www.goiania.go.leg.br",
           "http": 200,
@@ -360,14 +354,14 @@
           "itens": 0
         }
       ],
-      "alerta": "trocar URL: 3 leituras sem achados com página respondendo",
+      "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 13,
-        "links_total": 24,
-        "links_candidatos": 3,
+        "paginas_lidas": 1,
+        "links_total": 0,
+        "links_candidatos": 0,
         "descobertas": [],
         "pdf_links": 0,
-        "motivo_zero": "24 itens lidos (pautas D 0 projetos em 0 pauta(s) · processos A 0 · própria B 0 · notícias C 24): nenhum chamamento aberto para OSC · 3 a acompanhar · 0 utilidade(s) pública(s) para a lista de habilitação",
+        "motivo_zero": "0 itens lidos (pautas D 0 projetos em 0 pauta(s) · processos A 0 · própria B 0 · notícias C 0): nenhum chamamento aberto para OSC · 0 a acompanhar · 0 utilidade(s) pública(s) para a lista de habilitação",
         "versao": "motor-05 v2 (01/10/2026)",
         "fontes": {
           "A": {
@@ -383,10 +377,11 @@
             "proibido_robots": true
           },
           "C": {
-            "falhas": [],
-            "consultas": 12,
-            "itens": 24,
-            "bytes": 284282
+            "falhas": [
+              "direto: HTTP Error 500: Internal Server Error · pela ponte Brasil: HTTP 500 pela ponte"
+            ],
+            "consultas": 0,
+            "itens": 0
           },
           "D": {
             "falhas": [],
@@ -400,8 +395,8 @@
         },
         "vereditos": {
           "OPORTUNIDADE": 0,
-          "ACOMPANHAR": 3,
-          "RUIDO": 21,
+          "ACOMPANHAR": 0,
+          "RUIDO": 0,
           "quarentena": 0,
           "erros": 0
         },
@@ -409,7 +404,7 @@
         "leitura_do_dia": {
           "pautas_publicadas": 0,
           "pautas_lidas": 0,
-          "noticias": 24,
+          "noticias": 0,
           "nao_lidas": []
         },
         "proibido_robots": {
@@ -420,7 +415,7 @@
           "motivo": "o robots.txt do SUAP (suap.camaragyn.go.gov.br) proíbe robôs (Disallow: /) — os processos e a tramitação vêm das pautas do Plenário no portal; a ficha do processo da associação no SUAP é conferida pelo titular (consulta humana)"
         }
       },
-      "duracao_s": 23,
+      "duracao_s": 6,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 0,
@@ -978,30 +973,30 @@
     "empresas-incentivadas": {
       "nome": "Editais incentivados de empresas — destinação tributária (Rouanet, LIE, FIA, PRONON)",
       "tipo": "empresas_incentivo",
-      "leituras": 27,
+      "leituras": 28,
       "achados_total": 37,
       "vazias_seguidas": 0,
-      "ultima": "2026-10-18T03:49:28+00:00",
+      "ultima": "2026-10-18T05:15:52+00:00",
       "motivo": "ativação manual pelo titular",
-      "achados_ultima": 6,
+      "achados_ultima": 3,
       "falhas_ultima": 3,
       "saude": [
         {
           "url": "https://www.saneago.com.br/",
           "http": 200,
-          "bytes": 59532
+          "bytes": 51109
         },
         {
           "url": "https://paraquemdoar.org",
           "http": 200,
-          "bytes": 299812
+          "bytes": 332353
         }
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 23,
-        "links_total": 2904,
-        "links_candidatos": 1502,
+        "paginas_lidas": 24,
+        "links_total": 2910,
+        "links_candidatos": 1498,
         "descobertas": [
           {
             "de": "https://www.saneago.com.br/",
@@ -1026,22 +1021,19 @@
         ],
         "pdf_links": 55,
         "motivo_zero": null,
-        "camada1_vetados": 24,
-        "camada1_direcionados": 84,
+        "camada1_vetados": 23,
+        "camada1_direcionados": 80,
         "paginas_alem_do_limite": 13,
         "fora_da_fila": [
           "https://go.equatorialenergia.com.br/"
-        ],
-        "aguardando_retentativa": [
-          "https://agos.com.br"
         ]
       },
-      "duracao_s": 70,
-      "relidas_total": 92,
+      "duracao_s": 100,
+      "relidas_total": 95,
       "totais_por_distintas": true,
       "novas_ultima": 0,
-      "relidas_ultima": 6,
-      "fora_do_portao": 5
+      "relidas_ultima": 3,
+      "fora_do_portao": 6
     },
     "f260-captacao-051": {
       "nome": "Programa estadual de eventos esportivos",
@@ -1210,10 +1202,10 @@
     "f260-captacao-118": {
       "nome": "Destinação de IR pessoa física para FMDCA",
       "tipo": "site_oficial",
-      "leituras": 64,
+      "leituras": 65,
       "achados_total": 31,
       "vazias_seguidas": 0,
-      "ultima": "2026-10-17T11:18:42+00:00",
+      "ultima": "2026-10-18T04:51:38+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 2,
       "falhas_ultima": 1,
@@ -1226,7 +1218,7 @@
         {
           "url": "https://www.gov.br/mdh/pt-br/acesso-a-informacao/participacao-social/conselho-nacional-dos-direitos-da-crianca-e-do-adolescente-conanda",
           "http": 200,
-          "bytes": 52759
+          "bytes": 52765
         }
       ],
       "alerta": null,
@@ -1259,13 +1251,13 @@
         "pdf_links": 4,
         "motivo_zero": null,
         "camada1_vetados": 6,
-        "camada1_direcionados": 30
+        "camada1_direcionados": 40
       },
-      "duracao_s": 22,
+      "duracao_s": 15,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 2,
-      "relidas_total": 16
+      "relidas_total": 18
     },
     "f260-captacao-151": {
       "nome": "Emenda estadual para saúde comunitária",
@@ -1413,10 +1405,10 @@
     "f260-captacao-196": {
       "nome": "MPGO - TAC com destinação social",
       "tipo": "site_oficial",
-      "leituras": 57,
+      "leituras": 58,
       "achados_total": 0,
-      "vazias_seguidas": 57,
-      "ultima": "2026-10-17T05:44:28+00:00",
+      "vazias_seguidas": 58,
+      "ultima": "2026-10-18T04:51:14+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 0,
@@ -1464,7 +1456,7 @@
         "camada1_vetados": 13,
         "camada1_direcionados": 1
       },
-      "duracao_s": 18,
+      "duracao_s": 12,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 0,
@@ -1473,10 +1465,10 @@
     "f260-captacao-238": {
       "nome": "Sebrae Goiás - parcerias com OSC para empreendedorismo",
       "tipo": "site_oficial",
-      "leituras": 70,
+      "leituras": 71,
       "achados_total": 0,
-      "vazias_seguidas": 70,
-      "ultima": "2026-10-17T16:14:51+00:00",
+      "vazias_seguidas": 71,
+      "ultima": "2026-10-18T04:51:38+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 0,
@@ -1565,10 +1557,10 @@
     "f260-captacao-044": {
       "nome": "Projetos aptos à captação na LIE",
       "tipo": "site_oficial",
-      "leituras": 52,
+      "leituras": 53,
       "achados_total": 31,
       "vazias_seguidas": 0,
-      "ultima": "2026-10-17T05:28:31+00:00",
+      "ultima": "2026-10-18T04:50:55+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 2,
       "falhas_ultima": 0,
@@ -1576,7 +1568,7 @@
         {
           "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-encerradas/edital-premio-cultura-viva-construcao-nacional-do-hip-hop-2023-1",
           "http": 200,
-          "bytes": 155322
+          "bytes": 155316
         },
         {
           "url": "https://www.gov.br/cultura/pt-br/assuntos/editais",
@@ -1614,16 +1606,16 @@
         "pdf_links": 11,
         "motivo_zero": null,
         "camada1_vetados": 5,
-        "camada1_direcionados": 30,
+        "camada1_direcionados": 40,
         "fora_da_fila": [
           "https://www.gov.br/esporte/pt-br/acoes-e-programas/lei-de-incentivo-ao-esporte"
         ]
       },
-      "duracao_s": 9,
+      "duracao_s": 8,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 2,
-      "relidas_total": 8
+      "relidas_total": 10
     },
     "f260-captacao-060": {
       "nome": "Escolinha de natação/paradesporto adaptado",
@@ -1914,13 +1906,13 @@
     "f260-captacao-218": {
       "nome": "Capta - oportunidades e editais",
       "tipo": "privada",
-      "leituras": 57,
+      "leituras": 58,
       "achados_total": 0,
-      "vazias_seguidas": 57,
-      "ultima": "2026-10-17T11:18:20+00:00",
+      "vazias_seguidas": 58,
+      "ultima": "2026-10-18T04:51:17+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
-      "falhas_ultima": 1,
+      "falhas_ultima": 0,
       "saude": [
         {
           "url": "https://prosas.com.br/editais",
@@ -1933,7 +1925,7 @@
           "bytes": 35023
         }
       ],
-      "alerta": null,
+      "alerta": "trocar URL: 3 leituras sem achados com página respondendo",
       "diagnostico": {
         "paginas_lidas": 3,
         "links_total": 26,
@@ -1948,14 +1940,22 @@
             "de": "https://prosas.com.br/editais",
             "para": "https://www.prudential.com.br/jovensvisionarios?utm_source=prosas&utm_medium=banner&utm_campaign=jovens_visionarios_2026&utm_content=central_editais_192x600",
             "rotulo": ""
+          },
+          {
+            "de": "https://prosas.com.br/editais",
+            "para": "https://wa.me/5531999198781?text=Olá,+gostaria+de+saber+mais+sobre+a+Central+de+editais,+ para+divulgação+do+meu+edital.",
+            "rotulo": "Fale com a nossa equipe"
           }
         ],
         "pdf_links": 1,
-        "motivo_zero": "parte das páginas respondeu e parte falhou; nenhum edital reconhecido nas que responderam",
+        "motivo_zero": "página institucional; seguiu 3 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje",
         "camada1_vetados": 0,
-        "camada1_direcionados": 2
+        "camada1_direcionados": 2,
+        "fora_da_fila": [
+          "https://wa.me/5531999198781?text=Olá,+gostaria+de+saber+mais+sobre+a+Central+de+editais,+ para+divulgação+do+meu+edital."
+        ]
       },
-      "duracao_s": 5,
+      "duracao_s": 3,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 0,
@@ -3047,10 +3047,10 @@
     "plat-empresas-editais-incentivados": {
       "nome": "Editais de empresas incentivadoras (modelo Porto Itapoá) — FIA, Idoso, Esporte, Rouanet, PRONAS",
       "tipo": "plataforma",
-      "leituras": 116,
-      "achados_total": 53,
+      "leituras": 117,
+      "achados_total": 54,
       "vazias_seguidas": 0,
-      "ultima": "2026-10-18T03:40:08+00:00",
+      "ultima": "2026-10-18T05:14:10+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 22,
       "falhas_ultima": 2,
@@ -3063,14 +3063,14 @@
         {
           "url": "https://www.alcoa.com/brasil/pt/institute/local-project-support-program",
           "http": 200,
-          "bytes": 48552
+          "bytes": 48553
         }
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 32,
-        "links_total": 2801,
-        "links_candidatos": 1423,
+        "paginas_lidas": 31,
+        "links_total": 2704,
+        "links_candidatos": 1371,
         "descobertas": [
           {
             "de": "https://captadores.org.br/editais/",
@@ -3102,14 +3102,17 @@
           "https://www.institutosicoob.org.br/premio.html",
           "https://www.institutonatura.org/",
           "https://www.institutosicoob.org.br/"
+        ],
+        "aguardando_retentativa": [
+          "https://fundacaotelefonicavivo.org.br/"
         ]
       },
-      "duracao_s": 126,
-      "relidas_total": 1875,
+      "duracao_s": 138,
+      "relidas_total": 1896,
       "totais_por_distintas": true,
       "novas_ultima": 1,
       "relidas_ultima": 21,
-      "fora_do_portao": 35
+      "fora_do_portao": 37
     },
     "plat-fapeg": {
       "nome": "FAPEG — Fundação de Amparo à Pesquisa de Goiás",
@@ -3713,10 +3716,10 @@
     "plat-prefeituras-50-go": {
       "nome": "Prefeituras das 50 maiores cidades de Goiás — portais de editais",
       "tipo": "plataforma",
-      "leituras": 114,
+      "leituras": 115,
       "achados_total": 13,
-      "vazias_seguidas": 3,
-      "ultima": "2026-10-18T04:12:08+00:00",
+      "vazias_seguidas": 4,
+      "ultima": "2026-10-18T05:11:52+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 0,
@@ -4326,30 +4329,38 @@
     "judiciario-cnj-tjgo": {
       "nome": "Judiciário — CNJ e TJGO: editais das varas de execução penal e das comarcas (prestações pecuniárias) e credenciamentos de entidades",
       "tipo": "diario_justica",
-      "leituras": 26,
+      "leituras": 27,
       "achados_total": 1,
-      "vazias_seguidas": 24,
-      "duracao_s": 47,
-      "ultima": "2026-10-18T03:40:55+00:00",
+      "vazias_seguidas": 25,
+      "duracao_s": 2,
+      "ultima": "2026-10-18T05:14:12+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 2,
       "saude": [
         {
-          "url": "https://www.cnj.jus.br/",
-          "http": 200,
-          "bytes": 1623180,
-          "itens": 48
+          "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs",
+          "erro": "judiciario",
+          "code": null,
+          "waf": null,
+          "causa": "A: RSS página 1: direto: HTTP 403 — acesso negado (padrão de bloqueio de IP estrangeiro) · pela ponte Brasil: HTTP 403 pela ponte"
+        },
+        {
+          "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs",
+          "erro": "judiciario",
+          "code": null,
+          "waf": null,
+          "causa": "A: carga inicial, página 7: direto: HTTP 403 — acesso negado (padrão de bloqueio de IP estrangeiro) · pela ponte Brasil: HTTP 403 pela ponte"
         }
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 6,
+        "paginas_lidas": 0,
         "links_total": 0,
         "links_candidatos": 0,
         "descobertas": [],
         "pdf_links": 0,
-        "motivo_zero": "0 notícias lidas (TJGO A 0 no RSS · CNJ C 48) e 0 do TJGO/CNJ no PNCP (lidas pelo motor 04, já na base): nenhum edital de destinação aberto hoje · 0 a acompanhar",
+        "motivo_zero": "0 notícias lidas (TJGO A 0 no RSS · CNJ C 0) e 0 do TJGO/CNJ no PNCP (lidas pelo motor 04, já na base): nenhum edital de destinação aberto hoje · 0 a acompanhar",
         "versao": "motor Judiciário CNJ+TJGO v1 (02/10/2026)",
         "rota": "ponte",
         "fontes": {
@@ -4371,10 +4382,9 @@
           },
           "C": {
             "falhas": [],
-            "consultas": 6,
-            "itens": 48,
-            "bytes": 1623180,
-            "candidatas": 0
+            "consultas": 0,
+            "itens": 0,
+            "pulado": "cadência: já lido em 2026-10-18"
           },
           "D": {
             "falhas": [],
@@ -7244,13 +7254,13 @@
     "plat-estaduais-go-gov": {
       "nome": "Oportunidade Estaduais Governamentais de Goiás",
       "tipo": "plataforma",
-      "leituras": 85,
+      "leituras": 86,
       "achados_total": 1,
-      "vazias_seguidas": 0,
-      "duracao_s": 266,
-      "ultima": "2026-10-18T03:35:13+00:00",
+      "vazias_seguidas": 1,
+      "duracao_s": 127,
+      "ultima": "2026-10-18T04:56:51+00:00",
       "motivo": "ativação manual pelo titular",
-      "achados_ultima": 1,
+      "achados_ultima": 0,
       "falhas_ultima": 0,
       "saude": [
         {
@@ -7268,38 +7278,25 @@
         "orgaos": 51,
         "descobertos_agora": 0,
         "camadas_feitas": {
-          "4": 50,
-          "1": 1,
-          "2": 1,
-          "3": 1
+          "4": 50
         },
         "falhas": [],
-        "paginas_lidas": 53,
-        "motivo_zero": null,
-        "livros": {
-          "livros_novos": 0,
-          "livros_atualizados": 4,
-          "vetados_pelas_restricoes": 1,
-          "pendentes_das_restricoes": 0,
-          "atos_legislativos_acompanhados": 0
-        },
+        "paginas_lidas": 50,
+        "motivo_zero": "50 órgão(s) já com histórico e monitorados; nenhuma seleção aberta nova hoje",
         "pendentes_livros": 0,
         "cobertura_orgaos": {
-          "devidos": 51,
+          "devidos": 50,
           "monitorados_hoje": 50,
-          "pendentes": [
-            "seds"
-          ]
+          "pendentes": []
         },
-        "paginas_nao_lidas": 1,
         "orgaos_por_camada": {
-          "camada 4": 51
+          "camada 4": 50
         }
       },
       "relidas_total": 44,
       "totais_por_distintas": true,
       "novas_ultima": 0,
-      "relidas_ultima": 1
+      "relidas_ultima": 0
     },
     "f260-curadoria-009": {
       "nome": "SECULT Goiás — chamamentos públicos da Lei 13.019/2014",
@@ -7894,70 +7891,66 @@
     "outras-oportunidades-1": {
       "nome": "Outras Oportunidades 1/3",
       "tipo": "site_oficial",
-      "leituras": 40,
-      "achados_total": 153,
+      "leituras": 41,
+      "achados_total": 189,
       "vazias_seguidas": 0,
-      "duracao_s": 59,
-      "ultima": "2026-10-18T03:30:34+00:00",
+      "duracao_s": 87,
+      "ultima": "2026-10-18T04:54:44+00:00",
       "motivo": "ativação manual pelo titular",
-      "achados_ultima": 58,
-      "falhas_ultima": 1,
+      "achados_ultima": 52,
+      "falhas_ultima": 2,
       "saude": [
         {
-          "url": "https://www.institutoacp.org.br/chamadaaberta",
+          "url": "http://www.onumulheres.org.br/wp-content/uploads/2026/03/Anexos-da-Chamada-001-2026-Mulheres-e-Justica-Climatica_FINAL.pdf",
           "http": 200,
-          "bytes": 581435
+          "bytes": 448973
         },
         {
-          "url": "https://unaids.org.br/desafiounaids",
+          "url": "http://www.administracao.go.gov.br/",
           "http": 200,
-          "bytes": 96278
+          "bytes": 220168
         }
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 22,
-        "links_total": 3096,
-        "links_candidatos": 1202,
+        "paginas_lidas": 24,
+        "links_total": 3657,
+        "links_candidatos": 1655,
         "descobertas": [
           {
-            "de": "https://www.institutoacp.org.br/chamadaaberta",
-            "para": "https://www.institutoacp.org.br/transparencia",
-            "rotulo": "TRANSPARÊNCIA"
+            "de": "http://www.administracao.go.gov.br/",
+            "para": "https://goias.gov.br/administracao/licitacoes-liquidacao-de-estatais",
+            "rotulo": "Diretoria-Executiva de Liquidação de Estatais"
           },
           {
-            "de": "https://www.institutoacp.org.br/chamadaaberta",
-            "para": "https://www.institutoacp.org.br/cópia-idbr",
-            "rotulo": "TRANSPARÊNCIA BRASIL"
+            "de": "http://www.administracao.go.gov.br/",
+            "para": "https://goias.gov.br/administracao/licitacoes-segplan",
+            "rotulo": "Licitações SEAD"
           },
           {
-            "de": "https://unaids.org.br/desafiounaids",
-            "para": "https://unaids.org.br/relatorios-e-publicacoes",
-            "rotulo": "Relatórios e Publicações"
+            "de": "http://www.administracao.go.gov.br/",
+            "para": "https://transparencia.go.gov.br/",
+            "rotulo": "PORTAL DA TRANSPARÊNCIA"
           },
           {
-            "de": "https://unaids.org.br/desafiounaids",
-            "para": "https://unaids.org.br/edital-2-acoes-comunitarias-nos-territorios",
-            "rotulo": "Edital 2 | Seleção de OSCs para desenvolver ações nos territ"
+            "de": "http://www.administracao.go.gov.br/",
+            "para": "https://radardatransparencia.atricon.org.br/",
+            "rotulo": "RADAR DA TRANSPARÊNCIA"
           }
         ],
-        "pdf_links": 107,
+        "pdf_links": 31,
         "motivo_zero": null,
-        "camada1_vetados": 62,
-        "camada1_direcionados": 182,
+        "camada1_vetados": 256,
+        "camada1_direcionados": 179,
         "fora_da_fila": [
-          "https://impactanordeste.com.br/itau-viver-mais-inscricoes-abertas-edital-longevidade-2026/",
           "https://www.boavista.rr.gov.br/"
-        ],
-        "aguardando_retentativa": [
-          "https://www.institutococacolabrasil.com.br/"
         ]
       },
-      "relidas_total": 857,
+      "relidas_total": 873,
       "totais_por_distintas": true,
-      "novas_ultima": 13,
-      "relidas_ultima": 45,
-      "fora_do_portao": 7
+      "novas_ultima": 36,
+      "relidas_ultima": 16,
+      "fora_do_portao": 10
     },
     "outras-oportunidades-3": {
       "nome": "Outras Oportunidades 3/3",
@@ -8271,14 +8264,14 @@
     "outras-oportunidades-7": {
       "nome": "Outras Oportunidades 7/7",
       "tipo": "site_oficial",
-      "leituras": 17,
+      "leituras": 18,
       "achados_total": 98,
       "vazias_seguidas": 0,
-      "duracao_s": 116,
-      "ultima": "2026-10-18T03:57:07+00:00",
+      "duracao_s": 99,
+      "ultima": "2026-10-18T04:53:17+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 13,
-      "falhas_ultima": 1,
+      "falhas_ultima": 2,
       "saude": [
         {
           "url": "https://jornadasocial.com.br/edital-transformacao/",
@@ -8294,14 +8287,9 @@
       "alerta": null,
       "diagnostico": {
         "paginas_lidas": 25,
-        "links_total": 2714,
-        "links_candidatos": 1601,
+        "links_total": 2768,
+        "links_candidatos": 1657,
         "descobertas": [
-          {
-            "de": "https://jornadasocial.com.br/edital-transformacao/",
-            "para": "https://jornadasocial.com.br/saiba-mais-sobre-a-jornada-tranformacao/edital-transformacao-2025",
-            "rotulo": "Edital Jornada TransformAção 2025"
-          },
           {
             "de": "https://jornadasocial.com.br/edital-transformacao/",
             "para": "https://jornadasocial.com.br/edital-transformacao",
@@ -8316,20 +8304,26 @@
             "de": "https://baoba.org.br/programa-marielle-franco/",
             "para": "https://baoba.org.br/editais-em-curso/blackstem-2edicao",
             "rotulo": "Black STEM 2ª Edição"
+          },
+          {
+            "de": "https://baoba.org.br/programa-marielle-franco/",
+            "para": "https://baoba.org.br/programa-ja-e-2025",
+            "rotulo": "Edital Já É 2ª Edição"
           }
         ],
-        "pdf_links": 24,
+        "pdf_links": 25,
         "motivo_zero": null,
-        "camada1_vetados": 31,
-        "camada1_direcionados": 148,
+        "camada1_vetados": 35,
+        "camada1_direcionados": 174,
         "fora_da_fila": [
-          "https://blogdoamarildo.com.br/com-vagas-para-goias-e-outros-estados-edp-abre-inscricoes-para-selecao-de-projetos-incentivados-e-preve-destinar-ate-r-12-milhoes-a-iniciativas-sociais-esportivas-e-de-saude/"
+          "https://blogdoamarildo.com.br/com-vagas-para-goias-e-outros-estados-edp-abre-inscricoes-para-selecao-de-projetos-incentivados-e-preve-destinar-ate-r-12-milhoes-a-iniciativas-sociais-esportivas-e-de-saude/",
+          "https://fas-amazonia.org/editais-e-chamadas/"
         ]
       },
       "totais_por_distintas": true,
-      "novas_ultima": 3,
-      "relidas_ultima": 10,
-      "relidas_total": 130
+      "novas_ultima": 0,
+      "relidas_ultima": 13,
+      "relidas_total": 143
     },
     "plataforma-wordpress": {
       "nome": "Adaptador WordPress — sites oficiais pela API pública",
@@ -10024,111 +10018,29 @@
   },
   "ultima_execucao": {
     "data": "2026-10-18",
-    "em": "2026-10-18T04:48:02+00:00",
+    "em": "2026-10-18T05:15:53+00:00",
     "manual": [
       "alego-pl",
       "camara-goiania-pl",
-      "congresso-nacional",
       "empresas-incentivadas",
       "f260-captacao-001",
-      "f260-captacao-018",
-      "f260-captacao-034",
-      "f260-captacao-035",
-      "f260-captacao-038",
-      "f260-captacao-041",
       "f260-captacao-044",
-      "f260-captacao-051",
-      "f260-captacao-072",
-      "f260-captacao-081",
-      "f260-captacao-090",
-      "f260-captacao-095",
-      "f260-captacao-113",
       "f260-captacao-118",
-      "f260-captacao-119",
-      "f260-captacao-134",
-      "f260-captacao-143",
-      "f260-captacao-149",
-      "f260-captacao-159",
-      "f260-captacao-175",
-      "f260-captacao-177",
       "f260-captacao-196",
-      "f260-captacao-200",
-      "f260-captacao-208",
-      "f260-captacao-212",
-      "f260-captacao-216",
-      "f260-captacao-217",
       "f260-captacao-218",
-      "f260-captacao-220",
       "f260-captacao-221",
-      "f260-captacao-222",
-      "f260-captacao-223",
       "f260-captacao-224",
-      "f260-captacao-225",
-      "f260-captacao-226",
       "f260-captacao-227",
       "f260-captacao-228",
-      "f260-captacao-229",
-      "f260-captacao-231",
-      "f260-captacao-235",
-      "f260-captacao-236",
       "f260-captacao-237",
       "f260-captacao-238",
       "f260-captacao-240",
-      "f260-captacao-241",
-      "f260-captacao-242",
-      "f260-captacao-243",
-      "f260-captacao-244",
-      "f260-captacao-245",
-      "f260-captacao-246",
-      "f260-captacao-247",
-      "f260-captacao-249",
-      "f260-captacao-250",
-      "f260-captacao-251",
-      "f260-captacao-252",
       "f260-captacao-254",
-      "f260-captacao-255",
-      "f260-captacao-256",
-      "f260-captacao-257",
-      "f260-captacao-258",
-      "f260-captacao-259",
-      "f260-captacao-260",
-      "f260-curadoria-001",
       "f260-curadoria-002",
-      "f260-curadoria-003",
-      "f260-curadoria-004",
       "f260-curadoria-005",
-      "f260-curadoria-006",
-      "f260-curadoria-007",
-      "f260-curadoria-009",
-      "f260-curadoria-010",
-      "f260-curadoria-011",
-      "f260-espalhado-acessoainformacao-cavalcante-go-gov-br",
-      "f260-espalhado-carazinho-atende-net",
-      "f260-espalhado-carire-ce-gov-br",
-      "f260-espalhado-crcgo-org-br",
       "f260-espalhado-rouanet-cultura-gov-br",
-      "f260-espalhado-senadorcanedo-go-gov-br",
-      "f260-espalhado-sistema-mirassoldoeste-mt-gov-br",
-      "f260-espalhado-transparencia-agilicloud-com-br",
-      "f260-espalhado-transparencia-cacoal-ro-gov-br",
-      "f260-espalhado-transparencia-nobres-mt-gov-br",
-      "f260-espalhado-www-arapongas-pr-gov-br",
-      "f260-espalhado-www-bentogoncalves-rs-gov-br",
-      "f260-espalhado-www-detran-rj-gov-br",
-      "f260-espalhado-www-ipora-pr-gov-br",
-      "f260-espalhado-www-itabaianinha-se-gov-br",
-      "f260-espalhado-www-novohamburgo-rs-gov-br",
-      "f260-espalhado-www-ribeiraodasneves-mg-gov-br",
-      "f260-espalhado-www-riopreto-sp-gov-br",
-      "f260-espalhado-www-rosariodosul-rs-gov-br",
-      "f260-espalhado-www-santaluziadoparua-ma-gov-br",
-      "f260-espalhado-www-senadorpompeu-ce-gov-br",
-      "f260-espalhado-www-vilarica-mt-gov-br",
       "judiciario-cnj-tjgo",
       "judiciario-tjgo",
-      "mpgo-destinacao",
-      "mptgo-destinacao",
-      "mpu-destinacao",
       "outras-oportunidades-1",
       "outras-oportunidades-2",
       "outras-oportunidades-3",
@@ -10136,7 +10048,6 @@
       "outras-oportunidades-6",
       "outras-oportunidades-7",
       "outras-oportunidades-8",
-      "plat-cnpq-extensao",
       "plat-empresas-editais-incentivados",
       "plat-estaduais-go-gov",
       "plat-prefeituras-50-go",
@@ -10145,58 +10056,60 @@
       "plataforma-wordpress"
     ],
     "bloco": "manual",
-    "sensores_executados": 99,
+    "sensores_executados": 14,
     "adiados_por_tempo": [
-      "f260-captacao-044",
-      "alego-pl",
-      "f260-captacao-196",
-      "f260-captacao-218",
-      "camara-goiania-pl",
-      "f260-captacao-118",
-      "f260-captacao-238",
-      "outras-oportunidades-1",
-      "plat-estaduais-go-gov",
-      "plat-empresas-editais-incentivados",
-      "judiciario-cnj-tjgo",
-      "empresas-incentivadas",
-      "outras-oportunidades-7",
-      "plat-prefeituras-50-go",
       "plataforma-mapas-culturais",
       "judiciario-tjgo",
       "plataforma-wordpress",
-      "outras-oportunidades-2"
+      "outras-oportunidades-2",
+      "outras-oportunidades-3",
+      "outras-oportunidades-8",
+      "outras-oportunidades-6",
+      "plat-salic",
+      "f260-captacao-001",
+      "f260-captacao-254",
+      "f260-captacao-237",
+      "f260-curadoria-002",
+      "f260-captacao-227",
+      "outras-oportunidades-5",
+      "f260-espalhado-rouanet-cultura-gov-br",
+      "f260-captacao-228",
+      "f260-captacao-240",
+      "f260-curadoria-005",
+      "f260-captacao-221",
+      "f260-captacao-224"
     ],
-    "duracao_s": 1504,
-    "em_espera": 12,
+    "duracao_s": 1507,
+    "em_espera": 95,
     "total_esquadra": 129,
     "previsoes_ativas": 1,
-    "achados": 108,
-    "novos_na_base": 27,
+    "achados": 94,
+    "novos_na_base": 5,
     "por_tipo": {
       "site_oficial": {
-        "sensores": 92,
-        "achados": 103,
-        "falhas": 26
-      },
-      "ministerio_publico": {
-        "sensores": 3,
-        "achados": 2,
-        "falhas": 0
-      },
-      "plataforma": {
-        "sensores": 2,
-        "achados": 3,
-        "falhas": 2
+        "sensores": 7,
+        "achados": 69,
+        "falhas": 5
       },
       "legislativo": {
-        "sensores": 1,
+        "sensores": 2,
         "achados": 0,
-        "falhas": 0
+        "falhas": 1
       },
-      "privada": {
+      "plataforma": {
+        "sensores": 3,
+        "achados": 22,
+        "falhas": 2
+      },
+      "diario_justica": {
         "sensores": 1,
         "achados": 0,
-        "falhas": 0
+        "falhas": 2
+      },
+      "empresas_incentivo": {
+        "sensores": 1,
+        "achados": 3,
+        "falhas": 3
       }
     }
   }
