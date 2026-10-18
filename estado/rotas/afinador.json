@@ -1108,9 +1108,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T16:55:50+00:00",
+  "em": "2026-10-18T17:01:44+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": true
+  "ponte_respondeu": false
  },
  "f260-captacao-238": {
   "em": "2026-10-18T16:10:51+00:00",
@@ -4579,21 +4579,10 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-229": {
-  "em": "2026-10-18T16:01:23+00:00",
-  "testes": 20,
+  "em": "2026-10-18T17:01:22+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
-   {
-    "url": "https://www.institutovotorantim.org.br/",
-    "origem": "rota original",
-    "via": "direto",
-    "pontos": 1,
-    "links": 21,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
    {
     "url": "https://www.institutovotorantim.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
@@ -4602,6 +4591,17 @@
     "links": 0,
     "sinais": 0,
     "formato": "json",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutovotorantim.org.br/",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 1,
+    "links": 21,
+    "sinais": 0,
+    "formato": "html",
     "erro": null,
     "funcionou": false
    },
@@ -4617,26 +4617,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutovotorantim.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutovotorantim.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutovotorantim.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -4648,7 +4628,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutovotorantim.org.br/edital",
+    "url": "https://www.institutovotorantim.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4660,11 +4640,11 @@
    {
     "url": "https://www.institutovotorantim.org.br/edital",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "ErroPonte",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -4678,16 +4658,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutovotorantim.org.br/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutovotorantim.org.br/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -4695,16 +4665,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutovotorantim.org.br/noticias",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -4718,16 +4678,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutovotorantim.org.br/chamamento-publico",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutovotorantim.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
@@ -4738,13 +4688,23 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutovotorantim.org.br/chamadas-publicas",
+    "url": "https://www.institutovotorantim.org.br/chamamentos",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "ErroPonte",
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutovotorantim.org.br/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
@@ -5270,7 +5230,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-rouanet-cultura-gov-br": {
-  "em": "2026-10-18T15:54:34+00:00",
+  "em": "2026-10-18T16:59:12+00:00",
   "testes": 24,
   "melhor": null,
   "detalhe": [
@@ -5315,7 +5275,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/transparencia/editais",
+    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5325,7 +5285,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/transparencia/editais",
+    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -5335,7 +5295,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
+    "url": "https://rouanet.cultura.gov.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5345,7 +5305,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
+    "url": "https://rouanet.cultura.gov.br/transparencia/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -6929,8 +6889,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-226": {
-  "em": "2026-10-18T16:01:38+00:00",
-  "testes": 20,
+  "em": "2026-10-18T17:01:33+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -6955,16 +6915,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutonatura.org/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutonatura.org/feed",
     "origem": "padrão",
     "via": "direto",
@@ -6973,26 +6923,6 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutonatura.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutonatura.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -7007,7 +6937,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutonatura.org/edital",
+    "url": "https://www.institutonatura.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7019,16 +6949,6 @@
    {
     "url": "https://www.institutonatura.org/edital",
     "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutonatura.org/editais",
-    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -7039,11 +6959,11 @@
    {
     "url": "https://www.institutonatura.org/editais",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "ErroPonte",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -7068,16 +6988,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutonatura.org/chamamento-publico",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutonatura.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
@@ -7088,13 +6998,23 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutonatura.org/chamadas-publicas",
+    "url": "https://www.institutonatura.org/chamamentos",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "ErroPonte",
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutonatura.org/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
@@ -7369,8 +7289,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-www-ipora-pr-gov-br": {
-  "em": "2026-10-18T16:01:54+00:00",
-  "testes": 13,
+  "em": "2026-10-18T17:01:44+00:00",
+  "testes": 12,
   "melhor": {
    "url": "https://www.ipora.pr.gov.br/",
    "via": "direto",
@@ -7401,16 +7321,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.ipora.pr.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.ipora.pr.gov.br/feed",
     "origem": "padrão",
     "via": "direto",
@@ -7421,7 +7331,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.ipora.pr.gov.br/transparencia/editais",
+    "url": "https://www.ipora.pr.gov.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7431,7 +7341,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.ipora.pr.gov.br/sitemap.xml",
+    "url": "https://www.ipora.pr.gov.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11086,7 +10996,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-003": {
-  "em": "2026-10-18T15:56:41+00:00",
+  "em": "2026-10-18T17:01:02+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
@@ -11140,26 +11050,6 @@
     "funcionou": false
    },
    {
-    "url": "https://movimentobemmaior.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://editais.movimentobemmaior.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://movimentobemmaior.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -11181,13 +11071,33 @@
     "funcionou": false
    },
    {
-    "url": "https://editais.movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://movimentobemmaior.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://editais.movimentobemmaior.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://editais.movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
     "funcionou": false
    },
    {
@@ -13910,11 +13820,11 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-113": {
-  "em": "2026-10-18T15:56:32+00:00",
-  "testes": 17,
+  "em": "2026-10-18T17:00:51+00:00",
+  "testes": 18,
   "melhor": {
    "url": "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027",
-   "via": "direto",
+   "via": "ponte",
    "origem": "rota original",
    "pontos": 5,
    "formato": "html"
@@ -13924,6 +13834,16 @@
     "url": "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027",
     "origem": "rota original",
     "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027",
+    "origem": "rota original",
+    "via": "ponte",
     "pontos": 5,
     "links": 125,
     "sinais": 2,
@@ -13938,7 +13858,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "TimeoutError",
     "funcionou": false
    },
    {
@@ -13969,11 +13889,11 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "TimeoutError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
-    "url": "https://www.goiania.go.leg.br/transparencia/editais",
+    "url": "https://www.goiania.go.leg.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -13983,7 +13903,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.goiania.go.leg.br/sitemap.xml",
+    "url": "https://www.goiania.go.leg.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -13999,32 +13919,22 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.leg.br/noticias",
+    "origem": "câmara",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
     "erro": "TimeoutError",
     "funcionou": false
    },
    {
     "url": "https://www.goiania.go.leg.br/editais",
     "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.goiania.go.leg.br/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "TimeoutError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.goiania.go.leg.br/noticias",
-    "origem": "câmara",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -14039,7 +13949,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "TimeoutError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -14059,7 +13969,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "TimeoutError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -14073,13 +13983,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.goiania.go.leg.br/sessoes",
-    "origem": "câmara",
+    "url": "https://www.goiania.go.leg.br/edital",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "TimeoutError",
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],

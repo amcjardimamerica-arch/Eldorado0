@@ -1,16 +1,24 @@
 {
- "em": "2026-10-18T16:55:50+00:00",
+ "em": "2026-10-18T17:01:44+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
   "motores": 165,
   "alterar_rota": 61,
   "rota_nova": 52,
-  "via_ponte": 3,
-  "exemplos_da_rede": 20788
+  "via_ponte": 4,
+  "exemplos_da_rede": 20882
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
+   [
+    "tld:br",
+    2.7487
+   ],
+   [
+    "origem:rota original",
+    2.7035
+   ],
    [
     "tok:secult",
     2.5203
@@ -25,31 +33,23 @@
    ],
    [
     "tok:imprensa",
-    2.2792
+    2.2723
    ],
    [
-    "origem:rota original",
-    2.2405
+    "tok:feed",
+    2.2466
    ],
    [
     "tok:unidades",
     2.2138
    ],
    [
-    "tld:br",
-    2.116
-   ],
-   [
     "origem:biblioteca",
-    2.1014
+    2.094
    ],
    [
     "tok:deputados",
     2.0868
-   ],
-   [
-    "tok:feed",
-    2.0095
    ],
    [
     "tok:leipaulogustavo",
@@ -57,13 +57,17 @@
    ],
    [
     "tok:sala",
-    1.8388
+    1.8319
    ]
   ],
   "piores_sinais": [
    [
-    "sapl:False",
-    -2.1485
+    "via:ponte",
+    -2.0235
+   ],
+   [
+    "tok:2026",
+    -2.1091
    ],
    [
     "tok:ccs",
@@ -72,10 +76,6 @@
    [
     "tipo:internacional",
     -2.275
-   ],
-   [
-    "via:ponte",
-    -2.3066
    ],
    [
     "tok:content",
@@ -87,11 +87,11 @@
    ],
    [
     "origem:câmara",
-    -3.2034
+    -3.2043
    ],
    [
     "origem:padrão",
-    -3.6282
+    -3.4521
    ]
   ]
  },
@@ -625,7 +625,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T15:54:34+00:00",
+    "em": "2026-10-18T16:59:12+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -707,8 +707,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T16:01:38+00:00",
-    "testes": 20,
+    "em": "2026-10-18T17:01:33+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -762,8 +762,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T16:01:23+00:00",
-    "testes": 20,
+    "em": "2026-10-18T17:01:22+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1293,17 +1293,17 @@
     "urls": [
      "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027"
     ],
-    "via": "direto",
+    "via": "ponte",
     "origem": "rota original",
     "pontos": 5,
-    "aprendido_em": "2026-10-18T15:56:32+00:00"
+    "aprendido_em": "2026-10-18T17:00:51+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T15:56:32+00:00",
-    "testes": 17,
+    "em": "2026-10-18T17:00:51+00:00",
+    "testes": 18,
     "melhor": {
      "url": "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027",
-     "via": "direto",
+     "via": "ponte",
      "origem": "rota original",
      "pontos": 5,
      "formato": "html"
@@ -2016,10 +2016,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 14,
-    "aprendido_em": "2026-10-18T15:56:41+00:00"
+    "aprendido_em": "2026-10-18T17:01:02+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T15:56:41+00:00",
+    "em": "2026-10-18T17:01:02+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
@@ -2099,11 +2099,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 11,
-    "aprendido_em": "2026-10-18T16:01:54+00:00"
+    "aprendido_em": "2026-10-18T17:01:44+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T16:01:54+00:00",
-    "testes": 13,
+    "em": "2026-10-18T17:01:44+00:00",
+    "testes": 12,
     "melhor": {
      "url": "https://www.ipora.pr.gov.br/",
      "via": "direto",
