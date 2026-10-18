@@ -1083,7 +1083,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T22:58:56+00:00",
+  "em": "2026-10-18T23:04:57+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1396,7 +1396,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-227": {
-  "em": "2026-10-18T22:13:24+00:00",
+  "em": "2026-10-18T23:04:57+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -1411,7 +1411,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutococacolabrasil.com.br/transparencia/editais",
+    "url": "https://www.institutococacolabrasil.com.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1421,7 +1421,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutococacolabrasil.com.br/sitemap.xml",
+    "url": "https://www.institutococacolabrasil.com.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1491,7 +1491,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutococacolabrasil.com.br/chamadas-publicas",
+    "url": "https://www.institutococacolabrasil.com.br/chamamentos",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1501,7 +1501,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutococacolabrasil.com.br/chamamentos",
+    "url": "https://www.institutococacolabrasil.com.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -6995,8 +6995,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-256": {
-  "em": "2026-10-18T22:08:56+00:00",
-  "testes": 12,
+  "em": "2026-10-18T23:04:16+00:00",
+  "testes": 22,
   "melhor": null,
   "detalhe": [
    {
@@ -7005,6 +7005,17 @@
     "via": "direto",
     "pontos": 1,
     "links": 226,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://sgp.undp.org/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7021,14 +7032,13 @@
     "funcionou": false
    },
    {
-    "url": "https://sgp.undp.org/sitemap.xml",
+    "url": "https://sgp.undp.org/transparencia/editais",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -7042,6 +7052,16 @@
     "funcionou": false
    },
    {
+    "url": "https://sgp.undp.org/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://sgp.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -7049,6 +7069,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://sgp.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -7062,6 +7092,16 @@
     "funcionou": false
    },
    {
+    "url": "https://sgp.undp.org/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://sgp.undp.org/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -7069,6 +7109,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://sgp.undp.org/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -7082,6 +7132,16 @@
     "funcionou": false
    },
    {
+    "url": "https://sgp.undp.org/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://sgp.undp.org/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
@@ -7092,41 +7152,21 @@
     "funcionou": false
    },
    {
-    "url": "https://sgp.undp.org/chamadas-publicas",
+    "url": "https://sgp.undp.org/chamamento-publico",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://sgp.undp.org/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://sgp.undp.org/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    }
   ],
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-252": {
-  "em": "2026-10-18T22:09:03+00:00",
-  "testes": 12,
+  "em": "2026-10-18T23:04:22+00:00",
+  "testes": 14,
   "melhor": null,
   "detalhe": [
    {
@@ -7134,7 +7174,18 @@
     "origem": "rota original",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.facebook.com/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7151,14 +7202,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.facebook.com/sitemap.xml",
+    "url": "https://www.facebook.com/transparencia/editais",
     "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 34,
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -7166,7 +7216,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7183,11 +7233,21 @@
     "funcionou": false
    },
    {
+    "url": "https://www.facebook.com/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.facebook.com/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7209,7 +7269,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7220,18 +7280,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.facebook.com/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7242,7 +7291,18 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.facebook.com/chamadas-publicas",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7398,7 +7458,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-espalhado-transparencia-agilicloud-com-br": {
-  "em": "2026-10-18T22:09:16+00:00",
+  "em": "2026-10-18T23:04:36+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -7414,7 +7474,7 @@
     "funcionou": false
    },
    {
-    "url": "https://transparencia.agilicloud.com.br/transparencia/editais",
+    "url": "https://transparencia.agilicloud.com.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7425,7 +7485,7 @@
     "funcionou": false
    },
    {
-    "url": "https://transparencia.agilicloud.com.br/sitemap.xml",
+    "url": "https://transparencia.agilicloud.com.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7502,7 +7562,7 @@
     "funcionou": false
    },
    {
-    "url": "https://transparencia.agilicloud.com.br/chamadas-publicas",
+    "url": "https://transparencia.agilicloud.com.br/chamamentos",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7513,7 +7573,7 @@
     "funcionou": false
    },
    {
-    "url": "https://transparencia.agilicloud.com.br/chamamentos",
+    "url": "https://transparencia.agilicloud.com.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7911,24 +7971,13 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-212": {
-  "em": "2026-10-18T22:13:21+00:00",
+  "em": "2026-10-18T23:04:50+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://www.tcm.go.gov.br/",
     "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.tcm.go.gov.br/transparencia/editais",
-    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -7955,6 +8004,17 @@
     "links": 0,
     "sinais": 0,
     "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tcm.go.gov.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -8024,7 +8084,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tcm.go.gov.br/chamadas-publicas",
+    "url": "https://www.tcm.go.gov.br/chamamentos",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8035,7 +8095,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tcm.go.gov.br/chamamentos",
+    "url": "https://www.tcm.go.gov.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8250,7 +8310,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-243": {
-  "em": "2026-10-18T22:13:22+00:00",
+  "em": "2026-10-18T23:04:54+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8266,16 +8326,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.worldbank.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.worldbank.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -8284,6 +8334,16 @@
     "sinais": 0,
     "formato": "sitemap/feed",
     "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.worldbank.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -8347,7 +8407,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.worldbank.org/chamadas-publicas",
+    "url": "https://www.worldbank.org/chamamentos",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8357,7 +8417,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.worldbank.org/chamamentos",
+    "url": "https://www.worldbank.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
