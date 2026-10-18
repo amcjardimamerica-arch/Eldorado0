@@ -1,31 +1,31 @@
 {
- "em": "2026-10-18T02:27:27+00:00",
+ "em": "2026-10-18T02:49:57+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
  "resumo": {
   "pontos_12_total": 4800,
-  "pontos_certificados": 3119,
-  "pontos_dispensados": 166,
-  "pontos_ja_constavam": 1393,
-  "pontos_faltam": 122,
-  "pct_certificado_12": 0.6844,
+  "pontos_certificados": 3117,
+  "pontos_dispensados": 167,
+  "pontos_ja_constavam": 1396,
+  "pontos_faltam": 120,
+  "pct_certificado_12": 0.6842,
   "certidoes_12_de_12": 141,
-  "certidoes_sem_item_faltando": 282,
+  "certidoes_sem_item_faltando": 284,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
-  "certidoes": 2695,
+  "certidoes": 2704,
   "nesta_execucao": 11,
-  "fila_estrelas": 124,
-  "fila_livros": 2517,
-  "itens_que_faltavam": 24669,
-  "itens_obtidos": 9228,
-  "itens_dispensados": 512,
+  "fila_estrelas": 152,
+  "fila_livros": 2516,
+  "itens_que_faltavam": 24742,
+  "itens_obtidos": 9247,
+  "itens_dispensados": 514,
   "eficiencia_itens": 0.395,
-  "com_link_oficial": 1829,
+  "com_link_oficial": 1835,
   "taxa_link_oficial": 0.679,
-  "certidoes_completas": 264,
-  "para_o_interceptador": 1950,
-  "para_o_chrome": 480,
+  "certidoes_completas": 266,
+  "para_o_interceptador": 1956,
+  "para_o_chrome": 481,
   "selos_que_mudaram": {
    "bronze → ouro": 6,
    "bronze → prata": 1,
@@ -36,7 +36,7 @@
    "prata → ouro": 3
   },
   "por_degrau": {
-   "degrau 0": 1745,
+   "degrau 0": 1751,
    "degrau 1": 125
   }
  },
@@ -47,86 +47,86 @@
  },
  "por_item": {
   "Objeto": {
-   "faltavam": 1755,
-   "obtidos": 577,
+   "faltavam": 1761,
+   "obtidos": 578,
    "dispensados": 0,
-   "eficiencia": 0.329
+   "eficiencia": 0.328
   },
   "Prazo de inscrição": {
-   "faltavam": 1864,
-   "obtidos": 582,
+   "faltavam": 1870,
+   "obtidos": 584,
    "dispensados": 146,
-   "eficiencia": 0.391
+   "eficiencia": 0.39
   },
   "Resultado": {
-   "faltavam": 2398,
-   "obtidos": 623,
-   "dispensados": 228,
+   "faltavam": 2406,
+   "obtidos": 624,
+   "dispensados": 229,
    "eficiencia": 0.355
   },
   "Prazo de recurso": {
-   "faltavam": 2360,
-   "obtidos": 536,
+   "faltavam": 2367,
+   "obtidos": 537,
    "dispensados": 46,
-   "eficiencia": 0.247
+   "eficiencia": 0.246
   },
   "Valor": {
-   "faltavam": 2103,
-   "obtidos": 695,
-   "dispensados": 60,
+   "faltavam": 2111,
+   "obtidos": 696,
+   "dispensados": 61,
    "eficiencia": 0.359
   },
   "Órgão / financiador": {
-   "faltavam": 1596,
-   "obtidos": 967,
+   "faltavam": 1599,
+   "obtidos": 968,
    "dispensados": 0,
-   "eficiencia": 0.606
+   "eficiencia": 0.605
   },
   "Território": {
-   "faltavam": 1899,
-   "obtidos": 600,
+   "faltavam": 1907,
+   "obtidos": 602,
    "dispensados": 0,
    "eficiencia": 0.316
   },
   "Esfera": {
-   "faltavam": 2126,
-   "obtidos": 1314,
+   "faltavam": 2130,
+   "obtidos": 1316,
    "dispensados": 0,
    "eficiencia": 0.618
   },
   "Requisitos": {
-   "faltavam": 2334,
-   "obtidos": 624,
+   "faltavam": 2341,
+   "obtidos": 626,
    "dispensados": 0,
    "eficiencia": 0.267
   },
   "Anexos": {
-   "faltavam": 1693,
-   "obtidos": 366,
+   "faltavam": 1699,
+   "obtidos": 367,
    "dispensados": 4,
-   "eficiencia": 0.219
+   "eficiencia": 0.218
   },
   "Modalidade": {
-   "faltavam": 2307,
-   "obtidos": 814,
+   "faltavam": 2313,
+   "obtidos": 817,
    "dispensados": 28,
    "eficiencia": 0.365
   },
   "Área de atuação": {
-   "faltavam": 2234,
-   "obtidos": 1530,
+   "faltavam": 2238,
+   "obtidos": 1532,
    "dispensados": 0,
    "eficiencia": 0.685
   }
  },
  "por_balcao": {
   "revisão": {
-   "certidoes": 208,
-   "com_link_oficial": 158,
-   "faltavam": 2496,
-   "resolvidos": 1179,
-   "eficiencia": 0.472,
-   "taxa_link_oficial": 0.76
+   "certidoes": 209,
+   "com_link_oficial": 159,
+   "faltavam": 2508,
+   "resolvidos": 1191,
+   "eficiencia": 0.475,
+   "taxa_link_oficial": 0.761
   },
   "pncp": {
    "certidoes": 109,
@@ -145,36 +145,36 @@
    "taxa_link_oficial": 1.0
   },
   "orgao": {
-   "certidoes": 1257,
-   "com_link_oficial": 1005,
-   "faltavam": 11147,
-   "resolvidos": 5139,
-   "eficiencia": 0.461,
-   "taxa_link_oficial": 0.8
+   "certidoes": 1261,
+   "com_link_oficial": 1008,
+   "faltavam": 11171,
+   "resolvidos": 5138,
+   "eficiencia": 0.46,
+   "taxa_link_oficial": 0.799
   },
   "privado": {
-   "certidoes": 592,
-   "com_link_oficial": 414,
-   "faltavam": 5020,
-   "resolvidos": 1524,
-   "eficiencia": 0.304,
-   "taxa_link_oficial": 0.699
+   "certidoes": 593,
+   "com_link_oficial": 415,
+   "faltavam": 5032,
+   "resolvidos": 1534,
+   "eficiencia": 0.305,
+   "taxa_link_oficial": 0.7
   },
   "pista": {
-   "certidoes": 363,
+   "certidoes": 364,
    "com_link_oficial": 68,
-   "faltavam": 3313,
+   "faltavam": 3318,
    "resolvidos": 800,
    "eficiencia": 0.241,
    "taxa_link_oficial": 0.187
   },
   "diario": {
-   "certidoes": 162,
-   "com_link_oficial": 100,
-   "faltavam": 1687,
+   "certidoes": 164,
+   "com_link_oficial": 101,
+   "faltavam": 1707,
    "resolvidos": 433,
-   "eficiencia": 0.257,
-   "taxa_link_oficial": 0.617
+   "eficiencia": 0.254,
+   "taxa_link_oficial": 0.616
   },
   "proprio": {
    "certidoes": 1,
@@ -187,19 +187,19 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2169,
-   "faltavam": 18766,
-   "resolvidos": 6662,
-   "eficiencia": 0.355,
-   "com_link_oficial": 1392,
+   "certidoes": 2176,
+   "faltavam": 18815,
+   "resolvidos": 6669,
+   "eficiencia": 0.354,
+   "com_link_oficial": 1396,
    "taxa_link_oficial": 0.642
   },
   "refeitas": {
-   "certidoes": 526,
-   "faltavam": 5903,
-   "resolvidos": 2969,
+   "certidoes": 528,
+   "faltavam": 5927,
+   "resolvidos": 2983,
    "eficiencia": 0.503,
-   "com_link_oficial": 437,
+   "com_link_oficial": 439,
    "taxa_link_oficial": 0.831
   }
  },
@@ -221,30 +221,30 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2473,
-   "faltavam": 22082,
-   "resolvidos": 8404,
-   "eficiencia": 0.381,
-   "com_link_oficial": 1658,
+   "certidoes": 2481,
+   "faltavam": 22143,
+   "resolvidos": 8413,
+   "eficiencia": 0.38,
+   "com_link_oficial": 1663,
    "taxa_link_oficial": 0.67
   },
   "revisão manual": {
-   "certidoes": 208,
-   "faltavam": 2496,
-   "resolvidos": 1179,
-   "eficiencia": 0.472,
-   "com_link_oficial": 158,
-   "taxa_link_oficial": 0.76
+   "certidoes": 209,
+   "faltavam": 2508,
+   "resolvidos": 1191,
+   "eficiencia": 0.475,
+   "com_link_oficial": 159,
+   "taxa_link_oficial": 0.761
   }
  },
  "por_abordagem": {
   "1": {
    "nome": "documento na mão",
-   "vezes": 2572,
-   "renderam": 1682,
-   "itens": 8845,
-   "links_oficiais": 1606,
-   "taxa_de_acerto": 0.654
+   "vezes": 2581,
+   "renderam": 1685,
+   "itens": 8866,
+   "links_oficiais": 1612,
+   "taxa_de_acerto": 0.653
   },
   "2": {
    "nome": "anexos completos",
@@ -256,11 +256,11 @@
   },
   "3": {
    "nome": "página oficial e citados",
-   "vezes": 333,
+   "vezes": 335,
    "renderam": 82,
    "itens": 468,
    "links_oficiais": 53,
-   "taxa_de_acerto": 0.246
+   "taxa_de_acerto": 0.245
   },
   "4": {
    "nome": "biblioteca de sites",
@@ -322,20 +322,20 @@
  "por_balcao_selo": {
   "sem_estrela": {
    "nome": "Sem estrela → bronze",
-   "certidoes": 1443,
-   "faltavam": 13048,
-   "resolvidos": 4168,
+   "certidoes": 1451,
+   "faltavam": 13116,
+   "resolvidos": 4189,
    "eficiencia": 0.319,
-   "entraram_aqui": 1592,
+   "entraram_aqui": 1600,
    "esgotadas": 0
   },
   "bronze": {
    "nome": "Bronze → prata",
-   "certidoes": 74,
-   "faltavam": 605,
+   "certidoes": 75,
+   "faltavam": 610,
    "resolvidos": 404,
-   "eficiencia": 0.668,
-   "entraram_aqui": 36,
+   "eficiencia": 0.662,
+   "entraram_aqui": 37,
    "esgotadas": 0
   },
   "prata": {
@@ -360,14 +360,14 @@
  "gabarito": {
   "orgaos_com_gabarito": 1233,
   "itens_achados_pelo_gabarito": {
-   "Prazo de recurso": 20,
+   "Prazo de recurso": 21,
    "Objeto": 69,
    "Requisitos": 60,
    "Valor": 3,
    "Modalidade": 12,
    "Resultado": 5
   },
-  "certidoes_ajudadas": 149
+  "certidoes_ajudadas": 150
  },
  "certidoes": [
   {
@@ -2218,6 +2218,187 @@
    }
   },
   {
+   "id": "op-d37cd23a3e06",
+   "tipo": "livro",
+   "titulo": "Aviso de Chamamento Público nº 1/2026 – PNAB Ciclo II – Prefeitura de Nova América",
+   "balcao": "orgao",
+   "link_oficial": "https://www.novaamerica.go.gov.br/politica-nacional-aldir-blanc-ciclo-ii/",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": {
+    "orgao": "dominio:novaamerica.go.gov.br",
+    "itens_pelo_gabarito": [
+     "Prazo de recurso"
+    ]
+   },
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T02:48:46+00:00",
+   "prazo": null,
+   "uf": "GO",
+   "orgao": "Prefeitura Municipal de Nova América",
+   "fim": "2026-08-03",
+   "itens": {
+    "Esfera": {
+     "valor": "municipal",
+     "trecho": "domínio/órgão: www.novaamerica.go.gov.br · Prefeitura Municipal de Nova América Prefeitura Municipal de Nova América",
+     "pagina": 1,
+     "documento": "https://www.novaamerica.go.gov.br/politica-nacional-aldir-blanc-ciclo-ii/",
+     "metodo": "domínio e órgão"
+    },
+    "Área de atuação": {
+     "valor": "Cultura",
+     "trecho": "termos do objeto e do título: Cultura",
+     "pagina": 1,
+     "documento": "https://www.novaamerica.go.gov.br/politica-nacional-aldir-blanc-ciclo-ii/",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Prazo de inscrição": {
+     "valor": "até 03/08/2026",
+     "trecho": "SS, e eventuais impostos próprios da contratação de serviços. 2.4 Prazo de inscrição Das 07:00 horas do dia 03/08/2026 até às 17:00 horas do dia 14/08/2026. As inscrições serão realizada",
+     "pagina": 2,
+     "documento": "https://www.novaamerica.go.gov.br/wp-content/uploads/2026/07/Edital-2026.pdf",
+     "metodo": "cronograma"
+    },
+    "Valor": {
+     "valor": "R$40.266,87 (quarenta mil duzentos e sessenta e seis reais e oitenta e sete centavos)",
+     "trecho": "otal do edital Cada projeto receberá o valor descrito no Anexo I. O valor total deste edital é de R$40.266,87 (quarenta mil duzentos e sessenta e seis reais e oitenta e sete centavos). A despesa correrá à conta da seguinte Dotação Orçamentária: MANUTEN",
+     "pagina": 2,
+     "documento": "https://www.novaamerica.go.gov.br/wp-content/uploads/2026/07/Edital-2026.pdf",
+     "metodo": "seção"
+    },
+    "Território": {
+     "valor": "do município de Nova América Go",
+     "trecho": "objetivo de incentivar as diversas formas de manifestações culturais do município de Nova América Go. 2.2 Quantidade de projetos selecionados",
+     "pagina": 1,
+     "documento": "https://www.novaamerica.go.gov.br/wp-content/uploads/2026/07/Edital-2026.pdf",
+     "metodo": "texto"
+    },
+    "Requisitos": {
+     "valor": "poderá concorrer neste edital com, no máximo dois projetos e",
+     "trecho": "da agente cultural pode apresentar neste edital Cada agente cultural poderá concorrer neste edital com, no máximo dois projetos e poderá ser contemplado com no máximo com um projeto. 3. ETAPAS E",
+     "pagina": 3,
+     "documento": "https://www.novaamerica.go.gov.br/wp-content/uploads/2026/07/Edital-2026.pdf",
+     "metodo": "texto"
+    },
+    "Modalidade": {
+     "valor": "Termo de Execução Cultural — Lei nº 14.399/2022",
+     "trecho": "TAL DE CHAMAMENTO PÚBLICO Nº 01/2026 SELEÇÃO DE PROJETOS PARA FIRMAR TERMO DE EXECUÇÃO CULTURAL COM RECURSOS DA POLÍTICA NACIONAL ALDIR BLANC DE FOMENTO À CULTURA – PNAB (LEI Nº 14.399/2022) Ol",
+     "pagina": 1,
+     "documento": "https://www.novaamerica.go.gov.br/wp-content/uploads/2026/07/Edital-2026.pdf",
+     "metodo": "modalidade de recebimento"
+    },
+    "Prazo de recurso": {
+     "valor": ", 30 de julho de 2026",
+     "trecho": "Declaração de representação de grupo ou coletivo; Anexo VIII - Declaração étnico-racial Anexo IX – Declaração PCD Anexo X – Formulário de interposição de recurso Nova América Go, 30 de",
+     "pagina": 14,
+     "documento": "https://www.novaamerica.go.gov.br/wp-content/uploads/2026/07/Edital-2026.pdf",
+     "metodo": "gabarito do órgão (rótulo “de recurso nova america go”)"
+    }
+   },
+   "dispensas": {
+    "Resultado": {
+     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
+     "trecho": "rio e a ampla defesa. Atenção! Eventuais irregularidades constatadas a qualquer tempo, implicarão na desclassificação do agente cultural. 13.2 Acompan",
+     "pagina": 13,
+     "documento": "https://www.novaamerica.go.gov.br/wp-content/uploads/2026/07/Edital-2026.pdf"
+    }
+   },
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T02:48:46+00:00",
+     "ganhou": [
+      "Esfera",
+      "Modalidade",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://www.novaamerica.go.gov.br/politica-nacional-aldir-blanc-ciclo-ii/",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.novaamerica.go.gov.br/wp-content/uploads/2026/07/Edital-2026.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 14,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "dispensado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "ja_constava",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "ja_constava",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 8,
+    "dispensados": 1,
+    "ja_constavam": 3,
+    "faltam": 0,
+    "pct_certificado_12": 0.75,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "op-op-eb990e66f5a2",
    "tipo": "estrela",
    "titulo": "Aviso de Chamamento Público nº 1/2026 — Goiás",
@@ -2827,8 +3008,8 @@
   {
    "id": "09590060f0bad9ff9a05",
    "tipo": "estrela",
-   "titulo": "BNDES abre chamada para apoiar projetos de organizações periféricas em todo o país",
-   "balcao": "orgao",
+   "titulo": "BNDES Periferias – 6º ciclo da Chamada Permanente do Fundo Socioambiental (frente Periferias em Rede): apoio não reembolsável a OSCs que estruturem projetos de no mínimo R$ 20 mi com 10+ subprojetos (",
+   "balcao": "revisão",
    "link_oficial": "https://bndes.gov.br/periferias",
    "degrau": 0,
    "como": "revisão manual: leitura do documento oficial no Chrome da titular",
@@ -2861,8 +3042,8 @@
     "Área de atuação"
    ],
    "ainda_faltam": [],
-   "tentativa": 3,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "tentativa": 4,
+   "versao": "revisão manual (chrome_2026_10_17_v3)",
    "gabarito": {
     "orgao": "dominio:bndes.gov.br",
     "itens_pelo_gabarito": [
@@ -2877,11 +3058,11 @@
    "encaminhado": null,
    "selo_antes": "ouro",
    "selo_depois": "ouro",
-   "em": "2026-10-18T02:23:55+00:00",
-   "prazo": "2026-12-04",
+   "em": "2026-10-17T20:15:34+00:00",
+   "prazo": "2026-12-04T17:00",
    "uf": null,
    "orgao": "BNDES",
-   "fim": "2026-08-18",
+   "fim": "2026-12-04T17:00",
    "itens": {
     "Prazo de inscrição": {
      "valor": "18/08/2026 a 04/12/2026, 17h",
@@ -31935,7 +32116,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-18T01:47:40+00:00",
+   "em": "2026-10-18T02:33:58+00:00",
    "prazo": "2026-11-01",
    "uf": null,
    "orgao": "FUNDO MUNICIPAL DA CULTURA DE COLINAS DO SUL",
@@ -36389,6 +36570,122 @@
     "ja_constavam": 11,
     "faltam": 0,
     "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "nova-9c02d7750df1",
+   "tipo": "livro",
+   "titulo": "Goiás Social aumenta repasse do Auxílio Nutricional às entidades filantrópicas",
+   "balcao": "orgao",
+   "link_oficial": "https://goias.gov.br/social/edital-de-credenciamento-em-fluxo-continuo-n001-2026/",
+   "degrau": 0,
+   "como": "documento entregue pelo motor",
+   "faltavam": [
+    "Território",
+    "Modalidade"
+   ],
+   "resolvidos": [
+    "Território",
+    "Modalidade"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T02:49:37+00:00",
+   "prazo": null,
+   "uf": "GO",
+   "orgao": "",
+   "fim": null,
+   "itens": {
+    "Modalidade": {
+     "valor": "Credenciamento (contratação)",
+     "trecho": "Edital de Credenciamento N°001/2026 &#8211; Desenvolvimento Social",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/edital-de-credenciamento-em-fluxo-continuo-n001-2026/",
+     "metodo": "modalidade de recebimento"
+    },
+    "Território": {
+     "valor": "do Estado de Goiás",
+     "trecho": "que couber; na Resolução Normativa nº 013/2017 do Tribunal de Contas do Estado de Goiás, no que aplicável; e nas demais normas pertinentes, torna público o p",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/wp-content/uploads/sites/24/2026/08/SEI_94550848_Edital-1.pdf",
+     "metodo": "texto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T02:49:37+00:00",
+     "ganhou": [
+      "Modalidade",
+      "Território"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://goias.gov.br/social/edital-de-credenciamento-em-fluxo-continuo-n001-2026/",
+     "degrau": 0,
+     "como": "documento entregue pelo motor",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "http://goias.gov.br/social/wp-content/uploads/sites/24/2024/01/apostila_2.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 2,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goias.gov.br/social/wp-content/uploads/sites/24/2026/08/SEI_94550848_Edital-1.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 34,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "certificado",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "certificado",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 2,
+    "dispensados": 0,
+    "ja_constavam": 10,
+    "faltam": 0,
+    "pct_certificado_12": 0.1667,
     "pct_cobertura_12": 1.0
    }
   },
@@ -79532,383 +79829,35 @@
     "pct_certificado_12": 0.5,
     "pct_cobertura_12": 0.9167
    }
-  },
-  {
-   "id": "op-44e3b2e87f68",
-   "tipo": "livro",
-   "titulo": "Edital FAPESC nº 51/2026 – Programa de Ciência e Tecnologia (carvão mineral e inovação)",
-   "balcao": "orgao",
-   "link_oficial": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Requisitos"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-11T13:02:32+00:00",
-   "prazo": null,
-   "uf": "SC",
-   "orgao": "FAPESC",
-   "fim": "2026-09-18",
-   "itens": {
-    "Resultado": {
-     "valor": "23/09/2026",
-     "trecho": "s propostas via SIGFAPESC De 18/08/2026 a 18/09/2026 Até as 18 horas Resultado de admissibilidade 23/09/2026 Período para apresentação de recurso admissibilidade De 24/09/2026 a",
-     "pagina": 5,
-     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "24/09/2026",
-     "trecho": "Resultado de admissibilidade 23/09/2026 Período para apresentação de recurso admissibilidade De 24/09/2026 a 28/09/2026 (até as 18 h) Resultado do julgamento dos recursos de a",
-     "pagina": 5,
-     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
-     "metodo": "seção"
-    },
-    "Valor": {
-     "valor": "R$ 875.000,00 (oitocentos e setenta e cinco mil reais)",
-     "trecho": "écnica e orçamentária para cada uma das linhas contempladas. 5.4. O valor global destinado à presente Chamada é de até R$ 875.000,00 (oitocentos e setenta e cinco mil reais). Os recursos, provenientes da Compensação Financeira pela Exploração",
-     "pagina": 5,
-     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
-     "metodo": "seção"
-    },
-    "Esfera": {
-     "valor": "estadual",
-     "trecho": "domínio/órgão: fapesc.sc.gov.br · FUNDAÇÃO DE AMPARO À PESQUISA E INOVAÇÃO DO ESTADO DE SANTA FAPESC",
-     "pagina": 1,
-     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
-     "metodo": "domínio e órgão"
-    },
-    "Modalidade": {
-     "valor": null,
-     "trecho": "Plano de Trabalho e o cumprimento das metas estabelecidas. 6. DOS ITENS FINANCIÁVEIS E NÃO FINANCIÁVEIS 6.1. Dos itens financiáveis 6.1.1. São financiáveis os itens permitidos",
-     "pagina": 6,
-     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
-     "metodo": "seção"
-    },
-    "Área de atuação": {
-     "valor": "Meio ambiente, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Meio ambiente, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
-     "metodo": "palavras-chave do objeto"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-11T13:02:32+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Prazo de recurso",
-      "Resultado",
-      "Valor",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 44,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "falta",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "op-df2b26cf73c2",
-   "tipo": "livro",
-   "titulo": "Edital Já É: Educação e Equidade Racial – 2ª edição",
-   "balcao": "privado",
-   "link_oficial": "https://baoba.org.br/programa-ja-e-2025/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Território",
-    "Esfera",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Requisitos"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-11T19:42:40+00:00",
-   "prazo": null,
-   "uf": "",
-   "orgao": "Fundo Baobá para Equidade Racial",
-   "fim": "2025-07-31",
-   "itens": {
-    "Território": {
-     "valor": "abrangência nacional",
-     "trecho": "ar pessoas jovens negras rumo ao ensino superior. Agora, o edital tem abrangência nacional e novas condições para fortalecer ainda mais a jornada acadêmica das",
-     "pagina": 1,
-     "documento": "https://baoba.org.br/programa-ja-e-2025/",
-     "metodo": "texto"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Educação, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Cultura, Educação, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://baoba.org.br/programa-ja-e-2025/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Resultado": {
-     "valor": "19 de dezembro de 2023",
-     "trecho": "bro de 2023 a 02 de outubro de 2023 até as 17h (Horário de Brasília). RESULTADO Final: 19 de dezembro de 2023 CONFIRA AS REGRAS DO EDI",
-     "pagina": 1,
-     "documento": "https://baoba.org.br/programa-presente-e-futuro-em-movimento/carreiras-em-movimento/",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "30 de junho de 2024",
-     "trecho": "e R$5.000,00 (cinco mil reais) devem se planejar para executar todo o recurso disponibilizado até 30 de junho de 2024. As pessoas selecionadas cuja doação é de até R$10.000,00 (dez mil re",
-     "pagina": 1,
-     "documento": "https://baoba.org.br/programa-presente-e-futuro-em-movimento/carreiras-em-movimento/",
-     "metodo": "seção"
-    },
-    "Modalidade": {
-     "valor": null,
-     "trecho": "té 30 de outubro de 2024. Quais são as despesas que poderão ser custeadas com o valor recebido do edital? Poderão ser custeadas despesas com atividades formativas pontuais que contribuam para ampliar as chances de seu ingresso no mercado ou mobilidade na carreira no setor privado. Poderão envolver-se nas seguintes atividades: Participação em cur",
-     "pagina": 1,
-     "documento": "https://baoba.org.br/programa-presente-e-futuro-em-movimento/carreiras-em-movimento/",
-     "metodo": "seção"
-    },
-    "Esfera": {
-     "valor": "privada",
-     "trecho": "domínio/órgão: baoba.org.br · Fundação Lemann e se apresenta como um esforço conjunto para o enfrentamento ao ",
-     "pagina": 1,
-     "documento": "https://baoba.org.br/edital-educacao-identidades-negras/",
-     "metodo": "domínio e órgão"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-11T19:42:40+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Prazo de recurso",
-      "Resultado",
-      "Território",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://baoba.org.br/programa-ja-e-2025/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-W5L2C5N6",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://baoba.org.br/wp-content/uploads/2025/09/FB_Resultados_PJE_2025-atualizacao.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://baoba.org.br/programa-ja-e/",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Já É 1ª Edição",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://baoba.org.br/programa-presente-e-futuro-em-movimento/carreiras-em-movimento/",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Carreiras em Movimento",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://baoba.org.br/programa-presente-e-futuro-em-movimento/educacao-em-tecnologia/",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Educação em Tecnologia",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://baoba.org.br/edital-educacao-identidades-negras/",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Educação e Identidades",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://baoba.org.br/primeira-infancia/",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Programa Primeira Infância",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "ja_constava",
-     "Órgão / financiador": "ja_constava",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "falta",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
   }
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2341,
-   "bronze": 122,
-   "prata": 178
+   "sem_estrela": 2365,
+   "bronze": 121,
+   "prata": 182
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 107,
-    "bronze": 9,
-    "prata": 8
+    "sem_estrela": 133,
+    "bronze": 8,
+    "prata": 11
    },
    "livro": {
-    "sem_estrela": 2234,
+    "sem_estrela": 2232,
     "bronze": 113,
-    "prata": 170
+    "prata": 171
    }
   },
-  "fila_oportunidades": 124,
-  "fila_livros": 2517,
-  "devidas_nesta_hora": 2260,
-  "promovidas_nesta_execucao": 1,
-  "sem_material_agora": 23,
+  "fila_oportunidades": 152,
+  "fila_livros": 2516,
+  "devidas_nesta_hora": 2251,
+  "promovidas_nesta_execucao": 0,
+  "sem_material_agora": 25,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
    "chaves": 1059,
-   "sites": 2270
+   "sites": 2273
   },
   "intervalo_horas": 12,
   "limite": 10,
