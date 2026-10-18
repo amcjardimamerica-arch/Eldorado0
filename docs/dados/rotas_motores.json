@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T13:26:32+00:00",
+ "em": "2026-10-18T13:33:00+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,25 +7,29 @@
   "alterar_rota": 61,
   "rota_nova": 52,
   "via_ponte": 3,
-  "exemplos_da_rede": 18120
+  "exemplos_da_rede": 18215
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
+   [
+    "tld:br",
+    3.1949
+   ],
+   [
+    "origem:rota original",
+    2.5344
+   ],
    [
     "tok:secult",
     2.5203
    ],
    [
     "tok:inscricoes",
-    2.4067
+    2.4149
    ],
    [
     "tok:mpf",
     2.3958
-   ],
-   [
-    "tld:br",
-    2.2224
    ],
    [
     "tok:unidades",
@@ -33,23 +37,19 @@
    ],
    [
     "tok:imprensa",
-    2.1706
+    2.1887
    ],
    [
-    "origem:rota original",
-    2.1638
+    "tok:feed",
+    2.1627
    ],
    [
     "tok:deputados",
     1.9693
    ],
    [
-    "tok:feed",
-    1.8894
-   ],
-   [
     "origem:biblioteca",
-    1.8887
+    1.9466
    ],
    [
     "tok:leipaulogustavo",
@@ -57,21 +57,21 @@
    ],
    [
     "tok:sala",
-    1.7759
+    1.794
    ]
   ],
   "piores_sinais": [
    [
+    "via:ponte",
+    -1.9617
+   ],
+   [
     "tok:2026",
-    -1.9692
+    -1.9794
    ],
    [
     "tok:ccs",
     -2.0828
-   ],
-   [
-    "sapl:False",
-    -2.1464
    ],
    [
     "tipo:internacional",
@@ -86,12 +86,12 @@
     -2.9282
    ],
    [
-    "origem:câmara",
-    -3.1901
+    "origem:padrão",
+    -2.9458
    ],
    [
-    "origem:padrão",
-    -3.3484
+    "origem:câmara",
+    -3.191
    ]
   ]
  },
@@ -1124,7 +1124,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T12:45:39+00:00",
+    "em": "2026-10-18T13:32:04+00:00",
     "testes": 22,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1296,10 +1296,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 5,
-    "aprendido_em": "2026-10-18T12:47:02+00:00"
+    "aprendido_em": "2026-10-18T13:32:28+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T12:47:02+00:00",
+    "em": "2026-10-18T13:32:28+00:00",
     "testes": 17,
     "melhor": {
      "url": "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027",
@@ -1344,8 +1344,8 @@
     "aprendido_em": "2026-10-11T22:59:00+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T12:53:13+00:00",
-    "testes": 23,
+    "em": "2026-10-18T13:33:00+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1682,10 +1682,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 91,
-    "aprendido_em": "2026-10-18T12:52:53+00:00"
+    "aprendido_em": "2026-10-18T13:32:55+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T12:52:53+00:00",
+    "em": "2026-10-18T13:32:55+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://senadorcanedo.go.gov.br/aldirblanc/",
@@ -1811,11 +1811,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-18T12:53:05+00:00"
+    "aprendido_em": "2026-10-18T13:32:59+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T12:53:05+00:00",
-    "testes": 22,
+    "em": "2026-10-18T13:32:59+00:00",
+    "testes": 12,
     "melhor": {
      "url": "https://www.gatesfoundation.org/sitemap.xml",
      "via": "direto",
@@ -2016,10 +2016,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 14,
-    "aprendido_em": "2026-10-18T12:47:10+00:00"
+    "aprendido_em": "2026-10-18T13:32:37+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T12:47:10+00:00",
+    "em": "2026-10-18T13:32:37+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
