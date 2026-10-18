@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T06:15:47+00:00",
+ "em": "2026-10-18T06:21:04+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,7 +7,7 @@
   "alterar_rota": 63,
   "rota_nova": 52,
   "via_ponte": 3,
-  "exemplos_da_rede": 12002
+  "exemplos_da_rede": 12127
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
@@ -28,16 +28,20 @@
     2.2113
    ],
    [
+    "origem:rota original",
+    1.9307
+   ],
+   [
     "tok:leipaulogustavo",
     1.8689
    ],
    [
-    "origem:rota original",
-    1.7803
+    "tok:imprensa",
+    1.6455
    ],
    [
     "tok:feed",
-    1.6373
+    1.6293
    ],
    [
     "tok:portarias",
@@ -52,10 +56,6 @@
     1.4598
    ],
    [
-    "tok:imprensa",
-    1.4024
-   ],
-   [
     "tok:assuntos",
     1.3977
    ]
@@ -63,7 +63,7 @@
   "piores_sinais": [
    [
     "gov:False",
-    -1.6325
+    -1.6387
    ],
    [
     "tok:prefeitura",
@@ -78,12 +78,12 @@
     -2.275
    ],
    [
-    "origem:padrão",
-    -2.3577
+    "origem:câmara",
+    -2.3764
    ],
    [
-    "origem:câmara",
-    -2.3658
+    "origem:padrão",
+    -2.378
    ],
    [
     "tok:content",
@@ -601,7 +601,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T05:28:03+00:00",
+    "em": "2026-10-18T06:19:17+00:00",
     "testes": 22,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -643,7 +643,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T05:28:12+00:00",
+    "em": "2026-10-18T06:19:26+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -683,7 +683,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T05:29:06+00:00",
+    "em": "2026-10-18T06:20:03+00:00",
     "testes": 20,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -710,7 +710,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T05:28:39+00:00",
+    "em": "2026-10-18T06:19:44+00:00",
     "testes": 20,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1098,7 +1098,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T05:28:50+00:00",
+    "em": "2026-10-18T06:19:51+00:00",
     "testes": 22,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1268,17 +1268,17 @@
      "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027"
     ],
     "via": "direto",
-    "origem": "biblioteca",
+    "origem": "rota original",
     "pontos": 5,
-    "aprendido_em": "2026-10-18T05:35:46+00:00"
+    "aprendido_em": "2026-10-18T06:21:04+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T05:35:46+00:00",
+    "em": "2026-10-18T06:21:04+00:00",
     "testes": 17,
     "melhor": {
      "url": "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027",
      "via": "direto",
-     "origem": "biblioteca",
+     "origem": "rota original",
      "pontos": 5,
      "formato": "html"
     },
