@@ -978,10 +978,10 @@
     "empresas-incentivadas": {
       "nome": "Editais incentivados de empresas — destinação tributária (Rouanet, LIE, FIA, PRONON)",
       "tipo": "empresas_incentivo",
-      "leituras": 29,
+      "leituras": 30,
       "achados_total": 37,
       "vazias_seguidas": 0,
-      "ultima": "2026-10-18T05:40:26+00:00",
+      "ultima": "2026-10-18T06:08:52+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 4,
       "falhas_ultima": 2,
@@ -999,9 +999,9 @@
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 22,
-        "links_total": 2740,
-        "links_candidatos": 1429,
+        "paginas_lidas": 23,
+        "links_total": 2827,
+        "links_candidatos": 1443,
         "descobertas": [
           {
             "de": "https://www.saneago.com.br/",
@@ -1026,24 +1026,23 @@
         ],
         "pdf_links": 55,
         "motivo_zero": null,
-        "camada1_vetados": 23,
-        "camada1_direcionados": 78,
+        "camada1_vetados": 24,
+        "camada1_direcionados": 79,
         "paginas_alem_do_limite": 13,
         "fora_da_fila": [
           "https://go.equatorialenergia.com.br/"
         ],
         "aguardando_retentativa": [
-          "https://adamadopoder.com.br",
-          "https://www.agoramatogrossodosul.com.br",
-          "https://caldasnoticias.com.br"
+          "https://agos.com.br",
+          "https://cajec.org.br"
         ]
       },
-      "duracao_s": 120,
-      "relidas_total": 99,
+      "duracao_s": 78,
+      "relidas_total": 103,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 4,
-      "fora_do_portao": 7
+      "fora_do_portao": 8
     },
     "f260-captacao-051": {
       "nome": "Programa estadual de eventos esportivos",
@@ -3052,30 +3051,30 @@
     "plat-empresas-editais-incentivados": {
       "nome": "Editais de empresas incentivadoras (modelo Porto Itapoá) — FIA, Idoso, Esporte, Rouanet, PRONAS",
       "tipo": "plataforma",
-      "leituras": 118,
+      "leituras": 119,
       "achados_total": 54,
       "vazias_seguidas": 0,
-      "ultima": "2026-10-18T05:38:24+00:00",
+      "ultima": "2026-10-18T06:05:20+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 8,
       "falhas_ultima": 2,
       "saude": [
         {
+          "url": "https://captadores.org.br/transparencia",
+          "http": 200,
+          "bytes": 120424
+        },
+        {
           "url": "https://www.alcoa.com/brasil/pt/institute/local-project-support-program",
           "http": 200,
           "bytes": 48552
-        },
-        {
-          "url": "https://selecao.simbi.social/arcelormittal",
-          "http": 200,
-          "bytes": 75118
         }
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 30,
-        "links_total": 2857,
-        "links_candidatos": 1307,
+        "paginas_lidas": 31,
+        "links_total": 2954,
+        "links_candidatos": 1359,
         "descobertas": [
           {
             "de": "https://www.alcoa.com/brasil/pt/institute/local-project-support-program",
@@ -3102,22 +3101,22 @@
         "motivo_zero": null,
         "camada1_vetados": 20,
         "camada1_direcionados": 47,
+        "aguardando_retentativa": [
+          "https://captadores.org.br/editais/",
+          "https://www.fundacaogrupovw.org.br/"
+        ],
         "fora_da_fila": [
           "https://www.institutosicoob.org.br/premio.html",
           "https://www.institutonatura.org/",
           "https://www.institutosicoob.org.br/"
-        ],
-        "aguardando_retentativa": [
-          "https://ultra.com.br/instituto-grupo-ultra/",
-          "https://fundacaotelefonicavivo.org.br/"
         ]
       },
-      "duracao_s": 123,
-      "relidas_total": 1904,
+      "duracao_s": 107,
+      "relidas_total": 1912,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 8,
-      "fora_do_portao": 38
+      "fora_do_portao": 39
     },
     "plat-fapeg": {
       "nome": "FAPEG — Fundação de Amparo à Pesquisa de Goiás",
@@ -3721,21 +3720,21 @@
     "plat-prefeituras-50-go": {
       "nome": "Prefeituras das 50 maiores cidades de Goiás — portais de editais",
       "tipo": "plataforma",
-      "leituras": 115,
+      "leituras": 116,
       "achados_total": 13,
-      "vazias_seguidas": 4,
-      "ultima": "2026-10-18T05:11:52+00:00",
+      "vazias_seguidas": 5,
+      "ultima": "2026-10-18T05:59:55+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 0,
       "saude": [
         {
           "url": "https://www.goiania.go.gov.br",
-          "status": "parcial"
+          "status": "lida"
         },
         {
           "url": "https://aparecida.go.gov.br",
-          "status": "parcial"
+          "status": "lida"
         }
       ],
       "alerta": "trocar URL: 3 leituras sem achados com página respondendo",
@@ -3746,19 +3745,23 @@
         "camadas": {
           "4": 12
         },
-        "motivo_zero": "parcial: 3; lida: 17; falhou: 4; não lida: 1 — nenhuma seleção aberta nova hoje",
+        "motivo_zero": "lida: 19; parcial: 1; falhou: 4; não lida: 1 — nenhuma seleção aberta nova hoje",
         "origem": "GitHub",
+        "livros": {
+          "livros_novos": 0,
+          "livros_atualizados": 3,
+          "vetados_pelas_restricoes": 0,
+          "pendentes_das_restricoes": 0,
+          "atos_legislativos_acompanhados": 0
+        },
         "cidades_por_status": {
-          "parcial": 3,
-          "lida": 17,
+          "lida": 19,
+          "parcial": 1,
           "falhou": 4,
           "não lida": 1
         },
         "paginas_lidas": 12,
         "paginas_nao_lidas": [
-          "Goiânia · wp: parcial (tempo)",
-          "Goiânia · qd: não lida (tempo da execução acabou)",
-          "Aparecida de Goiânia · qd: falhou (Querido Diário instável)",
           "Rio Verde: não alcançada nesta execução (tempo)",
           "Luziânia: não alcançada nesta execução (tempo)",
           "Valparaíso de Goiás: não alcançada nesta execução (tempo)",
@@ -3775,12 +3778,12 @@
         ],
         "leitura_do_dia": {
           "cidades": 25,
-          "lidas": 17,
-          "parciais": 3,
+          "lidas": 19,
+          "parciais": 1,
           "aguardando_brasil": 0,
           "falharam": 4,
           "rotas_aguardando_brasil": 0,
-          "rotas_nao_lidas": 16
+          "rotas_nao_lidas": 13
         },
         "leitura_pdf": {
           "documentos": 0,
@@ -3797,7 +3800,7 @@
         "pdfs_lidos": 0,
         "sem_texto": 0
       },
-      "duracao_s": 901,
+      "duracao_s": 916,
       "relidas_total": 102,
       "totais_por_distintas": true,
       "novas_ultima": 0,
@@ -3852,10 +3855,10 @@
     "plat-salic": {
       "nome": "SALIC — Lei Rouanet (Ministério da Cultura)",
       "tipo": "plataforma",
-      "leituras": 113,
+      "leituras": 114,
       "achados_total": 5,
       "vazias_seguidas": 0,
-      "ultima": "2026-10-18T05:29:52+00:00",
+      "ultima": "2026-10-18T06:09:37+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 2,
       "falhas_ultima": 1,
@@ -3932,8 +3935,8 @@
         ],
         "observacao_api": "API de projetos do SALIC fora do ar (série histórica); editais e janela lidos"
       },
-      "duracao_s": 42,
-      "relidas_total": 360,
+      "duracao_s": 44,
+      "relidas_total": 362,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 2
@@ -4357,11 +4360,11 @@
     "judiciario-cnj-tjgo": {
       "nome": "Judiciário — CNJ e TJGO: editais das varas de execução penal e das comarcas (prestações pecuniárias) e credenciamentos de entidades",
       "tipo": "diario_justica",
-      "leituras": 28,
+      "leituras": 29,
       "achados_total": 1,
-      "vazias_seguidas": 26,
+      "vazias_seguidas": 27,
       "duracao_s": 2,
-      "ultima": "2026-10-18T05:38:26+00:00",
+      "ultima": "2026-10-18T06:05:22+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 2,
@@ -5726,11 +5729,11 @@
     "f260-captacao-228": {
       "nome": "Instituto Localiza",
       "tipo": "privada",
-      "leituras": 37,
+      "leituras": 38,
       "achados_total": 0,
-      "vazias_seguidas": 37,
-      "duracao_s": 1,
-      "ultima": "2026-10-18T05:31:55+00:00",
+      "vazias_seguidas": 38,
+      "duracao_s": 0,
+      "ultima": "2026-10-18T06:09:38+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 1,
@@ -5969,11 +5972,11 @@
     "f260-captacao-248": {
       "nome": "Open Society Foundations",
       "tipo": "internacional",
-      "leituras": 10,
+      "leituras": 11,
       "achados_total": 0,
-      "vazias_seguidas": 10,
+      "vazias_seguidas": 11,
       "duracao_s": 1,
-      "ultima": "2026-10-17T04:21:21+00:00",
+      "ultima": "2026-10-18T05:59:56+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 0,
@@ -5981,7 +5984,7 @@
         {
           "url": "https://www.opensocietyfoundations.org/",
           "http": 200,
-          "bytes": 178079
+          "bytes": 178050
         }
       ],
       "alerta": "trocar URL: 3 leituras sem achados com página respondendo",
@@ -6665,11 +6668,11 @@
     "judiciario-tjgo": {
       "nome": "TJ-GO — editais das comarcas (prestações pecuniárias) e Banco de Projetos Sociais da CGJ/GO",
       "tipo": "diario_justica",
-      "leituras": 110,
+      "leituras": 111,
       "achados_total": 0,
-      "vazias_seguidas": 110,
+      "vazias_seguidas": 111,
       "duracao_s": 2,
-      "ultima": "2026-10-18T05:21:00+00:00",
+      "ultima": "2026-10-18T06:08:54+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 2,
@@ -7913,11 +7916,11 @@
     "outras-oportunidades-1": {
       "nome": "Outras Oportunidades 1/3",
       "tipo": "site_oficial",
-      "leituras": 42,
+      "leituras": 43,
       "achados_total": 189,
       "vazias_seguidas": 0,
-      "duracao_s": 108,
-      "ultima": "2026-10-18T05:36:20+00:00",
+      "duracao_s": 107,
+      "ultima": "2026-10-18T06:03:33+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 52,
       "falhas_ultima": 1,
@@ -7930,7 +7933,7 @@
         {
           "url": "http://www.administracao.go.gov.br/",
           "http": 200,
-          "bytes": 220168
+          "bytes": 219889
         }
       ],
       "alerta": null,
@@ -7966,16 +7969,13 @@
         "camada1_direcionados": 179,
         "fora_da_fila": [
           "https://www.boavista.rr.gov.br/"
-        ],
-        "aguardando_retentativa": [
-          "https://www.institutococacolabrasil.com.br/"
         ]
       },
-      "relidas_total": 925,
+      "relidas_total": 977,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 52,
-      "fora_do_portao": 13
+      "fora_do_portao": 16
     },
     "outras-oportunidades-3": {
       "nome": "Outras Oportunidades 3/3",
@@ -8288,14 +8288,14 @@
     "outras-oportunidades-7": {
       "nome": "Outras Oportunidades 7/7",
       "tipo": "site_oficial",
-      "leituras": 19,
+      "leituras": 20,
       "achados_total": 98,
       "vazias_seguidas": 0,
-      "duracao_s": 108,
-      "ultima": "2026-10-18T05:34:33+00:00",
+      "duracao_s": 110,
+      "ultima": "2026-10-18T06:01:46+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 13,
-      "falhas_ultima": 1,
+      "falhas_ultima": 0,
       "saude": [
         {
           "url": "https://jornadasocial.com.br/edital-transformacao/",
@@ -8310,10 +8310,15 @@
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 26,
-        "links_total": 2693,
-        "links_candidatos": 1582,
+        "paginas_lidas": 24,
+        "links_total": 2543,
+        "links_candidatos": 1478,
         "descobertas": [
+          {
+            "de": "https://jornadasocial.com.br/edital-transformacao/",
+            "para": "https://jornadasocial.com.br/saiba-mais-sobre-a-jornada-tranformacao/edital-transformacao-2025",
+            "rotulo": "Edital Jornada TransformAção 2025"
+          },
           {
             "de": "https://jornadasocial.com.br/edital-transformacao/",
             "para": "https://jornadasocial.com.br/edital-transformacao",
@@ -8328,25 +8333,24 @@
             "de": "https://baoba.org.br/programa-marielle-franco/",
             "para": "https://baoba.org.br/editais-em-curso/blackstem-2edicao",
             "rotulo": "Black STEM 2ª Edição"
-          },
-          {
-            "de": "https://baoba.org.br/programa-marielle-franco/",
-            "para": "https://baoba.org.br/programa-ja-e-2025",
-            "rotulo": "Edital Já É 2ª Edição"
           }
         ],
-        "pdf_links": 26,
+        "pdf_links": 25,
         "motivo_zero": null,
-        "camada1_vetados": 35,
-        "camada1_direcionados": 175,
+        "camada1_vetados": 31,
+        "camada1_direcionados": 149,
         "fora_da_fila": [
-          "https://blogdoamarildo.com.br/com-vagas-para-goias-e-outros-estados-edp-abre-inscricoes-para-selecao-de-projetos-incentivados-e-preve-destinar-ate-r-12-milhoes-a-iniciativas-sociais-esportivas-e-de-saude/"
+          "https://blogdoamarildo.com.br/com-vagas-para-goias-e-outros-estados-edp-abre-inscricoes-para-selecao-de-projetos-incentivados-e-preve-destinar-ate-r-12-milhoes-a-iniciativas-sociais-esportivas-e-de-saude/",
+          "https://fas-amazonia.org/editais-e-chamadas/"
+        ],
+        "aguardando_retentativa": [
+          "https://jornadasocial.com.br/saiba-mais-sobre-a-jornada-tranformacao/edital-transformacao-2025"
         ]
       },
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 13,
-      "relidas_total": 156
+      "relidas_total": 169
     },
     "plataforma-wordpress": {
       "nome": "Adaptador WordPress — sites oficiais pela API pública",
@@ -8387,21 +8391,21 @@
     "plataforma-mapas-culturais": {
       "nome": "Adaptador Mapas Culturais — oportunidades com inscrição aberta",
       "tipo": "api",
-      "leituras": 15,
+      "leituras": 16,
       "achados_total": 68,
       "vazias_seguidas": 0,
-      "duracao_s": 150,
-      "ultima": "2026-10-18T05:20:58+00:00",
+      "duracao_s": 132,
+      "ultima": "2026-10-18T06:07:34+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 13,
       "falhas_ultima": 7,
       "saude": [
         {
-          "url": "https://mapacultural.pe.gov.br/api/opportunity/find?@select=id,name,shortDescription,registrationFrom,registrationTo,singleUrl&registrationTo=GTE(2026-10-18)&@order=registrationTo%20ASC&@limit=30",
+          "url": "https://mapacultural.saobernardo.sp.gov.br/api/opportunity/find?@select=id,name,shortDescription,registrationFrom,registrationTo,singleUrl&registrationTo=GTE(2026-10-18)&@order=registrationTo%20ASC&@limit=30",
           "erro": "URLError"
         },
         {
-          "url": "https://mapacultural.saobernardo.sp.gov.br/api/opportunity/find?@select=id,name,shortDescription,registrationFrom,registrationTo,singleUrl&registrationTo=GTE(2026-10-18)&@order=registrationTo%20ASC&@limit=30",
+          "url": "https://mapacultural.se.gov.br/api/opportunity/find?@select=id,name,shortDescription,registrationFrom,registrationTo,singleUrl&registrationTo=GTE(2026-10-18)&@order=registrationTo%20ASC&@limit=30",
           "erro": "URLError"
         }
       ],
@@ -8418,7 +8422,7 @@
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 13,
-      "relidas_total": 152
+      "relidas_total": 165
     },
     "outras-oportunidades-8": {
       "nome": "Outras Oportunidades 8/8",
@@ -10056,9 +10060,8 @@
   },
   "ultima_execucao": {
     "data": "2026-10-18",
-    "em": "2026-10-18T05:41:56+00:00",
+    "em": "2026-10-18T06:09:39+00:00",
     "manual": [
-      "camara-goiania-pl",
       "empresas-incentivadas",
       "f260-captacao-001",
       "f260-captacao-118",
@@ -10068,15 +10071,13 @@
       "f260-captacao-228",
       "f260-captacao-237",
       "f260-captacao-240",
-      "f260-captacao-253",
+      "f260-captacao-248",
       "f260-captacao-254",
-      "f260-curadoria-002",
       "f260-curadoria-005",
       "f260-espalhado-rouanet-cultura-gov-br",
       "judiciario-cnj-tjgo",
       "judiciario-tjgo",
       "outras-oportunidades-1",
-      "outras-oportunidades-2",
       "outras-oportunidades-3",
       "outras-oportunidades-5",
       "outras-oportunidades-6",
@@ -10089,46 +10090,55 @@
       "plataforma-wordpress"
     ],
     "bloco": "manual",
-    "sensores_executados": 28,
+    "sensores_executados": 11,
     "adiados_por_tempo": [
-      "plat-prefeituras-50-go"
+      "plataforma-wordpress",
+      "outras-oportunidades-3",
+      "outras-oportunidades-8",
+      "outras-oportunidades-6",
+      "f260-captacao-237",
+      "f260-captacao-001",
+      "f260-captacao-254",
+      "f260-captacao-227",
+      "outras-oportunidades-5",
+      "f260-espalhado-rouanet-cultura-gov-br",
+      "f260-captacao-240",
+      "f260-curadoria-005",
+      "f260-captacao-221",
+      "f260-captacao-224",
+      "f260-captacao-118"
     ],
-    "duracao_s": 1409,
-    "em_espera": 101,
-    "total_esquadra": 130,
+    "duracao_s": 1500,
+    "em_espera": 105,
+    "total_esquadra": 131,
     "previsoes_ativas": 1,
-    "achados": 168,
-    "novos_na_base": 11,
+    "achados": 92,
+    "novos_na_base": 2,
     "por_tipo": {
-      "api": {
-        "sensores": 2,
-        "achados": 20,
-        "falhas": 13
+      "plataforma": {
+        "sensores": 3,
+        "achados": 10,
+        "falhas": 3
+      },
+      "site_oficial": {
+        "sensores": 4,
+        "achados": 65,
+        "falhas": 2
       },
       "diario_justica": {
         "sensores": 2,
         "achados": 0,
         "falhas": 4
       },
-      "site_oficial": {
-        "sensores": 20,
-        "achados": 134,
-        "falhas": 23
-      },
-      "plataforma": {
-        "sensores": 2,
-        "achados": 10,
-        "falhas": 3
+      "api": {
+        "sensores": 1,
+        "achados": 13,
+        "falhas": 7
       },
       "empresas_incentivo": {
         "sensores": 1,
         "achados": 4,
         "falhas": 2
-      },
-      "legislativo": {
-        "sensores": 1,
-        "achados": 0,
-        "falhas": 0
       }
     }
   }
