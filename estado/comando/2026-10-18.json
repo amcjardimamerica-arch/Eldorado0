@@ -11155,6 +11155,197 @@
     }
    ],
    "estado": "vermelho"
+  },
+  {
+   "inicio": "2026-10-18T08:43:12+00:00",
+   "recibos": [
+    {
+     "etapa": "acionar",
+     "rc": 0,
+     "segundos": 0,
+     "erro": null,
+     "motores": []
+    },
+    {
+     "etapa": "catalogar",
+     "finalidade": "achados por motor, status de cada motor e repositório único das oportunidades",
+     "segundos": 16.2,
+     "erro": "catalogar:4: KeyError: 'esqueleto'"
+    },
+    {
+     "etapa": "site_oficial",
+     "finalidade": "do replicador à fonte oficial e ao PDF do edital (navegação e PNCP)",
+     "segundos": 8.2,
+     "erro": null
+    },
+    {
+     "etapa": "absorver",
+     "finalidade": "dado de oportunidade só nos livros: absorve e apaga as pastas proibidas",
+     "segundos": 0.1,
+     "erro": null
+    },
+    {
+     "etapa": "pncp",
+     "finalidade": "dossiê do PNCP: 12 de 12 com informação confirmada ou descarte justificado; o que faltar vai ao Interceptador",
+     "segundos": 0.7,
+     "erro": "pncp:1: KeyError: 'dado'"
+    },
+    {
+     "etapa": "certificar",
+     "finalidade": "trecho literal e página de cada um dos 12 itens no documento oficial (Cartório)",
+     "segundos": 1.4,
+     "erro": "certificar:1: KeyError: 'dado'"
+    },
+    {
+     "etapa": "curadoria",
+     "finalidade": "link de acesso, link oficial com curadoria objetiva (6 critérios) e trecho exato da oportunidade",
+     "segundos": 0.7,
+     "erro": "curadoria:1: KeyError: 'dado'"
+    },
+    {
+     "etapa": "validar",
+     "finalidade": "validação por exceção: 12 de 12 comprovados seguem ao Farol; o resto à conferência humana",
+     "segundos": 0.6,
+     "erro": "validar:1: KeyError: 'dado'"
+    },
+    {
+     "etapa": "livros",
+     "finalidade": "os livros são o banco: cada oportunidade cria ou vincula o seu livro com links, checklist12, achados e análises",
+     "segundos": 1.4,
+     "erro": "livros:1: KeyError: 'dado'"
+    },
+    {
+     "etapa": "banco_unico",
+     "finalidade": "teste: bancos de dados que ainda existem fora dos livros",
+     "segundos": 2.9,
+     "erro": null
+    },
+    {
+     "etapa": "legislativo",
+     "finalidade": "projetos de lei, utilidades públicas e orçamento — acompanhamento sem livro",
+     "segundos": 0.1,
+     "erro": null
+    },
+    {
+     "etapa": "fechamento",
+     "finalidade": "repositório por último; fluxo e pendências do Cartório derivados dele (uma só fonte)",
+     "segundos": 51.8,
+     "erro": "fechamento:3: KeyError: 'dado'"
+    },
+    {
+     "etapa": "fichas_farol",
+     "finalidade": "ficha e janela de cada oportunidade aberta; o que está pronto vai ao Farol",
+     "segundos": 2.2,
+     "erro": null
+    },
+    {
+     "etapa": "sala_de_controle",
+     "finalidade": "instrumentos de cada etapa",
+     "segundos": 4.3,
+     "erro": null
+    },
+    {
+     "etapa": "diagnostico",
+     "finalidade": "diagnóstico da passagem (arquivo próprio; o relatório da análise não é sobrescrito)",
+     "segundos": 16.3,
+     "erro": null
+    }
+   ],
+   "decisoes": [
+    {
+     "fase": "decidir",
+     "motores": 0,
+     "adiados_primeiro": [],
+     "planejados_no_dia": 123,
+     "cobertura_antes_pct": 79.7
+    },
+    {
+     "fase": "modalidade",
+     "pulou": "já feita"
+    },
+    {
+     "fase": "treinar_rede",
+     "pulou": "modelo recente e sem rótulos novos suficientes"
+    },
+    {
+     "fase": "expurgo",
+     "pulou": "já feito hoje"
+    },
+    {
+     "fase": "migracao_livros",
+     "pulou": "já feita"
+    },
+    {
+     "fase": "recalcular",
+     "pulou": "o Cartório não certificou nada nesta passagem"
+    },
+    {
+     "fase": "unir_livros",
+     "pulou": "já feita hoje"
+    },
+    {
+     "fase": "biblioteca_diaria",
+     "pulou": "já feita hoje"
+    },
+    {
+     "fase": "vigilancia_diaria",
+     "pulou": "já feita hoje"
+    }
+   ],
+   "avaliacao": {
+    "cobertura_do_dia_pct": 79.7,
+    "estado": {},
+    "reacionar": [],
+    "para_humano": [],
+    "completos": 0
+   },
+   "novos_na_base": 0,
+   "fim": "2026-10-18T08:45:03+00:00",
+   "erros": [
+    {
+     "etapa": "catalogar",
+     "finalidade": "achados por motor, status de cada motor e repositório único das oportunidades",
+     "segundos": 16.2,
+     "erro": "catalogar:4: KeyError: 'esqueleto'"
+    },
+    {
+     "etapa": "pncp",
+     "finalidade": "dossiê do PNCP: 12 de 12 com informação confirmada ou descarte justificado; o que faltar vai ao Interceptador",
+     "segundos": 0.7,
+     "erro": "pncp:1: KeyError: 'dado'"
+    },
+    {
+     "etapa": "certificar",
+     "finalidade": "trecho literal e página de cada um dos 12 itens no documento oficial (Cartório)",
+     "segundos": 1.4,
+     "erro": "certificar:1: KeyError: 'dado'"
+    },
+    {
+     "etapa": "curadoria",
+     "finalidade": "link de acesso, link oficial com curadoria objetiva (6 critérios) e trecho exato da oportunidade",
+     "segundos": 0.7,
+     "erro": "curadoria:1: KeyError: 'dado'"
+    },
+    {
+     "etapa": "validar",
+     "finalidade": "validação por exceção: 12 de 12 comprovados seguem ao Farol; o resto à conferência humana",
+     "segundos": 0.6,
+     "erro": "validar:1: KeyError: 'dado'"
+    },
+    {
+     "etapa": "livros",
+     "finalidade": "os livros são o banco: cada oportunidade cria ou vincula o seu livro com links, checklist12, achados e análises",
+     "segundos": 1.4,
+     "erro": "livros:1: KeyError: 'dado'"
+    },
+    {
+     "etapa": "fechamento",
+     "finalidade": "repositório por último; fluxo e pendências do Cartório derivados dele (uma só fonte)",
+     "segundos": 51.8,
+     "erro": "fechamento:3: KeyError: 'dado'"
+    }
+   ],
+   "estado": "vermelho"
   }
  ]
 }
