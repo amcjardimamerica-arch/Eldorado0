@@ -118,8 +118,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "dj-trf1-go": {
-  "em": "2026-10-18T20:11:32+00:00",
-  "testes": 16,
+  "em": "2026-10-18T21:12:04+00:00",
+  "testes": 14,
   "melhor": {
    "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
    "via": "direto",
@@ -161,37 +161,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/sjgo/conteudo/secos/SEI_24768109_Edital (2).pdf",
-    "origem": "biblioteca",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.trf1.jus.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.trf1.jus.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.trf1.jus.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -203,6 +172,16 @@
    },
    {
     "url": "https://www.trf1.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.trf1.jus.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -295,7 +274,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-196": {
-  "em": "2026-10-18T20:08:16+00:00",
+  "em": "2026-10-18T21:12:01+00:00",
   "testes": 17,
   "melhor": {
    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
@@ -339,23 +318,23 @@
     "funcionou": true
    },
    {
-    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/mpf-divulga-lista-de-instituicoes-selecionadas-para-receber-bens-doados",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 5,
-    "links": 404,
-    "sinais": 2,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-se/destinacao-de-bens-e-valores/edital-prse-1-2025-chamamento-publico-destinacao-de-bens-e-valores-assinado.pdf/view",
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 9,
     "links": 400,
     "sinais": 4,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/mpf-divulga-lista-de-instituicoes-selecionadas-para-receber-bens-doados",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 5,
+    "links": 404,
+    "sinais": 2,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -431,11 +410,11 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
-    "url": "https://www.mpf.mp.br/sitemap.xml",
+    "url": "https://www.mpf.mp.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -445,13 +424,13 @@
     "funcionou": false
    },
    {
-    "url": "https://mpt.mp.br/sitemap.xml",
+    "url": "https://mpt.mp.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -459,9 +438,10 @@
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 0,
-    "links": 0,
+    "links": 14,
     "sinais": 0,
-    "erro": "URLError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -469,9 +449,10 @@
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 0,
-    "links": 0,
+    "links": 14,
     "sinais": 0,
-    "erro": "URLError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    }
   ],
@@ -1104,9 +1085,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T21:06:08+00:00",
+  "em": "2026-10-18T21:14:05+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": true
+  "ponte_respondeu": false
  },
  "f260-captacao-238": {
   "em": "2026-10-18T21:01:27+00:00",
@@ -2036,7 +2017,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "alego-pl": {
-  "em": "2026-10-18T20:13:38+00:00",
+  "em": "2026-10-18T21:13:54+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://portal.al.go.leg.br/",
@@ -2069,13 +2050,53 @@
     "funcionou": true
    },
    {
+    "url": "https://portal.al.go.leg.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
     "url": "https://portal.al.go.leg.br/feed",
     "origem": "câmara",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "URLError",
     "funcionou": false
    },
    {
@@ -2109,48 +2130,8 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
     "url": "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
     "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2165,32 +2146,12 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
     "url": "https://alegodigital.al.go.leg.br/editais",
     "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://portal.al.go.leg.br/noticias",
-    "origem": "câmara",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/noticias",
-    "origem": "câmara",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2207,6 +2168,27 @@
     "sinais": 0,
     "erro": "URLError",
     "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/noticias",
+    "origem": "câmara",
+    "via": "direto",
+    "pontos": 13,
+    "links": 211,
+    "sinais": 6,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
    }
   ],
   "resultado": "rota nova em teste"
@@ -10680,7 +10662,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-247": {
-  "em": "2026-10-18T20:07:01+00:00",
+  "em": "2026-10-18T21:11:33+00:00",
   "testes": 22,
   "melhor": {
    "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
@@ -10773,7 +10755,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/editais",
+    "url": "https://international-partnerships.ec.europa.eu/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10783,7 +10765,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/editais",
+    "url": "https://international-partnerships.ec.europa.eu/edital",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -10793,7 +10775,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/edital",
+    "url": "https://international-partnerships.ec.europa.eu/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10803,7 +10785,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/edital",
+    "url": "https://international-partnerships.ec.europa.eu/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -11913,7 +11895,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-011": {
-  "em": "2026-10-18T20:07:16+00:00",
+  "em": "2026-10-18T21:11:50+00:00",
   "testes": 20,
   "melhor": {
    "url": "https://mariaemilia.org.br/feed",
@@ -11957,17 +11939,6 @@
     "funcionou": true
    },
    {
-    "url": "https://mariaemilia.org.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 7,
-    "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://mariaemilia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -11977,6 +11948,17 @@
     "formato": "json",
     "erro": null,
     "funcionou": true
+   },
+   {
+    "url": "https://mariaemilia.org.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 7,
+    "sinais": 0,
+    "formato": "sitemap/feed",
+    "erro": null,
+    "funcionou": false
    },
    {
     "url": "https://mariaemilia.org.br/transparencia/editais",
@@ -11990,6 +11972,26 @@
     "funcionou": true
    },
    {
+    "url": "https://mariaemilia.org.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://mariaemilia.org.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -12001,26 +12003,6 @@
     "funcionou": true
    },
    {
-    "url": "https://mariaemilia.org.br/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mariaemilia.org.br/edital",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://mariaemilia.org.br/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -12032,26 +12014,6 @@
    },
    {
     "url": "https://mariaemilia.org.br/noticias",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://mariaemilia.org.br/chamamento-publico",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mariaemilia.org.br/chamamento-publico",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -12069,6 +12031,26 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/chamamento-publico",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -12213,28 +12195,36 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-www-detran-rj-gov-br": {
-  "em": "2026-10-18T20:15:44+00:00",
+  "em": "2026-10-18T21:14:05+00:00",
   "testes": 12,
-  "melhor": null,
+  "melhor": {
+   "url": "https://www.detran.rj.gov.br/sitemap.xml",
+   "via": "direto",
+   "origem": "rota original",
+   "pontos": 30,
+   "formato": "sitemap/feed"
+  },
   "detalhe": [
    {
     "url": "https://www.detran.rj.gov.br/sitemap.xml",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
+    "pontos": 30,
+    "links": 485,
+    "sinais": 18,
+    "formato": "sitemap/feed",
+    "erro": null,
+    "funcionou": true
    },
    {
     "url": "https://www.detran.rj.gov.br/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
+    "pontos": 1,
+    "links": 145,
     "sinais": 0,
-    "erro": "URLError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -12244,17 +12234,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.detran.rj.gov.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -12264,7 +12244,17 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.detran.rj.gov.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -12274,7 +12264,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -12284,18 +12274,19 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
     "url": "https://www.detran.rj.gov.br/noticias",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
+    "pontos": 3,
+    "links": 118,
+    "sinais": 1,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
    },
    {
     "url": "https://www.detran.rj.gov.br/chamamento-publico",
@@ -12304,7 +12295,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -12314,7 +12305,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -12324,7 +12315,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -12334,11 +12325,11 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
-  "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
+  "resultado": "rota nova em teste"
  },
  "f260-espalhado-www-riopreto-sp-gov-br": {
   "em": "2026-10-13T02:40:25+00:00",
