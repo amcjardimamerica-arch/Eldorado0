@@ -1108,12 +1108,12 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T22:35:07+00:00",
+  "em": "2026-10-18T22:45:48+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": false
+  "ponte_respondeu": true
  },
  "f260-captacao-238": {
-  "em": "2026-10-18T21:53:43+00:00",
+  "em": "2026-10-18T22:45:48+00:00",
   "testes": 24,
   "melhor": null,
   "detalhe": [
@@ -1178,6 +1178,26 @@
     "funcionou": false
    },
    {
+    "url": "https://sebraego.com.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://sebraego.com.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://sebraego.com.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -1198,7 +1218,7 @@
     "funcionou": false
    },
    {
-    "url": "https://sebraego.com.br/sitemap.xml",
+    "url": "https://sebraego.com.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1208,7 +1228,7 @@
     "funcionou": false
    },
    {
-    "url": "https://sebraego.com.br/sitemap.xml",
+    "url": "https://sebraego.com.br/noticias",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -1249,26 +1269,6 @@
    },
    {
     "url": "https://sebraego.com.br/edital",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://sebraego.com.br/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://sebraego.com.br/noticias",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -8537,7 +8537,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-259": {
-  "em": "2026-10-18T21:51:16+00:00",
+  "em": "2026-10-18T22:43:17+00:00",
   "testes": 20,
   "melhor": null,
   "detalhe": [
@@ -8553,17 +8553,6 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 10,
-    "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://echoinggreen.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -8572,26 +8561,6 @@
     "sinais": 0,
     "formato": "json",
     "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://echoinggreen.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://echoinggreen.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -8606,6 +8575,57 @@
     "funcionou": false
    },
    {
+    "url": "https://echoinggreen.org/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 10,
+    "sinais": 0,
+    "formato": "sitemap/feed",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://echoinggreen.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://echoinggreen.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://echoinggreen.org/noticias",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://echoinggreen.org/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://echoinggreen.org/editais",
     "origem": "padrão",
     "via": "direto",
@@ -8637,26 +8657,6 @@
    },
    {
     "url": "https://echoinggreen.org/edital",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://echoinggreen.org/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://echoinggreen.org/noticias",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -9755,8 +9755,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-248": {
-  "em": "2026-10-18T21:46:31+00:00",
-  "testes": 12,
+  "em": "2026-10-18T22:43:03+00:00",
+  "testes": 23,
   "melhor": null,
   "detalhe": [
    {
@@ -9771,7 +9771,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/feed",
+    "url": "https://www.opensocietyfoundations.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9783,21 +9783,11 @@
    {
     "url": "https://www.opensocietyfoundations.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.opensocietyfoundations.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -9811,7 +9801,17 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/editais",
+    "url": "https://www.opensocietyfoundations.org/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9821,13 +9821,33 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/edital",
+    "url": "https://www.opensocietyfoundations.org/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -9841,37 +9861,57 @@
     "funcionou": false
    },
    {
+    "url": "https://www.opensocietyfoundations.org/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.opensocietyfoundations.org/chamamento-publico",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.opensocietyfoundations.org/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.opensocietyfoundations.org/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.opensocietyfoundations.org/licitacoes",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9884,7 +9924,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-257": {
-  "em": "2026-10-18T21:51:34+00:00",
+  "em": "2026-10-18T22:43:37+00:00",
   "testes": 20,
   "melhor": null,
   "detalhe": [
@@ -9900,17 +9940,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.rockefellerfoundation.org/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 10,
-    "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.rockefellerfoundation.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -9919,26 +9948,6 @@
     "sinais": 0,
     "formato": "json",
     "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.rockefellerfoundation.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.rockefellerfoundation.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -9953,6 +9962,57 @@
     "funcionou": false
    },
    {
+    "url": "https://www.rockefellerfoundation.org/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 10,
+    "sinais": 0,
+    "formato": "sitemap/feed",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.rockefellerfoundation.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.rockefellerfoundation.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.rockefellerfoundation.org/noticias",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.rockefellerfoundation.org/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.rockefellerfoundation.org/editais",
     "origem": "padrão",
     "via": "direto",
@@ -9984,26 +10044,6 @@
    },
    {
     "url": "https://www.rockefellerfoundation.org/edital",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.rockefellerfoundation.org/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.rockefellerfoundation.org/noticias",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -10056,7 +10096,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-258": {
-  "em": "2026-10-18T21:46:04+00:00",
+  "em": "2026-10-18T22:42:19+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://skoll.org/feed",
@@ -10100,6 +10140,17 @@
     "funcionou": false
    },
    {
+    "url": "https://skoll.org/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 13,
+    "sinais": 0,
+    "formato": "sitemap/feed",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://skoll.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -10111,13 +10162,13 @@
     "funcionou": false
    },
    {
-    "url": "https://skoll.org/sitemap.xml",
+    "url": "https://skoll.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 13,
+    "links": 109,
     "sinais": 0,
-    "formato": "sitemap/feed",
+    "formato": "html",
     "erro": null,
     "funcionou": false
    },
@@ -10134,17 +10185,6 @@
    },
    {
     "url": "https://skoll.org/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 109,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://skoll.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
@@ -11312,8 +11352,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-260": {
-  "em": "2026-10-18T21:46:26+00:00",
-  "testes": 13,
+  "em": "2026-10-18T22:42:49+00:00",
+  "testes": 21,
   "melhor": {
    "url": "https://oakfnd.org/sitemap.xml",
    "via": "direto",
@@ -11388,23 +11428,13 @@
     "funcionou": false
    },
    {
-    "url": "https://oakfnd.org/editais",
+    "url": "https://oakfnd.org/transparencia/editais",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://oakfnd.org/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -11418,6 +11448,56 @@
     "funcionou": false
    },
    {
+    "url": "https://oakfnd.org/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://oakfnd.org/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://oakfnd.org/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://oakfnd.org/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://oakfnd.org/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://oakfnd.org/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
@@ -11428,27 +11508,17 @@
     "funcionou": false
    },
    {
+    "url": "https://oakfnd.org/chamamento-publico",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://oakfnd.org/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://oakfnd.org/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://oakfnd.org/licitacoes",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
