@@ -1,42 +1,42 @@
 {
- "em": "2026-10-18T00:02:25+00:00",
+ "em": "2026-10-18T00:27:32+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
  "resumo": {
   "pontos_12_total": 4800,
-  "pontos_certificados": 3089,
-  "pontos_dispensados": 173,
-  "pontos_ja_constavam": 1400,
-  "pontos_faltam": 138,
-  "pct_certificado_12": 0.6796,
-  "certidoes_12_de_12": 136,
-  "certidoes_sem_item_faltando": 268,
+  "pontos_certificados": 3106,
+  "pontos_dispensados": 171,
+  "pontos_ja_constavam": 1391,
+  "pontos_faltam": 132,
+  "pct_certificado_12": 0.6827,
+  "certidoes_12_de_12": 139,
+  "certidoes_sem_item_faltando": 272,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
-  "certidoes": 2623,
-  "nesta_execucao": 18,
-  "fila_estrelas": 123,
-  "fila_livros": 2512,
-  "itens_que_faltavam": 24069,
-  "itens_obtidos": 8929,
-  "itens_dispensados": 507,
-  "eficiencia_itens": 0.392,
-  "com_link_oficial": 1776,
-  "taxa_link_oficial": 0.677,
-  "certidoes_completas": 249,
-  "para_o_interceptador": 1903,
-  "para_o_chrome": 470,
+  "certidoes": 2638,
+  "nesta_execucao": 16,
+  "fila_estrelas": 152,
+  "fila_livros": 2517,
+  "itens_que_faltavam": 24198,
+  "itens_obtidos": 8999,
+  "itens_dispensados": 509,
+  "eficiencia_itens": 0.393,
+  "com_link_oficial": 1788,
+  "taxa_link_oficial": 0.678,
+  "certidoes_completas": 253,
+  "para_o_interceptador": 1912,
+  "para_o_chrome": 472,
   "selos_que_mudaram": {
    "bronze → ouro": 6,
    "bronze → prata": 1,
-   "sem selo → ouro": 82,
-   "sem selo → bronze": 49,
+   "sem selo → ouro": 81,
+   "sem selo → bronze": 50,
    "sem selo → prata": 45,
    "prata → bronze": 1,
    "prata → ouro": 3
   },
   "por_degrau": {
-   "degrau 0": 1699,
+   "degrau 0": 1711,
    "degrau 1": 118
   }
  },
@@ -47,94 +47,94 @@
  },
  "por_item": {
   "Objeto": {
-   "faltavam": 1703,
-   "obtidos": 554,
+   "faltavam": 1714,
+   "obtidos": 559,
    "dispensados": 0,
-   "eficiencia": 0.325
+   "eficiencia": 0.326
   },
   "Prazo de inscrição": {
-   "faltavam": 1818,
-   "obtidos": 561,
-   "dispensados": 143,
-   "eficiencia": 0.387
+   "faltavam": 1828,
+   "obtidos": 564,
+   "dispensados": 145,
+   "eficiencia": 0.388
   },
   "Resultado": {
-   "faltavam": 2342,
-   "obtidos": 600,
+   "faltavam": 2354,
+   "obtidos": 606,
    "dispensados": 227,
-   "eficiencia": 0.353
+   "eficiencia": 0.354
   },
   "Prazo de recurso": {
-   "faltavam": 2304,
-   "obtidos": 522,
+   "faltavam": 2316,
+   "obtidos": 526,
    "dispensados": 45,
-   "eficiencia": 0.246
+   "eficiencia": 0.247
   },
   "Valor": {
-   "faltavam": 2054,
-   "obtidos": 670,
+   "faltavam": 2065,
+   "obtidos": 678,
    "dispensados": 60,
-   "eficiencia": 0.355
+   "eficiencia": 0.357
   },
   "Órgão / financiador": {
-   "faltavam": 1558,
-   "obtidos": 938,
+   "faltavam": 1566,
+   "obtidos": 945,
    "dispensados": 0,
-   "eficiencia": 0.602
+   "eficiencia": 0.603
   },
   "Território": {
-   "faltavam": 1844,
-   "obtidos": 575,
+   "faltavam": 1858,
+   "obtidos": 583,
    "dispensados": 0,
-   "eficiencia": 0.312
+   "eficiencia": 0.314
   },
   "Esfera": {
-   "faltavam": 2083,
-   "obtidos": 1283,
+   "faltavam": 2092,
+   "obtidos": 1291,
    "dispensados": 0,
-   "eficiencia": 0.616
+   "eficiencia": 0.617
   },
   "Requisitos": {
-   "faltavam": 2278,
-   "obtidos": 599,
+   "faltavam": 2289,
+   "obtidos": 602,
    "dispensados": 0,
    "eficiencia": 0.263
   },
   "Anexos": {
-   "faltavam": 1644,
-   "obtidos": 358,
+   "faltavam": 1655,
+   "obtidos": 360,
    "dispensados": 4,
    "eficiencia": 0.22
   },
   "Modalidade": {
-   "faltavam": 2254,
-   "obtidos": 778,
+   "faltavam": 2264,
+   "obtidos": 786,
    "dispensados": 28,
-   "eficiencia": 0.358
+   "eficiencia": 0.36
   },
   "Área de atuação": {
-   "faltavam": 2187,
-   "obtidos": 1491,
+   "faltavam": 2197,
+   "obtidos": 1499,
    "dispensados": 0,
    "eficiencia": 0.682
   }
  },
  "por_balcao": {
   "revisão": {
-   "certidoes": 209,
-   "com_link_oficial": 159,
-   "faltavam": 2508,
-   "resolvidos": 1191,
-   "eficiencia": 0.475,
-   "taxa_link_oficial": 0.761
+   "certidoes": 208,
+   "com_link_oficial": 158,
+   "faltavam": 2496,
+   "resolvidos": 1179,
+   "eficiencia": 0.472,
+   "taxa_link_oficial": 0.76
   },
   "pncp": {
-   "certidoes": 106,
-   "com_link_oficial": 78,
-   "faltavam": 969,
-   "resolvidos": 526,
-   "eficiencia": 0.543,
-   "taxa_link_oficial": 0.736
+   "certidoes": 107,
+   "com_link_oficial": 79,
+   "faltavam": 981,
+   "resolvidos": 538,
+   "eficiencia": 0.548,
+   "taxa_link_oficial": 0.738
   },
   "?": {
    "certidoes": 3,
@@ -145,20 +145,20 @@
    "taxa_link_oficial": 1.0
   },
   "orgao": {
-   "certidoes": 1218,
-   "com_link_oficial": 976,
-   "faltavam": 10862,
-   "resolvidos": 4983,
-   "eficiencia": 0.459,
+   "certidoes": 1231,
+   "com_link_oficial": 986,
+   "faltavam": 10979,
+   "resolvidos": 5055,
+   "eficiencia": 0.46,
    "taxa_link_oficial": 0.801
   },
   "privado": {
-   "certidoes": 578,
-   "com_link_oficial": 401,
-   "faltavam": 4892,
+   "certidoes": 580,
+   "com_link_oficial": 403,
+   "faltavam": 4904,
    "resolvidos": 1469,
    "eficiencia": 0.3,
-   "taxa_link_oficial": 0.694
+   "taxa_link_oficial": 0.695
   },
   "pista": {
    "certidoes": 352,
@@ -187,12 +187,12 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2098,
-   "faltavam": 18178,
-   "resolvidos": 6363,
-   "eficiencia": 0.35,
-   "com_link_oficial": 1340,
-   "taxa_link_oficial": 0.639
+   "certidoes": 2113,
+   "faltavam": 18307,
+   "resolvidos": 6435,
+   "eficiencia": 0.352,
+   "com_link_oficial": 1352,
+   "taxa_link_oficial": 0.64
   },
   "refeitas": {
    "certidoes": 525,
@@ -221,29 +221,29 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2400,
-   "faltavam": 21470,
-   "resolvidos": 8088,
-   "eficiencia": 0.377,
-   "com_link_oficial": 1604,
-   "taxa_link_oficial": 0.668
+   "certidoes": 2416,
+   "faltavam": 21611,
+   "resolvidos": 8172,
+   "eficiencia": 0.378,
+   "com_link_oficial": 1617,
+   "taxa_link_oficial": 0.669
   },
   "revisão manual": {
-   "certidoes": 209,
-   "faltavam": 2508,
-   "resolvidos": 1191,
-   "eficiencia": 0.475,
-   "com_link_oficial": 159,
-   "taxa_link_oficial": 0.761
+   "certidoes": 208,
+   "faltavam": 2496,
+   "resolvidos": 1179,
+   "eficiencia": 0.472,
+   "com_link_oficial": 158,
+   "taxa_link_oficial": 0.76
   }
  },
  "por_abordagem": {
   "1": {
    "nome": "documento na mão",
-   "vezes": 2500,
-   "renderam": 1636,
-   "itens": 8541,
-   "links_oficiais": 1553,
+   "vezes": 2515,
+   "renderam": 1645,
+   "itens": 8613,
+   "links_oficiais": 1565,
    "taxa_de_acerto": 0.654
   },
   "2": {
@@ -288,11 +288,11 @@
   },
   "7": {
    "nome": "releitura com gabarito",
-   "vezes": 14,
+   "vezes": 15,
    "renderam": 1,
    "itens": 1,
    "links_oficiais": 0,
-   "taxa_de_acerto": 0.071
+   "taxa_de_acerto": 0.067
   },
   "8": {
    "nome": "ponte do titular",
@@ -322,19 +322,19 @@
  "por_balcao_selo": {
   "sem_estrela": {
    "nome": "Sem estrela → bronze",
-   "certidoes": 1379,
-   "faltavam": 12472,
-   "resolvidos": 3868,
-   "eficiencia": 0.31,
-   "entraram_aqui": 1528,
+   "certidoes": 1394,
+   "faltavam": 12601,
+   "resolvidos": 3940,
+   "eficiencia": 0.313,
+   "entraram_aqui": 1543,
    "esgotadas": 0
   },
   "bronze": {
    "nome": "Bronze → prata",
-   "certidoes": 69,
-   "faltavam": 576,
-   "resolvidos": 390,
-   "eficiencia": 0.677,
+   "certidoes": 70,
+   "faltavam": 588,
+   "resolvidos": 402,
+   "eficiencia": 0.684,
    "entraram_aqui": 32,
    "esgotadas": 0
   },
@@ -349,16 +349,16 @@
   },
   "ouro": {
    "nome": "Ouro (saiu da linha)",
-   "certidoes": 84,
-   "faltavam": 863,
-   "resolvidos": 800,
-   "eficiencia": 0.927,
+   "certidoes": 83,
+   "faltavam": 851,
+   "resolvidos": 788,
+   "eficiencia": 0.926,
    "entraram_aqui": 0,
    "esgotadas": 0
   }
  },
  "gabarito": {
-  "orgaos_com_gabarito": 1228,
+  "orgaos_com_gabarito": 1229,
   "itens_achados_pelo_gabarito": {
    "Prazo de recurso": 20,
    "Objeto": 68,
@@ -17420,6 +17420,182 @@
    }
   },
   {
+   "id": "op-c507d3db6a69",
+   "tipo": "livro",
+   "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 16 /2026 - SELEÇÃO DE PROJETOS PARA FOMENTO À EXECUÇÃO DE AÇÕES CULTURAIS - PNAB",
+   "balcao": "orgao",
+   "link_oficial": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+   "degrau": 0,
+   "como": "Mapas Culturais: arquivo da oportunidade (API pública)",
+   "faltavam": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T00:24:25+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": "",
+   "fim": "2026-09-30",
+   "itens": {
+    "Prazo de inscrição": {
+     "valor": "04 de setembro de 2026 a 30 de setembro de 2026",
+     "trecho": "ÇÃO DE PROJETOS PARA FOMENTO À EXECUÇÃO DE AÇÕES CULTURAIS Início das inscrições Fim das inscrições 04 de setembro de 2026 30 de setembro de 2026 Valor total Quantidade de vagas Para ma",
+     "pagina": 1,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+     "metodo": "cronograma"
+    },
+    "Resultado": {
+     "valor": "360 dias",
+     "trecho": "026 WANDERSON AMORIM DONA Secretário Municipal de Cultura e Turismo O resultado do chamamento público regido por este Edital terá validade até até 360 dias após a publicação do resultado final. Validade do resultado deste edi",
+     "pagina": 25,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "3 dias úteis",
+     "trecho": "S RECURSOS FINANCEIROS 21/25 Contra a decisão da fase de habilitação, caberá recurso destinado a SEMCULT, que deve ser apresentado por meio do endereço eletrônico semcult.leialdirblanc@cachoeiro.es.gov.br no prazo de 3 dias úteis a contar da publicação do resultado, considerando-se para início da c",
+     "pagina": 21,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+     "metodo": "seção"
+    },
+    "Valor": {
+     "valor": "R$ 700.000,00",
+     "trecho": "ções 04 de setembro de 2026 Fim das inscrições 30 de setembro de 2026 Valor total R$ 700.000,00 Quantidade de vagas 28 | | | | [TABELA] | | | | Para mais in",
+     "pagina": 1,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+     "metodo": "seção"
+    },
+    "Órgão / financiador": {
+     "valor": "Secretaria Municipal de Cultura e Turismo",
+     "trecho": "s, acesse: www.cachoeiro.es.gov.br/editais/ R$ 700.000,00 28 SEMCULT Secretaria Municipal de Cultura e Turismo Praça Jerônimo Monteiro, 32 – Centro Cachoeiro de Itapemirim – ES, CE",
+     "pagina": 1,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+     "metodo": "cabeçalho"
+    },
+    "Território": {
+     "valor": "do Município de Cachoeiro de Itapemirim",
+     "trecho": "objetivo de incentivar as diversas formas de manifestações culturais do Município de Cachoeiro de Itapemirim. 2.1 Objeto do Edital 2 INFORMAÇÕES GERAIS 5/25 Serão selecionados 2",
+     "pagina": 5,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "municipal",
+     "trecho": "domínio/órgão: mapa.cultura.es.gov.br · Secretaria Municipal de Cultura e Turismo",
+     "pagina": 1,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+     "metodo": "domínio e órgão"
+    },
+    "Requisitos": {
+     "valor": "poderá concorrer nesse Edital, desde que não se enquadre nas situações previstas no item 2.",
+     "trecho": "rar Conselho Municipal Política de Cultura de Cachoeiro de Itapemirim poderá concorrer nesse Edital, desde que não se enquadre nas situações previstas no item 2.6. Quando se tratar de agentes culturais que constituem pessoas jurídi",
+     "pagina": 8,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+     "metodo": "texto"
+    },
+    "Modalidade": {
+     "valor": "Termo de Execução Cultural — Lei nº 14.399/2022",
+     "trecho": "nto de vagas página 16 Etapa de Habilitação página 17 Assinatura do Termo de Execução Cultural e Recebimento dos Recursos Financeiros página 21 Divulgação dos Projetos página 22 Monitoramento e ava",
+     "pagina": 4,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Cultura, Ciência e tecnologia",
+     "trecho": "termos do objeto e do título: Cultura, Ciência e tecnologia",
+     "pagina": 1,
+     "documento": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+     "metodo": "palavras-chave do objeto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T00:24:25+00:00",
+     "ganhou": [
+      "Esfera",
+      "Modalidade",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://mapa.cultura.es.gov.br/files/opportunity/2593/edital-1626-acoes-afirmativas.pdf",
+     "degrau": 0,
+     "como": "Mapas Culturais: arquivo da oportunidade (API pública)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 25,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "ja_constava",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 10,
+    "dispensados": 0,
+    "ja_constavam": 2,
+    "faltam": 0,
+    "pct_certificado_12": 0.8333,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "op-fe24bead0f84",
    "tipo": "livro",
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 21.08/2026 – SELEÇÃO DE BOLSISTAS",
@@ -30336,7 +30512,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-17T23:18:01+00:00",
+   "em": "2026-10-18T00:09:35+00:00",
    "prazo": "2026-11-01",
    "uf": null,
    "orgao": "FUNDO MUNICIPAL DA CULTURA DE COLINAS DO SUL",
@@ -35010,6 +35186,222 @@
    }
   },
   {
+   "id": "op-1e6b6ee01e97",
+   "tipo": "livro",
+   "titulo": "Goiás Social — Edital de Chamamento Público de Instituições sem Fins Lucrativos para a Execução do Programa Ap… — Goiás",
+   "balcao": "orgao",
+   "link_oficial": "https://goias.gov.br/social/chamamentopublico-aprendizdofuturo/",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T00:23:57+00:00",
+   "prazo": null,
+   "uf": "GO",
+   "orgao": "Goiás Social, Secretaria de Estado de Desenvolvimento Social – SEDS",
+   "fim": "2026-01-23",
+   "itens": {
+    "Prazo de inscrição": {
+     "valor": "19/01/2026 a 23/01/2026",
+     "trecho": "zentos e quarenta e seis) municípios do Estado de Goiás. Envio e recebimento das propostas e declarações: 19/01/2026 à 23/01/2026 Edital Minuta Aviso Matriz de Riscos Anexo",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamentopublico-aprendizdofuturo/",
+     "metodo": "cronograma"
+    },
+    "Objeto": {
+     "valor": "O presente Chamamento Público tem por objeto a colaboração de instituições sem fins lucrativos, Organizações da Sociedade Civil – ESFL, para execução do Programa Aprendiz do Futuro, instituído pela Lei Estadual nº 19.",
+     "trecho": "ução do Programa de Aprendizagem Juvenil no âmbito deste Estado. OBJETO: O presente Chamamento Público tem por objeto a colaboração de instituições sem fins lucrativos, Organizações da Sociedade Civil – ESFL, para execução do Programa Aprendiz do Futuro, instituído pela Lei Estadual nº 19.608/2017, que tem por objetivo oferecer formação técnico-profissional",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamentopublico-aprendizdofuturo/",
+     "metodo": "texto"
+    },
+    "Órgão / financiador": {
+     "valor": "Fundação de Promoção Social",
+     "trecho": "cionais Edital de chamamento de ex-empregados celetistas da extinta Fundação de Promoção Social LGPD Governança Portal da Transparência Dados Ab",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamentopublico-aprendizdofuturo/",
+     "metodo": "cabeçalho"
+    },
+    "Território": {
+     "valor": "do Estado de Goiás",
+     "trecho": "nto Social de Goiás, Órgão integrante da Administração Pública Direta do Estado de Goiás, torna público o presente chamamento público, visando à seleção de Or",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamentopublico-aprendizdofuturo/",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "federal",
+     "trecho": "domínio/órgão: goias.gov.br · Fundação de Promoção Social Goiás Social, Secretaria de Estado de Desenvolviment",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamentopublico-aprendizdofuturo/",
+     "metodo": "domínio e órgão"
+    },
+    "Modalidade": {
+     "valor": "Termo de Colaboração",
+     "trecho": "eção de Organização da Sociedade Civil (ESFL) interessada em celebrar Termo de Colaboração para o gerenciamento, a operacionalização e a execução do Programa de Aprendizagem Juvenil no âmbito deste Es",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamentopublico-aprendizdofuturo/",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Assistência social, Educação, Criança e adolescente",
+     "trecho": "termos do objeto e do título: Assistência social, Educação, Criança e adolescente",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/social/chamamentopublico-aprendizdofuturo/",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Valor": {
+     "valor": "R$ 1.565.190,00 (um milhão, quinhentos e sessenta e cinco mil, cento e noventa reais)",
+     "trecho": "te será pra\u0000cado após a vigência deste termo de apos\u0000lamento. 4 - O valor global do Contrato nº 8/2021 passará de R$ 1.565.190,00 (um milhão, quinhentos e sessenta e cinco mil, cento e noventa reais) para R$ 1.612.568,64 (um milhão, seiscentos e doze mil, quinhentos e",
+     "pagina": 1,
+     "documento": "http://goias.gov.br/social/wp-content/uploads/sites/24/2024/01/apostila_2.pdf",
+     "metodo": "seção"
+    },
+    "Resultado": {
+     "valor": "16/01/2026",
+     "trecho": "opostas Técnicas pela Comissão de Seleção 12/01/2026 à 16/01/2026 4 Divulgação do resultado preliminar Até 16/01/2026 5 Interposição de recursos contra o resultado preliminar 19/01/202",
+     "pagina": 9,
+     "documento": "https://goias.gov.br/social/wp-content/uploads/sites/24/2025/11/Edital.pdf",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "19/01/2026 a 23/01/2026",
+     "trecho": "16/01/2026 4 Divulgação do resultado preliminar Até 16/01/2026 5 Interposição de recursos contra o resultado preliminar 19/01/2026 à 23/01/2026 6 Contrarrazões recursais 26/01/2026 à 30/01/2026 7 Análise dos re",
+     "pagina": 9,
+     "documento": "https://goias.gov.br/social/wp-content/uploads/sites/24/2025/11/Edital.pdf",
+     "metodo": "seção"
+    },
+    "Requisitos": {
+     "valor": "REQUISITOS PARA PARTICIPAÇÃO NO CHAMAMENTO PÚBLICO 7 .",
+     "trecho": "e segurança, caso haja necessidade, alimentação e transporte. 7 . DOS REQUISITOS PARA PARTICIPAÇÃO NO CHAMAMENTO PÚBLICO 7 . 1 . Nos termos da Lei Federal nº 13.019/2014, são reconhecidas como p",
+     "pagina": 5,
+     "documento": "https://goias.gov.br/social/wp-content/uploads/sites/24/2025/11/Edital.pdf",
+     "metodo": "texto"
+    },
+    "Anexos": {
+     "valor": "ANEXO I – Estudo Técnico Preliminar.",
+     "trecho": "consonância com a Lei Federal n.º 13.019/2014 e conforme detalhado no ANEXO I – Estudo Técnico Preliminar. 15 . 2 . Na hipótese de inexecução por culpa exclusiva da organização da sociedade civil, a administração pública poderá, exclusivamente para assegurar o",
+     "pagina": 24,
+     "documento": "https://goias.gov.br/social/wp-content/uploads/sites/24/2025/11/Edital.pdf",
+     "metodo": "lista de anexos"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T00:23:57+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://goias.gov.br/social/chamamentopublico-aprendizdofuturo/",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "http://goias.gov.br/social/wp-content/uploads/sites/24/2024/01/apostila_2.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 2,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goias.gov.br/social/wp-content/uploads/sites/24/2025/11/Edital.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 29,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 12,
+    "dispensados": 0,
+    "ja_constavam": 0,
+    "faltam": 0,
+    "pct_certificado_12": 1.0,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "op-5ddfdaa4d0c5",
    "tipo": "livro",
    "titulo": "Goiás Turismo — Governo de Goiás lança edital de R$ 2 milhões para apoio a eventos turísticos",
@@ -35743,6 +36135,233 @@
     "ja_constavam": 11,
     "faltam": 0,
     "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "52a1fdf5d0e54202eeb0",
+   "tipo": "estrela",
+   "titulo": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DO SUL DE MINAS GERAIS — O presente procedimento tem por objeto o credenciamento de asso",
+   "balcao": "pncp",
+   "link_oficial": "https://pncp.gov.br",
+   "degrau": 0,
+   "como": "revisão manual: leitura do documento oficial no Chrome da titular",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 4,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "bronze",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": "bronze",
+   "em": "2026-10-18T00:23:29+00:00",
+   "prazo": "2035-01-15",
+   "uf": "MG",
+   "orgao": null,
+   "fim": "2025-01-14",
+   "itens": {
+    "Esfera": {
+     "valor": "federal",
+     "trecho": "domínio/órgão: pncp.gov.br · Ministério da Educação",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
+     "metodo": "domínio e órgão"
+    },
+    "Órgão / financiador": {
+     "valor": "Ministério da Educação",
+     "trecho": "Ministério da Educação Secretaria de Educação Profissional e Tecnológica Instituto Federal",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
+     "metodo": "cabeçalho"
+    },
+    "Objeto": {
+     "valor": "selecionar as associações e/ou coopera tivas de catadores de materiais recicláveis e reutilizáveis para firmar termo de compromisso para fins de coleta dos resíduos recicláveis e/ou reutilizáveis descartados, produzidos pelos edifícios do campus Inconfidentes do IFSULDEMINAS, para fins de reciclagem",
+     "trecho": "ste Edital e seus Anexos. 1. DO OBJETO 1.1. O presente procedimento tem por objeto selecionar as associações e/ou coopera tivas de catadores de materiais recicláveis e reutilizáveis para firmar termo de compromisso para fins de coleta dos resíduos recicláveis e/ou reutilizáveis descartados, produzidos pelos edifícios do campus Inconfidentes do IFSULDEMINAS, para fins de reciclagem. 2. DO LOCAL E P",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
+     "metodo": "texto"
+    },
+    "Prazo de inscrição": {
+     "valor": "até 14/01/2025",
+     "trecho": "confidentes do IFSULDEMINAS, para fins de reciclagem. 2. DO LOCAL E PRAZO DE ENTREGA DAS PROPOSTAS 2.1 Os interessados deverão encaminhar o requerimento de credenciamento por mensagem eletrônica ou presencialmente a partir do dia 14/01/2025 , para o e-mail sissi.bueno@ifsuldeminas.edu.br ou entregar na Diret",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
+     "metodo": "cronograma"
+    },
+    "Território": {
+     "valor": "no Estado de Minas Gerais",
+     "trecho": "_____________________________, Município de ________________________, no Estado de Minas Gerais, neste ato representada pelo(a) Senhor(a) ___________________________",
+     "pagina": 9,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
+     "metodo": "texto"
+    },
+    "Anexos": {
+     "valor": "ANEXO I – Modelo de Ficha de Inscrição do Representante legal.; ANEXO II – Modelo de declaração de cumprimento dos requisitos de habilitação.; ANEXO III - Projeto Básico.; ANEXO IV - Minuta de Termo de Compromisso.; ANEXO I FICHA DE INSCRIÇÃO/DADOS DO REPRESENTANTE LEGAL; ANEXO II DECLARAÇÃO DE CUMP",
+     "trecho": "e em outras leis que se prestem a suprir eventuais lacunas. 13. DOS ANEXOS 13.1. Integram este Edital, para todos os fins e efeitos, os seguintes anexos: 9.8.1. ANEXO I – Modelo de Ficha de Inscrição do Representante legal. 9.8.2. ANEXO II – Modelo de d",
+     "pagina": 5,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
+     "metodo": "lista de anexos"
+    },
+    "Resultado": {
+     "valor": "lista de credenciadas que será publicada e mantida atualizada no portal do IFSULDEMINAS - Campus Inconfidentes, para cadastramento permanente de novos interessados, nos termos do art.",
+     "trecho": "l no Portal Nacional de Contratações Públicas. 7.3 Será feita uma lista de credenciadas que será publicada e mantida atualizada no portal do IFSULDEMINAS - Campus Inconfidentes, para cadastramento permanente de novos interessados, nos termos do art. 79, parágrafo único, inciso I, da Lei 14.133/2021. 7.4 As novas cr",
+     "pagina": 3,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "5 (cinco) dias úteis",
+     "trecho": "6.5. A partir da data de divulgação da referida lista, iniciar-se-á o prazo de 5 (cinco) dias úteis para interposição de recurso contra o resultado da habilitação, devendo o interessado apresentá-lo",
+     "pagina": 3,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
+     "metodo": "seção"
+    },
+    "Requisitos": {
+     "valor": "Poderão participar do procedimento de seleção as associações e cooperativas de catadores de",
+     "trecho": "de segunda a sexta-feira. 3. DAS CONDIÇÕES DE PARTICIPAÇÃO 3.1. Poderão participar do procedimento de seleção as associações e cooperativas de catadores de materiais recicláveis e reutilizáveis: 3.1.1. Declaração de cumprime",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
+     "metodo": "texto"
+    },
+    "Modalidade": {
+     "valor": "Credenciamento (contratação) — Lei 14.133",
+     "trecho": "25/DAP-INC/IFS/IFSULDEMINAS 10 de janeiro de 2025 EDITAL DE CREDENCIAMENTO - CHAMAMENTO PÚBLICO nº 90401/2025 COLETA SELETIVA CIDADÃ DECRETO Nº 10.936/2022 PROCESSO Nº 23344.000023.2025",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Cultura, Educação, Meio ambiente",
+     "trecho": "termos do objeto e do título: Cultura, Educação, Meio ambiente",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/10648539000105/compras/2025/3/arquivos/1",
+     "metodo": "palavras-chave do objeto"
+    }
+   },
+   "dispensas": {
+    "Valor": {
+     "motivo": "pagamento por tabela ou valor fixado pela Administração, igual para todos os credenciados",
+     "trecho": null,
+     "pagina": null,
+     "documento": null
+    }
+   },
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T10:38:01+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Objeto",
+      "Prazo de inscrição",
+      "Território",
+      "Órgão / financiador"
+     ],
+     "legado": true
+    },
+    {
+     "n": 2,
+     "nome": "anexos completos",
+     "em": "2026-10-17T10:49:20+00:00",
+     "ganhou": [
+      "Modalidade",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Área de atuação"
+     ],
+     "legado": null
+    },
+    {
+     "n": 9,
+     "nome": "leitura profunda",
+     "em": "2026-10-17T12:07:58+00:00",
+     "ganhou": [],
+     "legado": null
+    },
+    {
+     "n": 7,
+     "nome": "releitura com gabarito",
+     "em": "2026-10-18T00:23:29+00:00",
+     "ganhou": [],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://pncp.gov.br/api/consulta/v1/orgaos/10648539000105/compras/2025/3",
+     "degrau": null,
+     "como": null,
+     "motivo": null,
+     "falha": null,
+     "oficial": "documento oficial lido na revisão",
+     "paginas": null,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/api/consulta/v1/orgaos/10648539000105/compras/2025/3",
+     "degrau": 0,
+     "como": "releitura com o gabarito do órgão atualizado",
+     "motivo": "formato_desconhecido",
+     "falha": null,
+     "oficial": null,
+     "paginas": 0,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "dispensado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 11,
+    "dispensados": 1,
+    "ja_constavam": 0,
+    "faltam": 0,
+    "pct_certificado_12": 1.0,
     "pct_cobertura_12": 1.0
    }
   },
@@ -44878,6 +45497,212 @@
     "ja_constavam": 11,
     "faltam": 0,
     "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-0936b0b05f64",
+   "tipo": "livro",
+   "titulo": "Resíduos sólidos: edital para seleção de projetos que receberão apoio na implantação",
+   "balcao": "orgao",
+   "link_oficial": "https://goias.gov.br/meioambiente/residuos-solidos-edital-para-selecao-de-projetos-que-receberao-apoio-na-implantacao",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T00:23:42+00:00",
+   "prazo": null,
+   "uf": "BR",
+   "orgao": "",
+   "fim": null,
+   "itens": {
+    "Esfera": {
+     "valor": "federal",
+     "trecho": "domínio/órgão: goias.gov.br · ",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/meioambiente/residuos-solidos-edital-para-selecao-de-projetos-que-receberao-apoio-na-implantacao",
+     "metodo": "domínio e órgão"
+    },
+    "Modalidade": {
+     "valor": "Incentivo fiscal",
+     "trecho": "STÃO AMBIENTAL Autocomposição ambiental Compensação ambiental ICMS Ecológico Fundos FCM, FCA E FRH Educação ambiental Julgamento de processos PROGRAMAS E PROJETOS PSA Cer",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/meioambiente/residuos-solidos-edital-para-selecao-de-projetos-que-receberao-apoio-na-implantacao",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Educação, Saúde, Meio ambiente",
+     "trecho": "termos do objeto e do título: Educação, Saúde, Meio ambiente",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/meioambiente/residuos-solidos-edital-para-selecao-de-projetos-que-receberao-apoio-na-implantacao",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Resultado": {
+     "valor": "5 (cinco) dias",
+     "trecho": "na Câmara. 12. DOS RECURSOS 12.1. Em situações de discordância com o resultado de qualquer etapa do processo de seleção de projetos, o município tem o direito de apresentar recurso dentro de 5 (cinco) dias úteis após a divulgação deste, assegurando-se o direito à ampla defe",
+     "pagina": 7,
+     "documento": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2026/09/Edital_Diario_Oficial-25-2026-1.pdf",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "5 (cinco) dias úteis",
+     "trecho": "esultado da seleção mencionado no subitem 6.5, os interessados terão prazo de 5 (cinco) dias úteis para apresentar recurso contra a decisão. 7.2. Não serão conhecidos recursos ou impugnações apresen",
+     "pagina": 2,
+     "documento": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2026/09/Edital_Diario_Oficial-25-2026-1.pdf",
+     "metodo": "seção"
+    },
+    "Valor": {
+     "valor": "R$ 91.500,00 (noventa e um mil e quinhentos reais)",
+     "trecho": "exo da Lei Orçamentária Anual - LOA 2026, nº 24.019. VALOR DE DOAÇÃO: R$ 91.500,00 (noventa e um mil e quinhentos reais). DATA DA ASSINATURA: 01 de junho de 2026. VIGÊNCIA: a contar da data",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2026/09/Edital_Diario_Oficial-25-2026-1.pdf",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "1 (um) veículo automotor Chevrolet Onix Hatch, Zero KM",
+     "trecho": "001-44 Donatário: Município de Trombas/GO - CNPJ: 25.004.771/0001-88. Objeto: 1 (um) veículo automotor Chevrolet Onix Hatch, Zero KM Flex, ano/modelo 2025/2026, número do CRV 264737378666, código Renav",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2026/09/Edital_Diario_Oficial-25-2026-1.pdf",
+     "metodo": "texto"
+    },
+    "Órgão / financiador": {
+     "valor": "Secretaria de Estado de Relações Institucio-",
+     "trecho": "essenta e sete) dias (...)”. <#ABC#635793#5#726630/> Protocolo 635793 Secretaria de Estado de Relações Institucio- nais – SERINT <#ABC#635708#5#726544> EXTRATO DE PUBLICAÇÃO Processo",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2026/09/Edital_Diario_Oficial-25-2026-1.pdf",
+     "metodo": "cabeçalho"
+    },
+    "Território": {
+     "valor": "no município de Avelinópolis",
+     "trecho": "construção de 30 (trinta) unidades habitacionais de interesse social no município de Avelinópolis - GO, para posterior doação a famílias vulneráveis social e economic",
+     "pagina": 7,
+     "documento": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2026/09/Edital_Diario_Oficial-25-2026-1.pdf",
+     "metodo": "texto"
+    },
+    "Requisitos": {
+     "valor": "Podem se inscrever, exclusivamente, os municípios",
+     "trecho": "ÕES PARA PARTICIPAÇÃO NA CHAMADA PÚBLICA DE SELEÇÃO DE PROJETOS 4.1. Podem se inscrever, exclusivamente, os municípios com sede no Estado de Goiás, que atendam aos seguintes critérios mín",
+     "pagina": 2,
+     "documento": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2026/09/Edital_Diario_Oficial-25-2026-1.pdf",
+     "metodo": "texto"
+    },
+    "Anexos": {
+     "valor": "ANEXO I - MODELO DE DECLARAÇÃO DO MUNICÍPIO; ANEXO II - CHECKLIST DE DOCUMENTAÇÃO; ANEXO III - TERMO DE REFERÊNCIA",
+     "trecho": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável ANEXO I - MODELO DE DECLARAÇÃO DO MUNICÍPIO DECLARAÇÃO DE VERACIDADE DAS INFORMAÇÕES E COMPROMISSO DE EXECUÇÃO O Município de _________________________ _____________, inscrito no CNPJ nº __",
+     "pagina": 4,
+     "documento": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2026/09/Edital_Diario_Oficial-25-2026-1.pdf",
+     "metodo": "lista de anexos"
+    }
+   },
+   "dispensas": {
+    "Prazo de inscrição": {
+     "motivo": "dispensado pelo Cartório — não se aplica: inscrição em fluxo contínuo (cadastro permanente, sem data-limite)",
+     "trecho": "idos apresentados no âmbito desta chamada pública serão recebidos em fluxo contínuo e analisados pela SEMAD conforme a ordem cronológica de protocolo da",
+     "pagina": 3,
+     "documento": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2026/09/Edital_Diario_Oficial-25-2026-1.pdf"
+    }
+   },
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T00:23:42+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://goias.gov.br/meioambiente/residuos-solidos-edital-para-selecao-de-projetos-que-receberao-apoio-na-implantacao",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2026/09/Edital_Diario_Oficial-25-2026-1.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 7,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "dispensado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 11,
+    "dispensados": 1,
+    "ja_constavam": 0,
+    "faltam": 0,
+    "pct_certificado_12": 1.0,
     "pct_cobertura_12": 1.0
    }
   },
@@ -79530,1118 +80355,35 @@
     "pct_certificado_12": 0.5,
     "pct_cobertura_12": 0.9167
    }
-  },
-  {
-   "id": "op-bb12159760c2",
-   "tipo": "livro",
-   "titulo": "SECRETARIA DE CULTURA DE SÃO JOÃO DO JAGUARIBE",
-   "balcao": "orgao",
-   "link_oficial": "https://mapacultural.secult.ce.gov.br/oportunidade/8199/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Requisitos"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-12T06:40:05+00:00",
-   "prazo": null,
-   "uf": "CE",
-   "orgao": "Mapa Cultural",
-   "fim": "2026-08-19",
-   "itens": {
-    "Esfera": {
-     "valor": "municipal",
-     "trecho": "domínio/órgão: mapacultural.secult.ce.gov.br · SECRETARIA DE CULTURA DE SÃO JOÃO DO JAGUARIBE - EDITAL DE CHAMAMENTO PÚBLICO Nº",
-     "pagina": 1,
-     "documento": "https://mapacultural.secult.ce.gov.br/oportunidade/8199/",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Cultura, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://mapacultural.secult.ce.gov.br/oportunidade/8199/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Resultado": {
-     "valor": "04/09/2026",
-     "trecho": "e 02/09/2026 08 Análise da habilitação. 03/09/2026 09 Publicação do resultado dos projetos habilitados e inabilitados 04/09/2026 10 Período de recurso 08 e 09/09/2026 11 Análise de recurso. 10/09/20",
-     "pagina": 10,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8199/edital-01-2026-pnab-sao-joao-do-jaguaribe-assinado.pdf",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "09/09/2026",
-     "trecho": "tado dos projetos habilitados e inabilitados 04/09/2026 10 Período de recurso 08 e 09/09/2026 11 Análise de recurso. 10/09/2026 [TABELA] Etapa | Atividade | Perío",
-     "pagina": 10,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8199/edital-01-2026-pnab-sao-joao-do-jaguaribe-assinado.pdf",
-     "metodo": "seção"
-    },
-    "Valor": {
-     "valor": "R$ 101.300,00 (cento e um mil e trezentos reais)",
-     "trecho": "total do edital Cada projeto receberá o valor descrito no Anexo I. O valor total deste edital é de R$ 101.300,00 (cento e um mil e trezentos reais), sendo R$ 61.300,00 (sessenta e um mil e trezentos reais ), com rec",
-     "pagina": 1,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8199/edital-01-2026-pnab-sao-joao-do-jaguaribe-assinado.pdf",
-     "metodo": "seção"
-    },
-    "Modalidade": {
-     "valor": null,
-     "trecho": "am criadas por meio do engajamento da sociedade e o presente edital destina-se a apoiar projetos apresentados pelos agentes culturais do município de São João do Jaguaribe – CE. Deste modo, a Secretaria Municipal de Cultura, Desporto e Empreendedo",
-     "pagina": 1,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8199/edital-01-2026-pnab-sao-joao-do-jaguaribe-assinado.pdf",
-     "metodo": "seção"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-12T06:40:05+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Prazo de recurso",
-      "Resultado",
-      "Valor",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/oportunidade/8199/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8199/edital-01-2026-pnab-sao-joao-do-jaguaribe-assinado.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 12,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8199/anexo-ii-formulario-de-inscricao.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 8,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8199/anexo-iii-plano-de-trabalho.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 4,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8199/anexo-iv-criterios-utilizados-na-avaliacao.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 4,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8199/anexo-v-termo-de-execucao-cultural.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 6,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8199/anexo-vi-relatorio-de-objeto-da-execucao-cultural.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 5,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8199/anexo-vii-declaracao-de-representacao-de-grupo-ou-coletivo.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "falta",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "op-bcf565c745ce",
-   "tipo": "livro",
-   "titulo": "5º Concurso de Fotografias do CAU/RS 2026",
-   "balcao": "orgao",
-   "link_oficial": "https://transparencia.caurs.gov.br/chamada-publica-005-2026/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Prazo de recurso"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Chrome (último recurso): o robots.txt do site oficial proíbe a leitura automática",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-15T11:02:41+00:00",
-   "prazo": null,
-   "uf": "RS",
-   "orgao": "Conselho de Arquitetura e Urbanismo do Rio Grande do Sul (CAU/RS)",
-   "fim": null,
-   "itens": {
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: transparencia.caurs.gov.br · Conselho de Arquitetura e Urbanismo do Rio Grande do Sul (CAU/RS)",
-     "pagina": 1,
-     "documento": "https://transparencia.caurs.gov.br/chamada-publica-005-2026/",
-     "metodo": "domínio e órgão"
-    },
-    "Modalidade": {
-     "valor": "Prêmio",
-     "trecho": "5) ( PDF ) *Anexos ( acessar ) Lista das Fotografias Selecionadas e Premiadas pelo CAU/RS &#8211; Concurso de 2026 (publicado em 04/09/2026) ( PDF )",
-     "pagina": 1,
-     "documento": "https://transparencia.caurs.gov.br/chamada-publica-005-2026/",
-     "metodo": "modalidade de recebimento"
-    },
-    "Área de atuação": {
-     "valor": "Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://transparencia.caurs.gov.br/chamada-publica-005-2026/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Resultado": {
-     "valor": "10 (dez) dias",
-     "trecho": "da data de encerramento do recebimento dos materiais. 7 Publicação do resultado Em até 10 (dez) dias úteis após finalizado o processo de seleção e Julgamento. O resultado",
-     "pagina": 1,
-     "documento": "https://transparencia.caurs.gov.br/wp-content/uploads/CP5-2026-Edital.pdf",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "poderão participar do concurso os membros da Banca Julgadora, conselheiros ?tulares e suplentes do CAU/RS e empregados do CAU/RS, bem como seus cônjuges, ascendentes, descendentes ou colaterais, até o primeiro grau, ou quem quer que, de uma maneira ou de outra, esteja envolvido com a realização do C",
-     "trecho": "de Ética e Disciplina, e das demais Resoluções do CAU/BR. 4.8 Não poderão participar do concurso os membros da Banca Julgadora, conselheiros ?tulares e suplentes do CAU/RS e empregados do CAU/RS, bem como seus cônjuges, ascendentes, descendentes ou colaterais, até o primeiro grau, ou quem quer que, de uma maneira ou de outra, esteja envolvido com a realização do Concurso. 4.9 Os trabalhos não clas",
-     "pagina": 2,
-     "documento": "https://transparencia.caurs.gov.br/wp-content/uploads/CP5-2026-Edital.pdf",
-     "metodo": "texto"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-15T11:02:41+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Requisitos",
-      "Resultado",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://transparencia.caurs.gov.br/chamada-publica-005-2026/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://transparencia.caurs.gov.br/wp-content/uploads/Mapa_Estrategico_2026_2030.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pdf_escaneado",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://caubr.gov.br/wp-content/uploads/2026/01/PLANO_DE_DADOS_ABERTOS_CAU_2026_2027_6.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 37,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ftransparencia.caurs.gov.br%2Fchamada-publica-005-2026%2F&title=Chamada+P%C3%BAblica+N%C2%BA+005%2F2026+%26%238211%3B+Edital+do+Concurso+de+Fotografias&summary=Edital+CP+005%2F2026+%28publicado+em+15%2F06%2F2025%29+%28PDF%29+%2AAnexos+%28acessar%29+Lista+das+Fotografias...&source=CAU%2FRS+-+Portal+da+Transpar%C3%AAncia",
-     "degrau": 1,
-     "como": "documento citado na página oficial: https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ftransparencia.caurs.gov.br%2Fchamada-publica-005-2026%2F&title=Chamada+P%C3%BAblica+N%C2%BA+005%2F2026+%26%238211%3B+Edital+do+Concurso+de+Fotografias&summary=Edital+CP+005%2F2026+%28publicado+em+15%2F06%2F2025%29+%28PDF%29+%2AAnexos+%28acessar%29+Lista+das+Fotografias...&source=CAU%2FRS+-+Portal+da+Transpar%C3%AAncia",
-     "motivo": null,
-     "falha": "robots_proibe",
-     "oficial": null,
-     "paginas": null,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://transparencia.caurs.gov.br/wp-content/uploads/CP5-2026-Edital.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: PDF",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 7,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://transparencia.caurs.gov.br/edital-cp-005-2026-anexos",
-     "degrau": 1,
-     "como": "documento citado na página oficial: acessar",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://transparencia.caurs.gov.br/?page_id=1306",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Regulamento de Pessoal e Avaliação de Desempenho",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://transparencia.caurs.gov.br/wp-content/uploads/Deliberacao-Plenaria-266.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Regime Disciplinar dos Empregados do CAU/RS",
-     "motivo": null,
-     "falha": "erro_rede: HTTPError",
-     "oficial": null,
-     "paginas": null,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "falta",
-     "Valor": "ja_constava",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 5,
-    "dispensados": 0,
-    "ja_constavam": 6,
-    "faltam": 1,
-    "pct_certificado_12": 0.4167,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "85c87dec05f183609869",
-   "tipo": "estrela",
-   "titulo": "Aviso de Chamamento Público",
-   "balcao": "orgao",
-   "link_oficial": "https://www.cultura.pr.gov.br/Pagina/Aviso-de-Chamamento-Publico",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Prazo de inscrição",
-    "Resultado",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Objeto",
-    "Prazo de recurso"
-   ],
-   "tentativa": 3,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-17T16:42:04+00:00",
-   "prazo": null,
-   "uf": null,
-   "orgao": null,
-   "fim": "2025-02-07",
-   "itens": {
-    "Órgão / financiador": {
-     "valor": "Secretaria da Cultura",
-     "trecho": "Aviso de Chamamento Público | Secretaria da Cultura Redes Sociais d",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/Pagina/Aviso-de-Chamamento-Publico",
-     "metodo": "cabeçalho"
-    },
-    "Esfera": {
-     "valor": "municipal",
-     "trecho": "domínio/órgão: www.cultura.pr.gov.br · Secretaria da Cultura",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/Pagina/Aviso-de-Chamamento-Publico",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Educação, Meio ambiente",
-     "trecho": "termos do objeto e do título: Cultura, Educação, Meio ambiente",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/Pagina/Aviso-de-Chamamento-Publico",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Anexos": {
-     "valor": "ANEXO I: DOS CRITÉRIOS PARA A ANÁLISE TÉCNICA E DE MÉRITO; ANEXO II: DISTRIBUIÇÃO DE VAGAS POR MACRORREGIÃO, FAIXA ORÇAMENTÁRIA E SEGMENTO; ANEXO III: DOCUMENTOS OBRIGATÓRIOS PARA A ANÁLISE TÉCNICA E DE MÉRITO; ANEXO IV: DOCUMENTOS OBRIGATÓRIOS PARA A HABILITAÇÃO; ANEXO V: TERMO DE EXECUÇÃO CULTURAL",
-     "trecho": "al acessível AVISO DE PUBLICAÇÃO NO DIÁRIO OFICIAL ANEXO I: DOS CRITÉRIOS PARA A ANÁLISE TÉCNICA E DE MÉRITO ANEXO II: DISTRIBUIÇÃO DE VAGAS POR MACRORREGIÃO, FAIXA ORÇAMENTÁRIA E SEGMENTO ANEXO III: DOCUMENTOS OBRIGATÓ",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Fomento-Multiartes",
-     "metodo": "lista de anexos"
-    },
-    "Modalidade": {
-     "valor": "Termo de Execução Cultural",
-     "trecho": "XO IV: DOCUMENTOS OBRIGATÓRIOS PARA A HABILITAÇÃO ANEXO V: TERMO DE EXECUÇÃO CULTURAL PESSOA FÍSICA ANEXO V: TERMO DE EXECUÇÃO CULTURAL PESSOA JURÍDICA ANEXO VI: POLÍT",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Fomento-Multiartes",
-     "metodo": "modalidade de recebimento"
-    },
-    "Prazo de inscrição": {
-     "valor": "até 07 de fevereiro de 2025",
-     "trecho": "raná Festivais - Chamamento Público n.º 001/2025 Abertura de inscrições: 12h do dia 07 de fevereiro de 2025 Encerramento de inscrições: 23h59 do dia 27 de fevereiro de 2025",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/Pagina/Parana-Festivais-Chamamento-Publico-no-0012025",
-     "metodo": "cronograma"
-    },
-    "Valor": {
-     "valor": "R$ 3.300.000,00",
-     "trecho": "Paraná há, no mínimo, 12 meses. O edital disponibiliza um total de R$ 3.300.000,00 em recursos. No momento da inscrição, o Agente Cultural deve enquadra",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/PNAB/Pagina/Edital-de-Fomento-Pro-Restauro",
-     "metodo": "seção"
-    },
-    "Território": {
-     "valor": "agentes culturais residentes ou domiciliados no Paraná há",
-     "trecho": "rtístico do Paraná, em âmbito estadual ou municipal. Podem participar agentes culturais residentes ou domiciliados no Paraná há, no mínimo, 12 meses. O edital disponibiliza um total de R$ 3.300.",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/PNAB/Pagina/Edital-de-Fomento-Pro-Restauro",
-     "metodo": "texto"
-    },
-    "Requisitos": {
-     "valor": "Podem participar agentes culturais residentes ou domiciliados no Paraná há, no mínimo, 12 meses.",
-     "trecho": "nio Histórico e Artístico do Paraná, em âmbito estadual ou municipal. Podem participar agentes culturais residentes ou domiciliados no Paraná há, no mínimo, 12 meses. O edital disponibiliza um total de R$ 3.300.000,00 em recursos. No",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/PNAB/Pagina/Edital-de-Fomento-Pro-Restauro",
-     "metodo": "texto"
-    }
-   },
-   "dispensas": {
-    "Resultado": {
-     "motivo": "dispensado pelo Cartório — não se aplica: credenciamento sem seleção competitiva — todos os habilitados são credenciados",
-     "trecho": "Edital de Pareceristas EDITAL DE CREDENCIAMENTO DE PARECERISTAS E HABILITADORES N.º 001/2026 Edital acessíve",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Pareceristas-0"
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-17T12:45:06+00:00",
-     "ganhou": [
-      "Anexos",
-      "Esfera",
-      "Modalidade",
-      "Prazo de inscrição",
-      "Resultado",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    },
-    {
-     "n": 3,
-     "nome": "página oficial e citados",
-     "em": "2026-10-17T16:02:37+00:00",
-     "ganhou": [
-      "Requisitos",
-      "Território",
-      "Valor"
-     ],
-     "legado": null
-    },
-    {
-     "n": 2,
-     "nome": "anexos completos",
-     "em": "2026-10-17T16:42:04+00:00",
-     "ganhou": [],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Concessao-de-Bolsa-Cultura-Viva-Mestras-e-Mestres-das-Culturas-Tradicionais-e",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital de Concessão de Bolsa Cultura Viva a Mestras e Mestres das Culturas Tradicionais e Populares",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-MOVCEU-Parana",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital MOVCEU Paraná",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Pareceristas-0",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital de Pareceristas",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-Parana-Literario",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Paraná Literário",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Parana-Festivais-Chamamento-Publico-no-0012025",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Paraná Festivais 2025",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Aviso-de-Chamamento-Publico",
-     "degrau": 1,
-     "como": "página oficial e documentos citados nela",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-WK32TR88",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Fomento-Multiartes",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital de Fomento Multiartes",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Concessao-de-Bolsa-Cultura-Viva-Mestras-e-Mestres-das-Culturas-Tradicionais-e",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital de Concessão de Bolsa Cultura Viva a Mestras e Mestres das Culturas Tradicionais e Populares",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-MOVCEU-Parana",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital MOVCEU Paraná",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Pareceristas-0",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital de Pareceristas",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-Parana-Literario",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Paraná Literário",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Parana-Festivais-Chamamento-Publico-no-0012025",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Paraná Festivais 2025",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-Oficinas-de-Praticas-Contemporaneas-do-Centre-Pompidou-Parana-Macrorregiao-Oeste",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Oficinas de Práticas Contemporâneas do Centre Pompidou Paraná – Macrorregião Oeste",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/PNAB/Pagina/Edital-de-Fomento-Pro-Restauro",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital de Fomento Pró-Restauro",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/PNAB/Pagina/Edital-Premiacao-de-Pontos-de-Cultura",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Premiação de Pontos de Cultura (PNAB)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Aviso-de-Chamamento-Publico",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-WK32TR88",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Fomento-Multiartes",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital de Fomento Multiartes",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Concessao-de-Bolsa-Cultura-Viva-Mestras-e-Mestres-das-Culturas-Tradicionais-e",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital de Concessão de Bolsa Cultura Viva a Mestras e Mestres das Culturas Tradicionais e Populares",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-MOVCEU-Parana",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital MOVCEU Paraná",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Pareceristas-0",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital de Pareceristas",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-Parana-Literario",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Paraná Literário",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Parana-Festivais-Chamamento-Publico-no-0012025",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital Paraná Festivais 2025",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "falta",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "dispensado",
-     "Prazo de recurso": "falta",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 9,
-    "dispensados": 1,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "op-7ff03af83350",
-   "tipo": "livro",
-   "titulo": "Aviso de Chamamento Público Nº 76/2026",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/hubrasil/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Anexos",
-    "Modalidade"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-15T00:13:31+00:00",
-   "prazo": null,
-   "uf": "BR",
-   "orgao": "",
-   "fim": null,
-   "itens": {
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.gov.br · ",
-     "pagina": 1,
-     "documento": "https://www.gov.br/hubrasil/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos",
-     "metodo": "domínio e órgão"
-    },
-    "Objeto": {
-     "valor": "a prestação de serviços às instituições públicas federais de ensino, para apoio ao ensino, à pesquisa e à extensão, ao ensino- aprendizagem e à formação de pessoas no campo da saúde pública.",
-     "trecho": "resentação A Empresa Brasileira de Serviços Hospitalares – Ebserh tem por finalidade a prestação de serviços às instituições públicas federais de ensino, para apoio ao ensino, à pesquisa e à extensão, ao ensino- aprendizagem e à formação de pessoas no campo da saúde pública. A Ebserh apresenta nesta Política de Relacionamento com Fornecedor",
-     "pagina": 3,
-     "documento": "https://www.gov.br/ebserh/pt-br/canais_atendimento/canal-do-fornecedor/politica_de_relacionamento_com_fornecedores___final.pdf",
-     "metodo": "texto"
-    },
-    "Requisitos": {
-     "valor": "requisitos de habilitação e às condições para celebração do instrumento obrigacional, sob pena de aplicação das sanções cabíveis;",
-     "trecho": "ndo toda a documentação exigida, inclusive quanto ao atendimento aos requisitos de habilitação e às condições para celebração do instrumento obrigacional, sob pena de aplicação das sanções cabíveis; II. comprometer-se com as propostas e documentações encaminhadas à",
-     "pagina": 5,
-     "documento": "https://www.gov.br/ebserh/pt-br/canais_atendimento/canal-do-fornecedor/politica_de_relacionamento_com_fornecedores___final.pdf",
-     "metodo": "texto"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Educação, Saúde",
-     "trecho": "termos do objeto e do título: Cultura, Educação, Saúde",
-     "pagina": 1,
-     "documento": "https://www.gov.br/ebserh/pt-br/canais_atendimento/canal-do-fornecedor/politica_de_relacionamento_com_fornecedores___final.pdf",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Prazo de recurso": {
-     "valor": "24 de março de 2015",
-     "trecho": ": Consolidação das normas sobre o ﬁnanciamento e a transferência dos recursos federais para as ações e os serviços de saúde do Sistema Único de Saúde; ➢ Portaria Interministerial n° 285, de 24 de março de 2015: Redeﬁne o Programa de Certiﬁcação de Hospitais de Ensino (HE); ➢ Po",
-     "pagina": 10,
-     "documento": "https://www.gov.br/ebserh/pt-br/acesso-a-informacao/boletim-de-servico/sede/2021/anexos/manual-cnes-2a-edicao-v3.pdf",
-     "metodo": "seção"
-    },
-    "Órgão / financiador": {
-     "valor": "Secretaria de Ciência",
-     "trecho": "EC), a Empresa Brasileira de Serviços Hospitalares ( Ebserh /MEC) e a Secretaria de Ciência, Tecnologia e Inovação e do Complexo Econômico-Industrial da Saúde do",
-     "pagina": 1,
-     "documento": "https://www.gov.br/hubrasil/pt-br/ensino-e-pesquisa/edital-rede-hu",
-     "metodo": "cabeçalho"
-    },
-    "Território": {
-     "valor": "abrangência nacional",
-     "trecho": "IV - i nvestigação acadêmico-científica interdisciplinar e de abrangência nacional. Os coordenadores responsáveis pelo projeto, nas instituiçõ",
-     "pagina": 1,
-     "documento": "https://www.gov.br/hubrasil/pt-br/ensino-e-pesquisa/edital-rede-hu",
-     "metodo": "texto"
-    }
-   },
-   "dispensas": {
-    "Prazo de inscrição": {
-     "motivo": "dispensado pelo Cartório — não se aplica: inscrição em fluxo contínuo (cadastro permanente, sem data-limite)",
-     "trecho": "s e confirmadas poderão ser canceladas por iniciativa do requerente, a qualquer tempo, bem como por iniciativa da Ebserh, observada, nes te caso, a anteced",
-     "pagina": 11,
-     "documento": "https://www.gov.br/ebserh/pt-br/canais_atendimento/canal-do-fornecedor/politica_de_relacionamento_com_fornecedores___final.pdf"
-    },
-    "Resultado": {
-     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
-     "trecho": "s e confirmadas poderão ser canceladas por iniciativa do requerente, a qualquer tempo, bem como por iniciativa da Ebserh, observada, nes te caso, a anteced",
-     "pagina": 11,
-     "documento": "https://www.gov.br/ebserh/pt-br/canais_atendimento/canal-do-fornecedor/politica_de_relacionamento_com_fornecedores___final.pdf"
-    },
-    "Valor": {
-     "motivo": "dispensado pelo Cartório — não se aplica: sem repasse financeiro (cooperação, cessão ou habilitação sem recurso)",
-     "trecho": "a Saúde (SECTICS/MS). O Programa foi formalizado por meio de um Acordo de Cooperação Técnica (ACT) assinado em julho de 2025, estabelecendo as bases para",
-     "pagina": 1,
-     "documento": "https://www.gov.br/hubrasil/pt-br/ensino-e-pesquisa/edital-rede-hu"
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-15T00:13:31+00:00",
-     "ganhou": [
-      "Esfera",
-      "Objeto",
-      "Prazo de inscrição",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Território",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.gov.br/hubrasil/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/mre/pt-br/assuntos/programas-e-acoes/minha-casa-minha-vida",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/ebserh/pt-br/canais_atendimento/canal-do-fornecedor/politica_de_relacionamento_com_fornecedores___final.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 12,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/ebserh/pt-br/governanca/governanca-de-tecnologia-da-informacao/politicadesegurancadainformacaodaebserh.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 17,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/ebserh/pt-br/acesso-a-informacao/boletim-de-servico/sede/2021/anexos/manual-cnes-2a-edicao-v3.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 51,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/hubrasil/pt-br/ensino-e-pesquisa/edital-rede-hu",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital REDE HU+",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/ebserh/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Chamamentos Públicos",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "dispensado",
-     "Resultado": "dispensado",
-     "Prazo de recurso": "certificado",
-     "Valor": "dispensado",
-     "Órgão / financiador": "certificado",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "falta",
-     "Modalidade": "falta",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 7,
-    "dispensados": 3,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
   }
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2335,
-   "bronze": 122,
-   "prata": 178
+   "sem_estrela": 2366,
+   "bronze": 121,
+   "prata": 182
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 106,
-    "bronze": 9,
-    "prata": 8
+    "sem_estrela": 133,
+    "bronze": 8,
+    "prata": 11
    },
    "livro": {
-    "sem_estrela": 2229,
+    "sem_estrela": 2233,
     "bronze": 113,
-    "prata": 170
+    "prata": 171
    }
   },
-  "fila_oportunidades": 123,
-  "fila_livros": 2512,
-  "devidas_nesta_hora": 2331,
-  "promovidas_nesta_execucao": 1,
-  "sem_material_agora": 19,
+  "fila_oportunidades": 152,
+  "fila_livros": 2517,
+  "devidas_nesta_hora": 2322,
+  "promovidas_nesta_execucao": 0,
+  "sem_material_agora": 21,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
    "chaves": 1056,
-   "sites": 2264
+   "sites": 2266
   },
   "intervalo_horas": 12,
   "limite": 10,
