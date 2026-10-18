@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T05:03:43+00:00",
+ "em": "2026-10-18T05:11:53+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,14 +7,10 @@
   "alterar_rota": 64,
   "rota_nova": 49,
   "via_ponte": 3,
-  "exemplos_da_rede": 10979
+  "exemplos_da_rede": 11095
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
-   [
-    "origem:rota original",
-    2.6049
-   ],
    [
     "tok:mpf",
     2.3939
@@ -32,8 +28,8 @@
     2.2113
    ],
    [
-    "tok:feed",
-    1.9618
+    "origem:rota original",
+    1.8782
    ],
    [
     "tok:leipaulogustavo",
@@ -58,12 +54,16 @@
    [
     "tok:assuntos",
     1.3977
+   ],
+   [
+    "tok:feed",
+    1.3903
    ]
   ],
   "piores_sinais": [
    [
-    "tok:2026",
-    -1.4661
+    "gov:False",
+    -1.5462
    ],
    [
     "tok:prefeitura",
@@ -75,7 +75,7 @@
    ],
    [
     "origem:padrão",
-    -1.9989
+    -2.0759
    ],
    [
     "tipo:internacional",
@@ -230,7 +230,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-16T02:16:46+00:00",
+    "em": "2026-10-18T05:11:23+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -305,7 +305,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-16T03:54:23+00:00",
+    "em": "2026-10-18T05:11:53+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -342,7 +342,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-16T02:16:17+00:00",
+    "em": "2026-10-18T05:10:56+00:00",
     "testes": 21,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1142,7 +1142,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-16T02:16:06+00:00",
+    "em": "2026-10-18T05:10:48+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1169,7 +1169,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-16T02:16:38+00:00",
+    "em": "2026-10-18T05:11:17+00:00",
     "testes": 23,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1527,16 +1527,10 @@
     "aprendido_em": "2026-10-16T02:15:34+00:00"
    },
    "afinado": {
-    "em": "2026-10-16T02:15:34+00:00",
-    "testes": 20,
-    "melhor": {
-     "url": "https://sebraego.com.br/feed",
-     "via": "direto",
-     "origem": "rota original",
-     "pontos": 9,
-     "formato": "sitemap/feed"
-    },
-    "resultado": "rota nova em teste"
+    "em": "2026-10-18T05:10:41+00:00",
+    "testes": 24,
+    "melhor": null,
+    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
   },
   "plat-mapa-osc": {
