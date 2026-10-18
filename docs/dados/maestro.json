@@ -1,13 +1,13 @@
 {
  "dia": "2026-10-17",
- "em": "2026-10-18T01:21:54+00:00",
+ "em": "2026-10-18T01:45:45+00:00",
  "regra": "MAESTRO — A MÃO DA REDE NEURAL DE COMANDO (titular, 02/10/2026; unificado em 15/10/2026).\n\n15/10/2026 (titular): maestro e rede neural são UMA coisa só. Quem decide o caminho do fluxo inteiro é src/comando.py\n(a rede neural de comando); este módulo é a parte que MEDE e EXECUTA para ela:\n  · planejar()   quais motores rodam hoje (agenda) com a prioridade de rendimento — matéria-prima da decisão do comando;\n  · cobertura()  completa · parcial · pendente · pendente_local de cada motor no dia;\n  · controlar()  pendentes e parciais a disparar (até 3 tentativas), dia fechado ou não;\n  · relatorio_etapas() o relatório do dia que o painel mostra.\nO comando chama planejar/controlar antes de acionar os motores (decidir) e depois deles (avaliar e reacionar).",
- "planejados": 131,
+ "planejados": 132,
  "cobertura": {
   "completa": 105,
-  "parcial": 26
+  "parcial": 27
  },
- "cobertura_percentual": 80.2,
+ "cobertura_percentual": 79.5,
  "a_disparar": [],
  "esgotaram_tentativas": [
   "plat-prefeituras-50-go",
@@ -26,6 +26,7 @@
   "outras-oportunidades-1",
   "f260-captacao-001",
   "f260-captacao-113",
+  "f260-captacao-221",
   "outras-oportunidades-5",
   "f260-espalhado-rouanet-cultura-gov-br",
   "f260-captacao-228",
@@ -51,9 +52,9 @@
  "plano": [
   {
    "motor": "plat-piloto-aberto",
-   "prioridade": 5.2943,
+   "prioridade": 5.2743,
    "diagnostico": "saudavel",
-   "livros_com_abertura_proxima": 263,
+   "livros_com_abertura_proxima": 262,
    "horarios": "05:53,10:23",
    "coleta": "nuvem",
    "dia_anterior": "observado",
@@ -62,9 +63,9 @@
   },
   {
    "motor": "pncp-api",
-   "prioridade": 0.8963,
+   "prioridade": 0.8763,
    "diagnostico": "saudavel",
-   "livros_com_abertura_proxima": 40,
+   "livros_com_abertura_proxima": 39,
    "horarios": "08:53,13:53,19:53",
    "coleta": "nuvem",
    "dia_anterior": "observado",
@@ -1148,6 +1149,17 @@
    "dia_anterior": "observado",
    "cobertura": "completa",
    "tentativas_hoje": 0
+  },
+  {
+   "motor": "f260-captacao-221",
+   "prioridade": 0.0116,
+   "diagnostico": "saudavel",
+   "livros_com_abertura_proxima": 0,
+   "horarios": null,
+   "coleta": "nuvem",
+   "dia_anterior": "observado",
+   "cobertura": "parcial",
+   "tentativas_hoje": 6
   },
   {
    "motor": "f260-curadoria-006",
