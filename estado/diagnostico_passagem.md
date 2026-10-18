@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-18 09:10 UTC
+# Diagnóstico do sistema · 2026-10-18 09:12 UTC
 
 ## Cumprimento da finalidade · índice geral 69%
 - Motores: 100% (ok) — todo motor ativo lê dentro da sua cadência
@@ -14,7 +14,7 @@
 - Fluxos automáticos: 52% (falha) — todo fluxo agendado roda na cadência e sem falha
 - Execução sem falha silenciosa: 0% (falha) — nenhuma etapa falha em silêncio
 
-## Execução · fluxos: {'falha': 3, 'atrasado': 3, 'ok': 29, 'atencao': 7, 'manual': 2}
+## Execução · fluxos: {'falha': 4, 'atrasado': 3, 'ok': 29, 'atencao': 6, 'manual': 2}
 - 00 · Verificar prontidão: falha · última 2026-10-18T04:12 · sucesso 0% · cadência 24.0 h
 - acesso-mensal: atrasado · última 2026-09-01T09:14 · sucesso 100% · cadência 24.0 h
 - 35 · Alimentação diária externa (editais abertos): atencao · última 2026-10-17T13:10 · sucesso 30% · cadência 24.0 h
@@ -22,9 +22,9 @@
 - 05 · Busca ativa (a cada 3 dias): atencao · última 2026-10-15T17:32 · sucesso 10% · cadência None h
 - 09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes: atrasado · última 2026-10-03T11:56 · sucesso 100% · cadência 24.0 h
 - 10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar: atencao · última 2026-10-15T16:09 · sucesso 25% · cadência None h
-- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: falha · última 2026-10-18T08:58 · sucesso 0% · cadência 1.0 h
+- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: falha · última 2026-10-18T09:11 · sucesso 0% · cadência 1.0 h
 - 01 · Eldorado — motores por hora (00h–06h BRT): atencao · última 2026-10-17T12:52 · sucesso 50% · cadência 24.0 h
-- 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): atencao · última 2026-10-18T09:07 · sucesso 0% · cadência 1.0 h
+- 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): falha · última 2026-10-18T09:10 · sucesso 0% · cadência 1.0 h
 - 34 · Motores de empresas (semanal, com recuperação): atencao · última 2026-10-17T10:57 · sucesso 67% · cadência 24.0 h
 - 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): falha · última 2026-10-18T03:31 · sucesso 40% · cadência 6.0 h
 - 02 · Alexandria — revisão mensal de leis e procedimentos: atrasado · última 2026-10-01T10:36 · sucesso 50% · cadência 24.0 h
@@ -57,21 +57,22 @@
 - idade (h): {'repositorio': 5.3, 'fluxo': 5.3, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 0.0, 'rede_neural': 5.3, 'saude': 18.9}
 - decisões da titular: 0 · não aplicadas: 0
 
-## Problemas (27)
+## Problemas (28)
 - [alta] 336 etapa(s) com erro nos ciclos de hoje: catalogar: catalogar:4: KeyError: 'esqueleto' | pncp: pncp:1: KeyError: 'dado' | certificar: certificar:1: KeyError: 'dado' → investigar a etapa (sem correção automática)
 - [alta] 7 etapa(s) falharam em silêncio na última execução de motores-da-vez.yml: ##[error]catalogar:4: KeyError: 'esqueleto' | ##[error]certificar:1: KeyError: 'dado' | ##[error]curadoria:1: KeyError: 'dado' → investigar a etapa (sem correção automática)
 - [alta] 3 etapa(s) falharam em silêncio na última execução de motor-agregadores.yml: "rede: robots.txt inacessível: URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)" | "rede: robots.txt inacessível: URLError: timed out", | mapa: falhou → investigar a etapa (sem correção automática)
 - [alta] 9 etapa(s) falharam em silêncio na última execução de monitoramento-diario.yml: "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu → investigar a etapa (sem correção automática)
 - [alta] fluxo '00 · Verificar prontidão' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
 - [alta] fluxo '12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
+- [alta] fluxo '22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro)' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
 - [alta] fluxo '03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)' falhou nas últimas execuções (40% de sucesso) → investigar o fluxo (sem correção automática)
 - [alta] 9 oportunidades apontam para livro que não existe no catálogo → criar/vincular livros e refazer o repositório
 - [alta] 1 de 224 oportunidades abertas sem livro e sem regra que justifique → criar/vincular livros
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
 - [media] fluxo sem atualização há 5.3 h (limite 3 h) → refazer a tela
 - [media] repositorio sem atualização há 5.3 h (limite 3 h) → refazer o repositório
-- [media] fluxo 'acesso-mensal' sem rodar há 1127.9 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 357.2 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo 'acesso-mensal' sem rodar há 1128.0 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 357.3 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 406.6 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 90 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
@@ -93,7 +94,7 @@
 - curadoria do link oficial: {'em curadoria': 74, 'reprovado': 50, 'aprovado': 40, 'sem link oficial': 26}
 - validação por exceção: trava fechada: acerto do Cartório 77.4% < 85.0% — candidatas vão à frente da conferência humana
 - auditorias: {'gabarito_do_cartorio': {'em': '2026-10-15T19:53:25+00:00', 'acerto_pct': 77.4, 'documentos_lidos': 142}, 'varredura_referencia': '2026-10-01_2026-10-15', 'robots': {'em': '2026-10-15T10:07:53+00:00', 'motores_com_bloqueio': 5}, 'ponte': {'ponte_ok': 7, 'direto_ok': 5, 'so_pela_ponte': ['ALEGO · SPL (proposições)', 'MPGO'], 'nenhum': ['TJGO · portal'], 'total': 8}}
-- legislativo: {'atualizado_em': '2026-10-18T09:08:51+00:00', 'proposicoes': 11}
+- legislativo: {'atualizado_em': '2026-10-18T09:11:23+00:00', 'proposicoes': 11}
 
 ## Decisões do Eldorado: agiu como deveria?
 - erro · conferência das decisões: **não conferido: KeyError: 'dado'** (0 de 0) — regra: 
