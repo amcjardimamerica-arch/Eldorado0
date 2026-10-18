@@ -1,12 +1,222 @@
-commit: bc30a457bc6bc56edab2b4cc9f2493d529e0ed01
-em: 2026-10-17T14:02:59Z
+commit: d6faebccc2a31eded7219daabc9fb26305fb8a78
+em: 2026-10-18T13:12:09Z
 rc: 1
-::error title=teste falhou::tests.test_parecer_23_09.TesteM1_AbrangenciaAntes.test_reproduz_o_veredito_do_parecer — AssertionError: 228 != 238
-::error title=teste falhou::tests.test_validacao_mapa.TestArquivoDeValidacao.test_universo_inteiro_decidido — AssertionError: 1046 != 1031
-::error title=teste falhou::tests.test_validacao_mapa.TestArquivoDeValidacao0929.test_universo_inteiro_decidido — AssertionError: 142 not greater than or equal to 150
-::error title=teste falhou::tests.test_verificacao_63_2026_09_15.TesteBaseDaVerificacao.test_a_base_existe_e_tem_os_63 — AssertionError: 37 != 63
-::error title=teste falhou::tests.test_verificacao_63_2026_09_15.TesteBaseDaVerificacao.test_resumo_bate_com_a_lista — ?              ^             ^^               +
+::error title=teste falhou::tests.test_motor01_diario_goiania.TestCoberturaDoDia.test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida — AssertionError: True is not false
+::error title=teste falhou::tests.test_motor_judiciario_go.Motor.test_computador_le_o_tjgo_e_a_nuvem_entrega_a_base — + nuvem
+::error title=teste falhou::tests.test_motor_prefeituras_25_go.TesteHonestidade.test_github_sem_brasil_nao_tenta_sites_e_nao_marca_lida — AssertionError: True is not false
+::error title=teste falhou::tests.test_parecer_23_09.TesteAtualizacaoAplicada.test_atualizado_guarda_a_data_da_confirmacao — AssertionError: registro do expurgo conta 0, faltam 9 no acervo
+::error title=teste falhou::tests.test_parecer_23_09.TesteAtualizacaoAplicada.test_rebaixado_diz_quando_volta — AssertionError: registro do expurgo conta 0, faltam 9 no acervo
 ---- falhas ----
+ERROR: test_agregador_como_link_oficial_e_incorreto (tests.test_analise_ciclos.Ciclos.test_agregador_como_link_oficial_e_incorreto)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/eldorado_testes/tests/test_analise_ciclos.py", line 51, in test_agregador_como_link_oficial_e_incorreto
+    out = AC.decisoes(P, _prob)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/analise_ciclos.py", line 152, in decisoes
+    C = (__import__("src.livro_arquivo", fromlist=["x"]).ler_arquivo(ROOT / "estado/cartorio/certidoes.json", {}).get("certidoes") or {})
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 605, in ler_arquivo
+    return carregar(p, padrao)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 480, in carregar
+    v = _carregar(caminho, None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 513, in _carregar
+    return montar(o["esqueleto"])
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 511, in montar
+    return {k: montar(v) for k, v in e.items()}
+               ^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 507, in montar
+    pares = [(k, valor(lid, ci)) for lid, ci, k in c["entradas"]]
+                 ^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 496, in valor
+    return None if x is None else x["dado"]
+                                  ~^^^^^^^^
+KeyError: 'dado'
+
+======================================================================
+ERROR: test_decisao_nao_conferida_sem_recibo (tests.test_analise_ciclos.Ciclos.test_decisao_nao_conferida_sem_recibo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/eldorado_testes/tests/test_analise_ciclos.py", line 43, in test_decisao_nao_conferida_sem_recibo
+    out = AC.decisoes(P, _prob)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/analise_ciclos.py", line 152, in decisoes
+    C = (__import__("src.livro_arquivo", fromlist=["x"]).ler_arquivo(ROOT / "estado/cartorio/certidoes.json", {}).get("certidoes") or {})
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 605, in ler_arquivo
+    return carregar(p, padrao)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 480, in carregar
+    v = _carregar(caminho, None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 513, in _carregar
+    return montar(o["esqueleto"])
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 511, in montar
+    return {k: montar(v) for k, v in e.items()}
+               ^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 507, in montar
+    pares = [(k, valor(lid, ci)) for lid, ci, k in c["entradas"]]
+                 ^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 496, in valor
+    return None if x is None else x["dado"]
+                                  ~^^^^^^^^
+KeyError: 'dado'
+
+======================================================================
+ERROR: test_fila_dos_livros (tests.test_banco_livros.Etapa2Cartorio.test_fila_dos_livros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/eldorado_testes/tests/test_banco_livros.py", line 99, in test_fila_dos_livros
+    nova = C.fila_estrelas()
+           ^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/cartorio.py", line 524, in fila_estrelas
+    cert = certidao(str(x.get("id") or "")) or {}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/cartorio.py", line 624, in certidao
+    _CACHE["c"] = (_ler_certidoes() or {}).get("certidoes") or {}
+                   ^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/cartorio.py", line 47, in _ler_certidoes
+    return __import__("src.livro_arquivo", fromlist=["x"]).ler_arquivo(CERTIDOES, {}) or {}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 605, in ler_arquivo
+    return carregar(p, padrao)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 480, in carregar
+    v = _carregar(caminho, None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 513, in _carregar
+    return montar(o["esqueleto"])
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 511, in montar
+    return {k: montar(v) for k, v in e.items()}
+               ^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 507, in montar
+    pares = [(k, valor(lid, ci)) for lid, ci, k in c["entradas"]]
+                 ^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 496, in valor
+--
+ERROR: test_fila_sem_fechadas (tests.test_cartorio.TesteFilaETempoReal.test_fila_sem_fechadas)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/eldorado_testes/tests/test_cartorio.py", line 470, in test_fila_sem_fechadas
+    self.assertEqual([o["id"] for o in C.fila_estrelas(fl)], ["e3"])
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/cartorio.py", line 524, in fila_estrelas
+    cert = certidao(str(x.get("id") or "")) or {}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/cartorio.py", line 624, in certidao
+    _CACHE["c"] = (_ler_certidoes() or {}).get("certidoes") or {}
+                   ^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/cartorio.py", line 47, in _ler_certidoes
+    return __import__("src.livro_arquivo", fromlist=["x"]).ler_arquivo(CERTIDOES, {}) or {}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 605, in ler_arquivo
+    return carregar(p, padrao)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 480, in carregar
+    v = _carregar(caminho, None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 513, in _carregar
+    return montar(o["esqueleto"])
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 511, in montar
+    return {k: montar(v) for k, v in e.items()}
+               ^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 507, in montar
+    pares = [(k, valor(lid, ci)) for lid, ci, k in c["entradas"]]
+                 ^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 496, in valor
+--
+ERROR: test_relatorio_motor_a_motor (tests.test_conselho_motores.TestePrompts.test_relatorio_motor_a_motor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/eldorado_testes/tests/test_conselho_motores.py", line 48, in test_relatorio_motor_a_motor
+    out = CM.run(gravar=False)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/conselho_motores.py", line 285, in run
+    D = dados()
+        ^^^^^^^
+  File "/tmp/eldorado_testes/src/conselho_motores.py", line 77, in dados
+    "certs": (__import__("src.livro_arquivo", fromlist=["x"]).ler_arquivo(ROOT / "estado/cartorio/certidoes.json", {}).get("certidoes") or {}),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 605, in ler_arquivo
+    return carregar(p, padrao)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 480, in carregar
+    v = _carregar(caminho, None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 513, in _carregar
+    return montar(o["esqueleto"])
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 511, in montar
+    return {k: montar(v) for k, v in e.items()}
+               ^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 507, in montar
+    pares = [(k, valor(lid, ci)) for lid, ci, k in c["entradas"]]
+                 ^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 496, in valor
+    return None if x is None else x["dado"]
+                                  ~^^^^^^^^
+KeyError: 'dado'
+--
+ERROR: test_relatorio_do_cartorio_das_certidoes_guardadas (tests.test_consistencia_transversal_2026_10_17.MesmoRetrato.test_relatorio_do_cartorio_das_certidoes_guardadas)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/eldorado_testes/tests/test_consistencia_transversal_2026_10_17.py", line 181, in test_relatorio_do_cartorio_das_certidoes_guardadas
+    n = len((LA.ler_arquivo(ROOT / "estado/cartorio/certidoes.json", {}) or {}).get("certidoes") or {})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 605, in ler_arquivo
+    return carregar(p, padrao)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 480, in carregar
+    v = _carregar(caminho, None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 513, in _carregar
+    return montar(o["esqueleto"])
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 511, in montar
+    return {k: montar(v) for k, v in e.items()}
+               ^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 507, in montar
+    pares = [(k, valor(lid, ci)) for lid, ci, k in c["entradas"]]
+                 ^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 496, in valor
+    return None if x is None else x["dado"]
+                                  ~^^^^^^^^
+KeyError: 'dado'
+
+======================================================================
+ERROR: test_dados_sem_prova_em_vetor (tests.test_consistencia_transversal_2026_10_17.VetorNuncaEFonte.test_dados_sem_prova_em_vetor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/eldorado_testes/tests/test_consistencia_transversal_2026_10_17.py", line 64, in test_dados_sem_prova_em_vetor
+    d = LA.ler_arquivo(ROOT / f"estado/cartorio/{n}.json", {}) or {}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 605, in ler_arquivo
+    return carregar(p, padrao)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 480, in carregar
+    v = _carregar(caminho, None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 513, in _carregar
+    return montar(o["esqueleto"])
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 511, in montar
+    return {k: montar(v) for k, v in e.items()}
+               ^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 507, in montar
+    pares = [(k, valor(lid, ci)) for lid, ci, k in c["entradas"]]
+                 ^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 496, in valor
+    return None if x is None else x["dado"]
+                                  ~^^^^^^^^
+KeyError: 'dado'
+
+======================================================================
 ERROR: test_gerador_le_as_bases_externas (tests.test_incentivos_externos.TesteCatalogo.test_gerador_le_as_bases_externas)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
@@ -14,6 +224,15 @@ Traceback (most recent call last):
     d = json.loads((ROOT / "biblioteca_alexandria/livros/_acervo/editais/derivadas_revisao.json").read_text(encoding="utf-8"))["derivadas"]
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
 KeyError: 'derivadas'
+
+======================================================================
+ERROR: test_v_a_r_trazem_os_12_com_status (tests.test_livros_parametros.TestArquivo.test_v_a_r_trazem_os_12_com_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/eldorado_testes/tests/test_livros_parametros.py", line 41, in test_v_a_r_trazem_os_12_com_status
+    self.assertEqual(set(r["dados"]), set(PO.ITENS), r["id"])
+                         ~^^^^^^^^^
+KeyError: 'dados'
 
 ======================================================================
 ERROR: test_cnj_recusado_na_nuvem_passa_ao_computador (tests.test_motor_judiciario_go.Motor.test_cnj_recusado_na_nuvem_passa_ao_computador)
@@ -25,186 +244,66 @@ Traceback (most recent call last):
 KeyError: 'recusado_na_nuvem_em'
 
 ======================================================================
-ERROR: test_v_a_r_trazem_os_12_com_status (tests.test_parametros_opressores.TestArquivo.test_v_a_r_trazem_os_12_com_status)
+ERROR: test_pareceres_tem_iniciativa_valida (tests.test_pareceres_livros.TestPareceresLivros.test_pareceres_tem_iniciativa_valida)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_parametros_opressores.py", line 37, in test_v_a_r_trazem_os_12_com_status
-    self.assertEqual(set(r["dados"]), set(PO.ITENS), r["id"])
-                         ~^^^^^^^^^
-KeyError: 'dados'
+  File "/tmp/eldorado_testes/tests/test_pareceres_livros.py", line 24, in test_pareceres_tem_iniciativa_valida
+    P = pareceres_livros.carregar()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/pareceres_livros.py", line 37, in carregar
+    for p in ((LA.ler_arquivo(arq, {}) or {}).get("pareceres") or []):
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 605, in ler_arquivo
+    return carregar(p, padrao)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 480, in carregar
+    v = _carregar(caminho, None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 513, in _carregar
+    return montar(o["esqueleto"])
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 511, in montar
+    return {k: montar(v) for k, v in e.items()}
+               ^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 507, in montar
+    pares = [(k, valor(lid, ci)) for lid, ci, k in c["entradas"]]
+                 ^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 496, in valor
+    return None if x is None else x["dado"]
+                                  ~^^^^^^^^
+KeyError: 'dado'
 
 ======================================================================
-ERROR: test_cartorio_incorpora_e_fluxo_recebe (tests.test_revisoes_partes_1_a_3.TesteCartorioEFluxo.test_cartorio_incorpora_e_fluxo_recebe)
+ERROR: test_arquivada_so_no_contador (tests.test_repositorio_unico.TesteMunicipaisForaDeGoias.test_arquivada_so_no_contador)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_revisoes_partes_1_a_3.py", line 52, in test_cartorio_incorpora_e_fluxo_recebe
-    d = json.loads((ROOT / "biblioteca_alexandria/livros/_acervo/editais/derivadas_revisao.json").read_text(encoding="utf-8"))["derivadas"]
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-KeyError: 'derivadas'
+  File "/tmp/eldorado_testes/tests/test_repositorio_unico.py", line 169, in test_arquivada_so_no_contador
+    res = R.construir(gravar=True); regs = json.loads(R.SAIDA.read_text())["registros"]
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/repositorio_unico.py", line 423, in construir
+    certs = dict((__import__("src.livro_arquivo", fromlist=["x"]).ler_arquivo(ROOT / "estado/cartorio/certidoes.json", {}) or {}).get("certidoes") or {})
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 605, in ler_arquivo
+    return carregar(p, padrao)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 480, in carregar
+    v = _carregar(caminho, None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 513, in _carregar
+    return montar(o["esqueleto"])
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 511, in montar
+    return {k: montar(v) for k, v in e.items()}
+               ^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 507, in montar
+    pares = [(k, valor(lid, ci)) for lid, ci, k in c["entradas"]]
+                 ^^^^^^^^^^^^^^
+  File "/tmp/eldorado_testes/src/livro_arquivo.py", line 496, in valor
+    return None if x is None else x["dado"]
+                                  ~^^^^^^^^
+KeyError: 'dado'
 
 ======================================================================
-ERROR: test_ipu_fecha_um_dia_antes_do_que_a_base_tinha (tests.test_verificacao_63_2026_09_15.TesteCorrecoesQueNaoPodemSePerder.test_ipu_fecha_um_dia_antes_do_que_a_base_tinha)
+ERROR: setUpClass (tests.test_repositorio_unico.TesteRepositorio)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_verificacao_63_2026_09_15.py", line 68, in test_ipu_fecha_um_dia_antes_do_que_a_base_tinha
-    item = base()["itens"]["2ba35f9a49970753e57d"]
-           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
-KeyError: '2ba35f9a49970753e57d'
-
-======================================================================
-ERROR: test_jaru_sao_dois_editais_diferentes (tests.test_verificacao_63_2026_09_15.TesteCorrecoesQueNaoPodemSePerder.test_jaru_sao_dois_editais_diferentes)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_verificacao_63_2026_09_15.py", line 75, in test_jaru_sao_dois_editais_diferentes
-    self.assertNotEqual(itens["8c6a2a0e25ff8b32702d"]["fim"],
-                        ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
-KeyError: '8c6a2a0e25ff8b32702d'
-
-======================================================================
-FAIL: test_resumo_bate_com_a_lista (tests.test_abertos_sem_informacao.TesteSaida.test_resumo_bate_com_a_lista)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_abertos_sem_informacao.py", line 107, in test_resumo_bate_com_a_lista
-    self.assertEqual(self.pacote["resumo"]["total"], len(self.pacote["itens"]))
-AssertionError: 107 != 19
-
-======================================================================
-FAIL: test_itens_so_dos_12_e_situacao_valida (tests.test_dispensas_itens.TestMatriz.test_itens_so_dos_12_e_situacao_valida)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_dispensas_itens.py", line 23, in test_itens_so_dos_12_e_situacao_valida
-    self.assertIn(k, DI.ITENS, f"{rid}:{k}")
-AssertionError: 'Destinação' not found in ('Objeto', 'Prazo de inscrição', 'Resultado', 'Prazo de recurso', 'Valor', 'Órgão / financiador', 'Território', 'Esfera', 'Requisitos', 'Anexos', 'Modalidade', 'Área de atuação') : emenda_parlamentar:Destinação
-
-======================================================================
-FAIL: test_composicao (tests.test_dispensas_itens.TestParametros1001.test_composicao)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_dispensas_itens.py", line 137, in test_composicao
-    self.assertEqual(len(self.itens), c["novos"] + c["completados"] + c["v_para_a_por_prazo_vencido_na_base"])
-AssertionError: 97 != 142
-
-======================================================================
-FAIL: test_recorrencia_uma_rota_por_validada_com_cadencia_por_estado (tests.test_evolucao_busca.TesteDescobertaERecorrencia.test_recorrencia_uma_rota_por_validada_com_cadencia_por_estado)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_evolucao_busca.py", line 49, in test_recorrencia_uma_rota_por_validada_com_cadencia_por_estado
-    self.assertTrue(devidas <= {x["url"] for x in r["rotas"]}, "validada sem rota de recorrência")
-AssertionError: False is not true : validada sem rota de recorrência
-
-======================================================================
-FAIL: test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida (tests.test_motor01_diario_goiania.TestCoberturaDoDia.test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_motor01_diario_goiania.py", line 274, in test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida
-    self.assertFalse(r["diagnostico"]["cobertura_edicoes"]["medida"])
-AssertionError: True is not false
-
-======================================================================
-FAIL: test_computador_le_o_tjgo_e_a_nuvem_entrega_a_base (tests.test_motor_judiciario_go.Motor.test_computador_le_o_tjgo_e_a_nuvem_entrega_a_base)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_motor_judiciario_go.py", line 240, in test_computador_le_o_tjgo_e_a_nuvem_entrega_a_base
-    self.assertEqual(r2["diagnostico"]["rota"], "nuvem")
-AssertionError: 'ponte' != 'nuvem'
-- ponte
-+ nuvem
-
-
-======================================================================
-FAIL: test_github_sem_brasil_nao_tenta_sites_e_nao_marca_lida (tests.test_motor_prefeituras_25_go.TesteHonestidade.test_github_sem_brasil_nao_tenta_sites_e_nao_marca_lida)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_motor_prefeituras_25_go.py", line 148, in test_github_sem_brasil_nao_tenta_sites_e_nao_marca_lida
-    self.assertFalse(any(".go.gov.br" in str(a.args[0]) for a in g.call_args_list))
-AssertionError: True is not false
-
-======================================================================
-FAIL: test_dez_blocos_e_todos_decididos (tests.test_parametros_opressores.TestArquivo.test_dez_blocos_e_todos_decididos)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_parametros_opressores.py", line 27, in test_dez_blocos_e_todos_decididos
-    self.assertGreaterEqual(len(self.itens), 300)
-AssertionError: 282 not greater than or equal to 300
-
-======================================================================
-FAIL: test_atualizado_guarda_a_data_da_confirmacao (tests.test_parecer_23_09.TesteAtualizacaoAplicada.test_atualizado_guarda_a_data_da_confirmacao)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_parecer_23_09.py", line 38, in test_atualizado_guarda_a_data_da_confirmacao
-    self.assertGreaterEqual(len(at), 19)
-AssertionError: 9 not greater than or equal to 19
-
-======================================================================
-FAIL: test_rebaixado_diz_quando_volta (tests.test_parecer_23_09.TesteAtualizacaoAplicada.test_rebaixado_diz_quando_volta)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_parecer_23_09.py", line 31, in test_rebaixado_diz_quando_volta
-    self.assertEqual(len(reb), 238)
-AssertionError: 228 != 238
-
-======================================================================
-FAIL: test_reproduz_o_veredito_do_parecer (tests.test_parecer_23_09.TesteM1_AbrangenciaAntes.test_reproduz_o_veredito_do_parecer)
-O filtro, sozinho, chega aos mesmos 238 que o parecer rebaixou.
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_parecer_23_09.py", line 76, in test_reproduz_o_veredito_do_parecer
-    self.assertEqual(fora, 238)
-AssertionError: 228 != 238
-
-======================================================================
-FAIL: test_universo_inteiro_decidido (tests.test_validacao_mapa.TestArquivoDeValidacao.test_universo_inteiro_decidido)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_validacao_mapa.py", line 32, in test_universo_inteiro_decidido
-    self.assertEqual(sum(self.dados["contagem"].values()), len(self.itens))
-AssertionError: 1046 != 1031
-
-======================================================================
-FAIL: test_universo_inteiro_decidido (tests.test_validacao_mapa.TestArquivoDeValidacao0929.test_universo_inteiro_decidido)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_validacao_mapa.py", line 27, in test_universo_inteiro_decidido
-    self.assertGreaterEqual(len(self.itens), self.MINIMO)
-AssertionError: 142 not greater than or equal to 150
-
-======================================================================
-FAIL: test_a_base_existe_e_tem_os_63 (tests.test_verificacao_63_2026_09_15.TesteBaseDaVerificacao.test_a_base_existe_e_tem_os_63)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_verificacao_63_2026_09_15.py", line 31, in test_a_base_existe_e_tem_os_63
-    self.assertEqual(len(d["itens"]), 63)
-AssertionError: 37 != 63
-
-======================================================================
-FAIL: test_resumo_bate_com_a_lista (tests.test_verificacao_63_2026_09_15.TesteBaseDaVerificacao.test_resumo_bate_com_a_lista)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_verificacao_63_2026_09_15.py", line 38, in test_resumo_bate_com_a_lista
-    self.assertEqual(vere, d["resumo"]["veredito"])
-AssertionError: {'reprovado': 26, 'aprovado': 3, 'atencao': 8} != {'atencao': 17, 'reprovado': 42, 'aprovado': 4}
-- {'aprovado': 3, 'atencao': 8, 'reprovado': 26}
-?              ^             ^                -
-
-+ {'aprovado': 4, 'atencao': 17, 'reprovado': 42}
-?              ^             ^^               +
-
-
-----------------------------------------------------------------------
-Ran 1292 tests in 100.040s
-
-FAILED (failures=15, errors=6, skipped=2)
-::error title=teste falhou::tests.test_abertos_sem_informacao.TesteSaida.test_resumo_bate_com_a_lista — AssertionError: 107 != 19
-::error title=teste falhou::tests.test_dispensas_itens.TestMatriz.test_itens_so_dos_12_e_situacao_valida — AssertionError: 'Destinação' not found in ('Objeto', 'Prazo de inscrição', 'Resultado', 'Prazo de recurso', 'Valor', 'Órgão / financiador', 'Território', 'Esfera', 'Requisitos', 'A
-::error title=teste falhou::tests.test_dispensas_itens.TestParametros1001.test_composicao — AssertionError: 97 != 142
-::error title=teste falhou::tests.test_evolucao_busca.TesteDescobertaERecorrencia.test_recorrencia_uma_rota_por_validada_com_cadencia_por_estado — AssertionError: False is not true : validada sem rota de recorrência
-::error title=teste falhou::tests.test_motor01_diario_goiania.TestCoberturaDoDia.test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida — AssertionError: True is not false
-::error title=teste falhou::tests.test_motor_judiciario_go.Motor.test_computador_le_o_tjgo_e_a_nuvem_entrega_a_base — + nuvem
-::error title=teste falhou::tests.test_motor_prefeituras_25_go.TesteHonestidade.test_github_sem_brasil_nao_tenta_sites_e_nao_marca_lida — AssertionError: True is not false
-::error title=teste falhou::tests.test_parametros_opressores.TestArquivo.test_dez_blocos_e_todos_decididos — AssertionError: 282 not greater than or equal to 300
-::error title=teste falhou::tests.test_parecer_23_09.TesteAtualizacaoAplicada.test_atualizado_guarda_a_data_da_confirmacao — AssertionError: 9 not greater than or equal to 19
-::error title=teste falhou::tests.test_parecer_23_09.TesteAtualizacaoAplicada.test_rebaixado_diz_quando_volta — AssertionError: 228 != 238
-::error title=teste falhou::tests.test_parecer_23_09.TesteM1_AbrangenciaAntes.test_reproduz_o_veredito_do_parecer — AssertionError: 228 != 238
-::error title=teste falhou::tests.test_validacao_mapa.TestArquivoDeValidacao.test_universo_inteiro_decidido — AssertionError: 1046 != 1031
-::error title=teste falhou::tests.test_validacao_mapa.TestArquivoDeValidacao0929.test_universo_inteiro_decidido — AssertionError: 142 not greater than or equal to 150
-::error title=teste falhou::tests.test_verificacao_63_2026_09_15.TesteBaseDaVerificacao.test_a_base_existe_e_tem_os_63 — AssertionError: 37 != 63
