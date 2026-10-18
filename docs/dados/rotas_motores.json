@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T07:59:59+00:00",
+ "em": "2026-10-18T08:06:10+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,7 +7,7 @@
   "alterar_rota": 61,
   "rota_nova": 52,
   "via_ponte": 3,
-  "exemplos_da_rede": 13456
+  "exemplos_da_rede": 13571
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
@@ -29,7 +29,7 @@
    ],
    [
     "origem:rota original",
-    2.0043
+    1.9848
    ],
    [
     "tok:leipaulogustavo",
@@ -37,7 +37,7 @@
    ],
    [
     "tld:br",
-    1.8317
+    1.7919
    ],
    [
     "tok:imprensa",
@@ -67,7 +67,7 @@
    ],
    [
     "sapl:False",
-    -1.7513
+    -1.7911
    ],
    [
     "tok:ccs",
@@ -91,7 +91,7 @@
    ],
    [
     "origem:padrão",
-    -2.8112
+    -2.8187
    ]
   ]
  },
@@ -243,15 +243,17 @@
   "f260-captacao-230": {
    "nome": "Fundação ArcelorMittal",
    "status": "alterar rota",
-   "vazias_seguidas": 54,
-   "leituras": 54,
+   "vazias_seguidas": 56,
+   "leituras": 56,
    "ok": 0,
    "ultima": {
-    "em": "2026-10-17T11:52:18+00:00",
+    "em": "2026-10-18T08:01:55+00:00",
     "classe": "vazia",
-    "motivo": "parte das páginas respondeu e parte falhou; nenhum edital reconhecido nas que responderam"
+    "motivo": "página institucional; seguiu 4 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje"
    },
    "historico": [
+    "v",
+    "v",
     "v",
     "v",
     "v",
@@ -272,7 +274,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-16T04:26:22+00:00",
+    "em": "2026-10-18T08:05:34+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -355,11 +357,11 @@
   "f260-captacao-233": {
    "nome": "Instituto Sicoob",
    "status": "alterar rota",
-   "vazias_seguidas": 44,
-   "leituras": 44,
+   "vazias_seguidas": 45,
+   "leituras": 45,
    "ok": 0,
    "ultima": {
-    "em": "2026-10-17T04:45:11+00:00",
+    "em": "2026-10-18T08:01:26+00:00",
     "classe": "vazia",
     "motivo": "página respondeu mas não tem links (conteúdo carregado por script ou vazio) — precisa de API/RSS ou leitura do HTML renderizado"
    },
@@ -372,11 +374,12 @@
     "v",
     "v",
     "v",
+    "v",
     "v"
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-15T07:54:18+00:00",
+    "em": "2026-10-18T08:05:26+00:00",
     "testes": 23,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -422,8 +425,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T07:09:45+00:00",
-    "testes": 12,
+    "em": "2026-10-18T08:06:10+00:00",
+    "testes": 18,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -502,6 +505,33 @@
    "historico": [],
    "rota_aprendida": null,
    "afinado": null
+  },
+  "f260-curadoria-008": {
+   "nome": "Instituto Impactarte — cadastro de proponente em fluxo contínuo",
+   "status": "alterar rota",
+   "vazias_seguidas": 40,
+   "leituras": 40,
+   "ok": 0,
+   "ultima": {
+    "em": "2026-10-18T08:01:33+00:00",
+    "classe": "vazia",
+    "motivo": "página respondeu mas não tem links (conteúdo carregado por script ou vazio) — precisa de API/RSS ou leitura do HTML renderizado"
+   },
+   "historico": [
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v"
+   ],
+   "rota_aprendida": null,
+   "afinado": {
+    "em": "2026-10-18T08:05:43+00:00",
+    "testes": 13,
+    "melhor": null,
+    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
+   }
   },
   "f260-captacao-228": {
    "nome": "Instituto Localiza",
@@ -593,32 +623,6 @@
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
   },
-  "f260-curadoria-008": {
-   "nome": "Instituto Impactarte — cadastro de proponente em fluxo contínuo",
-   "status": "alterar rota",
-   "vazias_seguidas": 39,
-   "leituras": 39,
-   "ok": 0,
-   "ultima": {
-    "em": "2026-10-17T04:44:51+00:00",
-    "classe": "vazia",
-    "motivo": "página respondeu mas não tem links (conteúdo carregado por script ou vazio) — precisa de API/RSS ou leitura do HTML renderizado"
-   },
-   "historico": [
-    "v",
-    "v",
-    "v",
-    "v",
-    "v"
-   ],
-   "rota_aprendida": null,
-   "afinado": {
-    "em": "2026-10-16T16:56:55+00:00",
-    "testes": 13,
-    "melhor": null,
-    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
-   }
-  },
   "f260-captacao-242": {
    "nome": "PNUD – Small Grants Programme",
    "status": "alterar rota",
@@ -701,6 +705,34 @@
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
   },
+  "f260-captacao-234": {
+   "nome": "Instituto Unibanco",
+   "status": "alterar rota",
+   "vazias_seguidas": 32,
+   "leituras": 32,
+   "ok": 0,
+   "ultima": {
+    "em": "2026-10-18T08:01:31+00:00",
+    "classe": "vazia",
+    "motivo": "página respondeu mas não tem links (conteúdo carregado por script ou vazio) — precisa de API/RSS ou leitura do HTML renderizado"
+   },
+   "historico": [
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v"
+   ],
+   "rota_aprendida": null,
+   "afinado": {
+    "em": "2026-10-18T08:05:38+00:00",
+    "testes": 14,
+    "melhor": null,
+    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
+   }
+  },
   "f260-captacao-229": {
    "nome": "Instituto Votorantim",
    "status": "alterar rota",
@@ -724,33 +756,6 @@
    "afinado": {
     "em": "2026-10-18T07:13:52+00:00",
     "testes": 20,
-    "melhor": null,
-    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
-   }
-  },
-  "f260-captacao-234": {
-   "nome": "Instituto Unibanco",
-   "status": "alterar rota",
-   "vazias_seguidas": 31,
-   "leituras": 31,
-   "ok": 0,
-   "ultima": {
-    "em": "2026-10-17T08:28:44+00:00",
-    "classe": "vazia",
-    "motivo": "página respondeu mas não tem links (conteúdo carregado por script ou vazio) — precisa de API/RSS ou leitura do HTML renderizado"
-   },
-   "historico": [
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v"
-   ],
-   "rota_aprendida": null,
-   "afinado": {
-    "em": "2026-10-16T04:26:25+00:00",
-    "testes": 14,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1569,6 +1574,33 @@
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
   },
+  "f260-captacao-232": {
+   "nome": "Instituto Neoenergia",
+   "status": "alterar rota",
+   "vazias_seguidas": 7,
+   "leituras": 31,
+   "ok": 0,
+   "ultima": {
+    "em": "2026-10-18T08:01:22+00:00",
+    "classe": "vazia",
+    "motivo": "página institucional; seguiu 2 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje"
+   },
+   "historico": [
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v"
+   ],
+   "rota_aprendida": null,
+   "afinado": {
+    "em": "2026-10-18T08:05:11+00:00",
+    "testes": 23,
+    "melhor": null,
+    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
+   }
+  },
   "f260-captacao-196": {
    "nome": "MPGO - TAC com destinação social",
    "status": "alterar rota",
@@ -1615,27 +1647,6 @@
     },
     "resultado": "rota nova em teste"
    }
-  },
-  "f260-captacao-232": {
-   "nome": "Instituto Neoenergia",
-   "status": "alterar rota",
-   "vazias_seguidas": 6,
-   "leituras": 30,
-   "ok": 0,
-   "ultima": {
-    "em": "2026-10-17T04:33:53+00:00",
-    "classe": "vazia",
-    "motivo": "página institucional; seguiu 2 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje"
-   },
-   "historico": [
-    "v",
-    "v",
-    "v",
-    "v",
-    "v"
-   ],
-   "rota_aprendida": null,
-   "afinado": null
   },
   "f260-espalhado-senadorcanedo-go-gov-br": {
    "nome": "PNCP — FUNDO MUNICIPAL DE EDUCACAO E CULTURA - FMEC — oportunidades (espalhado de edital validado)",

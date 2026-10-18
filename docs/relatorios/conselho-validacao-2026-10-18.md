@@ -157,7 +157,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 3,
- "exemplos_da_rede_de_rotas": 13456
+ "exemplos_da_rede_de_rotas": 13571
 }
 ```
 
@@ -203,7 +203,7 @@
  "dia_de_referencia": "2026-10-18",
  "ativos": 172,
  "lidos_ontem": 147,
- "lidos_hoje": 129,
+ "lidos_hoje": 134,
  "nao_lidos_ontem_nem_hoje": [
   "plat-captamos",
   "plat-rede-filantropia"

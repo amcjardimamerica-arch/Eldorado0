@@ -1093,9 +1093,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T07:59:59+00:00",
+  "em": "2026-10-18T08:06:10+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": false
+  "ponte_respondeu": true
  },
  "f260-captacao-238": {
   "em": "2026-10-18T07:53:17+00:00",
@@ -1494,21 +1494,10 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-233": {
-  "em": "2026-10-15T07:54:18+00:00",
+  "em": "2026-10-18T08:05:26+00:00",
   "testes": 23,
   "melhor": null,
   "detalhe": [
-   {
-    "url": "https://www.institutosicoob.org.br/premio.html",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 1,
-    "links": 66,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
    {
     "url": "https://www.institutosicoob.org.br/",
     "origem": "rota original",
@@ -1521,63 +1510,14 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutosicoob.org.br/feed",
-    "origem": "padrão",
+    "url": "https://www.institutosicoob.org.br/premio.html",
+    "origem": "biblioteca",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
+    "pontos": 1,
+    "links": 66,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutosicoob.org.br/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutosicoob.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutosicoob.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutosicoob.org.br/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutosicoob.org.br/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -1592,7 +1532,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutosicoob.org.br/chamamento-publico",
+    "url": "https://www.institutosicoob.org.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1602,7 +1542,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutosicoob.org.br/chamamento-publico",
+    "url": "https://www.institutosicoob.org.br/feed",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -1612,7 +1552,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutosicoob.org.br/noticias",
+    "url": "https://www.institutosicoob.org.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1622,7 +1562,27 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutosicoob.org.br/noticias",
+    "url": "https://www.institutosicoob.org.br/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutosicoob.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutosicoob.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -1643,6 +1603,46 @@
    },
    {
     "url": "https://www.institutosicoob.org.br/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutosicoob.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutosicoob.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutosicoob.org.br/noticias",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutosicoob.org.br/noticias",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -1833,21 +1833,10 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-curadoria-008": {
-  "em": "2026-10-16T16:56:55+00:00",
+  "em": "2026-10-18T08:05:43+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
-   {
-    "url": "https://www.impactarte.org.br/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
    {
     "url": "https://www.impactarte.org.br/cadastro-proponente",
     "origem": "rota original",
@@ -1860,13 +1849,24 @@
     "funcionou": false
    },
    {
-    "url": "https://www.impactarte.org.br/transparencia/editais",
-    "origem": "padrão",
+    "url": "https://www.impactarte.org.br/",
+    "origem": "biblioteca",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
     "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.impactarte.org.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 5,
+    "sinais": 0,
+    "formato": "sitemap/feed",
     "erro": null,
     "funcionou": false
    },
@@ -1893,18 +1893,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.impactarte.org.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 5,
-    "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.impactarte.org.br/noticias",
+    "url": "https://www.impactarte.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1916,6 +1905,28 @@
    },
    {
     "url": "https://www.impactarte.org.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.impactarte.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.impactarte.org.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1960,17 +1971,6 @@
    },
    {
     "url": "https://www.impactarte.org.br/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.impactarte.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2708,7 +2708,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-234": {
-  "em": "2026-10-16T04:26:25+00:00",
+  "em": "2026-10-18T08:05:38+00:00",
   "testes": 14,
   "melhor": null,
   "detalhe": [
@@ -2726,61 +2726,6 @@
    {
     "url": "https://www.institutounibanco.org.br/",
     "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/noticias",
-    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2810,7 +2755,62 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/chamamento-publico",
+    "url": "https://www.institutounibanco.org.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2822,6 +2822,17 @@
    },
    {
     "url": "https://www.institutounibanco.org.br/chamadas-publicas",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2844,17 +2855,6 @@
    },
    {
     "url": "https://www.institutounibanco.org.br/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3693,24 +3693,13 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-224": {
-  "em": "2026-10-18T07:09:45+00:00",
-  "testes": 12,
+  "em": "2026-10-18T08:06:10+00:00",
+  "testes": 18,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://fundacaotelefonicavivo.org.br/",
     "origem": "rota original",
-    "via": "direto",
-    "pontos": 1,
-    "links": 122,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaotelefonicavivo.org.br/feed",
-    "origem": "padrão",
     "via": "direto",
     "pontos": 1,
     "links": 122,
@@ -3731,6 +3720,17 @@
     "funcionou": false
    },
    {
+    "url": "https://fundacaotelefonicavivo.org.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 122,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://fundacaotelefonicavivo.org.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -3738,6 +3738,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -3751,14 +3761,13 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaotelefonicavivo.org.br/noticias",
+    "url": "https://fundacaotelefonicavivo.org.br/transparencia/editais",
     "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 101,
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -3767,6 +3776,28 @@
     "via": "direto",
     "pontos": 1,
     "links": 113,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/noticias",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 101,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -3783,6 +3814,16 @@
     "funcionou": false
    },
    {
+    "url": "https://fundacaotelefonicavivo.org.br/chamadas-publicas",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://fundacaotelefonicavivo.org.br/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
@@ -3790,6 +3831,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/chamamento-publico",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -3803,24 +3854,13 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaotelefonicavivo.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://fundacaotelefonicavivo.org.br/chamamentos",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "json",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaotelefonicavivo.org.br/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    }
   ],
@@ -3977,7 +4017,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-230": {
-  "em": "2026-10-16T04:26:22+00:00",
+  "em": "2026-10-18T08:05:34+00:00",
   "testes": 24,
   "melhor": null,
   "detalhe": [
@@ -4002,7 +4042,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaoarcelormittal.org.br/feed",
+    "url": "https://fundacaoarcelormittal.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4012,7 +4052,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaoarcelormittal.org.br/feed",
+    "url": "https://fundacaoarcelormittal.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -4022,7 +4062,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaoarcelormittal.org.br/transparencia/editais",
+    "url": "https://fundacaoarcelormittal.org.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4032,7 +4072,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaoarcelormittal.org.br/transparencia/editais",
+    "url": "https://fundacaoarcelormittal.org.br/feed",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -4062,6 +4102,26 @@
     "funcionou": false
    },
    {
+    "url": "https://fundacaoarcelormittal.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaoarcelormittal.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://fundacaoarcelormittal.org.br/edital",
     "origem": "padrão",
     "via": "direto",
@@ -4082,6 +4142,26 @@
     "funcionou": false
    },
    {
+    "url": "https://fundacaoarcelormittal.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaoarcelormittal.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://fundacaoarcelormittal.org.br/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -4093,46 +4173,6 @@
    },
    {
     "url": "https://fundacaoarcelormittal.org.br/noticias",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaoarcelormittal.org.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaoarcelormittal.org.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaoarcelormittal.org.br/chamamento-publico",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaoarcelormittal.org.br/chamamento-publico",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -14192,5 +14232,174 @@
    }
   ],
   "resultado": "rota nova em teste"
+ },
+ "f260-captacao-232": {
+  "em": "2026-10-18T08:05:11+00:00",
+  "testes": 23,
+  "melhor": null,
+  "detalhe": [
+   {
+    "url": "https://www.institutoneoenergia.org.br/",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 1,
+    "links": 115,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/noticias",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/chamadas-publicas",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   }
+  ],
+  "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  }
 }
