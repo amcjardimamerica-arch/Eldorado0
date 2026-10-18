@@ -158,30 +158,24 @@ ESPERA_ENTRE_BUSCAS = 4.0      # o DuckDuckGo corta quem metralha consultas — 
 
 
 def _por_api(nome: str, consulta: str, tempo: float) -> list[dict]:
-    """Busca por API com chave. Só funciona se o segredo estiver gravado; sem ele, devolve
-    lista vazia em silêncio — nunca quebra o voo."""
+    """18/10: a API com chave de verdade (o corpo desta função tinha sido trocado pelo da busca pela ponte)."""
     import os
+    var, modelo = CHAVES[nome]
+    chave = os.environ.get(var) or ""
+    if not chave:                                     # sem chave não quebra o voo
+        return []
+    q = urllib.parse.quote(consulta)
     if nome == "brave":
-        k = os.environ.get("BRAVE_SEARCH_KEY")
-        if not k:
-            return []
-        req = urllib.request.Request(CHAVES["brave"][1].format(q=urllib.parse.quote(consulta)),
-                                     headers={"X-Subscription-Token": k, "Accept": "application/json"})
-        with urllib.request.urlopen(req, timeout=tempo) as r:
-            d = json.loads(r.read().decode("utf-8", "ignore"))
-        return [{"titulo": (x.get("title") or "")[:160], "url": x.get("url"), "trecho": (x.get("description") or "")[:200],
-                 "buscador": "brave"} for x in ((d.get("web") or {}).get("results") or []) if x.get("url")]
-    if nome == "google_cse":
-        k, cx = os.environ.get("GOOGLE_CSE_KEY"), os.environ.get("GOOGLE_CSE_CX")
-        if not (k and cx):
-            return []
-        req = urllib.request.Request(CHAVES["google_cse"][1].format(k=k, cx=cx, q=urllib.parse.quote(consulta)),
-                                     headers={"Accept": "application/json"})
-        with urllib.request.urlopen(req, timeout=tempo) as r:
-            d = json.loads(r.read().decode("utf-8", "ignore"))
-        return [{"titulo": (x.get("title") or "")[:160], "url": x.get("link"), "trecho": (x.get("snippet") or "")[:200],
-                 "buscador": "google_cse"} for x in (d.get("items") or []) if x.get("link")]
-    return []
+        req = urllib.request.Request(modelo.format(q=q), headers={"Accept": "application/json", "X-Subscription-Token": chave})
+        d = json.loads(urllib.request.urlopen(req, timeout=tempo).read().decode("utf-8", "ignore"))
+        return [{"titulo": r.get("title"), "url": r.get("url"), "resumo": r.get("description"), "buscador": "brave"}
+                for r in ((d.get("web") or {}).get("results") or [])]
+    cx = os.environ.get("GOOGLE_CSE_CX") or ""
+    if not cx:
+        return []
+    d = json.loads(urllib.request.urlopen(modelo.format(k=chave, cx=cx, q=q), timeout=tempo).read().decode("utf-8", "ignore"))
+    return [{"titulo": r.get("title"), "url": r.get("link"), "resumo": r.get("snippet"), "buscador": "google_cse"}
+            for r in (d.get("items") or [])]
 
 
 def buscar_na_fonte(dominio: str, termos: list[str], tempo: float = 20, teto: int = 60) -> list[dict]:
@@ -397,6 +391,8 @@ def _buscar_sem_cache(consulta: str, maximo: int = 10, tempo: float = 20, motore
     # por mais de 4 minutos — esperar não adianta. Cada voo é uma máquina nova: no máximo 2 buscas nele; depois, ou se
     # bloquear, o Google Notícias (RSS) assume o resto do voo.
     cota = int(_pe.get("max_buscas_duckduckgo_por_voo_local", 30) if local_brasil() else _pe.get("max_buscas_duckduckgo_por_voo", 2))
+    if not motores and not _DDG_NO_VOO["bloqueado"] and not _via_disponivel("duckduckgo", _vias_estado()):
+        _DDG_NO_VOO["bloqueado"] = True      # 18/10: em DESCANSO depois de bloquear — insistir só prolonga o bloqueio
     if not motores and (_DDG_NO_VOO["bloqueado"] or _DDG_NO_VOO["usadas"] >= cota):
         return _vias_de_reserva(consulta, maximo, tempo, _pe)
     ordem = [v for v in vias_da_roda() if not motores or v in motores] or [b[0] for b in BUSCADORES]

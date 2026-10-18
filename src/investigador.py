@@ -296,7 +296,6 @@ def aplicar(e: dict, r: dict, texto: str, fontes: list[dict], modelo: str) -> di
     campos["Anexos"] = {"valor": f"{len(lidos or decl)} anexo(s)" if (lidos or decl) else None, "trecho": b.get("trecho"), "comprovado": c}
     if c: e["anexos"] = lidos or decl
     # Modalidade de recebimento: não é a elegibilidade — fica para o Cartório extrair com trecho (16/10, titular)
-    if c: e["destinacao"] = {"elegivel": el, "natureza": b.get("natureza"), "motivo": str(b.get("trecho"))[:160]}
     # Área
     b = g("area"); _areas = ("cultura", "educacao", "saude", "assistencia_social", "esporte", "meio_ambiente", "direitos")
     v = next((a for a in re.split(r"[|,;/ ]+|\be\b", _norm(b.get("valor") or "").replace("assistencia social", "assistencia_social").replace("meio ambiente", "meio_ambiente")) if a in _areas), "")
