@@ -2,28 +2,11 @@
  "em": "2026-10-18",
  "regra": "PLANOS DE CORREÇÃO DOS CANAIS (titular, 02/10/2026).\n\nCada motor e Piloto é diagnosticado a cada ciclo pelo seu histórico (estado/esquadra*.json, status dos motores, bloqueios)\ne recebe o plano previsto no fluxograma (config/linha_producao.json › planos_de_correcao):\n  sem_rendimento · falha_parcial · bloqueio · exige_brasil · formato_mudou · (contrato_violado e injecao: por registro)\nO plano nunca desliga um canal sozinho: ele diz o que fazer e qual skill usar.",
  "resumo": {
-  "bloqueio": 1,
-  "falha_parcial": 15,
-  "formato_mudou": 1,
-  "sem_rendimento": 59,
+  "falha_parcial": 16,
+  "sem_rendimento": 60,
   "saudavel": 56
  },
  "motores": [
-  {
-   "motor": "judiciario-tjgo",
-   "canal": "judiciario-tjgo",
-   "familia": "outros",
-   "diagnostico": "bloqueio",
-   "evidencia": "respostas de bloqueio no status",
-   "plano": [
-    "espaçar as leituras (respeitar Crawl-Delay)",
-    "mudar o horário na agenda",
-    "se 403 persistente da nuvem: marcar 'exige IP brasileiro' e mandar à coleta local"
-   ],
-   "skill": "comum/plano_correcao",
-   "leituras": 108,
-   "achados_total": 0
-  },
   {
    "motor": "empresas-incentivadas",
    "canal": "empresas-incentivadas",
@@ -36,8 +19,8 @@
     "registrar páginas que falham sempre como rota morta"
    ],
    "skill": "comum/plano_correcao",
-   "leituras": 25,
-   "achados_total": 34
+   "leituras": 27,
+   "achados_total": 37
   },
   {
    "motor": "f260-captacao-044",
@@ -115,19 +98,34 @@
    "achados_total": 0
   },
   {
-   "motor": "outras-oportunidades-1",
-   "canal": "outras-oportunidades-1",
+   "motor": "judiciario-cnj-tjgo",
+   "canal": "judiciario-cnj-tjgo",
    "familia": "outros",
    "diagnostico": "falha_parcial",
-   "evidencia": "falhas em 3 dos últimos 7 dias",
+   "evidencia": "falhas em 7 dos últimos 7 dias",
    "plano": [
     "repetir com espera crescente (backoff)",
     "trocar a ordem das rotas",
     "registrar páginas que falham sempre como rota morta"
    ],
    "skill": "comum/plano_correcao",
-   "leituras": 39,
-   "achados_total": 140
+   "leituras": 26,
+   "achados_total": 1
+  },
+  {
+   "motor": "outras-oportunidades-1",
+   "canal": "outras-oportunidades-1",
+   "familia": "outros",
+   "diagnostico": "falha_parcial",
+   "evidencia": "falhas em 4 dos últimos 7 dias",
+   "plano": [
+    "repetir com espera crescente (backoff)",
+    "trocar a ordem das rotas",
+    "registrar páginas que falham sempre como rota morta"
+   ],
+   "skill": "comum/plano_correcao",
+   "leituras": 40,
+   "achados_total": 153
   },
   {
    "motor": "outras-oportunidades-3",
@@ -201,8 +199,8 @@
     "registrar páginas que falham sempre como rota morta"
    ],
    "skill": "comum/plano_correcao",
-   "leituras": 115,
-   "achados_total": 52
+   "leituras": 116,
+   "achados_total": 53
   },
   {
    "motor": "plataforma-mapas-culturais",
@@ -239,30 +237,15 @@
    "canal": "recorrencia",
    "familia": "terceiro_setor",
    "diagnostico": "falha_parcial",
-   "evidencia": "falhas em 7 dos últimos 7 dias",
+   "evidencia": "falhas em 6 dos últimos 7 dias",
    "plano": [
     "repetir com espera crescente (backoff)",
     "trocar a ordem das rotas",
     "registrar páginas que falham sempre como rota morta"
    ],
    "skill": "comum/plano_correcao",
-   "leituras": 46,
+   "leituras": 47,
    "achados_total": 30
-  },
-  {
-   "motor": "judiciario-cnj-tjgo",
-   "canal": "judiciario-cnj-tjgo",
-   "familia": "outros",
-   "diagnostico": "formato_mudou",
-   "evidencia": "1 achado(s) nos dias anteriores e nenhum nos 2 últimos",
-   "plano": [
-    "comparar o HTML de hoje com o último que rendeu",
-    "alerta no painel",
-    "atualizar o leitor e a lição na skill do motor"
-   ],
-   "skill": "comum/plano_correcao",
-   "leituras": 25,
-   "achados_total": 1
   },
   {
    "motor": "dj-trf1-go",
@@ -1177,6 +1160,22 @@
    "achados_total": 0
   },
   {
+   "motor": "judiciario-tjgo",
+   "canal": "judiciario-tjgo",
+   "familia": "outros",
+   "diagnostico": "sem_rendimento",
+   "evidencia": "108 leituras e nenhum achado",
+   "plano": [
+    "conferir robots.txt e termos do site (se proibir robôs: pausar e registrar)",
+    "verificar se a página é montada por JavaScript (lista vazia no HTML): procurar API/JSON ou feed",
+    "testar rotas alternativas do motor (config/rotas_motores.json)",
+    "se nada render em 30 dias: reduzir a frequência e mandar o domínio ao Espião"
+   ],
+   "skill": "comum/plano_correcao",
+   "leituras": 108,
+   "achados_total": 0
+  },
+  {
    "motor": "mpu-destinacao",
    "canal": "mpu-destinacao",
    "familia": "outros",
@@ -1249,7 +1248,7 @@
    "evidencia": "saudável",
    "plano": [],
    "skill": null,
-   "leituras": 153,
+   "leituras": 154,
    "achados_total": 1
   },
   {
@@ -1271,7 +1270,7 @@
    "evidencia": "saudável",
    "plano": [],
    "skill": null,
-   "leituras": 146,
+   "leituras": 147,
    "achados_total": 26
   },
   {
@@ -1733,7 +1732,7 @@
    "evidencia": "saudável",
    "plano": [],
    "skill": null,
-   "leituras": 21,
+   "leituras": 22,
    "achados_total": 78
   },
   {
@@ -1744,7 +1743,7 @@
    "evidencia": "saudável",
    "plano": [],
    "skill": null,
-   "leituras": 15,
+   "leituras": 16,
    "achados_total": 95
   },
   {
@@ -1766,7 +1765,7 @@
    "evidencia": "saudável",
    "plano": [],
    "skill": null,
-   "leituras": 84,
+   "leituras": 85,
    "achados_total": 1
   },
   {
@@ -1777,7 +1776,7 @@
    "evidencia": "saudável",
    "plano": [],
    "skill": null,
-   "leituras": 101,
+   "leituras": 102,
    "achados_total": 4
   },
   {
@@ -1788,8 +1787,8 @@
    "evidencia": "saudável",
    "plano": [],
    "skill": null,
-   "leituras": 97,
-   "achados_total": 239
+   "leituras": 98,
+   "achados_total": 240
   },
   {
    "motor": "plat-prefeituras-50-go",
@@ -1821,7 +1820,7 @@
    "evidencia": "saudável",
    "plano": [],
    "skill": null,
-   "leituras": 104,
+   "leituras": 105,
    "achados_total": 261
   }
  ]

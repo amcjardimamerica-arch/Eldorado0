@@ -1,9 +1,9 @@
 {
- "em": "2026-10-18T03:14:21+00:00",
+ "em": "2026-10-18T03:51:17+00:00",
  "regra": "REDE NEURAL DA LINHA DE PRODUÇÃO (titular, 02/10/2026) — Python puro, sem dependência nova, sem GPU.\n\nO que faz: estima a probabilidade de um registro ser OPORTUNIDADE REAL para OSC. É APOIO, nunca filtro (identificar\nprimeiro, qualificar depois): ordena a fila de validação, dá a nota dos livros e aponta rótulos suspeitos.\n\nArquitetura: rede de 1 camada oculta (ReLU) sobre entradas esparsas; saída sigmoide; Adam; pesos por classe.\nEntradas (técnicas de referência no GitHub):\n  · TEXTO — palavras e pares de palavras do título e da evidência, por *feature hashing* (2^13 posições);\n  · SUPERVISÃO FRACA (snorkel-team/snorkel) — as regras atuais do sistema viram \"rotuladores\": veredito e regra de\n    restrição dos livros (regras_restricao.avaliar), sinais de OSC, de abertura e de prazo, link oficial, família do canal;\n  · CORROBORAÇÃO — quantos canais viram a mesma entidade (linha_producao).\nRótulos: as decisões da validação individual (válida/arquivada = 1; descartada = 0; pendente = sem rótulo).\nAvaliação: validação cruzada em 5 partes (AUC, precisão, revocação, Brier) contra a linha de base das regras sozinhas.\nRÓTULOS SUSPEITOS (cleanlab/cleanlab, *confident learning*): decisão que a rede, fora da amostra, contradiz com mais de\n90% de confiança vai à revisão. APRENDIZADO ATIVO (argilla-io/argilla): os pendentes de maior incerteza vêm primeiro.",
- "rotulados": 1697,
+ "rotulados": 1699,
  "positivos": 591,
- "pendentes": 802,
+ "pendentes": 804,
  "validacao_cruzada": {
   "auc": 0.843,
   "precisao": 0.74,
@@ -121,22 +121,10 @@
    "incerteza": 0.988
   },
   {
-   "titulo": "Diário Oficial de Pratânia (SP) 2026-10-05 — \"termo de execução cultural\"",
-   "url": "https://data.queridodiario.ok.org.br/3541059/2026-10-05/09f6e527feb6f3f99ec6d42f7348b622574410a7.pdf",
-   "nota": 0.506,
-   "incerteza": 0.988
-  },
-  {
    "titulo": "Edital Itapajé 2026: Medidas Socioeducativas para OSC · Capitaai",
    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019.htm",
    "nota": 0.506,
    "incerteza": 0.987
-  },
-  {
-   "titulo": "Diário Oficial de Itaúna (MG) 2026-10-08 — \"termo de execução cultural\"",
-   "url": "https://data.queridodiario.ok.org.br/3133808/2026-10-08/3ff7b2018ab056f86d374fde7bc7caf5daad0c90.pdf",
-   "nota": 0.493,
-   "incerteza": 0.986
   },
   {
    "titulo": "Prefeitura de Goiânia: chamamento para seleção de instituições de ...",
@@ -149,18 +137,6 @@
    "url": "https://www.cnj.jus.br/comarca-de-tutoia-divulga-resultado-de-selecao-para-projetos-sociais/",
    "nota": 0.507,
    "incerteza": 0.985
-  },
-  {
-   "titulo": "Diário Oficial de Sumidouro (RJ) 2026-09-14 — \"edital de premiação\" cultura",
-   "url": "https://data.queridodiario.ok.org.br/3305703/2026-09-14/efaecfdca0bf5f566dd4daf0db595fb5d8a95cb0.pdf",
-   "nota": 0.508,
-   "incerteza": 0.985
-  },
-  {
-   "titulo": "Desafio UNAIDS",
-   "url": "https://unaids.org.br/desafiounaids",
-   "nota": 0.508,
-   "incerteza": 0.984
   },
   {
    "titulo": "Inscrições para o Agrocolégio seguem até 31 de outubro",
@@ -215,12 +191,6 @@
    "url": "https://plataforma9.com/financiamento/brasil-mec-minc-edital-ciclos-de-saberes-mestras-mestres-culturas-tradicionais-populares.htm",
    "nota": 0.491,
    "incerteza": 0.982
-  },
-  {
-   "titulo": "Diário Oficial de Esplanada (BA) 2026-10-09 — \"edital de premiação\" cultura",
-   "url": "https://data.queridodiario.ok.org.br/2910602/2026-10-09/cf574e49fefd17a51aefc9ba05720078d3696ff8.pdf",
-   "nota": 0.509,
-   "incerteza": 0.981
   },
   {
    "titulo": "MDS (desenvolvimento e assistência social) — TERMO DE FOMENTO Nº 999689/2026 — \"Promover a capacitação profissional, o des...",
@@ -295,12 +265,6 @@
    "incerteza": 0.974
   },
   {
-   "titulo": "Diário Oficial de Macatuba (SP) 2026-09-22 — \"edital de chamamento público\" associação — Prefeitura Municipal de Macatuba/SP",
-   "url": "https://licitario.com.br/diarios",
-   "nota": 0.513,
-   "incerteza": 0.974
-  },
-  {
    "titulo": "Edital Prefeitura de Cafelândia 2026: Guia de Captação",
    "url": "https://www.gov.br/planalto/pt-br",
    "nota": 0.487,
@@ -355,12 +319,6 @@
    "incerteza": 0.963
   },
   {
-   "titulo": "Diário Oficial de Alcobaça (BA) 2026-09-22 — \"termo de execução cultural\"",
-   "url": "https://data.queridodiario.ok.org.br/2900801/2026-09-22/5c3a4963405fbd659368b0af3dc946eb43703a04.pdf",
-   "nota": 0.519,
-   "incerteza": 0.963
-  },
-  {
    "titulo": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
    "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
    "nota": 0.519,
@@ -371,7 +329,13 @@
    "url": "https://www.in.gov.br/web/dou/-/edital-sge/agu-n-1-de-6-de-outubro-de-2026-737293277",
    "nota": 0.519,
    "incerteza": 0.962
+  },
+  {
+   "titulo": "Chamada Pública CNPq/MMULHERES Nº 19/2026 - Programa Asas para o Futuro",
+   "url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-19-2026/chamada-publica-cnpq-N-19-2026",
+   "nota": 0.48,
+   "incerteza": 0.961
   }
  ],
- "pendentes_provaveis_reais": 422
+ "pendentes_provaveis_reais": 421
 }

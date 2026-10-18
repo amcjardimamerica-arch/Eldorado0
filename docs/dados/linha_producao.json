@@ -1,13 +1,13 @@
 {
- "em": "2026-10-18T03:14:19+00:00",
+ "em": "2026-10-18T03:51:14+00:00",
  "regra": "LINHA DE PRODUÇÃO DE INFORMAÇÃO (titular, 02/10/2026).\n\nCada canal (motor ou Piloto) só COLETA. As etapas seguintes são comuns e nada é eliminado:\n  (02/10: os nomes BRONZE/PRATA/OURO passaram a ser só os SELOS da esteira — src/esteira.py; aqui as etapas são:)\n  COLETADO    o registro coletado, como chegou (base dados/oportunidades/oportunidades.jsonl)\n  CONSOLIDADO canal canônico + contrato de dados conferido + ENTIDADE resolvida entre canais (a mesma oportunidade vista\n              em vários canais vira uma entidade só, e o número de canais é a CORROBORAÇÃO)\n  EM_LIVRO    a entidade chegou ao mapa ou a um livro da Biblioteca\n  QUALIFICADO o livro recebeu veredito (APLICÁVEL / EM REVISÃO / NÃO APLICA) — arquivamento só manual\nRegistro que viola o contrato vai à FILA DE REPROCESSAMENTO (nunca ao lixo) com o plano de correção.\nO LIVRO-RAZÃO (estado/linha/razao-AAAA-MM.jsonl.gz) guarda só acréscimos: cada mudança de etapa, com data e motivo.",
  "funil": {
-  "coletados": 1284,
-  "oportunidades_distintas": 518,
+  "coletados": 1297,
+  "oportunidades_distintas": 532,
   "entidades_em_2_ou_mais_canais": 74,
   "etapas": {
-   "EM_LIVRO": 699,
-   "CONSOLIDADO": 34,
+   "EM_LIVRO": 709,
+   "CONSOLIDADO": 37,
    "QUALIFICADO": 58,
    "REPROCESSAR": 493
   },
@@ -28,18 +28,18 @@
   {
    "canal": "piloto-interceptador",
    "familia": "pilotos",
-   "registros": 470,
-   "entidades": 326,
-   "exclusivas": 256,
+   "registros": 467,
+   "entidades": 325,
+   "exclusivas": 255,
    "corroboradas": 70,
    "validadas_como_reais": 81
   },
   {
    "canal": "pncp-api",
    "familia": "portal_chamamentos",
-   "registros": 27,
-   "entidades": 27,
-   "exclusivas": 18,
+   "registros": 29,
+   "entidades": 28,
+   "exclusivas": 19,
    "corroboradas": 9,
    "validadas_como_reais": 10
   },
@@ -73,9 +73,9 @@
   {
    "canal": "piloto-aberto",
    "familia": "pilotos",
-   "registros": 38,
-   "entidades": 34,
-   "exclusivas": 28,
+   "registros": 43,
+   "entidades": 39,
+   "exclusivas": 33,
    "corroboradas": 6,
    "validadas_como_reais": 3
   },
@@ -136,9 +136,9 @@
   {
    "canal": "outras-oportunidades-1",
    "familia": "outros",
-   "registros": 8,
-   "entidades": 8,
-   "exclusivas": 7,
+   "registros": 9,
+   "entidades": 9,
+   "exclusivas": 8,
    "corroboradas": 1,
    "validadas_como_reais": 2
   },
@@ -161,18 +161,18 @@
    "validadas_como_reais": 1
   },
   {
-   "canal": "dou",
-   "familia": "diario_oficial",
-   "registros": 9,
-   "entidades": 7,
-   "exclusivas": 5,
+   "canal": "recorrencia",
+   "familia": "terceiro_setor",
+   "registros": 10,
+   "entidades": 10,
+   "exclusivas": 8,
    "corroboradas": 2,
    "validadas_como_reais": 1
   },
   {
-   "canal": "recorrencia",
-   "familia": "terceiro_setor",
-   "registros": 7,
+   "canal": "dou",
+   "familia": "diario_oficial",
+   "registros": 9,
    "entidades": 7,
    "exclusivas": 5,
    "corroboradas": 2,
@@ -271,18 +271,18 @@
   {
    "canal": "empresas-editais-incentivados",
    "familia": "empresas",
-   "registros": 21,
-   "entidades": 17,
-   "exclusivas": 13,
+   "registros": 22,
+   "entidades": 18,
+   "exclusivas": 14,
    "corroboradas": 4,
    "validadas_como_reais": 0
   },
   {
    "canal": "empresas-incentivadas",
    "familia": "empresas",
-   "registros": 8,
-   "entidades": 8,
-   "exclusivas": 4,
+   "registros": 12,
+   "entidades": 12,
+   "exclusivas": 8,
    "corroboradas": 4,
    "validadas_como_reais": 0
   },
@@ -757,5 +757,5 @@
    ]
   }
  ],
- "eventos_no_livro_razao": 0
+ "eventos_no_livro_razao": 9
 }

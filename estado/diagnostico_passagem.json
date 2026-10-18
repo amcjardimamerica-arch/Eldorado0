@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T03:15:58+00:00",
+ "em": "2026-10-18T03:54:11+00:00",
  "finalidade": {
   "sistemas": [
    {
@@ -11,8 +11,8 @@
    {
     "sistema": "Maestro",
     "finalidade": "cobertura completa do dia planejado",
-    "atingido_pct": 80,
-    "estado": "atencao"
+    "atingido_pct": 5,
+    "estado": "falha"
    },
    {
     "sistema": "Rede neural",
@@ -23,25 +23,25 @@
    {
     "sistema": "Biblioteca",
     "finalidade": "toda oportunidade aberta aplicável com livro existente",
-    "atingido_pct": 99,
+    "atingido_pct": 100,
     "estado": "ok"
    },
    {
     "sistema": "Validação",
     "finalidade": "toda oportunidade aberta validada",
-    "atingido_pct": 31,
+    "atingido_pct": 28,
     "estado": "falha"
    },
    {
     "sistema": "Site oficial",
     "finalidade": "toda aberta com site oficial",
-    "atingido_pct": 67,
-    "estado": "falha"
+    "atingido_pct": 71,
+    "estado": "atencao"
    },
    {
     "sistema": "Prazo",
     "finalidade": "toda aberta com prazo (ou fluxo contínuo)",
-    "atingido_pct": 38,
+    "atingido_pct": 33,
     "estado": "falha"
    },
    {
@@ -75,7 +75,7 @@
     "estado": "falha"
    }
   ],
-  "indice_geral_pct": 71
+  "indice_geral_pct": 65
  },
  "sistemas": {
   "motores": {
@@ -88,25 +88,15 @@
     {
      "id": "dou",
      "nome": "Diário Oficial da União",
-     "resultado": "funcionando — última leitura 17/10 10:18 · sem oportunidade nova (atenção: 1 falha(s) na leitura: etapa: NameError: name 'tinha_estado' is not defined)"
-    },
-    {
-     "id": "plataforma-wordpress",
-     "nome": "Adaptador WordPress — sites oficiais pela API pública",
-     "resultado": "funcionando — última leitura 17/10 06:31 · 4 achado(s) (atenção: 5 fonte(s) com falha; 4 achado(s) nas demais)"
-    },
-    {
-     "id": "plataforma-mapas-culturais",
-     "nome": "Adaptador Mapas Culturais — oportunidades com inscrição aberta",
-     "resultado": "funcionando — última leitura 17/10 06:29 · 13 achado(s) (atenção: 7 fonte(s) com falha; 13 achado(s) nas demais)"
+     "resultado": "funcionando — última leitura 18/10 00:27 · sem oportunidade nova (atenção: 1 falha(s) na leitura: etapa: NameError: name 'tinha_estado' is not defined)"
     },
     {
      "id": "empresas-editais-incentivados",
      "nome": "Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes",
-     "resultado": "funcionando — última leitura 17/10 10:31 · 22 achado(s) (atenção: 4 página(s) com falha; as demais foram lidas)"
+     "resultado": "funcionando — última leitura 18/10 00:40 · 22 achado(s) (atenção: 2 página(s) com falha; as demais foram lidas)"
     }
    ],
-   "status_em": "2026-10-17T23:53-03:00",
+   "status_em": "2026-10-18T00:49-03:00",
    "auditoria": {
     "em": "2026-10-17T14:17:41+00:00",
     "total": 33,
@@ -120,28 +110,29 @@
    }
   },
   "maestro": {
-   "em": "2026-10-18T02:53:35+00:00",
+   "em": "2026-10-18T03:43:03+00:00",
    "planejados": 132,
-   "cobertura_percentual": 79.5,
+   "cobertura_percentual": 5.3,
    "cobertura": {
-    "completa": 105,
-    "parcial": 27
+    "completa": 7,
+    "parcial": 6,
+    "pendente": 119
    },
-   "dia_fechado": true,
-   "esgotaram_tentativas": 27,
-   "a_disparar": 0
+   "dia_fechado": false,
+   "esgotaram_tentativas": 0,
+   "a_disparar": 125
   },
   "rede_neural": {
-   "em": "2026-10-18T03:14:21+00:00",
+   "em": "2026-10-18T03:51:17+00:00",
    "modelo_treinado_em": "2026-10-14T05:54:08+00:00",
-   "rotulados": 1697,
+   "rotulados": 1699,
    "validacao_cruzada": {
     "auc": 0.843,
     "precisao": 0.74,
     "revocacao": 0.664,
     "brier": 0.1581
    },
-   "pendentes_provaveis_reais": 422
+   "pendentes_provaveis_reais": 421
   },
   "cartorio": {
    "em": "2026-10-18T03:12:12+00:00",
@@ -195,8 +186,8 @@
     }
    },
    "espiao": {
-    "em": "2026-10-18T02:48:24+00:00",
-    "voos": 774,
+    "em": "2026-10-18T03:13:10+00:00",
+    "voos": 776,
     "empresas_novas": 160
    }
   },
@@ -239,73 +230,77 @@
    "sem_nada_na_base": 25
   },
   "fluxos_github": {
-   "total": 6,
-   "com_falha": []
+   "total": 7,
+   "com_falha": [
+    "00 · Verificar prontidão"
+   ]
   },
   "sala_controle": {
-   "em": "2026-10-18T03:15:36+00:00",
-   "indice_saude": 83,
+   "em": "2026-10-18T03:53:39+00:00",
+   "indice_saude": 80,
    "contagem": {
-    "verde": 24,
+    "verde": 23,
     "amarelo": 6,
-    "vermelho": 4,
+    "vermelho": 5,
     "cinza": 0
    }
   }
  },
  "oportunidades": {
-  "abertas": 190,
+  "abertas": 224,
   "por_estado": {
-   "em_verificacao": 119,
-   "validada": 59,
-   "validacao_manual": 12
+   "em_verificacao": 142,
+   "validada": 62,
+   "validacao_manual": 20
   },
   "municipais_de_outro_estado_abertas": 0,
   "livros_municipais_de_outro_estado": 54,
-  "validadas": 59,
-  "percentual_validadas": 31.1,
-  "com_livro": 189,
+  "validadas": 62,
+  "percentual_validadas": 27.7,
+  "com_livro": 221,
   "sem_livro": 1,
-  "sem_livro_por_regra": 0,
-  "sem_livro_por_regra_motivos": {},
+  "sem_livro_por_regra": 2,
+  "sem_livro_por_regra_motivos": {
+   "não é seleção aberta a associações (dispensa/inexigibilidade de chamamento, credenciamento": 2
+  },
   "livro_inexistente": 0,
-  "sem_site_oficial": 63,
-  "sem_prazo": 118,
+  "sem_site_oficial": 65,
+  "sem_prazo": 150,
   "prazo_vencido": 0,
   "fora_da_tela": 0,
   "sem_ficha": 0,
   "itens_que_mais_faltam": {
-   "Prazo de recurso": 111,
-   "Anexos": 109,
-   "Resultado": 91,
-   "Objeto": 91,
-   "Requisitos": 89,
-   "Valor": 89,
-   "Território": 86,
-   "Prazo de inscrição": 82,
-   "Modalidade": 52,
-   "Órgão / financiador": 39,
-   "Esfera": 38,
-   "Área de atuação": 34
+   "Prazo de recurso": 137,
+   "Anexos": 133,
+   "Resultado": 114,
+   "Requisitos": 114,
+   "Objeto": 114,
+   "Valor": 114,
+   "Território": 111,
+   "Prazo de inscrição": 106,
+   "Modalidade": 67,
+   "Órgão / financiador": 50,
+   "Área de atuação": 49,
+   "Esfera": 48
   }
  },
  "integracao": {
   "contagens": {
-   "repositorio_abertas": 190,
-   "diagnostico_abertas": 190,
-   "tela_cartoes": 190,
-   "fichas": 202,
-   "sala_controle_abertas": 190
+   "repositorio_abertas": 224,
+   "diagnostico_abertas": 224,
+   "tela_cartoes": 224,
+   "fichas": 236,
+   "sala_controle_abertas": 224
   },
   "idade_horas": {
    "repositorio": 0.0,
    "fluxo": 0.0,
    "fichas": 0.0,
    "sala_controle": 0.0,
-   "status_motores": 0.4,
-   "maestro": 0.4,
+   "status_motores": 0.1,
+   "maestro": 0.2,
    "rede_neural": 0.0,
-   "saude": 13.0
+   "saude": 13.6
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -316,8 +311,8 @@
     "arquivo": "00-prontidao.yml",
     "nome": "00 · Verificar prontidão",
     "cadencia_h": 24.0,
-    "ultima": "2026-10-17T21:37:58Z",
-    "idade_h": 5.6,
+    "ultima": "2026-10-18T03:47:06Z",
+    "idade_h": 0.1,
     "ultima_conclusao": "failure",
     "sucesso_pct": 0,
     "execucoes_vistas": 10,
@@ -328,7 +323,7 @@
     "nome": "acesso-mensal",
     "cadencia_h": null,
     "ultima": "2026-09-01T09:14:44Z",
-    "idade_h": 1122.0,
+    "idade_h": 1122.7,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -339,7 +334,7 @@
     "nome": "08 · Agenda dos motores — cada motor na hora em que sua fonte publica",
     "cadencia_h": null,
     "ultima": "2026-10-15T07:35:55Z",
-    "idade_h": 67.7,
+    "idade_h": 68.3,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -350,7 +345,7 @@
     "nome": "35 · Alimentação diária externa (editais abertos)",
     "cadencia_h": 24.0,
     "ultima": "2026-10-17T13:10:43Z",
-    "idade_h": 14.1,
+    "idade_h": 14.7,
     "ultima_conclusao": "success",
     "sucesso_pct": 30,
     "execucoes_vistas": 10,
@@ -361,7 +356,7 @@
     "nome": "06 · Alimentação manual (arquivos e links do titular)",
     "cadencia_h": null,
     "ultima": "2026-10-17T18:15:54Z",
-    "idade_h": 9.0,
+    "idade_h": 9.6,
     "ultima_conclusao": "failure",
     "sucesso_pct": 40,
     "execucoes_vistas": 10,
@@ -372,7 +367,7 @@
     "nome": "36 · Análise do sistema (diagnóstico único e correção)",
     "cadencia_h": null,
     "ultima": "2026-10-15T17:52:43Z",
-    "idade_h": 57.4,
+    "idade_h": 58.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -383,7 +378,7 @@
     "nome": "14 · Arquivo frio — dados grandes e esporádicos para a Release do GitHub e o Google Drive",
     "cadencia_h": 168.0,
     "ultima": "2026-10-11T15:05:16Z",
-    "idade_h": 156.2,
+    "idade_h": 156.8,
     "ultima_conclusao": "success",
     "sucesso_pct": 83,
     "execucoes_vistas": 6,
@@ -394,7 +389,7 @@
     "nome": "28 · Atualizar a Biblioteca (completa, numa só execução)",
     "cadencia_h": null,
     "ultima": "2026-10-11T18:17:54Z",
-    "idade_h": 153.0,
+    "idade_h": 153.6,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -405,7 +400,7 @@
     "nome": "39 · Avaliação do Cartório com gabarito",
     "cadencia_h": 168.0,
     "ultima": "2026-10-15T19:50:20Z",
-    "idade_h": 55.4,
+    "idade_h": 56.1,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 4,
@@ -416,7 +411,7 @@
     "nome": "05 · Busca ativa (a cada 3 dias)",
     "cadencia_h": null,
     "ultima": "2026-10-15T17:32:41Z",
-    "idade_h": 57.7,
+    "idade_h": 58.4,
     "ultima_conclusao": "success",
     "sucesso_pct": 10,
     "execucoes_vistas": 10,
@@ -427,7 +422,7 @@
     "nome": "30 · Cartório de fontes oficiais (certifica o que falta nas estrelas e nos livros)",
     "cadencia_h": null,
     "ultima": "2026-10-16T16:53:44Z",
-    "idade_h": 34.4,
+    "idade_h": 35.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 90,
     "execucoes_vistas": 10,
@@ -438,7 +433,7 @@
     "nome": "25 · Certificado intermediário do SUAP (Câmara de Goiânia)",
     "cadencia_h": null,
     "ultima": "2026-10-03T04:04:16Z",
-    "idade_h": 359.2,
+    "idade_h": 359.8,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 4,
@@ -449,7 +444,7 @@
     "nome": "09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes",
     "cadencia_h": 24.0,
     "ultima": "2026-10-03T11:56:23Z",
-    "idade_h": 351.3,
+    "idade_h": 352.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -460,7 +455,7 @@
     "nome": "26 · Coleta das páginas dos livros (verificação por blocos)",
     "cadencia_h": null,
     "ultima": "2026-10-03T15:22:47Z",
-    "idade_h": 347.9,
+    "idade_h": 348.5,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -471,7 +466,7 @@
     "nome": "10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar",
     "cadencia_h": null,
     "ultima": "2026-10-15T16:09:52Z",
-    "idade_h": 59.1,
+    "idade_h": 59.7,
     "ultima_conclusao": "success",
     "sucesso_pct": 25,
     "execucoes_vistas": 8,
@@ -482,7 +477,7 @@
     "nome": "08 · Pacote do conselho (validação do Claude a cada 3 dias)",
     "cadencia_h": 24.0,
     "ultima": "2026-10-16T11:47:51Z",
-    "idade_h": 39.5,
+    "idade_h": 40.1,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 9,
@@ -504,7 +499,7 @@
     "nome": "18 · Diagnóstico da busca do Espião",
     "cadencia_h": null,
     "ultima": "2026-10-01T11:15:12Z",
-    "idade_h": 400.0,
+    "idade_h": 400.6,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -515,7 +510,7 @@
     "nome": "41 · Diagnóstico da ponte Brasil",
     "cadencia_h": null,
     "ultima": "2026-10-15T09:59:29Z",
-    "idade_h": 65.3,
+    "idade_h": 65.9,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 3,
@@ -526,7 +521,7 @@
     "nome": "27 · Executor documental dos motores (robôs; o Claude no Chrome é o último recurso)",
     "cadencia_h": 24.0,
     "ultima": "2026-10-17T12:56:42Z",
-    "idade_h": 14.3,
+    "idade_h": 15.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -536,8 +531,8 @@
     "arquivo": "interceptador.yml",
     "nome": "12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos",
     "cadencia_h": 1.0,
-    "ultima": "2026-10-18T03:07:59Z",
-    "idade_h": 0.1,
+    "ultima": "2026-10-18T03:53:07Z",
+    "idade_h": 0.0,
     "ultima_conclusao": null,
     "sucesso_pct": 0,
     "execucoes_vistas": 10,
@@ -548,7 +543,7 @@
     "nome": "11 · Piloto - Interceptador (botão) — comprova os dados de um edital na fonte oficial",
     "cadencia_h": null,
     "ultima": "2026-09-26T17:40:22Z",
-    "idade_h": 513.6,
+    "idade_h": 514.2,
     "ultima_conclusao": "success",
     "sucesso_pct": 89,
     "execucoes_vistas": 9,
@@ -559,7 +554,7 @@
     "nome": "19 · Medição dos limites de busca",
     "cadencia_h": null,
     "ultima": "2026-10-01T12:29:03Z",
-    "idade_h": 398.8,
+    "idade_h": 399.4,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -570,7 +565,7 @@
     "nome": "01 · Eldorado — motores por hora (00h–06h BRT)",
     "cadencia_h": 24.0,
     "ultima": "2026-10-17T12:52:45Z",
-    "idade_h": 14.4,
+    "idade_h": 15.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 50,
     "execucoes_vistas": 10,
@@ -581,7 +576,7 @@
     "nome": "16 · Motores indexadores (feeds, APIs, sitemaps, listagens, dados abertos, ponte Brasil, coleta assistida)",
     "cadencia_h": 3.0,
     "ultima": "2026-10-17T23:04:10Z",
-    "idade_h": 4.2,
+    "idade_h": 4.8,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -592,7 +587,7 @@
     "nome": "31 · Motor ligado/desligado no fogo do painel",
     "cadencia_h": null,
     "ultima": "2026-10-16T08:56:27Z",
-    "idade_h": 42.3,
+    "idade_h": 43.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 5,
@@ -602,8 +597,8 @@
     "arquivo": "motores-da-vez.yml",
     "nome": "22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro)",
     "cadencia_h": 1.0,
-    "ultima": "2026-10-18T02:53:05Z",
-    "idade_h": 0.4,
+    "ultima": "2026-10-18T03:16:51Z",
+    "idade_h": 0.6,
     "ultima_conclusao": null,
     "sucesso_pct": 89,
     "execucoes_vistas": 10,
@@ -614,7 +609,7 @@
     "nome": "34 · Motores de empresas (semanal, com recuperação)",
     "cadencia_h": 24.0,
     "ultima": "2026-10-17T10:57:11Z",
-    "idade_h": 16.3,
+    "idade_h": 16.9,
     "ultima_conclusao": "success",
     "sucesso_pct": 67,
     "execucoes_vistas": 6,
@@ -624,10 +619,10 @@
     "arquivo": "piloto.yml",
     "nome": "07 · Piloto — IA local da Biblioteca (benchmark e ciclos)",
     "cadencia_h": 2.0,
-    "ultima": "2026-10-18T03:11:15Z",
+    "ultima": "2026-10-18T03:49:48Z",
     "idade_h": 0.1,
     "ultima_conclusao": null,
-    "sucesso_pct": 89,
+    "sucesso_pct": 100,
     "execucoes_vistas": 10,
     "estado": "ok"
    },
@@ -635,8 +630,8 @@
     "arquivo": "publicar-painel.yml",
     "nome": "04 · Publicar painel Eldorado",
     "cadencia_h": 6.0,
-    "ultima": "2026-10-18T03:07:55Z",
-    "idade_h": 0.1,
+    "ultima": "2026-10-18T03:53:03Z",
+    "idade_h": 0.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -646,10 +641,10 @@
     "arquivo": "retrospectivo-cinco-anos.yml",
     "nome": "03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)",
     "cadencia_h": 6.0,
-    "ultima": "2026-10-17T20:16:16Z",
-    "idade_h": 7.0,
-    "ultima_conclusao": "failure",
-    "sucesso_pct": 50,
+    "ultima": "2026-10-18T03:31:56Z",
+    "idade_h": 0.4,
+    "ultima_conclusao": null,
+    "sucesso_pct": 44,
     "execucoes_vistas": 10,
     "estado": "falha"
    },
@@ -658,7 +653,7 @@
     "nome": "02 · Alexandria — revisão mensal de leis e procedimentos",
     "cadencia_h": 24.0,
     "ultima": "2026-10-01T10:36:25Z",
-    "idade_h": 400.7,
+    "idade_h": 401.3,
     "ultima_conclusao": "success",
     "sucesso_pct": 50,
     "execucoes_vistas": 2,
@@ -669,7 +664,7 @@
     "nome": "37 · Sala de controle em tempo real",
     "cadencia_h": 0.16666666666666666,
     "ultima": "2026-10-18T02:51:13Z",
-    "idade_h": 0.4,
+    "idade_h": 1.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -680,7 +675,7 @@
     "nome": "00 · Sentinela diária de editais",
     "cadencia_h": 24.0,
     "ultima": "2026-10-17T12:19:37Z",
-    "idade_h": 14.9,
+    "idade_h": 15.6,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -691,7 +686,7 @@
     "nome": "15 · Sondagem dos agregadores de editais",
     "cadencia_h": null,
     "ultima": "2026-09-28T21:28:22Z",
-    "idade_h": 461.8,
+    "idade_h": 462.4,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -702,7 +697,7 @@
     "nome": "17 · Sondagem das fontes com falha",
     "cadencia_h": null,
     "ultima": "2026-09-29T16:13:01Z",
-    "idade_h": 443.0,
+    "idade_h": 443.7,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -713,7 +708,7 @@
     "nome": "13 · Sondagem das fontes de destinação tributária (Receita Federal e histórico da Lei do Esporte)",
     "cadencia_h": null,
     "ultima": "2026-09-27T09:15:47Z",
-    "idade_h": 498.0,
+    "idade_h": 498.6,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -724,7 +719,7 @@
     "nome": "13 · Sondagem dos Ministérios Públicos (motor 12 — MP-GO/Destina, MPT-GO, MPU)",
     "cadencia_h": null,
     "ultima": "2026-10-02T21:15:51Z",
-    "idade_h": 366.0,
+    "idade_h": 366.6,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 3,
@@ -735,7 +730,7 @@
     "nome": "21 · Status dos motores (a cada 6 horas)",
     "cadencia_h": 4.0,
     "ultima": "2026-10-17T21:45:11Z",
-    "idade_h": 5.5,
+    "idade_h": 6.1,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -746,7 +741,7 @@
     "nome": "23 · Teste de acionamento dos motores (um por vez, na ordem do painel)",
     "cadencia_h": null,
     "ultima": "2026-10-02T23:03:18Z",
-    "idade_h": 364.2,
+    "idade_h": 364.8,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -757,7 +752,7 @@
     "nome": "24 · Teste da ponte Hostgator (páginas e motores que bloqueiam a nuvem)",
     "cadencia_h": null,
     "ultima": "2026-10-03T04:09:08Z",
-    "idade_h": 359.1,
+    "idade_h": 359.7,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -768,7 +763,7 @@
     "nome": "38 · Treino dos motores — fonte oficial e PDF do edital",
     "cadencia_h": 168.0,
     "ultima": "2026-10-15T02:18:07Z",
-    "idade_h": 73.0,
+    "idade_h": 73.6,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 8,
@@ -779,7 +774,7 @@
     "nome": "40 · Varredura de referência dos motores (Goiânia, Goiás, Câmara, ALEGO)",
     "cadencia_h": null,
     "ultima": "2026-10-15T02:27:40Z",
-    "idade_h": 72.8,
+    "idade_h": 73.4,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -832,11 +827,19 @@
  },
  "workflow": {
   "comando": {
-   "atualizado_em": "2026-10-18T02:52:39+00:00",
-   "ciclos_hoje": 0,
-   "vermelhos_hoje": 6,
+   "atualizado_em": "2026-10-18T03:15:59+00:00",
+   "ciclos_hoje": 1,
+   "vermelhos_hoje": 0,
    "etapas_com_erro_hoje": 0,
-   "fases_puladas_hoje": {},
+   "fases_puladas_hoje": {
+    "modalidade": 1,
+    "treinar_rede": 1,
+    "expurgo": 1,
+    "migracao_livros": 1,
+    "unir_livros": 1,
+    "biblioteca_diaria": 1,
+    "vigilancia_diaria": 1
+   },
    "ultimo_ciclo": {
     "estado": "verde",
     "novos_na_base": 0,
@@ -887,16 +890,17 @@
   },
   "maestro": {
    "planejados": 132,
-   "cobertura_percentual": 79.5,
+   "cobertura_percentual": 5.3,
    "cobertura": {
-    "completa": 105,
-    "parcial": 27
+    "completa": 7,
+    "parcial": 6,
+    "pendente": 119
    },
-   "dia_fechado": true
+   "dia_fechado": false
   },
   "retentativa": {
-   "aguardando_retentativa": 1206,
-   "fora_da_fila": 90,
+   "aguardando_retentativa": 1204,
+   "fora_da_fila": 88,
    "fora_da_fila_por_escopo": {
     "outras-oportunidades-1": 4,
     "outras-oportunidades-6": 4,
@@ -908,7 +912,7 @@
     "outras-oportunidades-2": 2,
     "plat-empresas-editais-incentivados": 2,
     "f260-captacao-238": 2,
-    "cartorio": 48,
+    "cartorio": 46,
     "outras-oportunidades-7": 3,
     "f260-captacao-242": 1,
     "f260-captacao-224": 1,
@@ -919,7 +923,7 @@
    },
    "regra": "volta em 30 min; sai após 5 tentativas com o mesmo erro",
    "destinos": {
-    "Claude no Chrome": 48,
+    "Claude no Chrome": 46,
     "rota quebrada": 0,
     "ponte ou Chrome": 40,
     "sem destino": 2
@@ -969,90 +973,18 @@
    }
   },
   "legislativo": {
-   "atualizado_em": "2026-10-18T03:14:51+00:00",
-   "proposicoes": 12
+   "atualizado_em": "2026-10-18T03:53:08+00:00",
+   "proposicoes": 11
   }
  },
  "decisoes": [
   {
-   "etapa": "decidir",
-   "decisao": "motores escolhidos para ler na passagem",
-   "regra": "todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
-   "conferidos": 132,
-   "incorretos": 0,
-   "veredito": "correto",
-   "exemplos": []
-  },
-  {
-   "etapa": "qualificar",
-   "decisao": "oportunidades abertas para associação",
-   "regra": "pregão, registro de preços, credenciamento de prestadores, contratação de empresa, OS da saúde e seleção de pessoal não são oportunidade (ruído ou acompanhar)",
-   "conferidos": 190,
-   "incorretos": 0,
-   "veredito": "correto",
-   "exemplos": []
-  },
-  {
-   "etapa": "legislativo",
-   "decisao": "atos legislativos fora das oportunidades",
-   "regra": "projeto de lei, utilidade pública e orçamento vão ao acompanhamento legislativo, nunca às abertas",
-   "conferidos": 190,
-   "incorretos": 0,
-   "veredito": "correto",
-   "exemplos": []
-  },
-  {
-   "etapa": "prazo",
-   "decisao": "oportunidades contadas como abertas",
-   "regra": "prazo vencido sai das abertas",
-   "conferidos": 190,
-   "incorretos": 0,
-   "veredito": "correto",
-   "exemplos": []
-  },
-  {
-   "etapa": "site_oficial",
-   "decisao": "link oficial gravado no repositório",
-   "regra": "agregador ou replicador nunca é link oficial",
-   "conferidos": 127,
-   "incorretos": 0,
-   "veredito": "correto",
-   "exemplos": []
-  },
-  {
-   "etapa": "certificar",
-   "decisao": "itens certificados pelo Cartório",
-   "regra": "todo item certificado tem trecho literal e documento",
-   "conferidos": 2711,
-   "incorretos": 0,
-   "veredito": "correto",
-   "exemplos": []
-  },
-  {
-   "etapa": "validar",
-   "decisao": "validação por exceção",
-   "regra": "só valida sozinho com acerto do Cartório ≥ 85% no gabarito e link oficial aprovado na curadoria",
+   "etapa": "erro",
+   "decisao": "conferência das decisões",
+   "regra": "",
    "conferidos": 0,
    "incorretos": 0,
-   "veredito": "correto",
-   "exemplos": []
-  },
-  {
-   "etapa": "farol",
-   "decisao": "oportunidades prontas para o Farol",
-   "regra": "pronta só com prazo vigente e link oficial aprovado na curadoria",
-   "conferidos": 20,
-   "incorretos": 0,
-   "veredito": "correto",
-   "exemplos": []
-  },
-  {
-   "etapa": "biblioteca",
-   "decisao": "livros da Biblioteca",
-   "regra": "ato legislativo não gera livro",
-   "conferidos": 2694,
-   "incorretos": 0,
-   "veredito": "correto",
+   "veredito": "não conferido: KeyError: 'dado'",
    "exemplos": []
   }
  ],
@@ -1093,7 +1025,7 @@
   {
    "codigo": "fluxo_falhando",
    "gravidade": "alta",
-   "texto": "fluxo '03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)' falhou nas últimas execuções (50% de sucesso)",
+   "texto": "fluxo '03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)' falhou nas últimas execuções (44% de sucesso)",
    "correcao": "investigar o fluxo (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1101,7 +1033,7 @@
   {
    "codigo": "oportunidade_sem_livro",
    "gravidade": "alta",
-   "texto": "1 de 190 oportunidades abertas sem livro e sem regra que justifique",
+   "texto": "1 de 224 oportunidades abertas sem livro e sem regra que justifique",
    "correcao": "criar/vincular livros",
    "quantidade": 1,
    "exemplos": [
@@ -1121,9 +1053,26 @@
    ]
   },
   {
+   "codigo": "decisao_decidir",
+   "gravidade": "media",
+   "texto": "[decidir] motores escolhidos para ler na passagem: 125 de 132 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
+   "correcao": "investigar o comando (sem correção automática)",
+   "quantidade": 125,
+   "exemplos": [
+    "plat-estaduais-go-gov",
+    "plat-prefeituras-50-go",
+    "outras-oportunidades-7",
+    "plat-empresas-editais-incentivados",
+    "judiciario-cnj-tjgo",
+    "plataforma-mapas-culturais",
+    "empresas-incentivadas",
+    "judiciario-cnj"
+   ]
+  },
+  {
    "codigo": "fluxo_atrasado",
    "gravidade": "media",
-   "texto": "fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 351.3 h (cadência 24.0 h)",
+   "texto": "fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 352.0 h (cadência 24.0 h)",
    "correcao": "investigar o agendamento (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1131,7 +1080,7 @@
   {
    "codigo": "fluxo_atrasado",
    "gravidade": "media",
-   "texto": "fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 400.7 h (cadência 24.0 h)",
+   "texto": "fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 401.3 h (cadência 24.0 h)",
    "correcao": "investigar o agendamento (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1143,22 +1092,22 @@
    "correcao": "refazer a tela",
    "quantidade": 54,
    "exemplos": [
-    "Chamamento público publicado no Diário Oficial em 14/08/2026 — São Paulo / Iracemápolis [op-d5a3f3e58937]",
     "Chamamento público publicado no Diário Oficial em 17/09/2026 — São Paulo / Mogi Guaçu [op-296e17f659ad]",
-    "Chamamento público publicado no Diário Oficial em 11/09/2026 — São Paulo / Monteiro Lobato [op-5545222abab7]",
-    "Chamamento público publicado no Diário Oficial em 25/09/2026 — São Paulo / Valinhos [op-77795f555424]",
     "Chamamento Público Nº 005/2026 para Seleção de Projetos para firmar Termo de execução Cultural com Recursos… —… — Bahia [op-c9b9f4f6840c]",
-    "Chamamento público publicado no Diário Oficial em 20/08/2026 — Bahia / Ituaçu [op-3e753bd338c7]",
-    "Chamamento público publicado no Diário Oficial em 21/08/2026 — Paraná / Pinhais [op-6c00d5782f6b]",
-    "Edital de Credenciamento de Organizações da Sociedade Civil - OSC Nº. 02/ 2026 — São Paulo [op-e5acc44fdef1]"
+    "Edital de Credenciamento de Organizações da Sociedade Civil - OSC Nº. 02/ 2026 — São Paulo [op-e5acc44fdef1]",
+    "Chamamento público publicado no Diário Oficial em 22/09/2026 — Alagoas / Igaci [op-abc796954c80]",
+    "Edital ocupa varjota 2026 de apoio a ações culturais e formativas do município de varjota - política nacional … — Ceará [op-105a55ba7bdd]",
+    "Chamamento público publicado no Diário Oficial em 14/09/2026 — Minas Gerais / Uberaba [op-1b458a574c96]",
+    "Chamamento público publicado no Diário Oficial em 17/08/2026 — Sergipe / Simão Dias [op-9e7d4afa9055]",
+    "Promac 2026 — Programa Municipal de Apoio a Projetos Culturais (SP) — São Paulo / São Paulo [op-b442871d369a]"
    ]
   },
   {
    "codigo": "pagina_fora_da_fila",
    "gravidade": "media",
-   "texto": "90 página(s)/documento(s) fora da fila após 5 erros iguais",
+   "texto": "88 página(s)/documento(s) fora da fila após 5 erros iguais",
    "correcao": "corrigir a rota ou ler no Chrome (sem correção automática)",
-   "quantidade": 90,
+   "quantidade": 88,
    "exemplos": [
     "https://www.boavista.rr.gov.br/",
     "https://tuifund.com/fo/2026-2027-grants-and-funding-opportunities-for-ngos-and-organizations/",
@@ -1229,9 +1178,9 @@
   {
    "codigo": "sem_site_oficial",
    "gravidade": "media",
-   "texto": "63 abertas ainda sem site oficial",
+   "texto": "65 abertas ainda sem site oficial",
    "correcao": "Cartório/Interceptador (sem correção automática imediata)",
-   "quantidade": 63,
+   "quantidade": 65,
    "exemplos": [
     "Aviso de Chamamento Público Credenciamento Nº 006/2026 [op-9d5d12082c22]",
     "Chamamento Público Nº 8/2026 — Política Nacional Aldir Blanc (Silvânia [op-op-abd8d70ace8e]",
@@ -1246,18 +1195,18 @@
   {
    "codigo": "sem_prazo",
    "gravidade": "baixa",
-   "texto": "118 abertas sem prazo de inscrição conhecido",
+   "texto": "150 abertas sem prazo de inscrição conhecido",
    "correcao": "Cartório/Interceptador (sem correção automática imediata)",
-   "quantidade": 118,
+   "quantidade": 150,
    "exemplos": [
+    "CHAMAMENTO PÚBLICO PARA O CREDENCIAMENTO DE ENTIDADES COMUNITÁRIAS, SE [op-1f6b2161a61c]",
     "Instituto Clima e Sociedade abre edital de até R$ 500 mil para projeto [op-op-aff71483f39b]",
     "Instituto chamex lanca edital educacao com cidadania com investimento  [rec-r30milporprojeto]",
+    "EDITAL DE PREMIAÇÃO CULTURAL Nº 01/2026 – PNAB [op-099347dd0e7c]",
+    "credenciamento de instituição especializada, preferencialmente Organiz [op-dbb5c5ebd2a3]",
     "MCTI (ciência e tecnologia) — EDITAL DE 15 DE JUNHO DE 2026 [b0f47ddd92d4370c18fd]",
     "MCTI (ciência e tecnologia) — EDITAL DE 3 DE JUNHO DE 2026 [838d74fe0f1282796d84]",
-    "Chamada Pública FAPEG Nº 17/2026 – Edital Complementar à Chamada CONFA [op-op-f2c73a616aa6]",
-    "Publica��o DOE - S�mula Edital - 22/04/2025 [ce12a8f40a9e5b9c9baf]",
-    "Senar goias abre edital para doacao de bens moveis a entidades parceir [rec-tidadesparceiras]",
-    "Redion abre seleção para projetos sociais e culturais com captação via [op-nova-3919592882f0]"
+    "Chamada Pública FAPEG Nº 17/2026 – Edital Complementar à Chamada CONFA [op-op-f2c73a616aa6]"
    ]
   },
   {
@@ -1280,7 +1229,7 @@
  ],
  "contagem_problemas": {
   "alta": 6,
-  "media": 12,
+  "media": 13,
   "baixa": 2
  },
  "corrigiveis": [
