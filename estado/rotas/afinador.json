@@ -1073,9 +1073,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T08:48:12+00:00",
+  "em": "2026-10-18T08:56:09+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": false
+  "ponte_respondeu": true
  },
  "f260-captacao-238": {
   "em": "2026-10-18T07:53:17+00:00",
@@ -1823,7 +1823,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-curadoria-008": {
-  "em": "2026-10-18T08:05:43+00:00",
+  "em": "2026-10-18T08:55:18+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
@@ -1850,17 +1850,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.impactarte.org.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 5,
-    "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.impactarte.org.br/feed",
     "origem": "padrão",
     "via": "direto",
@@ -1868,6 +1857,17 @@
     "links": 0,
     "sinais": 0,
     "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.impactarte.org.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 5,
+    "sinais": 0,
+    "formato": "sitemap/feed",
     "erro": null,
     "funcionou": false
    },
@@ -1894,7 +1894,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.impactarte.org.br/edital",
+    "url": "https://www.impactarte.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1905,7 +1905,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.impactarte.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.impactarte.org.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2698,8 +2698,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-234": {
-  "em": "2026-10-18T08:05:38+00:00",
-  "testes": 14,
+  "em": "2026-10-18T08:55:14+00:00",
+  "testes": 16,
   "melhor": null,
   "detalhe": [
    {
@@ -2709,13 +2709,42 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/editais-iu",
+    "origem": "biblioteca",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
     "url": "https://www.institutounibanco.org.br/",
     "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/",
+    "origem": "rota original",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/feed",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2745,17 +2774,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutounibanco.org.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -2778,7 +2796,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/edital",
+    "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2789,7 +2807,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.institutounibanco.org.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3683,13 +3701,24 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-224": {
-  "em": "2026-10-18T08:06:10+00:00",
+  "em": "2026-10-18T08:55:42+00:00",
   "testes": 18,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://fundacaotelefonicavivo.org.br/",
     "origem": "rota original",
+    "via": "direto",
+    "pontos": 1,
+    "links": 122,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/feed",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 1,
     "links": 122,
@@ -3710,17 +3739,6 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaotelefonicavivo.org.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 122,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://fundacaotelefonicavivo.org.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -3758,17 +3776,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaotelefonicavivo.org.br/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 113,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -3779,6 +3786,17 @@
     "links": 0,
     "sinais": 0,
     "formato": "json",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 113,
+    "sinais": 0,
+    "formato": "html",
     "erro": null,
     "funcionou": false
    },
@@ -4784,7 +4802,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-228": {
-  "em": "2026-10-18T08:11:55+00:00",
+  "em": "2026-10-18T08:55:49+00:00",
   "testes": 24,
   "melhor": null,
   "detalhe": [
@@ -4809,7 +4827,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/sitemap.xml",
+    "url": "https://institutolocaliza.com.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4819,7 +4837,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/sitemap.xml",
+    "url": "https://institutolocaliza.com.br/feed",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -4829,7 +4847,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/feed",
+    "url": "https://institutolocaliza.com.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4839,7 +4857,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/feed",
+    "url": "https://institutolocaliza.com.br/sitemap.xml",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -4889,7 +4907,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/edital",
+    "url": "https://institutolocaliza.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4899,7 +4917,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/edital",
+    "url": "https://institutolocaliza.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -4909,7 +4927,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://institutolocaliza.com.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4919,7 +4937,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://institutolocaliza.com.br/edital",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -4952,7 +4970,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-242": {
-  "em": "2026-10-18T08:12:12+00:00",
+  "em": "2026-10-18T08:56:02+00:00",
   "testes": 22,
   "melhor": null,
   "detalhe": [
@@ -4968,6 +4986,26 @@
     "funcionou": false
    },
    {
+    "url": "https://www.undp.org/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.undp.org/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.undp.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -4979,26 +5017,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.undp.org/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.undp.org/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.undp.org/editais",
     "origem": "padrão",
     "via": "direto",
@@ -5039,7 +5057,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.undp.org/edital",
+    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5049,7 +5067,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.undp.org/edital",
+    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -5059,7 +5077,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.undp.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5069,7 +5087,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.undp.org/edital",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -5122,7 +5140,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-rouanet-cultura-gov-br": {
-  "em": "2026-10-18T08:12:21+00:00",
+  "em": "2026-10-18T08:56:09+00:00",
   "testes": 24,
   "melhor": null,
   "detalhe": [
@@ -5147,7 +5165,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
+    "url": "https://rouanet.cultura.gov.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5157,7 +5175,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
+    "url": "https://rouanet.cultura.gov.br/feed",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -5167,7 +5185,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/feed",
+    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5177,7 +5195,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/feed",
+    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -5227,7 +5245,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/edital",
+    "url": "https://rouanet.cultura.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5237,7 +5255,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/edital",
+    "url": "https://rouanet.cultura.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -5247,7 +5265,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://rouanet.cultura.gov.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5257,7 +5275,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://rouanet.cultura.gov.br/edital",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
