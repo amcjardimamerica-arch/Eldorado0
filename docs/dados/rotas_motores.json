@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T18:52:18+00:00",
+ "em": "2026-10-18T19:05:40+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,14 +7,10 @@
   "alterar_rota": 61,
   "rota_nova": 52,
   "via_ponte": 4,
-  "exemplos_da_rede": 22416
+  "exemplos_da_rede": 22536
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
-   [
-    "origem:rota original",
-    2.645
-   ],
    [
     "tok:secult",
     2.5203
@@ -24,16 +20,16 @@
     2.5172
    ],
    [
+    "origem:rota original",
+    2.4711
+   ],
+   [
     "tok:mpf",
     2.3964
    ],
    [
-    "tld:br",
-    2.3854
-   ],
-   [
     "origem:biblioteca",
-    2.2929
+    2.2555
    ],
    [
     "tok:unidades",
@@ -48,12 +44,16 @@
     2.0951
    ],
    [
-    "tok:feed",
-    1.9297
+    "tld:br",
+    2.0005
    ],
    [
     "tok:leipaulogustavo",
     1.8789
+   ],
+   [
+    "tok:feed",
+    1.7687
    ],
    [
     "tok:sala",
@@ -75,7 +75,7 @@
    ],
    [
     "via:ponte",
-    -2.29
+    -2.3534
    ],
    [
     "tok:content",
@@ -91,7 +91,7 @@
    ],
    [
     "origem:padrão",
-    -3.4734
+    -3.517
    ]
   ]
  },
@@ -1097,7 +1097,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T18:10:18+00:00",
+    "em": "2026-10-18T19:03:11+00:00",
     "testes": 20,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1178,8 +1178,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T18:00:58+00:00",
-    "testes": 12,
+    "em": "2026-10-18T19:02:57+00:00",
+    "testes": 23,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1205,7 +1205,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T18:10:34+00:00",
+    "em": "2026-10-18T19:03:30+00:00",
     "testes": 20,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1460,7 +1460,7 @@
     "aprendido_em": "2026-10-16T02:15:34+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T18:12:44+00:00",
+    "em": "2026-10-18T19:05:40+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1852,11 +1852,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 18,
-    "aprendido_em": "2026-10-18T18:00:54+00:00"
+    "aprendido_em": "2026-10-18T19:02:45+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T18:00:54+00:00",
-    "testes": 13,
+    "em": "2026-10-18T19:02:45+00:00",
+    "testes": 21,
     "melhor": {
      "url": "https://oakfnd.org/sitemap.xml",
      "via": "direto",
@@ -1893,13 +1893,19 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 3,
-    "aprendido_em": "2026-10-18T17:07:09+00:00"
+    "aprendido_em": "2026-10-18T19:02:17+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T18:00:30+00:00",
+    "em": "2026-10-18T19:02:17+00:00",
     "testes": 12,
-    "melhor": null,
-    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
+    "melhor": {
+     "url": "https://skoll.org/feed",
+     "via": "direto",
+     "origem": "rota original",
+     "pontos": 3,
+     "formato": "sitemap/feed"
+    },
+    "resultado": "rota nova em teste"
    }
   },
   "f260-captacao-241": {
