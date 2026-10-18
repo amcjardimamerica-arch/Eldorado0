@@ -118,8 +118,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "dj-trf1-go": {
-  "em": "2026-10-18T07:32:43+00:00",
-  "testes": 15,
+  "em": "2026-10-18T08:27:34+00:00",
+  "testes": 14,
   "melhor": {
    "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
    "via": "direto",
@@ -151,7 +151,7 @@
     "funcionou": true
    },
    {
-    "url": "https://www.trf1.jus.br/sitemap.xml",
+    "url": "https://www.trf1.jus.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -161,17 +161,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.trf1.jus.br/feed",
+    "url": "https://www.trf1.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -211,7 +201,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.trf1.jus.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -284,7 +274,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-196": {
-  "em": "2026-10-18T07:28:06+00:00",
+  "em": "2026-10-18T08:27:32+00:00",
   "testes": 17,
   "melhor": {
    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
@@ -317,17 +307,6 @@
     "funcionou": true
    },
    {
-    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/mpf-divulga-lista-de-instituicoes-selecionadas-para-receber-bens-doados",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 5,
-    "links": 404,
-    "sinais": 2,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-se/destinacao-de-bens-e-valores/edital-prse-1-2025-chamamento-publico-destinacao-de-bens-e-valores-assinado.pdf/view",
     "origem": "biblioteca",
     "via": "direto",
@@ -339,12 +318,12 @@
     "funcionou": true
    },
    {
-    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-ba/destinacao-de-bens-e-valores",
+    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/mpf-divulga-lista-de-instituicoes-selecionadas-para-receber-bens-doados",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 13,
-    "links": 418,
-    "sinais": 6,
+    "pontos": 5,
+    "links": 404,
+    "sinais": 2,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -355,6 +334,17 @@
     "via": "direto",
     "pontos": 13,
     "links": 427,
+    "sinais": 6,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-ba/destinacao-de-bens-e-valores",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 13,
+    "links": 418,
     "sinais": 6,
     "formato": "html",
     "erro": null,
@@ -394,27 +384,7 @@
     "funcionou": true
    },
    {
-    "url": "https://www.mpf.mp.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.mpf.mp.br/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mpt.mp.br/feed",
+    "url": "https://www.mpf.mp.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -426,6 +396,16 @@
    {
     "url": "https://www.mpf.mp.br/sitemap.xml",
     "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mpt.mp.br/sitemap.xml",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -434,7 +414,17 @@
     "funcionou": false
    },
    {
-    "url": "https://mpt.mp.br/sitemap.xml",
+    "url": "https://www.mpf.mp.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mpt.mp.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1093,9 +1083,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T08:19:48+00:00",
+  "em": "2026-10-18T08:30:04+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": true
+  "ponte_respondeu": false
  },
  "f260-captacao-238": {
   "em": "2026-10-18T07:53:17+00:00",
@@ -1984,7 +1974,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "alego-pl": {
-  "em": "2026-10-18T07:35:02+00:00",
+  "em": "2026-10-18T08:29:36+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://portal.al.go.leg.br/",
@@ -2023,7 +2013,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -2047,26 +2037,6 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
     "url": "https://portal.al.go.leg.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -2078,6 +2048,26 @@
    },
    {
     "url": "https://alegodigital.al.go.leg.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2107,7 +2097,7 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://portal.al.go.leg.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2117,7 +2107,7 @@
     "funcionou": false
    },
    {
-    "url": "https://alegodigital.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://alegodigital.al.go.leg.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3867,7 +3857,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-240": {
-  "em": "2026-10-18T07:35:34+00:00",
+  "em": "2026-10-18T08:30:04+00:00",
   "testes": 14,
   "melhor": null,
   "detalhe": [
@@ -3904,16 +3894,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unesco.org/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.unesco.org/feed",
     "origem": "padrão",
     "via": "direto",
@@ -3945,6 +3925,16 @@
    },
    {
     "url": "https://www.unesco.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.unesco.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8408,7 +8398,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-255": {
-  "em": "2026-10-18T07:35:16+00:00",
+  "em": "2026-10-18T08:29:50+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8420,17 +8410,6 @@
     "links": 103,
     "sinais": 0,
     "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 12,
-    "sinais": 0,
-    "formato": "sitemap/feed",
     "erro": null,
     "funcionou": false
    },
@@ -8473,6 +8452,17 @@
     "links": 0,
     "sinais": 0,
     "formato": "json",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 12,
+    "sinais": 0,
+    "formato": "sitemap/feed",
     "erro": null,
     "funcionou": false
    },
@@ -11791,7 +11781,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-011": {
-  "em": "2026-10-18T07:27:42+00:00",
+  "em": "2026-10-18T08:27:18+00:00",
   "testes": 20,
   "melhor": {
    "url": "https://mariaemilia.org.br/feed",
@@ -11888,66 +11878,6 @@
     "funcionou": true
    },
    {
-    "url": "https://mariaemilia.org.br/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mariaemilia.org.br/noticias",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://mariaemilia.org.br/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mariaemilia.org.br/chamadas-publicas",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://mariaemilia.org.br/chamamento-publico",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mariaemilia.org.br/chamamento-publico",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://mariaemilia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -11959,13 +11889,74 @@
     "funcionou": true
    },
    {
-    "url": "https://mariaemilia.org.br/chamamentos",
+    "url": "https://mariaemilia.org.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/chamadas-publicas",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/chamadas-publicas",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/chamamento-publico",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/wp-content/uploads/2026/08/Edital-FME-Transforma-2026.pdf",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    }
   ],
