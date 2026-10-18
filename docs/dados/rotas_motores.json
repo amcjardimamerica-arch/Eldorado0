@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T09:39:06+00:00",
+ "em": "2026-10-18T09:46:47+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,10 +7,14 @@
   "alterar_rota": 61,
   "rota_nova": 52,
   "via_ponte": 3,
-  "exemplos_da_rede": 14852
+  "exemplos_da_rede": 14977
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
+   [
+    "tld:br",
+    2.615
+   ],
    [
     "tok:secult",
     2.5203
@@ -24,20 +28,16 @@
     2.3639
    ],
    [
+    "origem:rota original",
+    2.2717
+   ],
+   [
     "tok:unidades",
     2.2121
    ],
    [
-    "origem:rota original",
-    1.9815
-   ],
-   [
     "tok:imprensa",
-    1.9644
-   ],
-   [
-    "tld:br",
-    1.9404
+    2.0045
    ],
    [
     "tok:leipaulogustavo",
@@ -48,26 +48,26 @@
     1.7667
    ],
    [
+    "tok:feed",
+    1.7663
+   ],
+   [
     "tok:sala",
-    1.6387
+    1.6788
    ],
    [
     "tok:portarias",
     1.5628
-   ],
-   [
-    "origem:biblioteca",
-    1.5589
    ]
   ],
   "piores_sinais": [
    [
-    "tok:cultura",
-    -1.7481
+    "via:ponte",
+    -1.7166
    ],
    [
-    "sapl:False",
-    -1.906
+    "tok:cultura",
+    -1.7481
    ],
    [
     "tok:ccs",
@@ -76,6 +76,10 @@
    [
     "tipo:internacional",
     -2.275
+   ],
+   [
+    "origem:padrão",
+    -2.637
    ],
    [
     "tok:content",
@@ -87,11 +91,7 @@
    ],
    [
     "origem:câmara",
-    -2.7512
-   ],
-   [
-    "origem:padrão",
-    -3.0303
+    -2.753
    ]
   ]
  },
@@ -580,7 +580,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T08:55:49+00:00",
+    "em": "2026-10-18T09:43:54+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -625,7 +625,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T08:56:09+00:00",
+    "em": "2026-10-18T09:44:14+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -667,7 +667,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T08:56:02+00:00",
+    "em": "2026-10-18T09:44:08+00:00",
     "testes": 22,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1124,7 +1124,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T09:01:34+00:00",
+    "em": "2026-10-18T09:44:22+00:00",
     "testes": 22,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1296,10 +1296,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 5,
-    "aprendido_em": "2026-10-18T09:02:47+00:00"
+    "aprendido_em": "2026-10-18T09:46:39+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T09:02:47+00:00",
+    "em": "2026-10-18T09:46:39+00:00",
     "testes": 17,
     "melhor": {
      "url": "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027",
@@ -2016,10 +2016,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 14,
-    "aprendido_em": "2026-10-18T09:02:59+00:00"
+    "aprendido_em": "2026-10-18T09:46:47+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T09:02:59+00:00",
+    "em": "2026-10-18T09:46:47+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
