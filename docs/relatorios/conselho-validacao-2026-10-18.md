@@ -157,7 +157,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 3,
- "exemplos_da_rede_de_rotas": 12780
+ "exemplos_da_rede_de_rotas": 12895
 }
 ```
 
@@ -269,8 +269,8 @@
    "achados": 52
   },
   "outras-oportunidades-3": {
-   "ultima": "2026-10-18T06:57:04+00:00",
-   "duracao_s": 80,
+   "ultima": "2026-10-18T07:06:10+00:00",
+   "duracao_s": 72,
    "achados": 5
   },
   "outras-oportunidades-4": {
@@ -279,14 +279,14 @@
    "achados": 4
   },
   "outras-oportunidades-5": {
-   "ultima": "2026-10-18T06:20:35+00:00",
-   "duracao_s": 109,
+   "ultima": "2026-10-18T07:04:33+00:00",
+   "duracao_s": 89,
    "achados": 11
   },
   "outras-oportunidades-6": {
-   "ultima": "2026-10-18T06:18:11+00:00",
-   "duracao_s": 91,
-   "achados": 20
+   "ultima": "2026-10-18T07:03:03+00:00",
+   "duracao_s": 71,
+   "achados": 18
   },
   "outras-oportunidades-7": {
    "ultima": "2026-10-18T06:51:53+00:00",
@@ -294,8 +294,8 @@
    "achados": 13
   },
   "outras-oportunidades-8": {
-   "ultima": "2026-10-18T06:58:19+00:00",
-   "duracao_s": 74,
+   "ultima": "2026-10-18T07:07:12+00:00",
+   "duracao_s": 63,
    "achados": 1
   },
   "outras-oportunidades-2": {
