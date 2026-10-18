@@ -118,7 +118,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "dj-trf1-go": {
-  "em": "2026-10-18T04:49:20+00:00",
+  "em": "2026-10-18T05:48:04+00:00",
   "testes": 14,
   "melhor": {
    "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
@@ -211,7 +211,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/chamamento-publico",
+    "url": "https://www.trf1.jus.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -231,7 +231,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.trf1.jus.br/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -251,7 +251,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/noticias",
+    "url": "https://www.trf1.jus.br/licitacoes",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -261,7 +261,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/licitacoes",
+    "url": "https://www.trf1.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -274,7 +274,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-196": {
-  "em": "2026-10-18T04:49:17+00:00",
+  "em": "2026-10-18T05:48:01+00:00",
   "testes": 17,
   "melhor": {
    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
@@ -307,23 +307,23 @@
     "funcionou": true
    },
    {
-    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/transparencia/bens-para-doacao",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 13,
-    "links": 427,
-    "sinais": 6,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/mpf-divulga-lista-de-instituicoes-selecionadas-para-receber-bens-doados",
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 5,
     "links": 404,
     "sinais": 2,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/transparencia/bens-para-doacao",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 13,
+    "links": 427,
+    "sinais": 6,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -373,17 +373,6 @@
     "funcionou": true
    },
    {
-    "url": "https://mpt.mp.br/pgt/noticias/cadastro-de-orgaos-e-entidades-para-solicitacao-de-bens-e-recursos-oriundos-de-reversoes",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 14,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.mpf.mp.br/",
     "origem": "rota original",
     "via": "direto",
@@ -395,7 +384,7 @@
     "funcionou": true
    },
    {
-    "url": "https://mpt.mp.br/pgt/noticias/mpt-divulga-nova-portaria-e-edital-e-convoca-entidades-para-atualizar-cadastro-de-destinacoes",
+    "url": "https://mpt.mp.br/pgt/noticias/cadastro-de-orgaos-e-entidades-para-solicitacao-de-bens-e-recursos-oriundos-de-reversoes",
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 0,
@@ -406,25 +395,33 @@
     "funcionou": false
    },
    {
-    "url": "https://mpt.mp.br/pgt/noticias/nota-tecnica-no-9-2025-gt-reversoes-decisao-cautelar-stf-adpf-944.pdf/view",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 10,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://mpt.mp.br/pgt/noticias/nota-tecnica-no-9-2025-gt-reversoes-decisao-cautelar-stf-adpf-944.pdf",
-    "origem": "biblioteca",
+    "url": "https://www.mpf.mp.br/feed",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.mpf.mp.br/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mpt.mp.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -438,17 +435,17 @@
     "funcionou": false
    },
    {
-    "url": "https://www.mpf.mp.br/transparencia/editais",
+    "url": "https://mpt.mp.br/transparencia/editais",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
-    "url": "https://mpt.mp.br/transparencia/editais",
+    "url": "https://www.mpf.mp.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1087,9 +1084,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T05:42:28+00:00",
+  "em": "2026-10-18T05:50:11+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": true
+  "ponte_respondeu": false
  },
  "f260-captacao-238": {
   "em": "2026-10-18T05:10:41+00:00",
@@ -2058,7 +2055,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "alego-pl": {
-  "em": "2026-10-18T04:51:23+00:00",
+  "em": "2026-10-18T05:49:55+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://portal.al.go.leg.br/",
@@ -2091,33 +2088,13 @@
     "funcionou": true
    },
    {
-    "url": "https://portal.al.go.leg.br/feed",
-    "origem": "câmara",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/feed",
-    "origem": "câmara",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
     "url": "https://portal.al.go.leg.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -2151,16 +2128,6 @@
     "funcionou": false
    },
    {
-    "url": "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
-    "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
     "url": "https://portal.al.go.leg.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -2181,37 +2148,47 @@
     "funcionou": false
    },
    {
+    "url": "https://portal.al.go.leg.br/feed",
+    "origem": "câmara",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/feed",
+    "origem": "câmara",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
     "url": "https://portal.al.go.leg.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
     "url": "https://alegodigital.al.go.leg.br/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://portal.al.go.leg.br/chamamento-publico",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2229,6 +2206,27 @@
     "sinais": 0,
     "erro": "URLError",
     "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/chamadas-publicas",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/noticias",
+    "origem": "câmara",
+    "via": "direto",
+    "pontos": 13,
+    "links": 211,
+    "sinais": 6,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
    }
   ],
   "resultado": "rota nova em teste"
@@ -8413,7 +8411,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-255": {
-  "em": "2026-10-18T04:51:39+00:00",
+  "em": "2026-10-18T05:50:11+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8440,16 +8438,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.cjrfund.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -8458,6 +8446,16 @@
     "sinais": 0,
     "formato": "sitemap/feed",
     "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -8481,7 +8479,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/chamamento-publico",
+    "url": "https://www.cjrfund.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8501,18 +8499,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "json",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/noticias",
+    "url": "https://www.cjrfund.org/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8539,6 +8526,17 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
     "funcionou": false
    }
   ],
@@ -9683,8 +9681,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-248": {
-  "em": "2026-10-15T23:04:10+00:00",
-  "testes": 12,
+  "em": "2026-10-18T05:47:47+00:00",
+  "testes": 23,
   "melhor": null,
   "detalhe": [
    {
@@ -9699,6 +9697,26 @@
     "funcionou": false
    },
    {
+    "url": "https://www.opensocietyfoundations.org/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.opensocietyfoundations.org/feed",
     "origem": "padrão",
     "via": "direto",
@@ -9706,6 +9724,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -9719,6 +9747,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.opensocietyfoundations.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.opensocietyfoundations.org/editais",
     "origem": "padrão",
     "via": "direto",
@@ -9729,23 +9767,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/sitemap.xml",
+    "url": "https://www.opensocietyfoundations.org/editais",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.opensocietyfoundations.org/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -9759,13 +9787,33 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/chamamento-publico",
+    "url": "https://www.opensocietyfoundations.org/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -9779,27 +9827,17 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.opensocietyfoundations.org/chamadas-publicas",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.opensocietyfoundations.org/licitacoes",
+    "url": "https://www.opensocietyfoundations.org/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -13997,6 +14035,186 @@
     "links": 0,
     "sinais": 0,
     "erro": "TimeoutError",
+    "funcionou": false
+   }
+  ],
+  "resultado": "rota nova em teste"
+ },
+ "outras-oportunidades-8": {
+  "em": "2026-10-18T05:47:34+00:00",
+  "testes": 22,
+  "melhor": {
+   "url": "https://comitedeculturasc.org/editais",
+   "via": "direto",
+   "origem": "padrão",
+   "pontos": 31,
+   "formato": "html"
+  },
+  "detalhe": [
+   {
+    "url": "https://www.diariomunicipal.com.br/maceio/",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 4,
+    "links": 17,
+    "sinais": 2,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.diariomunicipal.com.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 3,
+    "links": 39,
+    "sinais": 1,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.diariomunicipal.com.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 3,
+    "links": 39,
+    "sinais": 1,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.diariomunicipal.com.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.diariomunicipal.com.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.diariomunicipal.com.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 3,
+    "links": 39,
+    "sinais": 1,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://comitedeculturasc.org/editais/edital-ambev-brasilidades-2026-2026",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 3,
+    "links": 32,
+    "sinais": 1,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.diariomunicipal.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.diariomunicipal.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.diariomunicipal.com.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 3,
+    "links": 39,
+    "sinais": 1,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://comitedeculturasc.org/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://comitedeculturasc.org/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://comitedeculturasc.org/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://comitedeculturasc.org/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://comitedeculturasc.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://comitedeculturasc.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    }
   ],

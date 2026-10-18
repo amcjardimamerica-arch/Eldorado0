@@ -110,7 +110,7 @@
   {
    "motor": "outras-oportunidades-2",
    "achados_total_1a": 55,
-   "achados_total_agora": 0,
+   "achados_total_agora": 1,
    "no_fluxo": 0,
    "confirmadas": 0
   },
@@ -154,10 +154,10 @@
 
 ```json
 {
- "pontos_com_redundancia": 17,
+ "pontos_com_redundancia": 18,
  "redundancia_vazia": [],
  "dominios_via_ponte": 3,
- "exemplos_da_rede_de_rotas": 11515
+ "exemplos_da_rede_de_rotas": 11619
 }
 ```
 
@@ -203,7 +203,7 @@
  "dia_de_referencia": "2026-10-18",
  "ativos": 172,
  "lidos_ontem": 147,
- "lidos_hoje": 127,
+ "lidos_hoje": 128,
  "nao_lidos_ontem_nem_hoje": [
   "plat-captamos",
   "plat-rede-filantropia"
@@ -264,13 +264,13 @@
  },
  "clones_que_ja_leram": {
   "outras-oportunidades-1": {
-   "ultima": "2026-10-18T04:54:44+00:00",
-   "duracao_s": 87,
+   "ultima": "2026-10-18T05:36:20+00:00",
+   "duracao_s": 108,
    "achados": 52
   },
   "outras-oportunidades-3": {
-   "ultima": "2026-10-18T04:29:30+00:00",
-   "duracao_s": 97,
+   "ultima": "2026-10-18T05:26:08+00:00",
+   "duracao_s": 90,
    "achados": 5
   },
   "outras-oportunidades-4": {
@@ -279,32 +279,32 @@
    "achados": 4
   },
   "outras-oportunidades-5": {
-   "ultima": "2026-10-18T04:46:34+00:00",
-   "duracao_s": 105,
+   "ultima": "2026-10-18T05:31:54+00:00",
+   "duracao_s": 82,
    "achados": 11
   },
   "outras-oportunidades-6": {
-   "ultima": "2026-10-18T04:33:07+00:00",
-   "duracao_s": 103,
-   "achados": 20
+   "ultima": "2026-10-18T05:29:10+00:00",
+   "duracao_s": 92,
+   "achados": 18
   },
   "outras-oportunidades-7": {
-   "ultima": "2026-10-18T04:53:17+00:00",
-   "duracao_s": 99,
+   "ultima": "2026-10-18T05:34:33+00:00",
+   "duracao_s": 108,
    "achados": 13
   },
   "outras-oportunidades-8": {
-   "ultima": "2026-10-18T04:31:24+00:00",
-   "duracao_s": 96,
+   "ultima": "2026-10-18T05:27:37+00:00",
+   "duracao_s": 89,
    "achados": 0
   },
   "outras-oportunidades-2": {
-   "ultima": "2026-10-18T04:17:58+00:00",
-   "duracao_s": 101,
-   "achados": 2
+   "ultima": "2026-10-18T05:24:38+00:00",
+   "duracao_s": 76,
+   "achados": 3
   }
  },
- "com_achado": 59
+ "com_achado": 60
 }
 ```
 
@@ -317,19 +317,19 @@
 {
  "adaptadores": {
   "plataforma-wordpress": {
-   "ultima": "2026-10-18T04:16:17+00:00",
-   "achados": 5,
+   "ultima": "2026-10-18T05:23:22+00:00",
+   "achados": 7,
    "diagnostico": {
     "sites": 20,
     "instancias": null,
     "respostas_json": 42,
-    "posts": 24,
+    "posts": 67,
     "oportunidades": null,
     "motivo_zero": null
    }
   },
   "plataforma-mapas-culturais": {
-   "ultima": "2026-10-18T04:14:19+00:00",
+   "ultima": "2026-10-18T05:20:58+00:00",
    "achados": 13,
    "diagnostico": {
     "sites": null,
