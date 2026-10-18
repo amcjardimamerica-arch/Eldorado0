@@ -1,31 +1,31 @@
 {
- "em": "2026-10-18T00:51:19+00:00",
+ "em": "2026-10-18T01:17:06+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
  "resumo": {
   "pontos_12_total": 4800,
-  "pontos_certificados": 3122,
-  "pontos_dispensados": 168,
-  "pontos_ja_constavam": 1382,
-  "pontos_faltam": 128,
-  "pct_certificado_12": 0.6854,
-  "certidoes_12_de_12": 140,
-  "certidoes_sem_item_faltando": 276,
+  "pontos_certificados": 3124,
+  "pontos_dispensados": 167,
+  "pontos_ja_constavam": 1383,
+  "pontos_faltam": 126,
+  "pct_certificado_12": 0.6856,
+  "certidoes_12_de_12": 141,
+  "certidoes_sem_item_faltando": 278,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
-  "certidoes": 2652,
-  "nesta_execucao": 14,
-  "fila_estrelas": 124,
-  "fila_livros": 2517,
-  "itens_que_faltavam": 24319,
-  "itens_obtidos": 9079,
-  "itens_dispensados": 509,
-  "eficiencia_itens": 0.394,
-  "com_link_oficial": 1800,
+  "certidoes": 2663,
+  "nesta_execucao": 13,
+  "fila_estrelas": 152,
+  "fila_livros": 2516,
+  "itens_que_faltavam": 24414,
+  "itens_obtidos": 9137,
+  "itens_dispensados": 511,
+  "eficiencia_itens": 0.395,
+  "com_link_oficial": 1807,
   "taxa_link_oficial": 0.679,
-  "certidoes_completas": 257,
-  "para_o_interceptador": 1918,
-  "para_o_chrome": 476,
+  "certidoes_completas": 259,
+  "para_o_interceptador": 1926,
+  "para_o_chrome": 477,
   "selos_que_mudaram": {
    "bronze → ouro": 6,
    "bronze → prata": 1,
@@ -36,8 +36,8 @@
    "prata → ouro": 3
   },
   "por_degrau": {
-   "degrau 0": 1721,
-   "degrau 1": 120
+   "degrau 0": 1726,
+   "degrau 1": 122
   }
  },
  "cinza_conferidos": {
@@ -47,76 +47,76 @@
  },
  "por_item": {
   "Objeto": {
-   "faltavam": 1722,
-   "obtidos": 564,
+   "faltavam": 1730,
+   "obtidos": 570,
    "dispensados": 0,
-   "eficiencia": 0.328
+   "eficiencia": 0.329
   },
   "Prazo de inscrição": {
-   "faltavam": 1838,
-   "obtidos": 570,
-   "dispensados": 145,
-   "eficiencia": 0.389
+   "faltavam": 1846,
+   "obtidos": 575,
+   "dispensados": 146,
+   "eficiencia": 0.391
   },
   "Resultado": {
-   "faltavam": 2366,
-   "obtidos": 613,
+   "faltavam": 2375,
+   "obtidos": 618,
    "dispensados": 227,
-   "eficiencia": 0.355
+   "eficiencia": 0.356
   },
   "Prazo de recurso": {
-   "faltavam": 2329,
-   "obtidos": 532,
-   "dispensados": 45,
+   "faltavam": 2337,
+   "obtidos": 533,
+   "dispensados": 46,
    "eficiencia": 0.248
   },
   "Valor": {
-   "faltavam": 2074,
-   "obtidos": 685,
+   "faltavam": 2081,
+   "obtidos": 689,
    "dispensados": 60,
-   "eficiencia": 0.359
+   "eficiencia": 0.36
   },
   "Órgão / financiador": {
-   "faltavam": 1573,
-   "obtidos": 951,
+   "faltavam": 1580,
+   "obtidos": 957,
    "dispensados": 0,
-   "eficiencia": 0.605
+   "eficiencia": 0.606
   },
   "Território": {
-   "faltavam": 1868,
-   "obtidos": 588,
+   "faltavam": 1876,
+   "obtidos": 591,
    "dispensados": 0,
    "eficiencia": 0.315
   },
   "Esfera": {
-   "faltavam": 2101,
-   "obtidos": 1299,
+   "faltavam": 2109,
+   "obtidos": 1305,
    "dispensados": 0,
-   "eficiencia": 0.618
+   "eficiencia": 0.619
   },
   "Requisitos": {
-   "faltavam": 2302,
-   "obtidos": 609,
+   "faltavam": 2310,
+   "obtidos": 616,
    "dispensados": 0,
-   "eficiencia": 0.265
+   "eficiencia": 0.267
   },
   "Anexos": {
-   "faltavam": 1664,
-   "obtidos": 363,
+   "faltavam": 1671,
+   "obtidos": 364,
    "dispensados": 4,
-   "eficiencia": 0.221
+   "eficiencia": 0.22
   },
   "Modalidade": {
-   "faltavam": 2274,
-   "obtidos": 796,
+   "faltavam": 2283,
+   "obtidos": 803,
    "dispensados": 28,
-   "eficiencia": 0.362
+   "eficiencia": 0.364
   },
   "Área de atuação": {
-   "faltavam": 2208,
-   "obtidos": 1509,
+   "faltavam": 2216,
+   "obtidos": 1516,
    "dispensados": 0,
-   "eficiencia": 0.683
+   "eficiencia": 0.684
   }
  },
  "por_balcao": {
@@ -145,28 +145,28 @@
    "taxa_link_oficial": 1.0
   },
   "orgao": {
-   "certidoes": 1240,
-   "com_link_oficial": 993,
-   "faltavam": 11044,
-   "resolvidos": 5097,
+   "certidoes": 1243,
+   "com_link_oficial": 994,
+   "faltavam": 11060,
+   "resolvidos": 5109,
    "eficiencia": 0.462,
-   "taxa_link_oficial": 0.801
+   "taxa_link_oficial": 0.8
   },
   "privado": {
-   "certidoes": 582,
-   "com_link_oficial": 405,
-   "faltavam": 4924,
-   "resolvidos": 1474,
-   "eficiencia": 0.299,
-   "taxa_link_oficial": 0.696
+   "certidoes": 587,
+   "com_link_oficial": 409,
+   "faltavam": 4968,
+   "resolvidos": 1498,
+   "eficiencia": 0.302,
+   "taxa_link_oficial": 0.697
   },
   "pista": {
-   "certidoes": 354,
-   "com_link_oficial": 63,
-   "faltavam": 3212,
-   "resolvidos": 752,
-   "eficiencia": 0.234,
-   "taxa_link_oficial": 0.178
+   "certidoes": 357,
+   "com_link_oficial": 65,
+   "faltavam": 3247,
+   "resolvidos": 776,
+   "eficiencia": 0.239,
+   "taxa_link_oficial": 0.182
   },
   "diario": {
    "certidoes": 156,
@@ -187,20 +187,20 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2127,
-   "faltavam": 18428,
-   "resolvidos": 6515,
-   "eficiencia": 0.354,
-   "com_link_oficial": 1364,
+   "certidoes": 2136,
+   "faltavam": 18499,
+   "resolvidos": 6561,
+   "eficiencia": 0.355,
+   "com_link_oficial": 1369,
    "taxa_link_oficial": 0.641
   },
   "refeitas": {
-   "certidoes": 525,
-   "faltavam": 5891,
-   "resolvidos": 2964,
+   "certidoes": 527,
+   "faltavam": 5915,
+   "resolvidos": 2978,
    "eficiencia": 0.503,
-   "com_link_oficial": 436,
-   "taxa_link_oficial": 0.83
+   "com_link_oficial": 438,
+   "taxa_link_oficial": 0.831
   }
  },
  "por_versao": {
@@ -221,11 +221,11 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2429,
-   "faltavam": 21720,
-   "resolvidos": 8240,
-   "eficiencia": 0.379,
-   "com_link_oficial": 1628,
+   "certidoes": 2440,
+   "faltavam": 21815,
+   "resolvidos": 8300,
+   "eficiencia": 0.38,
+   "com_link_oficial": 1635,
    "taxa_link_oficial": 0.67
   },
   "revisão manual": {
@@ -240,10 +240,10 @@
  "por_abordagem": {
   "1": {
    "nome": "documento na mão",
-   "vezes": 2529,
-   "renderam": 1656,
-   "itens": 8693,
-   "links_oficiais": 1577,
+   "vezes": 2540,
+   "renderam": 1664,
+   "itens": 8753,
+   "links_oficiais": 1584,
    "taxa_de_acerto": 0.655
   },
   "2": {
@@ -256,11 +256,11 @@
   },
   "3": {
    "nome": "página oficial e citados",
-   "vezes": 332,
+   "vezes": 334,
    "renderam": 82,
    "itens": 468,
    "links_oficiais": 53,
-   "taxa_de_acerto": 0.247
+   "taxa_de_acerto": 0.246
   },
   "4": {
    "nome": "biblioteca de sites",
@@ -322,11 +322,11 @@
  "por_balcao_selo": {
   "sem_estrela": {
    "nome": "Sem estrela → bronze",
-   "certidoes": 1405,
-   "faltavam": 12709,
-   "resolvidos": 4018,
-   "eficiencia": 0.316,
-   "entraram_aqui": 1554,
+   "certidoes": 1415,
+   "faltavam": 12803,
+   "resolvidos": 4078,
+   "eficiencia": 0.319,
+   "entraram_aqui": 1564,
    "esgotadas": 0
   },
   "bronze": {
@@ -340,11 +340,11 @@
   },
   "prata": {
    "nome": "Prata → ouro",
-   "certidoes": 968,
-   "faltavam": 8759,
+   "certidoes": 969,
+   "faltavam": 8760,
    "resolvidos": 3645,
    "eficiencia": 0.416,
-   "entraram_aqui": 940,
+   "entraram_aqui": 941,
    "esgotadas": 0
   },
   "ouro": {
@@ -358,7 +358,7 @@
   }
  },
  "gabarito": {
-  "orgaos_com_gabarito": 1231,
+  "orgaos_com_gabarito": 1232,
   "itens_achados_pelo_gabarito": {
    "Prazo de recurso": 20,
    "Objeto": 68,
@@ -23986,6 +23986,122 @@
    }
   },
   {
+   "id": "op-bd2b2a2f098f",
+   "tipo": "livro",
+   "titulo": "Edital Programa Primeira Infância - Baobá",
+   "balcao": "privado",
+   "link_oficial": "https://baoba.org.br/primeira-infancia/",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto"
+   ],
+   "resolvidos": [
+    "Objeto"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T01:16:46+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": null,
+   "fim": "2021-02-25",
+   "itens": {
+    "Objeto": {
+     "valor": "ampliar as oportunidades de jovens negros acessar o ensino superior, prioritariamente a universidade pública.",
+     "trecho": "É O PROGRAMA? O Programa Já É: Educação e Equidade racial tem como objetivo ampliar as oportunidades de jovens negros acessar o ensino superior, prioritariamente a universidade pública. Dirigido a jovens de até 26 anos, residentes na cidade de São Paulo",
+     "pagina": 1,
+     "documento": "https://baoba.org.br/programa-ja-e/",
+     "metodo": "texto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T01:16:46+00:00",
+     "ganhou": [
+      "Objeto"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://baoba.org.br/primeira-infancia/",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.googletagmanager.com/ns.html?id=GTM-W5L2C5N6",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": "pagina_vazia",
+     "falha": null,
+     "oficial": null,
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://baoba.org.br/programa-ja-e-2025/",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Edital Já É 2ª Edição",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://baoba.org.br/programa-ja-e/",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Edital Já É 1ª Edição",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 1,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "ja_constava",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "ja_constava",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "op-op-e4c0e79d5ef6",
    "tipo": "estrela",
    "titulo": "Edital Rouanet nas Favelas 2 (2026): Guia de Captação — Brasil",
@@ -26103,6 +26219,262 @@
     },
     "certificados": 12,
     "dispensados": 0,
+    "ja_constavam": 0,
+    "faltam": 0,
+    "pct_certificado_12": 1.0,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-4171ed29b055",
+   "tipo": "livro",
+   "titulo": "Edital de Chamada Pública Nº 1/2026 - Programa SC Rural 2",
+   "balcao": "orgao",
+   "link_oficial": "https://sape.sc.gov.br/institucional/biblioteca-de-documentos/",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T01:15:44+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": "Secretaria de Estado da Agrigultura e da Pesca",
+   "fim": null,
+   "itens": {
+    "Órgão / financiador": {
+     "valor": "Secretaria de Estado da Agricultura e Pecuária",
+     "trecho": "Biblioteca de Documentos &#8211; SAPE &#8211; Secretaria de Estado da Agricultura e Pecuária",
+     "pagina": 1,
+     "documento": "https://sape.sc.gov.br/institucional/biblioteca-de-documentos/",
+     "metodo": "cabeçalho"
+    },
+    "Esfera": {
+     "valor": "estadual",
+     "trecho": "domínio/órgão: sape.sc.gov.br · Secretaria de Estado da Agricultura e Pecuária Secretaria de Estado da Agrigultu",
+     "pagina": 1,
+     "documento": "https://sape.sc.gov.br/institucional/biblioteca-de-documentos/",
+     "metodo": "domínio e órgão"
+    },
+    "Modalidade": {
+     "valor": "Convênio",
+     "trecho": "1 2 3 4 Convênios Federais CONVENIOS_FEDERAIS_2024.pdf 538 download(s) 450.63 KB Visualizar",
+     "pagina": 1,
+     "documento": "https://sape.sc.gov.br/institucional/biblioteca-de-documentos/",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Cultura",
+     "trecho": "termos do objeto e do título: Cultura",
+     "pagina": 1,
+     "documento": "https://sape.sc.gov.br/institucional/biblioteca-de-documentos/",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Território": {
+     "valor": "do Município de Iporã do Oeste SC Leilão",
+     "trecho": "ra Feira do Terneiro e da Terneira - Etapa II Cavalgada da Demarcação do Município de Iporã do Oeste SC Leilão Terneiros e Terneiras ATeG Painel Caçador Xanxerê Tubarão Concórdia C",
+     "pagina": 27,
+     "documento": "https://sape.sc.gov.br/wp-content/uploads/2026/06/Calendario-Oficial-de-Eventos-Agropecuarios-2026-junho.pdf.pdf",
+     "metodo": "texto"
+    },
+    "Objeto": {
+     "valor": "“Art. 31. Será considerado inexigível o chamamento público na hipótese de",
+     "trecho": ", da Lei Federal n.º 13.019, de 2014, demonstrada a singularidade do objeto: “Art. 31. Será considerado inexigível o chamamento público na hipótese de inviabilidade de competição entre as organizações da sociedade civil,",
+     "pagina": 1,
+     "documento": "https://sape.sc.gov.br/download/dispensa-chamamento-no-004-2026-araquari/?wpdmdl=7270&#038;refresh=6ad41dc4dfbd31792286148",
+     "metodo": "texto"
+    },
+    "Resultado": {
+     "valor": "5 (cinco) dias",
+     "trecho": "interessados que desejarem interpor recurso contra o resultado preliminar previsto na Etapa 6 deverão fazê-lo no prazo de 5 (cinco) dias úteis, contado da data de sua divulgação, mediante",
+     "pagina": 8,
+     "documento": "https://sape.sc.gov.br/download/edital-de-chamada-publica-no-01-2026-selecao-de-manifestacoes-de-interesse-mis-para-acesso-ao-apoio-direto-do-programa-sc-rural-2/?wpdmdl=7309&#038;refresh=6ad41dc5854101792286149",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "5 (cinco) dias úteis",
+     "trecho": "el: Proponente Descrição: Os interessados que desejarem interpor recurso contra o resultado preliminar previsto na Etapa 6 deverão fazê-lo no prazo de 5 (cinco) dias úteis, contado da data de sua divulgação, mediante o pree",
+     "pagina": 8,
+     "documento": "https://sape.sc.gov.br/download/edital-de-chamada-publica-no-01-2026-selecao-de-manifestacoes-de-interesse-mis-para-acesso-ao-apoio-direto-do-programa-sc-rural-2/?wpdmdl=7309&#038;refresh=6ad41dc5854101792286149",
+     "metodo": "seção"
+    },
+    "Valor": {
+     "valor": "R$17.500,00",
+     "trecho": "Subprojeto de apoio à produção sustentável [TABELA] Valor do Apoio = Valor total do subprojeto (limitado a R$17.500,00) 1,3 [TABELA] Subprojetos de apoio a adequação e melhorias ambientai",
+     "pagina": 13,
+     "documento": "https://sape.sc.gov.br/download/edital-de-chamada-publica-no-01-2026-selecao-de-manifestacoes-de-interesse-mis-para-acesso-ao-apoio-direto-do-programa-sc-rural-2/?wpdmdl=7309&#038;refresh=6ad41dc5854101792286149",
+     "metodo": "seção"
+    },
+    "Requisitos": {
+     "valor": "[TABELA] [TABELA] 5 ESTADO DE SANTA CATARINA SECRETARIA DE ESTADO DA AGRICULTURA E PECUÁRIA DIRETORIA EXECUTIVA DO PROGRAMA SC RURAL 2 6.",
+     "trecho": "so SAPE 00001780/2026 e o código 7HNWN101. 354 [TABELA] [TABELA] 4. QUEM PODE PARTICIPAR [TABELA] [TABELA] 5 ESTADO DE SANTA CATARINA SECRETARIA DE ESTADO DA AGRICULTURA E PECUÁRIA DIRETORIA EXECUTIVA DO PROGRAMA SC RURAL 2 6. DOCUMENTOS NECESSÁRIOS PARA INSCRIÇÃO Para participar d",
+     "pagina": 5,
+     "documento": "https://sape.sc.gov.br/download/edital-de-chamada-publica-no-01-2026-selecao-de-manifestacoes-de-interesse-mis-para-acesso-ao-apoio-direto-do-programa-sc-rural-2/?wpdmdl=7309&#038;refresh=6ad41dc5854101792286149",
+     "metodo": "texto"
+    },
+    "Anexos": {
+     "valor": "ANEXO I - Modelo do Plano de Trabalho; ANEXO II - Modelo de Termo de Compromisso; ANEXO III - Modelo (sugestão) da Lei para instituição da Política Pública; ANEXO IV - Modelo; ANEXO V - Modelo; ANEXO V - Modelo (sugestão) de Objeto para Chamamento Público; ANEXO IV - Modelo (sugestão) de Decreto par",
+     "trecho": "O DESENVOLVIMENTO RURAL Sumário APRESENTAÇÃO 3 EXECUÇÃO DO PROGRAMA 4 ANEXO I - Modelo do Plano de Trabalho 7 ANEXO II - Modelo de Termo de Compromisso 12 ANEXO III - Modelo (sugestão) da Lei para instituição da Política Pública 16 ANEXO IV - Modelo (sugestão)",
+     "pagina": 2,
+     "documento": "https://sape.sc.gov.br/download/conecta-agro-sc-orientacoes-pdf/?wpdmdl=861&#038;refresh=6ad41dc3ca3a91792286147",
+     "metodo": "lista de anexos"
+    }
+   },
+   "dispensas": {
+    "Prazo de inscrição": {
+     "motivo": "dispensado pelo Cartório — não se aplica: inscrição em fluxo contínuo (cadastro permanente, sem data-limite)",
+     "trecho": "ada à conta dos recursos repassados por meio de Termo de Compromisso, a qualquer tempo e a critério dos órgãos de controle; VII – Responsabilizar-se por tod",
+     "pagina": 10,
+     "documento": "https://sape.sc.gov.br/download/conecta-agro-sc-orientacoes-pdf/?wpdmdl=861&#038;refresh=6ad41dc3ca3a91792286147"
+    }
+   },
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T01:15:44+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://sape.sc.gov.br/institucional/biblioteca-de-documentos/",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://sape.sc.gov.br/wp-content/uploads/2026/06/Calendario-Oficial-de-Eventos-Agropecuarios-2026-junho.pdf.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 55,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://sape.sc.gov.br/download/dispensa-chamamento-no-004-2026-araquari/?wpdmdl=7270&#038;refresh=6ad41dc4dfbd31792286148",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Visualizar",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 2,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://sape.sc.gov.br/download/cadastro-de-interessado_apoio-direto_sc-rural2_edital-01-2026/?wpdmdl=7312&#038;refresh=6ad41dc581ebb1792286149",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Visualizar",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://sape.sc.gov.br/download/edital-de-chamada-publica-no-01-2026-selecao-de-manifestacoes-de-interesse-mis-para-acesso-ao-apoio-direto-do-programa-sc-rural-2/?wpdmdl=7309&#038;refresh=6ad41dc5854101792286149",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Visualizar",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 43,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://sape.sc.gov.br/download/21-09-conecta-agro-sc-modelo-protocolo-de-intencao-docx/?wpdmdl=863&#038;refresh=6ad41dc3c62041792286147",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Visualizar",
+     "motivo": "zip_sem_pdf",
+     "falha": null,
+     "oficial": null,
+     "paginas": 0,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://sape.sc.gov.br/download/conecta-agro-sc-orientacoes-pdf/?wpdmdl=861&#038;refresh=6ad41dc3ca3a91792286147",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Visualizar",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 26,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "dispensado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 11,
+    "dispensados": 1,
     "ja_constavam": 0,
     "faltam": 0,
     "pct_certificado_12": 1.0,
@@ -31100,7 +31472,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-18T00:09:35+00:00",
+   "em": "2026-10-18T00:58:48+00:00",
    "prazo": "2026-11-01",
    "uf": null,
    "orgao": "FUNDO MUNICIPAL DA CULTURA DE COLINAS DO SUL",
@@ -79745,452 +80117,35 @@
     "pct_certificado_12": 0.5,
     "pct_cobertura_12": 0.9167
    }
-  },
-  {
-   "id": "op-c3b1e9469558",
-   "tipo": "livro",
-   "titulo": "Edital nº 1/2023 – formação de mulheres em autonomia econômica e cuidado",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais-1/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Território",
-    "Esfera",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Requisitos"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-15T09:33:56+00:00",
-   "prazo": null,
-   "uf": "",
-   "orgao": "Ministério das Mulheres",
-   "fim": null,
-   "itens": {
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.gov.br · Ministério das Mulheres Ministério das Mulheres",
-     "pagina": 1,
-     "documento": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais-1/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/",
-     "metodo": "domínio e órgão"
-    },
-    "Modalidade": {
-     "valor": "Termo de Fomento",
-     "trecho": "a a seleção de organização da sociedade civil interessada em celebrar Termo de Fomento que tenha por objeto realizar Projeto de formação com mulheres em Autonomia econômica e cuidado, visando à consti",
-     "pagina": 1,
-     "documento": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais-1/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/",
-     "metodo": "modalidade de recebimento"
-    },
-    "Área de atuação": {
-     "valor": "Direitos humanos, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Direitos humanos, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais-1/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Resultado": {
-     "valor": "19 de fevereiro de 1998",
-     "trecho": "ivo, os bens submetidos a regime de propriedade intelectual que forem resultado da execução desta parceria, da seguinte forma: I – quanto aos direitos de que trata a Lei nº 9.610, de 19 de fevereiro de 1998, por quaisquer modalidades de utilização existentes ou que venham a",
-     "pagina": 14,
-     "documento": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais/2023/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/anexo-viii-minuta-do-termo-de-fomento.pdf/@@display-file/file",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "10 (dez) dias",
-     "trecho": "cisão administrativa que aplicar as sanções previstas nesta Cláusula caberá recurso administrativo, no prazo de 10 (dez) dias, contado da data de ciência da decisão. No caso da competência exclu",
-     "pagina": 23,
-     "documento": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais/2023/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/anexo-viii-minuta-do-termo-de-fomento.pdf/@@display-file/file",
-     "metodo": "seção"
-    },
-    "Território": {
-     "valor": "sede em Brasília",
-     "trecho": "stério das Mulheres, doravante denominada Administração Pública, com sede em Brasília/DF, na Esplanada dos Ministérios, bloco C, 6º andar, CEP 70.054- 906,",
-     "pagina": 1,
-     "documento": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais/2023/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/anexo-viii-minuta-do-termo-de-fomento.pdf/@@display-file/file",
-     "metodo": "texto"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-15T09:33:56+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Prazo de recurso",
-      "Resultado",
-      "Território",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais-1/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais/2023/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/anexo-i-declaracao-de-ciencia-e-concordancia.pdf/@@display-file/file",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Declaração de Ciência e concordância",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais/2023/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/anexo-ii-declaracao-sobre-instalacoes-e-condicoes-materiais.pdf/@@display-file/file",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Declaração sobre instalações e condições materiais",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais/2023/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/anexo-iii-declaracao-do-art-27.pdf/@@display-file/file",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Declaração do Art. 27",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais/2023/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/anexo-iv-plano-de-trabalho.pdf/@@display-file/file",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Plano de Trabalho",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 5,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais/2023/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/anexo-v-termo-de-atuacao-em-rede.pdf/@@display-file/file",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Termo de Atuação em rede",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais/2023/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/anexo-vii-declaracao-de-nao-ocorrencia-de-impedimentos.pdf/@@display-file/file",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Declaração de não ocorrência de impedimentos",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/editais/2023/edital-ndeg-1-2023-selecao-de-organizacoes-da-sociedade-civil-para-execucao-de-projetos-de-formacao-com-mulheres-em-autonomia-economica-e-cuidado/anexo-viii-minuta-do-termo-de-fomento.pdf/@@display-file/file",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Minuta do Termo de Fomento",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 27,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "ja_constava",
-     "Órgão / financiador": "ja_constava",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "falta",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "op-d377780037cf",
-   "tipo": "livro",
-   "titulo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — Fapeg lança chamada para apoio financeiro a periódicos científicos",
-   "balcao": "orgao",
-   "link_oficial": "https://goias.gov.br/fapeg/chamada-publica-no-10-2023-programa-de-apoio-a-periodicos-cientificos-de-instituicoes-de-ensino-superior-do-estado-de-goias/",
-   "degrau": 0,
-   "como": "documento entregue pelo motor",
-   "faltavam": [
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Território",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Prazo de inscrição",
-    "Resultado",
-    "Valor",
-    "Território",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Prazo de recurso"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-17T20:07:49+00:00",
-   "prazo": null,
-   "uf": "GO",
-   "orgao": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
-   "fim": null,
-   "itens": {
-    "Território": {
-     "valor": "do Estado de Goiás",
-     "trecho": "de Apoio a Periódicos Científicos de Instituições de Ensino Superior do Estado de Goiás &#8211; FAPEG",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/fapeg/chamada-publica-no-10-2023-programa-de-apoio-a-periodicos-cientificos-de-instituicoes-de-ensino-superior-do-estado-de-goias/",
-     "metodo": "texto"
-    },
-    "Modalidade": {
-     "valor": "Acordo de Cooperação (sem repasse)",
-     "trecho": "Em Andamento Encerrados Compras Governamentais Contratos Acordos de cooperação Comunicação Comunicação Setorial Especiais Notícias Links de interesse Comitê da Mulher",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/fapeg/chamada-publica-no-10-2023-programa-de-apoio-a-periodicos-cientificos-de-instituicoes-de-ensino-superior-do-estado-de-goias/",
-     "metodo": "modalidade de recebimento"
-    },
-    "Área de atuação": {
-     "valor": "Educação, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Educação, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/fapeg/chamada-publica-no-10-2023-programa-de-apoio-a-periodicos-cientificos-de-instituicoes-de-ensino-superior-do-estado-de-goias/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Valor": {
-     "valor": "R$ 10.000,00",
-     "trecho": "s bancários nos terminais de autoatendimento do Banco do Brasil até o limite de R$ 10.000,00 por dia e de R$ 60.000,00 mensais e, acima desse valor, diretamente n",
-     "pagina": 7,
-     "documento": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2024/12/SEI_67757622_Portaria_Normativa_01_PRES.pdf",
-     "metodo": "seção"
-    }
-   },
-   "dispensas": {
-    "Prazo de inscrição": {
-     "motivo": "dispensado pelo Cartório — não se aplica: inscrição em fluxo contínuo (cadastro permanente, sem data-limite)",
-     "trecho": "abilidade do contabilista legalmente credenciado, que estará sujeito, a qualquer tempo, à obrigatoriedade de prestar as informações que porventura forem sol",
-     "pagina": 27,
-     "documento": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2023/09/Decreto-Numerado_10.322_2023_Novo-Estatuto_FAPEG.pdf"
-    },
-    "Resultado": {
-     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
-     "trecho": "abilidade do contabilista legalmente credenciado, que estará sujeito, a qualquer tempo, à obrigatoriedade de prestar as informações que porventura forem sol",
-     "pagina": 27,
-     "documento": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2023/09/Decreto-Numerado_10.322_2023_Novo-Estatuto_FAPEG.pdf"
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-17T20:07:49+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Prazo de inscrição",
-      "Resultado",
-      "Território",
-      "Valor",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://goias.gov.br/fapeg/chamada-publica-no-10-2023-programa-de-apoio-a-periodicos-cientificos-de-instituicoes-de-ensino-superior-do-estado-de-goias/",
-     "degrau": 0,
-     "como": "documento entregue pelo motor",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2022/05/bolsas-lei.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2023/09/Decreto-Numerado_10.322_2023_Novo-Estatuto_FAPEG.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 41,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2022/06/Decreto-no-10.041_2022_Altercoes_Estatuto_FAPEG.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2025/03/Resolucao-Normativa-1-2024.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 13,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2024/12/SEI_67757622_Portaria_Normativa_01_PRES.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 11,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2023/12/Resultado_final.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2023/10/Resultado-Preliminar-10-2023.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "dispensado",
-     "Resultado": "dispensado",
-     "Prazo de recurso": "falta",
-     "Valor": "certificado",
-     "Órgão / financiador": "ja_constava",
-     "Território": "certificado",
-     "Esfera": "ja_constava",
-     "Requisitos": "ja_constava",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 4,
-    "dispensados": 2,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
   }
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2341,
+   "sem_estrela": 2365,
    "bronze": 121,
-   "prata": 179
+   "prata": 182
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 107,
+    "sem_estrela": 133,
     "bronze": 8,
-    "prata": 9
+    "prata": 11
    },
    "livro": {
-    "sem_estrela": 2234,
+    "sem_estrela": 2232,
     "bronze": 113,
-    "prata": 170
+    "prata": 171
    }
   },
-  "fila_oportunidades": 124,
-  "fila_livros": 2517,
-  "devidas_nesta_hora": 2307,
+  "fila_oportunidades": 152,
+  "fila_livros": 2516,
+  "devidas_nesta_hora": 2294,
   "promovidas_nesta_execucao": 0,
-  "sem_material_agora": 21,
+  "sem_material_agora": 23,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
-   "chaves": 1056,
-   "sites": 2266
+   "chaves": 1058,
+   "sites": 2270
   },
   "intervalo_horas": 12,
   "limite": 10,
