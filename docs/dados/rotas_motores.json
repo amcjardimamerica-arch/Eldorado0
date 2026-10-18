@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T05:22:17+00:00",
+ "em": "2026-10-18T05:29:24+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 64,
   "rota_nova": 49,
   "via_ponte": 3,
-  "exemplos_da_rede": 11184
+  "exemplos_da_rede": 11310
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
-    "tok:mpf",
-    2.3939
+    "tok:secult",
+    2.5801
    ],
    [
-    "tok:secult",
-    2.3456
+    "tok:mpf",
+    2.3939
    ],
    [
     "tok:inscricoes",
@@ -28,12 +28,20 @@
     2.2113
    ],
    [
-    "origem:rota original",
-    1.8372
+    "tok:leipaulogustavo",
+    1.8622
    ],
    [
-    "tok:leipaulogustavo",
-    1.7782
+    "origem:rota original",
+    1.79
+   ],
+   [
+    "origem:biblioteca",
+    1.7511
+   ],
+   [
+    "tok:feed",
+    1.5804
    ],
    [
     "tok:portarias",
@@ -44,30 +52,22 @@
     1.4598
    ],
    [
-    "origem:biblioteca",
-    1.4163
-   ],
-   [
     "tok:deputados",
     1.4125
    ],
    [
     "tok:assuntos",
     1.3977
-   ],
-   [
-    "tok:feed",
-    1.3777
    ]
   ],
   "piores_sinais": [
    [
     "gov:False",
-    -1.5854
+    -1.6116
    ],
    [
     "tok:prefeitura",
-    -1.6267
+    -1.6437
    ],
    [
     "tok:ccs",
@@ -75,7 +75,7 @@
    ],
    [
     "origem:padrão",
-    -2.1401
+    -2.0591
    ],
    [
     "tipo:internacional",
@@ -514,7 +514,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-16T04:25:34+00:00",
+    "em": "2026-10-18T05:28:03+00:00",
     "testes": 22,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -636,8 +636,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-16T06:01:13+00:00",
-    "testes": 12,
+    "em": "2026-10-18T05:29:06+00:00",
+    "testes": 20,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -677,7 +677,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-16T04:26:15+00:00",
+    "em": "2026-10-18T05:28:12+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -704,7 +704,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-16T04:26:43+00:00",
+    "em": "2026-10-18T05:28:39+00:00",
     "testes": 20,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1090,7 +1090,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-16T05:59:34+00:00",
+    "em": "2026-10-18T05:28:50+00:00",
     "testes": 22,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1206,17 +1206,17 @@
      "https://www.goiania.go.gov.br/secult/pnab-2024/"
     ],
     "via": "direto",
-    "origem": "biblioteca",
+    "origem": "rota original",
     "pontos": 89,
-    "aprendido_em": "2026-10-18T04:30:26+00:00"
+    "aprendido_em": "2026-10-18T05:29:24+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T04:30:26+00:00",
+    "em": "2026-10-18T05:29:24+00:00",
     "testes": 18,
     "melhor": {
      "url": "https://www.goiania.go.gov.br/secult/pnab-2024/",
      "via": "direto",
-     "origem": "biblioteca",
+     "origem": "rota original",
      "pontos": 89,
      "formato": "html"
     },
