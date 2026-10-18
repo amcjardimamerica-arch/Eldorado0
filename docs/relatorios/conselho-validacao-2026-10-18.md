@@ -9,9 +9,9 @@
 ```json
 {
  "cegos_da_1a_rodada": 31,
- "testados": 22,
- "com_rota_nova": 6,
- "via_ponte": 0,
+ "testados": 24,
+ "com_rota_nova": 7,
+ "via_ponte": 1,
  "continuam_cegos": [
   "camara-goiania-pl",
   "f260-captacao-218",
@@ -28,9 +28,10 @@
   "f260-captacao-228",
   "f260-captacao-252",
   "f260-captacao-240",
-  "f260-espalhado-rouanet-cultura-gov-br"
+  "f260-espalhado-rouanet-cultura-gov-br",
+  "f260-espalhado-sistema-mirassoldoeste-mt-gov-br"
  ],
- "aguardando_afinador": 9
+ "aguardando_afinador": 7
 }
 ```
 
@@ -116,7 +117,7 @@
   {
    "motor": "outras-oportunidades-6",
    "achados_total_1a": 42,
-   "achados_total_agora": 42,
+   "achados_total_agora": 44,
    "no_fluxo": 5,
    "confirmadas": 0
   },
@@ -156,7 +157,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 3,
- "exemplos_da_rede_de_rotas": 10805
+ "exemplos_da_rede_de_rotas": 10878
 }
 ```
 
@@ -200,9 +201,9 @@
 ```json
 {
  "dia_de_referencia": "2026-10-18",
- "ativos": 159,
- "lidos_ontem": 134,
- "lidos_hoje": 21,
+ "ativos": 172,
+ "lidos_ontem": 147,
+ "lidos_hoje": 120,
  "nao_lidos_ontem_nem_hoje": [
   "plat-captamos",
   "plat-rede-filantropia"
@@ -247,7 +248,7 @@
   "Cartório (site oficial certificado)": 190,
   "Espião (privado/internacional)": 48
  },
- "lidas_nas_ultimas_24h": 279,
+ "lidas_nas_ultimas_24h": 303,
  "dimensionamento": {
   "fontes": 404,
   "sites_por_execucao": 17,
@@ -268,9 +269,9 @@
    "achados": 58
   },
   "outras-oportunidades-3": {
-   "ultima": "2026-10-17T13:21:53+00:00",
-   "duracao_s": 67,
-   "achados": 0
+   "ultima": "2026-10-18T04:29:30+00:00",
+   "duracao_s": 97,
+   "achados": 5
   },
   "outras-oportunidades-4": {
    "ultima": "2026-10-18T03:27:21+00:00",
@@ -278,14 +279,14 @@
    "achados": 4
   },
   "outras-oportunidades-5": {
-   "ultima": "2026-10-17T13:25:09+00:00",
-   "duracao_s": 92,
-   "achados": 0
+   "ultima": "2026-10-18T04:46:34+00:00",
+   "duracao_s": 105,
+   "achados": 11
   },
   "outras-oportunidades-6": {
-   "ultima": "2026-10-17T13:26:19+00:00",
-   "duracao_s": 70,
-   "achados": 0
+   "ultima": "2026-10-18T04:33:07+00:00",
+   "duracao_s": 103,
+   "achados": 20
   },
   "outras-oportunidades-7": {
    "ultima": "2026-10-18T03:57:07+00:00",
@@ -293,8 +294,8 @@
    "achados": 13
   },
   "outras-oportunidades-8": {
-   "ultima": "2026-10-17T13:29:17+00:00",
-   "duracao_s": 74,
+   "ultima": "2026-10-18T04:31:24+00:00",
+   "duracao_s": 96,
    "achados": 0
   },
   "outras-oportunidades-2": {
@@ -303,7 +304,7 @@
    "achados": 2
   }
  },
- "com_achado": 58
+ "com_achado": 59
 }
 ```
 
