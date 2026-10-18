@@ -118,8 +118,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "dj-trf1-go": {
-  "em": "2026-10-18T15:15:40+00:00",
-  "testes": 14,
+  "em": "2026-10-18T16:28:05+00:00",
+  "testes": 16,
   "melhor": {
    "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
    "via": "direto",
@@ -161,13 +161,14 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/feed",
-    "origem": "padrão",
-    "via": "direto",
+    "url": "https://www.trf1.jus.br/sjgo/conteudo/secos/SEI_24768109_Edital (2).pdf",
+    "origem": "biblioteca",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -181,6 +182,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.trf1.jus.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.trf1.jus.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -191,7 +202,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/editais",
+    "url": "https://www.trf1.jus.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -202,6 +213,16 @@
    },
    {
     "url": "https://www.trf1.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.trf1.jus.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1087,7 +1108,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T16:20:39+00:00",
+  "em": "2026-10-18T16:30:36+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -2019,8 +2040,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "alego-pl": {
-  "em": "2026-10-18T15:24:25+00:00",
-  "testes": 17,
+  "em": "2026-10-18T16:29:59+00:00",
+  "testes": 16,
   "melhor": {
    "url": "https://portal.al.go.leg.br/",
    "via": "direto",
@@ -2062,16 +2083,6 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/feed",
-    "origem": "câmara",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
     "url": "https://alegodigital.al.go.leg.br/feed",
     "origem": "câmara",
     "via": "direto",
@@ -2102,16 +2113,6 @@
     "funcionou": false
    },
    {
-    "url": "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
-    "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
     "url": "https://portal.al.go.leg.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -2132,18 +2133,8 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/editais",
-    "origem": "padrão",
+    "url": "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
+    "origem": "rota original",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2172,6 +2163,26 @@
     "funcionou": false
    },
    {
+    "url": "https://portal.al.go.leg.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
     "url": "https://portal.al.go.leg.br/edital",
     "origem": "padrão",
     "via": "direto",
@@ -2190,6 +2201,17 @@
     "sinais": 0,
     "erro": "URLError",
     "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/noticias",
+    "origem": "câmara",
+    "via": "direto",
+    "pontos": 13,
+    "links": 211,
+    "sinais": 6,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
    }
   ],
   "resultado": "rota nova em teste"
@@ -7079,7 +7101,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-256": {
-  "em": "2026-10-18T15:25:12+00:00",
+  "em": "2026-10-18T16:30:15+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -7089,6 +7111,17 @@
     "via": "direto",
     "pontos": 1,
     "links": 226,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://sgp.undp.org/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7115,14 +7148,13 @@
     "funcionou": false
    },
    {
-    "url": "https://sgp.undp.org/sitemap.xml",
+    "url": "https://sgp.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -7136,7 +7168,7 @@
     "funcionou": false
    },
    {
-    "url": "https://sgp.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://sgp.undp.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7147,16 +7179,6 @@
    },
    {
     "url": "https://sgp.undp.org/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://sgp.undp.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7209,13 +7231,24 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-252": {
-  "em": "2026-10-18T15:25:19+00:00",
+  "em": "2026-10-18T16:30:22+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://www.facebook.com/community/",
     "origem": "rota original",
+    "via": "direto",
+    "pontos": 1,
+    "links": 35,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.facebook.com/sitemap.xml",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 1,
     "links": 35,
@@ -7246,28 +7279,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.facebook.com/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 35,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.facebook.com/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 35,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.facebook.com/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -7278,7 +7289,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.facebook.com/edital",
+    "url": "https://www.facebook.com/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
@@ -7294,6 +7305,17 @@
     "via": "direto",
     "pontos": 0,
     "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.facebook.com/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7492,13 +7514,24 @@
   "resultado": "rota nova em teste"
  },
  "f260-espalhado-transparencia-agilicloud-com-br": {
-  "em": "2026-10-18T15:34:03+00:00",
+  "em": "2026-10-18T16:30:36+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://transparencia.agilicloud.com.br/",
     "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://transparencia.agilicloud.com.br/sitemap.xml",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -7530,7 +7563,7 @@
     "funcionou": false
    },
    {
-    "url": "https://transparencia.agilicloud.com.br/sitemap.xml",
+    "url": "https://transparencia.agilicloud.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7552,7 +7585,7 @@
     "funcionou": false
    },
    {
-    "url": "https://transparencia.agilicloud.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://transparencia.agilicloud.com.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7564,17 +7597,6 @@
    },
    {
     "url": "https://transparencia.agilicloud.com.br/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://transparencia.agilicloud.com.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -12247,7 +12269,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-www-detran-rj-gov-br": {
-  "em": "2026-10-18T15:25:09+00:00",
+  "em": "2026-10-18T16:30:12+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.detran.rj.gov.br/sitemap.xml",
@@ -12280,16 +12302,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.detran.rj.gov.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.detran.rj.gov.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -12300,7 +12312,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.detran.rj.gov.br/editais",
+    "url": "https://www.detran.rj.gov.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -12311,6 +12323,16 @@
    },
    {
     "url": "https://www.detran.rj.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.detran.rj.gov.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
