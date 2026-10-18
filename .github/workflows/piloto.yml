@@ -341,7 +341,9 @@ jobs:
           json.dump(atual, open("config/piloto.json","w"), ensure_ascii=False, indent=1)
           PY
           # 28/09: SÓ os caminhos do Piloto — nunca "git add -A" geral (levava a cópia velha de src/ e desfez uma correção)
-          PILOTO_PATHS="config/parametros_pilotos_fixos.json estado/pilotos docs/dados/achados_pilotos.json config/parametros_pilotos.json estado/aprendizado biblioteca_alexandria/livros/especiais/espiao docs/dados/piloto.json estado/rotas_sugeridas_ia.json config/lexico_aprendido.json dados/editais/extraidos docs/dashboard-dados.js docs/dados biblioteca_alexandria/livros/especiais/empresas/dados/go/espiao_empresas.json"
+          # 17/10/2026: + o radar de captação (radar_piloto.json e radar_captacao.json). O Piloto registrava cada empresa
+          # descoberta no radar, mas o arquivo não estava nesta lista: nunca era gravado e o voo seguinte partia do vazio.
+          PILOTO_PATHS="config/parametros_pilotos_fixos.json estado/pilotos docs/dados/achados_pilotos.json config/parametros_pilotos.json estado/aprendizado biblioteca_alexandria/livros/especiais/espiao docs/dados/piloto.json estado/rotas_sugeridas_ia.json config/lexico_aprendido.json dados/editais/extraidos docs/dashboard-dados.js docs/dados biblioteca_alexandria/livros/especiais/empresas/dados/go/espiao_empresas.json biblioteca_alexandria/livros/especiais/empresas/dados/radar_piloto.json biblioteca_alexandria/livros/especiais/empresas/radar_captacao.json"
           for P in $PILOTO_PATHS; do [ -e "$P" ] && git add -A -- "$P"; done
           git status --short | head -20
           python3 -m src.trava_livros > /dev/null 2>&1 || true   # 17/10: trava dos livros (nada apagado nem sobrescrito)

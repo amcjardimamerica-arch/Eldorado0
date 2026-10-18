@@ -215,8 +215,42 @@ def load_json(path: Path):
             return v
     return json.loads(path.read_text(encoding="utf-8"))
 
+# 17/10/2026 (chat de testes F11.01): URL PRÉ-ASSINADA (S3/AWS, Google Cloud) nunca é gravada com a assinatura — a query
+# leva a chave de acesso de terceiro (X-Amz-Credential) e a assinatura, que expiram e não devem ser publicadas. Grava-se o
+# endereço do arquivo SEM a query de assinatura (o resto da query fica).
+_TEM_ASSINATURA = re.compile(r"(?i)X-Amz-(?:Credential|Signature)|AWSAccessKeyId=|X-Goog-(?:Credential|Signature)")
+_PARAM_ASSINATURA = re.compile(r"(?i)^(?:X-Amz-[A-Za-z-]+|AWSAccessKeyId|Signature|Expires|X-Goog-[A-Za-z-]+)$")
+_URL_ASSINADA = re.compile(r"https?://[^\s\"'<>]+")
+
+
+def sem_assinatura(url):
+    """O endereço sem os parâmetros de assinatura (X-Amz-*, AWSAccessKeyId, Signature, Expires, X-Goog-*)."""
+    if not isinstance(url, str) or not _TEM_ASSINATURA.search(url):
+        return url
+    def _limpa(u: str) -> str:
+        base, sep, resto = u.partition("?")
+        if not sep:
+            return u
+        q, hs, frag = resto.partition("#")
+        partes = [x for x in re.split(r"&amp;|&", q) if x and not _PARAM_ASSINATURA.match(x.split("=", 1)[0])]
+        return base + ("?" + "&".join(partes) if partes else "") + (hs + frag if hs else "")
+    return _URL_ASSINADA.sub(lambda m: _limpa(m.group(0)) if _TEM_ASSINATURA.search(m.group(0)) else m.group(0), url)
+
+
+def sem_assinaturas(obj):
+    """sem_assinatura em todo texto (valores e chaves) de uma estrutura JSON."""
+    if isinstance(obj, str):
+        return sem_assinatura(obj)
+    if isinstance(obj, list):
+        return [sem_assinaturas(x) for x in obj]
+    if isinstance(obj, dict):
+        return {sem_assinatura(k) if isinstance(k, str) else k: sem_assinaturas(v) for k, v in obj.items()}
+    return obj
+
+
 def write_json(path: Path, value) -> None:
     path = Path(path)
+    value = sem_assinaturas(value)                     # 17/10: nada de URL pré-assinada nos dados gravados
     if _proibido(path):                                # 16/10: grava NO LIVRO; o arquivo não chega a existir
         from .livro_arquivo import guardar_lote
         guardar_lote([(path, value)])

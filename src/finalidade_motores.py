@@ -89,6 +89,9 @@ def montar() -> dict:
             op.append({"id": r["id"], "titulo": r.get("titulo"), "pagina_divulgacao": r["link_oficial"], "orgao": r.get("orgao"),
                        "uf": r.get("uf"), "area": r.get("area"), "fim": r.get("fim"), "tipo_registro": "edital",
                        "selo_validacao": "validada"})
+    # 17/10/2026: a rota leva o LIVRO da oportunidade (pelo repositório: id ou ids de origem). Sem ele, gravar as rotas
+    # (nos livros) não ligava a rota de um edital da base do painel ao livro dela e criava um livro novo, sem classificação
+    _livro_de = {str(i): r.get("livro") for r in _rep if r.get("livro") for i in [r.get("id"), *(r.get("ids_origem") or [])]}
     rotas = []
     novas_fontes = []
     for e in op:
@@ -96,7 +99,7 @@ def montar() -> dict:
         if not pag or (VETOR.search(str(pag)) and "/arquivos/" not in str(pag)):
             continue
         cad, motivo = _cadencia_recorrencia(e, hoje)
-        rotas.append({"edital_id": e["id"], "titulo": (e.get("titulo") or "")[:100], "url": pag, "orgao": e.get("orgao") or e.get("fonte_nome"),
+        rotas.append({"edital_id": e["id"], "livro": _livro_de.get(str(e["id"])), "titulo": (e.get("titulo") or "")[:100], "url": pag, "orgao": e.get("orgao") or e.get("fonte_nome"),
                       "uf": e.get("uf"), "area": e.get("area"), "fim": e.get("fim"), "cadencia_dias": cad, "motivo": motivo,
                       "lexico": [w for w in ["retifica", "prorroga", "errata", "resultado", "homologa", "classificados", "recurso", "suspens", "revoga", "novo edital", "inscrições"]],
                       "proxima_leitura": hoje.isoformat()})     # a primeira leitura é imediata; o sensor reprograma pela cadência
@@ -139,6 +142,14 @@ def montar() -> dict:
             cur["atualizada_em"] = hoje.isoformat()
             write_json(cur_p, cur)
         res_fin["espalhamento"]["adicionados_a_curadoria"] = n
+    # 17/10/2026: fonte nova da curadoria entra JÁ no catálogo das 260 (a regeneração reaplica a curadoria). Antes ficava
+    # só na curadoria até o fontes260 do dia seguinte (que roda ANTES desta etapa) — e regenerar mudava o catálogo (293 → 312)
+    if cur_p.exists():
+        _cat = load_json(ROOT / "config/fontes_captacao_260.json").get("fontes", [])
+        _no_cat = {f.get("id") for f in _cat} | {f.get("programa") for f in _cat}     # a curadoria não repete programa
+        if any(f.get("id") not in _no_cat and f.get("programa") not in _no_cat for f in (load_json(cur_p).get("fontes_novas") or [])):
+            from . import fontes260
+            fontes260.run()
     return {"descoberta": sum(1 for v in finalidade.values() if v.get("finalidade") == "descoberta"),
             "insumo": sum(1 for v in finalidade.values() if v.get("finalidade") == "insumo"),
             "rotas_recorrencia": len(rotas), "por_cadencia": res_rec["por_cadencia"],

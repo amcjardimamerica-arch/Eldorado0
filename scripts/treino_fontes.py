@@ -134,6 +134,8 @@ def aplicar(A: dict, limite: int = 120, so_novas: bool = False, teto_segundos: i
     except Exception:  # noqa: BLE001
         pass
     ant.update(out)
+    from src.nucleo import sem_assinaturas            # 17/10 (F11.01): o PDF do S3 é guardado sem a query de assinatura
+    ant = sem_assinaturas(ant)
     (RAIZ / "estado/fontes_resolvidas.json").write_text(json.dumps({"regra": F.__doc__.strip().splitlines()[0], "resolvidas": ant},
                                                                   ensure_ascii=False, indent=1), encoding="utf-8")
     return {"tentadas": len(alvo[:limite]), "resolvidas_agora": len(out), "resolvidas_total": len(ant)}

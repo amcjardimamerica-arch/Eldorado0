@@ -368,6 +368,34 @@ def _oficial(url: str) -> bool:
         return False
 
 
+def prova_valida(it: dict) -> bool:
+    """17/10/2026 (titular): um item só é COMPROVADO com valor (≥ 3 caracteres, não "não informado"), trecho literal e
+    documento que não é vetor (régua única do Cartório). Item marcado como falta pela revisão também não comprova."""
+    return motivo_prova_invalida(it) is None
+
+
+def motivo_prova_invalida(it: dict) -> str | None:
+    from .criterio_selos import FALTA
+    if not isinstance(it, dict):
+        return "sem prova"
+    if str(it.get("estado") or "") in ("falta", "nao_comprovado"):
+        return "a revisão marcou o item como falta — falta a prova no documento oficial"
+    v = str(it.get("valor") or "").strip()
+    if len(v) < 3 or FALTA.search(v):
+        return "prova sem valor — falta a prova no documento oficial"
+    if not str(it.get("trecho") or "").strip():
+        return "prova sem trecho literal — falta a prova no documento oficial"
+    if not it.get("documento"):
+        return "prova sem documento — falta a prova no documento oficial"
+    try:
+        from .cartorio_leitura import e_vetor
+        if e_vetor(it.get("documento")):
+            return "documento é vetor (agregador, republicador, imprensa ou formulário) — vetor nunca é fonte"
+    except Exception:  # noqa: BLE001
+        pass
+    return None
+
+
 def _skill(origem: str) -> str:
     o = str(origem or "").lower()
     for chave, k in (("pncp", "pncp"), ("querido", "querido_diario"), ("agregador", "agregador"), ("interceptador", "interceptador"),
@@ -408,6 +436,12 @@ def construir(gravar: bool = True, hoje: str | None = None) -> dict:
         _op = m.get("oportunidade") if isinstance(m.get("oportunidade"), dict) else {}
         if _op.get("id_repositorio"):
             livros.setdefault(str(_op["id_repositorio"]), m)
+    _por_id_livro = {str(m.get("id")): m for m in _cat_livros if m.get("id")}
+    from . import banco_livros as _BL0
+    _por_chave_livro = {}
+    for m in _cat_livros:
+        for _k in _BL0._chaves_do_livro(m):
+            _por_chave_livro.setdefault(_k, m)
     skills = (_j(ROOT / "config/skills_extracao_origem.json", {}) or {}).get("skills") or {}
     # 11/10 (titular): arquivamento ÚNICO — só as municipais de fora de GO abertas em 11/10 (lista fixa); as novas entram normalmente
     from .decisoes_titular import decisoes as _decisoes
@@ -454,6 +488,11 @@ def construir(gravar: bool = True, hoje: str | None = None) -> dict:
                 r[k] = b[k]
         for k, v in (b.get("checklist") or {}).items():
             r["checklist"].setdefault(k, v)
+    # 17/10/2026: DUPLICATA DA REVISÃO HUMANA é fundida na canônica — o id dela fica em ids_origem da canônica mesmo quando a
+    # origem já não traz o registro (a caixa dos motores mostra a duplicata e o repositório não a tinha: F06.04)
+    for d, c_ in canon.items():
+        if c_ in reg and d not in reg and d not in reg[c_]["ids_origem"]:
+            reg[c_]["ids_origem"].append(d)
 
     # 2 · estado, prova dos 12 itens, estante, próximo passo (rede neural + skill da origem)
     from .criterio_selos import nivel, dispensa_valida
@@ -461,6 +500,8 @@ def construir(gravar: bool = True, hoje: str | None = None) -> dict:
     for cid, r in reg.items():
         ver = None
         for i in [cid] + r["ids_origem"]:
+            if i != cid and canon.get(i) == cid and (V.get(i) or {}).get("veredito") == "duplicata":
+                continue                                   # o veredito "duplicata desta" não fecha a própria canônica
             if (V.get(i) or {}).get("veredito"):
                 ver = V[i]; break
         c = {}
@@ -468,6 +509,7 @@ def construir(gravar: bool = True, hoje: str | None = None) -> dict:
             ci = certs.get(f"estrela:{i}")
             if ci:
                 c = {**ci, "itens": {**(c.get("itens") or {}), **(ci.get("itens") or {})}, "dispensas": {**(c.get("dispensas") or {}), **(ci.get("dispensas") or {})},
+                     "nao_comprovados": {**(c.get("nao_comprovados") or {}), **(ci.get("nao_comprovados") or {})},
                      "link_oficial": c.get("link_oficial") or ci.get("link_oficial"), "tentativa": max(int(c.get("tentativa") or 0), int(ci.get("tentativa") or 0)),
                      "esgotada": c.get("esgotada") or ci.get("esgotada"), "encaminhado": c.get("encaminhado") or ci.get("encaminhado")}
         inv = {}
@@ -484,10 +526,19 @@ def construir(gravar: bool = True, hoje: str | None = None) -> dict:
                     it = {"valor": iv.get("valor"), "trecho": iv.get("trecho"), "documento": iv.get("fonte"), "pagina": iv.get("pagina"), "por": "Interceptador"}
                 elif not (ck.get("s") in ("ok", "val", "dt") and ck.get("v")):
                     ck = {"s": "ok", "v": f"{str(iv.get('valor') or '')[:80]} (Interceptador leu em agregador: {str(iv['fonte'])[:60]})"}
-            if it and (it.get("trecho") or it.get("valor")):
+            if it and it.get("estado") == "falta":
+                it = None                                  # 16/10: item reaberto (revisão da Modalidade) não é prova
+            _nc = (c.get("nao_comprovados") or {}).get(k)
+            if it and prova_valida(it):
                 itens[k] = {"estado": "comprovado", "valor": it.get("valor"), "trecho": it.get("trecho"), "documento": it.get("documento"), "pagina": it.get("pagina")}
             elif dp and dispensa_valida(dp.get("motivo") or ""):
                 itens[k] = {"estado": "dispensado", "motivo": dp.get("motivo"), "documentos_lidos": dp.get("documentos_lidos")}
+            elif (it or _nc) and str((it or _nc).get("valor") or "").strip():
+                # 17/10/2026 (titular): prova sem valor, sem trecho, sem documento ou em VETOR não comprova — o que foi lido
+                # fica como "não comprovado" e o item volta à fila do Cartório (nada é criado, nada é perdido)
+                _x = it or _nc
+                itens[k] = {"estado": "nao_comprovado", "valor": _x.get("valor"), "documento_lido": _x.get("documento"),
+                            "nota": motivo_prova_invalida(_x)}
             elif ck.get("s") in ("ok", "val", "dt") and ck.get("v"):
                 itens[k] = {"estado": "nao_comprovado", "valor": ck.get("v"), "nota": "lido pelo motor; falta a prova no documento oficial"}
             else:
@@ -558,12 +609,26 @@ def construir(gravar: bool = True, hoje: str | None = None) -> dict:
             estado, motivo = "validada", "12/12 com prova na fonte ou dispensa justificada"
         elif v == "validacao_manual":
             estado, motivo = "validacao_manual", str((ver or {}).get("motivo") or "")[:200]
-        elif v == "ouro" or (r.get("confirmada") and link and all(itens[k]["estado"] == "comprovado" for k in ("Objeto", "Prazo de inscrição"))):
-            # Dr. Otávio: "confirmada" pelo motor só vale com objeto e prazo COMPROVADOS no documento oficial
-            estado, motivo = "validada", "ouro na revisão" if v == "ouro" else "objeto e prazo comprovados no documento oficial + site oficial"
+        elif v == "ouro" and selo == "ouro":
+            # 17/10/2026 (titular): o ouro da revisão com os 12 itens é validada, mesmo com o site oficial ainda a confirmar
+            estado, motivo = "validada", "ouro na revisão (12/12; site oficial a confirmar)"
+        elif v == "ouro" or r.get("confirmada"):
+            # 17/10/2026 (titular): VALIDADA SÓ COM 12/12 — o "ouro na revisão" e o "confirmada" do motor sem os 12 itens
+            # comprovados ou dispensados voltam à verificação, com o que falta
+            estado = "em_verificacao"
+            motivo = f"{'ouro na revisão' if v == 'ouro' else 'confirmada pelo motor'} sem os 12 itens — volta à verificação"
         else:
             estado, motivo = "em_verificacao", ""
         lv = livros.get(cid) or next((livros[i] for i in r["ids_origem"] if i in livros), None)
+        if lv is None:
+            # 17/10/2026: o alvo que o Interceptador tira de um LIVRO tem o id "op-<id do livro>" (alvo_livro) — é a
+            # oportunidade daquele livro; sem esta leitura ela aparecia aberta "sem livro nem dispensa" no painel
+            lv = next((_por_id_livro[i[3:]] for i in [cid, *r["ids_origem"]] if str(i).startswith("op-") and i[3:] in _por_id_livro), None)
+        if lv is None:
+            # 17/10/2026: livro devolvido pela trava (versão gravada, ainda sem a seção 'oportunidade') — achado pela
+            # mesma chave com que o banco de livros vincula (página do livro = endereço ou link oficial da oportunidade)
+            _ks = [_BL.chave(r)] + ([_BL.chave({"url": link})] if link else [])
+            lv = next((_por_chave_livro[k] for k in _ks if k in _por_chave_livro), None)
         # 11/10 (titular): a BIBLIOTECA direciona a busca — editais anteriores do livro e páginas onde o órgão publica
         anteriores = [h for h in ((lv or {}).get("historico") or []) if isinstance(h, dict) and str(h.get("id")) not in [cid] + r["ids_origem"]]
         onde = list(dict.fromkeys(u for u in [link, (lv or {}).get("pagina_aprendida"), (lv or {}).get("pagina"), ((lv or {}).get("parametros") or {}).get("fonte_oficial")]

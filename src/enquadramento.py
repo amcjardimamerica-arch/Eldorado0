@@ -567,7 +567,9 @@ def fila_verificacao() -> dict:
         if e["id"] in arq:
             continue
         # edição inteira de diário sem ato identificado: fica para a extração de edições (fase 2), não para a IA
-        if re.match(r"Di[áa]rio Oficial de .+\d{4}-\d{2}-\d{2}", e.get("titulo") or "") and not (e.get("objeto") or e.get("fim")):
+        # 17/10/2026 (régua do vetor): objeto lido só no próprio diário (vetor) não é ato identificado — vale o objeto PROVADO
+        _obj_ok = e.get("objeto") and "Objeto" not in ((_CK.get(e["id"]) or {}).get("faltam") or ["Objeto"])
+        if re.match(r"Di[áa]rio Oficial de .+\d{4}-\d{2}-\d{2}", e.get("titulo") or "") and not (_obj_ok or e.get("fim")):
             edicoes_brutas += 1; continue
         # filtro de objeto (src/inconformidade.py): o que não é chamada aberta de fomento sai da fila
         from .inconformidade import avaliar as _avaliar_objeto

@@ -499,7 +499,9 @@ def run(corrigir_: bool = False, ciclo_: bool = False) -> dict:
             ciclo = AC.registrar_ciclo(final, log, _gh, anterior)
         except Exception as ex:  # noqa: BLE001
             print(f"ciclo de análise não registrado: {type(ex).__name__}: {ex}", file=sys.stderr)
-    res["ciclo_de_analise"] = ciclo
+    # 17/10/2026 (chat de testes F06.01): a leitura sem ciclo (sala em tempo real, fechamento do comando) refaz os números
+    # do mesmo retrato do repositório, mas NÃO apaga o ciclo da última análise ("Analise o sistema")
+    res["ciclo_de_analise"] = ciclo if ciclo_ else anterior.get("ciclo_de_analise")
     SAIDA.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     RESUMO.write_text(resumo_md(antes, depois, log) + "\n" + AC.resumo_md(final, ciclo), encoding="utf-8")
     return {"problemas": len(final["problemas"]), "por_gravidade": final["contagem_problemas"], "corrigido": bool(log),

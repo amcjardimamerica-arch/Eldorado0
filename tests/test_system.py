@@ -25,6 +25,13 @@ def _acervo_historico():
     return [d for d in linhas if d.get("_t")=="historico"], linhas
 
 
+def _validadas_do_repositorio():
+    """17/10/2026: desde o repositório único (11/10) e os livros como fonte única (16/10), as oportunidades validadas
+    vivem num só lugar — biblioteca_alexandria/livros/_vistas/repositorio_unico.json (todos os painéis derivam dele).
+    A caixa dos motores (docs/dados/abertas.json) virou só uma das origens: o expurgo de 15–16/10 tirou dela 549
+    registros (estado/expurgo/) e a regra territorial de 16/10 tirou os municipais de fora de Goiás que não são capital."""
+    reg=[r for r in load_json(pathlib.Path("biblioteca_alexandria/livros/_vistas/repositorio_unico.json"))["registros"] if not r.get("arquivada")]
+    return [r for r in reg if r.get("estado")=="validada"]
 def _expurgados(*caminhos):
     """Registros que o expurgo (src/expurgo.py) tirou destes arquivos, somando todos os dias de estado/expurgo/."""
     import glob
@@ -844,8 +851,16 @@ class SystemTests(unittest.TestCase):
         for e in emendas:
             self.assertTrue(e["verificacao_dupla"]["fonte"])
             self.assertIn(e["estado_export"],("aberto","a_abrir","encerrado"))
+        # 17/10/2026 (titular, PR #347): a verificação atual é também o REPOSITÓRIO dos livros (Cartório, Chrome,
+        # validação) — o vivo tem verificação dupla OU é oportunidade ABERTA do repositório (não fechada, não arquivada)
+        rep=load_json(pathlib.Path("biblioteca_alexandria/livros/_vistas/repositorio_unico.json")).get("registros") or []
+        abertos={str(i):r["estado"] for r in rep if r.get("estado")!="fechada" and not r.get("arquivada")
+                 for i in [r.get("id"),*(r.get("ids_origem") or [])] if i}
         for e in vivos:
-            self.assertIn("verificacao_dupla",e,e["id"])
+            if "verificacao_dupla" in e: continue
+            self.assertIn(e["id"],abertos,e["id"])
+            self.assertEqual(e.get("verificacao_repositorio"),abertos[e["id"]],e["id"])
+            self.assertIn(e["verificacao_repositorio"],("validada","em_verificacao","validacao_manual"),e["id"])
         for e in hist:
             # aberto ou encerrado — nunca 'indeterminado'; e nunca se passa por
             # verificado em dupla
@@ -2231,7 +2246,20 @@ class SystemTests(unittest.TestCase):
     def test_fichas_tres_tempos_e_painel(self):
         ft=load_json(pathlib.Path("biblioteca_alexandria/fontes/fichas_tres_tempos.json"))
         self.assertGreaterEqual(ft["fontes"],260)
-        self.assertGreater(ft["com_passado"],40); self.assertGreater(ft["com_futuro"],40)
+        self.assertGreater(ft["com_passado"],40)
+        # 17/10: o FUTURO só vale com sustentação — previsão gravada ou recorrência do dossiê em ANOS DISTINTOS. A meta
+        # antiga (> 40) vinha de UM dossiê (Secult Goiânia, set/2023+set/2026) espalhado por token em 57 fontes; o
+        # expurgo de 16/10 tirou do histórico os casos que o sustentavam (credenciamento de pareceristas, outro estado;
+        # estado/expurgo/2026-10-16.json). Confere a contabilidade e a sustentação de cada janela.
+        janelas=[f["proxima_janela"] for f in ft["fontes_lista"] if f["proxima_janela"]]
+        self.assertEqual(ft["com_futuro"],len(janelas))
+        prev=load_json(pathlib.Path("biblioteca_alexandria/livros/_acervo/previsoes/previsoes.json")).get("itens") or []
+        idx=load_json(pathlib.Path("biblioteca_alexandria/fontes/indice.json")).get("itens") or []
+        sustentadas={p["inicio"][:7] for p in prev}|{i["proxima_janela"]["mes"] for i in idx
+                     if i.get("proxima_janela") and len(i["proxima_janela"].get("anos_observados") or [])>=2}
+        for j in janelas:
+            self.assertTrue(j.get("base"),j)
+            self.assertIn(j["mes"],sustentadas,j)
         f0=ft["fontes_lista"][0]; self.assertTrue(f0["goias"])   # Goiás primeiro
         d=dash_coletar(date(2026,9,2))
         self.assertIn("esquadra",d); self.assertIn("fontes_tres_tempos",d)
@@ -3888,7 +3916,7 @@ class SystemTests(unittest.TestCase):
         # "hoje" é o dia em que o arquivo foi gerado, não o relógio de quem roda o teste:
         # com o relógio, o teste quebrava sozinho no dia seguinte a cada geração (23/09 e
         # 26/09/2026), sem que o gerador tivesse mudado uma linha.
-        hoje=str((m.get("resumo") or {}).get("gerado_em") or date.today())[:10]; dias={x["d"]:x["cor"] for x in dou["dias"]}
+        hoje=str((m.get("resumo") or {}).get("dia_de_referencia") or (m.get("resumo") or {}).get("gerado_em") or date.today())[:10]; dias={x["d"]:x["cor"] for x in dou["dias"]}
         self.assertNotEqual(dias.get(hoje),"futuro")                      # o dia da geração nunca aparece como futuro
         wf=open(".github/workflows/monitoramento-diario.yml",encoding="utf-8").read(); self.assertIn("timeout 600 python -m src.motores",wf); self.assertIn("log_motores.txt",wf)
 
@@ -4183,7 +4211,16 @@ class SystemTests(unittest.TestCase):
         d=load_json(pathlib.Path("docs/dashboard-dados.json"))
         ab=[e for e in d["editais"] if e["situacao_inscricao"]=="aberta"]
         an=d.get("analise_editais",{})
-        self.assertTrue(all(e["id"] in an for e in ab))          # todo edital aberto tem verificação individual
+        # todo edital aberto tem verificação individual: a análise (analises.json, rodadas de 07–09/09) OU, para o edital
+        # novo — a análise manual não recebe registros novos (test_mapa_so_com_oportunidades_reais) —, o selo de 07/09
+        # com objeto, prazo e site oficial conferidos e, faltando algum, a pendência declarada à verificação semanal da IA
+        for e in ab:
+            if e["id"] in an: continue
+            v=e.get("validacao") or {}
+            for c in ("objeto","prazo","site_oficial","faltam"): self.assertIn(c,v,e["id"])
+            self.assertIn(e.get("selo_validacao"),("validada","nao_verificada"),e["id"])
+            if e["selo_validacao"]=="nao_verificada": self.assertTrue(v["faltam"] and v.get("para_ia_semanal"),e["id"])
+            else: self.assertTrue(v["objeto"] and v["prazo"] and v["site_oficial"],e["id"])
         ex=load_json(pathlib.Path("dados/editais/extraidos/2bef5397b19e4a3bd8b6.json")) if pathlib.Path("dados/editais/extraidos/2bef5397b19e4a3bd8b6.json").exists() else None
         if ex: self.assertIn("600.000,00",ex["itens"]["Valor"])   # BNDES: valor real por projeto
         html=open("docs/dashboard.html",encoding="utf-8").read(); self.assertIn("Informações mínimas exigidas",html)
@@ -4346,7 +4383,10 @@ class SystemTests(unittest.TestCase):
         from src.compacto import expandir
         amp=[x for x in expandir(load_json(pathlib.Path("docs/dados/abertas.json"))) if x.get("tipo_registro") in ("edital","regra_anual")]
         val=[x for x in amp if x.get("selo_validacao")=="validada"]
-        self.assertGreaterEqual(len(val),20)
+        # 17/10 (repositório único + expurgo + regra territorial): as 20 validadas contam no REPOSITÓRIO, onde vivem;
+        # na caixa dos motores, toda validada continua com as três informações mínimas comprovadas
+        self.assertGreaterEqual(len(_validadas_do_repositorio()),20)
+        self.assertTrue(val); self.assertTrue(all(x["validacao"]["objeto"] and x["validacao"]["prazo"] and x["validacao"]["site_oficial"] for x in val))
         self.assertTrue(any(x.get("fim")=="2026-10-30" for x in val))            # Fundação Maria Emília
         self.assertTrue(any(x.get("fim") and x.get("selo_validacao")=="validada" for x in amp))   # prazo verificado chegou ao registro
 
@@ -4368,10 +4408,24 @@ class SystemTests(unittest.TestCase):
         from src.compacto import expandir
         amp=[x for x in expandir(load_json(pathlib.Path("docs/dados/abertas.json"))) if x.get("tipo_registro") in ("edital","regra_anual")]
         val=[x for x in amp if x.get("selo_validacao")=="validada"]
-        self.assertGreaterEqual(len(val),50)
-        curso=[x for x in val if x.get("fim") and x["fim"]>="2026-09-08"]
+        self.assertTrue(all(x["validacao"]["site_oficial"] and not re.search(r"pncp\.gov(?![^ ]*/arquivos/)",str(x["validacao"].get("site") or "")) for x in val))
+        # 17/10 (repositório único + expurgo + regra territorial de 16/10): as 50 validadas contam no REPOSITÓRIO; os
+        # municipais do RS confirmados em 08/09 saíram pela regra territorial (fora de Goiás, só estaduais e capitais) —
+        # vale a regra nova: nenhuma validada é municipal de fora de Goiás e há validadas em curso de outros estados
+        from src.repositorio_unico import municipal_fora_de_goias
+        rv=_validadas_do_repositorio()
+        # 17/10/2026 (titular): VALIDADA SÓ COM 12/12 — o "ouro na revisão" sem os 12 itens comprovados (sem vetor) ou
+        # dispensados volta à verificação com o motivo; as 50 de 08/09 continuam contadas: validadas + as que voltaram
+        reg=[r for r in load_json(pathlib.Path("biblioteca_alexandria/livros/_vistas/repositorio_unico.json"))["registros"] if not r.get("arquivada")]
+        voltaram=[r for r in reg if r.get("estado")=="em_verificacao" and "sem os 12 itens" in str(r.get("motivo_estado") or "")]
+        self.assertGreaterEqual(len(rv)+len(voltaram),50)
+        for r in rv:
+            self.assertTrue(r.get("link_oficial") or r["motivo_estado"].startswith("ouro na revisão (12/12"),r["id"])
+            self.assertEqual([k for k,it in r["itens"].items() if it.get("estado") not in ("comprovado","dispensado")],[],r["id"])
+        curso=[r for r in rv if str(r.get("fim") or "")[:10]>="2026-09-08"]
         self.assertGreaterEqual(len(curso),8)
-        self.assertTrue(any(x.get("uf")=="RS" for x in curso))       # municipais do RS confirmados no PDF oficial
+        self.assertEqual([r["id"] for r in rv if municipal_fora_de_goias(r)],[])
+        self.assertTrue(any(r.get("uf") not in (None,"GO","BR") for r in curso))
 
 
     def test_diagnostico_dos_motores_08_09(self):
@@ -4407,8 +4461,16 @@ class SystemTests(unittest.TestCase):
         self.assertEqual(sum(q["causas_de_prazo_nulo"].values()),41)
         from src.compacto import expandir
         amp=[x for x in expandir(load_json(pathlib.Path("docs/dados/abertas.json"))) if x.get("tipo_registro") in ("edital","regra_anual")]
-        curso=[x for x in amp if x.get("selo_validacao")=="validada" and x.get("fim") and x["fim"]>="2026-09-08"]
-        self.assertGreaterEqual(len(curso),8); self.assertTrue({"RJ","RO","RS"} <= {x.get("uf") for x in curso})
+        self.assertTrue(all(x["validacao"]["objeto"] and x["validacao"]["prazo"] and x["validacao"]["site_oficial"]
+                            for x in amp if x.get("selo_validacao")=="validada"))
+        # 17/10 (repositório único + regra territorial de 16/10): as validadas em curso contam no REPOSITÓRIO; RJ, RO e RS
+        # de 08/09 eram municipais de fora de Goiás (saíram pela regra) — vale: nenhuma validada municipal de fora de
+        # Goiás que não seja capital, e há validadas em curso de outros estados
+        from src.repositorio_unico import municipal_fora_de_goias
+        rv=_validadas_do_repositorio()
+        curso=[r for r in rv if str(r.get("fim") or "")[:10]>="2026-09-08"]
+        self.assertGreaterEqual(len(curso),8); self.assertEqual([r["id"] for r in rv if municipal_fora_de_goias(r)],[])
+        self.assertTrue(any(r.get("uf") not in (None,"GO","BR") for r in curso))
         self.assertTrue(pathlib.Path("biblioteca_alexandria/livros/_acervo/relatorios/RELATORIO-VERIFICACAO-2026-09-08.md").exists())
 
 

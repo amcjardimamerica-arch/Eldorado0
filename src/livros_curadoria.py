@@ -238,6 +238,18 @@ def _assinatura(x: dict) -> str:
                      chave(x.get("programa") or "", x.get("orgao") or "")])
 
 
+_NUM = re.compile(r"(?i)(?:n[ºo°.]*\s*|edital\s+|chamamento\s+p[uú]blico\s+n?[ºo°]?\s*)0*(\d{1,4})\s*/\s*(\d{4})")
+_INC = re.compile(r"(?i)\binciso\s+([ivxl]+)\b")
+
+
+def _editais_diferentes(a: dict, b: dict) -> bool:
+    """17/10/2026: a chave do programa ignora números — 'Aviso de chamamento público nº 2/2026' e 'nº 14/2026' tinham a
+    mesma assinatura e eram juntados. Número ou inciso diferente = editais diferentes (a mesma regra do banco_livros)."""
+    na, nb = set(_NUM.findall(str(a.get("programa") or ""))), set(_NUM.findall(str(b.get("programa") or "")))
+    ia, ib = set(_INC.findall(str(a.get("programa") or ""))), set(_INC.findall(str(b.get("programa") or "")))
+    return bool((na and nb and not (na & nb)) or (ia and ib and ia != ib))
+
+
 def _anota(x: dict, o_que: str) -> None:
     lv = x.setdefault("livro", {}); at = lv.setdefault("atualizacoes", [])
     at.append({"em": datetime.now(timezone.utc).isoformat(timespec="seconds"), "o_que": o_que}); lv["atualizacoes"] = at[-20:]
@@ -246,13 +258,15 @@ def _anota(x: dict, o_que: str) -> None:
 def curar() -> dict:
     C = json.loads(CAT.read_text(encoding="utf-8")); L = json.loads(LIG.read_text(encoding="utf-8")) if LIG.exists() else {"ligados": {}}
     ms = C.get("motores") or []; st = Counter(); novos = []
+    por_id = {x.get("id"): x for x in ms}
     for x in ms:                                         # 1) SEPARAR edições de estados diferentes
         por_uf = {}
         for h in x.get("historico") or []:
             por_uf.setdefault(h.get("uf") or "", []).append(h)
         ufs = [u for u in por_uf if u]
         if len(ufs) > 1:
-            dom = Counter({u: len(por_uf[u]) for u in ufs}).most_common(1)[0][0]
+            # 17/10/2026: empate decidido pelo estado do próprio livro (antes, pela ordem das edições — que a trava muda)
+            dom = max(ufs, key=lambda u: (len(por_uf[u]), u == x.get("uf")))
             x["historico"] = por_uf[dom] + por_uf.get("", []); x["uf"] = dom
             for u in ufs:
                 if u == dom:
@@ -262,12 +276,30 @@ def curar() -> dict:
                 n.update({"id": "op-" + hashlib.sha1(f"{x['id']}|{u}".encode()).hexdigest()[:12], "uf": u, "historico": h0,
                           "pagina": h0[-1].get("pagina_oficial") or x.get("pagina"), "criado_em": date.today().isoformat(),
                           "motivo_status": f"separado de {x['id']}: edições de {u} não se misturam com as de {dom}"})
-                _anota(n, f"livro criado ao separar as edições de {u} do livro {x['id']}"); novos.append(n); st["separados"] += 1
+                if n["id"] in por_id:                    # 17/10: já separado antes — as edições vão ao livro que já existe
+                    ja = por_id[n["id"]]; ids = {json.dumps(h, sort_keys=True, ensure_ascii=False) for h in ja.get("historico") or []}
+                    ja.setdefault("historico", []).extend(h for h in h0 if json.dumps(h, sort_keys=True, ensure_ascii=False) not in ids)
+                else:
+                    _anota(n, f"livro criado ao separar as edições de {u} do livro {x['id']}"); novos.append(n); por_id[n["id"]] = n
+                st["separados"] += 1
+                # 17/10/2026: SEPARAÇÃO REGISTRADA no livro de origem — a trava dos livros devolvia as edições retiradas
+                # (lista só ganha itens) e o livro voltava a misturar estados na mesma passagem
+                from .trava_livros import _chave_item
+                x.setdefault("separados", []).append({"id": n["id"], "uf": u, "em": date.today().isoformat(),
+                                                      "edicoes": [_chave_item(h) for h in h0]})
             _anota(x, f"edições de outros estados ({', '.join(u for u in ufs if u != dom)}) separadas em livros próprios")
     ms += novos
+    from .motores import area_e_esfera                    # 17/10/2026: área e esfera também (livro criado/devolvido depois do gerador)
     for x in ms:                                         # 2) CLASSIFICAR e registrar mudanças
         antes = (x.get("nome_classificado"), (x.get("livro") or {}).get("edicoes"))
         classificar(x)
+        try:
+            area_e_esfera(x)
+        except Exception:  # noqa: BLE001
+            pass
+        if x.get("identidade_a_completar") and not x.get("motivo_status"):     # 17/10: todo livro diz por que está no catálogo
+            from .pesquisa_externa import MOTIVO_IDENTIDADE
+            x["motivo_status"] = MOTIVO_IDENTIDADE
         if antes != (x["nome_classificado"], x["livro"]["edicoes"]):
             _anota(x, "classificação escrita" if not antes[0] else ("nova edição registrada" if antes[1] != x["livro"]["edicoes"] else "classificação atualizada"))
             st["atualizados"] += 1
@@ -275,10 +307,29 @@ def curar() -> dict:
     # 30/09: livro PESQUISADO (12 parâmetros) é sempre o sobrevivente e nunca é absorvido por outro
     for x in sorted(ms, key=lambda y: (not y.get("parametros"), y.get("id") not in lig, -len(y.get("historico") or []))):
         a = _assinatura(x)
-        if a in por_ass and x.get("tipo") == "repositorio_de_oportunidade" and not x.get("parametros"):
+        if a in por_ass and x.get("tipo") == "repositorio_de_oportunidade" and not x.get("parametros") \
+                and not _editais_diferentes(por_ass[a], x):
             alvo = por_ass[a]; ids = {h.get("id") for h in alvo.get("historico") or []}
             alvo.setdefault("historico", []).extend(h for h in x.get("historico") or [] if h.get("id") not in ids)
+            # 17/10/2026: a junção leva TUDO o que identifica o livro unido — os registros brutos, a coleta, o agregador, a
+            # oportunidade e as uniões que ele já tinha. Sem isto, o registro ficava sem livro (o repositório criava outro,
+            # duplicado e sem classificação) e o livro que ele absorvera voltava pela trava (a união registrada sumia)
+            for sec in ("brutos", "coleta", "agregador"):
+                if isinstance(x.get(sec), dict) and x[sec]:
+                    alvo[sec] = {**x[sec], **(alvo.get(sec) or {})}
+            if not isinstance(alvo.get("oportunidade"), dict) and isinstance(x.get("oportunidade"), dict):
+                alvo["oportunidade"] = x["oportunidade"]
+            _ja = {str(j.get("id") if isinstance(j, dict) else j) for j in alvo.get("juntados") or []}
+            for j in x.get("juntados") or []:
+                if str(j.get("id") if isinstance(j, dict) else j) not in _ja:
+                    alvo.setdefault("juntados", []).append(j)
+            if x.get("ids_juntados"):
+                alvo["ids_juntados"] = list(dict.fromkeys([*(alvo.get("ids_juntados") or []), *x["ids_juntados"]]))
             classificar(alvo); _anota(alvo, f"juntado com {x['id']} (mesma geografia, objeto, tipo e programa)")
+            # 17/10/2026: UNIÃO REGISTRADA (regra da trava dos livros) — sem o registro, a trava devolvia o livro unido, sem
+            # classificação, a cada passagem (71 idas e voltas por passagem)
+            if x["id"] not in {str(j.get("id") if isinstance(j, dict) else j) for j in alvo.get("juntados") or []}:
+                alvo.setdefault("juntados", []).append({"id": x["id"], "em": date.today().isoformat(), "por": "curadoria dos livros"})
             lig.pop(x["id"], None); st["juntados"] += 1
             continue
         por_ass[a] = x; fica.append(x)

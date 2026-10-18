@@ -125,9 +125,12 @@ def montar() -> dict:
             # 15/10/2026 (titular): DOIS LINKS — onde foi achada (acesso) e onde foi publicada (oficial, só se aprovado na
             # curadoria); o mesmo só quando captada direto no local oficial — e o TRECHO exato da oportunidade
             "link_acesso": (cur.get(r["id"]) or {}).get("link_acesso") or r.get("url"),
-            "link_oficial": (cur.get(r["id"]) or {}).get("link_oficial") if r["id"] in cur else r.get("link_oficial"),
-            "curadoria_link_oficial": {k: (cur.get(r["id"]) or {}).get(k) for k in ("curadoria", "classe_do_link_oficial", "falham", "proximo_passo",
-                                                                                   "captada_direto_na_fonte_oficial", "link_oficial_proposto")} if r["id"] in cur else None,
+            # 17/10/2026 (chat de testes F06.07): o link oficial é o do REPOSITÓRIO (que já aplica a curadoria, a régua e a
+            # fonte resolvida); a ficha não recalcula — o que a curadoria propõe fica em curadoria_link_oficial
+            "link_oficial": r.get("link_oficial"),
+            "curadoria_link_oficial": {**{k: (cur.get(r["id"]) or {}).get(k) for k in ("curadoria", "classe_do_link_oficial", "falham", "proximo_passo",
+                                                                                      "captada_direto_na_fonte_oficial", "link_oficial_proposto")},
+                                       "link_oficial_da_curadoria": (cur.get(r["id"]) or {}).get("link_oficial")} if r["id"] in cur else None,
             "trecho_da_oportunidade": (cur.get(r["id"]) or {}).get("trecho"),
             "estado": r.get("estado"), "arquivada": r.get("arquivada"), "fim": r.get("fim"),
             "achado": achados,

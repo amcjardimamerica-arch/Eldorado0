@@ -72,6 +72,9 @@ def reconciliar(antes: dict, depois: dict, st: dict, nivel: int = 0) -> dict:
     """O 'depois' só pode GANHAR em relação ao 'antes' (nos campos de conteúdo)."""
     if nivel == 0:
         antes = renomear(antes)
+    # 17/10/2026: edição que a curadoria SEPAROU para o livro do seu estado (registro "separados") não é edição sumida:
+    # não volta (senão o livro torna a misturar estados — regra da curadoria dos livros)
+    movidas = {e for s_ in (depois.get("separados") or []) if isinstance(s_, dict) for e in (s_.get("edicoes") or [])} if nivel == 0 else set()
     for k, va in antes.items():
         if nivel == 0 and k in OPERACIONAIS:
             continue
@@ -81,7 +84,7 @@ def reconciliar(antes: dict, depois: dict, st: dict, nivel: int = 0) -> dict:
         vd = depois[k]
         if isinstance(va, list) and isinstance(vd, list):
             tem = {_chave_item(x) for x in vd}
-            falta = [x for x in va if _chave_item(x) not in tem]
+            falta = [x for x in va if _chave_item(x) not in tem and not (k == "historico" and _chave_item(x) in movidas)]
             if falta:
                 depois[k] = falta + vd if k in ("historico",) else vd + falta
                 st["itens_devolvidos"] += len(falta)

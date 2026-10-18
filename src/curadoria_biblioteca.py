@@ -177,6 +177,11 @@ def _juntar(s: dict, o: dict) -> None:
                 s[k] = o[k]
     ids = {h.get("id") or h.get("titulo") for h in s.get("historico") or []}
     s.setdefault("historico", []).extend(h for h in o.get("historico") or [] if (h.get("id") or h.get("titulo")) not in ids)
+    for sec in ("brutos", "coleta", "agregador"):           # 17/10/2026: os registros do livro unido vão junto (senão
+        if isinstance(o.get(sec), dict) and o[sec]:          # o registro fica sem livro e o repositório cria um duplicado)
+            s[sec] = {**o[sec], **(s.get(sec) or {})}
+    if not isinstance(s.get("oportunidade"), dict) and isinstance(o.get("oportunidade"), dict):
+        s["oportunidade"] = o["oportunidade"]
     ck_s = s.setdefault("livro", {}).setdefault("checklist", {})
     for k, v in ((o.get("livro") or {}).get("checklist") or {}).items():
         ck_s.setdefault(k, v)

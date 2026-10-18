@@ -35,9 +35,23 @@ class TesteIntegridadePainel(unittest.TestCase):
         json.loads((ROOT / "docs/dados/saude.json").read_text(encoding="utf-8"))
 
     def test_catalogo_de_livros_sem_duplicados(self):
+        """17/10/2026: o mesmo programa + órgão em estados diferentes são livros diferentes (curadoria dos livros, 29/09:
+        as edições de cada estado vão para um livro próprio). Duplicado = mesmo programa + órgão com estado compatível
+        (igual, ou um deles sem estado / nacional / internacional) — a regra de src/banco_livros._uf_compativel."""
         C = json.loads((ROOT / "biblioteca_alexandria/fontes/motores.json").read_text(encoding="utf-8")).get("motores", [])
-        ch = [re.sub(r"[^a-z0-9]", "", f"{x.get('programa')}{x.get('orgao')}".lower())[:80] for x in C]
-        self.assertEqual(len(ch), len(set(ch)))
+        por = {}
+        for x in C:
+            por.setdefault(re.sub(r"[^a-z0-9]", "", f"{x.get('programa')}{x.get('orgao')}".lower())[:80], []).append(x)
+        nac = ("", "BR", "INT")
+        dup = [(a["id"], b["id"]) for g in por.values() for i, a in enumerate(g) for b in g[i + 1:]
+               if str(a.get("uf") or "").upper() in nac or str(b.get("uf") or "").upper() in nac
+               or str(a.get("uf") or "").upper() == str(b.get("uf") or "").upper()]
+        self.assertEqual(dup, [])
+        sep = [x for g in por.values() if len(g) > 1 for x in g]
+        self.assertTrue(all(len({str(x.get("uf") or "").upper() for x in g}) == len(g) for g in por.values() if len(g) > 1),
+                        "um livro por estado")
+        self.assertTrue(not sep or any(x.get("separados") or "separado de" in str(x.get("motivo_status")) for x in sep),
+                        "livro do mesmo programa em outro estado só existe por separação registrada")
 
     def test_mapa_so_com_validacao(self):
         """28/09: um voo com código antigo publicou o mapa sem a validação (11/1018) por 10 minutos."""
@@ -135,9 +149,18 @@ class TesteIntegridadePainel(unittest.TestCase):
         cfg = [oportunidade(t, _hj.year, _Lev(), _hj) for t in (_cfg().get("tipos") or [])]
         cfg = [e for e in cfg if e.get("area") == "emendas_parlamentares" and e.get("fim") and e["fim"] >= _hj.isoformat()]
         V = json.loads((ROOT / "biblioteca_alexandria/livros/_acervo/editais/vereditos_revisao.json").read_text(encoding="utf-8")).get("vereditos") or {}
-        esperadas = {e["id"] for e in cfg if (V.get(e["id"]) or {}).get("veredito") not in FECHADAS}
-        self.assertGreaterEqual(len(esperadas), 2, "o calendário legislativo deixou de ter as emendas federal e estadual")
+        # 17/10 18:16: a revisão humana (Chrome) julgou também a FEDERAL ruído (página de tramitação do PLOA, sem edital):
+        # o número de emendas no calendário é decisão da revisão, não um número fixo. O calendário legislativo continua
+        # com as três (federal, estadual, municipal); cada uma está no calendário OU foi fechada pela revisão com motivo
+        self.assertGreaterEqual({e["id"] for e in cfg}, {"emenda-federal-2026", "emenda-estadual-goias-2026"},
+                                "o calendário legislativo deixou de ter as emendas federal e estadual")
+        fechadas = {e["id"] for e in cfg if (V.get(e["id"]) or {}).get("veredito") in FECHADAS}
+        esperadas = {e["id"] for e in cfg} - fechadas
+        self.assertTrue(esperadas, "nenhuma emenda do calendário legislativo no calendário")
+        for i in fechadas:
+            self.assertGreaterEqual(len(str(V[i].get("motivo") or "").strip()), 20, f"{i}: fechada pela revisão sem motivo")
         self.assertEqual(esperadas - {x["id"] for x in em}, set(), "emendas parlamentares fora do calendário")
+        self.assertEqual(fechadas & {x["id"] for x in em}, set(), "emenda fechada pela revisão humana voltou ao calendário")
         for x in em:
             self.assertTrue(x.get("inicio") and x.get("fim") and x.get("link_oficial"))
 

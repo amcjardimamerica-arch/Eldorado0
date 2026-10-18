@@ -237,7 +237,9 @@ def acumular(anterior: dict | None, nova: dict, n: int, faltam_agora: list[str])
     faltavam = list(dict.fromkeys(list(a.get("faltavam") or []) + list(faltam_agora)))
     res = [k for k in faltavam if k in itens or k in disp]
     out = {**a, **{k: v for k, v in nova.items() if v not in (None, [], {})}}
-    out.update({"itens": itens, "dispensas": disp, "abordagens": hist, "tentativa": len(hist), "faltavam": faltavam,
+    # 17/10/2026: a tentativa conta abordagens DIFERENTES — a mesma revisão manual reimportada a cada fechamento repetia a
+    # abordagem 1 (uma certidão chegou a 14 "tentativas", todas a 1) e a oportunidade era dada como esgotada sem subir a escada
+    out.update({"itens": itens, "dispensas": disp, "abordagens": hist, "tentativa": len({h.get("n") for h in hist}), "faltavam": faltavam,
                 "resolvidos": res, "ainda_faltam": [k for k in faltavam if k not in res],
                 "eficiencia": round(len(res) / len(faltavam), 3) if faltavam else 1.0,
                 "link_oficial": a.get("link_oficial") or nova.get("link_oficial"),

@@ -21,7 +21,10 @@ VETOR_ESTRITO = re.compile(r"pncp\.gov\.br/(?:app|pncp-api/v1/(?:orgaos/[^/]+/co
                            r"bit\.ly|google\.|facebook\.|instagram\.|linkedin\.|youtube\.|portaldoterceirosetor|gife\.org\.br/(?!.*edital)|"
                            # 11/10: agregadores, blogs e portais vistos nas provas do Interceptador — só pista, nunca fonte
                            r"buscarlicitacao|querolicitacao|notasocial|corrivus|agenciadobem|acheconcursos|scbrnews|inclusaosocial\.com|"
-                           r"blog\.bondinho|artequemoraaqui|mosaicco", re.I)
+                           r"blog\.bondinho|artequemoraaqui|mosaicco|"
+                           # 17/10 (chat de testes, F08.04): formulário e página de inscrição não são documento do edital;
+                           # o próprio espelho de editais do sistema (editaisosc) republica
+                           r"surveymonkey\.|jotform\.|forms\.office\.|forms\.gle|linktr\.ee|editaisosc", re.I)
 IMPRENSA = re.compile(r"g1\.globo|uol\.com|folha\.|estadao\.|metropoles|jornal|noticia", re.I)
 VETOR = re.compile(VETOR_ESTRITO.pattern + "|" + IMPRENSA.pattern, re.I)
 DOC_ORGAO = re.compile(r"pncp\.gov\.br/pncp-api/v1/orgaos/\d+/compras/\d+/\d+/arquivos/\d+", re.I)
@@ -60,6 +63,49 @@ def regua(url: str | None) -> tuple[bool, str]:
     if PUBLICO.search(h):
         return True, "domínio próprio do financiador"
     return False, "domínio não reconhecido"
+
+
+# 17/10/2026 (titular, chat de testes F08.04): VETOR NUNCA É FONTE — também nas certidões já gravadas. "Domínio não
+# reconhecido" não é vetor (fundação estadual .br, prefeitura.poa.br, embaixada): só o que a régua reconhece como
+# anúncio, agregador, republicador catalogado ou imprensa.
+MOTIVOS_VETOR = ("vetor", "imprensa", "republicador")
+
+
+def e_vetor(url: str | None) -> bool:
+    """O endereço é vetor (agregador, republicador, imprensa, formulário)? Sem endereço não é vetor (é falta de documento)."""
+    if not str(url or "").startswith("http"):
+        return False
+    ok, por = regua(url)
+    return (not ok) and por.startswith(MOTIVOS_VETOR)
+
+
+def aplicar_regua_certidao(c: dict) -> int:
+    """Tira da certidão (no lugar) todo item cujo DOCUMENTO é vetor: o item sai de 'itens' para 'nao_comprovados' (com o
+    valor lido, o documento e o motivo), volta para 'ainda_faltam' e sai de 'resolvidos' — entra de novo na fila do
+    Cartório. Link oficial que é vetor também sai. Devolve quantos itens saíram."""
+    if not isinstance(c, dict):
+        return 0
+    itens = c.get("itens") if isinstance(c.get("itens"), dict) else {}
+    tirados = [k for k, v in itens.items() if isinstance(v, dict) and e_vetor(v.get("documento"))]
+    if tirados:
+        nc = c.get("nao_comprovados") if isinstance(c.get("nao_comprovados"), dict) else {}
+        for k in tirados:
+            v = itens.pop(k)
+            nc[k] = {**v, "motivo": f"documento é vetor ({regua(v.get('documento'))[1]}) — vetor nunca é fonte; volta ao Cartório"}
+        c["nao_comprovados"] = nc
+        c["ainda_faltam"] = list(dict.fromkeys(list(c.get("ainda_faltam") or []) + tirados))
+        if isinstance(c.get("resolvidos"), list):
+            c["resolvidos"] = [k for k in c["resolvidos"] if k not in tirados]
+        c["regua_aplicada"] = sorted(set(c.get("regua_aplicada") or []) | set(tirados))
+    if c.get("link_oficial") and e_vetor(c["link_oficial"]):
+        c["link_oficial_vetor"] = c.pop("link_oficial")
+        c["link_oficial"] = None
+    return len(tirados)
+
+
+def aplicar_regua_certidoes(doc: dict) -> int:
+    """A régua em todas as certidões de um documento {'certidoes': {...}} (certidoes.json ou certidoes_manuais.json)."""
+    return sum(aplicar_regua_certidao(c) for c in ((doc or {}).get("certidoes") or {}).values()) if isinstance(doc, dict) else 0
 
 
 def esfera_do_dominio(url: str) -> str | None:

@@ -167,7 +167,19 @@ class TesteParametrosDaAuditoria(unittest.TestCase):
         em_ver = [e for e in d["editais"] if (e.get("etapa") or 1) == 1 and e.get("estado_export") in ("aberto", "a_abrir", "sem_prazo")]
         self.assertEqual(sum(1 for e in em_ver if e["id"] in an), 0)      # nenhum analisado fica em verificação
         subiram = [e for e in d["editais"] if (e.get("etapa") or 1) >= 2 and e.get("verificado_por")]
-        self.assertGreaterEqual(len(subiram), 20)
+        # todo verificado individualmente que está no painel subiu de etapa
+        self.assertEqual([e["id"] for e in d["editais"] if e.get("verificado_por") and (e.get("etapa") or 1) < 2], [])
+        # 17/10: CONTABILIDADE dos 20 de 09/09 — 5 saíram do painel pelo expurgo (registrado em estado/expurgo/) ou por
+        # análise individual fora de abrangência/inativa; os que ficaram mais os que saíram com registro dão os 20
+        expurgo = " ".join((p.read_text(encoding="utf-8") for p in sorted((ROOT / "estado/expurgo").glob("*.json"))))
+        sairam = ("22ca6714458b99faf7a9", "b0ddc9e8dfb55699a392",              # expurgo (OS de saúde; contratação)
+                  "56160bcf52ea1bfaeb88", "7d0bb9ae4eb3935a7d0b", "5258a95ad63285f99b87")  # fora de abrangência
+        no_painel = {e["id"] for e in d["editais"]}
+        for oid in sairam:
+            self.assertNotIn(oid, no_painel, oid)
+            self.assertTrue(oid in expurgo or ((an.get(oid) or {}).get("alcance") == "fora_de_abrangencia"
+                                               and (an.get(oid) or {}).get("ativo") is False), oid)
+        self.assertGreaterEqual(len(subiram) + len(sairam), 20)
         self.assertTrue(all(e.get("verificado_em") for e in subiram[:5]))
 
     def test_fluxo_de_verificacao_com_etapa_de_espera(self):

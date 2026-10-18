@@ -43,14 +43,19 @@ jobs:
         env:
           WG_CONFIG_BR: ${{ secrets.WG_CONFIG_BR }}
         run: |
+          # 17/10/2026: este passo é o GRAVADOR de estado/saida_brasil.txt (não um leitor). O texto era sempre o mesmo,
+          # então o Git não via mudança e o arquivo parecia parado desde 09/10. Agora leva a hora da saída e o fluxo:
+          # quem abre o arquivo sabe de quando é a informação.
           if [ -n "$WG_CONFIG_BR" ]; then
             sudo apt-get install -y -qq wireguard-tools resolvconf >/dev/null 2>&1 || sudo apt-get install -y -qq wireguard-tools >/dev/null 2>&1
             echo "$WG_CONFIG_BR" | sudo tee /etc/wireguard/br.conf >/dev/null
             sudo chmod 600 /etc/wireguard/br.conf
-            sudo wg-quick up br && echo "túnel BR ativo — IP de saída: $(curl -s --max-time 10 https://api.ipify.org || echo desconhecido)" | tee estado/saida_brasil.txt
+            if sudo wg-quick up br; then SAIDA="túnel BR ativo — IP de saída: $(curl -s --max-time 10 https://api.ipify.org || echo desconhecido)"
+            else SAIDA="túnel BR configurado mas não subiu: robô sai pelos EUA (GitHub)"; fi
           else
-            echo "sem WG_CONFIG_BR: robô sai pelos EUA (GitHub); portais que bloqueiam IP estrangeiro continuam fechados" | tee estado/saida_brasil.txt
+            SAIDA="sem WG_CONFIG_BR: robô sai pelos EUA (GitHub); portais que bloqueiam IP estrangeiro continuam fechados"
           fi
+          printf '%s\nem: %s\nfluxo: %s (execução %s)\n' "$SAIDA" "$(date -u +%FT%TZ)" "$GITHUB_WORKFLOW" "$GITHUB_RUN_ID" | tee estado/saida_brasil.txt
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - name: Decidir o bloco da hora (00h–06h BRT)

@@ -150,7 +150,9 @@ def vista_vereditos(gravar_: bool = True) -> dict:
     fontes += [({"id": i, **v}, None) for i, v in ((_j(RESOLVIDOS, {}) or {}).get("ids") or {}).items()]
     for p, lid in sorted(fontes, key=lambda t: str(t[0].get("em") or "")):
         if p.get("veredito"):
-            V[p["id"]] = {**(V.get(p["id"]) or {}), "veredito": p["veredito"], "motivo": str(p.get("parecer") or "")[:300],
+            # 17/10/2026: entrada do livro sem 'parecer' não apaga o motivo escrito pela revisão (838 motivos sumiram assim)
+            _mot = p.get("parecer") or p.get("motivo") or ((V.get(p["id"]) or {}).get("motivo") if (V.get(p["id"]) or {}).get("veredito") == p["veredito"] else "")
+            V[p["id"]] = {**(V.get(p["id"]) or {}), "veredito": p["veredito"], "motivo": str(_mot or "")[:300],
                           "origem": p.get("origem"), "em": p.get("em"), **({"livro": lid} if lid else {})}
     atual["vereditos"] = V
     atual["origem_dos_dados"] = "VISTA regerada a partir dos livros (src.pesquisa_externa) — o dado está no livro"
@@ -177,6 +179,9 @@ def vista_aprendizado(gravar_: bool = True) -> dict:
     return {k: out[k] for k in ("livros_com_aprendizado", "aprendizados")}
 
 
+MOTIVO_IDENTIDADE = "livro a identificar: a pesquisa externa deu veredito sem título, órgão nem site (pesquisa individual no Chrome)"
+
+
 def livro_a_identificar(oid: str, veredito: str | None, pistas: str, aprendizado: dict | None = None, origem: str = "") -> dict:
     """17/10/2026 (titular): resultado de pesquisa externa com veredito, mas SEM identidade (nem no histórico) — cria o
     LIVRO com o que se sabe, marcado 'identidade_a_completar'; o Cartório o põe nas pendências do Chrome (grupo próprio)
@@ -187,6 +192,7 @@ def livro_a_identificar(oid: str, veredito: str | None, pistas: str, aprendizado
         return {"ja_existia": lid}
     L.append({"id": lid, "programa": f"Oportunidade a identificar — {pistas[:90]}", "orgao": None, "criado_em": _agora()[:10],
               "origem": "pesquisa externa (identidade a completar)", "identidade_a_completar": True, "pistas": pistas,
+              "motivo_status": MOTIVO_IDENTIDADE,
               "historico": [], "coleta": {},
               "pesquisa_externa": [{"id": oid, "origem": origem, "em": _agora(), "veredito": veredito, "definitivo": False}],
               **({"aprendizados": [{"id": oid, "origem": origem, **aprendizado}]} if aprendizado else {})})

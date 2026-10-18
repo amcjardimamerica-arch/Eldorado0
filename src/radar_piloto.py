@@ -130,9 +130,12 @@ def publicar() -> dict:
 def para_o_claude(limite: int = 40) -> list[dict]:
     """A fila que vai para o pacote do Claude externo."""
     r = radar()
+    # 17/10/2026: a descoberta mais recente primeiro. Na ordem de inserção, com mais de `limite` empresas a pesquisar,
+    # o que o Piloto acabava de achar nunca chegava ao pacote do Claude externo.
+    pend = sorted(((k, e) for k, e in r.get("empresas", {}).items() if e.get("marcador") == "a_pesquisar"),
+                  key=lambda kv: (str(kv[1].get("ultima_vez") or kv[1].get("descoberto_em") or ""), kv[1].get("vezes_vista") or 0), reverse=True)
     return [{"chave": k, "nome": e["nome"], "site": e["site"], "nivel": e.get("nivel"),
-             "porque": e.get("porque"), "a_descobrir": e.get("a_descobrir")}
-            for k, e in r.get("empresas", {}).items() if e.get("marcador") == "a_pesquisar"][:limite]
+             "porque": e.get("porque"), "a_descobrir": e.get("a_descobrir")} for k, e in pend[:limite]]
 
 
 if __name__ == "__main__":

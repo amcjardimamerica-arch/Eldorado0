@@ -367,17 +367,22 @@ def remapear_unidos(gravar: bool = True) -> dict:
     ids = {x.get("id") for x in L}
     mapa = {}
     for x in L:
-        for j in x.get("juntados") or []:
+        # 17/10/2026: vale também 'ids_juntados' (registro da união feita pelo gerador dos motores), como na trava dos
+        # livros — sem ele o monitoramento do livro unido ficava apontando para um livro que não existe mais
+        for j in [*(x.get("juntados") or []), *(x.get("ids_juntados") or [])]:
             jid = j.get("id") if isinstance(j, dict) else j
-            if jid:
-                mapa[jid] = x["id"]
+            if jid and jid != x.get("id"):
+                mapa.setdefault(jid, x["id"])
     n = 0
     lig = m.get("ligados")
     if isinstance(lig, dict):
         for velho in [k for k in lig if k not in ids and k in mapa]:
             novo = mapa[velho]
-            while novo not in ids and novo in mapa:          # união em cadeia
-                novo = mapa[novo]
+            vistos = {velho}
+            while novo not in ids and novo in mapa and novo not in vistos:   # união em cadeia (sem laço)
+                vistos.add(novo); novo = mapa[novo]
+            if novo not in ids:
+                continue
             v = lig.pop(velho)
             if novo in lig and isinstance(lig[novo], dict) and isinstance(v, dict):
                 for kk, vv in v.items():

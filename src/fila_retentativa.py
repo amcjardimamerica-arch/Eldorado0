@@ -15,6 +15,8 @@ import json
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from .nucleo import sem_assinatura, sem_assinaturas
+
 ROOT = Path(__file__).resolve().parents[1]
 ARQ = ROOT / "estado/fila_retentativa.json"
 ESPERA_MIN = 30
@@ -39,6 +41,8 @@ def _carregar() -> dict:
 
 def gravar() -> None:
     d = _carregar()
+    for _k in ("fila", "fora_da_fila"):                # 17/10 (F11.01): URL pré-assinada gravada antes desta regra
+        d[_k] = sem_assinaturas(d.get(_k) or {})
     d["em"] = _agora().isoformat()
     d["resumo"] = resumo()
     ARQ.parent.mkdir(parents=True, exist_ok=True)
@@ -56,11 +60,13 @@ def tipo_erro(exc: BaseException | None = None, code=None, texto: str | None = N
 
 
 def fora_da_fila(url: str) -> bool:
+    url = sem_assinatura(url)                          # 17/10: a chave nunca leva a assinatura da URL
     return url in _carregar()["fora_da_fila"]
 
 
 def aguardando(url: str, agora: datetime | None = None) -> bool:
     """Errou há menos de 30 minutos: a passagem pula e segue a fila."""
+    url = sem_assinatura(url)                          # 17/10: a chave nunca leva a assinatura da URL
     r = _carregar()["fila"].get(url)
     return bool(r) and (agora or _agora()) < datetime.fromisoformat(r["proxima_em"])
 
@@ -72,6 +78,7 @@ def devidas(escopo: str, agora: datetime | None = None) -> list[str]:
 
 
 def falhou(url: str, escopo: str, erro: str, causa: str | None = None, agora: datetime | None = None) -> dict:
+    url = sem_assinatura(url)                          # 17/10: a chave nunca leva a assinatura da URL
     d = _carregar(); a = agora or _agora()
     r = d["fila"].get(url) or {"escopo": escopo, "primeiro_erro": a.isoformat(), "tentativas": 0, "erro": None, "historico": []}
     r["tentativas"] = r["tentativas"] + 1 if r.get("erro") == erro else 1          # erro diferente recomeça a contagem
@@ -87,11 +94,13 @@ def falhou(url: str, escopo: str, erro: str, causa: str | None = None, agora: da
 
 
 def sucesso(url: str) -> None:
+    url = sem_assinatura(url)                          # 17/10: a chave nunca leva a assinatura da URL
     _carregar()["fila"].pop(url, None)
 
 
 def reabrir(url: str) -> bool:
     """Devolve à fila uma página que saiu (uso manual, depois de corrigida a causa)."""
+    url = sem_assinatura(url)                          # 17/10: a chave nunca leva a assinatura da URL
     return _carregar()["fora_da_fila"].pop(url, None) is not None
 
 

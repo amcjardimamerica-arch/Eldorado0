@@ -53,5 +53,45 @@ class TesteJuntaIndice(unittest.TestCase):
         self.assertEqual(json.loads((G.ROOT / "estado/x.json").read_text(encoding="utf-8")), {"b": 2})
 
 
+class TesteJuncao3Vias(unittest.TestCase):
+    """17/10/2026 (chat de testes, item 6): os arquivos de controle com 3+ gravadores juntam em 3 vias."""
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp()); self._root, self._guarda = G.ROOT, G.GUARDA
+        G.ROOT = self.tmp / "repo"; G.GUARDA = self.tmp / "guarda"
+
+    def tearDown(self):
+        G.ROOT, G.GUARDA = self._root, self._guarda; shutil.rmtree(self.tmp, ignore_errors=True)
+
+    def _gravar(self, rel, base, main, fluxo):
+        for raiz, txt in ((G.GUARDA / "base", base), (G.ROOT, main)):
+            (raiz / rel).parent.mkdir(parents=True, exist_ok=True); (raiz / rel).write_text(txt, encoding="utf-8")
+        o = self.tmp / "fluxo"; o.write_text(fluxo, encoding="utf-8")
+        G._copiar(o, rel)
+        return (G.ROOT / rel).read_text(encoding="utf-8")
+
+    def test_os_tres_mais_criticos_estao_cobertos(self):
+        self.assertIn("estado/livros_monitoramento.json", G.JUNTADOS_3_VIAS)   # ex-estado/opressores.json, 10 gravadores
+        self.assertIn("estado/auditoria.jsonl", G.JUNTADOS_3_VIAS)             # 10 gravadores
+        src = (RAIZ / "scripts/gravar_somente_alterados.py").read_text(encoding="utf-8")
+        self.assertIn('"-m", "src.trava_livros"', src, "o catálogo (30 gravadores) é juntado pela trava dos livros")
+
+    def test_livros_monitoramento_nao_perde_o_que_outro_fluxo_gravou(self):
+        base = {"ligados": {"a": 1, "b": 1}, "historico": ["h1"], "atualizado_em": "t0"}
+        main = {"ligados": {"a": 1, "b": 1, "c": 1}, "historico": ["h1", "h2"], "atualizado_em": "t1"}   # outro fluxo
+        fluxo = {"ligados": {"a": 2, "d": 1}, "historico": ["h1", "h3"], "atualizado_em": "t2"}         # este fluxo
+        j = json.loads(self._gravar("estado/livros_monitoramento.json", json.dumps(base), json.dumps(main), json.dumps(fluxo)))
+        self.assertEqual(j["ligados"], {"a": 2, "c": 1, "d": 1}, "c (do outro) fica; a e d (deste) entram; b, retirado por este, sai")
+        self.assertEqual(j["historico"], ["h1", "h2", "h3"]); self.assertEqual(j["atualizado_em"], "t2")
+
+    def test_registro_jsonl_so_acrescenta(self):
+        base = '{"e":1}\n'; main = '{"e":1}\n{"e":2}\n'; fluxo = '{"e":1}\n{"e":3}\n'
+        out = self._gravar("estado/auditoria.jsonl", base, main, fluxo)
+        self.assertEqual(out.splitlines(), ['{"e":1}', '{"e":2}', '{"e":3}'])
+
+    def test_controle_ilegivel_nao_e_gravado(self):
+        with self.assertRaises(RuntimeError):
+            self._gravar("estado/livros_monitoramento.json", "{}", '{"cortado": ', "{}")
+
+
 if __name__ == "__main__":
     unittest.main()
