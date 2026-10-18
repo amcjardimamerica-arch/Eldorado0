@@ -399,11 +399,20 @@ def livros_e_preditivo(itens: list[dict]) -> dict:
     for x in C.get("motores") or []:
         grupos.setdefault(_nt(f"{x.get('programa')}{x.get('orgao')}"), []).append(x)
     manter, fora = [], []
+    _BL = __import__("src.banco_livros", fromlist=["x"])
     for g in grupos.values():
         g.sort(key=lambda x: (bool(x.get("validacao_mapa") or x.get("dados_confirmados") or x.get("decisao")), x["id"] in (L.get("ligados") or {}), len(json.dumps(x))), reverse=True)
-        manter.append(g[0]); fora += [y["id"] for y in g[1:]]
-        for y in g[1:]:                                       # 17/10 (titular): UNE — o conteúdo do que sai vai para o que fica
-            __import__("src.banco_livros", fromlist=["x"]).juntar_em(g[0], y, "duplicado na regeneração (programa + órgão)")
+        # 17/10/2026: mesmo programa + órgão em ESTADOS DIFERENTES não é duplicado — a curadoria dos livros separa as
+        # edições de cada estado num livro próprio; unir aqui devolvia a edição ao livro de origem (que voltava a
+        # misturar estados) e a curadoria separava de novo a cada passagem. Mesma regra do banco_livros (_uf_compativel).
+        ficam = []
+        for y in g:
+            alvo = next((k for k in ficam if _BL._uf_compativel(k, y)), None)
+            if alvo is None:
+                ficam.append(y); continue
+            fora.append(y["id"])                              # 17/10 (titular): UNE — o conteúdo do que sai vai para o que fica
+            _BL.juntar_em(alvo, y, "duplicado na regeneração (programa + órgão)")
+        manter += ficam
     if fora:
         C["motores"] = [x for x in C["motores"] if x["id"] not in set(fora)]
         for i in fora:
@@ -818,6 +827,15 @@ def sincronizar_catalogo(gravar: bool = True) -> dict:
             _m = json.loads(_pm.read_text(encoding="utf-8")); _cat = (_j(ROOT / "biblioteca_alexandria/fontes/motores.json", {}) or {}).get("motores") or []
             _lig = ((_j(ROOT / "estado/livros_monitoramento.json", {}) or {}).get("ligados") or {})
             _m.setdefault("resumo", {}).update({"total": len(_cat), "ligados": len(_lig)})
+            # 17/10/2026: o LIVRO de cada cartão também vem do catálogo gravado — a curadoria e a trava (que rodam depois
+            # do gerador dos motores) atualizam o livro, e o cartão ficava com a versão anterior
+            _c = _m.get("campos") or []
+            if "livro" in _c and "id" in _c:
+                _il, _ii = _c.index("livro"), _c.index("id")
+                _lv = {x.get("id"): x.get("livro") for x in _cat if x.get("livro")}
+                for _row in _m.get("linhas") or []:
+                    if isinstance(_row, list) and len(_row) > max(_il, _ii) and _row[_ii] in _lv:
+                        _row[_il] = _lv[_row[_ii]]
             _pm.write_text(json.dumps(_m, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         except Exception:  # noqa: BLE001
             pass

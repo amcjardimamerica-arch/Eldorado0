@@ -51,6 +51,36 @@ class TravaDosLivros(unittest.TestCase):
         self.assertTrue((self.r / "biblioteca_alexandria/livros/a.json").exists(), "arquivo do livro apagado volta")
         self.assertEqual(st["livros_devolvidos"], 1); self.assertEqual(st["livros_arquivados_por_uniao"], 1)
 
+    def test_edicao_separada_pela_curadoria_nao_volta(self):
+        """17/10/2026: a curadoria separa as edições de outro estado num livro próprio e registra em "separados"; a trava
+        devolvia a edição ao livro de origem e ele voltava a misturar estados."""
+        self.cat.write_text(json.dumps({"motores": [
+            {"id": "a", "programa": "PNAB Goiás", "orgao": "Secult-GO", "pagina": "https://goias.gov.br/pnab", "coleta": {"x": 1},
+             "historico": [{"id": "e1"}], "estado": "aberto", "separados": [{"id": "a-sp", "uf": "SP", "edicoes": [T._chave_item({"id": "e2"})]}]},
+            {"id": "a-sp", "programa": "PNAB Goiás", "historico": [{"id": "e2"}]},
+            {"id": "b", "programa": "Fundo do Idoso", "orgao": "Conanda"}, {"id": "c", "programa": "PNAB Goiás (cópia)", "orgao": "Secult-GO"}]}))
+        T.aplicar()
+        L = {x["id"]: x for x in json.loads(self.cat.read_text())["motores"]}
+        self.assertEqual([h["id"] for h in L["a"]["historico"]], ["e1"], "a edição separada fica no livro do seu estado")
+        self.assertEqual([h["id"] for h in L["a-sp"]["historico"]], ["e2"])
+
+    def test_curadoria_separa_uma_vez_e_a_trava_mantem(self):
+        from src import livros_curadoria as LC
+        cat = {"motores": [{"id": "m", "programa": "Edital X", "uf": "GO", "historico": [{"id": "h1", "uf": "GO"}, {"id": "h2", "uf": "AP"}]}]}
+        with tempfile.TemporaryDirectory() as d:
+            c = Path(d) / "c.json"; c.write_text(json.dumps(cat))
+            with mock.patch.object(LC, "CAT", c), mock.patch.object(LC, "LIG", Path(d) / "l.json"):
+                LC.curar()
+                m = json.loads(c.read_text())["motores"]
+                m[0]["historico"].append({"id": "h2", "uf": "AP"})          # a trava devolveu (versão anterior à correção)
+                c.write_text(json.dumps({"motores": m}))
+                LC.curar()
+                m = {x["id"]: x for x in json.loads(c.read_text())["motores"]}
+        self.assertEqual(len(m), 2, "a segunda passagem não cria outro livro do mesmo estado")
+        self.assertEqual(m["m"]["uf"], "GO", "empate: fica o estado do próprio livro")
+        self.assertEqual({h["uf"] for h in m["m"]["historico"]}, {"GO"})
+        self.assertTrue(all(s["edicoes"] == ['id:h2'] for s in m["m"]["separados"]))
+
     def test_sem_mudanca_nao_mexe(self):
         st = T.aplicar()
         self.assertFalse(any(st.values()))

@@ -226,7 +226,10 @@ def _devolver_a_fila(alvo: dict, e_inv: dict) -> None:
         dados = {"prazo": reg.get("fim"), "inicio": reg.get("inicio"), "pagina_oficial": reg.get("pagina_oficial"),
                  "objeto": reg.get("objeto"), "orgao": reg.get("orgao"), "valor": reg.get("valor_texto"),
                  "trecho": (campos.get("Prazo de inscrição") or {}).get("trecho")}
-        registrar_resgate(alvo["fila_id"], {k: v for k, v in dados.items() if v})
+        dados = {k: v for k, v in dados.items() if v}
+        # 17/10/2026: faltava o 3º argumento (achou) — o TypeError era engolido aqui e nenhum resultado do Interceptador
+        # voltava à fila de resgate (nem à Biblioteca), que ficou parada desde 02/10
+        registrar_resgate(alvo["fila_id"], dados, bool(dados.get("prazo") or dados.get("pagina_oficial")))
     except Exception:
         pass
 
@@ -658,11 +661,7 @@ def _proximo_alvo_anterior() -> dict | None:
     empresa nova. Quem já foi estudado não volta (memória em estado/interceptador)."""
     est = load_json(ESTADO) if ESTADO.exists() else {}
     feitos = est.get("feitos") or {}
-    try:
-        from .missao_especial import montar_fila
-        montar_fila()                        # 27/09: quem remonta a fila de resgate agora é o Interceptador
-    except Exception:
-        pass
+    # 17/10/2026: a fila de resgate é remontada no início de cada voo e de cada rodada (_remontar_resgates)
     # PRIORIDADE GOIÁS (titular, 27/09): as possíveis oportunidades de Goiás do mapa primeiro; depois as dos outros
     # estados, em sorteio. O fluxo já reúne o que os motores, o Espião e ele mesmo trouxeram.
     import random
@@ -718,9 +717,20 @@ def _proximo_alvo_anterior() -> dict | None:
     return None
 
 
+def _remontar_resgates() -> dict:
+    """27/09: quem remonta a fila de resgate é o Interceptador. 17/10/2026: no início de cada voo (antes, só na última
+    opção de alvo, quase nunca alcançada) e publicada no painel (docs/dados/resgates_piloto.json)."""
+    try:
+        from .missao_especial import remontar_e_publicar
+        return remontar_e_publicar()
+    except Exception as ex:  # noqa: BLE001 — a fila nunca impede o voo
+        return {"erro": f"{type(ex).__name__}: {ex}"[:200]}
+
+
 def voo(ia) -> dict:
     """Um voo do Interceptador: um alvo, relatório ao pousar."""
     t0 = time.time()
+    _resg = _remontar_resgates()
     try:                                        # 09/10 (titular): contagem semanal zerada pelo próprio Piloto, ao decolar
         from .reset_pilotos import zerar_se_preciso as _zerar
         _zerou = _zerar("interceptador")       # 09/10: o quadro da esquadrilha é do Espião — ele o republica na próxima missão
@@ -729,7 +739,8 @@ def voo(ia) -> dict:
     a = proximo_alvo()
     est = load_json(ESTADO) if ESTADO.exists() else {"feitos": {}, "rodadas": []}
     est.setdefault("feitos", {}); est.setdefault("rodadas", [])
-    rel = {"em": now_iso(), "papel": "Piloto - Interceptador", "modelo": "qwen3-8b", "parametros": PARAMETROS["regra"], "inicio": now_iso()}
+    rel = {"em": now_iso(), "papel": "Piloto - Interceptador", "modelo": "qwen3-8b", "parametros": PARAMETROS["regra"], "inicio": now_iso(),
+           "fila_de_resgate": {k: v for k, v in _resg.items() if k in ("total_incompletos", "na_fila", "total", "por_estado", "erro")}}
     if _zerou.get("zerou") or _zerou.get("erro"):
         rel["contagem_semanal"] = _zerou
     from . import interceptador_ao_vivo as AV
@@ -855,6 +866,7 @@ def rodada(ia, minutos: float = 280, maximo: int = 40) -> dict:
     fim = time.time() + minutos * 60
     est = load_json(ESTADO) if ESTADO.exists() else {"feitos": {}, "rodadas": []}
     est.setdefault("feitos", {}); est.setdefault("rodadas", [])
+    _remontar_resgates()
     lista = alvos(maximo)
     r = {"em": now_iso(), "papel": "Piloto - Interceptador", "modelo": "qwen3-8b", "alvos": len(lista), "editais": []}
     for a in lista:

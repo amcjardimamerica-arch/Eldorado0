@@ -137,8 +137,31 @@ def ler(lid: str) -> dict:
 
 
 def gravar(lid: str, d: dict) -> None:
+    from .nucleo import sem_assinaturas                  # 17/10 (F11.01): o livro não guarda URL pré-assinada
     PASTA.mkdir(parents=True, exist_ok=True)
-    (PASTA / f"{lid}.json").write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    (PASTA / f"{lid}.json").write_text(json.dumps(sem_assinaturas(d), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+
+def conteudo_das_capas(gravar: bool = True, cat: Path | None = None, pasta: Path | None = None) -> dict:
+    """17/10/2026 (chat de testes F06.08/F07.06): TODA CAPA TEM O SEU ARQUIVO DE CONTEÚDO. O livro criado só na capa
+    (banco de livros, fontes 260, pesquisa externa, devolvido pela trava) ficava sem biblioteca_alexandria/livros/<id>.json
+    e o repositório apontava para um livro sem arquivo. Aqui o arquivo é ABERTO (acervo vazio, com a data e a origem);
+    o que as etapas levantarem entra nele. Nada é apagado nem sobrescrito: arquivo que já existe não é tocado."""
+    pasta = Path(pasta) if pasta else PASTA
+    L = (_j(cat or CAT, {}) or {}).get("motores") or []
+    criados = []
+    for lv in L:
+        lid = str(lv.get("id") or "")
+        if not lid or "/" in lid or lid.startswith("_") or (pasta / f"{lid}.json").exists():
+            continue
+        criados.append(lid)
+        if gravar:
+            gravar_ = {"id": lid, "acervo": {}, "aberto_em": _agora(),
+                       "capa": "biblioteca_alexandria/fontes/motores.json",
+                       "nota": "arquivo de conteúdo aberto para a capa; o que cada etapa levantar entra no acervo"}
+            pasta.mkdir(parents=True, exist_ok=True)
+            (pasta / f"{lid}.json").write_text(json.dumps(gravar_, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    return {"capas": len(L), "arquivos_abertos": len(criados), "ids": criados[:200]}
 
 
 # ── ligação ───────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -275,6 +298,26 @@ def _expandir(o, caminho=""):
     return o, []
 
 
+# 17/10/2026 (chat de testes): REGISTROS QUE NÃO SOMEM NUMA REGRAVAÇÃO. As certidões do Cartório caíram de 2.158 para
+# 140 entre 01:37 e 02:23 de 17/10: (1) o catálogo dos livros estava momentaneamente reduzido (2.010 → 1.209 livros) e
+# a absorção DESCARTAVA toda certidão cujo livro não estava no catálogo, embora o arquivo do livro existisse; (2) o
+# índice deste arquivo era REGRAVADO só com as entradas da gravação nova, e quem lê (Cartório, dossiê do PNCP, revisão
+# da Modalidade) e regrava recebia de volta só o que sobrou. Para estes arquivos, a entrada já gravada continua no
+# índice enquanto o livro dela existir e guardar o dado — some só quando o livro sai (expurgo) ou o expurgo a remove
+# de dentro do livro. Contêineres por arquivo:
+PRESERVAR = {"estado/cartorio/certidoes.json": ("/certidoes",),
+             "estado/cartorio/certidoes_manuais.json": ("/certidoes",)}
+
+
+def _entradas_anteriores(reg_ant: dict | None, cams) -> dict:
+    """{(contêiner, chave): [livro, chave interna, chave]} do índice anterior de um arquivo preservado."""
+    out = {}
+    for cam in cams:
+        for e in (((reg_ant or {}).get("conteineres") or {}).get(cam) or {}).get("entradas") or []:
+            out[(cam, str(e[2]))] = e
+    return out
+
+
 def absorver(caminhos: list, gravar_: bool = True, apagar: bool = True, controle_sem_livro: bool = False,
              descoberta: bool = False) -> dict:
     """controle_sem_livro=True: a parte que não é oportunidade (ex.: diagnóstico e aposta do voo do piloto) fica no
@@ -288,16 +331,32 @@ def absorver(caminhos: list, gravar_: bool = True, apagar: bool = True, controle
     livros: dict = {}
     st = Counter(); criados = 0; arquivos = []
 
+    anteriores: dict = {}                               # rel preservado → entradas do índice antes desta gravação
+    mudou: set = set()                                  # 17/10: só os livros que mudaram são regravados
+
+    def _livro_guarda(lid, rel, ci) -> bool:
+        if not (PASTA / f"{lid}.json").exists():
+            return False                                   # o livro saiu (expurgo): a entrada vai junto
+        d = livros.get(lid) or ler(lid)
+        return ci in ((d.get("acervo") or {}).get(rel) or {})
+
     def guardar(rel, cam, k, v):
         nonlocal criados
         lid = ligar(k, v, idx)
+        if not lid and rel in PRESERVAR:                   # 17/10: o livro de antes ainda existe → a entrada fica nele
+            e = anteriores.get(rel, {}).get((cam, str(k)))
+            if e and (PASTA / f"{e[0]}.json").exists():
+                lid = e[0]; st["religadas pelo índice anterior"] += 1
         if not lid and (_candidata(v) if descoberta else _oportunidade_vigente(v)):   # oportunidade sem livro: ganha livro
             lv = _novo_livro(v, chave(v)); L.append(lv); idx[chave(v)] = lv["id"]; lid = lv["id"]; criados += 1
         if not lid:
             st["descartadas (não ligam e não são oportunidade vigente)"] += 1
             DESCARTES.append((rel, cam, k, v)); return None
         d = livros.setdefault(lid, ler(lid))
-        d.setdefault("acervo", {}).setdefault(rel, {})[f"{cam}|{k}"] = {"dado": v, "absorvido_em": _agora()}
+        _ac = d.setdefault("acervo", {}).setdefault(rel, {})
+        _ant = _ac.get(f"{cam}|{k}")
+        if not (isinstance(_ant, dict) and _ant.get("dado") == v):   # 17/10: o mesmo dado não é regravado (nem a data)
+            _ac[f"{cam}|{k}"] = {"dado": v, "absorvido_em": _agora()}; mudou.add(lid)
         st["absorvidas"] += 1
         return lid
     for p in caminhos:
@@ -317,11 +376,13 @@ def absorver(caminhos: list, gravar_: bool = True, apagar: bool = True, controle
         _lid_arq = (idx.get(_chv) or idx.get(_chv.split(":", 1)[-1])) if isinstance(obj, dict) else None
         if _lid_arq:
             d = livros.setdefault(_lid_arq, ler(_lid_arq))
-            d.setdefault("acervo", {}).setdefault(rel, {})["|_arquivo"] = {"dado": obj, "absorvido_em": _agora()}
+            d.setdefault("acervo", {}).setdefault(rel, {})["|_arquivo"] = {"dado": obj, "absorvido_em": _agora()}; mudou.add(_lid_arq)
             st["absorvidas"] += 1
             origens[rel] = {"jsonl": p.suffix == ".jsonl", "esqueleto": None, "conteineres": {}, "inteiro": [_lid_arq, "|_arquivo"],
                             "gravado_em": _agora()}
             arquivos.append(p); continue
+        if rel in PRESERVAR:
+            anteriores[rel] = _entradas_anteriores(origens.get(rel), PRESERVAR[rel])
         esq, conts = _expandir(obj)
         reg = {"jsonl": p.suffix == ".jsonl", "esqueleto": esq, "conteineres": {}}
         if not conts:                                     # o arquivo inteiro é o registro de uma oportunidade
@@ -330,7 +391,7 @@ def absorver(caminhos: list, gravar_: bool = True, apagar: bool = True, controle
                 lid = ligar(obj_l["id"], obj_l, idx) or None
                 if lid:
                     d = livros.setdefault(lid, ler(lid))
-                    d.setdefault("acervo", {}).setdefault(rel, {})["|_arquivo"] = {"dado": obj, "absorvido_em": _agora()}
+                    d.setdefault("acervo", {}).setdefault(rel, {})["|_arquivo"] = {"dado": obj, "absorvido_em": _agora()}; mudou.add(lid)
                     st["absorvidas"] += 1
                 else:
                     lid = guardar(rel, "", "_arquivo", obj)
@@ -346,12 +407,31 @@ def absorver(caminhos: list, gravar_: bool = True, apagar: bool = True, controle
                 if lid:
                     ent.append([lid, f"{cam}|{k}", k])
             reg["conteineres"][cam] = {"forma": forma, "entradas": ent}
+        if rel in PRESERVAR:                               # 17/10: o que já estava gravado e a gravação nova não trouxe
+            for cam in PRESERVAR[rel]:
+                c = reg["conteineres"].get(cam)
+                if c is None and isinstance(esq, dict):    # gravação VAZIA ({"certidoes": {}}) não vira contêiner: vira
+                    pai, chaves_ = esq, [x for x in cam.split("/") if x]   # contêiner vazio, para o que já existia ficar
+                    for x in chaves_[:-1]:
+                        pai = pai.get(x) if isinstance(pai.get(x), dict) else None
+                        if pai is None:
+                            break
+                    if pai is not None and pai.get(chaves_[-1]) in (None, {}, []):
+                        pai[chaves_[-1]] = {"__conteiner__": cam}
+                        c = reg["conteineres"][cam] = {"forma": "dict", "entradas": []}
+                if c is None:
+                    continue                               # a estrutura nova não tem esse contêiner: nada a preservar
+                novas = {str(e[2]) for e in c["entradas"]}
+                for (cam_a, k), e in anteriores.get(rel, {}).items():
+                    if cam_a == cam and k not in novas and _livro_guarda(e[0], rel, e[1]):
+                        c["entradas"].append(e); novas.add(k); st["preservadas (já gravadas, ausentes na regravação)"] += 1
         reg["gravado_em"] = _agora()
         origens[rel] = reg
         arquivos.append(p)
     if gravar_:
         for lid, d in livros.items():
-            gravar(lid, d)
+            if lid in mudou or not (PASTA / f"{lid}.json").exists():
+                gravar(lid, d)
         PASTA.mkdir(parents=True, exist_ok=True)
         gravar_origens(origens)                          # 17/10: atômico
         if criados:
@@ -439,12 +519,24 @@ def arquivos_de(pasta) -> list[str]:
     return sorted(k for k in _indice_so_leitura() if k.startswith(pre))
 
 
+# 17/10/2026 (titular, chat de testes F08.04): VETOR NUNCA É FONTE — a régua vale no PONTO DE GRAVAÇÃO das certidões
+# (Cartório, revisão do Chrome, dossiê do PNCP, validação…): item cujo documento é vetor não entra como comprovado
+CERTIDOES_REL = ("estado/cartorio/certidoes.json", "estado/cartorio/certidoes_manuais.json")
+
+
+def _regua_nas_certidoes(rel: str, obj) -> None:
+    if rel in CERTIDOES_REL and isinstance(obj, dict):
+        from .cartorio_leitura import aplicar_regua_certidoes
+        aplicar_regua_certidoes(obj)
+
+
 def guardar(caminho, obj, controle_sem_livro: bool = False) -> dict:
     """Quem gravava num arquivo passa a gravar NO LIVRO: a estrutura é absorvida na hora e o arquivo não fica.
     A versão anterior do mesmo 'arquivo' é tirada dos livros antes (sem restos)."""
     caminho = Path(caminho); rel = _rel(caminho)
+    _regua_nas_certidoes(rel, obj)
     o = (_j(ORIGENS, {}) or {}).get(rel)
-    if o:
+    if o and rel not in PRESERVAR:                       # 17/10: arquivo preservado não perde as entradas já gravadas
         lids = {e[0] for c in (o.get("conteineres") or {}).values() for e in c.get("entradas") or []}
         if o.get("inteiro"):
             lids.add(o["inteiro"][0])
@@ -527,6 +619,7 @@ def guardar_lote(itens: list, descoberta: bool = False) -> dict:
     caminhos = []
     for caminho, obj in itens:
         caminho = Path(caminho); caminho.parent.mkdir(parents=True, exist_ok=True)
+        _regua_nas_certidoes(_rel(caminho), obj)
         caminho.write_text(json.dumps(obj, ensure_ascii=False), encoding="utf-8"); caminhos.append(caminho)
     return absorver(caminhos, descoberta=descoberta) if caminhos else {"arquivos": 0}
 

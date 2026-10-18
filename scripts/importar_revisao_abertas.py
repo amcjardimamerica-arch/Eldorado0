@@ -165,6 +165,13 @@ def certidao_de(x: dict, origem: str) -> tuple[dict, list[str]]:
     return cert, avisos
 
 
+def juntar_abordagens(anteriores: list | None, da_revisao: list) -> list:
+    """A escada da certidão com a revisão: a mesma revisão (mesma origem) entra uma vez só."""
+    h = list(anteriores or [])
+    ja = {x.get("nome") for x in h}
+    return h + [a for a in da_revisao if a.get("nome") not in ja]
+
+
 def importar(pasta: Path, origem: str, gravar: bool = True, externa: bool = False) -> dict:
     regs = ler_lotes(pasta)
     av_externa = cobrar_resolucao(regs) if externa else []     # busca externa: arquivar, eliminar ou completar
@@ -209,8 +216,11 @@ def importar(pasta: Path, origem: str, gravar: bool = True, externa: bool = Fals
             if ant:                                                  # o que o Cartório já certificou fica; o novo se soma
                 cert["itens"] = {**cert["itens"], **(ant.get("itens") or {})}
                 cert["dispensas"] = {k: d for k, d in {**cert["dispensas"], **(ant.get("dispensas") or {})}.items() if k not in cert["itens"]}
-                cert["abordagens"] = list(ant.get("abordagens") or []) + cert["abordagens"]
-                cert["tentativa"] = len(cert["abordagens"])
+                # 17/10/2026: o fechamento reimporta a MESMA revisão a cada passagem; antes ela era somada de novo à
+                # escada (uma certidão chegou a 14 entradas, todas "abordagem 1") e a oportunidade ficava esgotada sem
+                # nunca passar pelas abordagens 2 a 10. A revisão de uma origem entra uma vez só.
+                cert["abordagens"] = juntar_abordagens(ant.get("abordagens"), cert["abordagens"])
+                cert["tentativa"] = len({a.get("n") for a in cert["abordagens"]})
                 cert["link_oficial"] = ant.get("link_oficial") or cert["link_oficial"]
                 ck = {k: {"s": "ok", "v": str(i["valor"])[:90]} for k, i in cert["itens"].items()} | \
                      {k: {"s": "disp", "v": str(d.get("motivo"))[:160]} for k, d in cert["dispensas"].items()}

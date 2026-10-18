@@ -299,6 +299,7 @@ def _editais(hoje: date) -> list[dict]:
             "id": item["id"], "protocolo": item["id"],
             "titulo": item.get("titulo"), "url": item.get("url"),
             "fonte_id": item.get("fonte_id"), "fonte_nome": item.get("fonte_nome"),
+            "orgao": item.get("orgao"),
             "territorio": item.get("territorio"), "nivel": item.get("nivel"),
             "uf": uf_do_territorio(item), "abrangencia": abrangencia(item, carac),
             "status": item.get("status"), "confianca": item.get("confianca"),
@@ -454,9 +455,14 @@ def _bussola(editais: list[dict], hoje: date | None = None) -> dict:
         f = _fontes().get(e["fonte_id"]) or {}
         # o ÓRGÃO REAL é a fonte; PNCP e Querido Diário são apenas a via de captura
         via = None
-        orgao = e.get("fonte_nome") or ""
+        # 17/10 (correção): as oportunidades do repositório (#347) podem vir sem fonte_nome — a caixa usa o órgão do
+        # registro e, sem ele, o domínio do link; nunca uma caixa sem nome
+        orgao = e.get("fonte_nome") or e.get("orgao") or ""
+        if not orgao:
+            from urllib.parse import urlsplit as _us
+            orgao = (_us(e.get("url") or "").hostname or "").removeprefix("www.") or "órgão não identificado"
         if e["fonte_id"] in ("pncp", "querido-diario") or re.search(r"pncp|querido di[áa]rio", orgao, re.I):
-            via = "PNCP" if "pncp" in (e["fonte_id"] + orgao).lower() else "Querido Diário"
+            via = "PNCP" if "pncp" in ((e["fonte_id"] or "") + orgao).lower() else "Querido Diário"   # 17/10: sem fonte_id
             orgao = (e.get("orgao_real") or e.get("financiador") or e.get("orgao") or "").strip()
             if not orgao or re.search(r"pncp|querido", orgao, re.I):
                 m = re.search(r"Di[áa]rio Oficial de ([^—(]+)(\(([A-Z]{2})\))?", e.get("titulo") or "")
@@ -501,7 +507,9 @@ def _bussola(editais: list[dict], hoje: date | None = None) -> dict:
              # comprovação, nenhum valor é apresentado como certo
              "valor": e.get("territorio") if (e.get("uf") or e.get("abrangencia") == "nacional") else None,
              "comprovado": bool(e.get("uf")) or e.get("abrangencia") == "nacional"},
-            {"item": "Esfera", "valor": e.get("nivel"),
+            # 17/10 (correção): "privada"/"misto" (oportunidades do repositório, #347) não são esfera comprovada — sem
+            # comprovação nenhum valor é apresentado como certo (mesma regra do Território)
+            {"item": "Esfera", "valor": e.get("nivel") if e.get("nivel") in ("federal", "estadual", "municipal") else None,
              "comprovado": e.get("nivel") in ("federal", "estadual", "municipal")},
             {"item": "Requisitos", "valor": ", ".join(det.get("documentos_exigidos") or [])[:160] or None,
              "comprovado": bool(det.get("documentos_exigidos"))},
@@ -1779,6 +1787,15 @@ def publicar_fragmentos(dados: dict, hoje: date) -> dict:
         camp = _comp._estado().get("campanhas", {})
         ops = carregar_oportunidades()
         ids_nucleo = {e["id"] for e in dados.get("editais", [])}
+        # 17/10/2026: o que está ABERTO no repositório único continua na caixa mesmo estando no núcleo do painel. A caixa é
+        # entrada do repositório: tirá-la daqui fazia a oportunidade sair do repositório na passagem seguinte (sem a caixa
+        # e sem prazo no fluxo), voltar à caixa e ao repositório na outra — oscilando a cada passagem (Zurich, Ambev, SEJUS-PI)
+        try:
+            _rep_ab = {i for r in (load_json(ROOT / "biblioteca_alexandria/livros/_vistas/repositorio_unico.json") or {}).get("registros") or []
+                       if r.get("estado") != "fechada" and not r.get("arquivada") for i in [r.get("id"), *(r.get("ids_origem") or [])]}
+        except Exception:  # noqa: BLE001
+            _rep_ab = set()
+        ids_nucleo = ids_nucleo - _rep_ab
         abertas = []
         hoje_iso = hoje.isoformat()
         # SANEAMENTO DOS MOTORES (10/10/2026 · revisão da Parte 1-GO): duplicata/peça de edital, não-oportunidade,

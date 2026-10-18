@@ -76,7 +76,7 @@ def _analises(r, cert, cur, dos, inter, piloto, val) -> list:
     return a
 
 
-def _novo_livro(r: dict, k: str) -> dict:
+def _livro_novo(r: dict, k: str) -> dict:
     return {"id": "op-" + hashlib.sha1(k.encode()).hexdigest()[:12], "programa": r.get("titulo"), "orgao": r.get("orgao"), "uf": r.get("uf"),
             "tipo": "repositorio_de_oportunidade", "motor": "banco de livros", "pagina": r.get("link_oficial") or r.get("url"),
             "criado_em": _agora()[:10], "motivo_status": "criado a partir da oportunidade (os livros são o banco)", "historico": [],
@@ -84,6 +84,19 @@ def _novo_livro(r: dict, k: str) -> dict:
             # capa criada ENTRE duas passagens do gerador quebrava quem lê o catálogo (KeyError 'familia')
             "familia": "Oportunidade com seleção", "segmento": "", "ativa": True, "camadas": [],
             "diagnostico": {"faltam": [], "causa": None, "acao": None, "estado": "repositorio"}}
+
+
+def _novo_livro(r: dict, k: str) -> dict:
+    """17/10/2026: o livro nasce CLASSIFICADO (nome, geografia, objeto) e com área e esfera — o que é criado depois da
+    curadoria dos livros e do gerador dos motores (repositório, rotas, absorção) ficava sem elas no catálogo gravado."""
+    lv = _livro_novo(r, k)
+    try:
+        from .livros_curadoria import classificar
+        from .motores import area_e_esfera
+        classificar(lv); area_e_esfera(lv)
+    except Exception:  # noqa: BLE001
+        pass
+    return lv
 
 
 def _titulo_orgao(programa, orgao) -> str:
@@ -260,6 +273,18 @@ def livro_da_oportunidade(a: dict) -> dict | None:
 # nos livros: cada registro bruto cria o seu livro ou se vincula ao que já tem o histórico, e fica guardado nele
 # (livro["brutos"][id]). O repositório deixa de ler os arquivos dos motores e lê os livros (brutos_dos_livros).
 # Sincronia: o que a origem deixou de trazer (expurgado, encerrado na fonte) sai do livro também.
+def _ids_gravados() -> set:
+    """Ids dos livros do catálogo GRAVADO (git HEAD) — a referência da trava dos livros. Sem git: todos os atuais (nada sai)."""
+    import subprocess
+    try:
+        r = subprocess.run(["git", "show", "HEAD:biblioteca_alexandria/fontes/motores.json"], cwd=ROOT, capture_output=True, text=True, timeout=120)
+        if r.returncode == 0:
+            return {x.get("id") for x in json.loads(r.stdout).get("motores") or []}
+    except Exception:  # noqa: BLE001
+        pass
+    return {lv.get("id") for lv in (_j(CAT, {}) or {}).get("motores") or []}
+
+
 def ingerir(brutos: list[dict], gravar: bool = True) -> dict:
     cat_doc = _j(CAT, {"motores": []}); L = cat_doc.setdefault("motores", [])
     por_id = {lv.get("id"): lv for lv in L}
@@ -272,6 +297,14 @@ def ingerir(brutos: list[dict], gravar: bool = True) -> dict:
                 idx.setdefault(chave(b), lv.get("id"))
     # chave interna = origem + id: a MESMA oportunidade vem do fluxo e da caixa com o mesmo id e campos diferentes
     _k = lambda b: f"{b.get('_fonte') or 'caixa'}:{b.get('id')}"
+    # 17/10/2026: o MESMO registro (mesmo id) que já está num livro vai para esse livro, ainda que pela outra origem com outro
+    # endereço (caixa × fluxo). Sem isto, quando uma junção levava o livro de uma das origens, a outra criava um livro
+    # duplicado, sem classificação, depois da curadoria (op-994f08c50d3f × op-b6c342dcfd6e)
+    por_reg = {}
+    for lv in L:
+        for b in (lv.get("brutos") or {}).values():
+            if isinstance(b, dict) and b.get("id") is not None:
+                por_reg.setdefault(str(b["id"]), lv.get("id"))
     for n, b in enumerate(brutos):
         b["_ordem"] = n                               # a ordem de chegada é preservada (o repositório depende dela)
     atuais = {_k(b) for b in brutos if b.get("id") is not None}
@@ -282,17 +315,28 @@ def ingerir(brutos: list[dict], gravar: bool = True) -> dict:
         k = chave(b)
         lid = idx.get(k)
         if lid not in por_id:
+            lid = por_reg.get(str(b["id"]))
+        if lid not in por_id:
             lv = _novo_livro(b, k); L.append(lv); por_id[lv["id"]] = lv; criados += 1; idx[k] = lv["id"]
         else:
             lv = por_id[lid]; vinculados += 1
+        por_reg.setdefault(str(b["id"]), lv["id"])
         lv.setdefault("brutos", {})[_k(b)] = b
     retirados = 0
+    gravados = None
     for lv in list(L):
         br = lv.get("brutos") or {}
         for i in [i for i in br if i not in atuais]:
             del br[i]; retirados += 1
         if lv.get("motor") == "banco de livros" and not br and not lv.get("oportunidade") and not lv.get("coleta"):
-            L.remove(lv)                                # livro criado só para um registro que a origem não traz mais (16/10: nunca com achados)
+            # 17/10/2026 (titular, TRAVA DOS LIVROS): livro GRAVADO não é apagado pelo sistema. Só sai o livro criado nesta
+            # passagem (ainda não gravado) para um registro que a origem já não traz; o gravado fica, sem o registro. Antes
+            # o gravado saía aqui e a trava o devolvia no fim da passagem: o repositório e a Bússola liam um catálogo
+            # diferente do gravado (2.311 → 2.188 → 2.311)
+            if gravados is None:
+                gravados = _ids_gravados()
+            if lv.get("id") not in gravados:
+                L.remove(lv)
     cat_doc["total"] = len(L); cat_doc["gerado_em"] = _agora()
     if gravar:
         CAT.write_text(json.dumps(cat_doc, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
@@ -698,6 +742,30 @@ def unir_duplicados(gravar: bool = True) -> dict:
     por = {lv["id"]: lv for lv in L if lv.get("id")}
     I = Indice([entrada(lv) for lv in L if lv.get("id")])
     pares = []
+    # 17/10/2026: o MESMO registro (mesmo id) em dois livros é o mesmo programa — vira par (a regra das oportunidades
+    # abertas diferentes, abaixo, continua valendo)
+    _dono = {}
+    for lv in L:
+        for b in (lv.get("brutos") or {}).values():
+            if isinstance(b, dict) and b.get("id") is not None:
+                o = _dono.setdefault(str(b["id"]), lv.get("id"))
+                if o != lv.get("id") and o in por and lv.get("id") in por:
+                    par = tuple(sorted([lv["id"], o]))
+                    if par not in pares:
+                        pares.append(par)
+    # 17/10/2026: o MESMO programa + órgão (a chave do catálogo sem duplicados) com estado compatível também é par — o índice
+    # não casava título com o órgão colado no fim ou órgão vazio (op-994f08c50d3f × op-b6c342dcfd6e)
+    _por_to = {}
+    for lv in L:
+        _to = _titulo_orgao(lv.get("programa"), lv.get("orgao"))
+        if len(_to) < 12 or lv.get("id") not in por:
+            continue
+        for o in _por_to.get(_to, []):
+            if _uf_compativel(por[o], lv):
+                par = tuple(sorted([lv["id"], o]))
+                if par not in pares:
+                    pares.append(par)
+        _por_to.setdefault(_to, []).append(lv["id"])
     for lv in L:
         o, _s, _m = I.encontrar({"titulo": lv.get("programa"), "orgao": lv.get("orgao"), "uf": lv.get("uf"),
                                  "municipio": lv.get("municipio"), "url": lv.get("pagina")}, excluir=lv.get("id"))
@@ -710,7 +778,10 @@ def unir_duplicados(gravar: bool = True) -> dict:
         return (1 if isinstance(lv.get("oportunidade"), dict) else 0, len(lv.get("historico") or []), -int(str(lv.get("criado_em") or "9999")[:4] or 9999))
     juntados, mantidos_separados, mapa = [], 0, {}
     for a, b in pares:
-        a, b = mapa.get(a, a), mapa.get(b, b)
+        while a in mapa and mapa[a] != a:
+            a = mapa[a]
+        while b in mapa and mapa[b] != b:
+            b = mapa[b]
         if a == b or a not in por or b not in por:
             continue
         A, B = por[a], por[b]
@@ -736,6 +807,13 @@ def unir_duplicados(gravar: bool = True) -> dict:
         if not isinstance(fica.get("oportunidade"), dict) and isinstance(sai.get("oportunidade"), dict):
             fica["oportunidade"] = sai["oportunidade"]
         fica.setdefault("juntados", []).append({"id": sai["id"], "programa": sai.get("programa"), "em": _agora()[:10]})
+        # 17/10/2026: as uniões que o livro que sai já tinha passam ao que fica (senão o livro absorvido antes voltava pela trava)
+        _ja = {str(j.get("id") if isinstance(j, dict) else j) for j in fica.get("juntados") or []}
+        for j in sai.get("juntados") or []:
+            if str(j.get("id") if isinstance(j, dict) else j) not in _ja:
+                fica["juntados"].append(j); _ja.add(str(j.get("id") if isinstance(j, dict) else j))
+        if sai.get("ids_juntados"):
+            fica["ids_juntados"] = list(dict.fromkeys([*(fica.get("ids_juntados") or []), *sai["ids_juntados"]]))
         juntados.append((fica["id"], sai["id"], fica.get("programa"), sai.get("programa")))
         mapa[sai["id"]] = fica["id"]
         if gravar:
@@ -746,6 +824,12 @@ def unir_duplicados(gravar: bool = True) -> dict:
                 LA.gravar(fica["id"], d_f)
             (LA.PASTA / f"{sai['id']}.json").unlink(missing_ok=True)
         L.remove(sai); por.pop(sai["id"], None)
+    def _final(i):                                       # 17/10/2026: união em cadeia (a → b → c): o controle aponta para
+        vis = set()                                      # o livro que FICOU no fim (uma só volta perdia a certidão do 'a')
+        while i in mapa and i not in vis:
+            vis.add(i); i = mapa[i]
+        return i
+    mapa = {k: _final(k) for k in mapa}
     if gravar and juntados:
         orig = LA.ler_origens_para_gravar()              # 17/10: ilegível = erro, nunca {} (apagava o índice)
         for reg in orig.values():
@@ -886,8 +970,11 @@ def juntar_em(fica: dict, sai: dict, motivo: str = "mesmo programa e órgão") -
 
 
 FONTES_260 = ROOT / "config/fontes_captacao_260.json"
+# 17/10 (correção): "nivel" e "nota" são da FONTE e vão no bloco — sem isso a vista regravava o nível com a esfera do
+# livro (vocabulário "Brasil/Estado/Município"), e motores.segmento, acervo_drive e os filtros por nível
+# ("federal/estadual/municipal/privada/a_validar") deixavam de reconhecer as fontes; a nota curada se perdia.
 _CAMPOS_FONTE = ("sites", "dominios", "confianca_site", "padrao", "forma_divulgacao", "publicacao_obrigatoria",
-                 "verificado_em", "origem")
+                 "verificado_em", "origem", "nivel", "nota")
 
 
 def sincronizar_fontes_260(gravar: bool = True) -> dict:
@@ -927,6 +1014,10 @@ def sincronizar_fontes_260(gravar: bool = True) -> dict:
                 atual[k] = v
         if lv.get("papel") == "fonte_de_busca":
             lv["papel"] = None; st["papel_fonte_de_busca_retirado"] += 1
+        # 17/10 (correção): todo livro diz por que está no catálogo — as fontes que o gerador dos motores não lê
+        # (emendas, fontes sem rota) ficavam como capa sem motivo_status
+        if not lv.get("motivo_status"):
+            lv["motivo_status"] = "livro da fonte de captação (260): criado a partir de config/fontes_captacao_260.json"
     # livros → config (a vista)
     novas = []
     for lv in L:

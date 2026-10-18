@@ -208,6 +208,19 @@ _AREA_TXT = (("apreendid|receita federal", "doacao_bens"),
              ("sa[uú]de|pronon|pronas|defici|oncol|prevenç", "saude"))
 
 
+def area_e_esfera(_m: dict) -> dict:
+    """17/10: área de atuação (vocabulário das 13) e esfera de um livro, quando faltam. 17/10/2026 (chat de testes):
+    função própria — a curadoria dos livros também a aplica, porque o livro criado ou devolvido (trava) DEPOIS deste
+    gerador ficava sem área e sem esfera no catálogo."""
+    if _m.get("area_atuacao") not in _AREAS_13:
+        _m["area_atuacao"] = _OBJ_AREA.get(_m.get("objeto_area")) or area_da_fonte(_m, _m.get("familia") or "")
+    if _m.get("esfera") not in ("Município", "Estado", "Brasil", "Internacional"):
+        _m["esfera"] = ("Internacional" if _m.get("internacional") else
+                        {"municipal": "Município", "estadual": "Estado", "nacional": "Brasil"}.get(_m.get("abrangencia"))
+                        or ("Estado" if _m.get("uf") and _m.get("uf") != "BR" else "Brasil"))
+    return _m
+
+
 def area_da_fonte(f: dict, fam: str) -> str:
     """Área de atuação nas 13 áreas canônicas da tela inicial — decidida pela
     família e, quando ela não decide, pelo texto do programa e do órgão."""
@@ -734,6 +747,9 @@ def run() -> dict:
     motores.sort(key=lambda m: (not m["goias"], m["familia"], m["segmento"], m["programa"]))
     resumo = {
         "gerado_em": now_iso(), "total": len(motores),
+        # 17/10/2026: o DIA dos calendários (data local do gerador) — gerado_em é UTC e, entre 21h e meia-noite, já é o dia
+        # seguinte: quem lê "hoje" pelo carimbo via o próprio dia como futuro
+        "dia_de_referencia": hoje.isoformat(),
         "por_familia": dict(Counter(m["familia"] for m in motores).most_common()),
         "por_segmento": dict(Counter(m["segmento"] for m in motores)),
         "completos": sum(1 for m in motores if m["diagnostico"]["estado"] == "completo"),
@@ -852,12 +868,7 @@ def run() -> dict:
     # livros fora do vocabulário único das 13 áreas e do filtro de esfera. A área vem do objeto classificado (ou
     # do texto, pela mesma regra dos motores); a esfera, da abrangência classificada.
     for _m in motores:
-        if _m.get("area_atuacao") not in _AREAS_13:
-            _m["area_atuacao"] = _OBJ_AREA.get(_m.get("objeto_area")) or area_da_fonte(_m, _m.get("familia") or "")
-        if _m.get("esfera") not in ("Município", "Estado", "Brasil", "Internacional"):
-            _m["esfera"] = ("Internacional" if _m.get("internacional") else
-                            {"municipal": "Município", "estadual": "Estado", "nacional": "Brasil"}.get(_m.get("abrangencia"))
-                            or ("Estado" if _m.get("uf") and _m.get("uf") != "BR" else "Brasil"))
+        area_e_esfera(_m)
     # RESUMO RECALCULADO (28/09): o resumo vinha dos 366 originais; agora conta o catálogo inteiro, e "ligado" vale
     # para todos (os repositórios incorporados não passavam pelo laço que marca os ligados)
     for _m in motores:

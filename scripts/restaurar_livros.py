@@ -52,10 +52,23 @@ def aplicar(gravar: bool = True) -> dict:
     ref = json.loads(REF.read_text(encoding="utf-8"))["livros"]
     C = json.loads(CAT.read_text(encoding="utf-8")); L = C.setdefault("motores", [])
     ids = {x.get("id") for x in L}; chaves = {_chave(x) for x in L}; elim = _eliminados()
-    st = {"devolvidos": 0, "ja_estavam": 0, "eliminados_pelo_chrome": 0, "barrados_pelo_portao": 0, "ja_tem_livro_igual": 0}
+    st = {"devolvidos": 0, "ja_estavam": 0, "eliminados_pelo_chrome": 0, "barrados_pelo_portao": 0, "ja_tem_livro_igual": 0,
+          "unidos_a_outro_livro": 0}
+    # 17/10/2026: livro que saiu por UNIÃO REGISTRADA (o que ficou o tem em 'juntados'/'ids_juntados', ou está arquivado
+    # pela trava) não volta — a restauração o devolvia a cada passagem e o catálogo voltava a ter o duplicado
+    from src.trava_livros import _juntados, ARQUIVADOS
+    unidos = _juntados(L)
+    try:                                               # e as uniões do catálogo GRAVADO (o livro que absorveu pode estar fora agora)
+        _g = subprocess.run(["git", "show", "HEAD:biblioteca_alexandria/fontes/motores.json"], cwd=ROOT, capture_output=True, text=True)
+        if _g.returncode == 0:
+            unidos |= _juntados(json.loads(_g.stdout).get("motores") or [])
+    except Exception:  # noqa: BLE001
+        pass
     for x in ref:
         if x.get("id") in ids:
             st["ja_estavam"] += 1; continue
+        if str(x.get("id")) in unidos or (ARQUIVADOS / f"{x.get('id')}.json").exists():
+            st["unidos_a_outro_livro"] += 1; continue
         ops = set(map(str, (x.get("coleta") or {}).keys())) | {str(h.get("id")) for h in x.get("historico") or [] if isinstance(h, dict)}
         if ops and ops <= elim:
             st["eliminados_pelo_chrome"] += 1; continue

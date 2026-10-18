@@ -147,12 +147,25 @@ def _acervo() -> list[dict]:
     ach = ROOT / "docs/dados/achados_dia.json"
     if ach.exists():
         d = load_json(ach)
-        for e in (d.get("itens") or d.get("achados") or [])[:400]:
-            saida.append({"id": "achado-" + re.sub(r"[^a-z0-9]", "", str(e.get("titulo", "")).lower())[:30],
+        lista = list(d.get("itens") or d.get("achados") or [])
+        # 17/10/2026: o achados_dia passou a ser {"dias": {data: {"motores": {motor: [achados]}}}} — a leitura antiga
+        # ("itens"/"achados") voltava vazia e a fila de resgate deixou de receber os achados dos motores (parada desde 02/10)
+        for dia in sorted(d.get("dias") or {}, reverse=True)[:7]:
+            for motor, its in ((d["dias"][dia] or {}).get("motores") or {}).items():
+                lista += [{**e, "motor": e.get("motor") or motor} for e in its or [] if isinstance(e, dict)]
+        for e in lista[:400]:
+            saida.append({"id": str(e.get("id") or "achado-" + re.sub(r"[^a-z0-9]", "", str(e.get("titulo", "")).lower())[:30]),
                           "titulo": (e.get("titulo") or "")[:130], "uf": e.get("uf"),
-                          "pagina_oficial": e.get("url") or e.get("onde"), "prazo": e.get("prazo"),
+                          "pagina_oficial": e.get("url") or e.get("onde"), "prazo": e.get("prazo") or e.get("fim"),
                           "origem": f"motor {e.get('motor') or '?'}"})
     return saida
+
+
+def remontar_e_publicar() -> dict:
+    """17/10/2026: a fila de resgate é remontada e publicada a cada voo do Interceptador (quem a consome). Antes só a
+    última opção de alvo a remontava e só um resgate registrado a publicava — docs/dados/resgates_piloto.json parou em 02/10."""
+    r = montar_fila()
+    return {**r, **publicar()}
 
 
 def montar_fila(limite: int = 60) -> dict:

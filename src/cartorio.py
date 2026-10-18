@@ -659,6 +659,25 @@ def _baixar_ponte(url: str) -> tuple[bytes, str]:
 INTERVALO_HORAS = 12                                       # entre duas tentativas da mesma oportunidade
 
 
+def fila_justa(devidas: list[dict], prio) -> list[dict]:
+    """17/10/2026 (escada da etapa 12): a ordem da fila sem deixar a escada parada.
+
+    Defeito medido: a chave de prioridade terminava em len(abordagens usadas) CRESCENTE. Os livros não têm prazo na fila,
+    então empatavam em tudo e o desempate punha SEMPRE quem nunca foi tentado na frente — com 2.394 livros por tentar e
+    ~30 vagas por passagem, nenhum livro teve 2ª tentativa (16/10: 1.834 livros com 1 abordagem, nenhum com 2) e as
+    abordagens 4 a 8 e a 10, que vêm depois na ordem de cada balcão, nunca chegaram a rodar.
+    Agora, dentro de cada classe do titular (achado do dia primeiro; quem tem item FALTANDO antes de quem só confere),
+    as vagas se alternam: uma para quem já está na escada (sobe um degrau), uma para quem ainda não começou."""
+    out, classe = [], {}
+    for op in sorted(devidas, key=prio):
+        classe.setdefault(prio(op)[:2], ([], []))[0 if op.get("_usadas") else 1].append(op)
+    for k in sorted(classe):
+        escada, primeira = classe[k]
+        for i in range(max(len(escada), len(primeira))):
+            out += ([escada[i]] if i < len(escada) else []) + ([primeira[i]] if i < len(primeira) else [])
+    return out
+
+
 def _ultima(c: dict) -> str:
     h = c.get("abordagens") or []
     return str((h[-1] if h else c).get("em") or "")
@@ -668,8 +687,8 @@ def _vez(op: dict, certs: dict, agora: datetime) -> tuple[bool, dict | None, lis
     """(é a vez dela?, certidão anterior, abordagens já usadas). Limite de 10; informação nova entra na hora."""
     from . import cartorio_linha as LN
     ant = certs.get(f"{op['_tipo']}:{op['id']}")
-    usadas = [h["n"] for h in (ant or {}).get("abordagens") or []] or ([1] if ant else [])
-    if len(usadas) >= LN.MAX_TENTATIVAS:
+    usadas = list(dict.fromkeys(h["n"] for h in (ant or {}).get("abordagens") or [])) or ([1] if ant else [])
+    if len(usadas) >= LN.MAX_TENTATIVAS:                  # 17/10: conta abordagens DIFERENTES (a revisão reimportada repetia a 1)
         return False, ant, usadas
     if not ant or ant.get("assinatura") != _assinatura(op):
         return True, ant, usadas
@@ -731,7 +750,7 @@ def run(limite: int | None = None, segundos: int | None = None, rede: Rede | Non
         return (0 if _novo else 1,                    # 17/10 (titular): CERTIFICAR NA DESCOBERTA — o achado do dia vem primeiro
                 0 if op.get("_faltam") or op.get("_sem_site") else 1,       # primeiro quem tem item FALTANDO; conferir os cinza depois
                 0 if (fim and fim >= hoje) else 1, fim or "9999", len(op["_usadas"]), -_nota_rede(op), foco_falta)
-    devidas.sort(key=prio)
+    devidas = fila_justa(devidas, prio)
     livros_max = int(c["livros_por_execucao"])
     est_q = [o for o in devidas if o["_tipo"] == "estrela"]; liv_q = [o for o in devidas if o["_tipo"] == "livro"]
     # 16/10/2026 (sala de controle): as ABERTAS primeiro — os livros só usam as vagas que sobrarem. Antes, com --limite 40
@@ -743,7 +762,7 @@ def run(limite: int | None = None, segundos: int | None = None, rede: Rede | Non
         op = fila.popleft()
         chave = f"{op['_tipo']}:{op['id']}"
         ant = certs.get(chave)
-        usadas = [h["n"] for h in (ant or {}).get("abordagens") or []] or ([1] if ant else [])
+        usadas = list(dict.fromkeys(h["n"] for h in (ant or {}).get("abordagens") or [])) or ([1] if ant else [])
         faltam = op.get("_faltam") or (["Objeto"] if op.get("_sem_site") else [])
         est0 = op["_estagio"]
         escolhida, docs, aj = None, [], {}
@@ -851,6 +870,43 @@ def run(limite: int | None = None, segundos: int | None = None, rede: Rede | Non
     return {"certificadas": len(feitas), "na_linha": na_linha, "devidas": len(devidas), "promovidas": promovidas,
             "sem_material": sem_material, "esgotadas": esgotadas, "linhas_livros": len(novas_linhas),
             "acessos": rede.n, "segundos": round(time.time() - t0), "eficiencia": rel["resumo"]["eficiencia_itens"], "erros": erros[:20]}
+
+
+def republicar_relatorio(gravar: bool = True) -> dict:
+    """17/10/2026 (fechamento): o relatório do Cartório (docs/dados/cartorio.json) com a FILA e a cobertura do retrato
+    FINAL da passagem — sem rede e sem certificar nada. O Cartório certifica antes do fechamento; o fechamento depois
+    une livros, faz a curadoria e refaz o repositório, e a fila gravada (estrelas com item faltando) ficava de outra
+    versão do repositório (F08.07, F06.03). Mantém o que é da execução (nesta_execucao, promovidas, devidas)."""
+    from . import cartorio_linha as LN
+    ant = _j(RELATORIO, {}) or {}
+    certs = dict((_ler_certidoes() or {}).get("certidoes") or {})
+    for _k, _m in ((__import__("src.livro_arquivo", fromlist=["x"]).ler_arquivo(PASTA / "certidoes_manuais.json", {}) or {}).get("certidoes") or {}).items():
+        _a = certs.get(_k) or {}
+        _it = {**(_a.get("itens") or {}), **(_m.get("itens") or {})}
+        certs[_k] = {**_a, **{k: v for k, v in _m.items() if v not in (None, [], {})}, "itens": _it,
+                     "dispensas": {k: d for k, d in {**(_a.get("dispensas") or {}), **(_m.get("dispensas") or {})}.items() if k not in _it},
+                     "revisao_humana": True, "abordagens": _a.get("abordagens") or _m.get("abordagens") or []}
+    _CACHE.clear()
+    todas = fila_estrelas(None) + fila_livros(None)
+    na_linha_tipo = {"estrela": {"sem_estrela": 0, "bronze": 0, "prata": 0}, "livro": {"sem_estrela": 0, "bronze": 0, "prata": 0}}
+    for op in todas:
+        est = LN.estagio(op) or ("prata" if op.get("_conferir") else None)
+        if est:
+            na_linha_tipo["livro" if op.get("_tipo") == "livro" else "estrela"][est] += 1
+    fe, fl = sum(na_linha_tipo["estrela"].values()), sum(na_linha_tipo["livro"].values())
+    rel = relatorio(certs, [], fe, fl, None)
+    rel["resumo"]["nesta_execucao"] = (ant.get("resumo") or {}).get("nesta_execucao", 0)
+    lp = dict(ant.get("linha_de_producao") or {})
+    lp.update({"na_linha": {k: na_linha_tipo["estrela"][k] + na_linha_tipo["livro"][k] for k in ("sem_estrela", "bronze", "prata")},
+               "na_linha_por_tipo": na_linha_tipo, "fila_oportunidades": fe, "fila_livros": fl})
+    rel["linha_de_producao"] = lp
+    rel["republicado"] = {"em": rel["em"], "certificado_em": ant.get("em"),
+                          "regra": "fila e cobertura do retrato final do fechamento; certidões da última execução do Cartório"}
+    if gravar:
+        RELATORIO.parent.mkdir(parents=True, exist_ok=True)
+        RELATORIO.write_text(json.dumps(rel, ensure_ascii=False, indent=1), encoding="utf-8")
+    return {"fila_estrelas": fe, "fila_livros": fl, "certidoes": rel["resumo"]["certidoes"],
+            "pct_certificado_12": rel["resumo"].get("pct_certificado_12")}
 
 
 def item_checklist_de(cert: dict, item: str) -> dict:
@@ -976,6 +1032,45 @@ if __name__ == "__main__":
     seg = int(a[a.index("--segundos") + 1]) if "--segundos" in a else None
     print(json.dumps(run(lim, seg), ensure_ascii=False, indent=1))
 
+
+
+# ── RÉGUA EM TODAS AS CERTIDÕES E RELATÓRIO DO QUE ESTÁ GUARDADO (chat de testes, 17/10/2026) ─────────────────────
+def regua_nas_certidoes(gravar: bool = True) -> dict:
+    """VETOR NUNCA É FONTE — em TODAS as certidões guardadas (automáticas e do Chrome), inclusive as anteriores à régua:
+    item cujo documento é agregador, republicador, imprensa ou formulário sai como 'não comprovado' e volta à fila.
+    Idempotente: só regrava quando algum item sai. A gravação (livro_arquivo.guardar_lote) aplica a mesma régua."""
+    from . import livro_arquivo as LA
+    out = {}
+    for arq in (CERTIDOES, PASTA / "certidoes_manuais.json"):
+        doc = (_ler_certidoes() if arq is CERTIDOES else LA.ler_arquivo(arq, {})) or {}
+        n = L.aplicar_regua_certidoes(doc)
+        out[arq.name] = {"certidoes": len(doc.get("certidoes") or {}), "itens_em_vetor_retirados": n}
+        if n and gravar:
+            _gravar_certidoes(doc) if arq is CERTIDOES else LA.guardar_lote([(arq, doc)])
+    return out
+
+
+def relatorio_atual(gravar: bool = True) -> dict:
+    """O relatório do Cartório (docs/dados/cartorio.json) refeito a partir das certidões GUARDADAS NOS LIVROS (todas), sem
+    rede. Antes só a execução do Cartório o refazia: as certidões reaplicadas depois (498 → 2.126) não apareciam e o
+    painel mostrava a taxa de link oficial de outro universo. A linha de produção da última execução é preservada."""
+    certs = dict((_ler_certidoes() or {}).get("certidoes") or {})
+    for _k, _m in ((__import__("src.livro_arquivo", fromlist=["x"]).ler_arquivo(PASTA / "certidoes_manuais.json", {}) or {}).get("certidoes") or {}).items():
+        _a = certs.get(_k) or {}
+        _it = {**(_a.get("itens") or {}), **(_m.get("itens") or {})}
+        certs[_k] = {**_a, **{k: v for k, v in _m.items() if v not in (None, [], {})}, "itens": _it,
+                     "dispensas": {k: d for k, d in {**(_a.get("dispensas") or {}), **(_m.get("dispensas") or {})}.items() if k not in _it}}
+    ant = _j(RELATORIO, {}) or {}
+    res_ant = ant.get("resumo") or {}
+    rel = relatorio(certs, [], int(res_ant.get("fila_estrelas") or 0), int(res_ant.get("fila_livros") or 0))
+    rel["linha_de_producao"] = ant.get("linha_de_producao")
+    rel["resumo"]["nesta_execucao"] = res_ant.get("nesta_execucao")
+    rel["fonte"] = "certidões guardadas nos livros (estado/cartorio/certidoes.json e certidoes_manuais.json, via livro_arquivo)"
+    if gravar:
+        RELATORIO.parent.mkdir(parents=True, exist_ok=True)
+        RELATORIO.write_text(json.dumps(rel, ensure_ascii=False, indent=1), encoding="utf-8")
+    r = rel["resumo"]
+    return {"certidoes": r["certidoes"], "com_link_oficial": r["com_link_oficial"], "taxa_link_oficial": r["taxa_link_oficial"]}
 
 
 # ── CARTÓRIO, PONTO CENTRAL DO QUE FALTA (titular, 16/10/2026) ─────────────────────────────────────────────────────────

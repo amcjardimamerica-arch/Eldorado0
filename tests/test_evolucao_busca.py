@@ -61,9 +61,26 @@ class TesteDescobertaERecorrencia(unittest.TestCase):
 
     def test_espalhamento_alimenta_a_curadoria(self):
         f = json.loads((ROOT / "config/finalidade_motores.json").read_text(encoding="utf-8"))
-        self.assertGreaterEqual(f["espalhamento"]["total_novos"], 5)
         cur = json.loads((ROOT / "config/curadoria_fontes.json").read_text(encoding="utf-8"))
         self.assertTrue(any(str(x.get("id", "")).startswith("espalhado-") for x in cur["fontes_novas"]))
+        # 17/10/2026: o financiador espalhado entra NO MESMO DIA no catálogo das 260 (antes ficava só na curadoria até o
+        # fontes260 do dia seguinte e "total_novos" ficava alto por atraso). A regra, não um número: o site de toda rota de
+        # recorrência (edital validado) está no catálogo ou foi levado como financiador novo; e toda fonte espalhada da
+        # curadoria já está no catálogo
+        from urllib.parse import urlsplit
+        cat = json.loads((ROOT / "config/fontes_captacao_260.json").read_text(encoding="utf-8"))["fontes"]
+        hosts_cat = {d for x in cat for d in (x.get("dominios") or [])}
+        esp = f["espalhamento"]
+        novos = {x["host"] for x in esp["financiadores_novos_para_o_catalogo"]}
+        self.assertEqual(esp["total_novos"], len(novos) if esp["total_novos"] <= 60 else esp["total_novos"])
+        rotas = __import__("src.nucleo", fromlist=["x"]).load_json(ROOT / "estado/rotas_recorrencia.json")["rotas"]
+        self.assertTrue(rotas)
+        fora = [r["url"] for r in rotas if urlsplit(r["url"]).hostname not in hosts_cat | novos]
+        self.assertEqual(fora, [], "financiador de edital validado fora do catálogo e fora do espalhamento")
+        no_cat = {x["id"] for x in cat} | {x.get("programa") for x in cat}       # a curadoria não repete programa
+        self.assertEqual([x["id"] for x in cur["fontes_novas"] if str(x.get("id", "")).startswith("espalhado-")
+                          and x["id"] not in no_cat and x.get("programa") not in no_cat], [],
+                         "fonte espalhada na curadoria ainda fora do catálogo das 260")
 
 
 class TesteLexicoQueAprende(unittest.TestCase):

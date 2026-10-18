@@ -28,14 +28,68 @@ AREAS = ["biblioteca_alexandria", "dados", "estado", "docs/dados", "docs/dashboa
 INDICES_JUNTADOS = {"biblioteca_alexandria/livros/_origens.json"}
 
 
+# 17/10/2026 (chat de testes, item 6): ARQUIVOS DE CONTROLE COM VÁRIOS GRAVADORES. A cópia do fluxo por cima do main
+# apagava o que outro fluxo tinha gravado durante a execução. Para estes, a gravação é uma JUNÇÃO EM 3 VIAS: a versão de
+# onde o fluxo PARTIU (base, guardada no "salvar") diz o que ele mudou; só isso vai por cima do main — o resto do main
+# fica. Registro .jsonl (só acréscimo): as linhas novas do fluxo entram no fim do main.
+#   estado/livros_monitoramento.json (ex-estado/opressores.json, 10 gravadores) e o seu índice (3 gravadores);
+#   estado/auditoria.jsonl (10 gravadores, registro só de acréscimo).
+# biblioteca_alexandria/fontes/motores.json (30 gravadores) NÃO entra aqui: o aplicar roda a trava dos livros depois da
+# cópia, contra o main atual (HEAD), e ela já junta — livro que sumiu volta, campo que sumiu volta, valor mudado guarda o
+# anterior. estado/quarentena.jsonl (12) e estado/ia_uso.jsonl (5) não são versionados: cada execução grava o seu.
+JUNTADOS_3_VIAS = {"estado/livros_monitoramento.json", "estado/livros_monitoramento_indice.json", "estado/auditoria.jsonl"}
+
+
 def juntar_indice(no_main: dict, do_fluxo: dict) -> dict:
     """União sem perda: chaves só do main ficam; chaves do fluxo prevalecem."""
     return {**(no_main or {}), **(do_fluxo or {})}
 
 
+def juntar_3_vias(base, main, fluxo, nivel: int = 0):
+    """O que o fluxo mudou em relação à base vai por cima do main; o que ele não tocou fica como está no main."""
+    if fluxo == base:
+        return main
+    if main == base:
+        return fluxo
+    if isinstance(fluxo, dict) and isinstance(main, dict) and isinstance(base, dict) and nivel < 2:
+        out = dict(main)
+        for k, v in fluxo.items():
+            if k not in base or v != base[k]:
+                out[k] = juntar_3_vias(base.get(k), main.get(k), v, nivel + 1) if k in main else v
+        for k in base:
+            if k not in fluxo and k in out and out[k] == base[k]:
+                out.pop(k)                                    # o fluxo retirou e ninguém mexeu depois
+        return out
+    if isinstance(fluxo, list) and isinstance(main, list) and isinstance(base, list):
+        return main + [x for x in fluxo if x not in base and x not in main]   # histórico: acréscimos dos dois
+    return fluxo
+
+
+def juntar_linhas(base: str, main: str, fluxo: str) -> str:
+    vistas = set(base.splitlines()) | set(main.splitlines())
+    novas = [l for l in fluxo.splitlines() if l.strip() and l not in vistas]
+    corpo = main if main.endswith("\n") or not main else main + "\n"
+    return corpo + "".join(l + "\n" for l in novas)
+
+
 def _copiar(origem: Path, c: str) -> None:
     destino = ROOT / c
     destino.parent.mkdir(parents=True, exist_ok=True)
+    if c in JUNTADOS_3_VIAS and destino.is_file():
+        b = GUARDA / "base" / c
+        base_txt = b.read_text(encoding="utf-8") if b.is_file() else ""
+        main_txt, fluxo_txt = destino.read_text(encoding="utf-8"), origem.read_text(encoding="utf-8")
+        if c.endswith(".jsonl"):
+            destino.write_text(juntar_linhas(base_txt, main_txt, fluxo_txt), encoding="utf-8")
+            print(f"{c}: linhas novas do fluxo acrescentadas ao main")
+            return
+        try:
+            base, main, fluxo = (json.loads(base_txt) if base_txt else {}), json.loads(main_txt), json.loads(fluxo_txt)
+        except ValueError:
+            raise RuntimeError(f"{c}: arquivo de controle ilegível — nada gravado para não apagar o que outro fluxo gravou")
+        destino.write_text(json.dumps(juntar_3_vias(base, main, fluxo), ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"{c}: juntado em 3 vias (só o que este fluxo mudou foi por cima do main)")
+        return
     if c in INDICES_JUNTADOS and destino.is_file():
         try:
             no_main = json.loads(destino.read_text(encoding="utf-8"))
@@ -79,6 +133,11 @@ def salvar() -> dict:
         d.parent.mkdir(parents=True, exist_ok=True)
         if (ROOT / c).is_file():
             shutil.copy2(ROOT / c, d)
+        if c in JUNTADOS_3_VIAS:                          # 17/10: a versão de onde o fluxo partiu (para a junção em 3 vias)
+            r = subprocess.run(["git", "show", f"HEAD:{c}"], cwd=ROOT, capture_output=True)
+            if r.returncode == 0:
+                (GUARDA / "base" / c).parent.mkdir(parents=True, exist_ok=True)
+                (GUARDA / "base" / c).write_bytes(r.stdout)
     m = {"alterados": alterados, "apagados": apagados}
     GUARDA.mkdir(parents=True, exist_ok=True)
     (GUARDA / "manifesto.json").write_text(json.dumps(m, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -98,7 +157,7 @@ def aplicar(msg: str, tentativas: int = 6) -> bool:
             if o.is_file():
                 _copiar(o, c)                                 # 17/10: índices são JUNTADOS, não substituídos
         for c in m["apagados"]:
-            if c in INDICES_JUNTADOS:
+            if c in INDICES_JUNTADOS or c in JUNTADOS_3_VIAS:
                 continue                                       # 17/10: um fluxo nunca apaga o índice compartilhado
             if (ROOT / c).exists():
                 _git("rm", "-q", "--", c, ok=True)

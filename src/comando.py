@@ -359,9 +359,7 @@ def fases(ctx: dict) -> list[dict]:
         # 16/10/2026 (titular): TESTE DO BANCO ÚNICO — lista o que ainda existe fora dos livros (mostrador da sala)
         {"etapa": "banco_unico", "finalidade": "teste: bancos de dados que ainda existem fora dos livros",
          "cmds": [[py, "scripts/verificar_banco_unico.py", "0"]], "t": 300, "pular": None},
-        # 6 ENTREGAR — fichas (Farol), legislativo, sala de controle e diagnóstico
-        {"etapa": "fichas_farol", "finalidade": "ficha e janela de cada oportunidade aberta; o que está pronto vai ao Farol",
-         "cmds": [[py, "-m", "src.fichas_oportunidades"]], "t": 200, "pular": None},
+        # 6 ENTREGAR — legislativo, fichas (Farol), sala de controle e diagnóstico
         {"etapa": "legislativo", "finalidade": "projetos de lei, utilidades públicas e orçamento — acompanhamento sem livro",
          "cmds": [[py, "-m", "src.legislativo"]], "t": 120, "pular": None},
         # 16/10/2026 (titular): FECHAMENTO — repositório (dos livros) POR ÚLTIMO e, dele, o fluxo e as pendências do Cartório:
@@ -374,6 +372,8 @@ def fases(ctx: dict) -> list[dict]:
                   [py, "scripts/migracoes/pesquisa_externa_nos_livros_2026_10_17.py"],
                   # 17/10 (titular): MIGRAÇÃO ÚNICA — as certidões do Cartório descartadas sem rastro em 16/10 voltam aos livros
                   [py, "scripts/migracoes/certidoes_restauradas_2026_10_17.py"],
+                  # 18/10 (pacote final do chat de testes): restaura fontes 260 (nivel, nota), motivos da revisão e radar dos pilotos
+                  [py, "scripts/migracoes/restauracoes_pacote_final_2026_10_18.py"],
                   # 17/10 (titular): os "opressores" viraram LIVROS — junta o que uma passagem antiga gravou com o nome antigo
                   [py, "-c", "import json; from src import livros_monitoramento as M; print(json.dumps(M.migrar_nome_antigo(), ensure_ascii=False))"],
                   # 17/10 (testes P0): as fontes de Outras oportunidades são ATUALIZADAS aqui (consultar não grava)
@@ -382,23 +382,58 @@ def fases(ctx: dict) -> list[dict]:
                   [py, "-c", "import json; from src import banco_livros as B; print(json.dumps(B.sincronizar_fontes_260(), ensure_ascii=False))"],
                   # 17/10 (titular): REAPLICA a restauração dos livros retirados em massa às 02:28 (idempotente)
                   [py, "scripts/restaurar_livros.py", "--aplicar"],
-                  # 17/10 (titular): a pesquisa externa está NOS LIVROS (protegida pela trava): não há o que reaplicar[py, "-c", "import json; from src import repositorio_unico as R; print(json.dumps({k: v for k, v in R.construir().items() if not isinstance(v, (list, dict))}, ensure_ascii=False))"],
+                  # 17/10 (titular): a pesquisa externa está NOS LIVROS (protegida pela trava): não há o que reaplicar
+                  # 17/10 (chat de testes): o repositório tinha ficado DENTRO deste comentário desde o #360 — o fechamento
+                  # não refazia mais o repositório
+                  # 17/10/2026 (titular): TRAVA DOS LIVROS — nenhum livro apagado nem sobrescrito, só acrescido. 17/10 (chat de testes
+                  # F06.09): a trava, a união e a curadoria do catálogo rodam ANTES do repositório — o repositório lia o
+                  # catálogo antes da união e citava livros que a união tirava logo depois
+                  [py, "-m", "src.trava_livros"],
+                  # 17/10/2026 (chat de testes): a trava DEVOLVE os livros que outras fases tiraram sem união registrada
+                  # (na versão gravada, sem classificação e às vezes duplicados ou misturando estados). As fases que
+                  # organizam o catálogo rodam DEPOIS dela — unir duplicados e curadoria (separa estados, junta,
+                  # classifica), ambas com a união/separação registrada — e a trava confirma (arquiva o que foi unido)
+                  [py, "-c", "import json; from src import banco_livros as B; r=B.unir_duplicados(); print(json.dumps({k: v for k, v in r.items() if k != 'lista'}, ensure_ascii=False))"],
+                  [py, "-m", "src.livros_curadoria"],
+                  [py, "-m", "src.trava_livros"],
+                  # 17/10: o monitoramento de livro UNIDO passa para o livro que ficou
+                  [py, "-c", "import json; from src import livros_monitoramento as M; print(json.dumps(M.remapear_unidos(), ensure_ascii=False))"],
+                  # 17/10 (chat de testes F07.05): o ÍNDICE dos livros é refeito do catálogo que ficou (depois da trava,
+                  # da união e da curadoria) — antes só era refeito quando faltava e ficava com livros que já não existem
+                  [py, "-c", "import json; from src import indice_livros as IL; print(json.dumps(IL.construir(), ensure_ascii=False))"],
+                  # 17/10 (titular, chat de testes F08.04): VETOR NUNCA É FONTE em todas as certidões guardadas (idempotente)
+                  [py, "-c", "import json; from src import cartorio as C; print(json.dumps(C.regua_nas_certidoes(), ensure_ascii=False))"],
+                  [py, "-c", "import json; from src import repositorio_unico as R; print(json.dumps({k: v for k, v in R.construir().items() if not isinstance(v, (list, dict))}, ensure_ascii=False))"],
                   [py, "-c", "import json; from src import fila_retentativa as FR; print(json.dumps(FR.dar_destino(), ensure_ascii=False))"],
                   [py, "-c", "import json; from src import fluxo_oportunidades as F; print(json.dumps(F.sincronizar_com_repositorio(), ensure_ascii=False))"],
                   # 17/10: o que entrou no fechamento também recebe decisão (28/09: o mapa não sai com oportunidade sem decisão)
                   [py, "-c", "import json; from src import curadoria_automatica as CA; print(json.dumps(CA.run(), ensure_ascii=False))"],
                   [py, "-c", "import json; from src import cartorio as C; print(json.dumps(C.pendencias(), ensure_ascii=False))"],
+                  # 17/10 (chat de testes F08.08): o relatório do Cartório sai das certidões guardadas (todas), não da última execução
+                  [py, "-c", "import json; from src import cartorio as C; print(json.dumps(C.republicar_relatorio(), ensure_ascii=False))"],   # fila e cobertura do retrato final (F08.07)
                   [py, "-c", "import json; from src import qualidade_motores as Q; print(json.dumps(Q.montar(), ensure_ascii=False))"],
-                  # 17/10/2026 (titular): TRAVA DOS LIVROS — por último: nenhum livro apagado nem sobrescrito, só acrescido
+                  # 17/10/2026 (titular): TRAVA DOS LIVROS — de novo depois do repositório: o que ele acrescentou aos livros fica e
+                  # nada do que estava gravado some (a ingestão tira livro sem registro e a trava o devolve) — ANTES da
+                  # base do painel e da Bússola, que contam o catálogo gravado
                   [py, "-m", "src.trava_livros"],
-                  # 17/10: o monitoramento de livro UNIDO passa para o livro que ficou
-                  [py, "-c", "import json; from src import livros_monitoramento as M; print(json.dumps(M.remapear_unidos(), ensure_ascii=False))"],
+                  # 17/10 (chat de testes F06.08/F07.06): TODA CAPA TEM O SEU ARQUIVO — o livro criado (ou devolvido pela
+                  # trava) só na capa ganha biblioteca_alexandria/livros/<id>.json; nada é apagado nem sobrescrito
+                  [py, "-c", "import json; from src import livro_arquivo as LA; r=LA.conteudo_das_capas(); print(json.dumps({k: v for k, v in r.items() if k != 'ids'}, ensure_ascii=False))"],
+                  # 17/10 (chat de testes F07.05): e o índice dos livros do catálogo que ficou no fim
+                  [py, "-c", "import json; from src import indice_livros as IL; print(json.dumps(IL.construir(), ensure_ascii=False))"],
+                  # 17/10 (chat de testes F06.05): fichas e rotas de recorrência do retrato final
+                  [py, "-m", "src.fichas_oportunidades"],
+                  [py, "-c", "import json; from src import finalidade_motores as FM; print(json.dumps(FM.montar(), ensure_ascii=False))"],
                   # 17/10 (titular): a BASE DO PAINEL (calendário e dias da Bússola) refeita a cada passagem, a partir do
                   # repositório e dos livros — antes só fluxos diários/mensais a refaziam e os dias ficavam vazios
                   [py, "-m", "src.dashboard_dados"],
                   # 17/10 (titular): a Bússola com o número do CATÁLOGO gravado (depois da trava)
                   [py, "-c", "import json; from src import fluxo_oportunidades as F; print(json.dumps(F.sincronizar_catalogo(), ensure_ascii=False))"]],
          "t": 900, "pular": None},
+        # 17/10 (chat de testes F06.07): as FICHAS saem DEPOIS do fechamento — do mesmo retrato do repositório que as
+        # outras telas leem (antes saíam do repositório da passagem anterior: título e link divergiam)
+        {"etapa": "fichas_farol", "finalidade": "ficha e janela de cada oportunidade aberta; o que está pronto vai ao Farol",
+         "cmds": [[py, "-m", "src.fichas_oportunidades"]], "t": 200, "pular": None},
         {"etapa": "sala_de_controle", "finalidade": "instrumentos de cada etapa", "cmds": [[py, "-m", "src.sala_controle"]], "t": 150, "pular": None},
         {"etapa": "diagnostico", "finalidade": "diagnóstico da passagem (arquivo próprio; o relatório da análise não é sobrescrito)",
          "cmds": [[py, "-m", "src.diagnostico_sistema"]], "t": 300, "pular": None, "env": {"DIAG_PASSAGEM": "1"}},

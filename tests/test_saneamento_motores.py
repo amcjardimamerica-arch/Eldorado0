@@ -125,14 +125,27 @@ class ComRevisaoHumana(unittest.TestCase):
         if not S.VEREDITOS.exists():
             self.skipTest("vereditos ainda não importados")
         regs, ver = _registros()
+        atuais = S.vereditos()
         for r in regs:
             s = S.sanear_registro(r, HOJE)
             v = ver[r["id"]]["veredito"]
+            h = atuais.get(r["id"]) or {}
+            if h.get("veredito") and h["veredito"] != v:
+                # 17/10 (#355–#357): REVISÃO HUMANA POSTERIOR ao gabarito de 10/10 (Chrome, leitura do documento
+                # oficial) vence — só com data posterior, origem e motivo escritos (ex.: Rubiataba e Itaberaí, abertos
+                # mas restritos a quem tem sede/residência no município: fora_perfil)
+                self.assertGreater(str(h.get("em") or ""), "2026-10-10T20:09:23", r["id"])   # gravação do gabarito
+                self.assertTrue(h.get("origem") and h.get("origem") != "P1-GO-2026-10-10" and h.get("motivo"), r["id"])
+                v = h["veredito"]
             if v in ("ruido", "fora_perfil"):
                 self.assertTrue(s["descartar"], r["id"])
-            elif v in UTEIS:
+                self.assertIn(h.get("origem") or "", s["descartar"], r["id"])
+            elif v in UTEIS or v == "validacao_manual":
                 self.assertFalse(s["descartar"], r["id"])
                 self.assertNotEqual(s["ajustes"].get("situacao"), "encerrada", r["id"])
+            elif v == "encerrada":
+                self.assertFalse(s["descartar"], r["id"])
+                self.assertEqual(s["ajustes"].get("situacao"), "encerrada", r["id"])
 
 
 class Painel(unittest.TestCase):
