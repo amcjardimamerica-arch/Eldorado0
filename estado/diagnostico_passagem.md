@@ -1,8 +1,8 @@
-# Diagnóstico do sistema · 2026-10-18 16:00 UTC
+# Diagnóstico do sistema · 2026-10-18 16:03 UTC
 
 ## Cumprimento da finalidade · índice geral 69%
 - Motores: 98% (ok) — todo motor ativo lê dentro da sua cadência
-- Maestro: 80% (atencao) — cobertura completa do dia planejado
+- Maestro: 82% (atencao) — cobertura completa do dia planejado
 - Rede neural: 99% (ok) — discernimento (AUC) de pelo menos 0,85
 - Biblioteca: 95% (ok) — toda oportunidade aberta aplicável com livro existente
 - Validação: 28% (falha) — toda oportunidade aberta validada
@@ -24,7 +24,7 @@
 - 10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar: atencao · última 2026-10-15T16:09 · sucesso 25% · cadência None h
 - 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: falha · última 2026-10-18T15:54 · sucesso 0% · cadência 1.0 h
 - 01 · Eldorado — motores por hora (00h–06h BRT): atencao · última 2026-10-18T13:08 · sucesso 60% · cadência 24.0 h
-- 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): falha · última 2026-10-18T15:58 · sucesso 0% · cadência 1.0 h
+- 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): falha · última 2026-10-18T16:01 · sucesso 0% · cadência 1.0 h
 - 34 · Motores de empresas (semanal, com recuperação): atencao · última 2026-10-18T11:23 · sucesso 71% · cadência 24.0 h
 - 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): falha · última 2026-10-18T15:32 · sucesso 33% · cadência 6.0 h
 - 02 · Alexandria — revisão mensal de leis e procedimentos: atrasado · última 2026-10-01T10:36 · sucesso 50% · cadência 24.0 h
@@ -48,7 +48,7 @@
 ## Sistemas
 - motores: 42 funcionando · 1 em falha · 2 inativos · 5 com leitura parcial
   - em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 1 dia(s) (28 h); última leitura 17/10 08:29
-- maestro: cobertura 79.7% · esgotados 25
+- maestro: cobertura 82.3% · esgotados 23
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
 - Cartório: 0.6852 certificado · fluxos do GitHub com falha: []
 - saúde: 8 alerta(s) · índice da sala de controle: 53
@@ -75,7 +75,7 @@
 - [media] repositorio sem atualização há 12.2 h (limite 3 h) → refazer o repositório
 - [media] fluxo 'acesso-mensal' sem rodar há 1134.8 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 364.1 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 413.4 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 413.5 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 90 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 239 item(ns) esperando a análise do Claude (próxima: 2026-10-18) → ver o fluxo/arquivo indicado
@@ -92,12 +92,12 @@
 
 ## Workflow (estrutura de 15/10)
 - comando único: 48 ciclo(s) hoje · 48 vermelho(s) · 336 etapa(s) com erro · fases puladas {'modalidade': 48, 'treinar_rede': 48, 'expurgo': 48, 'migracao_livros': 48, 'recalcular': 48, 'unir_livros': 48, 'biblioteca_diaria': 48, 'vigilancia_diaria': 48}
-- cobertura do dia: 79.7% de 123 motores
+- cobertura do dia: 82.3% de 130 motores
 - retentativa: {'aguardando_retentativa': 1199, 'fora_da_fila': 90, 'fora_da_fila_por_escopo': {'outras-oportunidades-1': 4, 'outras-oportunidades-6': 5, 'recorrencia': 4, 'outras-oportunidades-5': 5, 'outras-oportunidades-8': 3, 'outras-oportunidades-3': 4, 'f260-captacao-044': 1, 'outras-oportunidades-2': 3, 'plat-empresas-editais-incentivados': 2, 'f260-captacao-238': 2, 'cartorio': 46, 'outras-oportunidades-7': 3, 'f260-captacao-242': 1, 'f260-captacao-224': 1, 'empresas-incentivadas': 1, 'f260-espalhado-sistema-mirassoldoeste-mt-gov-br': 1, 'f260-captacao-218': 1, 'f260-captacao-113': 3}, 'regra': 'volta em 30 min; sai após 5 tentativas com o mesmo erro', 'destinos': {'Claude no Chrome': 46, 'rota quebrada': 0, 'ponte ou Chrome': 42, 'sem destino': 2}} · leitura parcial na fila: 1054
 - curadoria do link oficial: {'em curadoria': 74, 'reprovado': 50, 'aprovado': 40, 'sem link oficial': 26}
 - validação por exceção: trava fechada: acerto do Cartório 77.4% < 85.0% — candidatas vão à frente da conferência humana
 - auditorias: {'gabarito_do_cartorio': {'em': '2026-10-15T19:53:25+00:00', 'acerto_pct': 77.4, 'documentos_lidos': 142}, 'varredura_referencia': '2026-10-01_2026-10-15', 'robots': {'em': '2026-10-15T10:07:53+00:00', 'motores_com_bloqueio': 5}, 'ponte': {'ponte_ok': 7, 'direto_ok': 5, 'so_pela_ponte': ['ALEGO · SPL (proposições)', 'MPGO'], 'nenhum': ['TJGO · portal'], 'total': 8}}
-- legislativo: {'atualizado_em': '2026-10-18T15:59:32+00:00', 'proposicoes': 11}
+- legislativo: {'atualizado_em': '2026-10-18T16:02:14+00:00', 'proposicoes': 11}
 
 ## Decisões do Eldorado: agiu como deveria?
 - erro · conferência das decisões: **não conferido: KeyError: 'dado'** (0 de 0) — regra: 
