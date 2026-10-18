@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T08:06:10+00:00",
+ "em": "2026-10-18T08:14:48+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,10 +7,14 @@
   "alterar_rota": 61,
   "rota_nova": 52,
   "via_ponte": 3,
-  "exemplos_da_rede": 13571
+  "exemplos_da_rede": 13696
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
+   [
+    "tld:br",
+    2.5782
+   ],
    [
     "tok:secult",
     2.5203
@@ -18,6 +22,10 @@
    [
     "tok:mpf",
     2.394
+   ],
+   [
+    "origem:rota original",
+    2.3473
    ],
    [
     "tok:inscricoes",
@@ -28,46 +36,38 @@
     2.2114
    ],
    [
-    "origem:rota original",
-    1.9848
-   ],
-   [
     "tok:leipaulogustavo",
     1.8789
    ],
    [
-    "tld:br",
-    1.7919
-   ],
-   [
     "tok:imprensa",
-    1.7717
+    1.8764
    ],
    [
     "tok:deputados",
     1.6552
    ],
    [
-    "tok:portarias",
+    "tok:sala",
+    1.577
+   ],
+   [
+    "tok:feed",
     1.5559
    ],
    [
-    "tok:sala",
-    1.4723
-   ],
-   [
-    "tok:abertas",
-    1.4598
+    "tok:portarias",
+    1.5559
    ]
   ],
   "piores_sinais": [
    [
-    "tok:cultura",
-    -1.7481
+    "tok:educacao",
+    -1.6886
    ],
    [
-    "sapl:False",
-    -1.7911
+    "tok:cultura",
+    -1.7481
    ],
    [
     "tok:ccs",
@@ -78,8 +78,12 @@
     -2.275
    ],
    [
+    "origem:padrão",
+    -2.3837
+   ],
+   [
     "origem:câmara",
-    -2.5696
+    -2.5724
    ],
    [
     "tok:content",
@@ -88,10 +92,6 @@
    [
     "tok:uploads",
     -2.6409
-   ],
-   [
-    "origem:padrão",
-    -2.8187
    ]
   ]
  },
@@ -198,6 +198,50 @@
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
   },
+  "f260-captacao-230": {
+   "nome": "Fundação ArcelorMittal",
+   "status": "alterar rota",
+   "vazias_seguidas": 60,
+   "leituras": 60,
+   "ok": 0,
+   "ultima": {
+    "em": "2026-10-18T08:07:52+00:00",
+    "classe": "vazia",
+    "motivo": "página institucional; seguiu 4 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje"
+   },
+   "historico": [
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v"
+   ],
+   "rota_aprendida": null,
+   "afinado": {
+    "em": "2026-10-18T08:05:34+00:00",
+    "testes": 24,
+    "melhor": null,
+    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
+   }
+  },
   "f260-captacao-218": {
    "nome": "Capta - oportunidades e editais",
    "status": "alterar rota",
@@ -236,46 +280,6 @@
    "afinado": {
     "em": "2026-10-18T07:58:22+00:00",
     "testes": 12,
-    "melhor": null,
-    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
-   }
-  },
-  "f260-captacao-230": {
-   "nome": "Fundação ArcelorMittal",
-   "status": "alterar rota",
-   "vazias_seguidas": 56,
-   "leituras": 56,
-   "ok": 0,
-   "ultima": {
-    "em": "2026-10-18T08:01:55+00:00",
-    "classe": "vazia",
-    "motivo": "página institucional; seguiu 4 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje"
-   },
-   "historico": [
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v"
-   ],
-   "rota_aprendida": null,
-   "afinado": {
-    "em": "2026-10-18T08:05:34+00:00",
-    "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -572,8 +576,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T07:09:47+00:00",
-    "testes": 12,
+    "em": "2026-10-18T08:11:55+00:00",
+    "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -617,7 +621,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T07:13:33+00:00",
+    "em": "2026-10-18T08:12:21+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -659,8 +663,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T07:10:00+00:00",
-    "testes": 12,
+    "em": "2026-10-18T08:12:12+00:00",
+    "testes": 22,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1116,7 +1120,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T07:14:00+00:00",
+    "em": "2026-10-18T08:12:31+00:00",
     "testes": 22,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1288,10 +1292,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 5,
-    "aprendido_em": "2026-10-18T07:15:34+00:00"
+    "aprendido_em": "2026-10-18T08:14:36+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T07:15:34+00:00",
+    "em": "2026-10-18T08:14:36+00:00",
     "testes": 17,
     "melhor": {
      "url": "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027",
@@ -2003,22 +2007,22 @@
    ],
    "rota_aprendida": {
     "urls": [
-     "https://movimentobemmaior.org.br/"
+     "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20"
     ],
     "via": "direto",
-    "origem": "rota original",
-    "pontos": 5,
-    "aprendido_em": "2026-10-18T07:20:26+00:00"
+    "origem": "padrão",
+    "pontos": 14,
+    "aprendido_em": "2026-10-18T08:14:48+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T07:20:26+00:00",
-    "testes": 27,
+    "em": "2026-10-18T08:14:48+00:00",
+    "testes": 16,
     "melhor": {
-     "url": "https://movimentobemmaior.org.br/",
+     "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
      "via": "direto",
-     "origem": "rota original",
-     "pontos": 5,
-     "formato": "html"
+     "origem": "padrão",
+     "pontos": 14,
+     "formato": "json"
     },
     "resultado": "rota nova em teste"
    }
