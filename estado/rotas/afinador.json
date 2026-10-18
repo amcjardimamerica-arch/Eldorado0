@@ -595,7 +595,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-218": {
-  "em": "2026-10-18T07:01:30+00:00",
+  "em": "2026-10-18T07:58:22+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -651,7 +651,7 @@
     "funcionou": false
    },
    {
-    "url": "https://prosas.com.br/noticias",
+    "url": "https://prosas.com.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -661,7 +661,17 @@
     "funcionou": false
    },
    {
-    "url": "https://prosas.com.br/edital",
+    "url": "https://prosas.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://prosas.com.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -692,16 +702,6 @@
    },
    {
     "url": "https://prosas.com.br/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://prosas.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1093,7 +1093,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T07:53:43+00:00",
+  "em": "2026-10-18T07:59:59+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1226,7 +1226,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-223": {
-  "em": "2026-10-18T07:02:01+00:00",
+  "em": "2026-10-18T07:58:54+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -1286,7 +1286,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacao.bradesco/noticias",
+    "url": "https://fundacao.bradesco/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
@@ -1297,7 +1297,18 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacao.bradesco/edital",
+    "url": "https://fundacao.bradesco/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 76,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacao.bradesco/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
@@ -1331,17 +1342,6 @@
    },
    {
     "url": "https://fundacao.bradesco/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 76,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacao.bradesco/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
@@ -1665,8 +1665,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "judiciario-tjgo": {
-  "em": "2026-10-18T07:08:24+00:00",
-  "testes": 17,
+  "em": "2026-10-18T07:59:12+00:00",
+  "testes": 16,
   "melhor": null,
   "detalhe": [
    {
@@ -1677,16 +1677,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.tjgo.jus.br",
-    "origem": "biblioteca",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
     "funcionou": false
    },
    {
@@ -1710,26 +1700,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://corregedoria.tjgo.jus.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.tjgo.jus.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -1741,6 +1711,26 @@
    },
    {
     "url": "https://corregedoria.tjgo.jus.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://corregedoria.tjgo.jus.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1790,26 +1780,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://corregedoria.tjgo.jus.br/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.tjgo.jus.br/edital",
     "origem": "padrão",
     "via": "direto",
@@ -1821,6 +1791,36 @@
    },
    {
     "url": "https://corregedoria.tjgo.jus.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://corregedoria.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3248,21 +3248,10 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-235": {
-  "em": "2026-10-18T07:09:23+00:00",
+  "em": "2026-10-18T07:59:57+00:00",
   "testes": 16,
   "melhor": null,
   "detalhe": [
-   {
-    "url": "https://www.institutolojasrenner.org.br/",
-    "origem": "rota original",
-    "via": "direto",
-    "pontos": 1,
-    "links": 26,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
    {
     "url": "https://www.institutolojasrenner.org.br/edital/",
     "origem": "biblioteca",
@@ -3286,6 +3275,17 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutolojasrenner.org.br/",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 1,
+    "links": 26,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutolojasrenner.org.br/edital-de-microinvestimento-rio-de-janeiro-e-sao-paulo/",
     "origem": "biblioteca",
     "via": "direto",
@@ -3297,16 +3297,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutolojasrenner.org.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutolojasrenner.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -3315,6 +3305,16 @@
     "sinais": 0,
     "formato": "sitemap/feed",
     "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutolojasrenner.org.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -3340,7 +3340,18 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutolojasrenner.org.br/noticias",
+    "url": "https://www.institutolojasrenner.org.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 20,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutolojasrenner.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3350,14 +3361,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutolojasrenner.org.br/edital",
+    "url": "https://www.institutolojasrenner.org.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
-    "links": 20,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -3391,16 +3401,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutolojasrenner.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutolojasrenner.org.br/licitacoes",
     "origem": "padrão",
     "via": "direto",
@@ -3425,7 +3425,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-acessoainformacao-cavalcante-go-gov-br": {
-  "em": "2026-10-18T07:09:27+00:00",
+  "em": "2026-10-18T07:59:59+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -3440,7 +3440,7 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/feed",
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3450,7 +3450,7 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/sitemap.xml",
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3480,7 +3480,7 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/noticias",
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3490,7 +3490,17 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/edital",
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3521,16 +3531,6 @@
    },
    {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9426,7 +9426,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-253": {
-  "em": "2026-10-18T07:02:16+00:00",
+  "em": "2026-10-18T07:59:10+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -9483,6 +9483,27 @@
     "funcionou": false
    },
    {
+    "url": "https://www.microsoft.com/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.microsoft.com/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 111,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://www.microsoft.com/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -9491,16 +9512,6 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.microsoft.com/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -9531,17 +9542,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.microsoft.com/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 111,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
     "funcionou": false
    },
    {
