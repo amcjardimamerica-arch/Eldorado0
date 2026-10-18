@@ -590,8 +590,11 @@ def aplicar_parametro(itens: list[dict], vereditos: dict | None = None, hoje: st
     hoje = hoje or _date.today().isoformat()
     fora = {"fechada por veredito": 0, "prazo vencido": 0}
     abertas = []
+    from .decisoes_titular import veredito_efetivo as _vef
     for it in itens:
-        v = (vereditos.get(str(it.get("id"))) or {}).get("veredito")
+        v, _dec = _vef(vereditos.get(str(it.get("id"))), it)   # 18/10: as decisões do titular prevalecem sobre o veredito
+        if _dec:
+            it["decisao_titular"] = _dec
         if v in FECHADAS:
             fora["fechada por veredito"] += 1; continue
         if it.get("fim") and str(it["fim"])[:10] < hoje:
