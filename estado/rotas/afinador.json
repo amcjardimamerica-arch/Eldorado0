@@ -118,7 +118,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "dj-trf1-go": {
-  "em": "2026-10-18T09:11:56+00:00",
+  "em": "2026-10-18T09:59:08+00:00",
   "testes": 14,
   "melhor": {
    "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
@@ -151,6 +151,16 @@
     "funcionou": true
    },
    {
+    "url": "https://www.trf1.jus.br/sjgo/conteudo/secos/SEI_24768109_Edital (2).pdf",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "InvalidURL",
+    "funcionou": false
+   },
+   {
     "url": "https://www.trf1.jus.br/feed",
     "origem": "padrão",
     "via": "direto",
@@ -171,17 +181,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/sjgo/conteudo/secos/SEI_24768109_Edital (2).pdf",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "InvalidURL",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.trf1.jus.br/editais",
+    "url": "https://www.trf1.jus.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -191,7 +191,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/sitemap.xml",
+    "url": "https://www.trf1.jus.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -274,7 +274,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-196": {
-  "em": "2026-10-18T09:11:54+00:00",
+  "em": "2026-10-18T09:59:06+00:00",
   "testes": 17,
   "melhor": {
    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
@@ -445,14 +445,13 @@
     "funcionou": false
    },
    {
-    "url": "https://mpt.mp.br/pgt/noticias/nota-tecnica-no-9-2025-gt-reversoes-decisao-cautelar-stf-adpf-944.pdf/view",
-    "origem": "biblioteca",
+    "url": "https://www.mpf.mp.br/transparencia/editais",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
-    "links": 10,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
@@ -1085,9 +1084,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T09:53:46+00:00",
+  "em": "2026-10-18T10:01:19+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": true
+  "ponte_respondeu": false
  },
  "f260-captacao-238": {
   "em": "2026-10-18T07:53:17+00:00",
@@ -1976,8 +1975,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "alego-pl": {
-  "em": "2026-10-18T09:19:02+00:00",
-  "testes": 17,
+  "em": "2026-10-18T10:00:54+00:00",
+  "testes": 16,
   "melhor": {
    "url": "https://portal.al.go.leg.br/",
    "via": "direto",
@@ -2019,16 +2018,6 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/feed",
-    "origem": "câmara",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
     "url": "https://alegodigital.al.go.leg.br/feed",
     "origem": "câmara",
     "via": "direto",
@@ -2055,31 +2044,11 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
     "url": "https://alegodigital.al.go.leg.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://portal.al.go.leg.br/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2100,6 +2069,26 @@
    },
    {
     "url": "https://alegodigital.al.go.leg.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2141,6 +2130,16 @@
    {
     "url": "https://alegodigital.al.go.leg.br/edital",
     "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/noticias",
+    "origem": "câmara",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -3859,7 +3858,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-240": {
-  "em": "2026-10-18T09:19:37+00:00",
+  "em": "2026-10-18T10:01:19+00:00",
   "testes": 14,
   "melhor": null,
   "detalhe": [
@@ -3870,15 +3869,16 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
     "url": "https://www.unesco.org/creativity/en/ifcd",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 1,
-    "links": 284,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -3902,17 +3902,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.unesco.org/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -3922,7 +3913,19 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.unesco.org/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -3932,7 +3935,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -3942,7 +3946,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -3952,7 +3957,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -3962,7 +3968,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -3972,7 +3979,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -3982,7 +3990,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -3992,7 +4001,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -4002,7 +4012,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    }
   ],
@@ -8380,7 +8391,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-255": {
-  "em": "2026-10-18T09:19:19+00:00",
+  "em": "2026-10-18T10:01:10+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8407,16 +8418,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.cjrfund.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -8425,6 +8426,16 @@
     "sinais": 0,
     "formato": "sitemap/feed",
     "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -11802,7 +11813,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-011": {
-  "em": "2026-10-18T09:11:39+00:00",
+  "em": "2026-10-18T09:58:53+00:00",
   "testes": 20,
   "melhor": {
    "url": "https://mariaemilia.org.br/feed",
@@ -11941,7 +11952,7 @@
     "funcionou": false
    },
    {
-    "url": "https://mariaemilia.org.br/chamadas-publicas",
+    "url": "https://mariaemilia.org.br/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11951,7 +11962,7 @@
     "funcionou": false
    },
    {
-    "url": "https://mariaemilia.org.br/chamadas-publicas",
+    "url": "https://mariaemilia.org.br/chamamento-publico",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -11961,7 +11972,7 @@
     "funcionou": false
    },
    {
-    "url": "https://mariaemilia.org.br/chamamento-publico",
+    "url": "https://mariaemilia.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11971,7 +11982,7 @@
     "funcionou": false
    },
    {
-    "url": "https://mariaemilia.org.br/chamamento-publico",
+    "url": "https://mariaemilia.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
