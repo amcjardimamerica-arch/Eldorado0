@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T06:27:11+00:00",
+ "em": "2026-10-18T06:34:00+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,10 +7,18 @@
   "alterar_rota": 63,
   "rota_nova": 52,
   "via_ponte": 3,
-  "exemplos_da_rede": 12208
+  "exemplos_da_rede": 12337
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
+   [
+    "tld:br",
+    2.9552
+   ],
+   [
+    "origem:rota original",
+    2.5249
+   ],
    [
     "tok:secult",
     2.5166
@@ -20,28 +28,20 @@
     2.3939
    ],
    [
-    "origem:rota original",
-    2.3659
-   ],
-   [
     "tok:inscricoes",
     2.3358
-   ],
-   [
-    "tld:br",
-    2.2127
    ],
    [
     "tok:unidades",
     2.2113
    ],
    [
-    "tok:feed",
-    2.0135
-   ],
-   [
     "tok:leipaulogustavo",
     1.8689
+   ],
+   [
+    "tok:feed",
+    1.7802
    ],
    [
     "tok:imprensa",
@@ -75,7 +75,7 @@
    ],
    [
     "origem:padrão",
-    -2.1933
+    -2.0989
    ],
    [
     "tipo:internacional",
@@ -87,11 +87,11 @@
    ],
    [
     "tok:content",
-    -2.5291
+    -2.5402
    ],
    [
     "tok:uploads",
-    -2.5291
+    -2.5402
    ]
   ]
  },
@@ -1735,10 +1735,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 4,
-    "aprendido_em": "2026-10-18T05:41:41+00:00"
+    "aprendido_em": "2026-10-18T06:32:33+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T05:41:41+00:00",
+    "em": "2026-10-18T06:32:33+00:00",
     "testes": 23,
     "melhor": {
      "url": "https://www.iadb.org/sitemap.xml",
@@ -1817,10 +1817,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 18,
-    "aprendido_em": "2026-10-18T05:42:09+00:00"
+    "aprendido_em": "2026-10-18T06:33:02+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T05:42:09+00:00",
+    "em": "2026-10-18T06:33:02+00:00",
     "testes": 21,
     "melhor": {
      "url": "https://oakfnd.org/sitemap.xml",
@@ -1899,10 +1899,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 15,
-    "aprendido_em": "2026-10-18T05:41:12+00:00"
+    "aprendido_em": "2026-10-18T06:32:07+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T05:41:12+00:00",
+    "em": "2026-10-18T06:32:07+00:00",
     "testes": 22,
     "melhor": {
      "url": "https://www.unicef.org/sitemap.xml",
@@ -1940,10 +1940,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-18T05:41:28+00:00"
+    "aprendido_em": "2026-10-18T06:32:23+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T05:41:28+00:00",
+    "em": "2026-10-18T06:32:23+00:00",
     "testes": 22,
     "melhor": {
      "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
@@ -2023,10 +2023,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-18T05:42:28+00:00"
+    "aprendido_em": "2026-10-18T06:33:19+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T05:42:28+00:00",
+    "em": "2026-10-18T06:33:19+00:00",
     "testes": 20,
     "melhor": {
      "url": "https://mariaemilia.org.br/feed",
@@ -2300,17 +2300,17 @@
      "https://comitedeculturasc.org/editais"
     ],
     "via": "direto",
-    "origem": "padrão",
+    "origem": "rota original",
     "pontos": 31,
-    "aprendido_em": "2026-10-18T05:47:34+00:00"
+    "aprendido_em": "2026-10-18T06:34:00+00:00"
    },
    "afinado": {
-    "em": "2026-10-18T05:47:34+00:00",
-    "testes": 22,
+    "em": "2026-10-18T06:34:00+00:00",
+    "testes": 21,
     "melhor": {
      "url": "https://comitedeculturasc.org/editais",
      "via": "direto",
-     "origem": "padrão",
+     "origem": "rota original",
      "pontos": 31,
      "formato": "html"
     },
