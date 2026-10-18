@@ -1073,9 +1073,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T14:52:13+00:00",
+  "em": "2026-10-18T14:56:49+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": false
+  "ponte_respondeu": true
  },
  "f260-captacao-238": {
   "em": "2026-10-18T07:53:17+00:00",
@@ -1824,7 +1824,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-curadoria-008": {
-  "em": "2026-10-18T14:06:09+00:00",
+  "em": "2026-10-18T14:55:51+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
@@ -1862,17 +1862,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.impactarte.org.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 5,
-    "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.impactarte.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -1884,7 +1873,18 @@
     "funcionou": false
    },
    {
-    "url": "https://www.impactarte.org.br/editais",
+    "url": "https://www.impactarte.org.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 5,
+    "sinais": 0,
+    "formato": "sitemap/feed",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.impactarte.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1895,7 +1895,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.impactarte.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.impactarte.org.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2699,7 +2699,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-234": {
-  "em": "2026-10-18T14:06:04+00:00",
+  "em": "2026-10-18T14:55:44+00:00",
   "testes": 14,
   "melhor": null,
   "detalhe": [
@@ -3684,7 +3684,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-224": {
-  "em": "2026-10-18T14:06:29+00:00",
+  "em": "2026-10-18T14:56:15+00:00",
   "testes": 18,
   "melhor": null,
   "detalhe": [
@@ -3711,6 +3711,26 @@
     "funcionou": false
    },
    {
+    "url": "https://fundacaotelefonicavivo.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://fundacaotelefonicavivo.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -3722,46 +3742,6 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaotelefonicavivo.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaotelefonicavivo.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaotelefonicavivo.org.br/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaotelefonicavivo.org.br/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://fundacaotelefonicavivo.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -3770,6 +3750,26 @@
     "sinais": 0,
     "formato": "json",
     "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -4785,7 +4785,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-228": {
-  "em": "2026-10-18T14:11:45+00:00",
+  "em": "2026-10-18T14:56:24+00:00",
   "testes": 24,
   "melhor": null,
   "detalhe": [
@@ -4830,26 +4830,6 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://institutolocaliza.com.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://institutolocaliza.com.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -4870,7 +4850,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/editais",
+    "url": "https://institutolocaliza.com.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4880,7 +4860,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/editais",
+    "url": "https://institutolocaliza.com.br/sitemap.xml",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -4901,6 +4881,26 @@
    },
    {
     "url": "https://institutolocaliza.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://institutolocaliza.com.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://institutolocaliza.com.br/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -4953,7 +4953,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-242": {
-  "em": "2026-10-18T14:12:02+00:00",
+  "em": "2026-10-18T14:56:41+00:00",
   "testes": 22,
   "melhor": null,
   "detalhe": [
@@ -4989,6 +4989,26 @@
     "funcionou": false
    },
    {
+    "url": "https://www.undp.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.undp.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.undp.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -5000,7 +5020,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.undp.org/transparencia/editais",
+    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5010,7 +5030,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.undp.org/transparencia/editais",
+    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -5031,26 +5051,6 @@
    },
    {
     "url": "https://www.undp.org/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -5123,7 +5123,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-rouanet-cultura-gov-br": {
-  "em": "2026-10-18T14:12:10+00:00",
+  "em": "2026-10-18T14:56:49+00:00",
   "testes": 24,
   "melhor": null,
   "detalhe": [
@@ -5168,26 +5168,6 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://rouanet.cultura.gov.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -5208,7 +5188,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/editais",
+    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5218,7 +5198,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/editais",
+    "url": "https://rouanet.cultura.gov.br/sitemap.xml",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -5239,6 +5219,26 @@
    },
    {
     "url": "https://rouanet.cultura.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://rouanet.cultura.gov.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://rouanet.cultura.gov.br/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
