@@ -1084,7 +1084,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T06:09:53+00:00",
+  "em": "2026-10-18T06:15:47+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1696,8 +1696,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "judiciario-tjgo": {
-  "em": "2026-10-18T05:21:03+00:00",
-  "testes": 17,
+  "em": "2026-10-18T06:14:25+00:00",
+  "testes": 16,
   "melhor": null,
   "detalhe": [
    {
@@ -1711,13 +1711,43 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br",
-    "origem": "biblioteca",
-    "via": "ponte",
+    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs",
+    "origem": "rota original",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs?format=feed&type=rss",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://corregedoria.tjgo.jus.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -1761,26 +1791,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://corregedoria.tjgo.jus.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.tjgo.jus.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -1793,26 +1803,6 @@
    {
     "url": "https://corregedoria.tjgo.jus.br/editais",
     "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs",
-    "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs?format=feed&type=rss",
-    "origem": "rota original",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -1852,6 +1842,16 @@
    },
    {
     "url": "https://corregedoria.tjgo.jus.br/noticias",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3280,7 +3280,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-235": {
-  "em": "2026-10-18T05:21:51+00:00",
+  "em": "2026-10-18T06:15:25+00:00",
   "testes": 16,
   "melhor": null,
   "detalhe": [
@@ -3329,6 +3329,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutolojasrenner.org.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutolojasrenner.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -3348,16 +3358,6 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutolojasrenner.org.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -3413,16 +3413,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutolojasrenner.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutolojasrenner.org.br/chamamentos",
     "origem": "padrão",
     "via": "direto",
@@ -3434,6 +3424,16 @@
    },
    {
     "url": "https://www.institutolojasrenner.org.br/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutolojasrenner.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3457,13 +3457,23 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-acessoainformacao-cavalcante-go-gov-br": {
-  "em": "2026-10-18T05:21:55+00:00",
+  "em": "2026-10-18T06:15:29+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/",
     "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/feed",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -3483,16 +3493,6 @@
    },
    {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3552,16 +3552,6 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/chamamentos",
     "origem": "padrão",
     "via": "direto",
@@ -3573,6 +3563,16 @@
    },
    {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3725,13 +3725,24 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-224": {
-  "em": "2026-10-18T05:22:15+00:00",
+  "em": "2026-10-18T06:15:46+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://fundacaotelefonicavivo.org.br/",
     "origem": "rota original",
+    "via": "direto",
+    "pontos": 1,
+    "links": 122,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/feed",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 1,
     "links": 122,
@@ -3759,17 +3770,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaotelefonicavivo.org.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 122,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -3825,17 +3825,6 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaotelefonicavivo.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "json",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://fundacaotelefonicavivo.org.br/chamamentos",
     "origem": "padrão",
     "via": "direto",
@@ -3853,6 +3842,17 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
     "funcionou": false
    }
   ],
@@ -4887,13 +4887,23 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-228": {
-  "em": "2026-10-18T05:22:17+00:00",
+  "em": "2026-10-18T06:15:47+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://institutolocaliza.com.br/",
     "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://institutolocaliza.com.br/feed",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -4913,16 +4923,6 @@
    },
    {
     "url": "https://institutolocaliza.com.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://institutolocaliza.com.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4982,16 +4982,6 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
     "url": "https://institutolocaliza.com.br/chamamentos",
     "origem": "padrão",
     "via": "direto",
@@ -5003,6 +4993,16 @@
    },
    {
     "url": "https://institutolocaliza.com.br/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://institutolocaliza.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -14193,6 +14193,192 @@
     "links": 0,
     "sinais": 0,
     "erro": "ErroPonte",
+    "funcionou": false
+   }
+  ],
+  "resultado": "rota nova em teste"
+ },
+ "plat-prefeituras-50-go": {
+  "em": "2026-10-18T06:14:22+00:00",
+  "testes": 17,
+  "melhor": {
+   "url": "https://www.goiania.go.gov.br/secult/pnab-2024/",
+   "via": "direto",
+   "origem": "biblioteca",
+   "pontos": 89,
+   "formato": "html"
+  },
+  "detalhe": [
+   {
+    "url": "https://www.goiania.go.gov.br/secult/leipaulogustavo/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 9,
+    "links": 89,
+    "sinais": 4,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/secult/pnab-2024/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 89,
+    "links": 121,
+    "sinais": 44,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 3,
+    "links": 157,
+    "sinais": 1,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.goiania.go.gov.br",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 3,
+    "links": 157,
+    "sinais": 1,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/educacao/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 1,
+    "links": 67,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/cultura/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/cultura/",
+    "origem": "biblioteca",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 7,
+    "links": 10,
+    "sinais": 6,
+    "formato": "sitemap/feed",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/agora/prefeitura-de-goiania-publica-seis-editais-da-lei-aldir-blanc-de-fomento-a-cultura",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/11/pnab-2024-12-resultado-merito-cultural.pdf",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-13-edital-cultura-viva-para-fomento-a-pontos-de-cultura.pdf",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-08-edital-de-fomento-cultural-i-criacao-montagem-circulacao.pdf",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-09-edital-de-fomento-cultural-ii-acoes-formativas.pdf",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-11-anexo-7.docx",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    }
   ],

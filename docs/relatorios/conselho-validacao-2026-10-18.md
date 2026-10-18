@@ -157,7 +157,7 @@
  "pontos_com_redundancia": 18,
  "redundancia_vazia": [],
  "dominios_via_ponte": 3,
- "exemplos_da_rede_de_rotas": 11917
+ "exemplos_da_rede_de_rotas": 12002
 }
 ```
 
@@ -203,7 +203,7 @@
  "dia_de_referencia": "2026-10-18",
  "ativos": 172,
  "lidos_ontem": 147,
- "lidos_hoje": 128,
+ "lidos_hoje": 129,
  "nao_lidos_ontem_nem_hoje": [
   "plat-captamos",
   "plat-rede-filantropia"
@@ -264,8 +264,8 @@
  },
  "clones_que_ja_leram": {
   "outras-oportunidades-1": {
-   "ultima": "2026-10-18T05:36:20+00:00",
-   "duracao_s": 108,
+   "ultima": "2026-10-18T06:03:33+00:00",
+   "duracao_s": 107,
    "achados": 52
   },
   "outras-oportunidades-3": {
@@ -289,8 +289,8 @@
    "achados": 18
   },
   "outras-oportunidades-7": {
-   "ultima": "2026-10-18T05:34:33+00:00",
-   "duracao_s": 108,
+   "ultima": "2026-10-18T06:01:46+00:00",
+   "duracao_s": 110,
    "achados": 13
   },
   "outras-oportunidades-8": {
@@ -329,7 +329,7 @@
    }
   },
   "plataforma-mapas-culturais": {
-   "ultima": "2026-10-18T05:20:58+00:00",
+   "ultima": "2026-10-18T06:07:34+00:00",
    "achados": 13,
    "diagnostico": {
     "sites": null,

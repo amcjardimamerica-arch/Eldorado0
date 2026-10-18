@@ -1,19 +1,19 @@
 {
- "em": "2026-10-18T06:09:53+00:00",
+ "em": "2026-10-18T06:15:47+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
   "motores": 165,
-  "alterar_rota": 62,
-  "rota_nova": 51,
+  "alterar_rota": 63,
+  "rota_nova": 52,
   "via_ponte": 3,
-  "exemplos_da_rede": 11917
+  "exemplos_da_rede": 12002
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:secult",
-    2.5801
+    2.5166
    ],
    [
     "tok:mpf",
@@ -29,19 +29,19 @@
    ],
    [
     "tok:leipaulogustavo",
-    1.8622
+    1.8689
    ],
    [
     "origem:rota original",
-    1.6022
+    1.7803
+   ],
+   [
+    "tok:feed",
+    1.6373
    ],
    [
     "tok:portarias",
     1.5516
-   ],
-   [
-    "origem:biblioteca",
-    1.5437
    ],
    [
     "tok:deputados",
@@ -62,20 +62,24 @@
   ],
   "piores_sinais": [
    [
-    "tok:prefeitura",
-    -1.5892
+    "gov:False",
+    -1.6325
    ],
    [
-    "gov:False",
-    -1.5978
+    "tok:prefeitura",
+    -1.6665
    ],
    [
     "tok:ccs",
-    -1.7697
+    -1.7826
    ],
    [
     "tipo:internacional",
     -2.275
+   ],
+   [
+    "origem:padrão",
+    -2.3577
    ],
    [
     "origem:câmara",
@@ -83,15 +87,11 @@
    ],
    [
     "tok:content",
-    -2.4246
+    -2.5291
    ],
    [
     "tok:uploads",
-    -2.4246
-   ],
-   [
-    "origem:padrão",
-    -2.5277
+    -2.5291
    ]
   ]
  },
@@ -99,11 +99,11 @@
   "judiciario-tjgo": {
    "nome": "TJ-GO — editais das comarcas (prestações pecuniárias) e Banco de Projetos Sociais da CGJ/GO",
    "status": "alterar rota",
-   "vazias_seguidas": 110,
-   "leituras": 110,
+   "vazias_seguidas": 111,
+   "leituras": 111,
    "ok": 0,
    "ultima": {
-    "em": "2026-10-18T05:21:00+00:00",
+    "em": "2026-10-18T06:08:54+00:00",
     "classe": "vazia",
     "motivo": "0 notícias lidas (TJGO A 0 no RSS · CNJ C 0) e 0 do TJGO/CNJ no PNCP (lidas pelo motor 04, já na base): nenhum edital de destinação aberto hoje · 0 a acompanhar"
    },
@@ -141,8 +141,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T05:21:03+00:00",
-    "testes": 17,
+    "em": "2026-10-18T06:14:25+00:00",
+    "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -448,7 +448,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T05:22:15+00:00",
+    "em": "2026-10-18T06:15:46+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -476,6 +476,49 @@
    "afinado": {
     "em": "2026-10-16T16:56:55+00:00",
     "testes": 13,
+    "melhor": null,
+    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
+   }
+  },
+  "f260-captacao-228": {
+   "nome": "Instituto Localiza",
+   "status": "alterar rota",
+   "vazias_seguidas": 38,
+   "leituras": 38,
+   "ok": 0,
+   "ultima": {
+    "em": "2026-10-18T06:09:38+00:00",
+    "classe": "vazia",
+    "motivo": "endereço não resolve (DNS) — URL errada"
+   },
+   "historico": [
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v"
+   ],
+   "rota_aprendida": null,
+   "afinado": {
+    "em": "2026-10-18T06:15:47+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -518,48 +561,6 @@
    "afinado": {
     "em": "2026-10-18T05:53:35+00:00",
     "testes": 26,
-    "melhor": null,
-    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
-   }
-  },
-  "f260-captacao-228": {
-   "nome": "Instituto Localiza",
-   "status": "alterar rota",
-   "vazias_seguidas": 37,
-   "leituras": 37,
-   "ok": 0,
-   "ultima": {
-    "em": "2026-10-18T05:31:55+00:00",
-    "classe": "vazia",
-    "motivo": "endereço não resolve (DNS) — URL errada"
-   },
-   "historico": [
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v"
-   ],
-   "rota_aprendida": null,
-   "afinado": {
-    "em": "2026-10-18T05:22:17+00:00",
-    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -763,39 +764,25 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T05:21:51+00:00",
+    "em": "2026-10-18T06:15:25+00:00",
     "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
   },
-  "plat-prosas-premios": {
-   "nome": "Prosas — prêmios, concursos e cursos para OSCs",
-   "status": "alterar rota",
-   "vazias_seguidas": 26,
-   "leituras": 26,
-   "ok": 0,
-   "ultima": {
-    "em": "2026-10-01T15:01:24+00:00",
-    "classe": "vazia",
-    "motivo": "página respondeu com links, mas nenhum rótulo casou com o léxico do terceiro setor hoje — pode não haver edital publicado"
-   },
-   "historico": [],
-   "rota_aprendida": null,
-   "afinado": null
-  },
   "judiciario-cnj-tjgo": {
    "nome": "Judiciário — CNJ e TJGO: editais das varas de execução penal e das comarcas (prestações pecuniárias) e credenciamentos de entidades",
    "status": "alterar rota",
-   "vazias_seguidas": 26,
-   "leituras": 28,
+   "vazias_seguidas": 27,
+   "leituras": 29,
    "ok": 0,
    "ultima": {
-    "em": "2026-10-18T05:38:26+00:00",
+    "em": "2026-10-18T06:05:22+00:00",
     "classe": "vazia",
     "motivo": "0 notícias lidas (TJGO A 0 no RSS · CNJ C 0) e 0 do TJGO/CNJ no PNCP (lidas pelo motor 04, já na base): nenhum edital de destinação aberto hoje · 0 a acompanhar"
    },
    "historico": [
+    "v",
     "v",
     "v",
     "v",
@@ -829,6 +816,21 @@
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
   },
+  "plat-prosas-premios": {
+   "nome": "Prosas — prêmios, concursos e cursos para OSCs",
+   "status": "alterar rota",
+   "vazias_seguidas": 26,
+   "leituras": 26,
+   "ok": 0,
+   "ultima": {
+    "em": "2026-10-01T15:01:24+00:00",
+    "classe": "vazia",
+    "motivo": "página respondeu com links, mas nenhum rótulo casou com o léxico do terceiro setor hoje — pode não haver edital publicado"
+   },
+   "historico": [],
+   "rota_aprendida": null,
+   "afinado": null
+  },
   "f260-espalhado-acessoainformacao-cavalcante-go-gov-br": {
    "nome": "PNCP — FUNDO MUNICIPAL DE CULTURA - CAVALCANTE — oportunidades (espalhado de edital validado)",
    "status": "alterar rota",
@@ -850,7 +852,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T05:21:55+00:00",
+    "em": "2026-10-18T06:15:29+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1129,6 +1131,33 @@
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
   },
+  "f260-captacao-248": {
+   "nome": "Open Society Foundations",
+   "status": "alterar rota",
+   "vazias_seguidas": 11,
+   "leituras": 11,
+   "ok": 0,
+   "ultima": {
+    "em": "2026-10-18T05:59:56+00:00",
+    "classe": "vazia",
+    "motivo": "página respondeu com links, mas nenhum rótulo casou com o léxico do terceiro setor hoje — pode não haver edital publicado"
+   },
+   "historico": [
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v"
+   ],
+   "rota_aprendida": null,
+   "afinado": {
+    "em": "2026-10-18T05:47:47+00:00",
+    "testes": 23,
+    "melhor": null,
+    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
+   }
+  },
   "f260-captacao-257": {
    "nome": "Rockefeller Foundation",
    "status": "alterar rota",
@@ -1254,32 +1283,6 @@
      "formato": "html"
     },
     "resultado": "rota nova em teste"
-   }
-  },
-  "f260-captacao-248": {
-   "nome": "Open Society Foundations",
-   "status": "alterar rota",
-   "vazias_seguidas": 10,
-   "leituras": 10,
-   "ok": 0,
-   "ultima": {
-    "em": "2026-10-17T04:21:21+00:00",
-    "classe": "vazia",
-    "motivo": "página respondeu com links, mas nenhum rótulo casou com o léxico do terceiro setor hoje — pode não haver edital publicado"
-   },
-   "historico": [
-    "v",
-    "v",
-    "v",
-    "v",
-    "v"
-   ],
-   "rota_aprendida": null,
-   "afinado": {
-    "em": "2026-10-18T05:47:47+00:00",
-    "testes": 23,
-    "melhor": null,
-    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
   },
   "alego-pl": {
@@ -2097,6 +2100,71 @@
    "rota_aprendida": null,
    "afinado": null
   },
+  "plat-prefeituras-50-go": {
+   "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
+   "status": "alterar rota",
+   "vazias_seguidas": 5,
+   "leituras": 116,
+   "ok": 60,
+   "ultima": {
+    "em": "2026-10-18T05:59:55+00:00",
+    "classe": "vazia",
+    "motivo": "lida: 19; parcial: 1; falhou: 4; não lida: 1 — nenhuma seleção aberta nova hoje"
+   },
+   "historico": [
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v"
+   ],
+   "rota_aprendida": {
+    "urls": [
+     "https://www.goiania.go.gov.br/secult/pnab-2024/"
+    ],
+    "via": "direto",
+    "origem": "biblioteca",
+    "pontos": 89,
+    "aprendido_em": "2026-10-18T06:14:22+00:00"
+   },
+   "afinado": {
+    "em": "2026-10-18T06:14:22+00:00",
+    "testes": 17,
+    "melhor": {
+     "url": "https://www.goiania.go.gov.br/secult/pnab-2024/",
+     "via": "direto",
+     "origem": "biblioteca",
+     "pontos": 89,
+     "formato": "html"
+    },
+    "resultado": "rota nova em teste"
+   }
+  },
   "f260-captacao-206": {
    "nome": "Convênio com órgão público estadual",
    "status": "alterar rota",
@@ -2276,52 +2344,6 @@
     "motivo": "o portal recusa acesso automatizado (HTTP 403/404) — escada de alternativas"
    },
    "historico": [],
-   "rota_aprendida": null,
-   "afinado": null
-  },
-  "plat-prefeituras-50-go": {
-   "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
-   "status": "ok",
-   "vazias_seguidas": 4,
-   "leituras": 115,
-   "ok": 60,
-   "ultima": {
-    "em": "2026-10-18T05:11:52+00:00",
-    "classe": "vazia",
-    "motivo": "parcial: 3; lida: 17; falhou: 4; não lida: 1 — nenhuma seleção aberta nova hoje"
-   },
-   "historico": [
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "v",
-    "v",
-    "v",
-    "v"
-   ],
    "rota_aprendida": null,
    "afinado": null
   },
@@ -3504,14 +3526,15 @@
    "nome": "Editais incentivados — sites das maiores contribuintes do ICMS de Goiás (destinação tributária)",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 29,
-   "ok": 21,
+   "leituras": 30,
+   "ok": 22,
    "ultima": {
-    "em": "2026-10-18T05:40:26+00:00",
+    "em": "2026-10-18T06:08:52+00:00",
     "classe": "ok",
     "motivo": ""
    },
    "historico": [
+    "o",
     "o",
     "o",
     "o",
@@ -4184,10 +4207,10 @@
    "nome": "Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 118,
-   "ok": 75,
+   "leituras": 119,
+   "ok": 76,
    "ultima": {
-    "em": "2026-10-18T05:38:24+00:00",
+    "em": "2026-10-18T06:05:20+00:00",
     "classe": "ok",
     "motivo": ""
    },
@@ -4290,10 +4313,10 @@
    "nome": "Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 113,
-   "ok": 61,
+   "leituras": 114,
+   "ok": 62,
    "ultima": {
-    "em": "2026-10-18T05:29:52+00:00",
+    "em": "2026-10-18T06:09:37+00:00",
     "classe": "ok",
     "motivo": ""
    },
@@ -5095,10 +5118,10 @@
    "nome": "Outras Oportunidades 1/8",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 42,
-   "ok": 36,
+   "leituras": 43,
+   "ok": 37,
    "ultima": {
-    "em": "2026-10-18T05:36:20+00:00",
+    "em": "2026-10-18T06:03:33+00:00",
     "classe": "ok",
     "motivo": ""
    },
@@ -5107,10 +5130,10 @@
     "o",
     "o",
     "o",
-    "o",
     "v",
     "o",
     "v",
+    "o",
     "o",
     "o",
     "o",
@@ -5400,14 +5423,15 @@
    "nome": "Adaptador Mapas Culturais — oportunidades com inscrição aberta",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 17,
-   "ok": 17,
+   "leituras": 18,
+   "ok": 18,
    "ultima": {
-    "em": "2026-10-18T05:20:58+00:00",
+    "em": "2026-10-18T06:07:34+00:00",
     "classe": "ok",
     "motivo": ""
    },
    "historico": [
+    "o",
     "o",
     "o",
     "o",
@@ -5433,14 +5457,15 @@
    "nome": "Outras Oportunidades 7/8",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 19,
-   "ok": 19,
+   "leituras": 20,
+   "ok": 20,
    "ultima": {
-    "em": "2026-10-18T05:34:33+00:00",
+    "em": "2026-10-18T06:01:46+00:00",
     "classe": "ok",
     "motivo": ""
    },
    "historico": [
+    "o",
     "o",
     "o",
     "o",
