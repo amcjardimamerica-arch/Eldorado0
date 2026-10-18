@@ -1061,12 +1061,7 @@ def ciclo(porta: int | None = None) -> dict:
 
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "entender"
-    if cmd == "benchmark":
-        lim = int(sys.argv[2]) if len(sys.argv) > 2 else None
-        print(json.dumps(benchmark(lim), ensure_ascii=False, indent=2))
-    elif cmd == "ciclo":
+    if cmd == "ciclo":
         print(json.dumps(ciclo(), ensure_ascii=False, indent=2))
-    elif cmd == "gabarito":
-        g = gabarito(); print(json.dumps({"itens": len(g), "com_texto": sum(1 for x in g if len(x["texto"]) > 200)}, ensure_ascii=False))
     else:
         print(json.dumps(entender(), ensure_ascii=False, indent=2)[:2000])

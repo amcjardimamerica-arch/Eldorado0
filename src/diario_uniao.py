@@ -502,9 +502,6 @@ def fonte_b(hoje: date, cfg: dict, diag: dict, ja_vistas: set) -> list[dict]:
             out.append(_materia(it, tx, "B"))
         time.sleep(float(b.get("pausa_segundos", 0.5)))
     F["materias_lidas"] = len(out)
-    # o que ainda falta no período: dia útil dos últimos `retroativo_dias` sem a Seção 3 lida (o maestro vê "parcial")
-    F["dias_nao_lidos"] = [] if not tinha_estado else [(hoje - timedelta(days=k)).isoformat() for k in range(1, ret_dias + 1)
-                           if _dia_util(hoje - timedelta(days=k)) and f"{(hoje - timedelta(days=k)).isoformat()}|do3" not in proc]
     return out
 
 

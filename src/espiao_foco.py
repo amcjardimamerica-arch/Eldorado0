@@ -210,9 +210,25 @@ def _consulta_dos_livros(r: random.Random, a: int) -> str | None:
     return f'"{orgao}" {r.choice(["edital", "chamamento", "seleção de projetos", "patrocínio", "apoio a projetos"])} {lv.get("area") or ""} {a}'
 
 
+EXPLORACAO = 0.2     # 18/10: 1 voo em 5 é rodízio (nenhuma família esquecida); os outros 4, a configuração aprendida
+
+
 def escolher(c: dict, rnd: random.Random | None = None) -> tuple[str, str]:
-    """16/10/2026 (titular): RODÍZIO EQUILIBRADO — cada voo usa a família MENOS usada no ciclo (empate sorteado): todas
-    as possibilidades são atendidas igualmente. 1 em 6 voos usa uma mutação de consulta que já rendeu."""
+    """18/10/2026 (titular): O ESPIÃO VOLTA A VOAR PELA CONFIGURAÇÃO QUE ELE APRENDE. Com o rodízio puro (16/10), as 2
+    buscas que o DuckDuckGo permite por voo eram gastas igualmente em famílias que não rendem — os abates caíram de
+    ~34/dia para 1–2/dia em 17–18/10. Agora: 4 voos em 5 pela amostragem de Thompson (mais buscas onde rende); 1 em 5
+    pelo RODÍZIO (a família menos usada), para que nenhuma possibilidade fique esquecida (o objetivo de 16/10).
+    Família nova entra no aprendizado com peso neutro."""
+    rnd = rnd or random.Random()
+    for f in familias():
+        c.setdefault("familias", {}).setdefault(f, {"a": 1.0, "b": 1.0})
+    if rnd.random() >= EXPLORACAO:
+        return _escolher_thompson(c, rnd)
+    return _escolher_rodizio(c, rnd)
+
+
+def _escolher_rodizio(c: dict, rnd: random.Random | None = None) -> tuple[str, str]:
+    """RODÍZIO EQUILIBRADO (16/10): a família MENOS usada no ciclo (empate sorteado); 1 em 6 usa uma mutação que rendeu."""
     rnd = rnd or random.Random()
     ano = date.today().year
     ruins = {q for q, v in c["consultas"].items() if v.get("usos", 0) >= 3 and not v.get("achados")}
