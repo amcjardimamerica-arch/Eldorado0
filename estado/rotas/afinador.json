@@ -1085,7 +1085,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T21:14:05+00:00",
+  "em": "2026-10-18T21:19:00+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1398,7 +1398,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-227": {
-  "em": "2026-10-18T20:24:59+00:00",
+  "em": "2026-10-18T21:19:00+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -1414,16 +1414,6 @@
    },
    {
     "url": "https://www.institutococacolabrasil.com.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutococacolabrasil.com.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1453,6 +1443,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutococacolabrasil.com.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutococacolabrasil.com.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -1463,7 +1463,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutococacolabrasil.com.br/edital",
+    "url": "https://www.institutococacolabrasil.com.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1473,7 +1473,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutococacolabrasil.com.br/noticias",
+    "url": "https://www.institutococacolabrasil.com.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7007,8 +7007,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-256": {
-  "em": "2026-10-18T20:15:48+00:00",
-  "testes": 12,
+  "em": "2026-10-18T21:18:27+00:00",
+  "testes": 22,
   "melhor": null,
   "detalhe": [
    {
@@ -7033,7 +7033,17 @@
     "funcionou": false
    },
    {
-    "url": "https://sgp.undp.org/feed",
+    "url": "https://sgp.undp.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://sgp.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7045,11 +7055,11 @@
    {
     "url": "https://sgp.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -7064,6 +7074,26 @@
     "funcionou": false
    },
    {
+    "url": "https://sgp.undp.org/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://sgp.undp.org/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://sgp.undp.org/editais",
     "origem": "padrão",
     "via": "direto",
@@ -7074,13 +7104,13 @@
     "funcionou": false
    },
    {
-    "url": "https://sgp.undp.org/edital",
+    "url": "https://sgp.undp.org/editais",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -7094,6 +7124,36 @@
     "funcionou": false
    },
    {
+    "url": "https://sgp.undp.org/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://sgp.undp.org/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://sgp.undp.org/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://sgp.undp.org/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
@@ -7104,41 +7164,21 @@
     "funcionou": false
    },
    {
-    "url": "https://sgp.undp.org/chamadas-publicas",
+    "url": "https://sgp.undp.org/chamamento-publico",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://sgp.undp.org/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://sgp.undp.org/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    }
   ],
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-252": {
-  "em": "2026-10-18T20:15:54+00:00",
-  "testes": 12,
+  "em": "2026-10-18T21:18:32+00:00",
+  "testes": 14,
   "melhor": null,
   "detalhe": [
    {
@@ -7146,7 +7186,7 @@
     "origem": "rota original",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7163,14 +7203,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.facebook.com/feed",
+    "url": "https://www.facebook.com/transparencia/editais",
     "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 34,
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -7184,11 +7223,32 @@
     "funcionou": false
    },
    {
+    "url": "https://www.facebook.com/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.facebook.com/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.facebook.com/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7199,18 +7259,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.facebook.com/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7228,11 +7277,22 @@
     "funcionou": false
    },
    {
+    "url": "https://www.facebook.com/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 35,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://www.facebook.com/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7243,7 +7303,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7254,7 +7314,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7410,7 +7470,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-espalhado-transparencia-agilicloud-com-br": {
-  "em": "2026-10-18T20:16:09+00:00",
+  "em": "2026-10-18T21:18:45+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -7427,17 +7487,6 @@
    },
    {
     "url": "https://transparencia.agilicloud.com.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://transparencia.agilicloud.com.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7470,6 +7519,17 @@
     "funcionou": false
    },
    {
+    "url": "https://transparencia.agilicloud.com.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://transparencia.agilicloud.com.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -7481,7 +7541,7 @@
     "funcionou": false
    },
    {
-    "url": "https://transparencia.agilicloud.com.br/edital",
+    "url": "https://transparencia.agilicloud.com.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7492,7 +7552,7 @@
     "funcionou": false
    },
    {
-    "url": "https://transparencia.agilicloud.com.br/noticias",
+    "url": "https://transparencia.agilicloud.com.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7923,7 +7983,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-212": {
-  "em": "2026-10-18T20:24:56+00:00",
+  "em": "2026-10-18T21:18:56+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
@@ -7940,17 +8000,6 @@
    },
    {
     "url": "https://www.tcm.go.gov.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.tcm.go.gov.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7992,6 +8041,17 @@
     "funcionou": false
    },
    {
+    "url": "https://www.tcm.go.gov.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://www.tcm.go.gov.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -8003,7 +8063,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tcm.go.gov.br/edital",
+    "url": "https://www.tcm.go.gov.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8014,7 +8074,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tcm.go.gov.br/noticias",
+    "url": "https://www.tcm.go.gov.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8262,7 +8322,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-243": {
-  "em": "2026-10-18T20:24:57+00:00",
+  "em": "2026-10-18T21:18:58+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8279,16 +8339,6 @@
    },
    {
     "url": "https://www.worldbank.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.worldbank.org/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8319,6 +8369,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.worldbank.org/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.worldbank.org/editais",
     "origem": "padrão",
     "via": "direto",
@@ -8329,7 +8389,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.worldbank.org/edital",
+    "url": "https://www.worldbank.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8339,7 +8399,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.worldbank.org/noticias",
+    "url": "https://www.worldbank.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
