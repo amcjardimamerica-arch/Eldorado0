@@ -75,7 +75,7 @@
   {
    "motor": "plat-empresas-editais-incentivados",
    "achados_total_1a": 47,
-   "achados_total_agora": 53,
+   "achados_total_agora": 54,
    "no_fluxo": 0,
    "confirmadas": 0
   },
@@ -103,7 +103,7 @@
   {
    "motor": "outras-oportunidades-1",
    "achados_total_1a": 97,
-   "achados_total_agora": 153,
+   "achados_total_agora": 189,
    "no_fluxo": 2,
    "confirmadas": 0
   },
@@ -157,7 +157,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 3,
- "exemplos_da_rede_de_rotas": 11095
+ "exemplos_da_rede_de_rotas": 11184
 }
 ```
 
@@ -203,7 +203,7 @@
  "dia_de_referencia": "2026-10-18",
  "ativos": 172,
  "lidos_ontem": 147,
- "lidos_hoje": 120,
+ "lidos_hoje": 127,
  "nao_lidos_ontem_nem_hoje": [
   "plat-captamos",
   "plat-rede-filantropia"
@@ -248,7 +248,7 @@
   "Cartório (site oficial certificado)": 190,
   "Espião (privado/internacional)": 48
  },
- "lidas_nas_ultimas_24h": 303,
+ "lidas_nas_ultimas_24h": 307,
  "dimensionamento": {
   "fontes": 404,
   "sites_por_execucao": 17,
@@ -264,9 +264,9 @@
  },
  "clones_que_ja_leram": {
   "outras-oportunidades-1": {
-   "ultima": "2026-10-18T03:30:34+00:00",
-   "duracao_s": 59,
-   "achados": 58
+   "ultima": "2026-10-18T04:54:44+00:00",
+   "duracao_s": 87,
+   "achados": 52
   },
   "outras-oportunidades-3": {
    "ultima": "2026-10-18T04:29:30+00:00",
@@ -289,8 +289,8 @@
    "achados": 20
   },
   "outras-oportunidades-7": {
-   "ultima": "2026-10-18T03:57:07+00:00",
-   "duracao_s": 116,
+   "ultima": "2026-10-18T04:53:17+00:00",
+   "duracao_s": 99,
    "achados": 13
   },
   "outras-oportunidades-8": {
