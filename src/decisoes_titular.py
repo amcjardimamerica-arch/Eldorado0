@@ -12,6 +12,7 @@ O repositório único lê as mesmas decisões: a oportunidade decidida sai das a
 from __future__ import annotations
 
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -106,3 +107,50 @@ if __name__ == "__main__":
     if len(sys.argv) >= 4 and sys.argv[1] == "definir":
         print(json.dumps(definir(sys.argv[2], sys.argv[3], " ".join(sys.argv[4:])), ensure_ascii=False))
     print(json.dumps(run(), ensure_ascii=False))
+
+
+# ── 18/10/2026: decisões do titular sobre vereditos da pesquisa externa ─────────────────────────────────────────────
+_RESTRICAO_LOCAL = re.compile(r"(?i)resid|domic|com sede|sede (?:no|na|em)|sediad|restrit[oa]s? (?:a|ao|às|aos)|"
+                              r"apenas (?:do|de|a) munic|local(?:is)? do munic")
+_EMENDA = re.compile(r"(?i)\bemenda(?:s)? parlamentar|^emenda-")
+
+
+def _de_goias(r: dict, motivo: str = "") -> bool:
+    t = f"{r.get('titulo') or ''} {r.get('orgao') or ''} {motivo}"
+    if str(r.get("uf") or "").upper() == "GO" or re.search(r"(?i)\bgoi[áa]s\b|/go\b|\(go\)|-go\b", t):
+        return True
+    try:
+        from .repositorio_unico import _municipio_goiano
+        if _municipio_goiano(t):
+            return True
+    except Exception:  # noqa: BLE001
+        pass
+    # o NOME de um município que só existe em Goiás (lista do IBGE) — homônimos de outros estados não decidem
+    import unicodedata as _ud
+    sem = lambda x: _ud.normalize("NFKD", str(x).lower()).encode("ascii", "ignore").decode()  # noqa: E731
+    if not _SO_GOIAS:
+        try:
+            m = json.loads((Path(__file__).resolve().parents[1] / "config/municipios_brasil.json").read_text(encoding="utf-8")).get("municipios") or {}
+            _SO_GOIAS.extend(sorted({sem(n) for n, ufs in m.items() if list(ufs) == ["GO"] and len(n) >= 4}, key=len, reverse=True))
+        except Exception:  # noqa: BLE001
+            _SO_GOIAS.append("-")
+    tt = sem(t)
+    return any(re.search(rf"\b{re.escape(n)}\b", tt) for n in _SO_GOIAS)
+
+
+_SO_GOIAS: list = []
+
+
+def veredito_efetivo(ver: dict | None, r: dict) -> tuple[str | None, str | None]:
+    """O veredito da pesquisa externa depois das DECISÕES DO TITULAR (o veredito original fica guardado no livro).
+    1. (18/10) Edital de GOIÁS restrito a residentes ou a OSC com sede no município É DO PERFIL — o Eldorado é de Goiás e
+       deve obtê-lo: 'fora_perfil' por essa restrição não elimina.
+    2. (18/10) EMENDA PARLAMENTAR NÃO É RUÍDO — federal, estadual e municipal constam conforme programado."""
+    v = (ver or {}).get("veredito")
+    motivo = str((ver or {}).get("motivo") or "")
+    if v == "fora_perfil" and _RESTRICAO_LOCAL.search(motivo) and _de_goias(r, motivo):
+        return None, "decisão do titular (18/10): edital de Goiás restrito a residentes/sede no município é do perfil"
+    if v in ("ruido", "fora_perfil", "encerrada", "duplicata") and \
+            (_EMENDA.search(str(r.get("id") or "")) or _EMENDA.search(str(r.get("titulo") or ""))) and v != "duplicata":
+        return None, "decisão do titular (18/10): emenda parlamentar não é ruído — consta conforme programado"
+    return v, None

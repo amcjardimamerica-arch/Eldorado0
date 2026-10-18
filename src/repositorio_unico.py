@@ -565,7 +565,8 @@ def construir(gravar: bool = True, hoje: str | None = None) -> dict:
             except Exception:  # noqa: BLE001
                 pass
         fim = r.get("fim") or (((c.get("itens") or {}).get("Prazo de inscrição") or {}).get("fim"))
-        v = (ver or {}).get("veredito")
+        from .decisoes_titular import veredito_efetivo as _vef
+        v, _decisao_tit = _vef(ver, {**r, "id": cid})        # 18/10: as decisões do titular prevalecem sobre o veredito
         _mun = next((_arq_ids[i] for i in [cid] + r["ids_origem"] if i in _arq_ids), None)   # só a lista fixa de 11/10
         if not _mun:                       # 12/10 (titular): decidida no painel (inscrita ou descartada) sai das abertas; o livro fica
             from .decisoes_titular import marca_no_repositorio
