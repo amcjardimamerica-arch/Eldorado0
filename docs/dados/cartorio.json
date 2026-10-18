@@ -1,30 +1,30 @@
 {
- "em": "2026-10-18T02:03:33+00:00",
+ "em": "2026-10-18T02:27:27+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
  "resumo": {
   "pontos_12_total": 4800,
-  "pontos_certificados": 3123,
-  "pontos_dispensados": 167,
-  "pontos_ja_constavam": 1387,
-  "pontos_faltam": 123,
-  "pct_certificado_12": 0.6854,
+  "pontos_certificados": 3119,
+  "pontos_dispensados": 166,
+  "pontos_ja_constavam": 1393,
+  "pontos_faltam": 122,
+  "pct_certificado_12": 0.6844,
   "certidoes_12_de_12": 141,
-  "certidoes_sem_item_faltando": 281,
+  "certidoes_sem_item_faltando": 282,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
-  "certidoes": 2685,
-  "nesta_execucao": 13,
-  "fila_estrelas": 152,
-  "fila_livros": 2518,
-  "itens_que_faltavam": 24586,
-  "itens_obtidos": 9197,
+  "certidoes": 2695,
+  "nesta_execucao": 11,
+  "fila_estrelas": 124,
+  "fila_livros": 2517,
+  "itens_que_faltavam": 24669,
+  "itens_obtidos": 9228,
   "itens_dispensados": 512,
   "eficiencia_itens": 0.395,
-  "com_link_oficial": 1824,
+  "com_link_oficial": 1829,
   "taxa_link_oficial": 0.679,
-  "certidoes_completas": 262,
-  "para_o_interceptador": 1942,
+  "certidoes_completas": 264,
+  "para_o_interceptador": 1950,
   "para_o_chrome": 480,
   "selos_que_mudaram": {
    "bronze → ouro": 6,
@@ -36,8 +36,8 @@
    "prata → ouro": 3
   },
   "por_degrau": {
-   "degrau 0": 1741,
-   "degrau 1": 124
+   "degrau 0": 1745,
+   "degrau 1": 125
   }
  },
  "cinza_conferidos": {
@@ -47,86 +47,86 @@
  },
  "por_item": {
   "Objeto": {
-   "faltavam": 1748,
-   "obtidos": 575,
+   "faltavam": 1755,
+   "obtidos": 577,
    "dispensados": 0,
    "eficiencia": 0.329
   },
   "Prazo de inscrição": {
-   "faltavam": 1858,
-   "obtidos": 579,
+   "faltavam": 1864,
+   "obtidos": 582,
    "dispensados": 146,
-   "eficiencia": 0.39
+   "eficiencia": 0.391
   },
   "Resultado": {
-   "faltavam": 2390,
-   "obtidos": 620,
+   "faltavam": 2398,
+   "obtidos": 623,
    "dispensados": 228,
    "eficiencia": 0.355
   },
   "Prazo de recurso": {
-   "faltavam": 2352,
-   "obtidos": 535,
+   "faltavam": 2360,
+   "obtidos": 536,
    "dispensados": 46,
    "eficiencia": 0.247
   },
   "Valor": {
-   "faltavam": 2096,
-   "obtidos": 692,
+   "faltavam": 2103,
+   "obtidos": 695,
    "dispensados": 60,
    "eficiencia": 0.359
   },
   "Órgão / financiador": {
-   "faltavam": 1591,
-   "obtidos": 965,
+   "faltavam": 1596,
+   "obtidos": 967,
    "dispensados": 0,
-   "eficiencia": 0.607
+   "eficiencia": 0.606
   },
   "Território": {
-   "faltavam": 1892,
-   "obtidos": 597,
+   "faltavam": 1899,
+   "obtidos": 600,
    "dispensados": 0,
    "eficiencia": 0.316
   },
   "Esfera": {
-   "faltavam": 2120,
-   "obtidos": 1312,
+   "faltavam": 2126,
+   "obtidos": 1314,
    "dispensados": 0,
-   "eficiencia": 0.619
+   "eficiencia": 0.618
   },
   "Requisitos": {
-   "faltavam": 2326,
-   "obtidos": 621,
+   "faltavam": 2334,
+   "obtidos": 624,
    "dispensados": 0,
    "eficiencia": 0.267
   },
   "Anexos": {
-   "faltavam": 1687,
+   "faltavam": 1693,
    "obtidos": 366,
    "dispensados": 4,
    "eficiencia": 0.219
   },
   "Modalidade": {
-   "faltavam": 2298,
-   "obtidos": 810,
+   "faltavam": 2307,
+   "obtidos": 814,
    "dispensados": 28,
    "eficiencia": 0.365
   },
   "Área de atuação": {
-   "faltavam": 2228,
-   "obtidos": 1525,
+   "faltavam": 2234,
+   "obtidos": 1530,
    "dispensados": 0,
-   "eficiencia": 0.684
+   "eficiencia": 0.685
   }
  },
  "por_balcao": {
   "revisão": {
-   "certidoes": 209,
-   "com_link_oficial": 159,
-   "faltavam": 2508,
-   "resolvidos": 1191,
-   "eficiencia": 0.475,
-   "taxa_link_oficial": 0.761
+   "certidoes": 208,
+   "com_link_oficial": 158,
+   "faltavam": 2496,
+   "resolvidos": 1179,
+   "eficiencia": 0.472,
+   "taxa_link_oficial": 0.76
   },
   "pncp": {
    "certidoes": 109,
@@ -145,36 +145,36 @@
    "taxa_link_oficial": 1.0
   },
   "orgao": {
-   "certidoes": 1253,
-   "com_link_oficial": 1001,
-   "faltavam": 11122,
-   "resolvidos": 5126,
+   "certidoes": 1257,
+   "com_link_oficial": 1005,
+   "faltavam": 11147,
+   "resolvidos": 5139,
    "eficiencia": 0.461,
-   "taxa_link_oficial": 0.799
+   "taxa_link_oficial": 0.8
   },
   "privado": {
-   "certidoes": 591,
-   "com_link_oficial": 413,
-   "faltavam": 5008,
-   "resolvidos": 1514,
-   "eficiencia": 0.302,
+   "certidoes": 592,
+   "com_link_oficial": 414,
+   "faltavam": 5020,
+   "resolvidos": 1524,
+   "eficiencia": 0.304,
    "taxa_link_oficial": 0.699
   },
   "pista": {
-   "certidoes": 360,
-   "com_link_oficial": 67,
-   "faltavam": 3277,
-   "resolvidos": 786,
-   "eficiencia": 0.24,
-   "taxa_link_oficial": 0.186
+   "certidoes": 363,
+   "com_link_oficial": 68,
+   "faltavam": 3313,
+   "resolvidos": 800,
+   "eficiencia": 0.241,
+   "taxa_link_oficial": 0.187
   },
   "diario": {
-   "certidoes": 159,
+   "certidoes": 162,
    "com_link_oficial": 100,
-   "faltavam": 1665,
-   "resolvidos": 427,
-   "eficiencia": 0.256,
-   "taxa_link_oficial": 0.629
+   "faltavam": 1687,
+   "resolvidos": 433,
+   "eficiencia": 0.257,
+   "taxa_link_oficial": 0.617
   },
   "proprio": {
    "certidoes": 1,
@@ -187,11 +187,11 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2159,
-   "faltavam": 18683,
-   "resolvidos": 6631,
+   "certidoes": 2169,
+   "faltavam": 18766,
+   "resolvidos": 6662,
    "eficiencia": 0.355,
-   "com_link_oficial": 1387,
+   "com_link_oficial": 1392,
    "taxa_link_oficial": 0.642
   },
   "refeitas": {
@@ -221,38 +221,38 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2462,
-   "faltavam": 21987,
-   "resolvidos": 8361,
-   "eficiencia": 0.38,
-   "com_link_oficial": 1652,
-   "taxa_link_oficial": 0.671
+   "certidoes": 2473,
+   "faltavam": 22082,
+   "resolvidos": 8404,
+   "eficiencia": 0.381,
+   "com_link_oficial": 1658,
+   "taxa_link_oficial": 0.67
   },
   "revisão manual": {
-   "certidoes": 209,
-   "faltavam": 2508,
-   "resolvidos": 1191,
-   "eficiencia": 0.475,
-   "com_link_oficial": 159,
-   "taxa_link_oficial": 0.761
+   "certidoes": 208,
+   "faltavam": 2496,
+   "resolvidos": 1179,
+   "eficiencia": 0.472,
+   "com_link_oficial": 158,
+   "taxa_link_oficial": 0.76
   }
  },
  "por_abordagem": {
   "1": {
    "nome": "documento na mão",
-   "vezes": 2562,
-   "renderam": 1676,
-   "itens": 8814,
-   "links_oficiais": 1601,
+   "vezes": 2572,
+   "renderam": 1682,
+   "itens": 8845,
+   "links_oficiais": 1606,
    "taxa_de_acerto": 0.654
   },
   "2": {
    "nome": "anexos completos",
-   "vezes": 211,
+   "vezes": 212,
    "renderam": 40,
    "itens": 163,
    "links_oficiais": 4,
-   "taxa_de_acerto": 0.19
+   "taxa_de_acerto": 0.189
   },
   "3": {
    "nome": "página oficial e citados",
@@ -322,37 +322,37 @@
  "por_balcao_selo": {
   "sem_estrela": {
    "nome": "Sem estrela → bronze",
-   "certidoes": 1435,
-   "faltavam": 12970,
-   "resolvidos": 4138,
+   "certidoes": 1443,
+   "faltavam": 13048,
+   "resolvidos": 4168,
    "eficiencia": 0.319,
-   "entraram_aqui": 1584,
+   "entraram_aqui": 1592,
    "esgotadas": 0
   },
   "bronze": {
    "nome": "Bronze → prata",
-   "certidoes": 73,
-   "faltavam": 601,
+   "certidoes": 74,
+   "faltavam": 605,
    "resolvidos": 404,
-   "eficiencia": 0.672,
-   "entraram_aqui": 35,
+   "eficiencia": 0.668,
+   "entraram_aqui": 36,
    "esgotadas": 0
   },
   "prata": {
    "nome": "Prata → ouro",
    "certidoes": 971,
-   "faltavam": 8765,
-   "resolvidos": 3646,
-   "eficiencia": 0.416,
-   "entraram_aqui": 943,
+   "faltavam": 8754,
+   "resolvidos": 3635,
+   "eficiencia": 0.415,
+   "entraram_aqui": 944,
    "esgotadas": 0
   },
   "ouro": {
    "nome": "Ouro (saiu da linha)",
-   "certidoes": 83,
-   "faltavam": 851,
-   "resolvidos": 788,
-   "eficiencia": 0.926,
+   "certidoes": 84,
+   "faltavam": 863,
+   "resolvidos": 800,
+   "eficiencia": 0.927,
    "entraram_aqui": 0,
    "esgotadas": 0
   }
@@ -361,13 +361,13 @@
   "orgaos_com_gabarito": 1233,
   "itens_achados_pelo_gabarito": {
    "Prazo de recurso": 20,
-   "Objeto": 68,
+   "Objeto": 69,
    "Requisitos": 60,
    "Valor": 3,
    "Modalidade": 12,
    "Resultado": 5
   },
-  "certidoes_ajudadas": 148
+  "certidoes_ajudadas": 149
  },
  "certidoes": [
   {
@@ -2827,8 +2827,8 @@
   {
    "id": "09590060f0bad9ff9a05",
    "tipo": "estrela",
-   "titulo": "BNDES Periferias – 6º ciclo da Chamada Permanente do Fundo Socioambiental (frente Periferias em Rede): apoio não reembolsável a OSCs que estruturem projetos de no mínimo R$ 20 mi com 10+ subprojetos (",
-   "balcao": "revisão",
+   "titulo": "BNDES abre chamada para apoiar projetos de organizações periféricas em todo o país",
+   "balcao": "orgao",
    "link_oficial": "https://bndes.gov.br/periferias",
    "degrau": 0,
    "como": "revisão manual: leitura do documento oficial no Chrome da titular",
@@ -2860,11 +2860,9 @@
     "Modalidade",
     "Área de atuação"
    ],
-   "ainda_faltam": [
-    "Prazo de recurso"
-   ],
-   "tentativa": 4,
-   "versao": "revisão manual (chrome_2026_10_17_v3)",
+   "ainda_faltam": [],
+   "tentativa": 3,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
    "gabarito": {
     "orgao": "dominio:bndes.gov.br",
     "itens_pelo_gabarito": [
@@ -2872,18 +2870,18 @@
      "Requisitos"
     ]
    },
-   "estagio": "prata",
+   "estagio": "ouro",
    "estagio_inicio": "prata",
    "esgotada": null,
    "eficiencia": 1.0,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
+   "encaminhado": null,
    "selo_antes": "ouro",
    "selo_depois": "ouro",
-   "em": "2026-10-17T20:15:34+00:00",
-   "prazo": "2026-12-04T17:00",
+   "em": "2026-10-18T02:23:55+00:00",
+   "prazo": "2026-12-04",
    "uf": null,
-   "orgao": null,
-   "fim": "2026-12-04T17:00",
+   "orgao": "BNDES",
+   "fim": "2026-08-18",
    "itens": {
     "Prazo de inscrição": {
      "valor": "18/08/2026 a 04/12/2026, 17h",
@@ -2996,6 +2994,13 @@
      "em": "2026-10-17T14:10:26+00:00",
      "ganhou": [],
      "legado": null
+    },
+    {
+     "n": 2,
+     "nome": "anexos completos",
+     "em": "2026-10-18T02:23:55+00:00",
+     "ganhou": [],
+     "legado": null
     }
    ],
    "documentos": [
@@ -3083,6 +3088,86 @@
      "url": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
      "degrau": 1,
      "como": "página oficial e documentos citados nela",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.googletagmanager.com/ns.html?id=GTM-KP22WT",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": "pagina_vazia",
+     "falha": null,
+     "oficial": null,
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/018598bc-e26c-4543-9ff9-3757aa2f4315/Roteiro+BNDES+Periferias+em+Rede_6%C2%B0+ciclo.pdf?MOD=AJPERES&CVID=q0l3Bzo",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Conheça o modelo de roteiro de apresentação de projetos para o 6º ciclo do BNDES Periferias",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 47,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/dbea06f1-9ebe-4954-b285-c71c8ab14d77/_Projetos+em+andamento_agosto_26.pdf?MOD=AJPERES&CVID=q0l3MxI",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Veja aqui o detalhamento de informações dos projetos já contratados junto ao BNDES",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 2,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/22cc6089-a56a-46c8-a4ea-410ff213451f/Apresenta%C3%A7%C3%A3o+BNDES_Periferias_perguntas+e+respostas.pdf?MOD=AJPERES&CVID=pSI8ov7",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Consulte as perguntas e respostas do BNDES Periferias",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 47,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/7ddaee00-f097-4e78-aba9-96a3cc8408b5/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+1%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI81N0",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 1º ciclo",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/ea562c15-3cbb-4518-bd2e-62d47883aa3e/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+2%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI84Qo",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 2º ciclo",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/79bd7b2b-2bc3-4ed0-8d2d-75ac0cd21146/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+3%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI8AkE",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 3º ciclo",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
      "motivo": null,
      "falha": null,
      "oficial": "domínio público oficial",
@@ -5317,7 +5402,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-18T01:36:08+00:00",
+   "em": "2026-10-18T02:22:06+00:00",
    "prazo": "2026-10-21",
    "uf": null,
    "orgao": "CONSELHO DE ARQUITETURA E URBANISMO DO ESTADO DE MINAS GERAIS",
@@ -40745,7 +40830,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-18T01:27:52+00:00",
+   "em": "2026-10-18T02:13:47+00:00",
    "prazo": "2027-08-07",
    "uf": null,
    "orgao": "MUNICIPIO DE TRINDADE",
@@ -49711,6 +49796,92 @@
    }
   },
   {
+   "id": "op-7e5874e81d84",
+   "tipo": "livro",
+   "titulo": "Secult Goiás lança edital para levar produção artística goiana ao Rio de Janeiro",
+   "balcao": "orgao",
+   "link_oficial": "https://goias.gov.br/cultura/secult-goias-lanca-edital-para-levar-producao-artistica-goiana-ao-rio-de-janeiro/",
+   "degrau": 0,
+   "como": "documento entregue pelo motor",
+   "faltavam": [
+    "Modalidade"
+   ],
+   "resolvidos": [
+    "Modalidade"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "prata",
+   "estagio_inicio": "prata",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T02:24:27+00:00",
+   "prazo": null,
+   "uf": "BR",
+   "orgao": "Secult Goiás",
+   "fim": null,
+   "itens": {
+    "Modalidade": {
+     "valor": "Termo de Fomento",
+     "trecho": "vênios e Acordos Chamamentos Públicos Licitações / Contratações Termos de Fomento LGPD Incentivo Cultural Arranjos Regionais FSA Lei Paulo Gustavo Programa Goyazes Fundo",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/cultura/secult-goias-lanca-edital-para-levar-producao-artistica-goiana-ao-rio-de-janeiro/",
+     "metodo": "modalidade de recebimento"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T02:24:27+00:00",
+     "ganhou": [
+      "Modalidade"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://goias.gov.br/cultura/secult-goias-lanca-edital-para-levar-producao-artistica-goiana-ao-rio-de-janeiro/",
+     "degrau": 0,
+     "como": "documento entregue pelo motor",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "ja_constava",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "certificado",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "op-c95f8c5d7a9c",
    "tipo": "livro",
    "titulo": "Selecionar projetos de Pontões de Cultura para celebrar Termo de Compromisso Cultural (TCC) — Edital SCDC/MinC nº 11/2026",
@@ -50705,7 +50876,7 @@
    "encaminhado": null,
    "selo_antes": "bronze",
    "selo_depois": "ouro",
-   "em": "2026-10-18T01:29:48+00:00",
+   "em": "2026-10-18T02:15:44+00:00",
    "prazo": "2028-12-04",
    "uf": null,
    "orgao": "TRIBUNAL SUPERIOR DO TRABALHO",
@@ -68775,7 +68946,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": null,
    "selo_depois": "prata",
-   "em": "2026-10-18T01:24:08+00:00",
+   "em": "2026-10-18T02:10:00+00:00",
    "prazo": "2030-09-07T18:00",
    "uf": "SP",
    "orgao": null,
@@ -79709,244 +79880,35 @@
     "pct_certificado_12": 0.5,
     "pct_cobertura_12": 0.9167
    }
-  },
-  {
-   "id": "op-1224c877ec09",
-   "tipo": "livro",
-   "titulo": "Edital SC Cultura Viva 2026 (PNAB)",
-   "balcao": "orgao",
-   "link_oficial": "https://www.cultura.sc.gov.br/editais-e-acoes/editais",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Valor",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Prazo de recurso"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-11T13:00:21+00:00",
-   "prazo": null,
-   "uf": "SC",
-   "orgao": "Fundação Catarinense de Cultura — FCC",
-   "fim": "2026-11-09",
-   "itens": {
-    "Valor": {
-     "valor": "R$ 5.130.000,00",
-     "trecho": "s territórios e comunidades onde atuam. Serão distribuídos, no total, R$ 5.130.000,00, dos quais R$ 300.000,00 para os três projetos selecionados de Pontõe",
-     "pagina": 1,
-     "documento": "https://www.cultura.sc.gov.br/editais-e-acoes/editais",
-     "metodo": "seção"
-    },
-    "Esfera": {
-     "valor": "municipal",
-     "trecho": "domínio/órgão: www.cultura.sc.gov.br · Fundação Catarinense de Cultura - Editais Fundação Catarinense de Cultura — FCC",
-     "pagina": 1,
-     "documento": "https://www.cultura.sc.gov.br/editais-e-acoes/editais",
-     "metodo": "domínio e órgão"
-    },
-    "Requisitos": {
-     "valor": "Requisitos de participação: Pessoas físicas ou jurídicas, residentes ou sediadas em Santa Catarina ou em outros estados;",
-     "trecho": "a individualmente ou integrando comissões de seleção e julgamento. Requisitos de participação: Pessoas físicas ou jurídicas, residentes ou sediadas em Santa Catarina ou em outros estados; Escolaridade de nível médio, técnico ou superior nas áreas contida",
-     "pagina": 1,
-     "documento": "https://www.cultura.sc.gov.br/editais-e-acoes/editais",
-     "metodo": "texto"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Educação, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Cultura, Educação, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.cultura.sc.gov.br/editais-e-acoes/editais",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Modalidade": {
-     "valor": null,
-     "trecho": "ferentes gêneros, publicadas em formato impresso ou digital. O edital destina-se a autores e organizadores catarinenses, ou residentes há mais de dez anos no Estado de Santa Catarina, bem como a editoras sediadas, estabelecidas e com atuação no Brasil, que possuam os direitos de distribuição das obras desses autores. As obras selecionadas e adquiridas pela FCC são distribuídas às Bibli",
-     "pagina": 1,
-     "documento": "https://www.cultura.sc.gov.br/editais-e-acoes/cocali/edital-de-aquisicao-de-livros",
-     "metodo": "seção"
-    }
-   },
-   "dispensas": {
-    "Resultado": {
-     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
-     "trecho": "o está disponível na plataforma de inscrições, clicando aqui . Com fluxo contínuo, a seleção visa formar o banco de pareceristas da Fundação Catarinens",
-     "pagina": 1,
-     "documento": "https://www.cultura.sc.gov.br/editais-e-acoes/editais"
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-11T13:00:21+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Requisitos",
-      "Resultado",
-      "Valor",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.cultura.sc.gov.br/editais-e-acoes/editais",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.sc.gov.br/downloads/fcc/editais/3363-anexo-ii-edital-de-chamamento-publico-para-termo-de-convenio-sc-cultura-boa-165-2025",
-     "degrau": 1,
-     "como": "documento citado na página oficial: ANEXO II&nbsp;",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.sc.gov.br/downloads/fcc/editais/3364-anexo-iii-edital-de-chamamento-publico-para-termo-de-convenio-sc-cultura-boa-165-2025",
-     "degrau": 1,
-     "como": "documento citado na página oficial: ANEXO III",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.sc.gov.br/downloads/fcc/editais/3365-anexo-iv-edital-de-chamamento-publico-para-termo-de-convenio-sc-cultura-boa-165-2025",
-     "degrau": 1,
-     "como": "documento citado na página oficial: ANEXO IV",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.sc.gov.br/downloads/fcc/editais/3366-anexo-vi-edital-de-chamamento-publico-para-termo-de-convenio-sc-cultura-boa-165-2025",
-     "degrau": 1,
-     "como": "documento citado na página oficial: ANEXO VI",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.sc.gov.br/downloads/fcc/editais/3367-anexo-vii-edital-de-chamamento-publico-para-termo-de-convenio-sc-cultura-boa-165-2025",
-     "degrau": 1,
-     "como": "documento citado na página oficial: ANEXO VII",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.sc.gov.br/downloads/fcc/editais/3368-anexo-viii-edital-de-chamamento-publico-para-termo-de-convenio-sc-cultura-boa-165-2025",
-     "degrau": 1,
-     "como": "documento citado na página oficial: ANEXO VIII",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.sc.gov.br/editais-e-acoes/cocali/edital-de-aquisicao-de-livros",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Edital de Aquisição de Livros",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "dispensado",
-     "Prazo de recurso": "falta",
-     "Valor": "certificado",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 5,
-    "dispensados": 1,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
   }
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2367,
-   "bronze": 121,
-   "prata": 182
+   "sem_estrela": 2341,
+   "bronze": 122,
+   "prata": 178
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 133,
-    "bronze": 8,
-    "prata": 11
+    "sem_estrela": 107,
+    "bronze": 9,
+    "prata": 8
    },
    "livro": {
     "sem_estrela": 2234,
     "bronze": 113,
-    "prata": 171
+    "prata": 170
    }
   },
-  "fila_oportunidades": 152,
-  "fila_livros": 2518,
-  "devidas_nesta_hora": 2274,
-  "promovidas_nesta_execucao": 0,
+  "fila_oportunidades": 124,
+  "fila_livros": 2517,
+  "devidas_nesta_hora": 2260,
+  "promovidas_nesta_execucao": 1,
   "sem_material_agora": 23,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
-   "chaves": 1058,
-   "sites": 2268
+   "chaves": 1059,
+   "sites": 2270
   },
   "intervalo_horas": 12,
   "limite": 10,
