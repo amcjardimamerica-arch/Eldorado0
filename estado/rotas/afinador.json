@@ -1083,9 +1083,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-18T04:33:04+00:00",
+  "em": "2026-10-18T04:44:36+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": false
+  "ponte_respondeu": true
  },
  "f260-captacao-238": {
   "em": "2026-10-16T02:15:34+00:00",
@@ -8715,8 +8715,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-244": {
-  "em": "2026-10-12T00:49:56+00:00",
-  "testes": 13,
+  "em": "2026-10-18T04:44:09+00:00",
+  "testes": 23,
   "melhor": {
    "url": "https://www.iadb.org/sitemap.xml",
    "via": "direto",
@@ -8737,22 +8737,22 @@
     "funcionou": true
    },
    {
-    "url": "https://www.iadb.org/pt-br",
-    "origem": "rota original",
+    "url": "https://www.iadb.org/pt-br/como-podemos-trabalhar-juntos/chamada-para-propostas",
+    "origem": "biblioteca",
     "via": "direto",
     "pontos": 1,
-    "links": 51,
+    "links": 52,
     "sinais": 0,
     "formato": "html",
     "erro": null,
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/pt-br/como-podemos-trabalhar-juntos/chamada-para-propostas",
-    "origem": "biblioteca",
+    "url": "https://www.iadb.org/pt-br",
+    "origem": "rota original",
     "via": "direto",
     "pontos": 1,
-    "links": 52,
+    "links": 51,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -8769,13 +8769,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/editais",
+    "url": "https://www.iadb.org/feed",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -8789,7 +8789,17 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.iadb.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.iadb.org/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8799,13 +8809,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/noticias",
+    "url": "https://www.iadb.org/editais",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -8819,7 +8829,17 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/chamamento-publico",
+    "url": "https://www.iadb.org/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.iadb.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8829,17 +8849,17 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/licitacoes",
+    "url": "https://www.iadb.org/noticias",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/chamamentos",
+    "url": "https://www.iadb.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8850,6 +8870,16 @@
    },
    {
     "url": "https://www.iadb.org/chamadas-publicas",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.iadb.org/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9350,33 +9380,36 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-254": {
-  "em": "2026-10-11T22:59:00+00:00",
-  "testes": 20,
-  "melhor": {
-   "url": "https://www.globalfundforwomen.org/sitemap.xml",
-   "via": "direto",
-   "origem": "rota original",
-   "pontos": 25,
-   "formato": "sitemap/feed"
-  },
+  "em": "2026-10-18T04:41:56+00:00",
+  "testes": 23,
+  "melhor": null,
   "detalhe": [
    {
     "url": "https://www.globalfundforwomen.org/sitemap.xml",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 25,
-    "links": 259,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
-    "funcionou": true
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.globalfundforwomen.org/sitemap.xml",
+    "origem": "rota original",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
    },
    {
     "url": "https://www.globalfundforwomen.org/",
     "origem": "rota original",
     "via": "direto",
     "pontos": 1,
-    "links": 60,
+    "links": 59,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -9386,17 +9419,6 @@
     "url": "https://www.globalfundforwomen.org/feed",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 10,
-    "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.globalfundforwomen.org/editais",
-    "origem": "padrão",
-    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
@@ -9404,7 +9426,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.globalfundforwomen.org/editais",
+    "url": "https://www.globalfundforwomen.org/feed",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -9434,18 +9456,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.globalfundforwomen.org/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "json",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.globalfundforwomen.org/noticias",
+    "url": "https://www.globalfundforwomen.org/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9455,7 +9466,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.globalfundforwomen.org/noticias",
+    "url": "https://www.globalfundforwomen.org/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -9485,7 +9496,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.globalfundforwomen.org/chamamento-publico",
+    "url": "https://www.globalfundforwomen.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9495,7 +9506,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.globalfundforwomen.org/chamamento-publico",
+    "url": "https://www.globalfundforwomen.org/noticias",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -9505,7 +9516,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.globalfundforwomen.org/licitacoes",
+    "url": "https://www.globalfundforwomen.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9515,17 +9526,27 @@
     "funcionou": false
    },
    {
-    "url": "https://www.globalfundforwomen.org/licitacoes",
+    "url": "https://www.globalfundforwomen.org/chamadas-publicas",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
     "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.globalfundforwomen.org/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
-  "resultado": "rota nova em teste"
+  "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-253": {
   "em": "2026-10-15T23:04:04+00:00",
@@ -9921,8 +9942,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-258": {
-  "em": "2026-10-12T00:13:11+00:00",
-  "testes": 12,
+  "em": "2026-10-18T04:43:13+00:00",
+  "testes": 13,
   "melhor": {
    "url": "https://skoll.org/feed",
    "via": "direto",
@@ -9947,7 +9968,40 @@
     "origem": "rota original",
     "via": "direto",
     "pontos": 1,
-    "links": 111,
+    "links": 109,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://skoll.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 109,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://skoll.org/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 109,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://skoll.org/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 109,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -9965,22 +10019,55 @@
     "funcionou": false
    },
    {
-    "url": "https://skoll.org/editais",
+    "url": "https://skoll.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 111,
+    "links": 109,
     "sinais": 0,
     "formato": "html",
     "erro": null,
     "funcionou": false
    },
    {
-    "url": "https://skoll.org/transparencia/editais",
+    "url": "https://skoll.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 111,
+    "links": 109,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://skoll.org/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 109,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://skoll.org/chamamentos",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 109,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://skoll.org/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 109,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -9993,81 +10080,24 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "TimeoutError",
     "funcionou": false
    },
    {
-    "url": "https://skoll.org/noticias",
+    "url": "https://skoll.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 111,
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://skoll.org/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 111,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://skoll.org/chamamento-publico",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 111,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://skoll.org/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 111,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://skoll.org/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 111,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://skoll.org/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 111,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "ErroPonte",
     "funcionou": false
    }
   ],
   "resultado": "rota nova em teste"
  },
  "f260-captacao-241": {
-  "em": "2026-10-12T00:48:52+00:00",
+  "em": "2026-10-18T04:43:39+00:00",
   "testes": 22,
   "melhor": {
    "url": "https://www.unicef.org/sitemap.xml",
@@ -10120,26 +10150,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.unicef.org/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.unicef.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -10160,7 +10170,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.unicef.org/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10170,7 +10180,27 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.unicef.org/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.unicef.org/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.unicef.org/edital",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -10200,7 +10230,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/edital",
+    "url": "https://www.unicef.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10210,7 +10240,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/edital",
+    "url": "https://www.unicef.org/chamadas-publicas",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -10580,7 +10610,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-247": {
-  "em": "2026-10-12T00:49:38+00:00",
+  "em": "2026-10-18T04:43:54+00:00",
   "testes": 22,
   "melhor": {
    "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
@@ -10633,26 +10663,6 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://international-partnerships.ec.europa.eu/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -10673,7 +10683,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://international-partnerships.ec.europa.eu/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10683,7 +10693,27 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://international-partnerships.ec.europa.eu/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://international-partnerships.ec.europa.eu/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://international-partnerships.ec.europa.eu/edital",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -10713,7 +10743,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/edital",
+    "url": "https://international-partnerships.ec.europa.eu/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10723,7 +10753,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/edital",
+    "url": "https://international-partnerships.ec.europa.eu/chamadas-publicas",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -11257,8 +11287,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-260": {
-  "em": "2026-10-12T01:25:16+00:00",
-  "testes": 13,
+  "em": "2026-10-18T04:44:36+00:00",
+  "testes": 21,
   "melhor": {
    "url": "https://oakfnd.org/sitemap.xml",
    "via": "direto",
@@ -11272,7 +11302,7 @@
     "origem": "rota original",
     "via": "direto",
     "pontos": 18,
-    "links": 182,
+    "links": 181,
     "sinais": 0,
     "formato": "sitemap/feed",
     "erro": null,
@@ -11312,7 +11342,7 @@
     "funcionou": false
    },
    {
-    "url": "https://oakfnd.org/editais",
+    "url": "https://oakfnd.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11324,6 +11354,16 @@
    {
     "url": "https://oakfnd.org/transparencia/editais",
     "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://oakfnd.org/editais",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -11332,24 +11372,13 @@
     "funcionou": false
    },
    {
-    "url": "https://oakfnd.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://oakfnd.org/editais",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "json",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://oakfnd.org/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -11363,7 +11392,17 @@
     "funcionou": false
    },
    {
-    "url": "https://oakfnd.org/chamamento-publico",
+    "url": "https://oakfnd.org/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://oakfnd.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11373,17 +11412,17 @@
     "funcionou": false
    },
    {
-    "url": "https://oakfnd.org/licitacoes",
+    "url": "https://oakfnd.org/noticias",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
-    "url": "https://oakfnd.org/chamamentos",
+    "url": "https://oakfnd.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11395,11 +11434,31 @@
    {
     "url": "https://oakfnd.org/chamadas-publicas",
     "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://oakfnd.org/chamamento-publico",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://oakfnd.org/chamamento-publico",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    }
   ],
