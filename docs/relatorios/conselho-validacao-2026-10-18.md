@@ -1,0 +1,401 @@
+# Conselho dos motores — 2ª rodada (validação das correções) — 2026-10-18
+
+## Dra. Irene Lacerda (extremamente pessimista)
+
+- Dos motores cegos e de página vazia da 1ª rodada, quantos já tiveram a rota testada pelo afinador?
+- A rota nova traz sinal de edital ou só responde?
+- Algum continua cego mesmo depois da troca de rota?
+
+```json
+{
+ "cegos_da_1a_rodada": 31,
+ "testados": 22,
+ "com_rota_nova": 6,
+ "via_ponte": 0,
+ "continuam_cegos": [
+  "camara-goiania-pl",
+  "f260-captacao-218",
+  "f260-captacao-223",
+  "f260-captacao-227",
+  "f260-captacao-229",
+  "f260-captacao-230",
+  "f260-captacao-233",
+  "f260-captacao-234",
+  "f260-captacao-235",
+  "f260-captacao-222",
+  "f260-curadoria-008",
+  "f260-espalhado-acessoainformacao-cavalcante-go-gov-br",
+  "f260-captacao-228",
+  "f260-captacao-252",
+  "f260-captacao-240",
+  "f260-espalhado-rouanet-cultura-gov-br"
+ ],
+ "aguardando_afinador": 9
+}
+```
+
+## Prof. Caio Menezes (pessimista)
+
+- Os motores de ruído da 1ª rodada continuam registrando achados que não viram oportunidade?
+- A troca de rota aumentou a produção sem perder precisão?
+
+```json
+{
+ "motores_de_ruido_1a": 14,
+ "ruido_agora": [
+  {
+   "motor": "empresas-incentivadas",
+   "achados_total_1a": 29,
+   "achados_total_agora": 37,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "f260-captacao-118",
+   "achados_total_1a": 31,
+   "achados_total_agora": 31,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "f260-captacao-044",
+   "achados_total_1a": 31,
+   "achados_total_agora": 31,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "plat-cnpq-extensao",
+   "achados_total_1a": 133,
+   "achados_total_agora": 133,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "plat-empresas-editais-incentivados",
+   "achados_total_1a": 47,
+   "achados_total_agora": 53,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "f260-captacao-069",
+   "achados_total_1a": 54,
+   "achados_total_agora": 54,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "f260-captacao-025",
+   "achados_total_1a": 37,
+   "achados_total_agora": 37,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "f260-curadoria-009",
+   "achados_total_1a": 68,
+   "achados_total_agora": 68,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "outras-oportunidades-1",
+   "achados_total_1a": 97,
+   "achados_total_agora": 153,
+   "no_fluxo": 2,
+   "confirmadas": 0
+  },
+  {
+   "motor": "outras-oportunidades-2",
+   "achados_total_1a": 55,
+   "achados_total_agora": 0,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "outras-oportunidades-6",
+   "achados_total_1a": 42,
+   "achados_total_agora": 42,
+   "no_fluxo": 5,
+   "confirmadas": 0
+  },
+  {
+   "motor": "outras-oportunidades-7",
+   "achados_total_1a": 82,
+   "achados_total_agora": 98,
+   "no_fluxo": 1,
+   "confirmadas": 0
+  },
+  {
+   "motor": "plataforma-mapas-culturais",
+   "achados_total_1a": 68,
+   "achados_total_agora": 68,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "outras-oportunidades-8",
+   "achados_total_1a": 26,
+   "achados_total_agora": 28,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  }
+ ],
+ "ruido_que_passou_a_confirmar": []
+}
+```
+
+## Eng. Luana Freire (levemente pessimista)
+
+- A redundância é saudável ou há pontos lidos por vários motores sem que nenhum renda (redundância vazia)?
+- Quanto custa o afinador e quantos domínios passaram a depender da ponte?
+
+```json
+{
+ "pontos_com_redundancia": 17,
+ "redundancia_vazia": [],
+ "dominios_via_ponte": 3,
+ "exemplos_da_rede_de_rotas": 10588
+}
+```
+
+## Dr. Otávio Lemos (neutro)
+
+- A fatia de oportunidades achadas fora dos motores diminuiu?
+- Quais domínios só os agregadores encontram e ainda não têm motor?
+
+```json
+{
+ "fora_dos_motores_pct_1a": 73.6,
+ "fora_dos_motores_pct_agora": 83.5,
+ "origem": {
+  "motor": 37,
+  "agregador/outra": 160,
+  "Piloto": 27
+ },
+ "dominios_so_de_agregador": [
+  {
+   "dominio": "sei.sistemas.ro.gov.br",
+   "oportunidades": 1
+  },
+  {
+   "dominio": "lp.simbi.social",
+   "oportunidades": 1
+  },
+  {
+   "dominio": "karibu.no",
+   "oportunidades": 1
+  }
+ ],
+ "nota": "a fatia só cai depois que os motores novos (Outras Oportunidades, plataformas) completarem as primeiras leituras"
+}
+```
+
+## Eng. Diego Arakaki (levemente otimista)
+
+- A leitura diária está sendo cumprida por todos os motores ativos?
+- Quem não foi lido ontem nem hoje?
+
+```json
+{
+ "dia_de_referencia": "2026-10-18",
+ "ativos": 159,
+ "lidos_ontem": 134,
+ "lidos_hoje": 21,
+ "nao_lidos_ontem_nem_hoje": [
+  "plat-captamos",
+  "plat-rede-filantropia"
+ ],
+ "ainda_sem_primeira_leitura": [
+  "motor-gife",
+  "motor-patrocinio",
+  "piloto-aberto",
+  "site-abcr",
+  "site-brazilfoundation",
+  "site-capitaai",
+  "site-cese",
+  "site-editais-culturais",
+  "site-farol-cultural",
+  "site-funarte",
+  "site-fundo-baoba",
+  "site-fundo-brasil",
+  "site-fundo-casa",
+  "site-idis",
+  "site-mapa-osc",
+  "site-mapas-culturais",
+  "site-observatorio-terceiro-setor",
+  "site-prosas",
+  "site-rede-comua",
+  "site-rede-filantropia",
+  "site-transferegov",
+  "site-undef"
+ ]
+}
+```
+
+## Profa. Clara Nogueira (otimista)
+
+- Outras Oportunidades está recebendo as fontes novas e lendo todas no mesmo dia?
+- Os clones dão conta do volume?
+
+```json
+{
+ "fontes_recebidas": 404,
+ "por_origem": {
+  "conselho (fontes irmãs)": 166,
+  "Cartório (site oficial certificado)": 190,
+  "Espião (privado/internacional)": 48
+ },
+ "lidas_nas_ultimas_24h": 279,
+ "dimensionamento": {
+  "fontes": 404,
+  "sites_por_execucao": 17,
+  "execucoes_por_dia": 3,
+  "sites_por_clone_por_dia": 51,
+  "clones": 8,
+  "cobertura_diaria": 404,
+  "segundos_por_execucao": {
+   "tipico": 88,
+   "pior_caso": 238
+  },
+  "le_todas_no_dia": true
+ },
+ "clones_que_ja_leram": {
+  "outras-oportunidades-1": {
+   "ultima": "2026-10-18T03:30:34+00:00",
+   "duracao_s": 59,
+   "achados": 58
+  },
+  "outras-oportunidades-3": {
+   "ultima": "2026-10-17T13:21:53+00:00",
+   "duracao_s": 67,
+   "achados": 0
+  },
+  "outras-oportunidades-4": {
+   "ultima": "2026-10-18T03:27:21+00:00",
+   "duracao_s": 77,
+   "achados": 4
+  },
+  "outras-oportunidades-5": {
+   "ultima": "2026-10-17T13:25:09+00:00",
+   "duracao_s": 92,
+   "achados": 0
+  },
+  "outras-oportunidades-6": {
+   "ultima": "2026-10-17T13:26:19+00:00",
+   "duracao_s": 70,
+   "achados": 0
+  },
+  "outras-oportunidades-7": {
+   "ultima": "2026-10-18T03:57:07+00:00",
+   "duracao_s": 116,
+   "achados": 13
+  },
+  "outras-oportunidades-8": {
+   "ultima": "2026-10-17T13:29:17+00:00",
+   "duracao_s": 74,
+   "achados": 0
+  },
+  "outras-oportunidades-2": {
+   "ultima": "2026-10-18T04:17:58+00:00",
+   "duracao_s": 101,
+   "achados": 2
+  }
+ },
+ "com_achado": 58
+}
+```
+
+## Dr. Fábio Rangel (extremamente otimista)
+
+- Os adaptadores por plataforma responderam? Quantas APIs abriram e quantos achados vieram?
+- Quais plataformas valem o próximo adaptador?
+
+```json
+{
+ "adaptadores": {
+  "plataforma-wordpress": {
+   "ultima": "2026-10-18T04:16:17+00:00",
+   "achados": 5,
+   "diagnostico": {
+    "sites": 20,
+    "instancias": null,
+    "respostas_json": 42,
+    "posts": 24,
+    "oportunidades": null,
+    "motivo_zero": null
+   }
+  },
+  "plataforma-mapas-culturais": {
+   "ultima": "2026-10-18T04:14:19+00:00",
+   "achados": 13,
+   "diagnostico": {
+    "sites": null,
+    "instancias": 11,
+    "respostas_json": 4,
+    "posts": null,
+    "oportunidades": 41,
+    "motivo_zero": null
+   }
+  }
+ },
+ "proximos_candidatos": {
+  "WordPress": {
+   "orgaos": 114,
+   "exemplos": [
+    "abong.org.br",
+    "acaoeducativa.org.br",
+    "alvoradadonorte.go.gov.br",
+    "anater.org",
+    "banrisulcultural.com.br",
+    "baoba.org.br"
+   ]
+  },
+  "Mapas Culturais": {
+   "orgaos": 11,
+   "exemplos": [
+    "culteditais.cultura.gov.br",
+    "editaisdobrasil.com",
+    "mapa.cultura.es.gov.br",
+    "mapa.cultura.gov.br",
+    "mapacultural.pa.gov.br",
+    "mapacultural.pe.gov.br"
+   ]
+  },
+  "Diário municipal em lote (AGM/DOM)": {
+   "orgaos": 14,
+   "exemplos": [
+    "diariooficial.abc.go.gov.br",
+    "diariooficial.goiania.go.gov.br",
+    "diariooficial.palmas.to.gov.br",
+    "diariooficial.vitoria.es.gov.br",
+    "divinopolisdotocantins.to.gov.br",
+    "dom.morrodochapeu.ba.gov.br"
+   ]
+  },
+  "Portal de transparência de fornecedor": {
+   "orgaos": 15,
+   "exemplos": [
+    "bndes.gov.br",
+    "comunidade.transparenciainternacional.org.br",
+    "gov.br",
+    "itumbiara.go.gov.br",
+    "mpf.mp.br",
+    "rio.rj.gov.br"
+   ]
+  },
+  "Sistemas de editais (Prosas/Editais)": {
+   "orgaos": 43,
+   "exemplos": [
+    "alteditais.com.br",
+    "banrisulcultural.com.br",
+    "bonde.org",
+    "cajuru.sp.gov.br",
+    "chamamentos.serpro.gov.br",
+    "climaesociedade.org"
+   ]
+  }
+ }
+}
+```
