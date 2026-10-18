@@ -1,5 +1,5 @@
 {
- "em": "2026-10-18T01:17:06+00:00",
+ "em": "2026-10-18T01:41:42+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
@@ -7,25 +7,25 @@
   "pontos_12_total": 4800,
   "pontos_certificados": 3124,
   "pontos_dispensados": 167,
-  "pontos_ja_constavam": 1383,
-  "pontos_faltam": 126,
+  "pontos_ja_constavam": 1384,
+  "pontos_faltam": 125,
   "pct_certificado_12": 0.6856,
   "certidoes_12_de_12": 141,
-  "certidoes_sem_item_faltando": 278,
+  "certidoes_sem_item_faltando": 279,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
-  "certidoes": 2663,
-  "nesta_execucao": 13,
-  "fila_estrelas": 152,
-  "fila_livros": 2516,
-  "itens_que_faltavam": 24414,
-  "itens_obtidos": 9137,
-  "itens_dispensados": 511,
+  "certidoes": 2672,
+  "nesta_execucao": 12,
+  "fila_estrelas": 124,
+  "fila_livros": 2515,
+  "itens_que_faltavam": 24480,
+  "itens_obtidos": 9152,
+  "itens_dispensados": 512,
   "eficiencia_itens": 0.395,
-  "com_link_oficial": 1807,
-  "taxa_link_oficial": 0.679,
-  "certidoes_completas": 259,
-  "para_o_interceptador": 1926,
-  "para_o_chrome": 477,
+  "com_link_oficial": 1812,
+  "taxa_link_oficial": 0.678,
+  "certidoes_completas": 260,
+  "para_o_interceptador": 1932,
+  "para_o_chrome": 479,
   "selos_que_mudaram": {
    "bronze → ouro": 6,
    "bronze → prata": 1,
@@ -36,8 +36,8 @@
    "prata → ouro": 3
   },
   "por_degrau": {
-   "degrau 0": 1726,
-   "degrau 1": 122
+   "degrau 0": 1730,
+   "degrau 1": 123
   }
  },
  "cinza_conferidos": {
@@ -47,74 +47,74 @@
  },
  "por_item": {
   "Objeto": {
-   "faltavam": 1730,
+   "faltavam": 1737,
    "obtidos": 570,
    "dispensados": 0,
-   "eficiencia": 0.329
+   "eficiencia": 0.328
   },
   "Prazo de inscrição": {
-   "faltavam": 1846,
-   "obtidos": 575,
+   "faltavam": 1851,
+   "obtidos": 577,
    "dispensados": 146,
    "eficiencia": 0.391
   },
   "Resultado": {
-   "faltavam": 2375,
-   "obtidos": 618,
-   "dispensados": 227,
+   "faltavam": 2380,
+   "obtidos": 619,
+   "dispensados": 228,
    "eficiencia": 0.356
   },
   "Prazo de recurso": {
-   "faltavam": 2337,
-   "obtidos": 533,
+   "faltavam": 2343,
+   "obtidos": 534,
    "dispensados": 46,
    "eficiencia": 0.248
   },
   "Valor": {
-   "faltavam": 2081,
+   "faltavam": 2087,
    "obtidos": 689,
    "dispensados": 60,
-   "eficiencia": 0.36
+   "eficiencia": 0.359
   },
   "Órgão / financiador": {
-   "faltavam": 1580,
-   "obtidos": 957,
+   "faltavam": 1584,
+   "obtidos": 959,
    "dispensados": 0,
-   "eficiencia": 0.606
+   "eficiencia": 0.605
   },
   "Território": {
-   "faltavam": 1876,
-   "obtidos": 591,
+   "faltavam": 1883,
+   "obtidos": 593,
    "dispensados": 0,
    "eficiencia": 0.315
   },
   "Esfera": {
-   "faltavam": 2109,
-   "obtidos": 1305,
+   "faltavam": 2113,
+   "obtidos": 1306,
    "dispensados": 0,
-   "eficiencia": 0.619
+   "eficiencia": 0.618
   },
   "Requisitos": {
-   "faltavam": 2310,
-   "obtidos": 616,
+   "faltavam": 2316,
+   "obtidos": 618,
    "dispensados": 0,
    "eficiencia": 0.267
   },
   "Anexos": {
-   "faltavam": 1671,
+   "faltavam": 1677,
    "obtidos": 364,
    "dispensados": 4,
-   "eficiencia": 0.22
+   "eficiencia": 0.219
   },
   "Modalidade": {
-   "faltavam": 2283,
-   "obtidos": 803,
+   "faltavam": 2289,
+   "obtidos": 805,
    "dispensados": 28,
    "eficiencia": 0.364
   },
   "Área de atuação": {
-   "faltavam": 2216,
-   "obtidos": 1516,
+   "faltavam": 2220,
+   "obtidos": 1518,
    "dispensados": 0,
    "eficiencia": 0.684
   }
@@ -145,36 +145,36 @@
    "taxa_link_oficial": 1.0
   },
   "orgao": {
-   "certidoes": 1243,
-   "com_link_oficial": 994,
-   "faltavam": 11060,
-   "resolvidos": 5109,
-   "eficiencia": 0.462,
-   "taxa_link_oficial": 0.8
+   "certidoes": 1247,
+   "com_link_oficial": 995,
+   "faltavam": 11080,
+   "resolvidos": 5107,
+   "eficiencia": 0.461,
+   "taxa_link_oficial": 0.798
   },
   "privado": {
-   "certidoes": 587,
-   "com_link_oficial": 409,
-   "faltavam": 4968,
-   "resolvidos": 1498,
-   "eficiencia": 0.302,
-   "taxa_link_oficial": 0.697
+   "certidoes": 590,
+   "com_link_oficial": 412,
+   "faltavam": 5001,
+   "resolvidos": 1513,
+   "eficiencia": 0.303,
+   "taxa_link_oficial": 0.698
   },
   "pista": {
-   "certidoes": 357,
-   "com_link_oficial": 65,
-   "faltavam": 3247,
-   "resolvidos": 776,
+   "certidoes": 358,
+   "com_link_oficial": 66,
+   "faltavam": 3259,
+   "resolvidos": 779,
    "eficiencia": 0.239,
-   "taxa_link_oficial": 0.182
+   "taxa_link_oficial": 0.184
   },
   "diario": {
-   "certidoes": 156,
+   "certidoes": 157,
    "com_link_oficial": 98,
-   "faltavam": 1647,
+   "faltavam": 1648,
    "resolvidos": 427,
    "eficiencia": 0.259,
-   "taxa_link_oficial": 0.628
+   "taxa_link_oficial": 0.624
   },
   "proprio": {
    "certidoes": 1,
@@ -187,19 +187,19 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2136,
-   "faltavam": 18499,
-   "resolvidos": 6561,
+   "certidoes": 2146,
+   "faltavam": 18577,
+   "resolvidos": 6586,
    "eficiencia": 0.355,
-   "com_link_oficial": 1369,
+   "com_link_oficial": 1375,
    "taxa_link_oficial": 0.641
   },
   "refeitas": {
-   "certidoes": 527,
-   "faltavam": 5915,
-   "resolvidos": 2978,
+   "certidoes": 526,
+   "faltavam": 5903,
+   "resolvidos": 2969,
    "eficiencia": 0.503,
-   "com_link_oficial": 438,
+   "com_link_oficial": 437,
    "taxa_link_oficial": 0.831
   }
  },
@@ -221,11 +221,11 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2440,
-   "faltavam": 21815,
-   "resolvidos": 8300,
+   "certidoes": 2449,
+   "faltavam": 21881,
+   "resolvidos": 8316,
    "eficiencia": 0.38,
-   "com_link_oficial": 1635,
+   "com_link_oficial": 1640,
    "taxa_link_oficial": 0.67
   },
   "revisão manual": {
@@ -240,11 +240,11 @@
  "por_abordagem": {
   "1": {
    "nome": "documento na mão",
-   "vezes": 2540,
-   "renderam": 1664,
-   "itens": 8753,
-   "links_oficiais": 1584,
-   "taxa_de_acerto": 0.655
+   "vezes": 2549,
+   "renderam": 1667,
+   "itens": 8769,
+   "links_oficiais": 1589,
+   "taxa_de_acerto": 0.654
   },
   "2": {
    "nome": "anexos completos",
@@ -256,7 +256,7 @@
   },
   "3": {
    "nome": "página oficial e citados",
-   "vezes": 334,
+   "vezes": 333,
    "renderam": 82,
    "itens": 468,
    "links_oficiais": 53,
@@ -322,11 +322,11 @@
  "por_balcao_selo": {
   "sem_estrela": {
    "nome": "Sem estrela → bronze",
-   "certidoes": 1415,
-   "faltavam": 12803,
-   "resolvidos": 4078,
-   "eficiencia": 0.319,
-   "entraram_aqui": 1564,
+   "certidoes": 1423,
+   "faltavam": 12868,
+   "resolvidos": 4094,
+   "eficiencia": 0.318,
+   "entraram_aqui": 1572,
    "esgotadas": 0
   },
   "bronze": {
@@ -340,11 +340,11 @@
   },
   "prata": {
    "nome": "Prata → ouro",
-   "certidoes": 969,
-   "faltavam": 8760,
+   "certidoes": 970,
+   "faltavam": 8761,
    "resolvidos": 3645,
    "eficiencia": 0.416,
-   "entraram_aqui": 941,
+   "entraram_aqui": 942,
    "esgotadas": 0
   },
   "ouro": {
@@ -358,7 +358,7 @@
   }
  },
  "gabarito": {
-  "orgaos_com_gabarito": 1232,
+  "orgaos_com_gabarito": 1233,
   "itens_achados_pelo_gabarito": {
    "Prazo de recurso": 20,
    "Objeto": 68,
@@ -5317,7 +5317,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-18T00:47:28+00:00",
+   "em": "2026-10-18T01:36:08+00:00",
    "prazo": "2026-10-21",
    "uf": null,
    "orgao": "CONSELHO DE ARQUITETURA E URBANISMO DO ESTADO DE MINAS GERAIS",
@@ -31016,6 +31016,122 @@
    }
   },
   {
+   "id": "op-6099dc3bdcb5",
+   "tipo": "livro",
+   "titulo": "Emenda Parlamentar Estadual — Goiás — captação 2026",
+   "balcao": "orgao",
+   "link_oficial": "https://portal.al.go.leg.br/deputados",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Território"
+   ],
+   "resolvidos": [
+    "Território"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T01:39:12+00:00",
+   "prazo": null,
+   "uf": "BR",
+   "orgao": "Assembleia Legislativa do Estado de Goiás (ALEGO)",
+   "fim": null,
+   "itens": {
+    "Território": {
+     "valor": "do Estado de Goiás",
+     "trecho": "5, da Resolução 1.218/07, Regimento Interno da Assembleia Legislativa do Estado de Goiás, são os campos temáticos, áreas de atuação e competências da Comissão",
+     "pagina": 1,
+     "documento": "https://portal.al.go.leg.br/comissoes/2",
+     "metodo": "texto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T01:39:12+00:00",
+     "ganhou": [
+      "Território"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://portal.al.go.leg.br/deputados",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://portal.al.go.leg.br/portal/mapa/mapa_alego_2024.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Mapa do Palácio Maguito Vilela",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://portal.al.go.leg.br/documentos/manual/manual_de_redacao.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Manual de Redação",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 60,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://portal.al.go.leg.br/comissoes/2",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Comissão de Tributação, Finanças e Orçamento",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "certificado",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "ja_constava",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "emenda-municipal-goiania-2026",
    "tipo": "estrela",
    "titulo": "Emenda Parlamentar Municipal — Goiânia — captação 2026",
@@ -40367,7 +40483,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-18T00:38:56+00:00",
+   "em": "2026-10-18T01:27:52+00:00",
    "prazo": "2027-08-07",
    "uf": null,
    "orgao": "MUNICIPIO DE TRINDADE",
@@ -50327,7 +50443,7 @@
    "encaminhado": null,
    "selo_antes": "bronze",
    "selo_depois": "ouro",
-   "em": "2026-10-18T00:40:51+00:00",
+   "em": "2026-10-18T01:29:48+00:00",
    "prazo": "2028-12-04",
    "uf": null,
    "orgao": "TRIBUNAL SUPERIOR DO TRABALHO",
@@ -58464,6 +58580,195 @@
      "url": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
      "degrau": 1,
      "como": "página oficial e documentos citados nela",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 38,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "dispensado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "falta",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 10,
+    "dispensados": 1,
+    "ja_constavam": 0,
+    "faltam": 1,
+    "pct_certificado_12": 0.9167,
+    "pct_cobertura_12": 0.9167
+   }
+  },
+  {
+   "id": "op-2722d1fd774a",
+   "tipo": "livro",
+   "titulo": "Edital 10 – Fomento Cultural III – Patrimônio Cultural (PDF)",
+   "balcao": "orgao",
+   "link_oficial": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [
+    "Anexos"
+   ],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 0.917,
+   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T01:37:58+00:00",
+   "prazo": null,
+   "uf": "GO",
+   "orgao": null,
+   "fim": "2024-08-05",
+   "itens": {
+    "Prazo de inscrição": {
+     "valor": "até 05/08/2024",
+     "trecho": "óprios da contratação de serviços. 2.4. Prazo de inscrição 2.4.1. Prazo de inscrição é de 08 horas do dia 05/08/2024 até às 23:59 horas do dia 20/08/2024. 2.4.2. As inscrições serão r",
+     "pagina": 2,
+     "documento": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+     "metodo": "cronograma"
+    },
+    "Prazo de recurso": {
+     "valor": "3 dias úteis",
+     "trecho": "apa de habilitação 11.2.1. Contra a decisão da fase de habilitação, caberá recurso destinado ao Conselho Municipal de Cultura - CMC, que deve ser enviado pela mesma plataforma da inscrição, no prazo de 3 dias úteis a contar da publicação do resultado, considerando-se para início da",
+     "pagina": 9,
+     "documento": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+     "metodo": "seção"
+    },
+    "Valor": {
+     "valor": "R$ 421.392,11 (quatrocentos e vinte e um mil, trezentos e noventa e dois reais e onze centavos)",
+     "trecho": "e para pessoas com deficiência. 2.3. Do valor do edital 2.3.1. O valor total deste edital é de R$ 421.392,11 (quatrocentos e vinte e um mil, trezentos e noventa e dois reais e onze centavos). 2.3.2. Cada projeto receberá o valor descrito no Anexo 1. 2.3.3.",
+     "pagina": 1,
+     "documento": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "a seleção de projetos culturais para receberem apoio financeiro para ações voltadas para a Proteção e Preservação do Patrimônio Cultural material e imaterial, nas categorias descritas no Anexo 1, com o objetivo de incentivar as diversas formas de manifestações culturais do Município de Goiânia.",
+     "trecho": "lidade). 2. INFORMAÇÕES GERAIS 2.1. Objeto do edital 2.1.1. O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro para ações voltadas para a Proteção e Preservação do Patrimônio Cultural material e imaterial, nas categorias descritas no Anexo 1, com o objetivo de incentivar as diversas formas de manifestações culturais do Município de Goiânia. 2.2. Quantidade de p",
+     "pagina": 1,
+     "documento": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+     "metodo": "texto"
+    },
+    "Órgão / financiador": {
+     "valor": "Secretaria Municipal de Cultura",
+     "trecho": "Secretaria Municipal de Cultura Avenida Parque Ateneu nº 1.477, Parque Atheneu Goiânia, CEP 74893-0",
+     "pagina": 1,
+     "documento": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+     "metodo": "cabeçalho"
+    },
+    "Território": {
+     "valor": "do Município de Goiânia",
+     "trecho": "l destina -se a apoiar projetos apresentados pelos agentes culturais do Município de Goiânia. Deste modo, a Prefeitura Municipal de Goiânia, por intermédio da Se",
+     "pagina": 1,
+     "documento": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "municipal",
+     "trecho": "domínio/órgão: www.goiania.go.gov.br · Secretaria Municipal de Cultura",
+     "pagina": 1,
+     "documento": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+     "metodo": "domínio e órgão"
+    },
+    "Requisitos": {
+     "valor": "poderá concorrer neste edital com, apenas 01 (um)",
+     "trecho": "os cada agente cultural pode apresentar 2.7.1. Cada agente cultural poderá concorrer neste edital com, apenas 01 (um) projeto, seja pessoa física ou jurídica. 2.7.2. Cada pessoa (física",
+     "pagina": 3,
+     "documento": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+     "metodo": "texto"
+    },
+    "Modalidade": {
+     "valor": "Termo de Execução Cultural — Lei nº 14.399/2022",
+     "trecho": "NIO CULTURAL MATERIAL E IMATERIAL SELEÇÃO DE PROJETOS PARA FIRMAR TERMO DE EXECUÇÃO CULTURAL COM RECURSOS DA POLÍTICA NACIONAL ALDIR BLANC DE FOMENTO À CULTURA – PNAB (LEI Nº 14.399/2022) 1.",
+     "pagina": 1,
+     "documento": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Cultura, Ciência e tecnologia",
+     "trecho": "termos do objeto e do título: Cultura, Ciência e tecnologia",
+     "pagina": 1,
+     "documento": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+     "metodo": "palavras-chave do objeto"
+    }
+   },
+   "dispensas": {
+    "Resultado": {
+     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
+     "trecho": "ampla defesa. 15.1.2. Atenção! Eventuais irregularidades constatadas a qualquer tempo, implicarão na desclassificação do agente cultural. 15.2. Acompa",
+     "pagina": 10,
+     "documento": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf"
+    }
+   },
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T01:37:58+00:00",
+     "ganhou": [
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-10-edital-de-fomento-cultural-iii-patrimonio-cultural.pdf",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
      "motivo": null,
      "falha": null,
      "oficial": "domínio público oficial",
@@ -68208,7 +68513,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": null,
    "selo_depois": "prata",
-   "em": "2026-10-18T00:35:12+00:00",
+   "em": "2026-10-18T01:24:08+00:00",
    "prazo": "2030-09-07T18:00",
    "uf": "SP",
    "orgao": null,
@@ -79699,453 +80004,35 @@
     "pct_certificado_12": 0.5,
     "pct_cobertura_12": 0.9167
    }
-  },
-  {
-   "id": "op-d3c59a6d71d2",
-   "tipo": "livro",
-   "titulo": "Edital de Mobilidade Cultural",
-   "balcao": "orgao",
-   "link_oficial": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Mobilidade-Cultural",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Esfera",
-    "Requisitos",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Modalidade"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-13T04:03:29+00:00",
-   "prazo": null,
-   "uf": "PR",
-   "orgao": "Secretaria de Estado da Cultura do Paraná",
-   "fim": "2025-04-07",
-   "itens": {
-    "Esfera": {
-     "valor": "municipal",
-     "trecho": "domínio/órgão: www.cultura.pr.gov.br · Secretaria da Cultura Secretaria de Estado da Cultura do Paraná",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Mobilidade-Cultural",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Educação, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Cultura, Educação, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Mobilidade-Cultural",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Prazo de recurso": {
-     "valor": "05 (cinco) dias úteis",
-     "trecho": "A Comissão de Análise Técnica e Seleção avaliará os recursos em até 05 (cinco) dias úteis, a contar do prazo de recebimento. A decisão da C",
-     "pagina": 23,
-     "documento": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-04/009_2023_-_edital_de_mobilidade_cultural_consolidado.pdf",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "compreende\n \na\n \nverificação\n \nda\n \ndocumentação\n \ndo\n \nAgente\n \nCultural\n \ne\n \nsua\n \nanálise.",
-     "trecho": "iretrizes e critérios estabelecidos neste Edital. 13. DA HABILITAÇÃO 13.1. A habilitação compreende a verificação da documentação do Agente Cultural e sua análise. 13.1.1. Esta etapa será realizada por uma Comissão de Habilitação nomeada pela Secretária de Estado da Cultura. 13.2. Após a divulgação do resultado do processo de seleção na",
-     "pagina": 26,
-     "documento": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-04/009_2023_-_edital_de_mobilidade_cultural_consolidado.pdf",
-     "metodo": "seção"
-    },
-    "Prazo de inscrição": {
-     "valor": "até 07/04/2025",
-     "trecho": "técnicos. VALOR DO EDITAL: R$ 500.000,00 (quinhentos mil reais). INSCRIÇÕES: As inscrições serão realizadas em fluxo contínuo pelo CÓDIGO LOCALIZADOR: 21167425 Documento emitido em 07/04/2025 15:57:37. Diario Oficial Com. Ind. e Servicos Nº 11868 | 07/04/2025 |",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-04/ci_2025-04-07_pag4_localizador_21167425.pdf",
-     "metodo": "cronograma"
-    }
-   },
-   "dispensas": {
-    "Resultado": {
-     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
-     "trecho": "quinhentos mil reais). INSCRIÇÕES: As inscrições serão realizadas em fluxo contínuo pelo CÓDIGO LOCALIZADOR: 21167425 Documento emitido em 07/04/2025 15",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-04/ci_2025-04-07_pag4_localizador_21167425.pdf"
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-13T04:03:29+00:00",
-     "ganhou": [
-      "Esfera",
-      "Prazo de inscrição",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Mobilidade-Cultural",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-WK32TR88",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2026-07/manual_mobilidade_eleitoral.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 13,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-04/009_2023_-_edital_de_mobilidade_cultural_consolidado.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 38,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-04/ci_2025-04-07_pag4_localizador_21167425.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-02/anexo_1_-_declaracao_de_representacao_de_grupo_ou_coletivo.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-02/anexo_2_-_autodeclaracao_pretoapardoa.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-02/anexo_2_-_autodeclaracao_indigena.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "dispensado",
-     "Prazo de recurso": "certificado",
-     "Valor": "ja_constava",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "falta",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 5,
-    "dispensados": 1,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "op-428c988f8ab5",
-   "tipo": "livro",
-   "titulo": "Edital de fortalecimento de redes de economia solidária",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Território"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-13T16:38:27+00:00",
-   "prazo": null,
-   "uf": "",
-   "orgao": "Ministério do Trabalho e Emprego / SENAES",
-   "fim": "2026-08-02",
-   "itens": {
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.gov.br · Ministério do Trabalho e Emprego Ministério do Trabalho e Emprego / SENAES",
-     "pagina": 1,
-     "documento": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Assistência social, Educação",
-     "trecho": "termos do objeto e do título: Cultura, Assistência social, Educação",
-     "pagina": 1,
-     "documento": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Resultado": {
-     "valor": "17/08/2026",
-     "trecho": "a avaliadora da fase de Chamamento Público Até às 23h59 de 06/08/2026 Divulgação do resultado preliminar da classificação das candidaturas Até às 23h59 de 17/08/2026 Prazo para interposição de recurso quanto ao resultado preliminar da",
-     "pagina": 2,
-     "documento": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos/prorrogacao-de-edital.pdf",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "17/08/2026",
-     "trecho": "as candidaturas Até às 23h59 de 17/08/2026 Prazo para interposição de recurso quanto ao resultado preliminar da classificação De 17/08/2026 até às 23h59 de 19/08/2026 Publicação do resultado da análise dos rec",
-     "pagina": 2,
-     "documento": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos/prorrogacao-de-edital.pdf",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "Poderão participar deste Edital as organizações da sociedade civil (OSCs), assim consideradas aquelas definidas pelo art.",
-     "trecho": "dário e sustentável. 4. PARTICIPAÇÃO NO CHAMAMENTO PÚBLICO 4.1. Poderão participar deste Edital as organizações da sociedade civil (OSCs), assim consideradas aquelas definidas pelo art. 2º, inciso I, alíneas “a”, “b” ou “c”, da Lei nº 13.019, de 2014: a)",
-     "pagina": 5,
-     "documento": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos/edital_senaesmte_012025_retificacao3.pdf",
-     "metodo": "texto"
-    },
-    "Modalidade": {
-     "valor": null,
-     "trecho": "pública na execução e no monitoramento do Termo de Fomento. 9.7.2. Os recursos serão aplicados em caderneta de poupança, fundo de aplicação financeira de curto prazo ou operação de mercado aberto lastreado em títulos da dívida pública, mediante avaliação do investimento mais vantajoso, enquanto não empregados na sua finalidade. 9.7.3. O atraso na liberação das parcelas pactuadas no plano de trab",
-     "pagina": 22,
-     "documento": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos/edital_senaesmte_012025_retificacao3.pdf",
-     "metodo": "seção"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-13T16:38:27+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos/prorrogacao-de-edital.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos/edital_senaesmte_012025_retificacao3.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 56,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos/retificacao2-retificacao-dou-imprensa-nacional-1.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos/retificacao-edital-dpaf-1-2025-dou-de-14-11-2025.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos/retificacao-retificacao-dou-imprensa-nacional.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/economia-solidaria/editais-e-chamamentos-publicos/anexo-i-termo_de_referencia_edital012025_retificado.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 9,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "ja_constava",
-     "Órgão / financiador": "ja_constava",
-     "Território": "falta",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
   }
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2365,
-   "bronze": 121,
-   "prata": 182
+   "sem_estrela": 2339,
+   "bronze": 122,
+   "prata": 178
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 133,
-    "bronze": 8,
-    "prata": 11
+    "sem_estrela": 107,
+    "bronze": 9,
+    "prata": 8
    },
    "livro": {
     "sem_estrela": 2232,
     "bronze": 113,
-    "prata": 171
+    "prata": 170
    }
   },
-  "fila_oportunidades": 152,
-  "fila_livros": 2516,
-  "devidas_nesta_hora": 2294,
+  "fila_oportunidades": 124,
+  "fila_livros": 2515,
+  "devidas_nesta_hora": 2280,
   "promovidas_nesta_execucao": 0,
-  "sem_material_agora": 23,
+  "sem_material_agora": 22,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
    "chaves": 1058,
-   "sites": 2270
+   "sites": 2266
   },
   "intervalo_horas": 12,
   "limite": 10,
