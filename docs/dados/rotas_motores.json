@@ -1,13 +1,13 @@
 {
- "em": "2026-10-18T07:02:36+00:00",
+ "em": "2026-10-18T07:10:00+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
   "motores": 165,
-  "alterar_rota": 62,
+  "alterar_rota": 61,
   "rota_nova": 52,
   "via_ponte": 3,
-  "exemplos_da_rede": 12699
+  "exemplos_da_rede": 12780
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
@@ -29,15 +29,15 @@
    ],
    [
     "origem:rota original",
-    2.1255
-   ],
-   [
-    "tld:br",
-    2.0609
+    2.0328
    ],
    [
     "tok:leipaulogustavo",
     1.8789
+   ],
+   [
+    "tld:br",
+    1.8666
    ],
    [
     "tok:imprensa",
@@ -57,7 +57,7 @@
    ],
    [
     "tok:feed",
-    1.4079
+    1.3991
    ]
   ],
   "piores_sinais": [
@@ -71,7 +71,7 @@
    ],
    [
     "tok:ccs",
-    -1.8395
+    -1.8666
    ],
    [
     "tipo:internacional",
@@ -82,16 +82,16 @@
     -2.4769
    ],
    [
-    "origem:padrão",
-    -2.5685
-   ],
-   [
     "tok:content",
     -2.5828
    ],
    [
     "tok:uploads",
     -2.5828
+   ],
+   [
+    "origem:padrão",
+    -2.6026
    ]
   ]
  },
@@ -99,11 +99,11 @@
   "judiciario-tjgo": {
    "nome": "TJ-GO — editais das comarcas (prestações pecuniárias) e Banco de Projetos Sociais da CGJ/GO",
    "status": "alterar rota",
-   "vazias_seguidas": 112,
-   "leituras": 112,
+   "vazias_seguidas": 113,
+   "leituras": 113,
    "ok": 0,
    "ultima": {
-    "em": "2026-10-18T06:29:15+00:00",
+    "em": "2026-10-18T06:54:06+00:00",
     "classe": "vazia",
     "motivo": "0 notícias lidas (TJGO A 0 no RSS · CNJ C 0) e 0 do TJGO/CNJ no PNCP (lidas pelo motor 04, já na base): nenhum edital de destinação aberto hoje · 0 a acompanhar"
    },
@@ -141,8 +141,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T06:14:25+00:00",
-    "testes": 16,
+    "em": "2026-10-18T07:08:24+00:00",
+    "testes": 17,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -420,7 +420,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T06:15:46+00:00",
+    "em": "2026-10-18T07:09:45+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -455,6 +455,50 @@
    "historico": [],
    "rota_aprendida": null,
    "afinado": null
+  },
+  "f260-captacao-240": {
+   "nome": "UNESCO – Fundo Internacional para Diversidade Cultural",
+   "status": "alterar rota",
+   "vazias_seguidas": 40,
+   "leituras": 40,
+   "ok": 0,
+   "ultima": {
+    "em": "2026-10-18T06:59:00+00:00",
+    "classe": "vazia",
+    "motivo": "o portal recusa acesso automatizado (HTTP 403/404) — escada de alternativas"
+   },
+   "historico": [
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v"
+   ],
+   "rota_aprendida": null,
+   "afinado": {
+    "em": "2026-10-18T06:41:53+00:00",
+    "testes": 14,
+    "melhor": null,
+    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
+   }
   },
   "f260-curadoria-008": {
    "nome": "Instituto Impactarte — cadastro de proponente em fluxo contínuo",
@@ -520,51 +564,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T06:15:47+00:00",
+    "em": "2026-10-18T07:09:47+00:00",
     "testes": 12,
-    "melhor": null,
-    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
-   }
-  },
-  "f260-captacao-240": {
-   "nome": "UNESCO – Fundo Internacional para Diversidade Cultural",
-   "status": "alterar rota",
-   "vazias_seguidas": 39,
-   "leituras": 39,
-   "ok": 0,
-   "ultima": {
-    "em": "2026-10-18T06:20:38+00:00",
-    "classe": "vazia",
-    "motivo": "o portal recusa acesso automatizado (HTTP 403/404) — escada de alternativas"
-   },
-   "historico": [
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v"
-   ],
-   "rota_aprendida": null,
-   "afinado": {
-    "em": "2026-10-18T06:41:53+00:00",
-    "testes": 14,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -572,15 +573,16 @@
   "f260-espalhado-rouanet-cultura-gov-br": {
    "nome": "Ministério da Cultura — SALIC — oportunidades (espalhado de edital validado)",
    "status": "alterar rota",
-   "vazias_seguidas": 38,
-   "leituras": 38,
+   "vazias_seguidas": 39,
+   "leituras": 39,
    "ok": 0,
    "ultima": {
-    "em": "2026-10-18T06:20:35+00:00",
+    "em": "2026-10-18T06:58:58+00:00",
     "classe": "vazia",
     "motivo": "endereço não resolve (DNS) — URL errada"
    },
    "historico": [
+    "v",
     "v",
     "v",
     "v",
@@ -648,8 +650,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T06:19:17+00:00",
-    "testes": 22,
+    "em": "2026-10-18T07:10:00+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -769,7 +771,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T06:15:25+00:00",
+    "em": "2026-10-18T07:09:23+00:00",
     "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -858,7 +860,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T06:15:29+00:00",
+    "em": "2026-10-18T07:09:27+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1407,33 +1409,19 @@
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
   },
-  "plat-mapa-osc": {
-   "nome": "Mapa das OSC — editais",
-   "status": "alterar rota",
-   "vazias_seguidas": 8,
-   "leituras": 8,
-   "ok": 0,
-   "ultima": {
-    "em": "2026-10-01T14:59:49+00:00",
-    "classe": "vazia",
-    "motivo": "página institucional; seguiu 2 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje"
-   },
-   "historico": [],
-   "rota_aprendida": null,
-   "afinado": null
-  },
   "f260-captacao-254": {
    "nome": "Global Fund for Women",
    "status": "alterar rota",
-   "vazias_seguidas": 8,
-   "leituras": 13,
+   "vazias_seguidas": 9,
+   "leituras": 14,
    "ok": 0,
    "ultima": {
-    "em": "2026-10-18T06:18:46+00:00",
+    "em": "2026-10-18T06:58:58+00:00",
     "classe": "vazia",
     "motivo": "parte das páginas respondeu e parte falhou; nenhum edital reconhecido nas que responderam"
    },
    "historico": [
+    "v",
     "v",
     "v",
     "v",
@@ -1458,6 +1446,21 @@
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
+  },
+  "plat-mapa-osc": {
+   "nome": "Mapa das OSC — editais",
+   "status": "alterar rota",
+   "vazias_seguidas": 8,
+   "leituras": 8,
+   "ok": 0,
+   "ultima": {
+    "em": "2026-10-01T14:59:49+00:00",
+    "classe": "vazia",
+    "motivo": "página institucional; seguiu 2 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje"
+   },
+   "historico": [],
+   "rota_aprendida": null,
+   "afinado": null
   },
   "dj-trf1-go": {
    "nome": "Diário da Justiça Federal — Seção Judiciária de Goiás",
@@ -2107,71 +2110,6 @@
    "rota_aprendida": null,
    "afinado": null
   },
-  "plat-prefeituras-50-go": {
-   "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
-   "status": "alterar rota",
-   "vazias_seguidas": 5,
-   "leituras": 116,
-   "ok": 60,
-   "ultima": {
-    "em": "2026-10-18T05:59:55+00:00",
-    "classe": "vazia",
-    "motivo": "lida: 19; parcial: 1; falhou: 4; não lida: 1 — nenhuma seleção aberta nova hoje"
-   },
-   "historico": [
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v"
-   ],
-   "rota_aprendida": {
-    "urls": [
-     "https://www.goiania.go.gov.br/secult/pnab-2024/"
-    ],
-    "via": "direto",
-    "origem": "rota original",
-    "pontos": 89,
-    "aprendido_em": "2026-10-18T07:02:36+00:00"
-   },
-   "afinado": {
-    "em": "2026-10-18T07:02:36+00:00",
-    "testes": 16,
-    "melhor": {
-     "url": "https://www.goiania.go.gov.br/secult/pnab-2024/",
-     "via": "direto",
-     "origem": "rota original",
-     "pontos": 89,
-     "formato": "html"
-    },
-    "resultado": "rota nova em teste"
-   }
-  },
   "f260-captacao-206": {
    "nome": "Convênio com órgão público estadual",
    "status": "alterar rota",
@@ -2555,61 +2493,19 @@
     "resultado": "rota nova em teste"
    }
   },
-  "f260-curadoria-002": {
-   "nome": "Funbio — Programa Biodiversidade Litoral do Paraná",
-   "status": "rota nova em teste",
-   "vazias_seguidas": 3,
-   "leituras": 13,
-   "ok": 0,
-   "ultima": {
-    "em": "2026-10-18T05:30:29+00:00",
-    "classe": "vazia",
-    "motivo": "página respondeu com links, mas nenhum rótulo casou com o léxico do terceiro setor hoje — pode não haver edital publicado"
-   },
-   "historico": [
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v"
-   ],
-   "rota_aprendida": {
-    "urls": [
-     "https://chamadas.funbio.org.br/sitemap.xml"
-    ],
-    "via": "direto",
-    "origem": "rota original",
-    "pontos": 9,
-    "aprendido_em": "2026-10-16T16:54:42+00:00"
-   },
-   "afinado": {
-    "em": "2026-10-16T16:54:42+00:00",
-    "testes": 16,
-    "melhor": {
-     "url": "https://chamadas.funbio.org.br/sitemap.xml",
-     "via": "direto",
-     "origem": "rota original",
-     "pontos": 9,
-     "formato": "sitemap/feed"
-    },
-    "resultado": "rota nova em teste"
-   }
-  },
   "f260-captacao-221": {
    "nome": "Fundação Banco do Brasil",
    "status": "rota nova em teste",
-   "vazias_seguidas": 2,
-   "leituras": 41,
+   "vazias_seguidas": 3,
+   "leituras": 42,
    "ok": 0,
    "ultima": {
-    "em": "2026-10-18T06:21:06+00:00",
+    "em": "2026-10-18T06:59:24+00:00",
     "classe": "vazia",
     "motivo": "parte das páginas respondeu e parte falhou; nenhum edital reconhecido nas que responderam"
    },
    "historico": [
+    "v",
     "v",
     "v",
     "v",
@@ -2657,18 +2553,62 @@
     "resultado": "rota nova em teste"
    }
   },
+  "f260-curadoria-002": {
+   "nome": "Funbio — Programa Biodiversidade Litoral do Paraná",
+   "status": "rota nova em teste",
+   "vazias_seguidas": 3,
+   "leituras": 13,
+   "ok": 0,
+   "ultima": {
+    "em": "2026-10-18T05:30:29+00:00",
+    "classe": "vazia",
+    "motivo": "página respondeu com links, mas nenhum rótulo casou com o léxico do terceiro setor hoje — pode não haver edital publicado"
+   },
+   "historico": [
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v"
+   ],
+   "rota_aprendida": {
+    "urls": [
+     "https://chamadas.funbio.org.br/sitemap.xml"
+    ],
+    "via": "direto",
+    "origem": "rota original",
+    "pontos": 9,
+    "aprendido_em": "2026-10-16T16:54:42+00:00"
+   },
+   "afinado": {
+    "em": "2026-10-16T16:54:42+00:00",
+    "testes": 16,
+    "melhor": {
+     "url": "https://chamadas.funbio.org.br/sitemap.xml",
+     "via": "direto",
+     "origem": "rota original",
+     "pontos": 9,
+     "formato": "sitemap/feed"
+    },
+    "resultado": "rota nova em teste"
+   }
+  },
   "f260-curadoria-005": {
    "nome": "Fundação Tide Setubal — Edital Territórios Clínicos",
    "status": "rota nova em teste",
-   "vazias_seguidas": 2,
-   "leituras": 40,
+   "vazias_seguidas": 3,
+   "leituras": 41,
    "ok": 0,
    "ultima": {
-    "em": "2026-10-18T06:20:56+00:00",
+    "em": "2026-10-18T06:59:17+00:00",
     "classe": "vazia",
     "motivo": "parte das páginas respondeu e parte falhou; nenhum edital reconhecido nas que responderam"
    },
    "historico": [
+    "v",
     "v",
     "v",
     "v",
@@ -2923,6 +2863,71 @@
    ],
    "rota_aprendida": null,
    "afinado": null
+  },
+  "plat-prefeituras-50-go": {
+   "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
+   "status": "rota nova em teste",
+   "vazias_seguidas": 1,
+   "leituras": 117,
+   "ok": 60,
+   "ultima": {
+    "em": "2026-10-18T06:49:53+00:00",
+    "classe": "vazia",
+    "motivo": "lida: 19; parcial: 1; falhou: 4; não lida: 1 — nenhuma seleção aberta nova hoje"
+   },
+   "historico": [
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v"
+   ],
+   "rota_aprendida": {
+    "urls": [
+     "https://www.goiania.go.gov.br/secult/pnab-2024/"
+    ],
+    "via": "direto",
+    "origem": "rota original",
+    "pontos": 89,
+    "aprendido_em": "2026-10-18T07:02:36+00:00"
+   },
+   "afinado": {
+    "em": "2026-10-18T07:02:36+00:00",
+    "testes": 16,
+    "melhor": {
+     "url": "https://www.goiania.go.gov.br/secult/pnab-2024/",
+     "via": "direto",
+     "origem": "rota original",
+     "pontos": 89,
+     "formato": "html"
+    },
+    "resultado": "rota nova em teste"
+   }
   },
   "plat-estaduais-go-gov": {
    "nome": "Oportunidade Estaduais Governamentais de Goiás",
@@ -3931,10 +3936,10 @@
    "nome": "Instituto Sabin",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 46,
-   "ok": 21,
+   "leituras": 47,
+   "ok": 22,
    "ultima": {
-    "em": "2026-10-18T06:18:28+00:00",
+    "em": "2026-10-18T06:58:42+00:00",
     "classe": "ok",
     "motivo": ""
    },
@@ -3951,6 +3956,7 @@
     "o",
     "v",
     "v",
+    "o",
     "o",
     "o",
     "o",
@@ -4275,10 +4281,10 @@
    "nome": "Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 115,
-   "ok": 63,
+   "leituras": 116,
+   "ok": 64,
    "ultima": {
-    "em": "2026-10-18T06:31:42+00:00",
+    "em": "2026-10-18T06:58:29+00:00",
     "classe": "ok",
     "motivo": ""
    },
@@ -5172,15 +5178,14 @@
    "nome": "Outras Oportunidades 3/8",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 34,
-   "ok": 24,
+   "leituras": 35,
+   "ok": 25,
    "ultima": {
-    "em": "2026-10-18T06:15:25+00:00",
+    "em": "2026-10-18T06:57:04+00:00",
     "classe": "ok",
     "motivo": ""
    },
    "historico": [
-    "v",
     "o",
     "o",
     "o",
@@ -5207,6 +5212,7 @@
     "v",
     "v",
     "v",
+    "o",
     "o",
     "o",
     "o"
@@ -5218,14 +5224,15 @@
    "nome": "Adaptador WordPress — sites oficiais pela API pública",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 22,
-   "ok": 22,
+   "leituras": 23,
+   "ok": 23,
    "ultima": {
-    "em": "2026-10-18T06:14:02+00:00",
+    "em": "2026-10-18T06:55:44+00:00",
     "classe": "ok",
     "motivo": ""
    },
    "historico": [
+    "o",
     "o",
     "o",
     "o",
@@ -5386,14 +5393,15 @@
    "nome": "Adaptador Mapas Culturais — oportunidades com inscrição aberta",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 19,
-   "ok": 19,
+   "leituras": 20,
+   "ok": 20,
    "ultima": {
-    "em": "2026-10-18T06:29:13+00:00",
+    "em": "2026-10-18T06:54:04+00:00",
     "classe": "ok",
     "motivo": ""
    },
    "historico": [
+    "o",
     "o",
     "o",
     "o",
@@ -5421,14 +5429,15 @@
    "nome": "Outras Oportunidades 7/8",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 21,
-   "ok": 21,
+   "leituras": 22,
+   "ok": 22,
    "ultima": {
-    "em": "2026-10-18T06:23:40+00:00",
+    "em": "2026-10-18T06:51:53+00:00",
     "classe": "ok",
     "motivo": ""
    },
    "historico": [
+    "o",
     "o",
     "o",
     "o",
@@ -5458,10 +5467,10 @@
    "nome": "Outras Oportunidades 8/8",
    "status": "rota nova funcionando",
    "vazias_seguidas": 0,
-   "leituras": 16,
-   "ok": 9,
+   "leituras": 17,
+   "ok": 10,
    "ultima": {
-    "em": "2026-10-18T06:16:40+00:00",
+    "em": "2026-10-18T06:58:19+00:00",
     "classe": "ok",
     "motivo": ""
    },
@@ -5481,6 +5490,7 @@
     "v",
     "v",
     "v",
+    "o",
     "o"
    ],
    "rota_aprendida": {
@@ -5545,10 +5555,10 @@
    "nome": "PNAB Goiânia - Audiovisual",
    "status": "rota nova funcionando",
    "vazias_seguidas": 0,
-   "leituras": 13,
-   "ok": 2,
+   "leituras": 14,
+   "ok": 3,
    "ultima": {
-    "em": "2026-10-18T06:18:44+00:00",
+    "em": "2026-10-18T06:58:56+00:00",
     "classe": "ok",
     "motivo": ""
    },
@@ -5564,6 +5574,7 @@
     "v",
     "v",
     "v",
+    "o",
     "o",
     "o"
    ],

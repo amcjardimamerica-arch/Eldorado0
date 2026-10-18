@@ -157,7 +157,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 3,
- "exemplos_da_rede_de_rotas": 12699
+ "exemplos_da_rede_de_rotas": 12780
 }
 ```
 
@@ -269,8 +269,8 @@
    "achados": 52
   },
   "outras-oportunidades-3": {
-   "ultima": "2026-10-18T06:15:25+00:00",
-   "duracao_s": 84,
+   "ultima": "2026-10-18T06:57:04+00:00",
+   "duracao_s": 80,
    "achados": 5
   },
   "outras-oportunidades-4": {
@@ -289,13 +289,13 @@
    "achados": 20
   },
   "outras-oportunidades-7": {
-   "ultima": "2026-10-18T06:23:40+00:00",
-   "duracao_s": 121,
+   "ultima": "2026-10-18T06:51:53+00:00",
+   "duracao_s": 120,
    "achados": 13
   },
   "outras-oportunidades-8": {
-   "ultima": "2026-10-18T06:16:40+00:00",
-   "duracao_s": 75,
+   "ultima": "2026-10-18T06:58:19+00:00",
+   "duracao_s": 74,
    "achados": 1
   },
   "outras-oportunidades-2": {
@@ -317,19 +317,19 @@
 {
  "adaptadores": {
   "plataforma-wordpress": {
-   "ultima": "2026-10-18T06:14:02+00:00",
-   "achados": 10,
+   "ultima": "2026-10-18T06:55:44+00:00",
+   "achados": 4,
    "diagnostico": {
     "sites": 20,
     "instancias": null,
-    "respostas_json": 49,
-    "posts": 63,
+    "respostas_json": 42,
+    "posts": 32,
     "oportunidades": null,
     "motivo_zero": null
    }
   },
   "plataforma-mapas-culturais": {
-   "ultima": "2026-10-18T06:29:13+00:00",
+   "ultima": "2026-10-18T06:54:04+00:00",
    "achados": 13,
    "diagnostico": {
     "sites": null,
