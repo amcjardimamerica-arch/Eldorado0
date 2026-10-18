@@ -1,31 +1,31 @@
 {
- "em": "2026-10-17T23:35:54+00:00",
+ "em": "2026-10-18T00:02:25+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
  "resumo": {
   "pontos_12_total": 4800,
-  "pontos_certificados": 3108,
-  "pontos_dispensados": 174,
-  "pontos_ja_constavam": 1373,
-  "pontos_faltam": 145,
-  "pct_certificado_12": 0.6837,
+  "pontos_certificados": 3089,
+  "pontos_dispensados": 173,
+  "pontos_ja_constavam": 1400,
+  "pontos_faltam": 138,
+  "pct_certificado_12": 0.6796,
   "certidoes_12_de_12": 136,
-  "certidoes_sem_item_faltando": 265,
+  "certidoes_sem_item_faltando": 268,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
-  "certidoes": 2610,
+  "certidoes": 2623,
   "nesta_execucao": 18,
-  "fila_estrelas": 152,
-  "fila_livros": 2514,
-  "itens_que_faltavam": 24006,
-  "itens_obtidos": 8904,
-  "itens_dispensados": 506,
+  "fila_estrelas": 123,
+  "fila_livros": 2512,
+  "itens_que_faltavam": 24069,
+  "itens_obtidos": 8929,
+  "itens_dispensados": 507,
   "eficiencia_itens": 0.392,
-  "com_link_oficial": 1767,
+  "com_link_oficial": 1776,
   "taxa_link_oficial": 0.677,
-  "certidoes_completas": 246,
-  "para_o_interceptador": 1897,
-  "para_o_chrome": 466,
+  "certidoes_completas": 249,
+  "para_o_interceptador": 1903,
+  "para_o_chrome": 470,
   "selos_que_mudaram": {
    "bronze → ouro": 6,
    "bronze → prata": 1,
@@ -36,7 +36,7 @@
    "prata → ouro": 3
   },
   "por_degrau": {
-   "degrau 0": 1690,
+   "degrau 0": 1699,
    "degrau 1": 118
   }
  },
@@ -47,74 +47,74 @@
  },
  "por_item": {
   "Objeto": {
-   "faltavam": 1699,
-   "obtidos": 552,
+   "faltavam": 1703,
+   "obtidos": 554,
    "dispensados": 0,
    "eficiencia": 0.325
   },
   "Prazo de inscrição": {
-   "faltavam": 1813,
-   "obtidos": 558,
-   "dispensados": 142,
-   "eficiencia": 0.386
+   "faltavam": 1818,
+   "obtidos": 561,
+   "dispensados": 143,
+   "eficiencia": 0.387
   },
   "Resultado": {
-   "faltavam": 2334,
-   "obtidos": 594,
+   "faltavam": 2342,
+   "obtidos": 600,
    "dispensados": 227,
-   "eficiencia": 0.352
+   "eficiencia": 0.353
   },
   "Prazo de recurso": {
-   "faltavam": 2297,
-   "obtidos": 520,
+   "faltavam": 2304,
+   "obtidos": 522,
    "dispensados": 45,
    "eficiencia": 0.246
   },
   "Valor": {
-   "faltavam": 2047,
-   "obtidos": 668,
+   "faltavam": 2054,
+   "obtidos": 670,
    "dispensados": 60,
-   "eficiencia": 0.356
+   "eficiencia": 0.355
   },
   "Órgão / financiador": {
-   "faltavam": 1556,
-   "obtidos": 937,
+   "faltavam": 1558,
+   "obtidos": 938,
    "dispensados": 0,
    "eficiencia": 0.602
   },
   "Território": {
-   "faltavam": 1836,
-   "obtidos": 573,
+   "faltavam": 1844,
+   "obtidos": 575,
    "dispensados": 0,
    "eficiencia": 0.312
   },
   "Esfera": {
-   "faltavam": 2080,
-   "obtidos": 1282,
+   "faltavam": 2083,
+   "obtidos": 1283,
    "dispensados": 0,
    "eficiencia": 0.616
   },
   "Requisitos": {
-   "faltavam": 2271,
-   "obtidos": 598,
+   "faltavam": 2278,
+   "obtidos": 599,
    "dispensados": 0,
    "eficiencia": 0.263
   },
   "Anexos": {
-   "faltavam": 1639,
-   "obtidos": 356,
+   "faltavam": 1644,
+   "obtidos": 358,
    "dispensados": 4,
    "eficiencia": 0.22
   },
   "Modalidade": {
-   "faltavam": 2250,
-   "obtidos": 776,
+   "faltavam": 2254,
+   "obtidos": 778,
    "dispensados": 28,
-   "eficiencia": 0.357
+   "eficiencia": 0.358
   },
   "Área de atuação": {
-   "faltavam": 2184,
-   "obtidos": 1490,
+   "faltavam": 2187,
+   "obtidos": 1491,
    "dispensados": 0,
    "eficiencia": 0.682
   }
@@ -129,12 +129,12 @@
    "taxa_link_oficial": 0.761
   },
   "pncp": {
-   "certidoes": 105,
-   "com_link_oficial": 77,
-   "faltavam": 968,
-   "resolvidos": 525,
-   "eficiencia": 0.542,
-   "taxa_link_oficial": 0.733
+   "certidoes": 106,
+   "com_link_oficial": 78,
+   "faltavam": 969,
+   "resolvidos": 526,
+   "eficiencia": 0.543,
+   "taxa_link_oficial": 0.736
   },
   "?": {
    "certidoes": 3,
@@ -145,28 +145,28 @@
    "taxa_link_oficial": 1.0
   },
   "orgao": {
-   "certidoes": 1210,
-   "com_link_oficial": 969,
-   "faltavam": 10824,
-   "resolvidos": 4959,
-   "eficiencia": 0.458,
+   "certidoes": 1218,
+   "com_link_oficial": 976,
+   "faltavam": 10862,
+   "resolvidos": 4983,
+   "eficiencia": 0.459,
    "taxa_link_oficial": 0.801
   },
   "privado": {
-   "certidoes": 576,
-   "com_link_oficial": 400,
-   "faltavam": 4888,
-   "resolvidos": 1468,
+   "certidoes": 578,
+   "com_link_oficial": 401,
+   "faltavam": 4892,
+   "resolvidos": 1469,
    "eficiencia": 0.3,
    "taxa_link_oficial": 0.694
   },
   "pista": {
-   "certidoes": 350,
+   "certidoes": 352,
    "com_link_oficial": 61,
-   "faltavam": 3168,
+   "faltavam": 3188,
    "resolvidos": 731,
-   "eficiencia": 0.231,
-   "taxa_link_oficial": 0.174
+   "eficiencia": 0.229,
+   "taxa_link_oficial": 0.173
   },
   "diario": {
    "certidoes": 156,
@@ -187,20 +187,20 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2083,
-   "faltavam": 18091,
-   "resolvidos": 6323,
+   "certidoes": 2098,
+   "faltavam": 18178,
+   "resolvidos": 6363,
    "eficiencia": 0.35,
-   "com_link_oficial": 1329,
-   "taxa_link_oficial": 0.638
+   "com_link_oficial": 1340,
+   "taxa_link_oficial": 0.639
   },
   "refeitas": {
-   "certidoes": 527,
-   "faltavam": 5915,
-   "resolvidos": 2978,
+   "certidoes": 525,
+   "faltavam": 5891,
+   "resolvidos": 2964,
    "eficiencia": 0.503,
-   "com_link_oficial": 438,
-   "taxa_link_oficial": 0.831
+   "com_link_oficial": 436,
+   "taxa_link_oficial": 0.83
   }
  },
  "por_versao": {
@@ -221,11 +221,11 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2387,
-   "faltavam": 21407,
-   "resolvidos": 8062,
+   "certidoes": 2400,
+   "faltavam": 21470,
+   "resolvidos": 8088,
    "eficiencia": 0.377,
-   "com_link_oficial": 1595,
+   "com_link_oficial": 1604,
    "taxa_link_oficial": 0.668
   },
   "revisão manual": {
@@ -240,11 +240,11 @@
  "por_abordagem": {
   "1": {
    "nome": "documento na mão",
-   "vezes": 2487,
-   "renderam": 1628,
-   "itens": 8515,
-   "links_oficiais": 1544,
-   "taxa_de_acerto": 0.655
+   "vezes": 2500,
+   "renderam": 1636,
+   "itens": 8541,
+   "links_oficiais": 1553,
+   "taxa_de_acerto": 0.654
   },
   "2": {
    "nome": "anexos completos",
@@ -256,11 +256,11 @@
   },
   "3": {
    "nome": "página oficial e citados",
-   "vezes": 333,
+   "vezes": 332,
    "renderam": 82,
    "itens": 468,
    "links_oficiais": 53,
-   "taxa_de_acerto": 0.246
+   "taxa_de_acerto": 0.247
   },
   "4": {
    "nome": "biblioteca de sites",
@@ -288,11 +288,11 @@
   },
   "7": {
    "nome": "releitura com gabarito",
-   "vezes": 13,
+   "vezes": 14,
    "renderam": 1,
    "itens": 1,
    "links_oficiais": 0,
-   "taxa_de_acerto": 0.077
+   "taxa_de_acerto": 0.071
   },
   "8": {
    "nome": "ponte do titular",
@@ -304,11 +304,11 @@
   },
   "9": {
    "nome": "leitura profunda",
-   "vezes": 78,
+   "vezes": 79,
    "renderam": 15,
    "itens": 62,
    "links_oficiais": 9,
-   "taxa_de_acerto": 0.192
+   "taxa_de_acerto": 0.19
   },
   "10": {
    "nome": "busca no domínio",
@@ -322,29 +322,29 @@
  "por_balcao_selo": {
   "sem_estrela": {
    "nome": "Sem estrela → bronze",
-   "certidoes": 1370,
-   "faltavam": 12419,
-   "resolvidos": 3845,
+   "certidoes": 1379,
+   "faltavam": 12472,
+   "resolvidos": 3868,
    "eficiencia": 0.31,
-   "entraram_aqui": 1519,
+   "entraram_aqui": 1528,
    "esgotadas": 0
   },
   "bronze": {
    "nome": "Bronze → prata",
-   "certidoes": 66,
-   "faltavam": 567,
-   "resolvidos": 387,
-   "eficiencia": 0.683,
-   "entraram_aqui": 29,
+   "certidoes": 69,
+   "faltavam": 576,
+   "resolvidos": 390,
+   "eficiencia": 0.677,
+   "entraram_aqui": 32,
    "esgotadas": 0
   },
   "prata": {
    "nome": "Prata → ouro",
-   "certidoes": 967,
-   "faltavam": 8758,
+   "certidoes": 968,
+   "faltavam": 8759,
    "resolvidos": 3645,
    "eficiencia": 0.416,
-   "entraram_aqui": 939,
+   "entraram_aqui": 940,
    "esgotadas": 0
   },
   "ouro": {
@@ -358,7 +358,7 @@
   }
  },
  "gabarito": {
-  "orgaos_com_gabarito": 1226,
+  "orgaos_com_gabarito": 1228,
   "itens_achados_pelo_gabarito": {
    "Prazo de recurso": 20,
    "Objeto": 68,
@@ -5317,7 +5317,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-17T22:58:01+00:00",
+   "em": "2026-10-17T23:51:57+00:00",
    "prazo": "2026-10-21",
    "uf": null,
    "orgao": "CONSELHO DE ARQUITETURA E URBANISMO DO ESTADO DE MINAS GERAIS",
@@ -35641,6 +35641,112 @@
    }
   },
   {
+   "id": "nova-ec0435172214",
+   "tipo": "livro",
+   "titulo": "Grupo Equatorial abre chamada com mais de R$ 61 milhões para projetos de eficiência energética",
+   "balcao": "privado",
+   "link_oficial": "https://equatorial.gestaocpp.com.br/",
+   "degrau": 0,
+   "como": "documento entregue pelo motor",
+   "faltavam": [
+    "Objeto"
+   ],
+   "resolvidos": [
+    "Objeto"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T23:59:52+00:00",
+   "prazo": null,
+   "uf": "BR",
+   "orgao": "Observatório do Terceiro Setor — editais",
+   "fim": "2026-12-18",
+   "itens": {
+    "Objeto": {
+     "valor": "orientar o consumidor no ato da compra, indicando os produtos disponíveis no mercado que apresentem os melhores níveis de eficiência energética dentro de cada categoria.",
+     "trecho": "com sua Secretaria -Executiva mantida pela Eletrobras. O Selo PROCEL tem por objetivo orientar o consumidor no ato da compra, indicando os produtos disponíveis no mercado que apresentem os melhores níveis de eficiência energética dentro de cada categoria. Programa Brasileiro de Etiquetagem - PBE: Coordenado pelo “Institut",
+     "pagina": 51,
+     "documento": "https://equatorial.gestaocpp.com.br/uploads/landing/11111111-1111-1111-1111-111111111111/61d98c2a-0156-4d60-9f67-aeb1abdb1156.pdf",
+     "metodo": "texto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T23:59:52+00:00",
+     "ganhou": [
+      "Objeto"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://equatorial.gestaocpp.com.br/",
+     "degrau": 0,
+     "como": "documento entregue pelo motor",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://equatorial.gestaocpp.com.br/uploads/landing/11111111-1111-1111-1111-111111111111/443f0281-6bcb-406a-b0ae-dce81bfb3f87.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Cronograma",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://equatorial.gestaocpp.com.br/uploads/landing/11111111-1111-1111-1111-111111111111/61d98c2a-0156-4d60-9f67-aeb1abdb1156.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: https://equatorial.gestaocpp.com.br/uploads/landing/11111111-1111-1111-1111-111111111111/61d98c2a-0156-4d60-9f67-aeb1abdb1156.pdf",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio próprio do financiador",
+     "paginas": 60,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "ja_constava",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "ja_constava",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "op-88c2f74b9158",
    "tipo": "livro",
    "titulo": "Inscrições Abertas",
@@ -38909,7 +39015,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-17T22:35:46+00:00",
+   "em": "2026-10-17T23:43:18+00:00",
    "prazo": "2027-08-07",
    "uf": null,
    "orgao": "MUNICIPIO DE TRINDADE",
@@ -39702,6 +39808,92 @@
     "ja_constavam": 2,
     "faltam": 0,
     "pct_certificado_12": 0.8333,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-b0f837ba3423",
+   "tipo": "livro",
+   "titulo": "Municipio de pirenopolis — chamamento público visando celebrar termo de colaboração com organizações da socied… — Goiás / Pirenópolis",
+   "balcao": "pncp",
+   "link_oficial": "https://pncp.gov.br/pncp-api/v1/orgaos/01067941000105/compras/2025/74/arquivos/1",
+   "degrau": 0,
+   "como": "PNCP: arquivo anexado pelo órgão (Aviso de Contratação Direta)",
+   "faltavam": [
+    "Território"
+   ],
+   "resolvidos": [
+    "Território"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T00:01:49+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": "MUNICIPIO DE PIRENOPOLIS",
+   "fim": null,
+   "itens": {
+    "Território": {
+     "valor": "do Município de Pirenópolis",
+     "trecho": "ado, por extrato, no site www.pirenopolis.go.gov.br e Diário Oficial do Município de Pirenópolis. 28.8. A OSC que vier a firmar TERMO DE COLABORAÇÃO com o Poder Públ",
+     "pagina": 24,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/01067941000105/compras/2025/74/arquivos/1",
+     "metodo": "texto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T00:01:49+00:00",
+     "ganhou": [
+      "Território"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/01067941000105/compras/2025/74/arquivos/1",
+     "degrau": 0,
+     "como": "PNCP: arquivo anexado pelo órgão (Aviso de Contratação Direta)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 60,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "certificado",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "ja_constava",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
     "pct_cobertura_12": 1.0
    }
   },
@@ -41962,6 +42154,112 @@
      "Requisitos": "ja_constava",
      "Anexos": "ja_constava",
      "Modalidade": "certificado",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-6dde4cc20d6f",
+   "tipo": "livro",
+   "titulo": "Pdf edital de credenciamento de no001/2026 - organizações da sociedade civil — Goiás",
+   "balcao": "orgao",
+   "link_oficial": "https://goias.gov.br/meioambiente/edital-de-credenciamento/",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Valor"
+   ],
+   "resolvidos": [
+    "Valor"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "bronze",
+   "estagio_inicio": "bronze",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T00:01:25+00:00",
+   "prazo": null,
+   "uf": "BR",
+   "orgao": "MUNICÍPIO DE GOIANÉSIA, ESTADO DE GOIÁS",
+   "fim": "2026-04-17",
+   "itens": {
+    "Valor": {
+     "valor": "R$ 20.000,00 (vinte mil reais)",
+     "trecho": "ados pela SEMAD. 7.2. Os projetos subme\u0000dos devem ter valor mínimo de R$ 20.000,00 (vinte mil reais) e máximo de R$ 120.000,00 (cento e vinte mil reais). Não há limite má",
+     "pagina": 12,
+     "documento": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2025/02/Edital-Credenciamento-01-2025-Sociobiodiversidade.pdf",
+     "metodo": "seção"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T00:01:25+00:00",
+     "ganhou": [
+      "Valor"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://goias.gov.br/meioambiente/edital-de-credenciamento/",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goianesia.go.gov.br/wp-content/uploads/2023/11/Edital-Credenciamento-Promocao.pdf",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 26,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2025/02/Edital-Credenciamento-01-2025-Sociobiodiversidade.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 30,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "ja_constava",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "certificado",
+     "Órgão / financiador": "ja_constava",
+     "Território": "ja_constava",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "ja_constava",
      "Área de atuação": "ja_constava"
     },
     "certificados": 1,
@@ -48375,7 +48673,7 @@
    "encaminhado": null,
    "selo_antes": "bronze",
    "selo_depois": "ouro",
-   "em": "2026-10-17T22:37:28+00:00",
+   "em": "2026-10-17T23:45:17+00:00",
    "prazo": "2028-12-04",
    "uf": null,
    "orgao": "TRIBUNAL SUPERIOR DO TRABALHO",
@@ -55190,6 +55488,225 @@
       "Anexos",
       "Modalidade",
       "Esfera",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-n-o-51-2026-programa-de-ciencia-tecnologia-e-inovacao-em-pesquisas-na-area-de-gestao-tratamento-e-valorizacao-de-carvao-mineral",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 44,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://fapesc.sc.gov.br/wp-content/uploads/2026/09/Resultado-Parcial-de-admissibilidade-CP-051_2026.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 2,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://fapesc.sc.gov.br/wp-content/uploads/2026/09/Resultado-Final-de-admissibilidade-CP-051_2026.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: documento embutido na página",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 2,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "falta",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 11,
+    "dispensados": 0,
+    "ja_constavam": 0,
+    "faltam": 1,
+    "pct_certificado_12": 0.9167,
+    "pct_cobertura_12": 0.9167
+   }
+  },
+  {
+   "id": "op-7e0f692201de",
+   "tipo": "livro",
+   "titulo": "EDITAL DE CHAMADA PÚBLICA FAPESC N.º 051/2026",
+   "balcao": "orgao",
+   "link_oficial": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-n-o-51-2026-programa-de-ciencia-tecnologia-e-inovacao-em-pesquisas-na-area-de-gestao-tratamento-e-valorizacao-de-carvao-mineral",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [
+    "Requisitos"
+   ],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 0.917,
+   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T23:59:10+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": null,
+   "fim": "2026-09-18",
+   "itens": {
+    "Prazo de inscrição": {
+     "valor": "18/08/2026 a 18/09/2026",
+     "trecho": "ca (CNPJ) do Estado de Santa Catarina, a apresentarem propostas. Prazo para submissão: 18/08/2026 a 18/09/2026 Contato para dúvidas: pesquisa@fapesc.sc.gov.br ACESSE O",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-n-o-51-2026-programa-de-ciencia-tecnologia-e-inovacao-em-pesquisas-na-area-de-gestao-tratamento-e-valorizacao-de-carvao-mineral",
+     "metodo": "cronograma"
+    },
+    "Órgão / financiador": {
+     "valor": "FUNDAÇÃO DE AMPARO À PESQUISA E INOVAÇÃO DO ESTADO DE SANTA CATARINA (FAPESC) torna público o lanç",
+     "trecho": "18/08/2026 14:30 A FUNDAÇÃO DE AMPARO À PESQUISA E INOVAÇÃO DO ESTADO DE SANTA CATARINA (FAPESC) torna público o lançamento do presente Edital de Chamada Pública para fomento à execução d",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-n-o-51-2026-programa-de-ciencia-tecnologia-e-inovacao-em-pesquisas-na-area-de-gestao-tratamento-e-valorizacao-de-carvao-mineral",
+     "metodo": "cabeçalho"
+    },
+    "Território": {
+     "valor": "do Estado de Santa Catarina",
+     "trecho": ", sediadas e inscritas no Cadastro Nacional da Pessoa Jurídica (CNPJ) do Estado de Santa Catarina, a apresentarem propostas. Prazo para submissão: 18/08/2026 a 18",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-n-o-51-2026-programa-de-ciencia-tecnologia-e-inovacao-em-pesquisas-na-area-de-gestao-tratamento-e-valorizacao-de-carvao-mineral",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "estadual",
+     "trecho": "domínio/órgão: fapesc.sc.gov.br · FUNDAÇÃO DE AMPARO À PESQUISA E INOVAÇÃO DO ESTADO DE SANTA CATARINA (FAPESC) to",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-n-o-51-2026-programa-de-ciencia-tecnologia-e-inovacao-em-pesquisas-na-area-de-gestao-tratamento-e-valorizacao-de-carvao-mineral",
+     "metodo": "domínio e órgão"
+    },
+    "Área de atuação": {
+     "valor": "Cultura, Meio ambiente, Ciência e tecnologia",
+     "trecho": "termos do objeto e do título: Cultura, Meio ambiente, Ciência e tecnologia",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/edital-de-chamada-publica-fapesc-n-o-51-2026-programa-de-ciencia-tecnologia-e-inovacao-em-pesquisas-na-area-de-gestao-tratamento-e-valorizacao-de-carvao-mineral",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Resultado": {
+     "valor": "23/09/2026",
+     "trecho": "das propostas via SIGFAPESC De 18/08/2026 a 18/09/2026 Até as 18 horas Resultado de admissibilidade 23/09/2026 Período para apresentação de recurso admissibilidade De 24/09/2026 a",
+     "pagina": 5,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "24/09/2026 a 28/09/2026",
+     "trecho": "té as 18 horas Resultado de admissibilidade 23/09/2026 Período para apresentação de recurso admissibilidade De 24/09/2026 a 28/09/2026 (até as 18 h) Resultado do julgamento dos recursos de admissibilidad",
+     "pagina": 5,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
+     "metodo": "seção"
+    },
+    "Valor": {
+     "valor": "R$ 875.000,00 (oitocentos e setenta e cinco mil reais)",
+     "trecho": "écnica e orçamentária para cada uma das linhas contempladas. 5.4. O valor global destinado à presente Chamada é de até R$ 875.000,00 (oitocentos e setenta e cinco mil reais). Os recursos, provenientes da Compensação Financeira pela Exploração",
+     "pagina": 5,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "a promoção do ecossistema catarinense de Ciência, Tecnologia e Inovação (CTI) para o avanço de todas as áreas do conhecimento, o equilíbrio regional, o desenvolvimento econômico sustentável e a melhoria da qualidade de vida da população do Estado;",
+     "trecho": "to executora da política estadual de ciência, tecnologia e inovação, tem como finalidade a promoção do ecossistema catarinense de Ciência, Tecnologia e Inovação (CTI) para o avanço de todas as áreas do conhecimento, o equilíbrio regional, o desenvolvimento econômico sustentável e a melhoria da qualidade de vida da população do Estado; ● que compete à FAPESC apoiar e promover a realização de estudo",
+     "pagina": 1,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
+     "metodo": "texto"
+    },
+    "Anexos": {
+     "valor": "ANEXO I TERMO DE OUTORGA DE AUXÍLIO FINANCEIRO A PROJETO DE PESQUISA; ANEXO II TERMO DE COMPROMISSO DE BOLSA FAPESC; ANEXO III PLANO DE TRABALHO DO(A) BOLSISTA",
+     "trecho": "[TABELA] as normas municipais, estaduais e federais aplicáveis. ANEXO I TERMO DE OUTORGA DE AUXÍLIO FINANCEIRO A PROJETO DE PESQUISA EDITAL DE CHAMADA PÚBLICA FAPESC N.º 051/2026 — PROGRAMA DE CIÊNCIA, TECNOLOGIA E INOVAÇÃO EM PESQUISAS NA ÁREA DE",
+     "pagina": 19,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
+     "metodo": "lista de anexos"
+    },
+    "Modalidade": {
+     "valor": "Bolsa",
+     "trecho": "noventa e dois mil reais) incluindo, obrigatoriamente, uma quota de bolsa de Iniciação Científica (IC); b) Linha 2: até R$ 292.000,00 (duzentos e noventa e dois mil reais) incluindo, obrigatoriam",
+     "pagina": 5,
+     "documento": "https://fapesc.sc.gov.br/wp-content/uploads/2026/08/edital-carvao.pdf",
+     "metodo": "modalidade de recebimento"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T23:59:10+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
       "Objeto",
       "Prazo de inscrição",
       "Prazo de recurso",
@@ -65632,7 +66149,7 @@
    "ainda_faltam": [
     "Prazo de recurso"
    ],
-   "tentativa": 5,
+   "tentativa": 6,
    "versao": "cartório v5 · linha de produção (09/10/2026)",
    "gabarito": null,
    "estagio": "prata",
@@ -65642,7 +66159,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": null,
    "selo_depois": "prata",
-   "em": "2026-10-17T23:02:22+00:00",
+   "em": "2026-10-17T23:57:17+00:00",
    "prazo": "2030-09-07T18:00",
    "uf": "SP",
    "orgao": null,
@@ -65721,10 +66238,10 @@
    },
    "dispensas": {
     "Valor": {
-     "motivo": "pagamento por tabela ou valor fixado pela Administração, igual para todos os credenciados",
-     "trecho": null,
-     "pagina": null,
-     "documento": null
+     "motivo": "dispensado pelo Cartório — não se aplica: sem repasse financeiro (cooperação, cessão ou habilitação sem recurso)",
+     "trecho": "ªo de terceiros na consecuçªo do objeto do presente Termo, ainda que a título gratuito ou mediante relaçªo empregatícia; f) permanecer nas dependŒncias do",
+     "pagina": 30,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/2"
     }
    },
    "abordagens": [
@@ -65772,6 +66289,13 @@
      "n": 4,
      "nome": "biblioteca de sites",
      "em": "2026-10-17T22:11:33+00:00",
+     "ganhou": [],
+     "legado": null
+    },
+    {
+     "n": 7,
+     "nome": "releitura com gabarito",
+     "em": "2026-10-17T23:57:17+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -65925,6 +66449,46 @@
      "falha": null,
      "oficial": "arquivo do edital anexado pelo órgão no PNCP",
      "paginas": 60,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/2",
+     "degrau": 0,
+     "como": "releitura com o gabarito do órgão atualizado",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 60,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/3",
+     "degrau": 0,
+     "como": "releitura com o gabarito do órgão atualizado",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 15,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/4",
+     "degrau": 0,
+     "como": "releitura com o gabarito do órgão atualizado",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 7,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/51174001000193/compras/2025/260/arquivos/5",
+     "degrau": 0,
+     "como": "releitura com o gabarito do órgão atualizado",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 7,
      "edicao_inteira": null
     }
    ],
@@ -66153,6 +66717,265 @@
     },
     "certificados": 9,
     "dispensados": 2,
+    "ja_constavam": 0,
+    "faltam": 1,
+    "pct_certificado_12": 0.9167,
+    "pct_cobertura_12": 0.9167
+   }
+  },
+  {
+   "id": "op-8cf5f31a8418",
+   "tipo": "livro",
+   "titulo": "SECULT-GO (cultura) — Programação do Natal do Bem 2026 terá 58 apresentações artísticas",
+   "balcao": "orgao",
+   "link_oficial": "https://goias.gov.br/cultura/programacao-do-natal-do-bem-2026-tera-58-apresentacoes-artisticas/",
+   "degrau": 0,
+   "como": "página/documento oficial já conhecido",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [
+    "Prazo de recurso"
+   ],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 0.917,
+   "encaminhado": "Chrome (último recurso): o robots.txt do site oficial proíbe a leitura automática",
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-17T23:58:15+00:00",
+   "prazo": null,
+   "uf": "GO",
+   "orgao": "SECULT-GO (cultura)",
+   "fim": "2026-03-13",
+   "itens": {
+    "Órgão / financiador": {
+     "valor": "Secretaria de Estado da Cultura",
+     "trecho": "ramação do Natal do Bem 2026 terá 58 apresentações artísticas &#8211; Secretaria de Estado da Cultura",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/cultura/programacao-do-natal-do-bem-2026-tera-58-apresentacoes-artisticas/",
+     "metodo": "cabeçalho"
+    },
+    "Esfera": {
+     "valor": "federal",
+     "trecho": "domínio/órgão: goias.gov.br · Secretaria de Estado da Cultura SECULT-GO (cultura)",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/cultura/programacao-do-natal-do-bem-2026-tera-58-apresentacoes-artisticas/",
+     "metodo": "domínio e órgão"
+    },
+    "Modalidade": {
+     "valor": "Termo de Fomento",
+     "trecho": "vênios e Acordos Chamamentos Públicos Licitações / Contratações Termos de Fomento LGPD Incentivo Cultural Arranjos Regionais FSA Lei Paulo Gustavo Programa Goyazes Fundo",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/cultura/programacao-do-natal-do-bem-2026-tera-58-apresentacoes-artisticas/",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Cultura",
+     "trecho": "termos do objeto e do título: Cultura",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/cultura/programacao-do-natal-do-bem-2026-tera-58-apresentacoes-artisticas/",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Resultado": {
+     "valor": "16/07/2026",
+     "trecho": "ia Material de Apoio Extrato de Publicação &#8211; Diário Oficial Resultado Preliminar Categoria A Resultado Preliminar Categoria B Resultado Final -&gt; Edital &#8211; Errata Nº 02/2026 (16/07/2026) EDITAL DE MANUTENÇÃO CON",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/cultura/pnab/edital-2026-pnab/",
+     "metodo": "seção"
+    },
+    "Anexos": {
+     "valor": "ANEXO I &#8211; Cultura e Social; ANEXO I &#8211; Edital Ocupa Goias Virada Cultural; ANEXO I Ocupa Goiás; ANEXO V &#8211; CRONOGRAMA VIRADA CULTURAL 2026; ANEXO V &#8211; CRONOGRAMA PONTOS; ANEXO V &#8211; CRONOGRAMA PONTÕES DE CULTURA",
+     "trecho": "Edital Cultura e Social Áudio do Edital Cultura e Social ANEXO I &#8211; Cultura e Social Áudio do Anexo I &#8211; Cultura e Social Anexo II – Modelo Formulário de Inscrição/Plano de Trabalho Anexo III &#8211; Critérios de seleção Anexo IV",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/cultura/pnab/edital-2026-pnab/",
+     "metodo": "lista de anexos"
+    },
+    "Valor": {
+     "valor": "R$ 400.000,00 (quatrocentos mil reais)",
+     "trecho": "VALORES: Serão apoiados o total de 9 (nove) projetos, com o valor de R$ 400.000,00 (quatrocentos mil reais) cada, totalizando um investimento de R$ 3.600.000,00 (três milhões e",
+     "pagina": 3,
+     "documento": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/ANEXO-01-Edital-de-Manutencao-de-Grupos-e-Companhias.pdf",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "selecionar e apoiar projetos culturais voltados ao público da infância e da juventude, promovendo o acesso de crianças e adolescentes a experiências artísticas e culturais qualificadas.",
+     "trecho": "EDITAL INFÂNCIA E CULTURA ANEXO I O presente edital tem por objeto selecionar e apoiar projetos culturais voltados ao público da infância e da juventude, promovendo o acesso de crianças e adolescentes a experiências artísticas e culturais qualificadas. Serão contempladas propostas destinadas à realização de apresentaçõe",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/ANEXO-01-Edital-de-Infancia-e-Cultura.pdf",
+     "metodo": "texto"
+    },
+    "Requisitos": {
+     "valor": "CONDIÇÕES DE PARTICIPAÇÃO: O proponente deve obrigatoriamente ter comprovada experiência prévia em atividades exclusivamente dedicadas ao público infantil.",
+     "trecho": "na análise do projeto e no processo de avaliação. A.2. CONDIÇÕES DE PARTICIPAÇÃO: O proponente deve obrigatoriamente ter comprovada experiência prévia em atividades exclusivamente dedicadas ao público infantil. A.3. REGRAS E ITENS OBRIGATÓRIOS PARA A INSCRIÇÃO DO PROJETO: A",
+     "pagina": 2,
+     "documento": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/ANEXO-01-Edital-de-Infancia-e-Cultura.pdf",
+     "metodo": "texto"
+    },
+    "Prazo de inscrição": {
+     "valor": "até 13/03/2026",
+     "trecho": "aria de Estado da Cultura de Goiás. 09/03/2026 12/03/2026 Envio das Inscrições na Plataforma Baru de Editais. 13/03/2026 17/04/2026 1.1 Avaliação das propostas pela Comissão de Seleção (mér",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/CrngEdital.pdf",
+     "metodo": "cronograma"
+    },
+    "Território": {
+     "valor": "do Estado de Goiás",
+     "trecho": "ferência, a pedido ou compulsória, para a inatividade, aos militares do Estado de Goiás, prevista no parágrafo único do art. 14 da Lei federal nº 14.751, de",
+     "pagina": 1,
+     "documento": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/CrngEdital.pdf",
+     "metodo": "texto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T23:58:15+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://goias.gov.br/cultura/programacao-do-natal-do-bem-2026-tera-58-apresentacoes-artisticas/",
+     "degrau": 0,
+     "como": "página/documento oficial já conhecido",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goias.gov.br/cultura/chamamentos-publicos-secult/",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Chamamentos Públicos",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goias.gov.br/cultura/pnab/edital-2026-pnab/",
+     "degrau": 1,
+     "como": "documento citado na página oficial: https://goias.gov.br/cultura/pnab/edital-2026-pnab/",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.transparencia.go.gov.br/wp-content/uploads/sites/2/painel/lai.php?painel=contratos_detalhamento&#038;orgao=secult",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Contratos",
+     "motivo": null,
+     "falha": "robots_proibe",
+     "oficial": null,
+     "paginas": null,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/ANEXO-01-Edital-de-Manutencao-de-Grupos-e-Companhias.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Anexo I",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 7,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/ANEXO-01-Edital-de-Infancia-e-Cultura.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Anexo I &#8211; Infância e Juventude",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 6,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/CrngEdital.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: 4ª Alteração de Cronograma (15/07/2026)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 2,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/ANEXO-I-Edital-de-Teatro.pdf",
+     "degrau": 1,
+     "como": "documento citado na página oficial: Anexo I &#8211; Teatro",
+     "motivo": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 6,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "falta",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 11,
+    "dispensados": 0,
     "ja_constavam": 0,
     "faltam": 1,
     "pct_certificado_12": 0.9167,
@@ -79790,1343 +80613,35 @@
     "pct_certificado_12": 0.8333,
     "pct_cobertura_12": 0.8333
    }
-  },
-  {
-   "id": "op-129c40f4474d",
-   "tipo": "livro",
-   "titulo": "Aviso de Chamamento Público – Processo de Seleção com Disputa Aberta pelo Procedimento Remoto N° 69/2026",
-   "balcao": "privado",
-   "link_oficial": "https://www.portaldaindustria.com.br/licitacoes/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Prazo de inscrição",
-    "Território"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-15T23:00:41+00:00",
-   "prazo": null,
-   "uf": "BR",
-   "orgao": "",
-   "fim": null,
-   "itens": {
-    "Modalidade": {
-     "valor": "Credenciamento (contratação)",
-     "trecho": "regão Eletrônico RLC Pregão Presencial Cotação Prévia RLC Credenciamento RCA RCA Disputa Aberta RCA Disputa Fechada Busca avançada Busc",
-     "pagina": 1,
-     "documento": "https://www.portaldaindustria.com.br/licitacoes/",
-     "metodo": "modalidade de recebimento"
-    },
-    "Área de atuação": {
-     "valor": "Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.portaldaindustria.com.br/licitacoes/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Valor": {
-     "valor": "R$ 92.000,00 (noventa e dois mil reais)",
-     "trecho": "s, sempre mediante justificativa: I - bens e serviços até o valor de R$ 92.000,00 (noventa e dois mil reais); 19 19 REGULAMENTO PARA CONTRATAÇÃO E ALIENAÇÃO – RCA II - obras e se",
-     "pagina": 20,
-     "documento": "https://static.portaldaindustria.com.br/media/filer_public/22/ec/22ecec1d-5aca-4da2-8eaa-299125ef7216/rca_sesi.pdf",
-     "metodo": "seção"
-    },
-    "Objeto": {
-     "valor": "a obtenção da proposta mais vantajosa para o SESI, a partir de suas necessidades, e deve observar o padrão de mercado e buscar eficiência, eficácia e economicidade das atividades institucionais.",
-     "trecho": "erviços, obras e alienações pelo SESI. Art. 2º O processo de seleção tem por objetivo a obtenção da proposta mais vantajosa para o SESI, a partir de suas necessidades, e deve observar o padrão de mercado e buscar eficiência, eficácia e economicidade das atividades institucionais. Parágrafo único - São vedadas práticas de favorecimento, tráfico de",
-     "pagina": 18,
-     "documento": "https://static.portaldaindustria.com.br/media/filer_public/22/ec/22ecec1d-5aca-4da2-8eaa-299125ef7216/rca_sesi.pdf",
-     "metodo": "texto"
-    },
-    "Órgão / financiador": {
-     "valor": "Instituto Euvaldo Lodi – IEL",
-     "trecho": "Moreira Diretor-Adjunto Gustavo Leal Sales Filho Diretor de Operações Instituto Euvaldo Lodi – IEL Robson Braga de Andrade Presidente do Conselho Superior IEL – Núcleo",
-     "pagina": 4,
-     "documento": "https://static.portaldaindustria.com.br/media/filer_public/22/ec/22ecec1d-5aca-4da2-8eaa-299125ef7216/rca_sesi.pdf",
-     "metodo": "cabeçalho"
-    },
-    "Esfera": {
-     "valor": "privada",
-     "trecho": "domínio/órgão: static.portaldaindustria.com.br · Instituto Euvaldo Lodi – IEL",
-     "pagina": 1,
-     "documento": "https://static.portaldaindustria.com.br/media/filer_public/22/ec/22ecec1d-5aca-4da2-8eaa-299125ef7216/rca_sesi.pdf",
-     "metodo": "domínio e órgão"
-    },
-    "Requisitos": {
-     "valor": "poderão participar de processo de seleção nem",
-     "trecho": "erão início e vencimento em dia de funcionamento do SESI. Art. 45 Não poderão participar de processo de seleção nem contratar com o SESI dirigente ou empregado da entidade ou as pessoa",
-     "pagina": 43,
-     "documento": "https://static.portaldaindustria.com.br/media/filer_public/22/ec/22ecec1d-5aca-4da2-8eaa-299125ef7216/rca_sesi.pdf",
-     "metodo": "texto"
-    },
-    "Prazo de recurso": {
-     "valor": "2 (dois) dias úteis",
-     "trecho": "elo licitante que se julgar prejudicado. § 1º Na modalidade pregão só caberá recurso, no prazo de 2 (dois) dias úteis, da decisão que declarar o licitante vencedor, salvo na hipótese de",
-     "pagina": 32,
-     "documento": "https://static.portaldaindustria.com.br/media/filer_public/59/1a/591a8d74-6cab-4eea-8b47-d49686dedeed/rlc_sesi.pdf",
-     "metodo": "seção"
-    },
-    "Anexos": {
-     "valor": "ANEXO I, a saber:; ANEXO II, parte integrante deste Ato.; ANEXO II, a partir de 1º de novembro; ANEXO II.; ANEXO II, a; ANEXO I, parte integrante des-",
-     "trecho": "Licitações e Contratos do Serviço Social da Indústria cons- tantes do ANEXO I, a saber: alterar os artigos 5º,V, § 1º, § 2º, II, § 3º; 6º, I, b, c; 8º, § 3º; 9º, IX; 12, III, c, IV, a, parágrafo único; artigos 14, 15; 16; 17, pará- grafo único, e 18; acresce",
-     "pagina": 45,
-     "documento": "https://static.portaldaindustria.com.br/media/filer_public/59/1a/591a8d74-6cab-4eea-8b47-d49686dedeed/rlc_sesi.pdf",
-     "metodo": "lista de anexos"
-    }
-   },
-   "dispensas": {
-    "Resultado": {
-     "motivo": "dispensado pelo Cartório — não se aplica: credenciamento sem seleção competitiva — todos os habilitados são credenciados",
-     "trecho": "regão Eletrônico RLC Pregão Presencial Cotação Prévia RLC Credenciamento RCA RCA Disputa Aberta RCA Disputa Fechada",
-     "pagina": 1,
-     "documento": "https://www.portaldaindustria.com.br/licitacoes/"
-    }
-   },
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-15T23:00:41+00:00",
-     "ganhou": [
-      "Anexos",
-      "Modalidade",
-      "Esfera",
-      "Objeto",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.portaldaindustria.com.br/licitacoes/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-5H87MM",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://static.portaldaindustria.com.br/media/filer_public/22/ec/22ecec1d-5aca-4da2-8eaa-299125ef7216/rca_sesi.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 48,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://static.portaldaindustria.com.br/media/filer_public/ff/49/ff4928be-b840-404e-927b-67aa8a9239a9/rca_senai.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 48,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://static.portaldaindustria.com.br/media/filer_public/dd/11/dd119757-c290-41a7-a42a-4f5e4a572f38/cartilha_seguranca_da_informacao_-_fornecedores.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://static.portaldaindustria.com.br/media/filer_public/59/1a/591a8d74-6cab-4eea-8b47-d49686dedeed/rlc_sesi.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 60,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://static.portaldaindustria.com.br/media/filer_public/db/ef/dbef37e2-e956-485e-83f6-8ff1696ddaf9/rlc_senai.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio próprio do financiador",
-     "paginas": 60,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://s.thebrighttag.com/iframe?c=DRm1i2h",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": "erro_rede: URLError",
-     "oficial": null,
-     "paginas": null,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "falta",
-     "Resultado": "dispensado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "falta",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 9,
-    "dispensados": 1,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "captacao-175",
-   "tipo": "livro",
-   "titulo": "BNDES Periferias - geração de emprego e renda",
-   "balcao": "orgao",
-   "link_oficial": "https://www.bndes.gov.br/periferias",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Valor",
-    "Órgão / financiador",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Prazo de recurso",
-    "Território"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": {
-    "orgao": "dominio:bndes.gov.br",
-    "itens_pelo_gabarito": [
-     "Objeto",
-     "Requisitos"
-    ]
-   },
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-12T13:38:55+00:00",
-   "prazo": null,
-   "uf": "BR",
-   "orgao": "Diário Oficial da União — Seção 3 (avisos e editais)",
-   "fim": "2026-08-18",
-   "itens": {
-    "Prazo de inscrição": {
-     "valor": "até 18.08.2026",
-     "trecho": "amada de Projetos para o 6º ciclo do BNDES Periferias Ciclo para recebimento de propostas: de 18.08.2026 até às 17h de 04.12.2026. Dúvidas? Entre em contato pelo e-mail peri",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/periferias",
-     "metodo": "cronograma"
-    },
-    "Resultado": {
-     "valor": "12.03.2026",
-     "trecho": "r Em função do grande número de propostas recebidas, o resultado da chamada para a Edição BNDES Periferias Mulheres (5º ciclo), cujo protocolo encerrou em 12.03.2026 está previsto para o último trimestre de 2026. Na ocasião, todas as e",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/periferias",
-     "metodo": "seção"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.bndes.gov.br · Diário Oficial da União — Seção 3 (avisos e editais)",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/periferias",
-     "metodo": "domínio e órgão"
-    },
-    "Modalidade": {
-     "valor": null,
-     "trecho": "riferias em uma única frente, a saber: BNDES Periferias em Rede: Destina-se a Instituições que visem apoiar subprojetos realizados por organizações de pequeno e médio porte, de base e atuação em periferias e comunidades urbanas, nos seguintes temas: de empreendedorismo, verde, e economia do cuidado. Quem pode solicitar Pessoas jurídicas de direito privado sem",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/periferias",
-     "metodo": "seção"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Meio ambiente, Direitos humanos",
-     "trecho": "termos do objeto e do título: Cultura, Meio ambiente, Direitos humanos",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/periferias",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Objeto": {
-     "valor": "inclusão produtiva urbana em favelas e periferias em uma única frente, a saber:",
-     "trecho": "a acessado, ainda que de forma indireta, por organizações menores. Serão elegíveis propostas relacionadas à inclusão produtiva urbana em favelas e periferias em uma única frente, a saber: BNDES Periferias em Rede: Destina-se a Instituições que visem ap",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/periferias",
-     "metodo": "gabarito do órgão (rótulo “serao elegiveis propostas relacionadas a”)"
-    },
-    "Requisitos": {
-     "valor": "Pessoas jurídicas de direito privado sem fins lucrativos.",
-     "trecho": "uintes temas: de empreendedorismo, verde, e economia do cuidado. Quem pode solicitar Pessoas jurídicas de direito privado sem fins lucrativos. Participação do BNDES A participação máxima do BNDES considera",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/periferias",
-     "metodo": "gabarito do órgão (rótulo “quem pode solicitar”)"
-    },
-    "Órgão / financiador": {
-     "valor": "Instituto Consulado da Mulher Tarumã-Açu",
-     "trecho": "egra) BNDES Periferias Empreendedoras Clique aqui Elas no Território Instituto Consulado da Mulher Tarumã-Açu, Monte das Oliveiras e Santa Etelvina, em Manaus (AM) Mulheres da per",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/wps/wcm/connect/site/dbea06f1-9ebe-4954-b285-c71c8ab14d77/_Projetos+em+andamento_agosto_26.pdf?MOD=AJPERES&CVID=q0l3MxI",
-     "metodo": "cabeçalho"
-    },
-    "Valor": {
-     "valor": "R$ 20.000.000,00 (vinte milhões de reais)",
-     "trecho": "os e Fontes do projeto deve apresentar investimento total mínimo de R$ 20.000.000,00 (vinte milhões de reais), incluindo a contrapartida.  PARTICIPAÇÃO MÁXIMA DO BNDES: se aplic",
-     "pagina": 11,
-     "documento": "https://www.bndes.gov.br/wps/wcm/connect/site/018598bc-e26c-4543-9ff9-3757aa2f4315/Roteiro+BNDES+Periferias+em+Rede_6%C2%B0+ciclo.pdf?MOD=AJPERES&CVID=q0l3Bzo",
-     "metodo": "seção"
-    },
-    "Anexos": {
-     "valor": "ANEXO I – FICHA DE DETALHAMENTO DO SUBPROJETO 43; ANEXO I); ANEXO I) . A ficha deve ser preenchida para cada; ANEXO I – FICHA DE DETALHAMENTO DO SUBPROJETO",
-     "trecho": "TOS E INFORMAÇÕES 41 8. ASSINATURAS DOS REPRESENTANTES LEGAIS 42 ANEXO I – FICHA DE DETALHAMENTO DO SUBPROJETO 43 4 1. APRESENTAÇÃO O presente roteiro é voltado para apresentação de projetos do BNDES Periferias em Rede , para apoio a ações relacio",
-     "pagina": 3,
-     "documento": "https://www.bndes.gov.br/wps/wcm/connect/site/018598bc-e26c-4543-9ff9-3757aa2f4315/Roteiro+BNDES+Periferias+em+Rede_6%C2%B0+ciclo.pdf?MOD=AJPERES&CVID=q0l3Bzo",
-     "metodo": "lista de anexos"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-12T13:38:55+00:00",
-     "ganhou": [
-      "Anexos",
-      "Modalidade",
-      "Esfera",
-      "Objeto",
-      "Prazo de inscrição",
-      "Requisitos",
-      "Resultado",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.bndes.gov.br/periferias",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-KP22WT",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/dbea06f1-9ebe-4954-b285-c71c8ab14d77/_Projetos+em+andamento_agosto_26.pdf?MOD=AJPERES&CVID=q0l3MxI",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o detalhamento de informações dos projetos já contratados junto ao BNDES",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/018598bc-e26c-4543-9ff9-3757aa2f4315/Roteiro+BNDES+Periferias+em+Rede_6%C2%B0+ciclo.pdf?MOD=AJPERES&CVID=q0l3Bzo",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Conheça o modelo de roteiro de apresentação de projetos para o 6º ciclo do BNDES Periferias",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 47,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/22cc6089-a56a-46c8-a4ea-410ff213451f/Apresenta%C3%A7%C3%A3o+BNDES_Periferias_perguntas+e+respostas.pdf?MOD=AJPERES&CVID=pSI8ov7",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Consulte as perguntas e respostas do BNDES Periferias",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 47,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/7ddaee00-f097-4e78-aba9-96a3cc8408b5/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+1%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI81N0",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 1º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/ea562c15-3cbb-4518-bd2e-62d47883aa3e/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+2%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI84Qo",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 2º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/79bd7b2b-2bc3-4ed0-8d2d-75ac0cd21146/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+3%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI8AkE",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 3º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "falta",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "falta",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 10,
-    "dispensados": 0,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "op-op-9b1d2dfcbd4e",
-   "tipo": "estrela",
-   "titulo": "BNDES abre chamada para apoiar projetos de organizações periféricas em todo o país — BNDES",
-   "balcao": "orgao",
-   "link_oficial": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Valor",
-    "Órgão / financiador",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Prazo de recurso",
-    "Território"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": {
-    "orgao": "dominio:bndes.gov.br",
-    "itens_pelo_gabarito": [
-     "Objeto",
-     "Requisitos"
-    ]
-   },
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-17T09:54:02+00:00",
-   "prazo": null,
-   "uf": null,
-   "orgao": "BNDES",
-   "fim": "2026-08-18",
-   "itens": {
-    "Prazo de inscrição": {
-     "valor": "até 18.08.2026",
-     "trecho": "amada de Projetos para o 6º ciclo do BNDES Periferias Ciclo para recebimento de propostas: de 18.08.2026 até às 17h de 04.12.2026. Dúvidas? Entre em contato pelo e-mail peri",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
-     "metodo": "cronograma"
-    },
-    "Resultado": {
-     "valor": "12.03.2026",
-     "trecho": "ar Em função do grande número de propostas recebidas, o resultado da chamada para a Edição BNDES Periferias Mulheres (5º ciclo), cujo protocolo encerrou em 12.03.2026 está previsto para o último trimestre de 2026. Na ocasião, todas as e",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
-     "metodo": "seção"
-    },
-    "Órgão / financiador": {
-     "valor": "BNDES",
-     "trecho": "BNDES Periferias -->",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
-     "metodo": "texto"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: www.bndes.gov.br · BNDES BNDES",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
-     "metodo": "domínio e órgão"
-    },
-    "Modalidade": {
-     "valor": "Doação",
-     "trecho": "l do projeto composta por: (a dotações de livre destinação, tais como doações, aportes diretos de capital, transferências voluntárias e contribuições institucionais, entre outros e/ou (b) receita próp",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
-     "metodo": "modalidade de recebimento"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Meio ambiente, Direitos humanos",
-     "trecho": "termos do objeto e do título: Cultura, Meio ambiente, Direitos humanos",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Objeto": {
-     "valor": "inclusão produtiva urbana em favelas e periferias em uma única frente, a saber:",
-     "trecho": "a acessado, ainda que de forma indireta, por organizações menores. Serão elegíveis propostas relacionadas à inclusão produtiva urbana em favelas e periferias em uma única frente, a saber: BNDES Periferias em Rede: Destina-se a Instituições que visem ap",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
-     "metodo": "gabarito do órgão (rótulo “serao elegiveis propostas relacionadas a”)"
-    },
-    "Requisitos": {
-     "valor": "Pessoas jurídicas de direito privado sem fins lucrativos.",
-     "trecho": "uintes temas: de empreendedorismo, verde, e economia do cuidado. Quem pode solicitar Pessoas jurídicas de direito privado sem fins lucrativos. Participação do BNDES A participação máxima do BNDES considera",
-     "pagina": 1,
-     "documento": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
-     "metodo": "gabarito do órgão (rótulo “quem pode solicitar”)"
-    },
-    "Valor": {
-     "valor": "R$ 20.000.000,00 (vinte milhões de reais)",
-     "trecho": "os e Fontes do projeto deve apresentar investimento total mínimo de R$ 20.000.000,00 (vinte milhões de reais), incluindo a contrapartida.  PARTICIPAÇÃO MÁXIMA DO BNDES: se aplic",
-     "pagina": 11,
-     "documento": "https://www.bndes.gov.br/wps/wcm/connect/site/018598bc-e26c-4543-9ff9-3757aa2f4315/Roteiro+BNDES+Periferias+em+Rede_6%C2%B0+ciclo.pdf?MOD=AJPERES&CVID=q0l3Bzo",
-     "metodo": "seção"
-    },
-    "Anexos": {
-     "valor": "ANEXO I – FICHA DE DETALHAMENTO DO SUBPROJETO 43; ANEXO I); ANEXO I) . A ficha deve ser preenchida para cada; ANEXO I – FICHA DE DETALHAMENTO DO SUBPROJETO",
-     "trecho": "TOS E INFORMAÇÕES 41 8. ASSINATURAS DOS REPRESENTANTES LEGAIS 42 ANEXO I – FICHA DE DETALHAMENTO DO SUBPROJETO 43 4 1. APRESENTAÇÃO O presente roteiro é voltado para apresentação de projetos do BNDES Periferias em Rede , para apoio a ações relacio",
-     "pagina": 3,
-     "documento": "https://www.bndes.gov.br/wps/wcm/connect/site/018598bc-e26c-4543-9ff9-3757aa2f4315/Roteiro+BNDES+Periferias+em+Rede_6%C2%B0+ciclo.pdf?MOD=AJPERES&CVID=q0l3Bzo",
-     "metodo": "lista de anexos"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-17T09:54:02+00:00",
-     "ganhou": [
-      "Anexos",
-      "Esfera",
-      "Modalidade",
-      "Objeto",
-      "Prazo de inscrição",
-      "Requisitos",
-      "Resultado",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/bndes-periferias",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-KP22WT",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/dbea06f1-9ebe-4954-b285-c71c8ab14d77/_Projetos+em+andamento_agosto_26.pdf?MOD=AJPERES&CVID=q0l3MxI",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o detalhamento de informações dos projetos já contratados junto ao BNDES",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/018598bc-e26c-4543-9ff9-3757aa2f4315/Roteiro+BNDES+Periferias+em+Rede_6%C2%B0+ciclo.pdf?MOD=AJPERES&CVID=q0l3Bzo",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Conheça o modelo de roteiro de apresentação de projetos para o 6º ciclo do BNDES Periferias",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 47,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/22cc6089-a56a-46c8-a4ea-410ff213451f/Apresenta%C3%A7%C3%A3o+BNDES_Periferias_perguntas+e+respostas.pdf?MOD=AJPERES&CVID=pSI8ov7",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Consulte as perguntas e respostas do BNDES Periferias",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 47,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/7ddaee00-f097-4e78-aba9-96a3cc8408b5/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+1%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI81N0",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 1º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/ea562c15-3cbb-4518-bd2e-62d47883aa3e/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+2%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI84Qo",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 2º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.bndes.gov.br/wps/wcm/connect/site/79bd7b2b-2bc3-4ed0-8d2d-75ac0cd21146/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+3%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI8AkE",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 3º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "falta",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "falta",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 10,
-    "dispensados": 0,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "op-op-6a7edcf55010",
-   "tipo": "estrela",
-   "titulo": "BNDES abre inscrições para apoiar projetos de até R$ 2 milhões em periferias — Brasil",
-   "balcao": "orgao",
-   "link_oficial": "https://bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9XT1M_A18_F0MzA0cXZzN_ALMjA0NnAz1vbgUwIALTuhH4dcRAdUBVQ6n9CMzswoLoxz1o5Lz80pSK0r0I5LyUlKL4zPziksyS0qTwS5SNcjIz01VNcgHSukmlpQm5uYXqxoU5ydnguTAGnQLUosy04A4sVi_IDsqEgA9va2I/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Valor",
-    "Órgão / financiador",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Prazo de recurso",
-    "Território"
-   ],
-   "tentativa": 2,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": {
-    "orgao": "dominio:bndes.gov.br",
-    "itens_pelo_gabarito": [
-     "Objeto",
-     "Requisitos"
-    ]
-   },
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 2 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-17T14:24:58+00:00",
-   "prazo": null,
-   "uf": null,
-   "orgao": "BNDES",
-   "fim": "2026-08-18",
-   "itens": {
-    "Prazo de inscrição": {
-     "valor": "até 18.08.2026",
-     "trecho": "amada de Projetos para o 6º ciclo do BNDES Periferias Ciclo para recebimento de propostas: de 18.08.2026 até às 17h de 04.12.2026. Dúvidas? Entre em contato pelo e-mail peri",
-     "pagina": 1,
-     "documento": "https://bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9XT1M_A18_F0MzA0cXZzN_ALMjA0NnAz1vbgUwIALTuhH4dcRAdUBVQ6n9CMzswoLoxz1o5Lz80pSK0r0I5LyUlKL4zPziksyS0qTwS5SNcjIz01VNcgHSukmlpQm5uYXqxoU5ydnguTAGnQLUosy04A4sVi_IDsqEgA9va2I/",
-     "metodo": "cronograma"
-    },
-    "Resultado": {
-     "valor": "12.03.2026",
-     "trecho": "ar Em função do grande número de propostas recebidas, o resultado da chamada para a Edição BNDES Periferias Mulheres (5º ciclo), cujo protocolo encerrou em 12.03.2026 está previsto para o último trimestre de 2026. Na ocasião, todas as e",
-     "pagina": 1,
-     "documento": "https://bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9XT1M_A18_F0MzA0cXZzN_ALMjA0NnAz1vbgUwIALTuhH4dcRAdUBVQ6n9CMzswoLoxz1o5Lz80pSK0r0I5LyUlKL4zPziksyS0qTwS5SNcjIz01VNcgHSukmlpQm5uYXqxoU5ydnguTAGnQLUosy04A4sVi_IDsqEgA9va2I/",
-     "metodo": "seção"
-    },
-    "Órgão / financiador": {
-     "valor": "BNDES",
-     "trecho": "BNDES Periferias -->",
-     "pagina": 1,
-     "documento": "https://bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9XT1M_A18_F0MzA0cXZzN_ALMjA0NnAz1vbgUwIALTuhH4dcRAdUBVQ6n9CMzswoLoxz1o5Lz80pSK0r0I5LyUlKL4zPziksyS0qTwS5SNcjIz01VNcgHSukmlpQm5uYXqxoU5ydnguTAGnQLUosy04A4sVi_IDsqEgA9va2I/",
-     "metodo": "texto"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: bndes.gov.br · BNDES BNDES",
-     "pagina": 1,
-     "documento": "https://bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9XT1M_A18_F0MzA0cXZzN_ALMjA0NnAz1vbgUwIALTuhH4dcRAdUBVQ6n9CMzswoLoxz1o5Lz80pSK0r0I5LyUlKL4zPziksyS0qTwS5SNcjIz01VNcgHSukmlpQm5uYXqxoU5ydnguTAGnQLUosy04A4sVi_IDsqEgA9va2I/",
-     "metodo": "domínio e órgão"
-    },
-    "Modalidade": {
-     "valor": "Doação",
-     "trecho": "l do projeto composta por: (a dotações de livre destinação, tais como doações, aportes diretos de capital, transferências voluntárias e contribuições institucionais, entre outros e/ou (b) receita próp",
-     "pagina": 1,
-     "documento": "https://bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9XT1M_A18_F0MzA0cXZzN_ALMjA0NnAz1vbgUwIALTuhH4dcRAdUBVQ6n9CMzswoLoxz1o5Lz80pSK0r0I5LyUlKL4zPziksyS0qTwS5SNcjIz01VNcgHSukmlpQm5uYXqxoU5ydnguTAGnQLUosy04A4sVi_IDsqEgA9va2I/",
-     "metodo": "modalidade de recebimento"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Meio ambiente, Direitos humanos",
-     "trecho": "termos do objeto e do título: Cultura, Meio ambiente, Direitos humanos",
-     "pagina": 1,
-     "documento": "https://bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9XT1M_A18_F0MzA0cXZzN_ALMjA0NnAz1vbgUwIALTuhH4dcRAdUBVQ6n9CMzswoLoxz1o5Lz80pSK0r0I5LyUlKL4zPziksyS0qTwS5SNcjIz01VNcgHSukmlpQm5uYXqxoU5ydnguTAGnQLUosy04A4sVi_IDsqEgA9va2I/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Objeto": {
-     "valor": "inclusão produtiva urbana em favelas e periferias em uma única frente, a saber:",
-     "trecho": "a acessado, ainda que de forma indireta, por organizações menores. Serão elegíveis propostas relacionadas à inclusão produtiva urbana em favelas e periferias em uma única frente, a saber: BNDES Periferias em Rede: Destina-se a Instituições que visem ap",
-     "pagina": 1,
-     "documento": "https://bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9XT1M_A18_F0MzA0cXZzN_ALMjA0NnAz1vbgUwIALTuhH4dcRAdUBVQ6n9CMzswoLoxz1o5Lz80pSK0r0I5LyUlKL4zPziksyS0qTwS5SNcjIz01VNcgHSukmlpQm5uYXqxoU5ydnguTAGnQLUosy04A4sVi_IDsqEgA9va2I/",
-     "metodo": "gabarito do órgão (rótulo “serao elegiveis propostas relacionadas a”)"
-    },
-    "Requisitos": {
-     "valor": "Pessoas jurídicas de direito privado sem fins lucrativos.",
-     "trecho": "uintes temas: de empreendedorismo, verde, e economia do cuidado. Quem pode solicitar Pessoas jurídicas de direito privado sem fins lucrativos. Participação do BNDES A participação máxima do BNDES considera",
-     "pagina": 1,
-     "documento": "https://bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9XT1M_A18_F0MzA0cXZzN_ALMjA0NnAz1vbgUwIALTuhH4dcRAdUBVQ6n9CMzswoLoxz1o5Lz80pSK0r0I5LyUlKL4zPziksyS0qTwS5SNcjIz01VNcgHSukmlpQm5uYXqxoU5ydnguTAGnQLUosy04A4sVi_IDsqEgA9va2I/",
-     "metodo": "gabarito do órgão (rótulo “quem pode solicitar”)"
-    },
-    "Valor": {
-     "valor": "R$ 20.000.000,00 (vinte milhões de reais)",
-     "trecho": "os e Fontes do projeto deve apresentar investimento total mínimo de R$ 20.000.000,00 (vinte milhões de reais), incluindo a contrapartida.  PARTICIPAÇÃO MÁXIMA DO BNDES: se aplic",
-     "pagina": 11,
-     "documento": "https://bndes.gov.br/wps/wcm/connect/site/018598bc-e26c-4543-9ff9-3757aa2f4315/Roteiro+BNDES+Periferias+em+Rede_6%C2%B0+ciclo.pdf?MOD=AJPERES&CVID=q0l3Bzo",
-     "metodo": "seção"
-    },
-    "Anexos": {
-     "valor": "ANEXO I – FICHA DE DETALHAMENTO DO SUBPROJETO 43; ANEXO I); ANEXO I) . A ficha deve ser preenchida para cada; ANEXO I – FICHA DE DETALHAMENTO DO SUBPROJETO",
-     "trecho": "TOS E INFORMAÇÕES 41 8. ASSINATURAS DOS REPRESENTANTES LEGAIS 42 ANEXO I – FICHA DE DETALHAMENTO DO SUBPROJETO 43 4 1. APRESENTAÇÃO O presente roteiro é voltado para apresentação de projetos do BNDES Periferias em Rede , para apoio a ações relacio",
-     "pagina": 3,
-     "documento": "https://bndes.gov.br/wps/wcm/connect/site/018598bc-e26c-4543-9ff9-3757aa2f4315/Roteiro+BNDES+Periferias+em+Rede_6%C2%B0+ciclo.pdf?MOD=AJPERES&CVID=q0l3Bzo",
-     "metodo": "lista de anexos"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-17T09:57:34+00:00",
-     "ganhou": [
-      "Anexos",
-      "Esfera",
-      "Modalidade",
-      "Objeto",
-      "Prazo de inscrição",
-      "Requisitos",
-      "Resultado",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    },
-    {
-     "n": 2,
-     "nome": "anexos completos",
-     "em": "2026-10-17T14:24:58+00:00",
-     "ganhou": [],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9XT1M_A18_F0MzA0cXZzN_ALMjA0NnAz1vbgUwIALTuhH4dcRAdUBVQ6n9CMzswoLoxz1o5Lz80pSK0r0I5LyUlKL4zPziksyS0qTwS5SNcjIz01VNcgHSukmlpQm5uYXqxoU5ydnguTAGnQLUosy04A4sVi_IDsqEgA9va2I/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-KP22WT",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/dbea06f1-9ebe-4954-b285-c71c8ab14d77/_Projetos+em+andamento_agosto_26.pdf?MOD=AJPERES&CVID=q0l3MxI",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o detalhamento de informações dos projetos já contratados junto ao BNDES",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/018598bc-e26c-4543-9ff9-3757aa2f4315/Roteiro+BNDES+Periferias+em+Rede_6%C2%B0+ciclo.pdf?MOD=AJPERES&CVID=q0l3Bzo",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Conheça o modelo de roteiro de apresentação de projetos para o 6º ciclo do BNDES Periferias",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 47,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/22cc6089-a56a-46c8-a4ea-410ff213451f/Apresenta%C3%A7%C3%A3o+BNDES_Periferias_perguntas+e+respostas.pdf?MOD=AJPERES&CVID=pSI8ov7",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Consulte as perguntas e respostas do BNDES Periferias",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 47,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/7ddaee00-f097-4e78-aba9-96a3cc8408b5/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+1%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI81N0",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 1º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/ea562c15-3cbb-4518-bd2e-62d47883aa3e/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+2%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI84Qo",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 2º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/79bd7b2b-2bc3-4ed0-8d2d-75ac0cd21146/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+3%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI8AkE",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 3º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9XT1M_A18_F0MzA0cXZzN_ALMjA0NnAz1vbgUwIALTuhH4dcRAdUBVQ6n9CMzswoLoxz1o5Lz80pSK0r0I5LyUlKL4zPziksyS0qTwS5SNcjIz01VNcgHSukmlpQm5uYXqxoU5ydnguTAGnQLUosy04A4sVi_IDsqEgA9va2I/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-KP22WT",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/018598bc-e26c-4543-9ff9-3757aa2f4315/Roteiro+BNDES+Periferias+em+Rede_6%C2%B0+ciclo.pdf?MOD=AJPERES&CVID=q0l3Bzo",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Conheça o modelo de roteiro de apresentação de projetos para o 6º ciclo do BNDES Periferias",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 47,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/dbea06f1-9ebe-4954-b285-c71c8ab14d77/_Projetos+em+andamento_agosto_26.pdf?MOD=AJPERES&CVID=q0l3MxI",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o detalhamento de informações dos projetos já contratados junto ao BNDES",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/22cc6089-a56a-46c8-a4ea-410ff213451f/Apresenta%C3%A7%C3%A3o+BNDES_Periferias_perguntas+e+respostas.pdf?MOD=AJPERES&CVID=pSI8ov7",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Consulte as perguntas e respostas do BNDES Periferias",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 47,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/7ddaee00-f097-4e78-aba9-96a3cc8408b5/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+1%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI81N0",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 1º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/ea562c15-3cbb-4518-bd2e-62d47883aa3e/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+2%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI84Qo",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 2º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://bndes.gov.br/wps/wcm/connect/site/79bd7b2b-2bc3-4ed0-8d2d-75ac0cd21146/Veja+aqui+o+resultado+da+avalia%C3%A7%C3%A3o+do+CCFS+%E2%80%93+3%C2%BA+ciclo.pdf?MOD=AJPERES&CVID=pSI8AkE",
-     "degrau": 1,
-     "como": "documento citado na página oficial: Veja aqui o resultado da avaliação do CCFS – 3º ciclo",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "falta",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "falta",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 10,
-    "dispensados": 0,
-    "ja_constavam": 0,
-    "faltam": 2,
-    "pct_certificado_12": 0.8333,
-    "pct_cobertura_12": 0.8333
-   }
-  },
-  {
-   "id": "op-2644abfa14ce",
-   "tipo": "livro",
-   "titulo": "Bolsa Cultura Viva — Mestras e Mestres das Culturas Tradicionais (Paraná)",
-   "balcao": "orgao",
-   "link_oficial": "https://www.parana.pr.gov.br/aen/Noticia/Estado-lanca-edital-de-bolsas-para-mestras-e-mestres-de-culturas-tradicionais-e",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Prazo de recurso",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Resultado"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "sem_estrela",
-   "estagio_inicio": "sem_estrela",
-   "esgotada": null,
-   "eficiencia": 0.833,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-12T12:10:26+00:00",
-   "prazo": null,
-   "uf": "PR",
-   "orgao": "Governo do Estado do Paraná",
-   "fim": "2026-03-13",
-   "itens": {
-    "Esfera": {
-     "valor": "municipal",
-     "trecho": "domínio/órgão: www.parana.pr.gov.br · Agência Estadual de Notícias Governo do Estado do Paraná",
-     "pagina": 1,
-     "documento": "https://www.parana.pr.gov.br/aen/Noticia/Estado-lanca-edital-de-bolsas-para-mestras-e-mestres-de-culturas-tradicionais-e",
-     "metodo": "domínio e órgão"
-    },
-    "Modalidade": {
-     "valor": null,
-     "trecho": "e articula um conjunto de outros pontos ou iniciativas culturais). Os recursos serão destinados à implementação de ações no âmbito da Política Nacional Cultura Viva, instituída pela Lei nº 13.018/2014, e regulamentada por legislações federais que estruturam o fo",
-     "pagina": 1,
-     "documento": "https://www.parana.pr.gov.br/aen/Noticia/Estado-lanca-edital-de-bolsas-para-mestras-e-mestres-de-culturas-tradicionais-e",
-     "metodo": "seção"
-    },
-    "Área de atuação": {
-     "valor": "Cultura, Educação, Ciência e tecnologia",
-     "trecho": "termos do objeto e do título: Cultura, Educação, Ciência e tecnologia",
-     "pagina": 1,
-     "documento": "https://www.parana.pr.gov.br/aen/Noticia/Estado-lanca-edital-de-bolsas-para-mestras-e-mestres-de-culturas-tradicionais-e",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Prazo de recurso": {
-     "valor": "5 de outubro de 2026",
-     "trecho": "Projetos classificados e não classificados (.csv) Os recursos poderão ser apresentados até as 23h59 do dia 5 de outubro de 2026 (horário de Brasília). Compartilhe: Volta",
-     "pagina": 1,
-     "documento": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Concessao-de-Bolsa-Cultura-Viva-Mestras-e-Mestres-das-Culturas-Tradicionais-e",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "Poderão participar do presente Edital todas as Mestras e os Mestres das Culturas Tradicionais e Populares que desenvolvam importante e reconhecida atividade cultural junto à comunidade local há pelo menos 5 (cinco) anos.",
-     "trecho": "isto à época da inscrição. 5. QUEM PODE PARTICIPAR? 5.1. Poderão participar do presente Edital todas as Mestras e os Mestres das Culturas Tradicionais e Populares que desenvolvam importante e reconhecida atividade cultural junto à comunidade local há pelo menos 5 (cinco) anos. 5.1.1. As Mestras e os Mestres devem encaminhar Declaração de Parce",
-     "pagina": 7,
-     "documento": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2026-02/edital_bolsa_cultura_viva_mestras_e_mestres.pdf",
-     "metodo": "texto"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-12T12:10:26+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Prazo de recurso",
-      "Requisitos",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.parana.pr.gov.br/aen/Noticia/Estado-lanca-edital-de-bolsas-para-mestras-e-mestres-de-culturas-tradicionais-e",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-MQ37BF5J",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Concessao-de-Bolsa-Cultura-Viva-Mestras-e-Mestres-das-Culturas-Tradicionais-e",
-     "degrau": 1,
-     "como": "documento citado na página oficial: edital",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.googletagmanager.com/ns.html?id=GTM-WK32TR88",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pagina_vazia",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2026-02/ex_2026-02-11_pag39_localizador_110283926.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2026-02/edital_bolsa_cultura_viva_mestras_e_mestres.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 22,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2026-02/1._anexo_declaracao_parceria.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2026-02/2._anexo_plano_de_atividades_mestras_e_mestres.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 14,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "falta",
-     "Prazo de recurso": "certificado",
-     "Valor": "ja_constava",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 5,
-    "dispensados": 0,
-    "ja_constavam": 6,
-    "faltam": 1,
-    "pct_certificado_12": 0.4167,
-    "pct_cobertura_12": 0.9167
-   }
   }
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2363,
-   "bronze": 121,
-   "prata": 182
+   "sem_estrela": 2335,
+   "bronze": 122,
+   "prata": 178
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 133,
-    "bronze": 8,
-    "prata": 11
+    "sem_estrela": 106,
+    "bronze": 9,
+    "prata": 8
    },
    "livro": {
-    "sem_estrela": 2230,
+    "sem_estrela": 2229,
     "bronze": 113,
-    "prata": 171
+    "prata": 170
    }
   },
-  "fila_oportunidades": 152,
-  "fila_livros": 2514,
-  "devidas_nesta_hora": 2349,
-  "promovidas_nesta_execucao": 0,
-  "sem_material_agora": 18,
+  "fila_oportunidades": 123,
+  "fila_livros": 2512,
+  "devidas_nesta_hora": 2331,
+  "promovidas_nesta_execucao": 1,
+  "sem_material_agora": 19,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
-   "chaves": 1054,
-   "sites": 2266
+   "chaves": 1056,
+   "sites": 2264
   },
   "intervalo_horas": 12,
   "limite": 10,
