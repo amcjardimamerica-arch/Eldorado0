@@ -1,31 +1,31 @@
 {
- "em": "2026-10-18T02:49:57+00:00",
+ "em": "2026-10-18T03:12:12+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
  "resumo": {
   "pontos_12_total": 4800,
-  "pontos_certificados": 3117,
-  "pontos_dispensados": 167,
-  "pontos_ja_constavam": 1396,
-  "pontos_faltam": 120,
-  "pct_certificado_12": 0.6842,
+  "pontos_certificados": 3120,
+  "pontos_dispensados": 169,
+  "pontos_ja_constavam": 1392,
+  "pontos_faltam": 119,
+  "pct_certificado_12": 0.6852,
   "certidoes_12_de_12": 141,
   "certidoes_sem_item_faltando": 284,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
-  "certidoes": 2704,
-  "nesta_execucao": 11,
-  "fila_estrelas": 152,
-  "fila_livros": 2516,
-  "itens_que_faltavam": 24742,
-  "itens_obtidos": 9247,
-  "itens_dispensados": 514,
+  "certidoes": 2711,
+  "nesta_execucao": 12,
+  "fila_estrelas": 124,
+  "fila_livros": 2515,
+  "itens_que_faltavam": 24791,
+  "itens_obtidos": 9268,
+  "itens_dispensados": 516,
   "eficiencia_itens": 0.395,
-  "com_link_oficial": 1835,
-  "taxa_link_oficial": 0.679,
+  "com_link_oficial": 1837,
+  "taxa_link_oficial": 0.678,
   "certidoes_completas": 266,
-  "para_o_interceptador": 1956,
-  "para_o_chrome": 481,
+  "para_o_interceptador": 1960,
+  "para_o_chrome": 484,
   "selos_que_mudaram": {
    "bronze → ouro": 6,
    "bronze → prata": 1,
@@ -36,8 +36,8 @@
    "prata → ouro": 3
   },
   "por_degrau": {
-   "degrau 0": 1751,
-   "degrau 1": 125
+   "degrau 0": 1752,
+   "degrau 1": 126
   }
  },
  "cinza_conferidos": {
@@ -47,94 +47,94 @@
  },
  "por_item": {
   "Objeto": {
-   "faltavam": 1761,
-   "obtidos": 578,
+   "faltavam": 1767,
+   "obtidos": 579,
    "dispensados": 0,
    "eficiencia": 0.328
   },
   "Prazo de inscrição": {
-   "faltavam": 1870,
-   "obtidos": 584,
+   "faltavam": 1874,
+   "obtidos": 588,
    "dispensados": 146,
-   "eficiencia": 0.39
+   "eficiencia": 0.392
   },
   "Resultado": {
-   "faltavam": 2406,
+   "faltavam": 2410,
    "obtidos": 624,
-   "dispensados": 229,
+   "dispensados": 231,
    "eficiencia": 0.355
   },
   "Prazo de recurso": {
-   "faltavam": 2367,
-   "obtidos": 537,
+   "faltavam": 2371,
+   "obtidos": 538,
    "dispensados": 46,
    "eficiencia": 0.246
   },
   "Valor": {
-   "faltavam": 2111,
-   "obtidos": 696,
+   "faltavam": 2115,
+   "obtidos": 697,
    "dispensados": 61,
-   "eficiencia": 0.359
+   "eficiencia": 0.358
   },
   "Órgão / financiador": {
-   "faltavam": 1599,
-   "obtidos": 968,
+   "faltavam": 1603,
+   "obtidos": 970,
    "dispensados": 0,
    "eficiencia": 0.605
   },
   "Território": {
-   "faltavam": 1907,
-   "obtidos": 602,
+   "faltavam": 1911,
+   "obtidos": 603,
    "dispensados": 0,
    "eficiencia": 0.316
   },
   "Esfera": {
-   "faltavam": 2130,
-   "obtidos": 1316,
+   "faltavam": 2134,
+   "obtidos": 1318,
    "dispensados": 0,
    "eficiencia": 0.618
   },
   "Requisitos": {
-   "faltavam": 2341,
-   "obtidos": 626,
+   "faltavam": 2345,
+   "obtidos": 627,
    "dispensados": 0,
    "eficiencia": 0.267
   },
   "Anexos": {
-   "faltavam": 1699,
-   "obtidos": 367,
+   "faltavam": 1702,
+   "obtidos": 370,
    "dispensados": 4,
-   "eficiencia": 0.218
+   "eficiencia": 0.22
   },
   "Modalidade": {
-   "faltavam": 2313,
-   "obtidos": 817,
+   "faltavam": 2317,
+   "obtidos": 819,
    "dispensados": 28,
-   "eficiencia": 0.365
+   "eficiencia": 0.366
   },
   "Área de atuação": {
-   "faltavam": 2238,
-   "obtidos": 1532,
+   "faltavam": 2242,
+   "obtidos": 1535,
    "dispensados": 0,
    "eficiencia": 0.685
   }
  },
  "por_balcao": {
   "revisão": {
-   "certidoes": 209,
-   "com_link_oficial": 159,
-   "faltavam": 2508,
-   "resolvidos": 1191,
+   "certidoes": 207,
+   "com_link_oficial": 158,
+   "faltavam": 2484,
+   "resolvidos": 1179,
    "eficiencia": 0.475,
-   "taxa_link_oficial": 0.761
+   "taxa_link_oficial": 0.763
   },
   "pncp": {
-   "certidoes": 109,
-   "com_link_oficial": 81,
-   "faltavam": 1003,
-   "resolvidos": 556,
-   "eficiencia": 0.554,
-   "taxa_link_oficial": 0.743
+   "certidoes": 111,
+   "com_link_oficial": 83,
+   "faltavam": 1027,
+   "resolvidos": 578,
+   "eficiencia": 0.563,
+   "taxa_link_oficial": 0.748
   },
   "?": {
    "certidoes": 3,
@@ -146,10 +146,10 @@
   },
   "orgao": {
    "certidoes": 1261,
-   "com_link_oficial": 1008,
-   "faltavam": 11171,
-   "resolvidos": 5138,
-   "eficiencia": 0.46,
+   "com_link_oficial": 1007,
+   "faltavam": 11169,
+   "resolvidos": 5129,
+   "eficiencia": 0.459,
    "taxa_link_oficial": 0.799
   },
   "privado": {
@@ -161,20 +161,20 @@
    "taxa_link_oficial": 0.7
   },
   "pista": {
-   "certidoes": 364,
-   "com_link_oficial": 68,
-   "faltavam": 3318,
-   "resolvidos": 800,
-   "eficiencia": 0.241,
-   "taxa_link_oficial": 0.187
+   "certidoes": 370,
+   "com_link_oficial": 70,
+   "faltavam": 3368,
+   "resolvidos": 822,
+   "eficiencia": 0.244,
+   "taxa_link_oficial": 0.189
   },
   "diario": {
-   "certidoes": 164,
+   "certidoes": 165,
    "com_link_oficial": 101,
-   "faltavam": 1707,
+   "faltavam": 1708,
    "resolvidos": 433,
    "eficiencia": 0.254,
-   "taxa_link_oficial": 0.616
+   "taxa_link_oficial": 0.612
   },
   "proprio": {
    "certidoes": 1,
@@ -187,20 +187,20 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2176,
-   "faltavam": 18815,
-   "resolvidos": 6669,
-   "eficiencia": 0.354,
-   "com_link_oficial": 1396,
-   "taxa_link_oficial": 0.642
+   "certidoes": 2184,
+   "faltavam": 18876,
+   "resolvidos": 6706,
+   "eficiencia": 0.355,
+   "com_link_oficial": 1400,
+   "taxa_link_oficial": 0.641
   },
   "refeitas": {
-   "certidoes": 528,
-   "faltavam": 5927,
-   "resolvidos": 2983,
-   "eficiencia": 0.503,
-   "com_link_oficial": 439,
-   "taxa_link_oficial": 0.831
+   "certidoes": 527,
+   "faltavam": 5915,
+   "resolvidos": 2969,
+   "eficiencia": 0.502,
+   "com_link_oficial": 437,
+   "taxa_link_oficial": 0.829
   }
  },
  "por_versao": {
@@ -221,29 +221,29 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2481,
-   "faltavam": 22143,
-   "resolvidos": 8413,
+   "certidoes": 2490,
+   "faltavam": 22216,
+   "resolvidos": 8448,
    "eficiencia": 0.38,
-   "com_link_oficial": 1663,
-   "taxa_link_oficial": 0.67
+   "com_link_oficial": 1666,
+   "taxa_link_oficial": 0.669
   },
   "revisão manual": {
-   "certidoes": 209,
-   "faltavam": 2508,
-   "resolvidos": 1191,
+   "certidoes": 207,
+   "faltavam": 2484,
+   "resolvidos": 1179,
    "eficiencia": 0.475,
-   "com_link_oficial": 159,
-   "taxa_link_oficial": 0.761
+   "com_link_oficial": 158,
+   "taxa_link_oficial": 0.763
   }
  },
  "por_abordagem": {
   "1": {
    "nome": "documento na mão",
-   "vezes": 2581,
-   "renderam": 1685,
-   "itens": 8866,
-   "links_oficiais": 1612,
+   "vezes": 2588,
+   "renderam": 1689,
+   "itens": 8889,
+   "links_oficiais": 1614,
    "taxa_de_acerto": 0.653
   },
   "2": {
@@ -256,11 +256,11 @@
   },
   "3": {
    "nome": "página oficial e citados",
-   "vezes": 335,
+   "vezes": 334,
    "renderam": 82,
    "itens": 468,
    "links_oficiais": 53,
-   "taxa_de_acerto": 0.245
+   "taxa_de_acerto": 0.246
   },
   "4": {
    "nome": "biblioteca de sites",
@@ -304,11 +304,11 @@
   },
   "9": {
    "nome": "leitura profunda",
-   "vezes": 79,
+   "vezes": 81,
    "renderam": 15,
    "itens": 62,
    "links_oficiais": 9,
-   "taxa_de_acerto": 0.19
+   "taxa_de_acerto": 0.185
   },
   "10": {
    "nome": "busca no domínio",
@@ -322,11 +322,11 @@
  "por_balcao_selo": {
   "sem_estrela": {
    "nome": "Sem estrela → bronze",
-   "certidoes": 1451,
-   "faltavam": 13116,
-   "resolvidos": 4189,
-   "eficiencia": 0.319,
-   "entraram_aqui": 1600,
+   "certidoes": 1458,
+   "faltavam": 13165,
+   "resolvidos": 4212,
+   "eficiencia": 0.32,
+   "entraram_aqui": 1607,
    "esgotadas": 0
   },
   "bronze": {
@@ -358,7 +358,7 @@
   }
  },
  "gabarito": {
-  "orgaos_com_gabarito": 1233,
+  "orgaos_com_gabarito": 1234,
   "itens_achados_pelo_gabarito": {
    "Prazo de recurso": 21,
    "Objeto": 69,
@@ -5583,7 +5583,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-18T02:22:06+00:00",
+   "em": "2026-10-18T03:08:20+00:00",
    "prazo": "2026-10-21",
    "uf": null,
    "orgao": "CONSELHO DE ARQUITETURA E URBANISMO DO ESTADO DE MINAS GERAIS",
@@ -41127,7 +41127,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-18T02:13:47+00:00",
+   "em": "2026-10-18T03:00:02+00:00",
    "prazo": "2027-08-07",
    "uf": null,
    "orgao": "MUNICIPIO DE TRINDADE",
@@ -44996,6 +44996,132 @@
      "falha": null,
      "oficial": "domínio público oficial",
      "paginas": 7,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "ja_constava",
+     "Resultado": "ja_constava",
+     "Prazo de recurso": "ja_constava",
+     "Valor": "ja_constava",
+     "Órgão / financiador": "ja_constava",
+     "Território": "ja_constava",
+     "Esfera": "ja_constava",
+     "Requisitos": "ja_constava",
+     "Anexos": "ja_constava",
+     "Modalidade": "ja_constava",
+     "Área de atuação": "ja_constava"
+    },
+    "certificados": 1,
+    "dispensados": 0,
+    "ja_constavam": 11,
+    "faltam": 0,
+    "pct_certificado_12": 0.0833,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "op-3e4280e0df84",
+   "tipo": "livro",
+   "titulo": "Programa Funarte Aberta 2026 - Livraria Mário de Andrade",
+   "balcao": "pista",
+   "link_oficial": null,
+   "degrau": null,
+   "como": null,
+   "faltavam": [
+    "Objeto"
+   ],
+   "resolvidos": [
+    "Objeto"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": "Interceptador: site oficial não localizado nos degraus 0–2 (erro_rede: HTTPError)",
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T03:10:54+00:00",
+   "prazo": null,
+   "uf": null,
+   "orgao": null,
+   "fim": null,
+   "itens": {
+    "Objeto": {
+     "valor": "a seleção de propostas para ocupação cultural do espaço da Livraria Mário de Andrade, para seu uso ordinário.",
+     "trecho": "cterísticas de cada espaço integrante do Programa. O presente edital tem por objeto a seleção de propostas para ocupação cultural do espaço da Livraria Mário de Andrade, para seu uso ordinário. As propostas poderão contemplar ações artístico-culturais proveniente",
+     "pagina": 1,
+     "documento": "https://prosas.com.br/editais/17667",
+     "metodo": "texto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T03:10:54+00:00",
+     "ganhou": [
+      "Objeto"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://prosas.com.br/editais/17667",
+     "degrau": 0,
+     "como": "pista (vetor): lida só para achar o link do financiador",
+     "motivo": null,
+     "falha": null,
+     "oficial": "vetor (anúncio, republicador ou agregador) — não é fonte",
+     "paginas": 1,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://prosas-prod-files.s3.sa-east-1.amazonaws.com/arquivos/arquivos/004/725/118/original/Edital_Funarte_Aberta_Livraria.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAUS3M5UKOOGXP27N7%2F20261018%2Fsa-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261018T031054Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b801a09ec6eb98d0188d0eed795485e18a5ec35acd26f659facc98d5348f9bc4",
+     "degrau": 1,
+     "como": "link de saída da pista para o site do financiador",
+     "motivo": null,
+     "falha": "erro_rede: HTTPError",
+     "oficial": null,
+     "paginas": null,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://prosas-prod-files.s3.sa-east-1.amazonaws.com/arquivos/arquivos/004/725/353/original/Anexo_I_-_Formul%C3%A1rio_de_Inscri%C3%A7%C3%A3o_Livraria.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAUS3M5UKOOGXP27N7%2F20261018%2Fsa-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261018T031054Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=a447aaffe637e117952bac64965d42bad6c9ec0bb3a39ead99af1e63f8772ea4",
+     "degrau": 1,
+     "como": "link de saída da pista para o site do financiador",
+     "motivo": null,
+     "falha": "erro_rede: HTTPError",
+     "oficial": null,
+     "paginas": null,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://prosas-prod-files.s3.sa-east-1.amazonaws.com/arquivos/arquivos/004/725/354/original/Anexo_II_-_Roteiro_para_apresenta%C3%A7%C3%A3o_oral.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAUS3M5UKOOGXP27N7%2F20261018%2Fsa-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261018T031054Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=4e12412130609851d755ef0326f921c208ff15799a98f6b8973d9cdf5c8075ce",
+     "degrau": 1,
+     "como": "link de saída da pista para o site do financiador",
+     "motivo": null,
+     "falha": "erro_rede: HTTPError",
+     "oficial": null,
+     "paginas": null,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://prosas-prod-files.s3.sa-east-1.amazonaws.com/arquivos/arquivos/004/725/357/original/Anexo_VI_-_Especifica%C3%A7%C3%B5es_t%C3%A9cnicas.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAUS3M5UKOOGXP27N7%2F20261018%2Fsa-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261018T031054Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b97a4406dcf7673e2efdfa4671a378e8e96c36fa4d719d934170ba6a3be0adc8",
+     "degrau": 1,
+     "como": "link de saída da pista para o site do financiador",
+     "motivo": null,
+     "falha": "erro_rede: HTTPError",
+     "oficial": null,
+     "paginas": null,
      "edicao_inteira": null
     }
    ],
@@ -51173,7 +51299,7 @@
    "encaminhado": null,
    "selo_antes": "bronze",
    "selo_depois": "ouro",
-   "em": "2026-10-18T02:15:44+00:00",
+   "em": "2026-10-18T03:01:59+00:00",
    "prazo": "2028-12-04",
    "uf": null,
    "orgao": "TRIBUNAL SUPERIOR DO TRABALHO",
@@ -57201,6 +57327,215 @@
     },
     "certificados": 8,
     "dispensados": 3,
+    "ja_constavam": 0,
+    "faltam": 1,
+    "pct_certificado_12": 0.9167,
+    "pct_cobertura_12": 0.9167
+   }
+  },
+  {
+   "id": "op-457280912c7f",
+   "tipo": "livro",
+   "titulo": "Chamamento público para fins de credenciamento de pessoas físicas e jurídicas, com atuação artística de nível… — MUNICIPIO DE NOVA ROMA",
+   "balcao": "pncp",
+   "link_oficial": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4",
+   "degrau": 0,
+   "como": "PNCP: arquivo anexado pelo órgão (Edital)",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [
+    "Prazo de recurso"
+   ],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 0.917,
+   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T03:11:22+00:00",
+   "prazo": null,
+   "uf": "GO",
+   "orgao": "MUNICIPIO DE NOVA ROMA",
+   "fim": "2026-04-27",
+   "itens": {
+    "Valor": {
+     "valor": "R$ 1.027,79",
+     "trecho": "ogramação cultural, institucional, comunitária ou festiva. | Diária | R$ 1.027,79 [TABELA] 2 | Apresentação artística musical de cantor solo com banda",
+     "pagina": 2,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "3.1 Todo e qualquer prestação de serviços somente poderá ser executado",
+     "trecho": "nos termos da legislação vigente. 3 DAS CONDIÇÕES PARA EXECUÇÃO DO OBJETO: 3.1 Todo e qualquer prestação de serviços somente poderá ser executado mediante apresentação de autorização de serviço, ou equivalente, emit",
+     "pagina": 9,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4",
+     "metodo": "texto"
+    },
+    "Órgão / financiador": {
+     "valor": "MUNICÍPIO DE NOVA ROMA",
+     "trecho": "O Nº 10/2026 CREDENCIAMENTO Nº 05/2026 INEXIGIBILIDADE 10/2026 O MUNICÍPIO DE NOVA ROMA, com sede na Praça Augusto Pio de Santana, nº 01, Centro, Nova Roma-",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4",
+     "metodo": "cabeçalho"
+    },
+    "Território": {
+     "valor": "ao Município de Nova Roma",
+     "trecho": "e, à presença desta Administração, requerer seu CREDENCIAMENTO junto ao Município de Nova Roma – GO. O presente pedido tem por objeto a atuação artística de níve",
+     "pagina": 14,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "municipal",
+     "trecho": "domínio/órgão: pncp.gov.br · MUNICÍPIO DE NOVA ROMA MUNICIPIO DE NOVA ROMA",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4",
+     "metodo": "domínio e órgão"
+    },
+    "Requisitos": {
+     "valor": "Poderão participar do credenciamento as pessoas físicas e jurídicas que atuem",
+     "trecho": ". 78, inciso I, e 79, inciso I, da Lei Federal nº 14.133/2021. 10.2. Poderão participar do credenciamento as pessoas físicas e jurídicas que atuem nas categorias artísticas e profissionais previstas neste Termo de Re",
+     "pagina": 40,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4",
+     "metodo": "texto"
+    },
+    "Anexos": {
+     "valor": "ANEXO I MODELO DE REQUERIMENTO PARA CREDENCIAMENTO; ANEXO II MODELO REFERENCIAL DE DECLARAÇÕES; ANEXO III DECLARAÇÃO DE COMPOSIÇÃO ARTÍSTICA; ANEXO IV MODELO DE RELATÓRIO DE PRESTAÇÃO DE SERVIÇOS ARTÍSTICOS E; ANEXO V MINUTA DO TERMO DE CREDENCIAMENTO; ANEXO VI TERMO DE REFERÊNCIA; ANEXO VI | |",
+     "trecho": "62098280-0062 ANEXO I MODELO DE REQUERIMENTO PARA CREDENCIAMENTO Chamamento Público nº ___/202 Credenciamento nº ___/202 A empresa (Razão Social da Empresa), inscrita no CNPJ nº __________________",
+     "pagina": 14,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4",
+     "metodo": "lista de anexos"
+    },
+    "Modalidade": {
+     "valor": "Credenciamento (contratação) — Lei Federal nº 14.133/2021",
+     "trecho": "g) Disc Jockey (DJ). 1.3. O procedimento será realizado na forma de credenciamento com contratações paralelas e não excludentes , nos termos do art. 79, inciso I, da Lei Federal nº 14.133/2021, po",
+     "pagina": 28,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Cultura",
+     "trecho": "termos do objeto e do título: Cultura",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Prazo de inscrição": {
+     "valor": "2026-04-27 a 2027-04-27",
+     "trecho": "dataAberturaProposta/dataEncerramentoProposta: 2026-04-27T00:00:00 — 2027-04-27T23:59:00",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/01067925000112/compras/2026/23",
+     "metodo": "metadados oficiais do PNCP"
+    }
+   },
+   "dispensas": {
+    "Resultado": {
+     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
+     "trecho": "forma e o local para apresentação dos requerimentos, podendo prever fluxo contínuo de ingresso de novos interessados durante a vigência do credenciamen",
+     "pagina": 41,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4"
+    }
+   },
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T03:11:22+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/4",
+     "degrau": 0,
+     "como": "PNCP: arquivo anexado pelo órgão (Edital)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 51,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/3",
+     "degrau": 0,
+     "como": "PNCP: arquivo anexado pelo órgão (Termo de Referência)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 24,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/01067925000112/compras/2026/23/arquivos/1",
+     "degrau": 0,
+     "como": "PNCP: arquivo anexado pelo órgão (Aviso de Contratação Direta)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 1,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "dispensado",
+     "Prazo de recurso": "falta",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 10,
+    "dispensados": 1,
     "ja_constavam": 0,
     "faltam": 1,
     "pct_certificado_12": 0.9167,
@@ -69196,6 +69531,205 @@
    }
   },
   {
+   "id": "op-20637754e778",
+   "tipo": "livro",
+   "titulo": "RECIFE CAMARA MUNICIPAL — Credenciamento, mediante prévio chamamento público, de entidades de lazer, associações, clubes e cooperativas de crédito.",
+   "balcao": "pncp",
+   "link_oficial": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/1",
+   "degrau": 0,
+   "como": "PNCP: arquivo anexado pelo órgão (Edital)",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [
+    "Requisitos"
+   ],
+   "tentativa": 1,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "sem_estrela",
+   "estagio_inicio": "sem_estrela",
+   "esgotada": null,
+   "eficiencia": 0.917,
+   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
+   "selo_antes": null,
+   "selo_depois": null,
+   "em": "2026-10-18T03:10:27+00:00",
+   "prazo": null,
+   "uf": "PE",
+   "orgao": "PNCP — RECIFE CAMARA MUNICIPAL",
+   "fim": "2024-10-10",
+   "itens": {
+    "Prazo de recurso": {
+     "valor": "03 (três) dias úteis",
+     "trecho": "3.1.1.2. Do resultado da habilitação e inabilitação das interessadas, caberá recurso ao Primeiro Secretário da Credenciante, no prazo de 03 (três) dias úteis, a contar da publicação no Diário Oficial do Município ou da comunic",
+     "pagina": 5,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/1",
+     "metodo": "seção"
+    },
+    "Valor": {
+     "valor": "R$ 5,21 (cinco reais e vinte um centavos)",
+     "trecho": "nanceira, em conta bancária de sua titularidade; 6.5.1.7.deduzir do montante a ser repassado o valor de R$ 5,21 (cinco reais e vinte um centavos) por linha impressa na folha de pagamento do consignado, para fins de",
+     "pagina": 16,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/1",
+     "metodo": "seção"
+    },
+    "Objeto": {
+     "valor": "Credenciamento para consignação em folha de pagamento.",
+     "trecho": "sso Administrativo nº ____/____ Termo de Credenciamento nº ___/____ Objeto: Credenciamento para consignação em folha de pagamento. Por meio deste instrumento, a __________________________ [n",
+     "pagina": 33,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/1",
+     "metodo": "texto"
+    },
+    "Território": {
+     "valor": "do Estado de Pernambuco",
+     "trecho": "pedida pelo distribuidor da Comarca de Recife do Tribunal de Justiça do Estado de Pernambuco, ressalvado o disposto no item 2.5.3 deste Edital; 2.5.1.13. modelo",
+     "pagina": 4,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/1",
+     "metodo": "texto"
+    },
+    "Esfera": {
+     "valor": "municipal",
+     "trecho": "domínio/órgão: pncp.gov.br · PNCP — RECIFE CAMARA MUNICIPAL",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/1",
+     "metodo": "domínio e órgão"
+    },
+    "Anexos": {
+     "valor": "ANEXO I - TERMO DE REFERÊNCIA; ANEXO II - MODELO DE REQUERIMENTO ADMINISTRATIVO PARA; ANEXO III - MODELO DE DECLARAÇÃO DE INEXISTÊNCIA DOS IMPEDIMENTOS AO; ANEXO IV - MINUTA DO TERMO DE CREDENCIAMENTO; ANEXO V - MODELO DE REQUERIMENTO DE PRORROGAÇÃO DE PRAZO DE; ANEXO VI - MODELO DE DECLARAÇÃO DE CU",
+     "trecho": ". Compõem o presente Edital, como Anexos, os seguintes documentos: ANEXO I - TERMO DE REFERÊNCIA ANEXO II - MODELO DE REQUERIMENTO ADMINISTRATIVO PARA CREDENCIAMENTO DE INTERESSADAS ANEXO III - MODELO DE DECLARAÇÃO DE INEXISTÊNCIA DOS IMPEDIMENTOS AO CR",
+     "pagina": 8,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/1",
+     "metodo": "lista de anexos"
+    },
+    "Modalidade": {
+     "valor": "Credenciamento (contratação) — Lei Federal nº 14.133",
+     "trecho": "ões da Credenciante/Consignante para o cumprimento do instrumento de credenciamento, responder, participar de reuniões e assinar as res pectivas atas, tomar providências para ajustes e aditivos ao",
+     "pagina": 33,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/1",
+     "metodo": "modalidade de recebimento"
+    },
+    "Área de atuação": {
+     "valor": "Esporte",
+     "trecho": "termos do objeto e do título: Esporte",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/1",
+     "metodo": "palavras-chave do objeto"
+    },
+    "Órgão / financiador": {
+     "valor": "RECIFE CAMARA MUNICIPAL — Unidade Única",
+     "trecho": "orgaoEntidade.razaoSocial: RECIFE CAMARA MUNICIPAL — Unidade Única",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/08903189000134/compras/2024/4",
+     "metodo": "metadados oficiais do PNCP"
+    },
+    "Prazo de inscrição": {
+     "valor": "2024-10-10 a 2029-09-11",
+     "trecho": "dataAberturaProposta/dataEncerramentoProposta: 2024-10-10T09:00:00 — 2029-09-11T23:59:00",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/08903189000134/compras/2024/4",
+     "metodo": "metadados oficiais do PNCP"
+    }
+   },
+   "dispensas": {
+    "Resultado": {
+     "motivo": "dispensado pelo Cartório — não se aplica: fluxo contínuo — cada proposta é analisada ao chegar, não há resultado único",
+     "trecho": "NTE ou pelo descredenciamento. PARÁGRAFO PRIMEIRO. Será facultado, a qualquer tempo, ao CREDENCIANTE/CONSIGNANTE denunciar este Termo de Credenciamento,",
+     "pagina": 28,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/1"
+    }
+   },
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-18T03:10:27+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Modalidade",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/1",
+     "degrau": 0,
+     "como": "PNCP: arquivo anexado pelo órgão (Edital)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 33,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/08903189000134/compras/2024/4/arquivos/2",
+     "degrau": 0,
+     "como": "PNCP: arquivo anexado pelo órgão (Outros Documentos)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 17,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "dispensado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "falta",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 10,
+    "dispensados": 1,
+    "ja_constavam": 0,
+    "faltam": 1,
+    "pct_certificado_12": 0.9167,
+    "pct_cobertura_12": 0.9167
+   }
+  },
+  {
    "id": "e1a46fb1b974d54599f6",
    "tipo": "estrela",
    "titulo": "SAO PAULO TRIBUNAL DE JUSTICA — Chamamento  Público  para  seleção  e  cadastro  de  cooperativas  e/ou  associações  de  catadores  de mate",
@@ -69243,7 +69777,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": null,
    "selo_depois": "prata",
-   "em": "2026-10-18T02:10:00+00:00",
+   "em": "2026-10-18T02:56:18+00:00",
    "prazo": "2030-09-07T18:00",
    "uf": "SP",
    "orgao": null,
@@ -79187,677 +79721,35 @@
     "pct_certificado_12": 0.5,
     "pct_cobertura_12": 0.9167
    }
-  },
-  {
-   "id": "op-53ad2c20683a",
-   "tipo": "livro",
-   "titulo": "EDITAL Nº 04/2026 DE FORMAÇÃO ARTÍSTICA E CULTURAL",
-   "balcao": "orgao",
-   "link_oficial": "https://mapacultural.secult.ce.gov.br/oportunidade/8320/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Requisitos",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Modalidade"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": {
-    "orgao": "dominio:mapacultural.secult.ce.gov.br",
-    "itens_pelo_gabarito": [
-     "Objeto"
-    ]
-   },
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-14T18:39:13+00:00",
-   "prazo": null,
-   "uf": "CE",
-   "orgao": "Mapa Cultural",
-   "fim": "2026-09-14",
-   "itens": {
-    "Esfera": {
-     "valor": "municipal",
-     "trecho": "domínio/órgão: mapacultural.secult.ce.gov.br · Mapa Cultural Mapa Cultural",
-     "pagina": 1,
-     "documento": "https://mapacultural.secult.ce.gov.br/oportunidade/8320/",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Cultura",
-     "trecho": "termos do objeto e do título: Cultura",
-     "pagina": 1,
-     "documento": "https://mapacultural.secult.ce.gov.br/oportunidade/8320/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Resultado": {
-     "valor": "17/09/2026",
-     "trecho": "Inscrições 02/09/2026 14/09/2026 2. Análise Documental 16/09/2026 3. Resultado Preliminar etapa de habilitação 17/09/2026 4. Recurso para fase de habilitação 19/09/2026 5. Resultado Final da",
-     "pagina": 7,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8320/publicacao-d-o-edital.pdf",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "19/09/2026",
-     "trecho": "16/09/2026 3. Resultado Preliminar etapa de habilitação 17/09/2026 4. Recurso para fase de habilitação 19/09/2026 5. Resultado Final da etapa de habilitação 21/09/2026 6. Análise de M",
-     "pagina": 7,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8320/publicacao-d-o-edital.pdf",
-     "metodo": "seção"
-    },
-    "Valor": {
-     "valor": "R$ 40.000,00 (quarenta mil reais)",
-     "trecho": "ções culturais do Município de Morada Nova, Ceará. 2. VALORES 2.1 O valor total disponibilizado para este Edital é de R$ 40.000,00 (quarenta mil reais) dividido em 02 (duas) vagas na categoria de apoio descrita no Anexo 1",
-     "pagina": 1,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8320/publicacao-d-o-edital.pdf",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "requisitos de participação, constatadas a qualquer tempo, implicarão na desclassificação do proponente.",
-     "trecho": "° 010/2026 – SECULT. 18.5 Eventuais irregularidades relacionadas aos requisitos de participação, constatadas a qualquer tempo, implicarão na desclassificação do proponente. 18.6 O proponente será o único responsável pela veracidade da propo",
-     "pagina": 12,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8320/edital-formacao.pdf",
-     "metodo": "texto"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-14T18:39:13+00:00",
-     "ganhou": [
-      "Esfera",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Valor",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/oportunidade/8320/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8320/publicacao-d-o-edital.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 18,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8320/edital-formacao.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 14,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8320/anexo-1.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8320/anexo-3.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8320/anexo-13.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8320/resultado-final-merito-cultural.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8320/homologacao.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "falta",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "op-b4ddbf787cd2",
-   "tipo": "livro",
-   "titulo": "EDITAL Nº 13/2023 - POVOS TRADICIONAIS E ORIGINÁRIOS - LEI PAULO GUSTAVO",
-   "balcao": "orgao",
-   "link_oficial": "https://goias.gov.br/cultura/editais/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Resultado"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": {
-    "orgao": "dominio:goias.gov.br",
-    "itens_pelo_gabarito": [
-     "Requisitos"
-    ]
-   },
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-15T09:31:47+00:00",
-   "prazo": null,
-   "uf": "GO",
-   "orgao": "Secretaria de Estado da Cultura de Goiás",
-   "fim": null,
-   "itens": {
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: goias.gov.br · Secretaria de Estado da Cultura Secretaria de Estado da Cultura de Goiás",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/cultura/editais/",
-     "metodo": "domínio e órgão"
-    },
-    "Modalidade": {
-     "valor": "Termo de Execução Cultural",
-     "trecho": "ETNICO RACIAL ANEXO V &#8211; CRONOGRAMA ANEXO VI &#8211; TERMO DE EXECUÇÃO CULTURAL ANEXO VIII &#8211; RELATÓRIO DE EXECUÇÃO DO OBJETO ERRATA &#8211; ANEXO I ERRATA 2 &#",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/cultura/editais/",
-     "metodo": "modalidade de recebimento"
-    },
-    "Área de atuação": {
-     "valor": "Cultura",
-     "trecho": "termos do objeto e do título: Cultura",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/cultura/editais/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Valor": {
-     "valor": "R$ 2.023.998,00 (dois milhões, vinte e três mil, novecentos e noventa e oito reais)",
-     "trecho": "igência. Vigência: 12 meses, a partir de 27 de Agosto de 2025. Valor: R$ 2.023.998,00 (dois milhões, vinte e três mil, novecentos e noventa e oito reais). Partes: Estado de Goiás , por meio da Secretaria de Estado de Desen",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2025/09/diario_oficial_2025-09-01_pag_3839.pdf",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "º 12.232/2010, Lei Federal nº 14.133/2021 e",
-     "trecho": "stribuição de ações publicitárias junto a públicos de interesse, nos termos da Lei Federal nº 12.232/2010, Lei Federal nº 14.133/2021 e suas alterações posteriores, art. 37, XXI, da Constituição Federal d",
-     "pagina": 2,
-     "documento": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2025/09/diario_oficial_2025-09-01_pag_3839.pdf",
-     "metodo": "gabarito do órgão (rótulo “termos da lei federal n”)"
-    },
-    "Prazo de recurso": {
-     "valor": "30 dias",
-     "trecho": "da pela execução incorreta, parcial, ou inexecução do projeto, dado o prazo de recurso desta análise (30 dias), será considerado o proponente inadimplente. Caso seja por falta de",
-     "pagina": 26,
-     "documento": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2024/09/EDITAL-01.pdf",
-     "metodo": "seção"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-15T09:31:47+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Prazo de recurso",
-      "Requisitos",
-      "Valor",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://goias.gov.br/cultura/editais/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2025/09/diario_oficial_2025-09-01_pag_3839.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2024/09/EDITAL-01.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 28,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/AnexoIAudiovisual.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/anexo-ii-plano-de-trabalho.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 5,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/anexo-iii-planilha-orcamentaria.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/anexo-iv-autodeclaracao-intelectual-e-direitos-autorais-etnico-racial.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/anexo-v-cronograma.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "falta",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
-  },
-  {
-   "id": "op-5eb8c461293c",
-   "tipo": "livro",
-   "titulo": "EDITAL Nº 5/2023 - PRODUÇÃO AUDIOVISUAL (VIDEOCLIPE, VIDEODANÇA, GAMES) - LEI PAULO GUSTAVO",
-   "balcao": "orgao",
-   "link_oficial": "https://goias.gov.br/cultura/editais/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Resultado"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": {
-    "orgao": "dominio:goias.gov.br",
-    "itens_pelo_gabarito": [
-     "Requisitos"
-    ]
-   },
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-15T11:04:58+00:00",
-   "prazo": null,
-   "uf": "GO",
-   "orgao": "Secretaria de Estado da Cultura de Goiás",
-   "fim": null,
-   "itens": {
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "domínio/órgão: goias.gov.br · Secretaria de Estado da Cultura Secretaria de Estado da Cultura de Goiás",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/cultura/editais/",
-     "metodo": "domínio e órgão"
-    },
-    "Modalidade": {
-     "valor": "Termo de Execução Cultural",
-     "trecho": "ETNICO RACIAL ANEXO V &#8211; CRONOGRAMA ANEXO VI &#8211; TERMO DE EXECUÇÃO CULTURAL ANEXO VIII &#8211; RELATÓRIO DE EXECUÇÃO DO OBJETO ERRATA &#8211; ANEXO I ERRATA 2 &#",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/cultura/editais/",
-     "metodo": "modalidade de recebimento"
-    },
-    "Área de atuação": {
-     "valor": "Cultura",
-     "trecho": "termos do objeto e do título: Cultura",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/cultura/editais/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Valor": {
-     "valor": "R$ 2.023.998,00 (dois milhões, vinte e três mil, novecentos e noventa e oito reais)",
-     "trecho": "igência. Vigência: 12 meses, a partir de 27 de Agosto de 2025. Valor: R$ 2.023.998,00 (dois milhões, vinte e três mil, novecentos e noventa e oito reais). Partes: Estado de Goiás , por meio da Secretaria de Estado de Desen",
-     "pagina": 1,
-     "documento": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2025/09/diario_oficial_2025-09-01_pag_3839.pdf",
-     "metodo": "seção"
-    },
-    "Requisitos": {
-     "valor": "º 12.232/2010, Lei Federal nº 14.133/2021 e",
-     "trecho": "stribuição de ações publicitárias junto a públicos de interesse, nos termos da Lei Federal nº 12.232/2010, Lei Federal nº 14.133/2021 e suas alterações posteriores, art. 37, XXI, da Constituição Federal d",
-     "pagina": 2,
-     "documento": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2025/09/diario_oficial_2025-09-01_pag_3839.pdf",
-     "metodo": "gabarito do órgão (rótulo “termos da lei federal n”)"
-    },
-    "Prazo de recurso": {
-     "valor": "30 dias",
-     "trecho": "da pela execução incorreta, parcial, ou inexecução do projeto, dado o prazo de recurso desta análise (30 dias), será considerado o proponente inadimplente. Caso seja por falta de",
-     "pagina": 26,
-     "documento": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2024/09/EDITAL-01.pdf",
-     "metodo": "seção"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-15T11:04:58+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Prazo de recurso",
-      "Requisitos",
-      "Valor",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://goias.gov.br/cultura/editais/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2025/09/diario_oficial_2025-09-01_pag_3839.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2024/09/EDITAL-01.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 28,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/AnexoIAudiovisual.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/anexo-ii-plano-de-trabalho.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 5,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/anexo-iii-planilha-orcamentaria.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 2,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/anexo-iv-autodeclaracao-intelectual-e-direitos-autorais-etnico-racial.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 3,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/07/anexo-v-cronograma.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "falta",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
   }
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2365,
-   "bronze": 121,
-   "prata": 182
+   "sem_estrela": 2339,
+   "bronze": 122,
+   "prata": 178
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 133,
-    "bronze": 8,
-    "prata": 11
+    "sem_estrela": 107,
+    "bronze": 9,
+    "prata": 8
    },
    "livro": {
     "sem_estrela": 2232,
     "bronze": 113,
-    "prata": 171
+    "prata": 170
    }
   },
-  "fila_oportunidades": 152,
-  "fila_livros": 2516,
-  "devidas_nesta_hora": 2251,
+  "fila_oportunidades": 124,
+  "fila_livros": 2515,
+  "devidas_nesta_hora": 2241,
   "promovidas_nesta_execucao": 0,
-  "sem_material_agora": 25,
+  "sem_material_agora": 24,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
    "chaves": 1059,
-   "sites": 2273
+   "sites": 2269
   },
   "intervalo_horas": 12,
   "limite": 10,
