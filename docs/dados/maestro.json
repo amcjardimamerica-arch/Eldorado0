@@ -1,6 +1,6 @@
 {
  "dia": "2026-10-18",
- "em": "2026-10-18T07:08:39+00:00",
+ "em": "2026-10-18T07:11:25+00:00",
  "regra": "MAESTRO — A MÃO DA REDE NEURAL DE COMANDO (titular, 02/10/2026; unificado em 15/10/2026).\n\n15/10/2026 (titular): maestro e rede neural são UMA coisa só. Quem decide o caminho do fluxo inteiro é src/comando.py\n(a rede neural de comando); este módulo é a parte que MEDE e EXECUTA para ela:\n  · planejar()   quais motores rodam hoje (agenda) com a prioridade de rendimento — matéria-prima da decisão do comando;\n  · cobertura()  completa · parcial · pendente · pendente_local de cada motor no dia;\n  · controlar()  pendentes e parciais a disparar (até 3 tentativas), dia fechado ou não;\n  · relatorio_etapas() o relatório do dia que o painel mostra.\nO comando chama planejar/controlar antes de acionar os motores (decidir) e depois deles (avaliar e reacionar).",
  "planejados": 131,
  "cobertura": {
@@ -8,9 +8,7 @@
   "parcial": 24
  },
  "cobertura_percentual": 81.7,
- "a_disparar": [
-  "f260-captacao-118"
- ],
+ "a_disparar": [],
  "esgotaram_tentativas": [
   "plat-prefeituras-50-go",
   "plat-empresas-editais-incentivados",
@@ -34,9 +32,10 @@
   "f260-captacao-240",
   "f260-captacao-224",
   "f260-curadoria-005",
-  "f260-captacao-221"
+  "f260-captacao-221",
+  "f260-captacao-118"
  ],
- "dia_fechado": false,
+ "dia_fechado": true,
  "dia_anterior_nao_observado": [
   "outras-oportunidades-7",
   "judiciario-cnj-tjgo",
@@ -1477,7 +1476,7 @@
    "coleta": "nuvem",
    "dia_anterior": "observado",
    "cobertura": "parcial",
-   "tentativas_hoje": 5
+   "tentativas_hoje": 6
   },
   {
    "motor": "f260-captacao-238",
