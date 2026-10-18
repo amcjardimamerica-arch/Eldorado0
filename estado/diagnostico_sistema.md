@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-18 09:43 UTC
+# Diagnóstico do sistema · 2026-10-18 09:45 UTC
 
 ## Cumprimento da finalidade · índice geral 69%
 - Motores: 100% (ok) — todo motor ativo lê dentro da sua cadência
@@ -22,9 +22,9 @@
 - 05 · Busca ativa (a cada 3 dias): atencao · última 2026-10-15T17:32 · sucesso 10% · cadência None h
 - 09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes: atrasado · última 2026-10-03T11:56 · sucesso 100% · cadência 24.0 h
 - 10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar: atencao · última 2026-10-15T16:09 · sucesso 25% · cadência None h
-- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: atencao · última 2026-10-18T09:35 · sucesso 0% · cadência 1.0 h
+- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: atencao · última 2026-10-18T09:44 · sucesso 0% · cadência 1.0 h
 - 01 · Eldorado — motores por hora (00h–06h BRT): atencao · última 2026-10-17T12:52 · sucesso 50% · cadência 24.0 h
-- 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): falha · última 2026-10-18T09:42 · sucesso 0% · cadência 1.0 h
+- 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): falha · última 2026-10-18T09:44 · sucesso 0% · cadência 1.0 h
 - 34 · Motores de empresas (semanal, com recuperação): atencao · última 2026-10-17T10:57 · sucesso 67% · cadência 24.0 h
 - 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): falha · última 2026-10-18T03:31 · sucesso 40% · cadência 6.0 h
 - 02 · Alexandria — revisão mensal de leis e procedimentos: atrasado · última 2026-10-01T10:36 · sucesso 50% · cadência 24.0 h
@@ -54,7 +54,7 @@
 
 ## Integração
 - contagens: {'repositorio_abertas': 224, 'diagnostico_abertas': 224, 'tela_cartoes': 224, 'fichas': 236, 'sala_controle_abertas': 224}
-- idade (h): {'repositorio': 5.9, 'fluxo': 5.9, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 0.0, 'rede_neural': 5.9, 'saude': 19.5}
+- idade (h): {'repositorio': 5.9, 'fluxo': 5.9, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 0.1, 'rede_neural': 5.9, 'saude': 19.5}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (27)
