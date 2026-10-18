@@ -1,29 +1,23 @@
 {
- "inicio": "2026-10-18T08:17:49+00:00",
+ "inicio": "2026-10-18T08:20:34+00:00",
  "recibos": [
   {
    "etapa": "acionar",
    "rc": 0,
-   "segundos": 10.6,
+   "segundos": 0,
    "erro": null,
-   "motores": [
-    "f260-captacao-230"
-   ],
-   "executados": 1,
-   "achados": 0,
-   "novos_na_base": 0,
-   "adiados_por_tempo": []
+   "motores": []
   },
   {
    "etapa": "catalogar",
    "finalidade": "achados por motor, status de cada motor e repositório único das oportunidades",
-   "segundos": 15.9,
+   "segundos": 16.4,
    "erro": "catalogar:4: KeyError: 'esqueleto'"
   },
   {
    "etapa": "site_oficial",
    "finalidade": "do replicador à fonte oficial e ao PDF do edital (navegação e PNCP)",
-   "segundos": 10.2,
+   "segundos": 10.9,
    "erro": null
   },
   {
@@ -59,13 +53,13 @@
   {
    "etapa": "livros",
    "finalidade": "os livros são o banco: cada oportunidade cria ou vincula o seu livro com links, checklist12, achados e análises",
-   "segundos": 1.4,
+   "segundos": 1.5,
    "erro": "livros:1: KeyError: 'dado'"
   },
   {
    "etapa": "banco_unico",
    "finalidade": "teste: bancos de dados que ainda existem fora dos livros",
-   "segundos": 2.7,
+   "segundos": 2.9,
    "erro": null
   },
   {
@@ -77,32 +71,32 @@
   {
    "etapa": "fechamento",
    "finalidade": "repositório por último; fluxo e pendências do Cartório derivados dele (uma só fonte)",
-   "segundos": 50.9,
+   "segundos": 52.7,
    "erro": "fechamento:3: KeyError: 'dado'"
   },
   {
    "etapa": "fichas_farol",
    "finalidade": "ficha e janela de cada oportunidade aberta; o que está pronto vai ao Farol",
-   "segundos": 2.1,
+   "segundos": 2.3,
    "erro": null
   },
   {
    "etapa": "sala_de_controle",
    "finalidade": "instrumentos de cada etapa",
-   "segundos": 4.6,
+   "segundos": 5.3,
    "erro": null
   },
   {
    "etapa": "diagnostico",
    "finalidade": "diagnóstico da passagem (arquivo próprio; o relatório da análise não é sobrescrito)",
-   "segundos": 21.8,
+   "segundos": 22.4,
    "erro": null
   }
  ],
  "decisoes": [
   {
    "fase": "decidir",
-   "motores": 1,
+   "motores": 0,
    "adiados_primeiro": [],
    "planejados_no_dia": 123,
    "cobertura_antes_pct": 79.7
@@ -142,20 +136,18 @@
  ],
  "avaliacao": {
   "cobertura_do_dia_pct": 79.7,
-  "estado": {
-   "f260-captacao-230": "parcial"
-  },
+  "estado": {},
   "reacionar": [],
   "para_humano": [],
   "completos": 0
  },
  "novos_na_base": 0,
- "fim": "2026-10-18T08:19:57+00:00",
+ "fim": "2026-10-18T08:22:36+00:00",
  "erros": [
   {
    "etapa": "catalogar",
    "finalidade": "achados por motor, status de cada motor e repositório único das oportunidades",
-   "segundos": 15.9,
+   "segundos": 16.4,
    "erro": "catalogar:4: KeyError: 'esqueleto'"
   },
   {
@@ -185,13 +177,13 @@
   {
    "etapa": "livros",
    "finalidade": "os livros são o banco: cada oportunidade cria ou vincula o seu livro com links, checklist12, achados e análises",
-   "segundos": 1.4,
+   "segundos": 1.5,
    "erro": "livros:1: KeyError: 'dado'"
   },
   {
    "etapa": "fechamento",
    "finalidade": "repositório por último; fluxo e pendências do Cartório derivados dele (uma só fonte)",
-   "segundos": 50.9,
+   "segundos": 52.7,
    "erro": "fechamento:3: KeyError: 'dado'"
   }
  ],
