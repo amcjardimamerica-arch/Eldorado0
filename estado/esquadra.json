@@ -1211,10 +1211,10 @@
     "f260-captacao-118": {
       "nome": "Destinação de IR pessoa física para FMDCA",
       "tipo": "site_oficial",
-      "leituras": 67,
+      "leituras": 68,
       "achados_total": 31,
       "vazias_seguidas": 0,
-      "ultima": "2026-10-18T06:21:38+00:00",
+      "ultima": "2026-10-18T07:04:58+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 2,
       "falhas_ultima": 1,
@@ -1262,11 +1262,11 @@
         "camada1_vetados": 6,
         "camada1_direcionados": 40
       },
-      "duracao_s": 23,
+      "duracao_s": 15,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 2,
-      "relidas_total": 22
+      "relidas_total": 24
     },
     "f260-captacao-151": {
       "nome": "Emenda estadual para saúde comunitária",
@@ -2036,14 +2036,23 @@
     "f260-captacao-227": {
       "nome": "Instituto Coca-Cola Brasil",
       "tipo": "privada",
-      "leituras": 64,
+      "leituras": 65,
       "achados_total": 0,
-      "vazias_seguidas": 64,
-      "ultima": "2026-10-18T06:18:46+00:00",
+      "vazias_seguidas": 65,
+      "ultima": "2026-10-18T07:03:04+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
-      "falhas_ultima": 0,
-      "saude": [],
+      "falhas_ultima": 1,
+      "saude": [
+        {
+          "url": "https://www.institutococacolabrasil.com.br/",
+          "erro": "ErroPonte",
+          "code": null,
+          "waf": null,
+          "causa": "ErroPonte",
+          "retentativa": "aguardando"
+        }
+      ],
       "alerta": null,
       "diagnostico": {
         "paginas_lidas": 0,
@@ -2051,14 +2060,11 @@
         "links_candidatos": 0,
         "descobertas": [],
         "pdf_links": 0,
-        "motivo_zero": null,
+        "motivo_zero": "falha: ErroPonte",
         "camada1_vetados": 0,
-        "camada1_direcionados": 0,
-        "aguardando_retentativa": [
-          "https://www.institutococacolabrasil.com.br/"
-        ]
+        "camada1_direcionados": 0
       },
-      "duracao_s": 0,
+      "duracao_s": 1,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 0,
@@ -2470,10 +2476,10 @@
     "f260-captacao-237": {
       "nome": "Instituto Sabin",
       "tipo": "privada",
-      "leituras": 47,
+      "leituras": 48,
       "achados_total": 3,
       "vazias_seguidas": 0,
-      "ultima": "2026-10-18T06:58:42+00:00",
+      "ultima": "2026-10-18T07:07:59+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 3,
       "falhas_ultima": 1,
@@ -2509,6 +2515,11 @@
             "de": "https://www.institutosabin.org.br/",
             "para": "https://institutosabin.org.br/edital-da-jornada-transformacao-de-2026-e-lancado",
             "rotulo": ""
+          },
+          {
+            "de": "https://www.institutosabin.org.br/",
+            "para": "https://institutosabin.org.br/publicacoes",
+            "rotulo": "Publicações"
           }
         ],
         "pdf_links": 60,
@@ -2516,12 +2527,12 @@
         "camada1_vetados": 0,
         "camada1_direcionados": 16
       },
-      "duracao_s": 13,
-      "relidas_total": 112,
+      "duracao_s": 8,
+      "relidas_total": 115,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 3,
-      "fora_do_portao": 10
+      "fora_do_portao": 11
     },
     "f260-captacao-038": {
       "nome": "Editais FICA Goiás - artes visuais/exposição",
@@ -3843,10 +3854,10 @@
     "plat-salic": {
       "nome": "SALIC — Lei Rouanet (Ministério da Cultura)",
       "tipo": "plataforma",
-      "leituras": 116,
+      "leituras": 117,
       "achados_total": 5,
       "vazias_seguidas": 0,
-      "ultima": "2026-10-18T06:58:29+00:00",
+      "ultima": "2026-10-18T07:07:51+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 2,
       "falhas_ultima": 1,
@@ -3854,9 +3865,9 @@
         {
           "url": "https://api.salic.cultura.gov.br/api/v1/projetos/?UF=GO&ano_projeto=26&limit=100&offset=0&format=json",
           "erro": "salic_api",
-          "code": 403,
+          "code": 503,
           "waf": null,
-          "causa": "HTTPError: HTTP Error 403: Forbidden"
+          "causa": "HTTPError: HTTP Error 503: Service Unavailable"
         }
       ],
       "alerta": null,
@@ -3923,8 +3934,8 @@
         ],
         "observacao_api": "API de projetos do SALIC fora do ar (série histórica); editais e janela lidos"
       },
-      "duracao_s": 10,
-      "relidas_total": 366,
+      "duracao_s": 39,
+      "relidas_total": 368,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 2
@@ -5439,11 +5450,11 @@
     "f260-captacao-221": {
       "nome": "Fundação Banco do Brasil",
       "tipo": "privada",
-      "leituras": 42,
+      "leituras": 43,
       "achados_total": 0,
-      "vazias_seguidas": 42,
-      "duracao_s": 7,
-      "ultima": "2026-10-18T06:59:24+00:00",
+      "vazias_seguidas": 43,
+      "duracao_s": 8,
+      "ultima": "2026-10-18T07:08:38+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 2,
@@ -5474,14 +5485,14 @@
     "f260-captacao-224": {
       "nome": "Fundação Telefônica Vivo",
       "tipo": "privada",
-      "leituras": 41,
+      "leituras": 42,
       "achados_total": 0,
-      "vazias_seguidas": 41,
-      "duracao_s": 10,
-      "ultima": "2026-10-18T06:21:16+00:00",
+      "vazias_seguidas": 42,
+      "duracao_s": 9,
+      "ultima": "2026-10-18T07:04:43+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
-      "falhas_ultima": 0,
+      "falhas_ultima": 1,
       "saude": [
         {
           "url": "https://www.hrjanauba.com.br/",
@@ -5494,7 +5505,7 @@
           "bytes": 137117
         }
       ],
-      "alerta": "trocar URL: 3 leituras sem achados com página respondendo",
+      "alerta": null,
       "diagnostico": {
         "paginas_lidas": 5,
         "links_total": 115,
@@ -5522,12 +5533,9 @@
           }
         ],
         "pdf_links": 31,
-        "motivo_zero": "página institucional; seguiu 4 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje",
+        "motivo_zero": "parte das páginas respondeu e parte falhou; nenhum edital reconhecido nas que responderam",
         "camada1_vetados": 0,
         "camada1_direcionados": 0,
-        "aguardando_retentativa": [
-          "https://fundacaotelefonicavivo.org.br/"
-        ],
         "fora_da_fila": [
           "https://hojanauba.cidadesmg.com.br/portaltransparencia"
         ]
@@ -5613,14 +5621,14 @@
     "f260-captacao-254": {
       "nome": "Global Fund for Women",
       "tipo": "internacional",
-      "leituras": 14,
+      "leituras": 15,
       "achados_total": 0,
-      "vazias_seguidas": 14,
-      "duracao_s": 2,
-      "ultima": "2026-10-18T06:58:58+00:00",
+      "vazias_seguidas": 15,
+      "duracao_s": 1,
+      "ultima": "2026-10-18T07:08:12+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
-      "falhas_ultima": 1,
+      "falhas_ultima": 0,
       "saude": [
         {
           "url": "https://www.globalfundforwomen.org/",
@@ -5628,16 +5636,19 @@
           "bytes": 220208
         }
       ],
-      "alerta": null,
+      "alerta": "trocar URL: 3 leituras sem achados com página respondendo",
       "diagnostico": {
         "paginas_lidas": 1,
         "links_total": 59,
         "links_candidatos": 33,
         "descobertas": [],
         "pdf_links": 0,
-        "motivo_zero": "parte das páginas respondeu e parte falhou; nenhum edital reconhecido nas que responderam",
+        "motivo_zero": "página respondeu com links, mas nenhum rótulo casou com o léxico do terceiro setor hoje — pode não haver edital publicado",
         "camada1_vetados": 0,
-        "camada1_direcionados": 0
+        "camada1_direcionados": 0,
+        "aguardando_retentativa": [
+          "https://www.globalfundforwomen.org/sitemap.xml"
+        ]
       },
       "totais_por_distintas": true,
       "novas_ultima": 0,
@@ -5720,15 +5731,24 @@
     "f260-captacao-228": {
       "nome": "Instituto Localiza",
       "tipo": "privada",
-      "leituras": 39,
+      "leituras": 40,
       "achados_total": 0,
-      "vazias_seguidas": 39,
+      "vazias_seguidas": 40,
       "duracao_s": 0,
-      "ultima": "2026-10-18T06:31:42+00:00",
+      "ultima": "2026-10-18T07:04:34+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
-      "falhas_ultima": 0,
-      "saude": [],
+      "falhas_ultima": 1,
+      "saude": [
+        {
+          "url": "https://institutolocaliza.com.br/",
+          "erro": "gaierror",
+          "code": null,
+          "waf": null,
+          "causa": "endereço não resolve (DNS) — URL errada ou domínio desativado",
+          "retentativa": "aguardando"
+        }
+      ],
       "alerta": null,
       "diagnostico": {
         "paginas_lidas": 0,
@@ -5736,12 +5756,9 @@
         "links_candidatos": 0,
         "descobertas": [],
         "pdf_links": 0,
-        "motivo_zero": null,
+        "motivo_zero": "endereço não resolve (DNS) — URL errada",
         "camada1_vetados": 0,
-        "camada1_direcionados": 0,
-        "aguardando_retentativa": [
-          "https://institutolocaliza.com.br/"
-        ]
+        "camada1_direcionados": 0
       },
       "totais_por_distintas": true,
       "novas_ultima": 0,
@@ -6155,11 +6172,11 @@
     "f260-captacao-240": {
       "nome": "UNESCO – Fundo Internacional para Diversidade Cultural",
       "tipo": "internacional",
-      "leituras": 40,
+      "leituras": 41,
       "achados_total": 0,
-      "vazias_seguidas": 40,
-      "duracao_s": 3,
-      "ultima": "2026-10-18T06:59:00+00:00",
+      "vazias_seguidas": 41,
+      "duracao_s": 4,
+      "ultima": "2026-10-18T07:08:16+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 1,
@@ -6533,11 +6550,11 @@
     "f260-curadoria-005": {
       "nome": "Fundação Tide Setubal — Edital Territórios Clínicos",
       "tipo": "privada",
-      "leituras": 41,
+      "leituras": 42,
       "achados_total": 0,
-      "vazias_seguidas": 41,
-      "duracao_s": 16,
-      "ultima": "2026-10-18T06:59:17+00:00",
+      "vazias_seguidas": 42,
+      "duracao_s": 15,
+      "ultima": "2026-10-18T07:08:30+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
       "falhas_ultima": 1,
@@ -7580,24 +7597,15 @@
     "f260-espalhado-rouanet-cultura-gov-br": {
       "nome": "Ministério da Cultura — SALIC — oportunidades (espalhado de edital validado)",
       "tipo": "privada",
-      "leituras": 39,
+      "leituras": 40,
       "achados_total": 0,
-      "vazias_seguidas": 39,
+      "vazias_seguidas": 40,
       "duracao_s": 0,
-      "ultima": "2026-10-18T06:58:58+00:00",
+      "ultima": "2026-10-18T07:08:12+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 0,
-      "falhas_ultima": 1,
-      "saude": [
-        {
-          "url": "https://rouanet.cultura.gov.br/",
-          "erro": "gaierror",
-          "code": null,
-          "waf": null,
-          "causa": "endereço não resolve (DNS) — URL errada ou domínio desativado",
-          "retentativa": "aguardando"
-        }
-      ],
+      "falhas_ultima": 0,
+      "saude": [],
       "alerta": null,
       "diagnostico": {
         "paginas_lidas": 0,
@@ -7605,9 +7613,12 @@
         "links_candidatos": 0,
         "descobertas": [],
         "pdf_links": 0,
-        "motivo_zero": "endereço não resolve (DNS) — URL errada",
+        "motivo_zero": null,
         "camada1_vetados": 0,
-        "camada1_direcionados": 0
+        "camada1_direcionados": 0,
+        "aguardando_retentativa": [
+          "https://rouanet.cultura.gov.br/"
+        ]
       },
       "totais_por_distintas": true,
       "novas_ultima": 0,
@@ -7968,31 +7979,31 @@
     "outras-oportunidades-3": {
       "nome": "Outras Oportunidades 3/3",
       "tipo": "site_oficial",
-      "leituras": 35,
+      "leituras": 36,
       "achados_total": 20,
       "vazias_seguidas": 0,
-      "duracao_s": 80,
-      "ultima": "2026-10-18T06:57:04+00:00",
+      "duracao_s": 72,
+      "ultima": "2026-10-18T07:06:10+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 5,
-      "falhas_ultima": 1,
+      "falhas_ultima": 0,
       "saude": [
-        {
-          "url": "https://www.sicredi.com.br/media/produtos/filer_public/2024/01/05/plano-de-trabalho-termo-de-fomento-municipio-de-planaltopufv2024.pdf",
-          "http": 200,
-          "bytes": 195520
-        },
         {
           "url": "https://www.editalong.com/editais",
           "http": 200,
           "bytes": 67460
+        },
+        {
+          "url": "https://www.sicredi.com.br/media/produtos/filer_public/2024/01/05/plano-de-trabalho-termo-de-fomento-municipio-de-planaltopufv2024.pdf",
+          "http": 200,
+          "bytes": 195520
         }
       ],
       "alerta": null,
       "diagnostico": {
         "paginas_lidas": 26,
-        "links_total": 3376,
-        "links_candidatos": 1179,
+        "links_total": 3438,
+        "links_candidatos": 1223,
         "descobertas": [
           {
             "de": "https://www.editalong.com/editais",
@@ -8015,10 +8026,16 @@
             "rotulo": "e-SIC"
           }
         ],
-        "pdf_links": 117,
+        "pdf_links": 103,
         "motivo_zero": null,
         "camada1_vetados": 19,
-        "camada1_direcionados": 67,
+        "camada1_direcionados": 56,
+        "lidas_pela_ponte_por_bloqueio": [
+          "https://transparencia.caubr.gov.br/chamadas",
+          "https://transparencia.caubr.gov.br/cartadeservicos",
+          "https://transparencia.caubr.gov.br/lgpd",
+          "https://transparencia.caubr.gov.br/esic"
+        ],
         "saneamento_descartes": [
           {
             "url": "https://www.bancoamazonia.com.br/rural/orientacao-formento",
@@ -8041,7 +8058,7 @@
           "https://iracemapolis.siscam.com.br/arquivo?Id=41354"
         ]
       },
-      "relidas_total": 73,
+      "relidas_total": 78,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 5,
@@ -8119,19 +8136,19 @@
     "outras-oportunidades-5": {
       "nome": "Outras Oportunidades 5/5",
       "tipo": "site_oficial",
-      "leituras": 34,
+      "leituras": 35,
       "achados_total": 53,
       "vazias_seguidas": 0,
-      "duracao_s": 109,
-      "ultima": "2026-10-18T06:20:35+00:00",
+      "duracao_s": 89,
+      "ultima": "2026-10-18T07:04:33+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 11,
-      "falhas_ultima": 3,
+      "falhas_ultima": 2,
       "saude": [
         {
           "url": "https://www.amazoniamaisdez.org.br/chamadas-abertas",
           "http": 200,
-          "bytes": 1116836
+          "bytes": 1115796
         },
         {
           "url": "https://editais.baoba.org.br/programa-marielle-franco-2",
@@ -8141,9 +8158,9 @@
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 22,
-        "links_total": 2009,
-        "links_candidatos": 1226,
+        "paginas_lidas": 23,
+        "links_total": 3270,
+        "links_candidatos": 1330,
         "descobertas": [
           {
             "de": "https://www.amazoniamaisdez.org.br/chamadas-abertas",
@@ -8166,10 +8183,10 @@
             "rotulo": "LEIA O EDITAL"
           }
         ],
-        "pdf_links": 65,
+        "pdf_links": 66,
         "motivo_zero": null,
-        "camada1_vetados": 35,
-        "camada1_direcionados": 74,
+        "camada1_vetados": 37,
+        "camada1_direcionados": 72,
         "fora_da_fila": [
           "https://mapacultural.saobernardo.sp.gov.br/",
           "https://smp.ifsp.edu.br/"
@@ -8196,28 +8213,28 @@
           }
         ]
       },
-      "relidas_total": 194,
+      "relidas_total": 205,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 11,
-      "fora_do_portao": 9
+      "fora_do_portao": 11
     },
     "outras-oportunidades-6": {
       "nome": "Outras Oportunidades 6/6",
       "tipo": "site_oficial",
-      "leituras": 31,
+      "leituras": 32,
       "achados_total": 46,
       "vazias_seguidas": 0,
-      "duracao_s": 91,
-      "ultima": "2026-10-18T06:18:11+00:00",
+      "duracao_s": 71,
+      "ultima": "2026-10-18T07:03:03+00:00",
       "motivo": "ativação manual pelo titular",
-      "achados_ultima": 20,
+      "achados_ultima": 18,
       "falhas_ultima": 3,
       "saude": [
         {
           "url": "https://oei.int/pt/escritorios/portugal/programa/laczos-artisticos-chamada-especial-cplp/",
           "http": 200,
-          "bytes": 288601
+          "bytes": 288429
         },
         {
           "url": "https://www.institutounibanco.org.br/",
@@ -8261,11 +8278,11 @@
           "https://www.boavista.rr.gov.br/"
         ]
       },
-      "relidas_total": 227,
+      "relidas_total": 245,
       "totais_por_distintas": true,
-      "novas_ultima": 2,
+      "novas_ultima": 0,
       "relidas_ultima": 18,
-      "fora_do_portao": 23
+      "fora_do_portao": 26
     },
     "outras-oportunidades-7": {
       "nome": "Outras Oportunidades 7/7",
@@ -8409,14 +8426,14 @@
     "outras-oportunidades-8": {
       "nome": "Outras Oportunidades 8/8",
       "tipo": "site_oficial",
-      "leituras": 17,
+      "leituras": 18,
       "achados_total": 29,
       "vazias_seguidas": 0,
-      "duracao_s": 74,
-      "ultima": "2026-10-18T06:58:19+00:00",
+      "duracao_s": 63,
+      "ultima": "2026-10-18T07:07:12+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 1,
-      "falhas_ultima": 5,
+      "falhas_ultima": 2,
       "saude": [
         {
           "url": "https://comitedeculturasc.org/editais",
@@ -8426,14 +8443,14 @@
         {
           "url": "https://www.diariomunicipal.com.br/maceio/",
           "http": 200,
-          "bytes": 48875
+          "bytes": 48867
         }
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 18,
-        "links_total": 1208,
-        "links_candidatos": 573,
+        "paginas_lidas": 17,
+        "links_total": 1204,
+        "links_candidatos": 572,
         "descobertas": [
           {
             "de": "https://comitedeculturasc.org/editais",
@@ -8465,14 +8482,17 @@
           "http://www.fundacaoculturaldecuritiba.com.br/leideincentivo/avisos/",
           "https://portal.tce.rs.gov.br/aplicprod/f?p=50500:10:::NO:10:P10_ID_LICITACAO,P10_PAG_RETORNO,F50500_CD_ORGAO:1144921,14,88370&cs=11ObdU0sTI2SbzK0p7eHr3VujB2Q"
         ],
-        "lidas_pela_ponte_por_bloqueio": [
-          "https://rubiataba.go.gov.br/"
+        "aguardando_retentativa": [
+          "https://institutomahle.org.br/projetos/envie-seu-projeto/",
+          "https://conjunta.org/recurso-financeiro/fundo-pcd-organizacoes-pessoas-com-deficiencia/",
+          "http://fapespa.pa.gov.br",
+          "https://casafluminense.org.br/atuacao/fundo-casa-fluminense/"
         ]
       },
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 1,
-      "relidas_total": 13
+      "relidas_total": 14
     },
     "outras-oportunidades-2": {
       "nome": "Outras Oportunidades 2/8",
@@ -8699,16 +8719,16 @@
     "f260-captacao-001": {
       "nome": "PNAB Goiânia - Audiovisual",
       "tipo": "site_oficial",
-      "leituras": 14,
+      "leituras": 15,
       "achados_total": 27,
       "vazias_seguidas": 0,
-      "duracao_s": 14,
-      "ultima": "2026-10-18T06:58:56+00:00",
+      "duracao_s": 12,
+      "ultima": "2026-10-18T07:08:11+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 27,
       "novas_ultima": 0,
       "relidas_ultima": 27,
-      "relidas_total": 54,
+      "relidas_total": 81,
       "falhas_ultima": 2,
       "saude": [
         {
@@ -10045,7 +10065,7 @@
   },
   "ultima_execucao": {
     "data": "2026-10-18",
-    "em": "2026-10-18T06:59:25+00:00",
+    "em": "2026-10-18T07:08:38+00:00",
     "manual": [
       "f260-captacao-001",
       "f260-captacao-118",
@@ -10058,53 +10078,31 @@
       "f260-captacao-254",
       "f260-curadoria-005",
       "f260-espalhado-rouanet-cultura-gov-br",
-      "judiciario-tjgo",
       "outras-oportunidades-3",
       "outras-oportunidades-5",
       "outras-oportunidades-6",
-      "outras-oportunidades-7",
       "outras-oportunidades-8",
-      "plat-prefeituras-50-go",
-      "plat-salic",
-      "plataforma-mapas-culturais",
-      "plataforma-wordpress"
+      "plat-salic"
     ],
     "bloco": "manual",
-    "sensores_executados": 15,
-    "adiados_por_tempo": [
-      "outras-oportunidades-6",
-      "f260-captacao-227",
-      "outras-oportunidades-5",
-      "f260-captacao-228",
-      "f260-captacao-224",
-      "f260-captacao-118"
-    ],
-    "duracao_s": 1496,
-    "em_espera": 110,
+    "sensores_executados": 16,
+    "adiados_por_tempo": [],
+    "duracao_s": 406,
+    "em_espera": 115,
     "total_esquadra": 131,
     "previsoes_ativas": 1,
-    "achados": 68,
-    "novos_na_base": 3,
+    "achados": 69,
+    "novos_na_base": 0,
     "por_tipo": {
+      "site_oficial": {
+        "sensores": 15,
+        "achados": 67,
+        "falhas": 18
+      },
       "plataforma": {
-        "sensores": 2,
+        "sensores": 1,
         "achados": 2,
         "falhas": 1
-      },
-      "site_oficial": {
-        "sensores": 10,
-        "achados": 49,
-        "falhas": 16
-      },
-      "api": {
-        "sensores": 2,
-        "achados": 17,
-        "falhas": 13
-      },
-      "diario_justica": {
-        "sensores": 1,
-        "achados": 0,
-        "falhas": 2
       }
     }
   }

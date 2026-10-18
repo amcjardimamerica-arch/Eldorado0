@@ -1,8 +1,8 @@
-# Diagnóstico do sistema · 2026-10-18 07:01 UTC
+# Diagnóstico do sistema · 2026-10-18 07:10 UTC
 
 ## Cumprimento da finalidade · índice geral 69%
 - Motores: 100% (ok) — todo motor ativo lê dentro da sua cadência
-- Maestro: 81% (atencao) — cobertura completa do dia planejado
+- Maestro: 82% (atencao) — cobertura completa do dia planejado
 - Rede neural: 99% (ok) — discernimento (AUC) de pelo menos 0,85
 - Biblioteca: 95% (ok) — toda oportunidade aberta aplicável com livro existente
 - Validação: 28% (falha) — toda oportunidade aberta validada
@@ -24,7 +24,7 @@
 - 10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar: atencao · última 2026-10-15T16:09 · sucesso 25% · cadência None h
 - 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: falha · última 2026-10-18T06:58 · sucesso 0% · cadência 1.0 h
 - 01 · Eldorado — motores por hora (00h–06h BRT): atencao · última 2026-10-17T12:52 · sucesso 50% · cadência 24.0 h
-- 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): atencao · última 2026-10-18T06:34 · sucesso 0% · cadência 1.0 h
+- 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): atencao · última 2026-10-18T07:01 · sucesso 0% · cadência 1.0 h
 - 34 · Motores de empresas (semanal, com recuperação): atencao · última 2026-10-17T10:57 · sucesso 67% · cadência 24.0 h
 - 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): falha · última 2026-10-18T03:31 · sucesso 40% · cadência 6.0 h
 - 02 · Alexandria — revisão mensal de leis e procedimentos: atrasado · última 2026-10-01T10:36 · sucesso 50% · cadência 24.0 h
@@ -47,18 +47,18 @@
 
 ## Sistemas
 - motores: 43 funcionando · 0 em falha · 2 inativos · 5 com leitura parcial
-- maestro: cobertura 80.9% · esgotados 9
+- maestro: cobertura 81.7% · esgotados 23
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
 - Cartório: 0.6852 certificado · fluxos do GitHub com falha: ['00 · Verificar prontidão']
-- saúde: 7 alerta(s) · índice da sala de controle: 72
+- saúde: 7 alerta(s) · índice da sala de controle: 71
 
 ## Integração
 - contagens: {'repositorio_abertas': 224, 'diagnostico_abertas': 224, 'tela_cartoes': 224, 'fichas': 236, 'sala_controle_abertas': 224}
-- idade (h): {'repositorio': 3.2, 'fluxo': 3.2, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 0.0, 'rede_neural': 3.2, 'saude': 16.8}
+- idade (h): {'repositorio': 3.3, 'fluxo': 3.3, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 0.0, 'rede_neural': 3.3, 'saude': 16.9}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (27)
-- [alta] 48 etapa(s) com erro nos ciclos de hoje: pncp: pncp:1: KeyError: 'dado' | certificar: certificar:1: KeyError: 'dado' | curadoria: curadoria:1: KeyError: 'dado' → investigar a etapa (sem correção automática)
+- [alta] 55 etapa(s) com erro nos ciclos de hoje: pncp: pncp:1: KeyError: 'dado' | certificar: certificar:1: KeyError: 'dado' | curadoria: curadoria:1: KeyError: 'dado' → investigar a etapa (sem correção automática)
 - [alta] 7 etapa(s) falharam em silêncio na última execução de motores-da-vez.yml: ##[error]catalogar:4: KeyError: 'esqueleto' | ##[error]certificar:1: KeyError: 'dado' | ##[error]curadoria:1: KeyError: 'dado' → investigar a etapa (sem correção automática)
 - [alta] 3 etapa(s) falharam em silêncio na última execução de motor-agregadores.yml: "rede: robots.txt inacessível: URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)" | "rede: robots.txt inacessível: URLError: timed out", | mapa: falhou → investigar a etapa (sem correção automática)
 - [alta] 9 etapa(s) falharam em silêncio na última execução de monitoramento-diario.yml: "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu → investigar a etapa (sem correção automática)
@@ -68,13 +68,13 @@
 - [alta] 9 oportunidades apontam para livro que não existe no catálogo → criar/vincular livros e refazer o repositório
 - [alta] 1 de 224 oportunidades abertas sem livro e sem regra que justifique → criar/vincular livros
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 3.2 h (limite 3 h) → refazer a tela
-- [media] repositorio sem atualização há 3.2 h (limite 3 h) → refazer o repositório
-- [media] fluxo 'acesso-mensal' sem rodar há 1125.8 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 355.1 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 404.4 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo sem atualização há 3.3 h (limite 3 h) → refazer a tela
+- [media] repositorio sem atualização há 3.3 h (limite 3 h) → refazer o repositório
+- [media] fluxo 'acesso-mensal' sem rodar há 1125.9 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 355.2 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 404.6 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
-- [media] 89 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
+- [media] 90 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 244 item(ns) esperando a análise do Claude (próxima: 2026-10-17) → ver o fluxo/arquivo indicado
 - [media] saúde · coerência: mapa e lista divergem em GO, __nac__, AM, SC, MG → refazer tela e indicadores
 - [media] saúde · gerador: o gerador principal do painel falhou depois da última geração → ver o fluxo/arquivo indicado
@@ -87,13 +87,13 @@
 - [baixa] 18 módulos de teste em quarentena (envelhecidos) → atualizar o teste à regra atual (sem correção automática)
 
 ## Workflow (estrutura de 15/10)
-- comando único: 8 ciclo(s) hoje · 7 vermelho(s) · 48 etapa(s) com erro · fases puladas {'modalidade': 8, 'treinar_rede': 8, 'expurgo': 7, 'migracao_livros': 8, 'unir_livros': 7, 'biblioteca_diaria': 7, 'vigilancia_diaria': 7, 'recalcular': 7}
-- cobertura do dia: 80.9% de 131 motores
-- retentativa: {'aguardando_retentativa': 1200, 'fora_da_fila': 89, 'fora_da_fila_por_escopo': {'outras-oportunidades-1': 4, 'outras-oportunidades-6': 4, 'recorrencia': 4, 'outras-oportunidades-5': 5, 'outras-oportunidades-8': 4, 'outras-oportunidades-3': 4, 'f260-captacao-044': 1, 'outras-oportunidades-2': 3, 'plat-empresas-editais-incentivados': 2, 'f260-captacao-238': 2, 'cartorio': 46, 'outras-oportunidades-7': 3, 'f260-captacao-242': 1, 'f260-captacao-224': 1, 'empresas-incentivadas': 1, 'f260-espalhado-sistema-mirassoldoeste-mt-gov-br': 1, 'f260-captacao-218': 1, 'f260-captacao-113': 3, 'f260-captacao-237': 1, 'f260-captacao-001': 1, 'f260-captacao-240': 1, 'f260-curadoria-005': 1, 'f260-captacao-221': 2}, 'regra': 'volta em 30 min; sai após 5 tentativas com o mesmo erro', 'destinos': {'Claude no Chrome': 46, 'rota quebrada': 7, 'ponte ou Chrome': 41, 'sem destino': 2}} · leitura parcial na fila: 1054
+- comando único: 9 ciclo(s) hoje · 8 vermelho(s) · 55 etapa(s) com erro · fases puladas {'modalidade': 9, 'treinar_rede': 9, 'expurgo': 8, 'migracao_livros': 9, 'unir_livros': 8, 'biblioteca_diaria': 8, 'vigilancia_diaria': 8, 'recalcular': 8}
+- cobertura do dia: 81.7% de 131 motores
+- retentativa: {'aguardando_retentativa': 1199, 'fora_da_fila': 90, 'fora_da_fila_por_escopo': {'outras-oportunidades-1': 4, 'outras-oportunidades-6': 6, 'recorrencia': 4, 'outras-oportunidades-5': 5, 'outras-oportunidades-8': 4, 'outras-oportunidades-3': 4, 'f260-captacao-044': 1, 'outras-oportunidades-2': 3, 'plat-empresas-editais-incentivados': 2, 'f260-captacao-238': 2, 'cartorio': 46, 'outras-oportunidades-7': 3, 'f260-captacao-242': 1, 'f260-captacao-224': 1, 'empresas-incentivadas': 1, 'f260-espalhado-sistema-mirassoldoeste-mt-gov-br': 1, 'f260-captacao-218': 1, 'f260-captacao-113': 3, 'f260-captacao-118': 1, 'f260-captacao-237': 1, 'f260-captacao-240': 1, 'f260-curadoria-005': 1, 'f260-captacao-221': 2}, 'regra': 'volta em 30 min; sai após 5 tentativas com o mesmo erro', 'destinos': {'Claude no Chrome': 46, 'rota quebrada': 8, 'ponte ou Chrome': 42, 'sem destino': 2}} · leitura parcial na fila: 1054
 - curadoria do link oficial: {'em curadoria': 74, 'reprovado': 50, 'aprovado': 40, 'sem link oficial': 26}
 - validação por exceção: trava fechada: acerto do Cartório 77.4% < 85.0% — candidatas vão à frente da conferência humana
 - auditorias: {'gabarito_do_cartorio': {'em': '2026-10-15T19:53:25+00:00', 'acerto_pct': 77.4, 'documentos_lidos': 142}, 'varredura_referencia': '2026-10-01_2026-10-15', 'robots': {'em': '2026-10-15T10:07:53+00:00', 'motores_com_bloqueio': 5}, 'ponte': {'ponte_ok': 7, 'direto_ok': 5, 'so_pela_ponte': ['ALEGO · SPL (proposições)', 'MPGO'], 'nenhum': ['TJGO · portal'], 'total': 8}}
-- legislativo: {'atualizado_em': '2026-10-18T06:59:57+00:00', 'proposicoes': 11}
+- legislativo: {'atualizado_em': '2026-10-18T07:09:14+00:00', 'proposicoes': 11}
 
 ## Decisões do Eldorado: agiu como deveria?
 - erro · conferência das decisões: **não conferido: KeyError: 'dado'** (0 de 0) — regra: 
