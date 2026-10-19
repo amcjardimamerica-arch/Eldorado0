@@ -20,7 +20,7 @@ import json
 import os
 import re
 import time
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from .investigador import DOZE, investigar_um, registro
@@ -406,7 +406,7 @@ def alvo_do_repositorio(feitos: dict, dias: int = 7) -> dict | None:
     return None
 
 
-def proximo_alvo() -> dict | None:
+def _proximo_alvo_base() -> dict | None:
     """ORDEM DE BUSCAS GUIADA PELOS LIVROS (titular, 01/10):
       1. GOIÁS            oportunidades do mapa e livros de Goiás que precisam de estudo
       2. BRASIL           oportunidades e livros nacionais
@@ -1005,3 +1005,21 @@ def publicar_painel() -> dict:
            "missoes": missoes, "contagem": {**_cont, "missoes_contadas_desde": _desde}}   # o carimbo "desde" só o zeramento grava
     write_json(PUB, pub)
     return pub["acumulado"]
+
+
+
+def proximo_alvo() -> dict | None:
+    """18/10/2026 (titular): o Interceptador é ferramenta da FILA DE LIVROS — no máximo 3 tentativas por livro, com
+    intervalo (6 h, 24 h). O alvo que não pode tentar agora é marcado como feito (volta depois) e o próximo é escolhido."""
+    from . import fila_livros as FL
+    for _ in range(12):
+        a = _proximo_alvo_base()
+        if not a or not a.get("id"):
+            return a
+        if FL.pode(str(a["id"]), "interceptador"):
+            FL.tentativa(str(a["id"]), "interceptador")
+            return a
+        est = load_json(ESTADO) if ESTADO.exists() else {}
+        est.setdefault("feitos", {})[str(a["id"])] = {"em": datetime.now(timezone.utc).isoformat()[:19], "motivo": "fila de livros: 3 tentativas ou intervalo"}
+        ESTADO.write_text(json.dumps(est, ensure_ascii=False, indent=1), encoding="utf-8")
+    return None

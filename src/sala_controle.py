@@ -62,6 +62,19 @@ def _estado(idade: float | None, cad: float, valor, faixa: dict | None) -> tuple
     return "verde", "dentro da cadência e da faixa normal"
 
 
+COMPARTIMENTOS = (   # 18/10/2026 (titular): a disposição da sala de controle e do workflow
+    ("01", "regencia", "Regência", ("ma_cobertura", "ma_esgotados", "dg_finalidade")),
+    ("02", "coleta", "Coleta", ("mo_saude", "mo_cadencia", "mo_retentativa", "mo_fora_da_fila", "es_coleta")),
+    ("03", "certificacao", "Certificação", ("ca_12", "fl_fila", "es_curadoria", "es_parcial")),
+    ("04", "investigacao", "Investigação", ("pi_interceptador", "pi_espiao", "pi_piloto", "de_decisoes")),
+    ("05", "externa", "Verificação externa", ("ve_para_o_chrome", "ve_bloqueadas", "ve_completas", "ve_importado", "al_externa")),
+    ("06", "repositorio", "Repositório", ("es_abertas", "es_banco_unico")),
+    ("07", "biblioteca", "Biblioteca", ("es_livros", "es_vigilancia", "em_rankings", "hi_uso", "hi_frio")),
+    ("08", "aprendizado", "Pertinência e aprendizado", ("rn_auc", "rn_precisao", "rn_revocacao", "rn_brier", "rn_treino")),
+    ("09", "farol", "Farol de Alexandria", ("es_validadas", "es_fichas")),
+)
+
+
 def _instr(lst: list, agora: datetime, **k):
     idade = _horas(k.get("quando"), agora)
     est, mot = _estado(idade, k.get("cadencia_h", 2), k.get("valor"), k.get("faixa"))
@@ -368,7 +381,50 @@ def montar(agora: datetime | None = None) -> dict:
         "espiao_familias": {k: {"usos": v.get("usos"), "achados": v.get("achados"), "empresas": v.get("empresas")} for k, v in (es.get("familias") or {}).items()},
         "espiao_modalidades": es.get("empresas_por_modalidade") or {},
     }
+    # ── 18/10/2026 (titular): COMPARTIMENTOS — a nova disposição da sala, que orienta o workflow. Nada é excluído:
+    # cada instrumento vai para o seu compartimento; cada item é uma ESTRELA (amarela/vermelha quando há atenção/erro),
+    # assim como cada MOTOR na Coleta. A REGÊNCIA (a rede neural) avalia se cada compartimento está sendo cumprido.
+    try:
+        from . import fila_livros as _FL
+        fr = _FL.resumo()
+        _instr(I, agora, id="fl_fila", sub="Certificação", nome="Fila de livros (um a um, até 3 tentativas por ferramenta)",
+               valor=fr["prontos_agora"], unidade="livros prontos agora", escala=[0, max(10, fr["na_fila"])], quando=None, cadencia_h=2,
+               faixa={"normal": [0, None]}, faz="cada livro é verificado um a um com todas as ferramentas; no máximo 3 tentativas "
+               "por ferramenta (imediata, depois de 6 h, depois de 24 h)", efeito="o esgotado segue para a verificação externa",
+               resultado=f"{fr['na_fila']} na fila · {fr['prontos_agora']} prontos agora · {fr['aguardando_intervalo']} aguardando "
+                         f"o intervalo · {fr['esgotados_em_alguma_ferramenta']} esgotados em alguma ferramenta")
+    except Exception:  # noqa: BLE001
+        pass
+    por_id = {x["id"]: x for x in I}
+    ordem = {"vermelho": 0, "amarelo": 1, "cinza": 2, "verde": 3}
+    comps = []
+    for num, cid, nome, ids in COMPARTIMENTOS:
+        for i in ids:
+            if i in por_id:
+                por_id[i]["compartimento"] = cid
+        est = [por_id[i]["estado"] for i in ids if i in por_id]
+        comps.append({"n": num, "id": cid, "nome": nome, "instrumentos": [i for i in ids if i in por_id],
+                      "estado": min(est, key=lambda e: ordem.get(e, 2)) if est else "cinza"})
+    for x in I:                                                  # instrumento novo sem lugar: vai para a Regência avaliar
+        x.setdefault("compartimento", "regencia")
+    try:                                                         # cada MOTOR é uma estrela da Coleta
+        sm = (json.loads((ROOT / "docs/dados/status_motores.json").read_text(encoding="utf-8")).get("motores") or [])
+        next(c for c in comps if c["id"] == "coleta")["estrelas"] = [
+            {"id": m.get("id"), "nome": m.get("nome"), "estado": m.get("luz") or "cinza", "resultado": str(m.get("resultado") or "")[:160]}
+            for m in sm]
+    except Exception:  # noqa: BLE001
+        pass
+    cumpridos = [c for c in comps if c["id"] != "regencia" and c["estado"] == "verde"]
+    falhas = [c for c in comps if c["id"] != "regencia" and c["estado"] == "vermelho"]
+    _instr(I, agora, id="rg_regencia", sub="Regência · maestro", nome="Regência: compartimentos cumpridos",
+           valor=len(cumpridos), unidade="de 8", escala=[0, 8], quando=None, cadencia_h=2, faixa={"normal": [8, None], "alarme": [4, None]},
+           faz="a rede neural avalia se cada compartimento está sendo cumprido e aciona as ferramentas necessárias",
+           efeito="compartimento em vermelho é a próxima ação da Regência",
+           resultado=" · ".join(f"{c['n']} {c['nome']}: {c['estado']}" for c in comps if c["id"] != "regencia"))
+    I[-1]["compartimento"] = "regencia"
+    next(c for c in comps if c["id"] == "regencia")["instrumentos"].insert(0, "rg_regencia")
     res = {"em": agora.replace(microsecond=0).isoformat(), "regra": __doc__.split("\n")[0], "indice_saude": indice, "detalhes": detalhes,
+           "compartimentos": comps, "regencia": {"cumpridos": [c["nome"] for c in cumpridos], "em_falha": [c["nome"] for c in falhas]},
            "contagem": {e: sum(1 for x in I if x["estado"] == e) for e in ("verde", "amarelo", "vermelho", "cinza")},
            "instrumentos": I, "anunciadores": anunc, "mimico": mimico, "linha_do_tempo": tempo[:40], "fluxos": fluxos}
     return res

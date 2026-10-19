@@ -535,6 +535,12 @@ def fila_estrelas(fluxo: dict | None = None) -> list[dict]:
                 continue
             if (faltam or conferir) and x.get("id") and x.get("tipo") != "emenda":
                 out.append({**x, "_tipo": "estrela", "_faltam": faltam, "_conferir": conferir})
+    try:                                    # 18/10 (titular): fila de livros — no máximo 3 tentativas, com intervalo
+        from . import fila_livros as _FL
+        _fd = _FL._ler()
+        out = [x for x in out if _FL.pode(str(x.get("id")), "certificar", _fd)]
+    except Exception:  # noqa: BLE001
+        pass
     return out
 
 

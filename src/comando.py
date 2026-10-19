@@ -234,7 +234,7 @@ def ciclo_coleta() -> dict:
     ciclo = {"inicio": _agora(), "recibos": [], "decisoes": []}
     F = ferramentas(ciclo)
     # 1. DECIDIR — a rede neural é parte da decisão: treina dentro dela quando há rótulos novos
-    dec = {"etapa": "decidir", "finalidade": FINALIDADE["decidir"], "acoes": [], "erro": None}
+    dec = {"etapa": "decidir", "compartimento": "regencia", "finalidade": FINALIDADE["decidir"], "acoes": [], "erro": None}
     if not F["treinar_rede"].get("pular"):
         seg, e = _rodar(F, "treinar_rede", "decidir", 600)
         dec["acoes"].append({"acao": "rede neural aprende os rótulos novos", "segundos": seg, **({"erro": e} if e else {})}); dec["erro"] = e
@@ -243,7 +243,7 @@ def ciclo_coleta() -> dict:
                          "cobertura_antes_pct": d.get("cobertura_antes_pct")})
     ciclo["recibos"].append(dec)
     # 2. ACIONAR OS MOTORES — um laço guiado pelo que falta: motores pendentes/parciais, achados, PNCP, fluxo, vigilância
-    mot = {"etapa": "motores", "finalidade": FINALIDADE["motores"], "acoes": [], "erro": None}
+    mot = {"etapa": "motores", "compartimento": "coleta", "finalidade": FINALIDADE["motores"], "acoes": [], "erro": None}
     prazo = PRAZO_COLETA_S + int(os.environ.get("COMANDO_PRAZO_FERRAMENTAS_MOTORES_S", "1500"))
     resto = lambda: prazo - (time.time() - t0)  # noqa: E731
     pendentes, novos, feito, av = list(d["motores"]), 0, set(), None
@@ -478,7 +478,8 @@ def ciclo_sequencia() -> dict:
         if f.get("hub"):                                   # 18/10: etapa unificada (ferramentas conforme a situação)
             rec = executar_cartorio(ctx, f["t"]); ctx["recibos"].append(rec); continue
         rs = [executar(f"{f['etapa']}:{i + 1}", c, f["t"], f.get("env")) for i, c in enumerate(f["cmds"])]
-        rec = {"etapa": f["etapa"], "finalidade": f["finalidade"], "segundos": round(sum(r["segundos"] for r in rs), 1),
+        rec = {"etapa": f["etapa"], "compartimento": COMPARTIMENTO.get(f["etapa"], "regencia"), "finalidade": f["finalidade"],
+               "segundos": round(sum(r["segundos"] for r in rs), 1),
                "erro": next((f"{r['etapa']}: {r['erro']}" for r in rs if r["erro"]), None)}
         ctx["recibos"].append(rec)
         if not rec["erro"] and f.get("depois"):
@@ -535,6 +536,10 @@ _FECHAMENTO_FORA = ("scripts/migracoes/", "migrar_nome_antigo", "scripts/restaur
 # 18/10/2026 (titular): as ferramentas são INTEGRADAS a cada etapa — sem subetapas, sem sequência fixa. Dentro da etapa,
 # a cada volta, mede-se o que as oportunidades (ou os motores) ainda precisam e usa-se a ferramenta que resolve a maior
 # necessidade; repete-se até a oportunidade ser validada ou não haver mais o que fazer (ação sem efeito não se repete).
+COMPARTIMENTO = {   # 18/10/2026 (titular): cada etapa pertence a um compartimento da sala; a Regência avalia cada um
+    "decidir": "regencia", "motores": "coleta", "certificar": "certificacao", "legislativo": "repositorio",
+    "fechamento": "repositorio", "sala_de_controle": "regencia", "diagnostico": "regencia",
+}
 FINALIDADE = {
     "decidir": "decidir quais motores rodam agora, com a rede neural (que se treina dentro da decisão quando há rótulos novos)",
     "motores": "acionar os motores e fazer tudo o que é dos motores até a coleta estar completa",
@@ -596,6 +601,26 @@ def necessidades_cartorio() -> dict:
     }
 
 
+def necessidades_por_livro() -> dict:
+    """18/10: o que CADA oportunidade aberta precisa ({id: {ferramentas}}) — a fila de livros é feita disso."""
+    from .cartorio_leitura import regua
+    out = {}
+    for r in _abertas():
+        n = set()
+        if not r.get("livro"):
+            n.add("regra_dos_livros")
+        if not r.get("link_oficial"):
+            n.add("site_oficial")
+        elif not regua(r["link_oficial"])[0]:
+            n.add("curadoria")
+        elif r.get("faltam"):
+            n.update({"certificar", "interceptador"})
+        if not r.get("faltam") and r.get("estado") != "validada":
+            n.add("validar")
+        out[str(r["id"])] = n
+    return out
+
+
 _REPOSITORIO = None
 
 
@@ -608,6 +633,12 @@ def executar_cartorio(ctx: dict, prazo_s: int) -> dict:
     as do dia (expurgo, selos) entram uma vez; o banco único é a medida; ao fim, livros e fichas refletem o que mudou."""
     t0 = time.time(); F = ferramentas(ctx); acoes = []; sem_efeito = set(); erro = None; mudou = False
     resto = lambda: prazo_s - (time.time() - t0)  # noqa: E731
+    try:                                                            # 18/10: a fila de livros, um a um
+        from . import fila_livros as FL
+        _rodar(F, "regra_dos_livros", "certificar", resto())        # a regra dos livros antes: um banco só
+        _remontar(F, resto()); acoes.append({"acao": "fila de livros", **FL.montar(necessidades_por_livro())})
+    except Exception as _e:  # noqa: BLE001
+        acoes.append({"acao": "fila de livros", "erro": str(_e)[:200]})
     seg, e = _rodar(F, "banco_unico", "certificar", resto()); erro = erro or e
     for _volta in range(10):
         if resto() < 180:
@@ -621,7 +652,18 @@ def executar_cartorio(ctx: dict, prazo_s: int) -> dict:
         if not cand:
             break
         n, fn = max(cand)
+        from . import fila_livros as FL
+        porl = necessidades_por_livro(); _fd = FL._ler()
+        alvo = [oid for oid, nn in porl.items() if fn in nn and FL.pode(oid, fn, _fd)]
+        if fn in ("site_oficial", "curadoria", "certificar", "validar") and not alvo:
+            sem_efeito.add(fn)
+            acoes.append({"acao": fn, "motivo": "todos os livros que precisam já tentaram 3 vezes ou aguardam o intervalo"}); continue
         seg, e = _rodar(F, fn, "certificar", resto()); erro = erro or e; mudou = True
+        if alvo:
+            _remontar(F, resto()); depois_l = necessidades_por_livro()
+            for oid in alvo:
+                FL.tentativa(oid, fn, resolvido=fn not in depois_l.get(oid, set()), d=_fd, gravar=False)
+            FL._gravar(_fd)
         if fn in ("expurgo", "biblioteca_diaria"):
             sem_efeito.add(fn); acoes.append({"acao": fn, "motivo": "do dia", "segundos": seg, **({"erro": e} if e else {})}); continue
         _remontar(F, resto())
@@ -633,7 +675,7 @@ def executar_cartorio(ctx: dict, prazo_s: int) -> dict:
         for fn in ("livros", "fichas_farol"):
             seg, e = _rodar(F, fn, "certificar", max(resto(), 120)); erro = erro or e
             acoes.append({"acao": fn, "motivo": "refletir nos livros e nas fichas o que mudou", "segundos": seg, **({"erro": e} if e else {})})
-    return {"etapa": "certificar", "finalidade": FINALIDADE["certificar"], "acoes": acoes, "necessidades_no_fim": necessidades_cartorio(),
+    return {"etapa": "certificar", "compartimento": "certificacao", "finalidade": FINALIDADE["certificar"], "acoes": acoes, "necessidades_no_fim": necessidades_cartorio(),
             "erro": erro, "segundos": round(time.time() - t0, 1)}
 
 
