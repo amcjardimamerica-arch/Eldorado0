@@ -1,5 +1,5 @@
 {
- "em": "2026-10-19T00:06:17+00:00",
+ "em": "2026-10-19T00:13:59+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,7 +7,7 @@
   "alterar_rota": 61,
   "rota_nova": 52,
   "via_ponte": 4,
-  "exemplos_da_rede": 26867
+  "exemplos_da_rede": 26948
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
@@ -20,16 +20,16 @@
     2.5203
    ],
    [
-    "origem:biblioteca",
-    2.4511
-   ],
-   [
     "origem:rota original",
-    2.4413
+    2.407
    ],
    [
     "tok:mpf",
     2.3964
+   ],
+   [
+    "origem:biblioteca",
+    2.3873
    ],
    [
     "tok:unidades",
@@ -53,7 +53,7 @@
    ],
    [
     "tok:feed",
-    1.7055
+    1.7044
    ],
    [
     "tok:sala",
@@ -63,7 +63,7 @@
   "piores_sinais": [
    [
     "tok:ccs",
-    -2.3226
+    -2.326
    ],
    [
     "tok:2026",
@@ -75,7 +75,7 @@
    ],
    [
     "via:ponte",
-    -2.6385
+    -2.6386
    ],
    [
     "tok:content",
@@ -91,7 +91,7 @@
    ],
    [
     "origem:padrão",
-    -3.7873
+    -3.7948
    ]
   ]
  },
@@ -141,8 +141,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T23:11:05+00:00",
-    "testes": 16,
+    "em": "2026-10-19T00:12:42+00:00",
+    "testes": 17,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -319,7 +319,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T23:11:03+00:00",
+    "em": "2026-10-19T00:12:37+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -433,8 +433,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T23:24:06+00:00",
-    "testes": 18,
+    "em": "2026-10-19T00:13:58+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -580,8 +580,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T23:24:16+00:00",
-    "testes": 24,
+    "em": "2026-10-19T00:13:59+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -789,8 +789,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T23:18:23+00:00",
-    "testes": 23,
+    "em": "2026-10-19T00:13:36+00:00",
+    "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -878,8 +878,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-18T23:18:52+00:00",
-    "testes": 24,
+    "em": "2026-10-19T00:13:41+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
