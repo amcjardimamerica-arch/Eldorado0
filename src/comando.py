@@ -229,33 +229,60 @@ def avaliar_coleta(motores: list[str]) -> dict:
 
 
 def ciclo_coleta() -> dict:
+    """18/10/2026 (titular): DECIDIR e ACIONAR OS MOTORES — cada uma é UMA etapa, com as ferramentas integradas."""
     t0 = time.time()
     ciclo = {"inicio": _agora(), "recibos": [], "decisoes": []}
-    ciclo["recibos"].append(executar_etapa("decidir", ciclo, 600))     # 18/10: a rede neural é ferramenta da decisão
+    F = ferramentas(ciclo)
+    # 1. DECIDIR — a rede neural é parte da decisão: treina dentro dela quando há rótulos novos
+    dec = {"etapa": "decidir", "finalidade": FINALIDADE["decidir"], "acoes": [], "erro": None}
+    if not F["treinar_rede"].get("pular"):
+        seg, e = _rodar(F, "treinar_rede", "decidir", 600)
+        dec["acoes"].append({"acao": "rede neural aprende os rótulos novos", "segundos": seg, **({"erro": e} if e else {})}); dec["erro"] = e
     d = decidir_coleta()
-    ciclo["decisoes"].append({"fase": "decidir", "motores": len(d["motores"]), "adiados_primeiro": d["adiados"],
-                              "planejados_no_dia": d.get("planejados_no_dia"), "cobertura_antes_pct": d.get("cobertura_antes_pct")})
-    r = acionar(d["motores"], PRAZO_COLETA_S); ciclo["recibos"].append(_sem_saida(r))
-    av = avaliar_coleta(d["motores"])
-    ciclo["avaliacao"] = av
-    resto = PRAZO_COLETA_S - (time.time() - t0)
-    if av["reacionar"] and resto > 300:                               # reaciona na mesma passagem, com o tempo que sobra
-        r2 = acionar(av["reacionar"], int(resto - 120)); r2["etapa"] = "reacionar"; ciclo["recibos"].append(_sem_saida(r2))
-        av2 = avaliar_coleta(d["motores"]); ciclo["avaliacao"] = av2
-        ciclo["decisoes"].append({"fase": "reacionar", "motores": av["reacionar"], "completos_depois": av2["completos"]})
-    elif av["reacionar"]:
-        ciclo["decisoes"].append({"fase": "reacionar", "adiado_para_a_proxima_passagem": av["reacionar"], "motivo": "sem tempo nesta passagem"})
-    if ciclo["avaliacao"]["para_humano"]:
+    dec["acoes"].append({"acao": "motores escolhidos", "motores": len(d["motores"]), "adiados_primeiro": d["adiados"],
+                         "cobertura_antes_pct": d.get("cobertura_antes_pct")})
+    ciclo["recibos"].append(dec)
+    # 2. ACIONAR OS MOTORES — um laço guiado pelo que falta: motores pendentes/parciais, achados, PNCP, fluxo, vigilância
+    mot = {"etapa": "motores", "finalidade": FINALIDADE["motores"], "acoes": [], "erro": None}
+    prazo = PRAZO_COLETA_S + int(os.environ.get("COMANDO_PRAZO_FERRAMENTAS_MOTORES_S", "1500"))
+    resto = lambda: prazo - (time.time() - t0)  # noqa: E731
+    pendentes, novos, feito, av = list(d["motores"]), 0, set(), None
+    for _volta in range(8):
+        if resto() < 180:
+            mot["acoes"].append({"acao": "parou", "motivo": "sem tempo nesta passagem — continua na próxima"}); break
+        nec = {"acionar": len(pendentes) if PRAZO_COLETA_S - (time.time() - t0) > 300 or not feito & {"acionar"} else 0,
+               "achados_dos_motores": (novos or ("achados_dos_motores" not in feito)) and "achados_dos_motores" not in feito,
+               "pncp": "pncp" not in feito,
+               "recalcular": ("recalcular" not in feito) and bool(feito & {"achados_dos_motores", "pncp"}),
+               "vigilancia_diaria": ("vigilancia_diaria" not in feito) and not F["vigilancia_diaria"].get("pular")}
+        cand = [(int(v) if not isinstance(v, bool) else int(v), k) for k, v in nec.items() if v]
+        if not cand:
+            break
+        _n, k = max(cand, key=lambda x: (x[0], x[1] == "acionar"))
+        if k == "acionar":
+            r = acionar(pendentes, int(max(60, min(PRAZO_COLETA_S, resto() - 120))))
+            novos += int(r.get("novos_na_base") or 0)
+            av = avaliar_coleta(d["motores"])
+            mot["acoes"].append({"acao": "acionar" if "acionar" not in feito else "reacionar", "motores": list(pendentes),
+                                 "novos_na_base": r.get("novos_na_base"), "cobertura_do_dia_pct": av.get("cobertura_do_dia_pct"),
+                                 **({"erro": r["erro"]} if r.get("erro") else {})})
+            mot["erro"] = mot["erro"] or r.get("erro")
+            feito.add("acionar"); pendentes = list(av.get("reacionar") or [])
+            continue
+        seg, e = _rodar(F, k, "motores", resto()); feito.add(k); mot["erro"] = mot["erro"] or e
+        mot["acoes"].append({"acao": k, "segundos": seg, **({"erro": e} if e else {})})
+    ciclo["avaliacao"] = av or {"para_humano": [], "reacionar": pendentes}
+    if pendentes:
+        ciclo["decisoes"].append({"fase": "reacionar", "adiado_para_a_proxima_passagem": pendentes, "motivo": "sem tempo nesta passagem"})
+    if ciclo["avaliacao"].get("para_humano"):
         fila = _j(PARA_CHROME, {"itens": {}})
         for m in ciclo["avaliacao"]["para_humano"]:
-            fila["itens"][m] = {"desde": fila["itens"].get(m, {}).get("desde") or _agora(), "motivo": "parte da fonte só abre do Brasil ou proíbe robôs"}
+            fila["itens"][m] = {"desde": fila["itens"].get(m, {}).get("desde") or _agora(), "motivo": "parte da fonte só abre do Brasil ou proíbe robô"}
         _w(PARA_CHROME, fila)
-    # 18/10: a etapa ACIONAR OS MOTORES continua com as ferramentas dos motores (PNCP, achados, fluxo, vigilância)
-    ciclo["recibos"].append(executar_etapa("motores", ciclo, int(os.environ.get("COMANDO_PRAZO_FERRAMENTAS_MOTORES_S", "1500"))))
-    ciclo["novos_na_base"] = sum(int(x.get("novos_na_base") or 0) for x in ciclo["recibos"])
+    ciclo["recibos"].append(mot)
+    ciclo["novos_na_base"] = novos
     _w(CICLO, ciclo)
     return ciclo
-
 
 def _sem_saida(r: dict) -> dict:
     return {k: v for k, v in r.items() if k != "saida"}
@@ -449,7 +476,7 @@ def ciclo_sequencia() -> dict:
         if f["pular"]:
             ctx["decisoes"].append({"fase": f["etapa"], "pulou": f["pular"]}); continue
         if f.get("hub"):                                   # 18/10: etapa unificada (ferramentas conforme a situação)
-            rec = executar_etapa(f["hub"], ctx, f["t"]); ctx["recibos"].append(rec); continue
+            rec = executar_cartorio(ctx, f["t"]); ctx["recibos"].append(rec); continue
         rs = [executar(f"{f['etapa']}:{i + 1}", c, f["t"], f.get("env")) for i, c in enumerate(f["cmds"])]
         rec = {"etapa": f["etapa"], "finalidade": f["finalidade"], "segundos": round(sum(r["segundos"] for r in rs), 1),
                "erro": next((f"{r['etapa']}: {r['erro']}" for r in rs if r["erro"]), None)}
@@ -505,14 +532,13 @@ if __name__ == "__main__":
 # só saíram do fluxo (já aplicadas).
 UMA_VEZ_SO = ("modalidade", "absorver", "migracao_livros")
 _FECHAMENTO_FORA = ("scripts/migracoes/", "migrar_nome_antigo", "scripts/restaurar_livros.py", "registrar_do_estado_dos_motores")
-ETAPAS = {
-    "decidir": {"finalidade": "decidir quais motores rodam agora (a rede neural é ferramenta da decisão)",
-                "ferramentas": ("treinar_rede",)},
-    "motores": {"finalidade": "acionar os motores e tudo o que é dos motores: PNCP, achados e status, recálculo do fluxo, vigilância",
-                "ferramentas": ("pncp", "achados_dos_motores", "recalcular", "vigilancia_diaria")},
-    "certificar": {"finalidade": "o Cartório é o hub dos livros: valida e reúne a informação de todos eles, numa etapa só",
-                   "ferramentas": ("regra_dos_livros", "site_oficial", "expurgo", "certificar", "curadoria", "validar",
-                                   "livros", "unir_livros", "biblioteca_diaria", "banco_unico", "fichas_farol")},
+# 18/10/2026 (titular): as ferramentas são INTEGRADAS a cada etapa — sem subetapas, sem sequência fixa. Dentro da etapa,
+# a cada volta, mede-se o que as oportunidades (ou os motores) ainda precisam e usa-se a ferramenta que resolve a maior
+# necessidade; repete-se até a oportunidade ser validada ou não haver mais o que fazer (ação sem efeito não se repete).
+FINALIDADE = {
+    "decidir": "decidir quais motores rodam agora, com a rede neural (que se treina dentro da decisão quando há rótulos novos)",
+    "motores": "acionar os motores e fazer tudo o que é dos motores até a coleta estar completa",
+    "certificar": "o Cartório, hub dos livros: agir sobre cada oportunidade com as ferramentas necessárias até ela ser validada",
 }
 
 
@@ -534,38 +560,86 @@ def ferramentas(ctx: dict) -> dict:
     return F
 
 
-def executar_etapa(nome: str, ctx: dict, prazo_s: int) -> dict:
-    """Executa UMA etapa: cada ferramenta conforme a situação e o tempo que resta. Um recibo só, com cada ferramenta."""
-    t0 = time.time()
-    F = ferramentas(ctx)
-    rec = {"etapa": nome, "finalidade": ETAPAS[nome]["finalidade"], "ferramentas": [], "erro": None}
-    for fn in ETAPAS[nome]["ferramentas"]:
-        f = F.get(fn)
-        if not f:
-            continue
-        resto = prazo_s - (time.time() - t0)
-        if f.get("pular"):
-            rec["ferramentas"].append({"ferramenta": fn, "uso": "pulada", "motivo": f["pular"]}); continue
-        if resto < min(120, f["t"]):
-            rec["ferramentas"].append({"ferramenta": fn, "uso": "adiada", "motivo": "sem tempo nesta passagem"}); continue
-        rs = [executar(f"{nome}:{fn}:{i + 1}", c, int(min(f["t"], resto)), f.get("env")) for i, c in enumerate(f["cmds"])]
-        erro = next((f"{r['etapa']}: {r['erro']}" for r in rs if r["erro"]), None)
-        rec["ferramentas"].append({"ferramenta": fn, "uso": "usada", "segundos": round(sum(r["segundos"] for r in rs), 1),
-                                   **({"erro": erro} if erro else {})})
-        if erro and not rec["erro"]:
-            rec["erro"] = erro
-        if not erro and f.get("depois"):
-            try:
-                f["depois"]()
-            except OSError:
-                pass
-    rec["segundos"] = round(time.time() - t0, 1)
-    return rec
+def _rodar(F: dict, fn: str, etapa: str, resto: float) -> tuple[float, str | None]:
+    """Usa UMA ferramenta (os mesmos comandos e proteções de antes); devolve (segundos, erro)."""
+    f = F[fn]
+    rs = [executar(f"{etapa}:{fn}", c, int(max(60, min(f["t"], resto))), f.get("env")) for c in f["cmds"]]
+    erro = next((r["erro"] for r in rs if r["erro"]), None)
+    if not erro and f.get("depois"):
+        try:
+            f["depois"]()
+        except OSError:
+            pass
+    return round(sum(r["segundos"] for r in rs), 1), erro
+
+
+def _abertas() -> list[dict]:
+    return [r for r in ((_j(ROOT / "biblioteca_alexandria/livros/_vistas/repositorio_unico.json", {}) or {}).get("registros") or [])
+            if r.get("estado") != "fechada" and not r.get("arquivada")]
+
+
+def necessidades_cartorio() -> dict:
+    """O que as oportunidades ainda precisam — cada necessidade tem a ferramenta que a resolve."""
+    from .cartorio_leitura import regua
+    ab = _abertas()
+    bu = _j(ROOT / "docs/dados/banco_unico.json", {}) or {}
+    cat = (_j(_CAT_LIVROS, {}) or {}).get("motores") or []
+    from collections import Counter as _C
+    g = _C(re.sub(r"[^a-z0-9]", "", f"{x.get('programa')}{x.get('orgao')}".lower())[:80] for x in cat)
+    return {
+        "regra_dos_livros": int(bu.get("bancos_paralelos_por_natureza") or 0) + sum(1 for r in ab if not r.get("livro")),
+        "site_oficial": sum(1 for r in ab if not r.get("link_oficial")),
+        "curadoria": sum(1 for r in ab if r.get("link_oficial") and not regua(r["link_oficial"])[0]),
+        "certificar": sum(1 for r in ab if r.get("link_oficial") and r.get("faltam")),
+        "validar": sum(1 for r in ab if not r.get("faltam") and r.get("estado") != "validada"),
+        "unir_livros": sum(n - 1 for n in g.values() if n > 1),
+    }
+
+
+_REPOSITORIO = None
+
+
+def _remontar(F: dict, resto: float) -> None:
+    executar("certificar:remontar", [sys.executable, "-c", "from src import repositorio_unico as R; R.construir()"], int(max(60, min(300, resto))))
+
+
+def executar_cartorio(ctx: dict, prazo_s: int) -> dict:
+    """CERTIFICAR (CARTÓRIO) — UMA etapa. A cada volta: mede as necessidades das oportunidades e usa a ferramenta da maior;
+    as do dia (expurgo, selos) entram uma vez; o banco único é a medida; ao fim, livros e fichas refletem o que mudou."""
+    t0 = time.time(); F = ferramentas(ctx); acoes = []; sem_efeito = set(); erro = None; mudou = False
+    resto = lambda: prazo_s - (time.time() - t0)  # noqa: E731
+    seg, e = _rodar(F, "banco_unico", "certificar", resto()); erro = erro or e
+    for _volta in range(10):
+        if resto() < 180:
+            acoes.append({"acao": "parou", "motivo": "sem tempo nesta passagem — continua na próxima"}); break
+        _remontar(F, resto())
+        nec = necessidades_cartorio()
+        cand = [(n, fn) for fn, n in nec.items() if n > 0 and fn not in sem_efeito and not (F.get(fn) or {}).get("pular")]
+        for fn in ("expurgo", "biblioteca_diaria"):                       # as do dia, uma vez
+            if not F[fn].get("pular") and fn not in sem_efeito:
+                cand.append((0.5, fn))
+        if not cand:
+            break
+        n, fn = max(cand)
+        seg, e = _rodar(F, fn, "certificar", resto()); erro = erro or e; mudou = True
+        if fn in ("expurgo", "biblioteca_diaria"):
+            sem_efeito.add(fn); acoes.append({"acao": fn, "motivo": "do dia", "segundos": seg, **({"erro": e} if e else {})}); continue
+        _remontar(F, resto())
+        depois = necessidades_cartorio().get(fn, 0)
+        acoes.append({"acao": fn, "motivo": f"{n} oportunidade(s) precisavam", "depois": depois, "segundos": seg, **({"erro": e} if e else {})})
+        if e or depois >= n:
+            sem_efeito.add(fn)                                            # sem efeito: não se repete
+    if mudou:
+        for fn in ("livros", "fichas_farol"):
+            seg, e = _rodar(F, fn, "certificar", max(resto(), 120)); erro = erro or e
+            acoes.append({"acao": fn, "motivo": "refletir nos livros e nas fichas o que mudou", "segundos": seg, **({"erro": e} if e else {})})
+    return {"etapa": "certificar", "finalidade": FINALIDADE["certificar"], "acoes": acoes, "necessidades_no_fim": necessidades_cartorio(),
+            "erro": erro, "segundos": round(time.time() - t0, 1)}
 
 
 def fases(ctx: dict) -> list[dict]:
     """A sequência depois da coleta: Certificar (o hub, uma etapa só), Legislativo, Fechamento, Sala, Diagnóstico."""
     F = ferramentas(ctx)
-    hub = {"etapa": "certificar", "finalidade": ETAPAS["certificar"]["finalidade"], "hub": "certificar", "pular": None,
+    hub = {"etapa": "certificar", "finalidade": FINALIDADE["certificar"], "hub": "certificar", "pular": None,
            "t": int(os.environ.get("COMANDO_PRAZO_CARTORIO_S", "2400")), "cmds": []}
     return [hub] + [F[e] for e in ("legislativo", "fechamento", "sala_de_controle", "diagnostico") if e in F]

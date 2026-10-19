@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q -r requirements.txt pypdf || true
-      - name: Comando · coleta (a rede neural decide, o maestro aciona, a rede avalia e reaciona)
+      - name: "Etapas 1 e 2 · Decidir (maestro com a rede neural) e Acionar os motores — ferramentas integradas"
         # 15/10/2026 (titular): maestro e rede neural são UMA coisa — src/comando.py. Decide quais motores e em que ordem
         # (necessidade + valor esperado), aciona, mede a completude, reaciona na mesma passagem e manda ao Chrome o que
         # só o Brasil/humano lê. Recibo em estado/comando/ciclo_atual.json.
@@ -76,7 +76,7 @@ jobs:
           # 03/10 (titular): oportunidades abertas nos últimos 3 anos → livros para validação; encerradas → arquivo da
           # análise preditiva. Fracionado: cada passagem continua do cursor (estado/historico_3_anos/).
           timeout 960 python -m src.historico_3_anos dou judiciario-cnj plat-gife --minutos 4 2>&1 | tail -c 6000 || echo "histórico de 3 anos: registrado"
-      - name: Comando · sequência (a rede direciona cada fase, com recibo e portão)
+      - name: "Etapa 3 · Certificar (Cartório, hub dos livros) — depois Legislativo, Fechamento, Sala e Diagnóstico"
         if: always()
         # painel dos motores → treino da rede (se precisar) → biblioteca (1×/dia) → documento oficial → mapa (se houver
         # coleta nova) → fichas → legislativo → sala de controle → diagnóstico. Fase pulada fica registrada com o motivo.

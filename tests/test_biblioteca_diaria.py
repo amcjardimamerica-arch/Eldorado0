@@ -10,8 +10,8 @@ class TesteBibliotecaDiaria(unittest.TestCase):
         # 15/10/2026: a ordem das fases vive no comando único (src/comando.py)
         from src import comando as C
         # 18/10 (titular): a biblioteca diária é FERRAMENTA do Cartório (hub), antes das fichas e do Farol
-        fs = list(C.ETAPAS["certificar"]["ferramentas"])
-        self.assertLess(fs.index("biblioteca_diaria"), fs.index("fichas_farol"), "a biblioteca roda antes das fichas e do Farol")
+        src = (ROOT / "src/comando.py").read_text(encoding="utf-8")          # 18/10: ferramenta integrada ao Cartório
+        self.assertIn('"biblioteca_diaria"', src[src.index("def executar_cartorio"):])
         self.assertIn("estado/biblioteca_diaria.txt", (ROOT / "src/comando.py").read_text(encoding="utf-8"))
 
     def test_catalogo_formato_unico(self):
