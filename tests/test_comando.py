@@ -31,8 +31,9 @@ class Comando(unittest.TestCase):
                        "para_humano": ["b"], "completos": 2}])
         with mock.patch.object(C, "decidir_coleta", lambda: {"motores": ["a", "b", "c"], "adiados": [], "valor": {}}), \
              mock.patch.object(C, "acionar", lambda ms, prazo: chamadas.append(list(ms)) or {"etapa": "acionar", "erro": None, "novos_na_base": 2}), \
-             mock.patch.object(C, "avaliar_coleta", lambda ms: next(avals)):
-            c = C.ciclo_coleta()
+             mock.patch.object(C, "avaliar_coleta", lambda ms: next(avals)), \
+             mock.patch.object(C, "executar_etapa", lambda nome, ctx, prazo: {"etapa": nome, "erro": None, "ferramentas": []}):
+            c = C.ciclo_coleta()          # 18/10: as etapas unificadas são simuladas (as ferramentas reais não rodam no teste)
         self.assertEqual(chamadas, [["a", "b", "c"], ["a"]])
         self.assertEqual(c["avaliacao"]["completos"], 2)
         self.assertIn("b", json.loads((self.d / "c/chrome.json").read_text())["itens"])
