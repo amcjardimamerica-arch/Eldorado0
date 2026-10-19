@@ -1,32 +1,18 @@
-2026-10-19T01:33:29Z
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/runner/work/Eldorado/Eldorado/src/cartorio.py", line 1033, in <module>
-    print(json.dumps(run(lim, seg), ensure_ascii=False, indent=1))
-                     ^^^^^^^^^^^^^
-  File "/home/runner/work/Eldorado/Eldorado/src/cartorio.py", line 708, in run
-    base = _ler_certidoes() or {}
-           ^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Eldorado/Eldorado/src/cartorio.py", line 47, in _ler_certidoes
-    return __import__("src.livro_arquivo", fromlist=["x"]).ler_arquivo(CERTIDOES, {}) or {}
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Eldorado/Eldorado/src/livro_arquivo.py", line 605, in ler_arquivo
-    return carregar(p, padrao)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Eldorado/Eldorado/src/livro_arquivo.py", line 480, in carregar
-    v = _carregar(caminho, None)
-        ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Eldorado/Eldorado/src/livro_arquivo.py", line 513, in _carregar
-    return montar(o["esqueleto"])
-           ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Eldorado/Eldorado/src/livro_arquivo.py", line 511, in montar
-    return {k: montar(v) for k, v in e.items()}
-               ^^^^^^^^^
-  File "/home/runner/work/Eldorado/Eldorado/src/livro_arquivo.py", line 507, in montar
-    pares = [(k, valor(lid, ci)) for lid, ci, k in c["entradas"]]
-                 ^^^^^^^^^^^^^^
-  File "/home/runner/work/Eldorado/Eldorado/src/livro_arquivo.py", line 496, in valor
-    return None if x is None else x["dado"]
-                                  ~^^^^^^^^
-KeyError: 'dado'
+2026-10-19T02:14:29Z
+{
+ "certificadas": 36,
+ "na_linha": {
+  "sem_estrela": 2330,
+  "bronze": 119,
+  "prata": 137
+ },
+ "devidas": 2586,
+ "promovidas": 4,
+ "sem_material": 4,
+ "esgotadas": 0,
+ "linhas_livros": 0,
+ "acessos": 94,
+ "segundos": 378,
+ "eficiencia": 0.36,
+ "erros": []
+}

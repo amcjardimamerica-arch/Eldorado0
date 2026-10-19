@@ -8,15 +8,14 @@
 
 ```json
 {
- "cegos_da_1a_rodada": 31,
- "testados": 24,
- "com_rota_nova": 7,
- "via_ponte": 1,
+ "cegos_da_1a_rodada": 67,
+ "testados": 57,
+ "com_rota_nova": 25,
+ "via_ponte": 0,
  "continuam_cegos": [
   "camara-goiania-pl",
   "f260-captacao-218",
   "f260-captacao-223",
-  "f260-captacao-227",
   "f260-captacao-229",
   "f260-captacao-230",
   "f260-captacao-233",
@@ -25,13 +24,30 @@
   "f260-captacao-222",
   "f260-curadoria-008",
   "f260-espalhado-acessoainformacao-cavalcante-go-gov-br",
+  "f260-captacao-212",
+  "f260-captacao-243",
+  "f260-captacao-255",
+  "f260-captacao-259",
+  "f260-captacao-249",
+  "f260-captacao-224",
+  "f260-captacao-256",
   "f260-captacao-228",
+  "f260-captacao-226",
   "f260-captacao-252",
-  "f260-captacao-240",
+  "f260-captacao-253",
+  "f260-captacao-248",
+  "f260-captacao-242",
+  "f260-captacao-257",
+  "f260-captacao-245",
+  "f260-captacao-246",
   "f260-espalhado-rouanet-cultura-gov-br",
-  "f260-espalhado-sistema-mirassoldoeste-mt-gov-br"
+  "f260-espalhado-sistema-mirassoldoeste-mt-gov-br",
+  "f260-espalhado-carazinho-atende-net",
+  "f260-espalhado-transparencia-cacoal-ro-gov-br",
+  "f260-espalhado-www-ribeiraodasneves-mg-gov-br",
+  "f260-espalhado-transparencia-nobres-mt-gov-br"
  ],
- "aguardando_afinador": 7
+ "aguardando_afinador": 10
 }
 ```
 
@@ -42,11 +58,25 @@
 
 ```json
 {
- "motores_de_ruido_1a": 14,
+ "motores_de_ruido_1a": 18,
  "ruido_agora": [
   {
+   "motor": "do-goias",
+   "achados_total_1a": 20,
+   "achados_total_agora": 20,
+   "no_fluxo": 3,
+   "confirmadas": 0
+  },
+  {
+   "motor": "dou",
+   "achados_total_1a": 26,
+   "achados_total_agora": 26,
+   "no_fluxo": 3,
+   "confirmadas": 0
+  },
+  {
    "motor": "empresas-incentivadas",
-   "achados_total_1a": 29,
+   "achados_total_1a": 37,
    "achados_total_agora": 37,
    "no_fluxo": 0,
    "confirmadas": 0
@@ -66,6 +96,13 @@
    "confirmadas": 0
   },
   {
+   "motor": "f260-captacao-039",
+   "achados_total_1a": 29,
+   "achados_total_agora": 29,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
    "motor": "plat-cnpq-extensao",
    "achados_total_1a": 133,
    "achados_total_agora": 133,
@@ -74,9 +111,16 @@
   },
   {
    "motor": "plat-empresas-editais-incentivados",
-   "achados_total_1a": 47,
+   "achados_total_1a": 54,
    "achados_total_agora": 54,
    "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "recorrencia",
+   "achados_total_1a": 30,
+   "achados_total_agora": 30,
+   "no_fluxo": 2,
    "confirmadas": 0
   },
   {
@@ -101,29 +145,22 @@
    "confirmadas": 0
   },
   {
-   "motor": "outras-oportunidades-1",
-   "achados_total_1a": 97,
-   "achados_total_agora": 189,
-   "no_fluxo": 2,
+   "motor": "outras-oportunidades-3",
+   "achados_total_1a": 20,
+   "achados_total_agora": 20,
+   "no_fluxo": 1,
    "confirmadas": 0
   },
   {
-   "motor": "outras-oportunidades-2",
-   "achados_total_1a": 55,
-   "achados_total_agora": 1,
+   "motor": "outras-oportunidades-4",
+   "achados_total_1a": 78,
+   "achados_total_agora": 78,
    "no_fluxo": 0,
    "confirmadas": 0
   },
   {
-   "motor": "outras-oportunidades-6",
-   "achados_total_1a": 42,
-   "achados_total_agora": 46,
-   "no_fluxo": 5,
-   "confirmadas": 0
-  },
-  {
    "motor": "outras-oportunidades-7",
-   "achados_total_1a": 82,
+   "achados_total_1a": 98,
    "achados_total_agora": 98,
    "no_fluxo": 1,
    "confirmadas": 0
@@ -137,8 +174,15 @@
   },
   {
    "motor": "outras-oportunidades-8",
-   "achados_total_1a": 26,
+   "achados_total_1a": 29,
    "achados_total_agora": 29,
+   "no_fluxo": 0,
+   "confirmadas": 0
+  },
+  {
+   "motor": "f260-captacao-001",
+   "achados_total_1a": 27,
+   "achados_total_agora": 27,
    "no_fluxo": 0,
    "confirmadas": 0
   }
@@ -157,7 +201,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 4,
- "exemplos_da_rede_de_rotas": 28120
+ "exemplos_da_rede_de_rotas": 28241
 }
 ```
 
@@ -168,7 +212,7 @@
 
 ```json
 {
- "fora_dos_motores_pct_1a": 73.6,
+ "fora_dos_motores_pct_1a": 83.5,
  "fora_dos_motores_pct_agora": 83.5,
  "origem": {
   "motor": 37,
@@ -365,34 +409,34 @@
    ]
   },
   "Diário municipal em lote (AGM/DOM)": {
-   "orgaos": 14,
+   "orgaos": 8,
    "exemplos": [
     "diariooficial.abc.go.gov.br",
     "diariooficial.goiania.go.gov.br",
     "diariooficial.palmas.to.gov.br",
     "diariooficial.vitoria.es.gov.br",
-    "divinopolisdotocantins.to.gov.br",
-    "dom.morrodochapeu.ba.gov.br"
+    "goiania.go.gov.br",
+    "intranet.jatai.go.gov.br"
    ]
   },
   "Portal de transparência de fornecedor": {
-   "orgaos": 15,
+   "orgaos": 21,
    "exemplos": [
     "bndes.gov.br",
     "comunidade.transparenciainternacional.org.br",
     "gov.br",
+    "institutogenesio.org.br",
     "itumbiara.go.gov.br",
-    "mpf.mp.br",
-    "rio.rj.gov.br"
+    "mpdft.mp.br"
    ]
   },
   "Sistemas de editais (Prosas/Editais)": {
-   "orgaos": 43,
+   "orgaos": 39,
    "exemplos": [
     "alteditais.com.br",
     "banrisulcultural.com.br",
+    "bndes.gov.br",
     "bonde.org",
-    "cajuru.sp.gov.br",
     "chamamentos.serpro.gov.br",
     "climaesociedade.org"
    ]
