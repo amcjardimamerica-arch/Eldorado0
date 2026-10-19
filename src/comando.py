@@ -274,7 +274,7 @@ def _expurgo_feito_hoje() -> bool:
         return False
 
 
-def fases(ctx: dict) -> list[dict]:
+def _fases_base(ctx: dict) -> list[dict]:
     """(etapa, finalidade, comando, tempo, decisão da rede). A decisão devolve None (roda) ou o motivo de pular."""
     py = sys.executable
     novos = int(ctx.get("novos_na_base") or 0)
@@ -484,3 +484,42 @@ if __name__ == "__main__":
         c = ciclo_sequencia(); print(json.dumps({"estado": c["estado"], "erros": len(c["erros"])}, ensure_ascii=False))
     if modo in ("veredito", "tudo"):
         sys.exit(veredito())
+
+
+
+# ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+# 18/10/2026 (titular): ORGANIZAÇÃO DAS ETAPAS — menos coisas para dar problema, só o que resolve.
+# • Migrações de uma vez só saem do fluxo (já aplicadas): modalidade, absorver, migração dos livros; e, do fechamento,
+#   as migrações da pesquisa externa, das certidões e do pacote final, a troca do nome antigo e a restauração de 17/10.
+# • A CATALOGAR ganha a regra permanente: NENHUM DADO FORA DOS LIVROS (absorve o que estiver fora) e TODA OPORTUNIDADE
+#   CRIA OU VINCULA UM LIVRO (o que os motores guardaram só no estado vai ao livro pelo índice).
+# • O GRUPO CERTIFICAR (CARTÓRIO) reúne, em sequência, cada etapa com o seu próprio agendamento: Catalogar, Site oficial,
+#   Expurgo, Cartório, Curadoria dos links, Validar por exceção, Livros, Unir livros duplicados, Biblioteca diária
+#   (selos), Banco único e Fichas.
+UMA_VEZ_SO = ("modalidade", "absorver", "migracao_livros")
+GRUPO_CERTIFICAR = ("catalogar", "site_oficial", "expurgo", "certificar", "curadoria", "validar", "livros", "unir_livros",
+                    "biblioteca_diaria", "banco_unico", "fichas_farol")
+ORDEM = ("pncp", *GRUPO_CERTIFICAR, "treinar_rede", "recalcular", "vigilancia_diaria", "legislativo", "fechamento",
+         "sala_de_controle", "diagnostico")
+_FECHAMENTO_FORA = ("scripts/migracoes/", "migrar_nome_antigo", "scripts/restaurar_livros.py", "registrar_do_estado_dos_motores")
+
+
+def fases(ctx: dict) -> list[dict]:
+    py = sys.executable
+    base = {f["etapa"]: f for f in _fases_base(ctx) if f["etapa"] not in UMA_VEZ_SO}
+    cat = base["catalogar"]
+    cat["finalidade"] = ("regra: nenhum dado fora dos livros e toda oportunidade cria ou vincula um livro — achados por "
+                         "motor, status dos motores e repositório único")
+    cat["cmds"] = [
+        # o que estiver fora dos livros é absorvido (nenhum banco paralelo)
+        [py, "-c", "import json; from src import livro_arquivo as LA; print(json.dumps(LA.absorver_proibidos(), ensure_ascii=False))"],
+        *cat["cmds"],
+        # o que os motores guardaram só no próprio estado vai ao livro (cria ou vincula pelo índice)
+        [py, "-c", "import json; from src import banco_livros as B; r=B.registrar_do_estado_dos_motores(); "
+                   "print(json.dumps({k: v for k, v in r.items() if k != 'fora_dos_livros_por_arquivo'}, ensure_ascii=False))"],
+    ]
+    fe = base["fechamento"]
+    fe["cmds"] = [c for c in fe["cmds"] if not any(x in " ".join(c) for x in _FECHAMENTO_FORA)]
+    for e in GRUPO_CERTIFICAR:
+        base[e]["grupo"] = "certificar"
+    return [base[e] for e in ORDEM if e in base] + [f for e, f in base.items() if e not in ORDEM]
