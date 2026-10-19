@@ -1,6 +1,6 @@
 {
  "dia": "2026-10-19",
- "em": "2026-10-19T17:12:29+00:00",
+ "em": "2026-10-19T23:07:40+00:00",
  "regra": "MAESTRO — A MÃO DA REDE NEURAL DE COMANDO (titular, 02/10/2026; unificado em 15/10/2026).\n\n15/10/2026 (titular): maestro e rede neural são UMA coisa só. Quem decide o caminho do fluxo inteiro é src/comando.py\n(a rede neural de comando); este módulo é a parte que MEDE e EXECUTA para ela:\n  · planejar()   quais motores rodam hoje (agenda) com a prioridade de rendimento — matéria-prima da decisão do comando;\n  · cobertura()  completa · parcial · pendente · pendente_local de cada motor no dia;\n  · controlar()  pendentes e parciais a disparar (até 3 tentativas), dia fechado ou não;\n  · relatorio_etapas() o relatório do dia que o painel mostra.\nO comando chama planejar/controlar antes de acionar os motores (decidir) e depois deles (avaliar e reacionar).",
  "planejados": 125,
  "cobertura": {
@@ -45,14 +45,14 @@
   "f260-captacao-159",
   "f260-captacao-143",
   "f260-captacao-149",
-  "mpgo-destinacao",
-  "mptgo-destinacao",
   "outras-oportunidades-3",
   "plat-cnpq-extensao",
-  "mpu-destinacao",
   "outras-oportunidades-6",
   "outras-oportunidades-8",
+  "mpgo-destinacao",
+  "mptgo-destinacao",
   "outras-oportunidades-1",
+  "mpu-destinacao",
   "f260-espalhado-www-novohamburgo-rs-gov-br",
   "f260-espalhado-sistema-mirassoldoeste-mt-gov-br",
   "f260-espalhado-carazinho-atende-net",
@@ -149,9 +149,9 @@
  "plano": [
   {
    "motor": "plat-piloto-aberto",
-   "prioridade": 5.494,
+   "prioridade": 5.474,
    "diagnostico": "saudavel",
-   "livros_com_abertura_proxima": 273,
+   "livros_com_abertura_proxima": 272,
    "horarios": "05:53,10:23",
    "coleta": "nuvem",
    "dia_anterior": "observado",
@@ -160,9 +160,9 @@
   },
   {
    "motor": "pncp-api",
-   "prioridade": 0.8755,
+   "prioridade": 0.8555,
    "diagnostico": "saudavel",
-   "livros_com_abertura_proxima": 39,
+   "livros_com_abertura_proxima": 38,
    "horarios": "08:53,13:53,19:53",
    "coleta": "nuvem",
    "dia_anterior": "observado",
@@ -226,9 +226,9 @@
   },
   {
    "motor": "plat-empresas-editais-incentivados",
-   "prioridade": 0.242,
+   "prioridade": 0.222,
    "diagnostico": "falha_parcial",
-   "livros_com_abertura_proxima": 12,
+   "livros_com_abertura_proxima": 11,
    "horarios": "10:23",
    "coleta": "nuvem",
    "dia_anterior": "observado",
@@ -544,28 +544,6 @@
    "tentativas_hoje": 0
   },
   {
-   "motor": "mpgo-destinacao",
-   "prioridade": 0.0671,
-   "diagnostico": "saudavel",
-   "livros_com_abertura_proxima": 3,
-   "horarios": "07:53",
-   "coleta": "nuvem (indireta: Diário do Estado) + manual",
-   "dia_anterior": "observado",
-   "cobertura": "pendente",
-   "tentativas_hoje": 0
-  },
-  {
-   "motor": "mptgo-destinacao",
-   "prioridade": 0.0662,
-   "diagnostico": "saudavel",
-   "livros_com_abertura_proxima": 3,
-   "horarios": "07:53,16:23",
-   "coleta": "nuvem",
-   "dia_anterior": "observado",
-   "cobertura": "pendente",
-   "tentativas_hoje": 0
-  },
-  {
    "motor": "outras-oportunidades-3",
    "prioridade": 0.0661,
    "diagnostico": "falha_parcial",
@@ -582,17 +560,6 @@
    "diagnostico": "saudavel",
    "livros_com_abertura_proxima": 3,
    "horarios": "09:23,15:23",
-   "coleta": "nuvem",
-   "dia_anterior": "observado",
-   "cobertura": "pendente",
-   "tentativas_hoje": 0
-  },
-  {
-   "motor": "mpu-destinacao",
-   "prioridade": 0.0637,
-   "diagnostico": "sem_rendimento",
-   "livros_com_abertura_proxima": 3,
-   "horarios": "16:23",
    "coleta": "nuvem",
    "dia_anterior": "observado",
    "cobertura": "pendente",
@@ -621,11 +588,44 @@
    "tentativas_hoje": 0
   },
   {
+   "motor": "mpgo-destinacao",
+   "prioridade": 0.0471,
+   "diagnostico": "saudavel",
+   "livros_com_abertura_proxima": 2,
+   "horarios": "07:53",
+   "coleta": "nuvem (indireta: Diário do Estado) + manual",
+   "dia_anterior": "observado",
+   "cobertura": "pendente",
+   "tentativas_hoje": 0
+  },
+  {
+   "motor": "mptgo-destinacao",
+   "prioridade": 0.0462,
+   "diagnostico": "saudavel",
+   "livros_com_abertura_proxima": 2,
+   "horarios": "07:53,16:23",
+   "coleta": "nuvem",
+   "dia_anterior": "observado",
+   "cobertura": "pendente",
+   "tentativas_hoje": 0
+  },
+  {
    "motor": "outras-oportunidades-1",
    "prioridade": 0.0455,
    "diagnostico": "falha_parcial",
    "livros_com_abertura_proxima": 1,
    "horarios": "08:23,13:23,18:23",
+   "coleta": "nuvem",
+   "dia_anterior": "observado",
+   "cobertura": "pendente",
+   "tentativas_hoje": 0
+  },
+  {
+   "motor": "mpu-destinacao",
+   "prioridade": 0.0437,
+   "diagnostico": "sem_rendimento",
+   "livros_com_abertura_proxima": 2,
+   "horarios": "16:23",
    "coleta": "nuvem",
    "dia_anterior": "observado",
    "cobertura": "pendente",
