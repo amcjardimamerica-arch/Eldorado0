@@ -1,5 +1,5 @@
 {
- "em": "2026-10-19T15:03:46+00:00",
+ "em": "2026-10-19T16:53:40+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,7 +7,7 @@
   "alterar_rota": 61,
   "rota_nova": 52,
   "via_ponte": 4,
-  "exemplos_da_rede": 28801
+  "exemplos_da_rede": 28874
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
@@ -17,7 +17,7 @@
    ],
    [
     "origem:rota original",
-    2.6334
+    2.5477
    ],
    [
     "tok:secult",
@@ -36,16 +36,12 @@
     2.2138
    ],
    [
-    "tok:feed",
-    2.2071
-   ],
-   [
     "tok:deputados",
     2.2068
    ],
    [
-    "tld:br",
-    1.9435
+    "tok:feed",
+    1.9065
    ],
    [
     "tok:leipaulogustavo",
@@ -54,6 +50,10 @@
    [
     "tok:imprensa",
     1.7477
+   ],
+   [
+    "tld:br",
+    1.7468
    ],
    [
     "tok:abre",
@@ -71,7 +71,7 @@
    ],
    [
     "via:ponte",
-    -2.5314
+    -2.5326
    ],
    [
     "tok:pgt",
@@ -86,12 +86,12 @@
     -3.2419
    ],
    [
-    "origem:padrão",
-    -3.3963
-   ],
-   [
     "origem:câmara",
     -3.4854
+   ],
+   [
+    "origem:padrão",
+    -3.5342
    ]
   ]
  },
@@ -356,8 +356,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-19T01:19:44+00:00",
-    "testes": 21,
+    "em": "2026-10-19T16:53:22+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1097,7 +1097,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-19T01:11:37+00:00",
+    "em": "2026-10-19T16:50:55+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1151,8 +1151,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-19T01:20:04+00:00",
-    "testes": 20,
+    "em": "2026-10-19T16:53:40+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1205,8 +1205,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-19T01:17:27+00:00",
-    "testes": 20,
+    "em": "2026-10-19T16:51:11+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1454,8 +1454,8 @@
     "aprendido_em": "2026-10-16T02:15:34+00:00"
    },
    "afinado": {
-    "em": "2026-10-19T01:19:36+00:00",
-    "testes": 24,
+    "em": "2026-10-19T16:53:16+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -2093,10 +2093,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 11,
-    "aprendido_em": "2026-10-19T01:10:51+00:00"
+    "aprendido_em": "2026-10-19T16:50:48+00:00"
    },
    "afinado": {
-    "em": "2026-10-19T01:10:51+00:00",
+    "em": "2026-10-19T16:50:48+00:00",
     "testes": 13,
     "melhor": {
      "url": "https://www.ipora.pr.gov.br/",
