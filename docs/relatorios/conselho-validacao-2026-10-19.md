@@ -201,7 +201,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 4,
- "exemplos_da_rede_de_rotas": 28362
+ "exemplos_da_rede_de_rotas": 28491
 }
 ```
 
@@ -244,11 +244,25 @@
 
 ```json
 {
- "dia_de_referencia": "2026-10-18",
+ "dia_de_referencia": "2026-10-19",
  "ativos": 172,
- "lidos_ontem": 147,
- "lidos_hoje": 134,
+ "lidos_ontem": 134,
+ "lidos_hoje": 0,
  "nao_lidos_ontem_nem_hoje": [
+  "f260-captacao-025",
+  "f260-captacao-039",
+  "f260-captacao-060",
+  "f260-captacao-068",
+  "f260-captacao-069",
+  "f260-captacao-098",
+  "f260-captacao-107",
+  "f260-captacao-151",
+  "f260-captacao-152",
+  "f260-captacao-169",
+  "f260-captacao-176",
+  "f260-captacao-190",
+  "f260-captacao-206",
+  "f260-captacao-207",
   "plat-captamos",
   "plat-rede-filantropia"
  ],
