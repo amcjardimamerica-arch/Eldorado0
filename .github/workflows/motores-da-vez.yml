@@ -18,7 +18,7 @@ concurrency:
 jobs:
   motores:
     runs-on: ubuntu-24.04   # 17/10: fixo (o ubuntu-latest vira Ubuntu 26 em 19/10)
-    timeout-minutes: 150   # 15/10: comando único (coleta + cadeia completa até o Farol); 03/10: a rotina semanal de empresas pode entrar aqui quando o domingo for pulado
+    timeout-minutes: 190   # 15/10: comando único (coleta + cadeia completa até o Farol); 03/10: a rotina semanal de empresas pode entrar aqui quando o domingo for pulado
     env:
       MOTORES_BLOCO: manual
       ELDORADO_PONTE_URL: ${{ secrets.ELDORADO_PONTE_URL }}
@@ -34,7 +34,7 @@ jobs:
         # só o Brasil/humano lê. Recibo em estado/comando/ciclo_atual.json.
         run: |
           set +e
-          COMANDO_PRAZO_COLETA_S=1500 timeout 2100 python -m src.comando coleta 2>&1 | tail -c 6000
+          COMANDO_PRAZO_COLETA_S=1500 COMANDO_PRAZO_FERRAMENTAS_MOTORES_S=1500 timeout 3600 python -m src.comando coleta   # 18/10: + ferramentas dos motores 2>&1 | tail -c 6000
           echo "comando coleta: código ${PIPESTATUS[0]}"
       - name: Empresas — leitura DIÁRIA dos sites (patrocínio privado e incentivos), uma vez por dia
         if: always()
@@ -84,7 +84,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set +e
-          timeout 3000 python -m src.comando sequencia 2>&1 | tail -c 4000
+          COMANDO_PRAZO_CARTORIO_S=2400 timeout 3600 python -m src.comando sequencia   # 18/10: Cartório = hub dos livros 2>&1 | tail -c 4000
           echo "comando sequência: código ${PIPESTATUS[0]}"
       - name: Registrar somente alterações produzidas (só os arquivos deste fluxo, por cima do main mais recente)
         if: always()

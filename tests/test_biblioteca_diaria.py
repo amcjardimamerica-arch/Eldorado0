@@ -9,7 +9,8 @@ class TesteBibliotecaDiaria(unittest.TestCase):
     def test_leitor_documental_diario_antes_do_recalculo(self):
         # 15/10/2026: a ordem das fases vive no comando único (src/comando.py)
         from src import comando as C
-        fs = [f["etapa"] for f in C.fases({"novos_na_base": 0})]
+        # 18/10 (titular): a biblioteca diária é FERRAMENTA do Cartório (hub), antes das fichas e do Farol
+        fs = list(C.ETAPAS["certificar"]["ferramentas"])
         self.assertLess(fs.index("biblioteca_diaria"), fs.index("fichas_farol"), "a biblioteca roda antes das fichas e do Farol")
         self.assertIn("estado/biblioteca_diaria.txt", (ROOT / "src/comando.py").read_text(encoding="utf-8"))
 

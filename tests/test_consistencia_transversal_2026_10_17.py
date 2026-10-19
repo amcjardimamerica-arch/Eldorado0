@@ -152,7 +152,7 @@ class MesmoRetrato(unittest.TestCase):
         nomes = [f["etapa"] for f in F]
         # 18/10 (titular): Fichas fica no GRUPO CERTIFICAR (antes do fechamento); a garantia de "fichas do mesmo
         # repositório" é do FECHAMENTO, que refaz as fichas depois de reconstruir o repositório final
-        self.assertLess(nomes.index("fichas_farol"), nomes.index("sala_de_controle"))
+        self.assertLess(nomes.index("certificar"), nomes.index("sala_de_controle"))   # 18/10: fichas dentro do hub
         fe = [" ".join(c) for c in next(f for f in F if f["etapa"] == "fechamento")["cmds"]]
         i = lambda t: next(n for n, c in enumerate(fe) if t in c)  # noqa: E731
         self.assertLess(i("R.construir()"), i("src.fichas_oportunidades"))                 # fichas do mesmo repositório

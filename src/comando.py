@@ -231,6 +231,7 @@ def avaliar_coleta(motores: list[str]) -> dict:
 def ciclo_coleta() -> dict:
     t0 = time.time()
     ciclo = {"inicio": _agora(), "recibos": [], "decisoes": []}
+    ciclo["recibos"].append(executar_etapa("decidir", ciclo, 600))     # 18/10: a rede neural é ferramenta da decisão
     d = decidir_coleta()
     ciclo["decisoes"].append({"fase": "decidir", "motores": len(d["motores"]), "adiados_primeiro": d["adiados"],
                               "planejados_no_dia": d.get("planejados_no_dia"), "cobertura_antes_pct": d.get("cobertura_antes_pct")})
@@ -249,6 +250,8 @@ def ciclo_coleta() -> dict:
         for m in ciclo["avaliacao"]["para_humano"]:
             fila["itens"][m] = {"desde": fila["itens"].get(m, {}).get("desde") or _agora(), "motivo": "parte da fonte só abre do Brasil ou proíbe robôs"}
         _w(PARA_CHROME, fila)
+    # 18/10: a etapa ACIONAR OS MOTORES continua com as ferramentas dos motores (PNCP, achados, fluxo, vigilância)
+    ciclo["recibos"].append(executar_etapa("motores", ciclo, int(os.environ.get("COMANDO_PRAZO_FERRAMENTAS_MOTORES_S", "1500"))))
     ciclo["novos_na_base"] = sum(int(x.get("novos_na_base") or 0) for x in ciclo["recibos"])
     _w(CICLO, ciclo)
     return ciclo
@@ -445,6 +448,8 @@ def ciclo_sequencia() -> dict:
     for f in fases(ctx):
         if f["pular"]:
             ctx["decisoes"].append({"fase": f["etapa"], "pulou": f["pular"]}); continue
+        if f.get("hub"):                                   # 18/10: etapa unificada (ferramentas conforme a situação)
+            rec = executar_etapa(f["hub"], ctx, f["t"]); ctx["recibos"].append(rec); continue
         rs = [executar(f"{f['etapa']}:{i + 1}", c, f["t"], f.get("env")) for i, c in enumerate(f["cmds"])]
         rec = {"etapa": f["etapa"], "finalidade": f["finalidade"], "segundos": round(sum(r["segundos"] for r in rs), 1),
                "erro": next((f"{r['etapa']}: {r['erro']}" for r in rs if r["erro"]), None)}
@@ -488,38 +493,79 @@ if __name__ == "__main__":
 
 
 # ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-# 18/10/2026 (titular): ORGANIZAÇÃO DAS ETAPAS — menos coisas para dar problema, só o que resolve.
-# • Migrações de uma vez só saem do fluxo (já aplicadas): modalidade, absorver, migração dos livros; e, do fechamento,
-#   as migrações da pesquisa externa, das certidões e do pacote final, a troca do nome antigo e a restauração de 17/10.
-# • A CATALOGAR ganha a regra permanente: NENHUM DADO FORA DOS LIVROS (absorve o que estiver fora) e TODA OPORTUNIDADE
-#   CRIA OU VINCULA UM LIVRO (o que os motores guardaram só no estado vai ao livro pelo índice).
-# • O GRUPO CERTIFICAR (CARTÓRIO) reúne, em sequência, cada etapa com o seu próprio agendamento: Catalogar, Site oficial,
-#   Expurgo, Cartório, Curadoria dos links, Validar por exceção, Livros, Unir livros duplicados, Biblioteca diária
-#   (selos), Banco único e Fichas.
+# 18/10/2026 (titular): ETAPAS UNIFICADAS — cada etapa é UMA só e usa as suas FERRAMENTAS conforme a situação.
+#   1. DECIDIR quais motores rodam agora   ferramenta: rede neural (treina quando há rótulos novos)
+#   2. ACIONAR OS MOTORES                  acionar e reacionar + ferramentas: PNCP (parte dos motores), achados e status
+#                                          dos motores, recálculo do fluxo, vigilância diária
+#   3. CERTIFICAR (CARTÓRIO) — o HUB dos livros: regra dos livros (nada fora deles; toda oportunidade cria ou vincula um
+#      livro), site oficial, expurgo, certificação, curadoria dos links, validação por exceção, livros, união dos
+#      duplicados, selos, banco único, fichas
+# Cada ferramenta é usada conforme a situação (as diárias uma vez por dia, o treino só com rótulos novos) e respeita o
+# TEMPO QUE RESTA na etapa: se não cabe, fica para a próxima passagem, com o motivo no recibo. As migrações de uma vez
+# só saíram do fluxo (já aplicadas).
 UMA_VEZ_SO = ("modalidade", "absorver", "migracao_livros")
-GRUPO_CERTIFICAR = ("catalogar", "site_oficial", "expurgo", "certificar", "curadoria", "validar", "livros", "unir_livros",
-                    "biblioteca_diaria", "banco_unico", "fichas_farol")
-ORDEM = ("pncp", *GRUPO_CERTIFICAR, "treinar_rede", "recalcular", "vigilancia_diaria", "legislativo", "fechamento",
-         "sala_de_controle", "diagnostico")
 _FECHAMENTO_FORA = ("scripts/migracoes/", "migrar_nome_antigo", "scripts/restaurar_livros.py", "registrar_do_estado_dos_motores")
+ETAPAS = {
+    "decidir": {"finalidade": "decidir quais motores rodam agora (a rede neural é ferramenta da decisão)",
+                "ferramentas": ("treinar_rede",)},
+    "motores": {"finalidade": "acionar os motores e tudo o que é dos motores: PNCP, achados e status, recálculo do fluxo, vigilância",
+                "ferramentas": ("pncp", "achados_dos_motores", "recalcular", "vigilancia_diaria")},
+    "certificar": {"finalidade": "o Cartório é o hub dos livros: valida e reúne a informação de todos eles, numa etapa só",
+                   "ferramentas": ("regra_dos_livros", "site_oficial", "expurgo", "certificar", "curadoria", "validar",
+                                   "livros", "unir_livros", "biblioteca_diaria", "banco_unico", "fichas_farol")},
+}
+
+
+def ferramentas(ctx: dict) -> dict:
+    """As ferramentas das etapas: os mesmos comandos, regras de uso ('pular') e ações ao terminar ('depois') de antes."""
+    py = sys.executable
+    F = {f["etapa"]: f for f in _fases_base(ctx) if f["etapa"] not in UMA_VEZ_SO}
+    cat = F.pop("catalogar")
+    F["achados_dos_motores"] = {**cat, "etapa": "achados_dos_motores", "finalidade": "achados por motor e status de cada motor",
+                                "cmds": [c for c in cat["cmds"] if "fluxo_oportunidades" not in " ".join(c)]}
+    F["recalcular"] = {**F["recalcular"], "pular": None}          # uma vez por passagem, depois dos motores
+    F["regra_dos_livros"] = {"etapa": "regra_dos_livros", "t": 900, "pular": None,
+                             "finalidade": "nenhum dado fora dos livros; toda oportunidade cria ou vincula um livro",
+                             "cmds": [[py, "-c", "import json; from src import livro_arquivo as LA; print(json.dumps(LA.absorver_proibidos(), ensure_ascii=False))"],
+                                      [py, "-c", "import json; from src import banco_livros as B; r=B.registrar_do_estado_dos_motores(); "
+                                                 "print(json.dumps({k: v for k, v in r.items() if k != 'fora_dos_livros_por_arquivo'}, ensure_ascii=False))"]]}
+    fe = F["fechamento"]
+    fe["cmds"] = [c for c in fe["cmds"] if not any(x in " ".join(c) for x in _FECHAMENTO_FORA)]
+    return F
+
+
+def executar_etapa(nome: str, ctx: dict, prazo_s: int) -> dict:
+    """Executa UMA etapa: cada ferramenta conforme a situação e o tempo que resta. Um recibo só, com cada ferramenta."""
+    t0 = time.time()
+    F = ferramentas(ctx)
+    rec = {"etapa": nome, "finalidade": ETAPAS[nome]["finalidade"], "ferramentas": [], "erro": None}
+    for fn in ETAPAS[nome]["ferramentas"]:
+        f = F.get(fn)
+        if not f:
+            continue
+        resto = prazo_s - (time.time() - t0)
+        if f.get("pular"):
+            rec["ferramentas"].append({"ferramenta": fn, "uso": "pulada", "motivo": f["pular"]}); continue
+        if resto < min(120, f["t"]):
+            rec["ferramentas"].append({"ferramenta": fn, "uso": "adiada", "motivo": "sem tempo nesta passagem"}); continue
+        rs = [executar(f"{nome}:{fn}:{i + 1}", c, int(min(f["t"], resto)), f.get("env")) for i, c in enumerate(f["cmds"])]
+        erro = next((f"{r['etapa']}: {r['erro']}" for r in rs if r["erro"]), None)
+        rec["ferramentas"].append({"ferramenta": fn, "uso": "usada", "segundos": round(sum(r["segundos"] for r in rs), 1),
+                                   **({"erro": erro} if erro else {})})
+        if erro and not rec["erro"]:
+            rec["erro"] = erro
+        if not erro and f.get("depois"):
+            try:
+                f["depois"]()
+            except OSError:
+                pass
+    rec["segundos"] = round(time.time() - t0, 1)
+    return rec
 
 
 def fases(ctx: dict) -> list[dict]:
-    py = sys.executable
-    base = {f["etapa"]: f for f in _fases_base(ctx) if f["etapa"] not in UMA_VEZ_SO}
-    cat = base["catalogar"]
-    cat["finalidade"] = ("regra: nenhum dado fora dos livros e toda oportunidade cria ou vincula um livro — achados por "
-                         "motor, status dos motores e repositório único")
-    cat["cmds"] = [
-        # o que estiver fora dos livros é absorvido (nenhum banco paralelo)
-        [py, "-c", "import json; from src import livro_arquivo as LA; print(json.dumps(LA.absorver_proibidos(), ensure_ascii=False))"],
-        *cat["cmds"],
-        # o que os motores guardaram só no próprio estado vai ao livro (cria ou vincula pelo índice)
-        [py, "-c", "import json; from src import banco_livros as B; r=B.registrar_do_estado_dos_motores(); "
-                   "print(json.dumps({k: v for k, v in r.items() if k != 'fora_dos_livros_por_arquivo'}, ensure_ascii=False))"],
-    ]
-    fe = base["fechamento"]
-    fe["cmds"] = [c for c in fe["cmds"] if not any(x in " ".join(c) for x in _FECHAMENTO_FORA)]
-    for e in GRUPO_CERTIFICAR:
-        base[e]["grupo"] = "certificar"
-    return [base[e] for e in ORDEM if e in base] + [f for e, f in base.items() if e not in ORDEM]
+    """A sequência depois da coleta: Certificar (o hub, uma etapa só), Legislativo, Fechamento, Sala, Diagnóstico."""
+    F = ferramentas(ctx)
+    hub = {"etapa": "certificar", "finalidade": ETAPAS["certificar"]["finalidade"], "hub": "certificar", "pular": None,
+           "t": int(os.environ.get("COMANDO_PRAZO_CARTORIO_S", "2400")), "cmds": []}
+    return [hub] + [F[e] for e in ("legislativo", "fechamento", "sala_de_controle", "diagnostico") if e in F]
