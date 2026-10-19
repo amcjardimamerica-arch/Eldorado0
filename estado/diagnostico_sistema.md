@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-19 10:03 UTC
+# Diagnóstico do sistema · 2026-10-19 10:09 UTC
 
 ## Cumprimento da finalidade · índice geral 59%
 - Motores: 56% (falha) — todo motor ativo lê dentro da sua cadência
@@ -22,7 +22,7 @@
 - 05 · Busca ativa (a cada 3 dias): atencao · última 2026-10-15T17:32 · sucesso 10% · cadência None h
 - 09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes: atrasado · última 2026-10-03T11:56 · sucesso 100% · cadência 24.0 h
 - 10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar: atencao · última 2026-10-15T16:09 · sucesso 25% · cadência None h
-- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: atencao · última 2026-10-19T09:56 · sucesso 0% · cadência 1.0 h
+- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: atencao · última 2026-10-19T10:08 · sucesso 0% · cadência 1.0 h
 - 01 · Eldorado — motores por hora (00h–06h BRT): atencao · última 2026-10-18T13:08 · sucesso 60% · cadência 24.0 h
 - 34 · Motores de empresas (semanal, com recuperação): atencao · última 2026-10-18T11:23 · sucesso 71% · cadência 24.0 h
 - 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): falha · última 2026-10-18T20:14 · sucesso 30% · cadência 6.0 h
@@ -59,7 +59,7 @@
   - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 1 dia(s) (27 h); última leitura 18/10 03:54
   - em falha: Motor Patrocínio Privado — mídia e eventos de Goiás (empresas) — falha — não lê há 1 dia(s) (30 h); última leitura 18/10 00:48
   - em falha: GIFE — Grupo de Institutos, Fundações e Empresas — falha — não lê há 1 dia(s) (30 h); última leitura 18/10 00:26
-  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 1 dia(s) (26 h); última leitura 18/10 04:07
+  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 1 dia(s) (27 h); última leitura 18/10 04:07
   - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 1 dia(s) (27 h); última leitura 18/10 03:49
   - em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 1 dia(s) (27 h); última leitura 18/10 03:26
   - em falha: CNPq / MCTI / Setec-MEC — chamadas com componente de extensão e parceria com OSC — falha — não lê há 1 dia(s) (29 h); última leitura 18/10 01:29
@@ -72,11 +72,11 @@
 
 ## Integração
 - contagens: {'repositorio_abertas': 234, 'diagnostico_abertas': 234, 'tela_cartoes': 224, 'fichas': 243, 'sala_controle_abertas': 234}
-- idade (h): {'repositorio': 0.0, 'fluxo': 30.2, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 7.1, 'rede_neural': 30.2, 'saude': 20.7}
+- idade (h): {'repositorio': 0.0, 'fluxo': 30.3, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 7.2, 'rede_neural': 30.3, 'saude': 20.8}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (47)
-- [alta] o comando único não fecha um ciclo há 8.4 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+- [alta] o comando único não fecha um ciclo há 8.5 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 3 etapa(s) falharam em silêncio na última execução de motores-da-vez.yml: NameError: name 'fases' is not defined | NameError: name 'ferramentas' is not defined | Traceback (most recent call last): → investigar a etapa (sem correção automática)
 - [alta] 1 etapa(s) falharam em silêncio na última execução de motor-agregadores.yml: mapa: falhou → investigar a etapa (sem correção automática)
 - [alta] 8 etapa(s) falharam em silêncio na última execução de monitoramento-diario.yml: "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu → investigar a etapa (sem correção automática)
@@ -96,7 +96,7 @@
 - [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 1 dia(s) (27 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Motor Patrocínio Privado — mídia e eventos de Goiás (empresas) — falha — não lê há 1 dia(s) (30 h); última leitura 18/10 00:48 → investigar o motor (sem correção automática)
 - [alta] motor em falha: GIFE — Grupo de Institutos, Fundações e Empresas — falha — não lê há 1 dia(s) (30 h); última leitura 18/10 00:26 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 1 dia(s) (26 h); última leitura 18/10 04:07 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 1 dia(s) (27 h); última leitura 18/10 04:07 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 1 dia(s) (27 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 1 dia(s) (27 h); última leitura 18/10 03:26 → investigar o motor (sem correção automática)
 - [alta] motor em falha: CNPq / MCTI / Setec-MEC — chamadas com componente de extensão e parceria com OSC — falha — não lê há 1 dia(s) (29 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
@@ -104,11 +104,11 @@
 - [alta] motor em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 1 dia(s) (46 h); última leitura 17/10 08:29 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 234 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 30.2 h (limite 3 h) → refazer a tela
-- [media] maestro sem atualização há 7.1 h (limite 3 h) → ver o fluxo que gera este dado
-- [media] rede_neural sem atualização há 30.2 h (limite 26 h) → ver o fluxo que gera este dado
-- [media] fluxo 'acesso-mensal' sem rodar há 1152.8 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 382.1 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo sem atualização há 30.3 h (limite 3 h) → refazer a tela
+- [media] maestro sem atualização há 7.2 h (limite 3 h) → ver o fluxo que gera este dado
+- [media] rede_neural sem atualização há 30.3 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo 'acesso-mensal' sem rodar há 1152.9 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 382.2 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 431.5 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 90 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
