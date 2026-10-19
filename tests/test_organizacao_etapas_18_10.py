@@ -25,10 +25,16 @@ class EtapasIntegradas(unittest.TestCase):
         F = {k: {"pular": None, "t": 60, "cmds": []} for k in ("banco_unico", "site_oficial", "certificar", "validar", "curadoria",
                                                                 "regra_dos_livros", "unir_livros", "livros", "fichas_farol")}
         F.update({"expurgo": {"pular": "já feito hoje"}, "biblioteca_diaria": {"pular": "já feita hoje"}})
+        from src import fila_livros as FL
+        porl = lambda: {"op-1": {k for k, v in nec.items() if v}}  # noqa: E731
         with mock.patch.object(C, "ferramentas", lambda ctx: F), mock.patch.object(C, "_rodar", rodar), \
-             mock.patch.object(C, "_remontar", lambda F, r: None), mock.patch.object(C, "necessidades_cartorio", lambda: dict(nec)):
+             mock.patch.object(C, "_remontar", lambda F, r: None), mock.patch.object(C, "necessidades_cartorio", lambda: dict(nec)), \
+             mock.patch.object(C, "necessidades_por_livro", porl), mock.patch.object(FL, "pode", lambda *a, **k: True), \
+             mock.patch.object(FL, "tentativa", lambda *a, **k: {}), mock.patch.object(FL, "_ler", lambda: {"livros": {}}), \
+             mock.patch.object(FL, "_gravar", lambda d: None), mock.patch.object(FL, "montar", lambda n: {"na_fila": 1}):
             r = C.executar_cartorio({}, 3600)
-        self.assertEqual(usadas[:4], ["banco_unico", "certificar", "validar", "site_oficial"])
+        # 18/10: a regra dos livros e a fila de livros vêm primeiro (um banco só, depois um a um)
+        self.assertEqual(usadas[:5], ["regra_dos_livros", "banco_unico", "certificar", "validar", "site_oficial"])
         self.assertEqual(usadas.count("site_oficial"), 1, "ação sem efeito não se repete")
         self.assertEqual(r["etapa"], "certificar")
         self.assertTrue(all("acao" in a for a in r["acoes"]))
