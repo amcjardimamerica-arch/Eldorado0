@@ -118,7 +118,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "dj-trf1-go": {
-  "em": "2026-10-19T01:31:28+00:00",
+  "em": "2026-10-19T18:20:10+00:00",
   "testes": 14,
   "melhor": {
    "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
@@ -161,7 +161,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/transparencia/editais",
+    "url": "https://www.trf1.jus.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -171,7 +171,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/sitemap.xml",
+    "url": "https://www.trf1.jus.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -251,7 +251,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/chamadas-publicas",
+    "url": "https://www.trf1.jus.br/licitacoes",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -261,7 +261,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/licitacoes",
+    "url": "https://www.trf1.jus.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -274,7 +274,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-196": {
-  "em": "2026-10-19T01:31:26+00:00",
+  "em": "2026-10-19T18:20:09+00:00",
   "testes": 17,
   "melhor": {
    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
@@ -307,23 +307,23 @@
     "funcionou": true
    },
    {
-    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/transparencia/bens-para-doacao",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 13,
-    "links": 427,
-    "sinais": 6,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/mpf-divulga-lista-de-instituicoes-selecionadas-para-receber-bens-doados",
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 5,
     "links": 404,
     "sinais": 2,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/transparencia/bens-para-doacao",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 13,
+    "links": 427,
+    "sinais": 6,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -1083,7 +1083,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-19T16:53:40+00:00",
+  "em": "2026-10-19T18:21:51+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -2015,13 +2015,13 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "alego-pl": {
-  "em": "2026-10-19T01:37:30+00:00",
-  "testes": 17,
+  "em": "2026-10-19T18:21:51+00:00",
+  "testes": 16,
   "melhor": {
    "url": "https://portal.al.go.leg.br/",
    "via": "direto",
    "origem": "rota original",
-   "pontos": 31,
+   "pontos": 23,
    "formato": "html"
   },
   "detalhe": [
@@ -2040,15 +2040,15 @@
     "url": "https://portal.al.go.leg.br/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 31,
+    "pontos": 23,
     "links": 260,
-    "sinais": 15,
+    "sinais": 11,
     "formato": "html",
     "erro": null,
     "funcionou": true
    },
    {
-    "url": "https://portal.al.go.leg.br/transparencia/editais",
+    "url": "https://portal.al.go.leg.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2058,13 +2058,23 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/transparencia/editais",
+    "url": "https://alegodigital.al.go.leg.br/sitemap.xml",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -2078,7 +2088,7 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/sitemap.xml",
+    "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2088,7 +2098,7 @@
     "funcionou": false
    },
    {
-    "url": "https://alegodigital.al.go.leg.br/sitemap.xml",
+    "url": "https://alegodigital.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2118,18 +2128,8 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
+    "url": "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
+    "origem": "rota original",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2144,22 +2144,12 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
     "url": "https://alegodigital.al.go.leg.br/editais",
     "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
-    "origem": "rota original",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2180,6 +2170,16 @@
    {
     "url": "https://alegodigital.al.go.leg.br/noticias",
     "origem": "câmara",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/edital",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -10114,7 +10114,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-241": {
-  "em": "2026-10-19T01:30:47+00:00",
+  "em": "2026-10-19T18:19:26+00:00",
   "testes": 22,
   "melhor": {
    "url": "https://www.unicef.org/sitemap.xml",
@@ -10167,7 +10167,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/transparencia/editais",
+    "url": "https://www.unicef.org/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10177,7 +10177,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/transparencia/editais",
+    "url": "https://www.unicef.org/feed",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -10187,7 +10187,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/feed",
+    "url": "https://www.unicef.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10197,7 +10197,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/feed",
+    "url": "https://www.unicef.org/transparencia/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -10587,7 +10587,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-247": {
-  "em": "2026-10-19T01:30:59+00:00",
+  "em": "2026-10-19T18:19:38+00:00",
   "testes": 22,
   "melhor": {
    "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
@@ -10640,7 +10640,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
+    "url": "https://international-partnerships.ec.europa.eu/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10650,7 +10650,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
+    "url": "https://international-partnerships.ec.europa.eu/feed",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -10660,7 +10660,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/feed",
+    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10670,7 +10670,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/feed",
+    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -11820,7 +11820,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-011": {
-  "em": "2026-10-19T01:31:16+00:00",
+  "em": "2026-10-19T18:19:55+00:00",
   "testes": 20,
   "melhor": {
    "url": "https://mariaemilia.org.br/feed",
@@ -11836,7 +11836,7 @@
     "via": "direto",
     "pontos": 30,
     "links": 10,
-    "sinais": 35,
+    "sinais": 48,
     "formato": "sitemap/feed",
     "erro": null,
     "funcionou": true
@@ -11856,9 +11856,9 @@
     "url": "https://mariaemilia.org.br/",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 9,
+    "pontos": 7,
     "links": 80,
-    "sinais": 4,
+    "sinais": 3,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -11968,17 +11968,6 @@
     "funcionou": false
    },
    {
-    "url": "https://mariaemilia.org.br/wp-content/uploads/2026/08/Edital-FME-Transforma-2026.pdf",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://mariaemilia.org.br/chamamentos",
     "origem": "padrão",
     "via": "direto",
@@ -11996,6 +11985,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/chamadas-publicas",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],

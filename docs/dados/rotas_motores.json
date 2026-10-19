@@ -1,5 +1,5 @@
 {
- "em": "2026-10-19T16:53:40+00:00",
+ "em": "2026-10-19T18:21:51+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,41 +7,45 @@
   "alterar_rota": 61,
   "rota_nova": 52,
   "via_ponte": 4,
-  "exemplos_da_rede": 28874
+  "exemplos_da_rede": 28985
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
-    "tok:inscricoes",
-    2.6491
+    "origem:rota original",
+    3.137
    ],
    [
-    "origem:rota original",
-    2.5477
+    "tok:inscricoes",
+    2.6491
    ],
    [
     "tok:secult",
     2.5203
    ],
    [
+    "origem:biblioteca",
+    2.4695
+   ],
+   [
     "tok:mpf",
     2.3964
    ],
    [
-    "origem:biblioteca",
-    2.2261
+    "tok:deputados",
+    2.2249
    ],
    [
     "tok:unidades",
     2.2138
    ],
    [
-    "tok:deputados",
-    2.2068
+    "tld:br",
+    1.9222
    ],
    [
     "tok:feed",
-    1.9065
+    1.9023
    ],
    [
     "tok:leipaulogustavo",
@@ -49,11 +53,7 @@
    ],
    [
     "tok:imprensa",
-    1.7477
-   ],
-   [
-    "tld:br",
-    1.7468
+    1.7631
    ],
    [
     "tok:abre",
@@ -67,11 +67,11 @@
    ],
    [
     "tok:2026",
-    -2.3896
+    -2.4034
    ],
    [
     "via:ponte",
-    -2.5326
+    -2.5397
    ],
    [
     "tok:pgt",
@@ -79,19 +79,19 @@
    ],
    [
     "tok:content",
-    -3.2419
+    -3.2557
    ],
    [
     "tok:uploads",
-    -3.2419
+    -3.2557
    ],
    [
     "origem:câmara",
-    -3.4854
+    -3.5131
    ],
    [
     "origem:padrão",
-    -3.5342
+    -3.821
    ]
   ]
  },
@@ -1393,17 +1393,17 @@
     ],
     "via": "direto",
     "origem": "rota original",
-    "pontos": 31,
-    "aprendido_em": "2026-10-19T01:37:30+00:00"
+    "pontos": 23,
+    "aprendido_em": "2026-10-19T18:21:51+00:00"
    },
    "afinado": {
-    "em": "2026-10-19T01:37:30+00:00",
-    "testes": 17,
+    "em": "2026-10-19T18:21:51+00:00",
+    "testes": 16,
     "melhor": {
      "url": "https://portal.al.go.leg.br/",
      "via": "direto",
      "origem": "rota original",
-     "pontos": 31,
+     "pontos": 23,
      "formato": "html"
     },
     "resultado": "rota nova em teste"
@@ -1525,10 +1525,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 29,
-    "aprendido_em": "2026-10-19T01:31:28+00:00"
+    "aprendido_em": "2026-10-19T18:20:10+00:00"
    },
    "afinado": {
-    "em": "2026-10-19T01:31:28+00:00",
+    "em": "2026-10-19T18:20:10+00:00",
     "testes": 14,
     "melhor": {
      "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
@@ -1635,10 +1635,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 13,
-    "aprendido_em": "2026-10-19T01:31:26+00:00"
+    "aprendido_em": "2026-10-19T18:20:09+00:00"
    },
    "afinado": {
-    "em": "2026-10-19T01:31:26+00:00",
+    "em": "2026-10-19T18:20:09+00:00",
     "testes": 17,
     "melhor": {
      "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
@@ -1928,10 +1928,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 15,
-    "aprendido_em": "2026-10-19T01:30:47+00:00"
+    "aprendido_em": "2026-10-19T18:19:26+00:00"
    },
    "afinado": {
-    "em": "2026-10-19T01:30:47+00:00",
+    "em": "2026-10-19T18:19:26+00:00",
     "testes": 22,
     "melhor": {
      "url": "https://www.unicef.org/sitemap.xml",
@@ -1969,10 +1969,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-19T01:30:59+00:00"
+    "aprendido_em": "2026-10-19T18:19:38+00:00"
    },
    "afinado": {
-    "em": "2026-10-19T01:30:59+00:00",
+    "em": "2026-10-19T18:19:38+00:00",
     "testes": 22,
     "melhor": {
      "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
@@ -2052,10 +2052,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-19T01:31:16+00:00"
+    "aprendido_em": "2026-10-19T18:19:55+00:00"
    },
    "afinado": {
-    "em": "2026-10-19T01:31:16+00:00",
+    "em": "2026-10-19T18:19:55+00:00",
     "testes": 20,
     "melhor": {
      "url": "https://mariaemilia.org.br/feed",
