@@ -150,10 +150,12 @@ class MesmoRetrato(unittest.TestCase):
         from src import comando as C
         F = C.fases({})
         nomes = [f["etapa"] for f in F]
-        self.assertLess(nomes.index("fechamento"), nomes.index("fichas_farol"))          # fichas do mesmo repositório
+        # 18/10 (titular): Fichas fica no GRUPO CERTIFICAR (antes do fechamento); a garantia de "fichas do mesmo
+        # repositório" é do FECHAMENTO, que refaz as fichas depois de reconstruir o repositório final
         self.assertLess(nomes.index("fichas_farol"), nomes.index("sala_de_controle"))
         fe = [" ".join(c) for c in next(f for f in F if f["etapa"] == "fechamento")["cmds"]]
         i = lambda t: next(n for n, c in enumerate(fe) if t in c)  # noqa: E731
+        self.assertLess(i("R.construir()"), i("src.fichas_oportunidades"))                 # fichas do mesmo repositório
         self.assertLess(i("livros_curadoria"), i("R.construir()"))                         # catálogo arrumado antes
         self.assertLess(i("unir_duplicados"), i("R.construir()"))
         self.assertLess(i("IL.construir()"), i("R.construir()"))

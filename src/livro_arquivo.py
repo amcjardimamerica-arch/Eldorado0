@@ -493,7 +493,7 @@ def _carregar(caminho, padrao=None):
     def valor(lid, chave_int):
         d = cache.setdefault(lid, _ler_ro(lid))           # 16/10: memória somente leitura
         x = ((d.get("acervo") or {}).get(rel) or {}).get(chave_int)
-        return None if x is None else x["dado"]
+        return None if x is None else x.get("dado")     # 18/10: entrada sem conteúdo não derruba a leitura inteira
     if o.get("inteiro"):
         return valor(*o["inteiro"])
     if "controle" in o and not o["conteineres"]:
