@@ -1083,9 +1083,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-19T22:56:28+00:00",
+  "em": "2026-10-20T00:24:35+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": false
+  "ponte_respondeu": true
  },
  "f260-captacao-238": {
   "em": "2026-10-19T16:53:16+00:00",
@@ -1484,7 +1484,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-233": {
-  "em": "2026-10-19T10:24:37+00:00",
+  "em": "2026-10-20T00:24:27+00:00",
   "testes": 23,
   "melhor": null,
   "detalhe": [
@@ -2699,7 +2699,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-234": {
-  "em": "2026-10-19T08:53:39+00:00",
+  "em": "2026-10-20T00:23:20+00:00",
   "testes": 14,
   "melhor": null,
   "detalhe": [
@@ -2779,7 +2779,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/editais",
+    "url": "https://www.institutounibanco.org.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2790,7 +2790,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/noticias",
+    "url": "https://www.institutounibanco.org.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2834,7 +2834,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/chamadas-publicas",
+    "url": "https://www.institutounibanco.org.br/licitacoes",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2845,7 +2845,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/licitacoes",
+    "url": "https://www.institutounibanco.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3818,7 +3818,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-240": {
-  "em": "2026-10-19T10:24:25+00:00",
+  "em": "2026-10-20T00:24:15+00:00",
   "testes": 26,
   "melhor": null,
   "detalhe": [
@@ -8279,16 +8279,16 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-255": {
-  "em": "2026-10-19T10:24:10+00:00",
-  "testes": 12,
+  "em": "2026-10-20T00:23:51+00:00",
+  "testes": 20,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://www.cjrfund.org/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
+    "pontos": 1,
+    "links": 103,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -8298,10 +8298,10 @@
     "url": "https://www.cjrfund.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
+    "pontos": 1,
+    "links": 12,
     "sinais": 0,
-    "formato": "html",
+    "formato": "sitemap/feed",
     "erro": null,
     "funcionou": false
    },
@@ -8312,18 +8312,27 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
     "url": "https://www.cjrfund.org/feed",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
+    "pontos": 1,
+    "links": 10,
     "sinais": 0,
-    "formato": "html",
+    "formato": "sitemap/feed",
     "erro": null,
     "funcionou": false
    },
@@ -8334,7 +8343,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
+    "formato": "json",
     "erro": null,
     "funcionou": false
    },
@@ -8345,8 +8354,17 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -8356,8 +8374,17 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -8367,8 +8394,17 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -8378,8 +8414,17 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/chamamento-publico",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -8389,30 +8434,17 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/chamadas-publicas",
+    "url": "https://www.cjrfund.org/chamamentos",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "ErroPonte",
     "funcionou": false
    }
   ],
@@ -8908,7 +8940,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-249": {
-  "em": "2026-10-19T10:24:45+00:00",
+  "em": "2026-10-20T00:24:35+00:00",
   "testes": 22,
   "melhor": null,
   "detalhe": [
@@ -9557,7 +9589,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-248": {
-  "em": "2026-10-19T08:53:57+00:00",
+  "em": "2026-10-20T00:23:29+00:00",
   "testes": 23,
   "melhor": null,
   "detalhe": [

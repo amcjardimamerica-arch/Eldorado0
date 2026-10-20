@@ -1,5 +1,5 @@
 {
- "em": "2026-10-19T23:05:57+00:00",
+ "em": "2026-10-20T00:32:47+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
@@ -14,11 +14,11 @@
   "certidoes_sem_item_faltando": 281,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
   "certidoes": 2711,
-  "nesta_execucao": 37,
-  "fila_estrelas": 157,
+  "nesta_execucao": 36,
+  "fila_estrelas": 153,
   "fila_livros": 2441,
   "itens_que_faltavam": 24800,
-  "itens_obtidos": 8412,
+  "itens_obtidos": 8411,
   "itens_dispensados": 515,
   "eficiencia_itens": 0.36,
   "com_link_oficial": 1822,
@@ -30,7 +30,7 @@
    "bronze → ouro": 7,
    "bronze → prata": 1,
    "sem selo → ouro": 87,
-   "sem selo → bronze": 50,
+   "sem selo → bronze": 49,
    "sem selo → prata": 45,
    "prata → ouro": 6,
    "prata → bronze": 1
@@ -54,7 +54,7 @@
   },
   "Prazo de inscrição": {
    "faltavam": 1875,
-   "obtidos": 497,
+   "obtidos": 496,
    "dispensados": 147,
    "eficiencia": 0.343
   },
@@ -156,7 +156,7 @@
    "certidoes": 1262,
    "com_link_oficial": 1008,
    "faltavam": 11177,
-   "resolvidos": 5116,
+   "resolvidos": 5115,
    "eficiencia": 0.458,
    "taxa_link_oficial": 0.799
   },
@@ -187,20 +187,20 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2175,
-   "faltavam": 18789,
+   "certidoes": 2174,
+   "faltavam": 18777,
    "resolvidos": 6206,
-   "eficiencia": 0.33,
+   "eficiencia": 0.331,
    "com_link_oficial": 1399,
-   "taxa_link_oficial": 0.643
+   "taxa_link_oficial": 0.644
   },
   "refeitas": {
-   "certidoes": 536,
-   "faltavam": 6011,
-   "resolvidos": 2642,
-   "eficiencia": 0.44,
+   "certidoes": 537,
+   "faltavam": 6023,
+   "resolvidos": 2641,
+   "eficiencia": 0.438,
    "com_link_oficial": 423,
-   "taxa_link_oficial": 0.789
+   "taxa_link_oficial": 0.788
   }
  },
  "por_versao": {
@@ -223,7 +223,7 @@
   "cartório v5 · linha de produção": {
    "certidoes": 2494,
    "faltavam": 22273,
-   "resolvidos": 7810,
+   "resolvidos": 7809,
    "eficiencia": 0.351,
    "com_link_oficial": 1666,
    "taxa_link_oficial": 0.668
@@ -248,11 +248,11 @@
   },
   "2": {
    "nome": "anexos completos",
-   "vezes": 225,
+   "vezes": 226,
    "renderam": 41,
    "itens": 162,
    "links_oficiais": 4,
-   "taxa_de_acerto": 0.182
+   "taxa_de_acerto": 0.181
   },
   "3": {
    "nome": "página oficial e citados",
@@ -288,11 +288,11 @@
   },
   "7": {
    "nome": "releitura com gabarito",
-   "vezes": 16,
+   "vezes": 15,
    "renderam": 1,
    "itens": 1,
    "links_oficiais": 0,
-   "taxa_de_acerto": 0.062
+   "taxa_de_acerto": 0.067
   },
   "8": {
    "nome": "ponte do titular",
@@ -304,11 +304,11 @@
   },
   "9": {
    "nome": "leitura profunda",
-   "vezes": 84,
-   "renderam": 15,
-   "itens": 59,
+   "vezes": 83,
+   "renderam": 14,
+   "itens": 58,
    "links_oficiais": 8,
-   "taxa_de_acerto": 0.179
+   "taxa_de_acerto": 0.169
   },
   "10": {
    "nome": "busca no domínio",
@@ -322,19 +322,19 @@
  "por_balcao_selo": {
   "sem_estrela": {
    "nome": "Sem estrela → bronze",
-   "certidoes": 1454,
-   "faltavam": 13119,
-   "resolvidos": 3463,
+   "certidoes": 1455,
+   "faltavam": 13131,
+   "resolvidos": 3471,
    "eficiencia": 0.264,
    "entraram_aqui": 1606,
    "esgotadas": 0
   },
   "bronze": {
    "nome": "Bronze → prata",
-   "certidoes": 73,
-   "faltavam": 586,
-   "resolvidos": 398,
-   "eficiencia": 0.679,
+   "certidoes": 72,
+   "faltavam": 574,
+   "resolvidos": 389,
+   "eficiencia": 0.678,
    "entraram_aqui": 37,
    "esgotadas": 0
   },
@@ -2686,7 +2686,7 @@
    "encaminhado": null,
    "selo_antes": "prata",
    "selo_depois": "ouro",
-   "em": "2026-10-19T22:59:11+00:00",
+   "em": "2026-10-20T00:26:09+00:00",
    "prazo": "2026-10-22T23:00",
    "uf": null,
    "orgao": null,
@@ -2811,7 +2811,7 @@
     {
      "n": 9,
      "nome": "leitura profunda",
-     "em": "2026-10-19T22:59:11+00:00",
+     "em": "2026-10-20T00:26:09+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -3310,7 +3310,7 @@
    "encaminhado": null,
    "selo_antes": "ouro",
    "selo_depois": "ouro",
-   "em": "2026-10-19T23:00:05+00:00",
+   "em": "2026-10-20T00:26:58+00:00",
    "prazo": "2026-12-04",
    "uf": null,
    "orgao": "BNDES",
@@ -3438,7 +3438,7 @@
     {
      "n": 9,
      "nome": "leitura profunda",
-     "em": "2026-10-19T23:00:05+00:00",
+     "em": "2026-10-20T00:26:58+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -32856,7 +32856,7 @@
    "encaminhado": null,
    "selo_antes": "bronze",
    "selo_depois": "ouro",
-   "em": "2026-10-19T22:59:59+00:00",
+   "em": "2026-10-20T00:26:53+00:00",
    "prazo": "2026-12-03",
    "uf": "PE",
    "orgao": "FUNDACAO JOAQUIM NABUCO FUNDAJ",
@@ -32974,7 +32974,7 @@
     {
      "n": 2,
      "nome": "anexos completos",
-     "em": "2026-10-19T22:59:59+00:00",
+     "em": "2026-10-20T00:26:53+00:00",
      "ganhou": [
       "Prazo de recurso",
       "Requisitos",
@@ -39155,7 +39155,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "bronze",
-   "em": "2026-10-19T23:01:14+00:00",
+   "em": "2026-10-20T00:28:06+00:00",
    "prazo": "2035-01-15",
    "uf": "MG",
    "orgao": null,
@@ -39292,7 +39292,7 @@
     {
      "n": 3,
      "nome": "página oficial e citados",
-     "em": "2026-10-19T23:01:14+00:00",
+     "em": "2026-10-20T00:28:06+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -45719,7 +45719,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-19T23:05:06+00:00",
+   "em": "2026-10-20T00:32:04+00:00",
    "prazo": null,
    "uf": null,
    "orgao": null,
@@ -45815,7 +45815,7 @@
     {
      "n": 1,
      "nome": "documento na mão",
-     "em": "2026-10-19T23:05:06+00:00",
+     "em": "2026-10-20T00:32:04+00:00",
      "ganhou": [
       "Anexos",
       "Esfera",
@@ -59252,7 +59252,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": "bronze",
    "selo_depois": "bronze",
-   "em": "2026-10-19T23:00:47+00:00",
+   "em": "2026-10-20T00:27:35+00:00",
    "prazo": "2026-12-31",
    "uf": null,
    "orgao": "DEFENSORIA PUBLICA DO ESTADO DO PARANA",
@@ -59382,7 +59382,7 @@
     {
      "n": 3,
      "nome": "página oficial e citados",
-     "em": "2026-10-19T23:00:47+00:00",
+     "em": "2026-10-20T00:27:35+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -59423,9 +59423,9 @@
      "degrau": 1,
      "como": "página oficial e documentos citados nela",
      "motivo": null,
-     "falha": "erro_rede: RemoteDisconnected",
-     "oficial": null,
-     "paginas": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
      "edicao_inteira": null
     }
    ],
@@ -62045,7 +62045,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": null,
    "selo_depois": "prata",
-   "em": "2026-10-19T22:59:51+00:00",
+   "em": "2026-10-20T00:26:46+00:00",
    "prazo": "2026-12-02",
    "uf": null,
    "orgao": null,
@@ -62167,7 +62167,7 @@
     {
      "n": 9,
      "nome": "leitura profunda",
-     "em": "2026-10-19T22:59:51+00:00",
+     "em": "2026-10-20T00:26:46+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -79150,15 +79150,15 @@
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2342,
+   "sem_estrela": 2341,
    "bronze": 119,
-   "prata": 137
+   "prata": 134
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 134,
+    "sem_estrela": 133,
     "bronze": 9,
-    "prata": 14
+    "prata": 11
    },
    "livro": {
     "sem_estrela": 2208,
@@ -79166,10 +79166,10 @@
     "prata": 123
    }
   },
-  "fila_oportunidades": 157,
+  "fila_oportunidades": 153,
   "fila_livros": 2441,
-  "devidas_nesta_hora": 2598,
-  "promovidas_nesta_execucao": 5,
+  "devidas_nesta_hora": 2594,
+  "promovidas_nesta_execucao": 4,
   "sem_material_agora": 4,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
