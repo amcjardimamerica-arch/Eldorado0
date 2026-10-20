@@ -201,7 +201,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 4,
- "exemplos_da_rede_de_rotas": 30121
+ "exemplos_da_rede_de_rotas": 30250
 }
 ```
 
@@ -246,16 +246,10 @@
 {
  "dia_de_referencia": "2026-10-20",
  "ativos": 172,
- "lidos_ontem": 0,
- "lidos_hoje": 0,
+ "lidos_ontem": 1,
+ "lidos_hoje": 5,
  "nao_lidos_ontem_nem_hoje": [
-  "alego-pl",
-  "camara-goiania-pl",
-  "congresso-nacional",
-  "dj-trf1-go",
-  "do-goiania",
   "do-goias",
-  "dou",
   "f260-captacao-001",
   "f260-captacao-018",
   "f260-captacao-025",
@@ -288,7 +282,13 @@
   "f260-captacao-175",
   "f260-captacao-176",
   "f260-captacao-177",
-  "f260-captacao-180"
+  "f260-captacao-180",
+  "f260-captacao-190",
+  "f260-captacao-193",
+  "f260-captacao-196",
+  "f260-captacao-200",
+  "f260-captacao-206",
+  "f260-captacao-207"
  ],
  "ainda_sem_primeira_leitura": [
   "motor-gife",
