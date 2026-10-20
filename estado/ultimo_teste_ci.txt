@@ -1,5 +1,5 @@
-commit: a12eb7ad6a431dd29eeaec08169cd970997f10e1
-em: 2026-10-20T11:03:51Z
+commit: 7e466fc16d2dc989a900350e4f5d1c8d0d323903
+em: 2026-10-20T14:02:28Z
 rc: 1
 ::error title=teste falhou::tests.test_livros_parametros.TestArquivo.test_dez_blocos_e_todos_decididos — AssertionError: 282 not greater than or equal to 300
 ::error title=teste falhou::tests.test_motor01_diario_goiania.TestCoberturaDoDia.test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida — AssertionError: True is not false
@@ -115,24 +115,13 @@ FAIL: test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo (tests.test_consiste
 Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_consistencia_transversal_2026_10_17.py", line 140, in test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo
     self.assertEqual(sorted(i for i in cat if not (L / f"{i}.json").exists()), [])
-AssertionError: Lists differ: ['op-0cc5171032bf', 'op-20b573f5e282', 'op[162 chars]193'] != []
+AssertionError: Lists differ: ['nova-7e7779e7df3c', 'op-073788ad32bf', '[506 chars]193'] != []
 
-First list contains 11 additional elements.
+First list contains 29 additional elements.
 First extra element 0:
-'op-0cc5171032bf'
+'nova-7e7779e7df3c'
 
-+ []
-- ['op-0cc5171032bf',
--  'op-20b573f5e282',
--  'op-32932493b617',
--  'op-3485b5dd6156',
--  'op-3518e8dd0e4a',
--  'op-961e3b706691',
--  'op-b46caa831388',
--  'op-c12652de581d',
--  'op-e03e7e8ab1c3',
--  'op-f8faa0a81b5a',
--  'op-fcf7b4e58193']
+Diff is 645 characters long. Set self.maxDiff to None to see it.
 
 ======================================================================
 FAIL: test_relatorio_do_cartorio_das_certidoes_guardadas (tests.test_consistencia_transversal_2026_10_17.MesmoRetrato.test_relatorio_do_cartorio_das_certidoes_guardadas)
@@ -200,13 +189,13 @@ FAIL: test_espalhamento_alimenta_a_curadoria (tests.test_evolucao_busca.TesteDes
 Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_evolucao_busca.py", line 79, in test_espalhamento_alimenta_a_curadoria
     self.assertEqual(fora, [], "financiador de edital validado fora do catálogo e fora do espalhamento")
-AssertionError: Lists differ: ['https://itaberai.go.gov.br', 'https://it[2718 chars]26/'] != []
+AssertionError: Lists differ: ['https://itaberai.go.gov.br', 'https://it[2350 chars]26/'] != []
 
-First list contains 39 additional elements.
+First list contains 32 additional elements.
 First extra element 0:
 'https://itaberai.go.gov.br'
 
-Diff is 2887 characters long. Set self.maxDiff to None to see it. : financiador de edital validado fora do catálogo e fora do espalhamento
+Diff is 2498 characters long. Set self.maxDiff to None to see it. : financiador de edital validado fora do catálogo e fora do espalhamento
 
 ======================================================================
 FAIL: test_dez_blocos_e_todos_decididos (tests.test_livros_parametros.TestArquivo.test_dez_blocos_e_todos_decididos)
@@ -305,5 +294,16 @@ Traceback (most recent call last):
     self.assertEqual(saiu, set(EXPURGADOS), "saída sem identificação conferida neste teste")
 AssertionError: Items in the first set but not the second:
 '898d930ce5601d1616e3'
-'d6ff07772a8525e4a45c'
 'ced063d82912665631c2'
+'d6ff07772a8525e4a45c'
+'52715deee843fac8f817' : saída sem identificação conferida neste teste
+
+----------------------------------------------------------------------
+Ran 1366 tests in 152.796s
+
+FAILED (failures=20, errors=6, skipped=3)
+::error title=teste falhou::tests.test_abertos_sem_informacao.TesteSaida.test_resumo_bate_com_a_lista — AssertionError: 107 != 19
+::error title=teste falhou::tests.test_acervo_goias.TesteFontesDeGoias.test_fonte_do_fica_aponta_para_a_plataforma_das_chamadas — AssertionError: [] is not true
+::error title=teste falhou::tests.test_acervo_goias.TesteFontesDeGoias.test_fontes_pnab_de_goias_apontam_para_a_pagina_dos_editais — AssertionError: 0 not greater than or equal to 16
+::error title=teste falhou::tests.test_consistencia_transversal_2026_10_17.CapaConteudoIndice.test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo — Diff is 645 characters long. Set self.maxDiff to None to see it.
+::error title=teste falhou::tests.test_consistencia_transversal_2026_10_17.MesmoRetrato.test_relatorio_do_cartorio_das_certidoes_guardadas — + (2706, 1817)
