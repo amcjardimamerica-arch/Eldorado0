@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-20 11:52 UTC
+# Diagnóstico do sistema · 2026-10-20 11:54 UTC
 
 ## Cumprimento da finalidade · índice geral 50%
 - Motores: 58% (falha) — todo motor ativo lê dentro da sua cadência
@@ -72,7 +72,7 @@
 
 ## Integração
 - contagens: {'repositorio_abertas': 229, 'diagnostico_abertas': 229, 'tela_cartoes': 224, 'fichas': 237, 'sala_controle_abertas': 229}
-- idade (h): {'repositorio': 0.0, 'fluxo': 56.0, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 5.8, 'rede_neural': 56.0, 'saude': 46.5}
+- idade (h): {'repositorio': 0.0, 'fluxo': 56.0, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 5.9, 'rede_neural': 56.0, 'saude': 46.6}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (49)
@@ -104,12 +104,12 @@
 - [alta] tela mostra 224 oportunidades e o repositório conta 229 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
 - [media] fluxo sem atualização há 56.0 h (limite 3 h) → refazer a tela
-- [media] maestro sem atualização há 5.8 h (limite 3 h) → ver o fluxo que gera este dado
+- [media] maestro sem atualização há 5.9 h (limite 3 h) → ver o fluxo que gera este dado
 - [media] rede_neural sem atualização há 56.0 h (limite 26 h) → ver o fluxo que gera este dado
-- [media] saude sem atualização há 46.5 h (limite 26 h) → refazer a saúde
+- [media] saude sem atualização há 46.6 h (limite 26 h) → refazer a saúde
 - [media] [decidir] motores escolhidos para ler na passagem: 131 de 131 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
-- [media] fluxo 'acesso-mensal' sem rodar há 1178.6 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 407.9 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo 'acesso-mensal' sem rodar há 1178.7 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 408.0 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] fluxo '08 · Pacote do conselho (validação do Claude a cada 3 dias)' sem rodar há 96.1 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 457.3 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
