@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-20 14:11 UTC
+# Diagnóstico do sistema · 2026-10-20 14:22 UTC
 
 ## Cumprimento da finalidade · índice geral 53%
 - Motores: 67% (falha) — todo motor ativo lê dentro da sua cadência
@@ -15,7 +15,7 @@
 - Execução sem falha silenciosa: 0% (falha) — nenhuma etapa falha em silêncio
 
 ## Execução · fluxos: {'falha': 3, 'atrasado': 4, 'ok': 30, 'atencao': 5, 'manual': 2}
-- 00 · Verificar prontidão: falha · última 2026-10-19T10:27 · sucesso 0% · cadência 24.0 h
+- 00 · Verificar prontidão: falha · última 2026-10-20T14:17 · sucesso 0% · cadência 24.0 h
 - acesso-mensal: atrasado · última 2026-09-01T09:14 · sucesso 100% · cadência 24.0 h
 - 35 · Alimentação diária externa (editais abertos): atencao · última 2026-10-18T13:31 · sucesso 40% · cadência 24.0 h
 - 06 · Alimentação manual (arquivos e links do titular): atencao · última 2026-10-17T18:15 · sucesso 40% · cadência None h
@@ -23,12 +23,12 @@
 - 09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes: atrasado · última 2026-10-03T11:56 · sucesso 100% · cadência 24.0 h
 - 10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar: atencao · última 2026-10-15T16:09 · sucesso 25% · cadência None h
 - 08 · Pacote do conselho (validação do Claude a cada 3 dias): atrasado · última 2026-10-16T11:47 · sucesso 100% · cadência 24.0 h
-- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: falha · última 2026-10-20T14:00 · sucesso 0% · cadência 1.0 h
+- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: falha · última 2026-10-20T14:16 · sucesso 0% · cadência 1.0 h
 - 34 · Motores de empresas (semanal, com recuperação): atencao · última 2026-10-20T11:51 · sucesso 75% · cadência 24.0 h
 - 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): falha · última 2026-10-20T11:17 · sucesso 0% · cadência 6.0 h
 - 02 · Alexandria — revisão mensal de leis e procedimentos: atrasado · última 2026-10-01T10:36 · sucesso 50% · cadência 24.0 h
 - falha silenciosa em motores-da-vez.yml: NameError: name 'fases' is not defined | NameError: name 'ferramentas' is not defined | Traceback (most recent call last):
-- falha silenciosa em motor-agregadores.yml: mapa: falhou
+- falha silenciosa em motor-agregadores.yml: "rede: robots.txt inacessível: URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)" | "rede: robots.txt inacessível: URLError: timed out", | mapa: falhou
 - falha silenciosa em monitoramento-diario.yml: "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-in
 
 ## Sala de controle · 36 indicadores · atualizada há 0.0 h
@@ -47,7 +47,7 @@
 ## Sistemas
 - motores: 29 funcionando · 14 em falha · 2 inativos · 2 com leitura parcial
   - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 2 dia(s) (58 h); última leitura 18/10 00:25
-  - em falha: CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024) — falha — não lê há 2 dia(s) (57 h); última leitura 18/10 01:15
+  - em falha: CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024) — falha — não lê há 2 dia(s) (58 h); última leitura 18/10 01:15
   - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 2 dia(s) (57 h); última leitura 18/10 01:27
   - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 2 dia(s) (57 h); última leitura 18/10 01:29
   - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 2 dia(s) (57 h); última leitura 18/10 01:29
@@ -62,25 +62,25 @@
   - em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 3 dia(s) (74 h); última leitura 17/10 08:29
 - maestro: cobertura 0.0% · esgotados 0
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
-- Cartório: 0.6646 certificado · fluxos do GitHub com falha: ['03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)']
+- Cartório: 0.6646 certificado · fluxos do GitHub com falha: ['00 · Verificar prontidão', '03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)']
 - saúde: 6 alerta(s) · índice da sala de controle: 53
 
 ## Integração
 - contagens: {'repositorio_abertas': 229, 'diagnostico_abertas': 229, 'tela_cartoes': 224, 'fichas': 237, 'sala_controle_abertas': 229}
-- idade (h): {'repositorio': 0.0, 'fluxo': 58.3, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 8.2, 'rede_neural': 58.3, 'saude': 0.0}
+- idade (h): {'repositorio': 0.0, 'fluxo': 58.5, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 8.3, 'rede_neural': 58.5, 'saude': 0.2}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (43)
-- [alta] o comando único não fecha um ciclo há 36.6 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+- [alta] o comando único não fecha um ciclo há 36.8 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 3 etapa(s) falharam em silêncio na última execução de motores-da-vez.yml: NameError: name 'fases' is not defined | NameError: name 'ferramentas' is not defined | Traceback (most recent call last): → investigar a etapa (sem correção automática)
-- [alta] 1 etapa(s) falharam em silêncio na última execução de motor-agregadores.yml: mapa: falhou → investigar a etapa (sem correção automática)
+- [alta] 3 etapa(s) falharam em silêncio na última execução de motor-agregadores.yml: "rede: robots.txt inacessível: URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)" | "rede: robots.txt inacessível: URLError: timed out", | mapa: falhou → investigar a etapa (sem correção automática)
 - [alta] 9 etapa(s) falharam em silêncio na última execução de monitoramento-diario.yml: "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu → investigar a etapa (sem correção automática)
 - [alta] fluxo '00 · Verificar prontidão' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
 - [alta] fluxo '12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
 - [alta] fluxo '03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
 - [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 2 dia(s) (58 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
-- [alta] motor em falha: CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024) — falha — não lê há 2 dia(s) (57 h); última leitura 18/10 01:15 → investigar o motor (sem correção automática)
+- [alta] motor em falha: CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024) — falha — não lê há 2 dia(s) (58 h); última leitura 18/10 01:15 → investigar o motor (sem correção automática)
 - [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 2 dia(s) (57 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
 - [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 2 dia(s) (57 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
 - [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 2 dia(s) (57 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
@@ -95,14 +95,14 @@
 - [alta] motor em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 3 dia(s) (74 h); última leitura 17/10 08:29 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 229 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 58.3 h (limite 3 h) → refazer a tela
-- [media] maestro sem atualização há 8.2 h (limite 3 h) → ver o fluxo que gera este dado
-- [media] rede_neural sem atualização há 58.3 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 58.5 h (limite 3 h) → refazer a tela
+- [media] maestro sem atualização há 8.3 h (limite 3 h) → ver o fluxo que gera este dado
+- [media] rede_neural sem atualização há 58.5 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 131 de 131 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
-- [media] fluxo 'acesso-mensal' sem rodar há 1181.0 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 410.3 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '08 · Pacote do conselho (validação do Claude a cada 3 dias)' sem rodar há 98.4 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 459.6 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo 'acesso-mensal' sem rodar há 1181.1 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 410.4 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '08 · Pacote do conselho (validação do Claude a cada 3 dias)' sem rodar há 98.6 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 459.8 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 90 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 240 item(ns) esperando a análise do Claude (próxima: 2026-10-20) → ver o fluxo/arquivo indicado
@@ -133,4 +133,4 @@
 - certificar · itens certificados pelo Cartório: **correto** (0 de 2706) — regra: todo item certificado tem trecho literal e documento
 - validar · validação por exceção: **correto** (0 de 0) — regra: só valida sozinho com acerto do Cartório ≥ 85% no gabarito e link oficial aprovado na curadoria
 - farol · oportunidades prontas para o Farol: **correto** (0 de 17) — regra: pronta só com prazo vigente e link oficial aprovado na curadoria
-- biblioteca · livros da Biblioteca: **correto** (0 de 2572) — regra: ato legislativo não gera livro
+- biblioteca · livros da Biblioteca: **correto** (0 de 2590) — regra: ato legislativo não gera livro
