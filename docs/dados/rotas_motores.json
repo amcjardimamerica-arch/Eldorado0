@@ -1,5 +1,5 @@
 {
- "em": "2026-10-20T00:24:35+00:00",
+ "em": "2026-10-20T01:52:58+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,7 +7,7 @@
   "alterar_rota": 61,
   "rota_nova": 52,
   "via_ponte": 4,
-  "exemplos_da_rede": 29366
+  "exemplos_da_rede": 29495
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
@@ -20,16 +20,16 @@
     2.5203
    ],
    [
-    "origem:rota original",
-    2.4339
-   ],
-   [
     "tok:mpf",
     2.3964
    ],
    [
+    "origem:rota original",
+    2.3891
+   ],
+   [
     "origem:biblioteca",
-    2.3098
+    2.306
    ],
    [
     "tok:deputados",
@@ -41,7 +41,7 @@
    ],
    [
     "tok:feed",
-    1.8815
+    1.8807
    ],
    [
     "tok:leipaulogustavo",
@@ -49,7 +49,7 @@
    ],
    [
     "tok:imprensa",
-    1.7631
+    1.7328
    ],
    [
     "tok:abre",
@@ -71,7 +71,7 @@
    ],
    [
     "via:ponte",
-    -2.5402
+    -2.5423
    ],
    [
     "tok:pgt",
@@ -87,11 +87,11 @@
    ],
    [
     "origem:câmara",
-    -3.5131
+    -3.5133
    ],
    [
     "origem:padrão",
-    -3.6849
+    -3.6907
    ]
   ]
  },
@@ -433,8 +433,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-19T11:57:53+00:00",
-    "testes": 12,
+    "em": "2026-10-20T01:50:37+00:00",
+    "testes": 18,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -580,7 +580,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-19T13:27:22+00:00",
+    "em": "2026-10-20T01:50:46+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -625,7 +625,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-19T13:27:45+00:00",
+    "em": "2026-10-20T01:51:09+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -667,7 +667,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-19T13:27:37+00:00",
+    "em": "2026-10-20T01:51:02+00:00",
     "testes": 22,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -878,8 +878,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-19T11:57:33+00:00",
-    "testes": 12,
+    "em": "2026-10-20T01:50:10+00:00",
+    "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1299,7 +1299,7 @@
     "aprendido_em": "2026-10-18T23:26:08+00:00"
    },
    "afinado": {
-    "em": "2026-10-19T13:29:30+00:00",
+    "em": "2026-10-20T01:52:58+00:00",
     "testes": 17,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
