@@ -1,11 +1,11 @@
 {
- "em": "2026-10-20T11:54:02+00:00",
+ "em": "2026-10-20T12:15:41+00:00",
  "finalidade": {
   "sistemas": [
    {
     "sistema": "Motores",
     "finalidade": "todo motor ativo lê dentro da sua cadência",
-    "atingido_pct": 58,
+    "atingido_pct": 67,
     "estado": "falha"
    },
    {
@@ -59,7 +59,7 @@
    {
     "sistema": "Integração",
     "finalidade": "mesmas contagens e dados em dia em todos os sistemas",
-    "atingido_pct": 10,
+    "atingido_pct": 30,
     "estado": "falha"
    },
    {
@@ -75,35 +75,15 @@
     "estado": "falha"
    }
   ],
-  "indice_geral_pct": 50
+  "indice_geral_pct": 53
  },
  "sistemas": {
   "motores": {
    "total": 45,
-   "funcionando": 25,
-   "em_falha": 18,
+   "funcionando": 29,
+   "em_falha": 14,
    "inativos": 2,
    "em_falha_lista": [
-    {
-     "id": "do-goiania",
-     "nome": "Diário Oficial do Município de Goiânia",
-     "resultado": "falha — não lê há 2 dia(s) (56 h); última leitura 18/10 00:38"
-    },
-    {
-     "id": "dou",
-     "nome": "Diário Oficial da União",
-     "resultado": "falha — não lê há 2 dia(s) (56 h); última leitura 18/10 00:27"
-    },
-    {
-     "id": "camara-goiania-pl",
-     "nome": "Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos",
-     "resultado": "falha — não lê há 2 dia(s) (54 h); última leitura 18/10 02:41"
-    },
-    {
-     "id": "congresso-nacional",
-     "nome": "Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos)",
-     "resultado": "falha — não lê há 2 dia(s) (55 h); última leitura 18/10 01:38"
-    },
     {
      "id": "pncp-api",
      "nome": "PNCP — API de contratações (chamamentos e credenciamentos)",
@@ -112,7 +92,7 @@
     {
      "id": "judiciario-cnj",
      "nome": "CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024)",
-     "resultado": "falha — não lê há 2 dia(s) (55 h); última leitura 18/10 01:15"
+     "resultado": "falha — não lê há 2 dia(s) (56 h); última leitura 18/10 01:15"
     },
     {
      "id": "mpgo-destinacao",
@@ -132,12 +112,12 @@
     {
      "id": "plataforma-wordpress",
      "nome": "Adaptador WordPress — sites oficiais pela API pública",
-     "resultado": "falha — não lê há 2 dia(s) (52 h); última leitura 18/10 03:55"
+     "resultado": "falha — não lê há 2 dia(s) (53 h); última leitura 18/10 03:55"
     },
     {
      "id": "plataforma-mapas-culturais",
      "nome": "Adaptador Mapas Culturais — oportunidades com inscrição aberta",
-     "resultado": "falha — não lê há 2 dia(s) (52 h); última leitura 18/10 03:54"
+     "resultado": "falha — não lê há 2 dia(s) (53 h); última leitura 18/10 03:54"
     },
     {
      "id": "gife",
@@ -147,7 +127,7 @@
     {
      "id": "salic",
      "nome": "Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)",
-     "resultado": "falha — não lê há 2 dia(s) (52 h); última leitura 18/10 04:07"
+     "resultado": "falha — não lê há 2 dia(s) (53 h); última leitura 18/10 04:07"
     },
     {
      "id": "prefeituras-50-go",
@@ -167,7 +147,7 @@
     {
      "id": "estaduais-go-gov",
      "nome": "Oportunidade Estaduais Governamentais de Goiás",
-     "resultado": "falha — não lê há 2 dia(s) (54 h); última leitura 18/10 01:56"
+     "resultado": "falha — não lê há 2 dia(s) (55 h); última leitura 18/10 01:56"
     },
     {
      "id": "piloto-interceptador",
@@ -175,17 +155,28 @@
      "resultado": "falha — não lê há 3 dia(s) (72 h); última leitura 17/10 08:29"
     }
    ],
-   "leitura_parcial": [],
-   "status_em": "2026-10-20T08:53-03:00",
+   "leitura_parcial": [
+    {
+     "id": "do-goiania",
+     "nome": "Diário Oficial do Município de Goiânia",
+     "resultado": "funcionando — última leitura 20/10 08:52 · sem oportunidade nova (atenção: 8 falha(s) na leitura: URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:)"
+    },
+    {
+     "id": "camara-goiania-pl",
+     "nome": "Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos",
+     "resultado": "funcionando — última leitura 20/10 08:29 · sem oportunidade nova (atenção: 1 falha(s) na leitura: direto: HTTP Error 504: Gateway Timeout · pela ponte Brasil: HTTP 504 pela ponte)"
+    }
+   ],
+   "status_em": "2026-10-20T09:15-03:00",
    "auditoria": {
-    "em": "2026-10-18T13:21:04+00:00",
+    "em": "2026-10-20T12:12:34+00:00",
     "total": 33,
     "por_estado": {
-     "BLOQUEADO": 5,
+     "BLOQUEADO": 4,
      "PARADO": 0,
      "NUNCA RODOU": 0,
      "LENDO SEM ACHAR": 4,
-     "FUNCIONANDO": 24
+     "FUNCIONANDO": 25
     }
    }
   },
@@ -264,13 +255,13 @@
     }
    },
    "espiao": {
-    "em": "2026-10-20T11:46:10+00:00",
-    "voos": 1002,
+    "em": "2026-10-20T12:05:54+00:00",
+    "voos": 1003,
     "empresas_novas": 214
    }
   },
   "saude": {
-   "em": "2026-10-18T13:20:33+00:00",
+   "em": "2026-10-20T12:12:05+00:00",
    "alertas": [
     {
      "area": "coerência",
@@ -282,11 +273,11 @@
     },
     {
      "area": "claude",
-     "texto": "239 item(ns) esperando a análise do Claude (próxima: 2026-10-18)"
+     "texto": "239 item(ns) esperando a análise do Claude (próxima: 2026-10-20)"
     },
     {
      "area": "livros_do_sistema",
-     "texto": "4 livro(es) duplicado(s) no catálogo"
+     "texto": "9 livro(es) duplicado(s) no catálogo"
     },
     {
      "area": "workflows",
@@ -298,16 +289,12 @@
     },
     {
      "area": "workflows",
-     "texto": "22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): últimas 4 execuções sem sucesso"
-    },
-    {
-     "area": "workflows",
      "texto": "03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): últimas 5 execuções sem sucesso"
     }
    ]
   },
   "auditoria_cega": {
-   "em": "2026-10-18T13:21:03+00:00",
+   "em": "2026-10-20T12:12:31+00:00",
    "taxa_de_perda": null,
    "sem_nada_na_base": 25
   },
@@ -318,11 +305,11 @@
    ]
   },
   "sala_controle": {
-   "em": "2026-10-20T11:53:32+00:00",
-   "indice_saude": 49,
+   "em": "2026-10-20T12:15:17+00:00",
+   "indice_saude": 53,
    "contagem": {
-    "verde": 11,
-    "amarelo": 7,
+    "verde": 14,
+    "amarelo": 4,
     "vermelho": 18,
     "cinza": 0
    }
@@ -374,13 +361,13 @@
   },
   "idade_horas": {
    "repositorio": 0.0,
-   "fluxo": 56.0,
+   "fluxo": 56.4,
    "fichas": 0.0,
    "sala_controle": 0.0,
    "status_motores": 0.0,
-   "maestro": 5.9,
-   "rede_neural": 56.0,
-   "saude": 46.6
+   "maestro": 6.2,
+   "rede_neural": 56.4,
+   "saude": 0.1
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -392,7 +379,7 @@
     "nome": "00 · Verificar prontidão",
     "cadencia_h": 24.0,
     "ultima": "2026-10-19T10:27:32Z",
-    "idade_h": 25.4,
+    "idade_h": 25.8,
     "ultima_conclusao": "failure",
     "sucesso_pct": 0,
     "execucoes_vistas": 10,
@@ -403,7 +390,7 @@
     "nome": "acesso-mensal",
     "cadencia_h": 24.0,
     "ultima": "2026-09-01T09:14:44Z",
-    "idade_h": 1178.7,
+    "idade_h": 1179.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -414,7 +401,7 @@
     "nome": "08 · Agenda dos motores — cada motor na hora em que sua fonte publica",
     "cadencia_h": null,
     "ultima": "2026-10-15T07:35:55Z",
-    "idade_h": 124.3,
+    "idade_h": 124.7,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -425,7 +412,7 @@
     "nome": "35 · Alimentação diária externa (editais abertos)",
     "cadencia_h": 24.0,
     "ultima": "2026-10-18T13:31:57Z",
-    "idade_h": 46.4,
+    "idade_h": 46.7,
     "ultima_conclusao": "success",
     "sucesso_pct": 40,
     "execucoes_vistas": 10,
@@ -436,7 +423,7 @@
     "nome": "06 · Alimentação manual (arquivos e links do titular)",
     "cadencia_h": null,
     "ultima": "2026-10-17T18:15:54Z",
-    "idade_h": 65.6,
+    "idade_h": 66.0,
     "ultima_conclusao": "failure",
     "sucesso_pct": 40,
     "execucoes_vistas": 10,
@@ -447,7 +434,7 @@
     "nome": "36 · Análise do sistema (diagnóstico único e correção)",
     "cadencia_h": null,
     "ultima": "2026-10-15T17:52:43Z",
-    "idade_h": 114.0,
+    "idade_h": 114.4,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -458,7 +445,7 @@
     "nome": "14 · Arquivo frio — dados grandes e esporádicos para a Release do GitHub e o Google Drive",
     "cadencia_h": 168.0,
     "ultima": "2026-10-18T12:05:31Z",
-    "idade_h": 47.8,
+    "idade_h": 48.2,
     "ultima_conclusao": "success",
     "sucesso_pct": 86,
     "execucoes_vistas": 7,
@@ -469,7 +456,7 @@
     "nome": "28 · Atualizar a Biblioteca (completa, numa só execução)",
     "cadencia_h": null,
     "ultima": "2026-10-11T18:17:54Z",
-    "idade_h": 209.6,
+    "idade_h": 210.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -480,7 +467,7 @@
     "nome": "39 · Avaliação do Cartório com gabarito",
     "cadencia_h": 168.0,
     "ultima": "2026-10-15T19:50:20Z",
-    "idade_h": 112.1,
+    "idade_h": 112.4,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 4,
@@ -491,7 +478,7 @@
     "nome": "05 · Busca ativa (a cada 3 dias)",
     "cadencia_h": null,
     "ultima": "2026-10-15T17:32:41Z",
-    "idade_h": 114.4,
+    "idade_h": 114.7,
     "ultima_conclusao": "success",
     "sucesso_pct": 10,
     "execucoes_vistas": 10,
@@ -502,7 +489,7 @@
     "nome": "30 · Cartório de fontes oficiais (certifica o que falta nas estrelas e nos livros)",
     "cadencia_h": null,
     "ultima": "2026-10-20T10:53:39Z",
-    "idade_h": 1.0,
+    "idade_h": 1.4,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -513,7 +500,7 @@
     "nome": "25 · Certificado intermediário do SUAP (Câmara de Goiânia)",
     "cadencia_h": null,
     "ultima": "2026-10-03T04:04:16Z",
-    "idade_h": 415.8,
+    "idade_h": 416.2,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 4,
@@ -524,7 +511,7 @@
     "nome": "09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes",
     "cadencia_h": 24.0,
     "ultima": "2026-10-03T11:56:23Z",
-    "idade_h": 408.0,
+    "idade_h": 408.3,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -535,7 +522,7 @@
     "nome": "26 · Coleta das páginas dos livros (verificação por blocos)",
     "cadencia_h": null,
     "ultima": "2026-10-03T15:22:47Z",
-    "idade_h": 404.5,
+    "idade_h": 404.9,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -546,7 +533,7 @@
     "nome": "10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar",
     "cadencia_h": null,
     "ultima": "2026-10-15T16:09:52Z",
-    "idade_h": 115.7,
+    "idade_h": 116.1,
     "ultima_conclusao": "success",
     "sucesso_pct": 25,
     "execucoes_vistas": 8,
@@ -557,7 +544,7 @@
     "nome": "08 · Pacote do conselho (validação do Claude a cada 3 dias)",
     "cadencia_h": 24.0,
     "ultima": "2026-10-16T11:47:51Z",
-    "idade_h": 96.1,
+    "idade_h": 96.5,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 9,
@@ -579,7 +566,7 @@
     "nome": "18 · Diagnóstico da busca do Espião",
     "cadencia_h": null,
     "ultima": "2026-10-01T11:15:12Z",
-    "idade_h": 456.6,
+    "idade_h": 457.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -590,7 +577,7 @@
     "nome": "41 · Diagnóstico da ponte Brasil",
     "cadencia_h": null,
     "ultima": "2026-10-15T09:59:29Z",
-    "idade_h": 121.9,
+    "idade_h": 122.3,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 3,
@@ -601,7 +588,7 @@
     "nome": "27 · Executor documental dos motores (robôs; o Claude no Chrome é o último recurso)",
     "cadencia_h": 24.0,
     "ultima": "2026-10-18T13:14:31Z",
-    "idade_h": 46.7,
+    "idade_h": 47.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -611,7 +598,7 @@
     "arquivo": "interceptador.yml",
     "nome": "12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos",
     "cadencia_h": 1.0,
-    "ultima": "2026-10-20T11:52:28Z",
+    "ultima": "2026-10-20T12:14:16Z",
     "idade_h": 0.0,
     "ultima_conclusao": null,
     "sucesso_pct": 0,
@@ -623,7 +610,7 @@
     "nome": "11 · Piloto - Interceptador (botão) — comprova os dados de um edital na fonte oficial",
     "cadencia_h": null,
     "ultima": "2026-09-26T17:40:22Z",
-    "idade_h": 570.2,
+    "idade_h": 570.6,
     "ultima_conclusao": "success",
     "sucesso_pct": 89,
     "execucoes_vistas": 9,
@@ -634,7 +621,7 @@
     "nome": "19 · Medição dos limites de busca",
     "cadencia_h": null,
     "ultima": "2026-10-01T12:29:03Z",
-    "idade_h": 455.4,
+    "idade_h": 455.8,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -645,9 +632,9 @@
     "nome": "01 · Eldorado — motores por hora (00h–06h BRT)",
     "cadencia_h": 24.0,
     "ultima": "2026-10-20T11:01:10Z",
-    "idade_h": 0.9,
-    "ultima_conclusao": null,
-    "sucesso_pct": 67,
+    "idade_h": 1.2,
+    "ultima_conclusao": "success",
+    "sucesso_pct": 70,
     "execucoes_vistas": 10,
     "estado": "atencao"
    },
@@ -656,7 +643,7 @@
     "nome": "16 · Motores indexadores (feeds, APIs, sitemaps, listagens, dados abertos, ponte Brasil, coleta assistida)",
     "cadencia_h": 3.0,
     "ultima": "2026-10-20T00:19:16Z",
-    "idade_h": 11.6,
+    "idade_h": 11.9,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -667,7 +654,7 @@
     "nome": "31 · Motor ligado/desligado no fogo do painel",
     "cadencia_h": null,
     "ultima": "2026-10-16T08:56:27Z",
-    "idade_h": 99.0,
+    "idade_h": 99.3,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 5,
@@ -678,7 +665,7 @@
     "nome": "22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro)",
     "cadencia_h": 1.0,
     "ultima": "2026-10-20T10:25:48Z",
-    "idade_h": 1.5,
+    "idade_h": 1.8,
     "ultima_conclusao": "success",
     "sucesso_pct": 90,
     "execucoes_vistas": 10,
@@ -689,7 +676,7 @@
     "nome": "34 · Motores de empresas (semanal, com recuperação)",
     "cadencia_h": 24.0,
     "ultima": "2026-10-20T11:51:34Z",
-    "idade_h": 0.0,
+    "idade_h": 0.4,
     "ultima_conclusao": "success",
     "sucesso_pct": 75,
     "execucoes_vistas": 8,
@@ -699,8 +686,8 @@
     "arquivo": "piloto.yml",
     "nome": "07 · Piloto — IA local da Biblioteca (benchmark e ciclos)",
     "cadencia_h": 2.0,
-    "ultima": "2026-10-20T11:51:03Z",
-    "idade_h": 0.0,
+    "ultima": "2026-10-20T12:10:54Z",
+    "idade_h": 0.1,
     "ultima_conclusao": null,
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -710,10 +697,10 @@
     "arquivo": "publicar-painel.yml",
     "nome": "04 · Publicar painel Eldorado",
     "cadencia_h": 6.0,
-    "ultima": "2026-10-20T11:52:24Z",
+    "ultima": "2026-10-20T12:14:12Z",
     "idade_h": 0.0,
     "ultima_conclusao": "success",
-    "sucesso_pct": 100,
+    "sucesso_pct": 90,
     "execucoes_vistas": 10,
     "estado": "ok"
    },
@@ -722,7 +709,7 @@
     "nome": "03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)",
     "cadencia_h": 6.0,
     "ultima": "2026-10-20T11:17:32Z",
-    "idade_h": 0.6,
+    "idade_h": 1.0,
     "ultima_conclusao": "failure",
     "sucesso_pct": 0,
     "execucoes_vistas": 10,
@@ -733,7 +720,7 @@
     "nome": "02 · Alexandria — revisão mensal de leis e procedimentos",
     "cadencia_h": 24.0,
     "ultima": "2026-10-01T10:36:25Z",
-    "idade_h": 457.3,
+    "idade_h": 457.7,
     "ultima_conclusao": "success",
     "sucesso_pct": 50,
     "execucoes_vistas": 2,
@@ -743,7 +730,7 @@
     "arquivo": "sala-tempo-real.yml",
     "nome": "37 · Sala de controle em tempo real",
     "cadencia_h": 0.16666666666666666,
-    "ultima": "2026-10-20T11:52:32Z",
+    "ultima": "2026-10-20T12:14:45Z",
     "idade_h": 0.0,
     "ultima_conclusao": null,
     "sucesso_pct": 89,
@@ -755,7 +742,7 @@
     "nome": "00 · Sentinela diária de editais",
     "cadencia_h": 24.0,
     "ultima": "2026-10-18T12:44:39Z",
-    "idade_h": 47.2,
+    "idade_h": 47.5,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -766,7 +753,7 @@
     "nome": "15 · Sondagem dos agregadores de editais",
     "cadencia_h": null,
     "ultima": "2026-09-28T21:28:22Z",
-    "idade_h": 518.4,
+    "idade_h": 518.8,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -777,7 +764,7 @@
     "nome": "17 · Sondagem das fontes com falha",
     "cadencia_h": null,
     "ultima": "2026-09-29T16:13:01Z",
-    "idade_h": 499.7,
+    "idade_h": 500.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -788,7 +775,7 @@
     "nome": "13 · Sondagem das fontes de destinação tributária (Receita Federal e histórico da Lei do Esporte)",
     "cadencia_h": null,
     "ultima": "2026-09-27T09:15:47Z",
-    "idade_h": 554.6,
+    "idade_h": 555.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -799,7 +786,7 @@
     "nome": "13 · Sondagem dos Ministérios Públicos (motor 12 — MP-GO/Destina, MPT-GO, MPU)",
     "cadencia_h": null,
     "ultima": "2026-10-02T21:15:51Z",
-    "idade_h": 422.6,
+    "idade_h": 423.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 3,
@@ -810,7 +797,7 @@
     "nome": "21 · Status dos motores (a cada 6 horas)",
     "cadencia_h": 4.0,
     "ultima": "2026-10-20T06:01:16Z",
-    "idade_h": 5.9,
+    "idade_h": 6.2,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 10,
@@ -821,7 +808,7 @@
     "nome": "23 · Teste de acionamento dos motores (um por vez, na ordem do painel)",
     "cadencia_h": null,
     "ultima": "2026-10-02T23:03:18Z",
-    "idade_h": 420.8,
+    "idade_h": 421.2,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 1,
@@ -832,7 +819,7 @@
     "nome": "24 · Teste da ponte Hostgator (páginas e motores que bloqueiam a nuvem)",
     "cadencia_h": null,
     "ultima": "2026-10-03T04:09:08Z",
-    "idade_h": 415.7,
+    "idade_h": 416.1,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -843,7 +830,7 @@
     "nome": "38 · Treino dos motores — fonte oficial e PDF do edital",
     "cadencia_h": 168.0,
     "ultima": "2026-10-15T02:18:07Z",
-    "idade_h": 129.6,
+    "idade_h": 130.0,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 8,
@@ -854,7 +841,7 @@
     "nome": "40 · Varredura de referência dos motores (Goiânia, Goiás, Câmara, ALEGO)",
     "cadencia_h": null,
     "ultima": "2026-10-15T02:27:40Z",
-    "idade_h": 129.4,
+    "idade_h": 129.8,
     "ultima_conclusao": "success",
     "sucesso_pct": 100,
     "execucoes_vistas": 2,
@@ -886,10 +873,13 @@
     "\"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed",
     "\"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu",
     "\"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-in",
+    "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/dados/editais/extraidos/op-op-0f80746cf4b3.json'",
+    "KeyError: 'campanhas'",
     "KeyError: 'tentativas'",
     "Traceback (most recent call last):",
     "TypeError: string indices must be integers, not 'str'",
-    "mapa (curadoria + validação + fluxo): falhou"
+    "mapa (curadoria + validação + fluxo): falhou",
+    "src.investigacao: encerrado no orçamento de 600s ou falhou — registrado"
    ]
   },
   "registros_lidos": 3,
@@ -1137,7 +1127,7 @@
    "etapa": "biblioteca",
    "decisao": "livros da Biblioteca",
    "regra": "ato legislativo não gera livro",
-   "conferidos": 2541,
+   "conferidos": 2566,
    "incorretos": 0,
    "veredito": "correto",
    "exemplos": []
@@ -1147,7 +1137,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 34.3 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 34.6 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1177,18 +1167,18 @@
   {
    "codigo": "falha_silenciosa",
    "gravidade": "alta",
-   "texto": "8 etapa(s) falharam em silêncio na última execução de monitoramento-diario.yml: \"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | \"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | \"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu",
+   "texto": "11 etapa(s) falharam em silêncio na última execução de monitoramento-diario.yml: \"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | \"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | \"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu",
    "correcao": "investigar a etapa (sem correção automática)",
-   "quantidade": 8,
+   "quantidade": 11,
    "exemplos": [
     "\"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba",
     "\"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed",
     "\"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu",
     "\"erro\": \"FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-in",
+    "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/dados/editais/extraidos/op-op-0f80746cf4b3.json'",
+    "KeyError: 'campanhas'",
     "KeyError: 'tentativas'",
-    "Traceback (most recent call last):",
-    "TypeError: string indices must be integers, not 'str'",
-    "mapa (curadoria + validação + fluxo): falhou"
+    "Traceback (most recent call last):"
    ]
   },
   {
@@ -1227,38 +1217,6 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 2 dia(s) (56 h); última leitura 18/10 00:38",
-   "correcao": "investigar o motor (sem correção automática)",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "motor_em_falha",
-   "gravidade": "alta",
-   "texto": "motor em falha: Diário Oficial da União — falha — não lê há 2 dia(s) (56 h); última leitura 18/10 00:27",
-   "correcao": "investigar o motor (sem correção automática)",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "motor_em_falha",
-   "gravidade": "alta",
-   "texto": "motor em falha: Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos — falha — não lê há 2 dia(s) (54 h); última leitura 18/10 02:41",
-   "correcao": "investigar o motor (sem correção automática)",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "motor_em_falha",
-   "gravidade": "alta",
-   "texto": "motor em falha: Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos) — falha — não lê há 2 dia(s) (55 h); última leitura 18/10 01:38",
-   "correcao": "investigar o motor (sem correção automática)",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "motor_em_falha",
-   "gravidade": "alta",
    "texto": "motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 2 dia(s) (56 h); última leitura 18/10 00:25",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
@@ -1267,7 +1225,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024) — falha — não lê há 2 dia(s) (55 h); última leitura 18/10 01:15",
+   "texto": "motor em falha: CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024) — falha — não lê há 2 dia(s) (56 h); última leitura 18/10 01:15",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1299,7 +1257,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 2 dia(s) (52 h); última leitura 18/10 03:55",
+   "texto": "motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 2 dia(s) (53 h); última leitura 18/10 03:55",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1307,7 +1265,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 2 dia(s) (52 h); última leitura 18/10 03:54",
+   "texto": "motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 2 dia(s) (53 h); última leitura 18/10 03:54",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1323,7 +1281,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 2 dia(s) (52 h); última leitura 18/10 04:07",
+   "texto": "motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 2 dia(s) (53 h); última leitura 18/10 04:07",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1355,7 +1313,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 2 dia(s) (54 h); última leitura 18/10 01:56",
+   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 2 dia(s) (55 h); última leitura 18/10 01:56",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1391,7 +1349,7 @@
   {
    "codigo": "atrasado_fluxo",
    "gravidade": "media",
-   "texto": "fluxo sem atualização há 56.0 h (limite 3 h)",
+   "texto": "fluxo sem atualização há 56.4 h (limite 3 h)",
    "correcao": "refazer a tela",
    "quantidade": null,
    "exemplos": []
@@ -1399,7 +1357,7 @@
   {
    "codigo": "atrasado_maestro",
    "gravidade": "media",
-   "texto": "maestro sem atualização há 5.9 h (limite 3 h)",
+   "texto": "maestro sem atualização há 6.2 h (limite 3 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1407,16 +1365,8 @@
   {
    "codigo": "atrasado_rede_neural",
    "gravidade": "media",
-   "texto": "rede_neural sem atualização há 56.0 h (limite 26 h)",
+   "texto": "rede_neural sem atualização há 56.4 h (limite 26 h)",
    "correcao": "ver o fluxo que gera este dado",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "atrasado_saude",
-   "gravidade": "media",
-   "texto": "saude sem atualização há 46.6 h (limite 26 h)",
-   "correcao": "refazer a saúde",
    "quantidade": null,
    "exemplos": []
   },
@@ -1440,7 +1390,7 @@
   {
    "codigo": "fluxo_atrasado",
    "gravidade": "media",
-   "texto": "fluxo 'acesso-mensal' sem rodar há 1178.7 h (cadência 24.0 h)",
+   "texto": "fluxo 'acesso-mensal' sem rodar há 1179.0 h (cadência 24.0 h)",
    "correcao": "investigar o agendamento (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1448,7 +1398,7 @@
   {
    "codigo": "fluxo_atrasado",
    "gravidade": "media",
-   "texto": "fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 408.0 h (cadência 24.0 h)",
+   "texto": "fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 408.3 h (cadência 24.0 h)",
    "correcao": "investigar o agendamento (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1456,7 +1406,7 @@
   {
    "codigo": "fluxo_atrasado",
    "gravidade": "media",
-   "texto": "fluxo '08 · Pacote do conselho (validação do Claude a cada 3 dias)' sem rodar há 96.1 h (cadência 24.0 h)",
+   "texto": "fluxo '08 · Pacote do conselho (validação do Claude a cada 3 dias)' sem rodar há 96.5 h (cadência 24.0 h)",
    "correcao": "investigar o agendamento (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1464,7 +1414,7 @@
   {
    "codigo": "fluxo_atrasado",
    "gravidade": "media",
-   "texto": "fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 457.3 h (cadência 24.0 h)",
+   "texto": "fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 457.7 h (cadência 24.0 h)",
    "correcao": "investigar o agendamento (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1476,14 +1426,14 @@
    "correcao": "refazer a tela",
    "quantidade": 53,
    "exemplos": [
-    "Chamamento público publicado no Diário Oficial em 23/09/2026 — Santa Catarina / Florianópolis [op-702c125e0b3a]",
-    "Chamamento público publicado no Diário Oficial em 27/08/2026 — Brasil [op-805835db8e7e]",
-    "Chamamento público publicado no Diário Oficial em 09/10/2026 — Brasil [op-59b97f560020]",
-    "Chamamento público publicado no Diário Oficial em 28/09/2026 — São Paulo / Taubaté [nova-e0234e364085]",
-    "Edital ocupa varjota 2026 de apoio a ações culturais e formativas do município de varjota - política nacional … — Ceará [op-105a55ba7bdd]",
-    "Chamamento público publicado no Diário Oficial em 17/08/2026 — Sergipe / Simão Dias [op-9e7d4afa9055]",
-    "Promac 2026 — Programa Municipal de Apoio a Projetos Culturais (SP) — São Paulo / São Paulo [op-b442871d369a]",
-    "Chamamento público publicado no Diário Oficial em 11/09/2026 — São Paulo / Monteiro Lobato [op-5545222abab7]"
+    "PNCP — MUNICIPIO DE BENTO GONCALVES — oportunidades (espalhado de edital validado) — Rio Grande do Sul [espalhado-www-bentogoncalves-rs-gov-br]",
+    "PNCP — MUNICIPIO DE CACOAL — oportunidades (espalhado de edital validado) — Rondônia [espalhado-transparencia-cacoal-ro-gov-br]",
+    "PNCP — MUNICIPIO DE CARAZINHO — oportunidades (espalhado de edital validado) — Rio Grande do Sul [espalhado-carazinho-atende-net]",
+    "PNCP — MUNICIPIO DE CARIRE — oportunidades (espalhado de edital validado) — Ceará [espalhado-carire-ce-gov-br]",
+    "PNCP — MUNICIPIO DE ITABAIANINHA — oportunidades (espalhado de edital validado) — Sergipe [espalhado-www-itabaianinha-se-gov-br]",
+    "PNCP — MUNICIPIO DE MIRASSOL D'OESTE — oportunidades (espalhado de edital validado) — Mato Grosso [espalhado-sistema-mirassoldoeste-mt-gov-br]",
+    "PNCP — MUNICIPIO DE NOBRES — oportunidades (espalhado de edital validado) — Mato Grosso [espalhado-transparencia-nobres-mt-gov-br]",
+    "PNCP — MUNICIPIO DE NOVO HAMBURGO — oportunidades (espalhado de edital validado) — Rio Grande do Sul [espalhado-www-novohamburgo-rs-gov-br]"
    ]
   },
   {
@@ -1506,7 +1456,7 @@
   {
    "codigo": "saude_claude",
    "gravidade": "media",
-   "texto": "saúde · claude: 239 item(ns) esperando a análise do Claude (próxima: 2026-10-18)",
+   "texto": "saúde · claude: 239 item(ns) esperando a análise do Claude (próxima: 2026-10-20)",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1530,7 +1480,7 @@
   {
    "codigo": "saude_livros_do_sistema",
    "gravidade": "media",
-   "texto": "saúde · livros_do_sistema: 4 livro(es) duplicado(s) no catálogo",
+   "texto": "saúde · livros_do_sistema: 9 livro(es) duplicado(s) no catálogo",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1547,14 +1497,6 @@
    "codigo": "saude_workflows",
    "gravidade": "media",
    "texto": "saúde · workflows: 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: últimas 4 execuções sem sucesso",
-   "correcao": "ver o fluxo/arquivo indicado",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "saude_workflows",
-   "gravidade": "media",
-   "texto": "saúde · workflows: 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): últimas 4 execuções sem sucesso",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1620,12 +1562,11 @@
   }
  ],
  "contagem_problemas": {
-  "alta": 27,
-  "media": 20,
+  "alta": 23,
+  "media": 18,
   "baixa": 2
  },
  "corrigiveis": [
-  "refazer a saúde",
   "refazer a tela",
   "refazer tela e indicadores"
  ],
