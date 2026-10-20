@@ -1,5 +1,5 @@
 {
- "em": "2026-10-20T21:38:53+00:00",
+ "em": "2026-10-20T23:13:36+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,7 +7,7 @@
   "alterar_rota": 59,
   "rota_nova": 52,
   "via_ponte": 4,
-  "exemplos_da_rede": 30960
+  "exemplos_da_rede": 31040
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
@@ -16,20 +16,20 @@
     2.6546
    ],
    [
-    "origem:rota original",
-    2.5539
-   ],
-   [
-    "origem:biblioteca",
-    2.5324
-   ],
-   [
     "tok:secult",
     2.5203
    ],
    [
+    "origem:biblioteca",
+    2.4514
+   ],
+   [
     "tok:mpf",
     2.3965
+   ],
+   [
+    "origem:rota original",
+    2.3387
    ],
    [
     "tok:deputados",
@@ -41,7 +41,7 @@
    ],
    [
     "tok:feed",
-    2.0032
+    2.0017
    ],
    [
     "tok:leipaulogustavo",
@@ -63,7 +63,7 @@
   "piores_sinais": [
    [
     "tok:ccs",
-    -2.3735
+    -2.3748
    ],
    [
     "tok:2026",
@@ -75,7 +75,7 @@
    ],
    [
     "via:ponte",
-    -2.6348
+    -2.6349
    ],
    [
     "tok:content",
@@ -91,7 +91,7 @@
    ],
    [
     "origem:padrão",
-    -3.642
+    -3.6548
    ]
   ]
  },
@@ -141,7 +141,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-20T10:55:47+00:00",
+    "em": "2026-10-20T23:12:15+00:00",
     "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -282,7 +282,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-20T10:55:07+00:00",
+    "em": "2026-10-20T23:11:29+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -319,7 +319,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-20T10:55:44+00:00",
+    "em": "2026-10-20T23:12:11+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -433,8 +433,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-20T14:03:40+00:00",
-    "testes": 18,
+    "em": "2026-10-20T23:13:36+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -837,8 +837,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-20T12:32:47+00:00",
-    "testes": 23,
+    "em": "2026-10-20T23:13:12+00:00",
+    "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -879,8 +879,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-20T14:03:17+00:00",
-    "testes": 24,
+    "em": "2026-10-20T23:13:16+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
