@@ -1,5 +1,5 @@
 {
- "em": "2026-10-20T15:35:42+00:00",
+ "em": "2026-10-20T17:06:04+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 59,
   "rota_nova": 52,
   "via_ponte": 4,
-  "exemplos_da_rede": 30495
+  "exemplos_da_rede": 30617
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
-    "origem:rota original",
-    3.0032
-   ],
-   [
     "tok:inscricoes",
     2.6546
+   ],
+   [
+    "origem:rota original",
+    2.5906
    ],
    [
     "tok:secult",
@@ -29,11 +29,7 @@
    ],
    [
     "origem:biblioteca",
-    2.3865
-   ],
-   [
-    "tok:feed",
-    2.2908
+    2.2993
    ],
    [
     "tok:deputados",
@@ -44,8 +40,8 @@
     2.2139
    ],
    [
-    "tld:br",
-    1.9284
+    "tok:feed",
+    1.9804
    ],
    [
     "tok:leipaulogustavo",
@@ -58,6 +54,10 @@
    [
     "tok:imprensa",
     1.7171
+   ],
+   [
+    "tok:aldirblanc",
+    1.6695
    ]
   ],
   "piores_sinais": [
@@ -75,7 +75,7 @@
    ],
    [
     "via:ponte",
-    -2.6063
+    -2.6246
    ],
    [
     "tok:content",
@@ -86,12 +86,12 @@
     -3.2712
    ],
    [
-    "origem:padrão",
-    -3.4812
-   ],
-   [
     "origem:câmara",
     -3.5436
+   ],
+   [
+    "origem:padrão",
+    -3.547
    ]
   ]
  },
@@ -356,7 +356,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-20T04:56:20+00:00",
+    "em": "2026-10-20T17:06:04+00:00",
     "testes": 21,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -535,7 +535,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-19T21:24:17+00:00",
+    "em": "2026-10-20T17:03:05+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1125,7 +1125,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-20T00:24:35+00:00",
+    "em": "2026-10-20T17:03:19+00:00",
     "testes": 22,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1342,10 +1342,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 25,
-    "aprendido_em": "2026-10-20T04:53:35+00:00"
+    "aprendido_em": "2026-10-20T17:03:42+00:00"
    },
    "afinado": {
-    "em": "2026-10-20T04:53:35+00:00",
+    "em": "2026-10-20T17:03:42+00:00",
     "testes": 20,
     "melhor": {
      "url": "https://www.globalfundforwomen.org/sitemap.xml",
@@ -1402,7 +1402,7 @@
     "aprendido_em": "2026-10-16T02:15:34+00:00"
    },
    "afinado": {
-    "em": "2026-10-20T04:56:11+00:00",
+    "em": "2026-10-20T17:05:53+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1688,10 +1688,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-20T04:53:26+00:00"
+    "aprendido_em": "2026-10-20T17:03:29+00:00"
    },
    "afinado": {
-    "em": "2026-10-20T04:53:26+00:00",
+    "em": "2026-10-20T17:03:29+00:00",
     "testes": 22,
     "melhor": {
      "url": "https://www.gatesfoundation.org/sitemap.xml",
