@@ -69,8 +69,8 @@
   },
   {
    "motor": "dou",
-   "achados_total_1a": 26,
-   "achados_total_agora": 26,
+   "achados_total_1a": 27,
+   "achados_total_agora": 27,
    "no_fluxo": 3,
    "confirmadas": 0
   },
@@ -201,7 +201,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 4,
- "exemplos_da_rede_de_rotas": 31958
+ "exemplos_da_rede_de_rotas": 32074
 }
 ```
 
@@ -246,11 +246,9 @@
 {
  "dia_de_referencia": "2026-10-21",
  "ativos": 172,
- "lidos_ontem": 5,
- "lidos_hoje": 0,
+ "lidos_ontem": 6,
+ "lidos_hoje": 19,
  "nao_lidos_ontem_nem_hoje": [
-  "do-goias",
-  "dou",
   "f260-captacao-001",
   "f260-captacao-018",
   "f260-captacao-025",
@@ -288,7 +286,9 @@
   "f260-captacao-193",
   "f260-captacao-196",
   "f260-captacao-200",
-  "f260-captacao-206"
+  "f260-captacao-206",
+  "f260-captacao-207",
+  "f260-captacao-208"
  ],
  "ainda_sem_primeira_leitura": [
   "motor-gife",
@@ -330,7 +330,7 @@
   "Cartório (site oficial certificado)": 190,
   "Espião (privado/internacional)": 48
  },
- "lidas_nas_ultimas_24h": 0,
+ "lidas_nas_ultimas_24h": 137,
  "dimensionamento": {
   "fontes": 404,
   "sites_por_execucao": 17,
@@ -346,44 +346,44 @@
  },
  "clones_que_ja_leram": {
   "outras-oportunidades-1": {
-   "ultima": "2026-10-18T06:25:08+00:00",
+   "ultima": "2026-10-21T11:51:44+00:00",
    "duracao_s": 88,
-   "achados": 52
+   "achados": 46
   },
   "outras-oportunidades-3": {
-   "ultima": "2026-10-18T07:06:10+00:00",
-   "duracao_s": 72,
-   "achados": 5
-  },
-  "outras-oportunidades-4": {
-   "ultima": "2026-10-18T03:27:21+00:00",
-   "duracao_s": 77,
-   "achados": 4
-  },
-  "outras-oportunidades-5": {
-   "ultima": "2026-10-18T07:04:33+00:00",
-   "duracao_s": 89,
-   "achados": 11
-  },
-  "outras-oportunidades-6": {
-   "ultima": "2026-10-18T07:03:03+00:00",
-   "duracao_s": 71,
-   "achados": 18
-  },
-  "outras-oportunidades-7": {
-   "ultima": "2026-10-18T06:51:53+00:00",
-   "duracao_s": 120,
-   "achados": 13
-  },
-  "outras-oportunidades-8": {
-   "ultima": "2026-10-18T07:07:12+00:00",
-   "duracao_s": 63,
+   "ultima": "2026-10-21T11:54:06+00:00",
+   "duracao_s": 68,
    "achados": 1
   },
-  "outras-oportunidades-2": {
-   "ultima": "2026-10-18T05:24:38+00:00",
-   "duracao_s": 76,
+  "outras-oportunidades-4": {
+   "ultima": "2026-10-21T11:55:31+00:00",
+   "duracao_s": 84,
    "achados": 3
+  },
+  "outras-oportunidades-5": {
+   "ultima": "2026-10-21T11:57:23+00:00",
+   "duracao_s": 112,
+   "achados": 2
+  },
+  "outras-oportunidades-6": {
+   "ultima": "2026-10-21T11:58:31+00:00",
+   "duracao_s": 69,
+   "achados": 0
+  },
+  "outras-oportunidades-7": {
+   "ultima": "2026-10-21T11:59:53+00:00",
+   "duracao_s": 81,
+   "achados": 10
+  },
+  "outras-oportunidades-8": {
+   "ultima": "2026-10-21T12:01:16+00:00",
+   "duracao_s": 84,
+   "achados": 2
+  },
+  "outras-oportunidades-2": {
+   "ultima": "2026-10-21T11:52:58+00:00",
+   "duracao_s": 75,
+   "achados": 1
   }
  },
  "com_achado": 60
