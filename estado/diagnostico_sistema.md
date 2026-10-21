@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-21 14:30 UTC
+# Diagnóstico do sistema · 2026-10-21 14:35 UTC
 
 ## Cumprimento da finalidade · índice geral 54%
 - Motores: 74% (atencao) — todo motor ativo lê dentro da sua cadência
@@ -27,7 +27,8 @@
 - 34 · Motores de empresas (semanal, com recuperação): atencao · última 2026-10-21T12:03 · sucesso 78% · cadência 24.0 h
 - 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): falha · última 2026-10-21T11:33 · sucesso 0% · cadência 6.0 h
 - 02 · Alexandria — revisão mensal de leis e procedimentos: atrasado · última 2026-10-01T10:36 · sucesso 50% · cadência 24.0 h
-- falha silenciosa em motor-agregadores.yml: mapa: falhou
+- falha silenciosa em motores-da-vez.yml: NameError: name 'fases' is not defined | NameError: name 'ferramentas' is not defined | Traceback (most recent call last):
+- falha silenciosa em motor-agregadores.yml: "rede: URLError: timed out", | "rede: robots.txt inacessível: URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)" | mapa: falhou
 - falha silenciosa em monitoramento-diario.yml: "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-in
 
 ## Sala de controle · 36 indicadores · atualizada há 0.0 h
@@ -58,17 +59,18 @@
   - em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 4 dia(s) (99 h); última leitura 17/10 08:29
 - maestro: cobertura 0.0% · esgotados 0
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
-- Cartório: 0.6646 certificado · fluxos do GitHub com falha: []
+- Cartório: 0.6646 certificado · fluxos do GitHub com falha: ['00 · Verificar prontidão']
 - saúde: 6 alerta(s) · índice da sala de controle: 53
 
 ## Integração
 - contagens: {'repositorio_abertas': 228, 'diagnostico_abertas': 228, 'tela_cartoes': 224, 'fichas': 236, 'sala_controle_abertas': 228}
-- idade (h): {'repositorio': 0.0, 'fluxo': 82.6, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 8.5, 'rede_neural': 82.7, 'saude': 0.1}
+- idade (h): {'repositorio': 0.0, 'fluxo': 82.7, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 8.5, 'rede_neural': 82.7, 'saude': 0.2}
 - decisões da titular: 0 · não aplicadas: 0
 
-## Problemas (39)
-- [alta] o comando único não fecha um ciclo há 60.9 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
-- [alta] 1 etapa(s) falharam em silêncio na última execução de motor-agregadores.yml: mapa: falhou → investigar a etapa (sem correção automática)
+## Problemas (40)
+- [alta] o comando único não fecha um ciclo há 61.0 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+- [alta] 3 etapa(s) falharam em silêncio na última execução de motores-da-vez.yml: NameError: name 'fases' is not defined | NameError: name 'ferramentas' is not defined | Traceback (most recent call last): → investigar a etapa (sem correção automática)
+- [alta] 3 etapa(s) falharam em silêncio na última execução de motor-agregadores.yml: "rede: URLError: timed out", | "rede: robots.txt inacessível: URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)" | mapa: falhou → investigar a etapa (sem correção automática)
 - [alta] 9 etapa(s) falharam em silêncio na última execução de monitoramento-diario.yml: "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu → investigar a etapa (sem correção automática)
 - [alta] fluxo '00 · Verificar prontidão' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
 - [alta] fluxo '12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
@@ -87,14 +89,14 @@
 - [alta] motor em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 4 dia(s) (99 h); última leitura 17/10 08:29 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 228 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 82.6 h (limite 3 h) → refazer a tela
+- [media] fluxo sem atualização há 82.7 h (limite 3 h) → refazer a tela
 - [media] maestro sem atualização há 8.5 h (limite 3 h) → ver o fluxo que gera este dado
 - [media] rede_neural sem atualização há 82.7 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 130 de 130 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
 - [media] fluxo 'acesso-mensal' sem rodar há 1205.3 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 434.6 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '08 · Pacote do conselho (validação do Claude a cada 3 dias)' sem rodar há 122.7 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 483.9 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 434.7 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '08 · Pacote do conselho (validação do Claude a cada 3 dias)' sem rodar há 122.8 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
+- [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 484.0 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 95 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 240 item(ns) esperando a análise do Claude (próxima: 2026-10-21) → ver o fluxo/arquivo indicado
