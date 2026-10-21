@@ -274,7 +274,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-196": {
-  "em": "2026-10-21T06:48:25+00:00",
+  "em": "2026-10-21T18:54:37+00:00",
   "testes": 17,
   "melhor": {
    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
@@ -373,18 +373,27 @@
     "funcionou": true
    },
    {
-    "url": "https://www.mpf.mp.br/",
-    "origem": "rota original",
+    "url": "https://www.mpf.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
     "via": "direto",
-    "pontos": 5,
-    "links": 417,
-    "sinais": 2,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
    },
    {
-    "url": "https://www.mpf.mp.br/sitemap.xml",
+    "url": "https://www.mpf.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mpt.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -396,11 +405,11 @@
    {
     "url": "https://www.mpf.mp.br/sitemap.xml",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -414,24 +423,15 @@
     "funcionou": false
    },
    {
-    "url": "https://www.mpf.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
+    "url": "https://www.mpf.mp.br/",
+    "origem": "rota original",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mpt.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
+    "pontos": 5,
+    "links": 417,
+    "sinais": 2,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
    },
    {
     "url": "https://www.mpf.mp.br/transparencia/editais",
@@ -1083,7 +1083,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-21T17:23:46+00:00",
+  "em": "2026-10-21T18:54:37+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -4332,7 +4332,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-222": {
-  "em": "2026-10-21T05:17:34+00:00",
+  "em": "2026-10-21T18:53:07+00:00",
   "testes": 21,
   "melhor": null,
   "detalhe": [
@@ -4359,26 +4359,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.fundacaoitau.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.fundacaoitau.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.fundacaoitau.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -4410,6 +4390,26 @@
    },
    {
     "url": "https://www.fundacaoitau.org.br/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.fundacaoitau.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.fundacaoitau.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -4490,7 +4490,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.fundacaoitau.org.br/chamamentos",
+    "url": "https://www.fundacaoitau.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9632,7 +9632,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-253": {
-  "em": "2026-10-21T06:47:15+00:00",
+  "em": "2026-10-21T18:53:28+00:00",
   "testes": 20,
   "melhor": null,
   "detalhe": [
@@ -9659,26 +9659,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.microsoft.com/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.microsoft.com/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.microsoft.com/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -9701,6 +9681,26 @@
    },
    {
     "url": "https://www.microsoft.com/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.microsoft.com/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.microsoft.com/transparencia/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -9781,7 +9781,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.microsoft.com/chamamentos",
+    "url": "https://www.microsoft.com/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9791,7 +9791,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.microsoft.com/chamamentos",
+    "url": "https://www.microsoft.com/chamadas-publicas",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -10251,7 +10251,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-241": {
-  "em": "2026-10-21T06:47:38+00:00",
+  "em": "2026-10-21T18:53:52+00:00",
   "testes": 22,
   "melhor": {
    "url": "https://www.unicef.org/sitemap.xml",
@@ -10284,26 +10284,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.unicef.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.unicef.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -10335,6 +10315,26 @@
    },
    {
     "url": "https://www.unicef.org/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.unicef.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.unicef.org/transparencia/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -10764,7 +10764,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-247": {
-  "em": "2026-10-21T06:47:53+00:00",
+  "em": "2026-10-21T18:54:06+00:00",
   "testes": 22,
   "melhor": {
    "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
@@ -10797,26 +10797,6 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://international-partnerships.ec.europa.eu/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -10848,6 +10828,26 @@
    },
    {
     "url": "https://international-partnerships.ec.europa.eu/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -11997,7 +11997,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-011": {
-  "em": "2026-10-21T06:48:10+00:00",
+  "em": "2026-10-21T18:54:22+00:00",
   "testes": 20,
   "melhor": {
    "url": "https://mariaemilia.org.br/feed",
@@ -12030,17 +12030,6 @@
     "funcionou": true
    },
    {
-    "url": "https://mariaemilia.org.br/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 7,
-    "links": 80,
-    "sinais": 3,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://mariaemilia.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -12052,12 +12041,12 @@
     "funcionou": false
    },
    {
-    "url": "https://mariaemilia.org.br/transparencia/editais",
-    "origem": "padrão",
+    "url": "https://mariaemilia.org.br/",
+    "origem": "biblioteca",
     "via": "direto",
-    "pontos": 5,
-    "links": 56,
-    "sinais": 2,
+    "pontos": 7,
+    "links": 80,
+    "sinais": 3,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -12070,6 +12059,17 @@
     "links": 20,
     "sinais": 20,
     "formato": "json",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://mariaemilia.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 5,
+    "links": 56,
+    "sinais": 2,
+    "formato": "html",
     "erro": null,
     "funcionou": true
    },
@@ -12156,7 +12156,7 @@
     "funcionou": false
    },
    {
-    "url": "https://mariaemilia.org.br/chamamentos",
+    "url": "https://mariaemilia.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -12166,7 +12166,7 @@
     "funcionou": false
    },
    {
-    "url": "https://mariaemilia.org.br/chamamentos",
+    "url": "https://mariaemilia.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
