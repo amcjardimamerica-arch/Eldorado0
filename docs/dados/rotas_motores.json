@@ -1,5 +1,5 @@
 {
- "em": "2026-10-21T20:27:14+00:00",
+ "em": "2026-10-21T21:58:04+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 60,
   "rota_nova": 52,
   "via_ponte": 5,
-  "exemplos_da_rede": 32589
+  "exemplos_da_rede": 32667
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "origem:rota original",
-    3.2435
+    3.0975
    ],
    [
     "origem:biblioteca",
-    2.7443
+    2.7297
    ],
    [
     "tok:secult",
@@ -33,7 +33,7 @@
    ],
    [
     "tok:feed",
-    2.3486
+    2.3437
    ],
    [
     "tok:deputados",
@@ -49,11 +49,11 @@
    ],
    [
     "tok:sitemap",
-    1.9339
+    1.9652
    ],
    [
     "tok:xml",
-    1.9339
+    1.9652
    ],
    [
     "tok:leipaulogustavo",
@@ -66,12 +66,12 @@
     -2.275
    ],
    [
-    "tok:ccs",
-    -2.3885
-   ],
-   [
     "tok:2026",
     -2.5141
+   ],
+   [
+    "tok:ccs",
+    -2.522
    ],
    [
     "tok:pgt",
@@ -91,7 +91,7 @@
    ],
    [
     "origem:padrão",
-    -3.8141
+    -3.8566
    ]
   ]
  },
@@ -192,8 +192,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-21T09:43:02+00:00",
-    "testes": 24,
+    "em": "2026-10-21T21:57:38+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -240,8 +240,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-21T09:42:55+00:00",
-    "testes": 24,
+    "em": "2026-10-21T21:57:37+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -811,8 +811,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-21T08:15:32+00:00",
-    "testes": 16,
+    "em": "2026-10-21T21:57:35+00:00",
+    "testes": 17,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1234,8 +1234,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-21T09:42:25+00:00",
-    "testes": 24,
+    "em": "2026-10-21T21:57:35+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1261,8 +1261,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-21T09:43:24+00:00",
-    "testes": 23,
+    "em": "2026-10-21T21:57:55+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1648,11 +1648,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 4,
-    "aprendido_em": "2026-10-21T09:43:39+00:00"
+    "aprendido_em": "2026-10-21T21:58:04+00:00"
    },
    "afinado": {
-    "em": "2026-10-21T09:43:39+00:00",
-    "testes": 23,
+    "em": "2026-10-21T21:58:04+00:00",
+    "testes": 13,
     "melhor": {
      "url": "https://www.iadb.org/sitemap.xml",
      "via": "direto",
