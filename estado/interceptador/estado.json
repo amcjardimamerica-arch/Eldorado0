@@ -12263,41 +12263,17 @@
    "comprovados": 9,
    "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
    "buscas": 1
+  },
+  "rec-tidadesparceiras": {
+   "em": "2026-10-22T21:47:42+00:00",
+   "tipo": "edital",
+   "qualidade": "parcial",
+   "comprovados": 8,
+   "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
+   "buscas": 1
   }
  },
  "rodadas": [
-  {
-   "em": "2026-10-16T13:51:27+00:00",
-   "papel": "Piloto - Interceptador",
-   "modelo": "qwen3-8b",
-   "parametros": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
-   "inicio": "2026-10-16T13:51:27+00:00",
-   "fonte_nova_para_os_motores": false,
-   "id": "op-op-78c83fcc2221",
-   "modo": "validar",
-   "tipo": "edital",
-   "alvo": "Anexo 2 – Dados do Projeto – Edital 09 (Docx) — Goiás",
-   "de": "1 · Goiás · livro da Biblioteca",
-   "qualidade": "insuficiente",
-   "comprovados": 0,
-   "dispensados": null,
-   "total": 12,
-   "nao_resolvidos": null,
-   "pagina_oficial": null,
-   "fontes_oficiais": [],
-   "parecer_fonte": {},
-   "erro": "o modelo não devolveu JSON",
-   "fluxo": {
-    "confirmadas": 39,
-    "possiveis": 356
-   },
-   "saude": 4,
-   "para_o_claude": {
-    "a_analisar": 1180,
-    "proxima": "2026-10-16"
-   },
-   "segundos": 1463
-  },
   {
    "em": "2026-10-16T14:20:13+00:00",
    "papel": "Piloto - Interceptador",
@@ -14998,6 +14974,62 @@
     "proxima": "2026-10-22"
    },
    "segundos": 696
+  },
+  {
+   "em": "2026-10-22T21:33:10+00:00",
+   "papel": "Piloto - Interceptador",
+   "modelo": "qwen3-8b",
+   "parametros": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
+   "inicio": "2026-10-22T21:33:10+00:00",
+   "fila_de_resgate": {
+    "total_incompletos": 197,
+    "na_fila": 60,
+    "total": 64,
+    "por_estado": {
+     "resgatado": 4,
+     "aguardando": 60
+    }
+   },
+   "fonte_nova_para_os_motores": false,
+   "id": "rec-tidadesparceiras",
+   "modo": "validar",
+   "tipo": "edital",
+   "alvo": "Senar goias abre edital para doacao de bens moveis a entidades parceiras",
+   "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
+   "qualidade": "parcial",
+   "comprovados": 8,
+   "dispensados": 1,
+   "total": 12,
+   "nao_resolvidos": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso"
+   ],
+   "pagina_oficial": "https://goias.go.gov.br/publicacoes/editais/Edital02_Maria_Grampinho.pdf",
+   "fontes_oficiais": [
+    "Objeto",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Área de atuação"
+   ],
+   "parecer_fonte": {
+    "serve_como_fonte": "sim",
+    "por_que": "O edital foi comprovado com informações sobre objeto, valor, órgão financiador, território, esfera, requisitos e área de atuação.",
+    "para_a_amc": "A associação comunitária de Goiânia precisa estar reconhecida pela contribuição já realizada pelos espaços culturais ao Município de Goiás e se enquadrar na área de atuação de cultura.",
+    "proximo_passo": "Consultar o edital completo para verificar os anexos e os requisitos detalhados.",
+    "risco": "A falta de reconhecimento pela contribuição já realizada pelos espaços culturais ao Município de Goiás pode impedir o acesso."
+   },
+   "erro": null,
+   "fluxo": "falhou: KeyError",
+   "saude": 6,
+   "para_o_claude": {
+    "a_analisar": 240,
+    "proxima": "2026-10-22"
+   },
+   "segundos": 894
   }
  ]
 }
