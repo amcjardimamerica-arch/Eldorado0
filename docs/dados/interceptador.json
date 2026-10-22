@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-22T22:05:44+00:00",
+  "em": "2026-10-22T22:21:16+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-22T21:50:35+00:00",
+  "ultimo_voo": "2026-10-22T22:07:47+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,8 +38,8 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
-    "parciais": 1,
+    "validadas": 1,
+    "parciais": 0,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
@@ -47,77 +47,87 @@
       "sim": 1
     },
     "estrelas_de_ouro": 1,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 14.4
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 12.9
   },
   "missoes": [
     {
-      "em": "2026-10-22T21:50:35+00:00",
+      "em": "2026-10-22T22:07:47+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 4 abordagens; busca",
-      "alvo": "Edital FME Transforma nº 02/2026 Fundação Maria Emília R$ 1,0 mi Aceita:   organizações da sociedade civil, universidades, pesquisadores  e ",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 16 abordagens; busc",
+      "alvo": "Projetos para crianças e adolescentes: edital recebe propostas até 17 ...",
+      "qualidade": "validada",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://mariaemilia.org.br/wp-content/uploads/2026/08/Edital-FME-Transforma-2026.pdf",
+      "pagina_oficial": "https://www.bndes.gov.br/wps/vanityurl/editalfca2026",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre seu objeto, financiador, território e área de atuação, o que permite identificar sua relevância para a AMC.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto nas áreas de Saúde ou Educação que contribua para a produção de conhecimento, desenvolvimento de soluções, fortalecimento de práticas ou melhoria de serviços, com impacto social relevante.",
-        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre requisitos, prazos e critérios de avaliação.",
-        "risco": "A falta de informações sobre prazos, requisitos e valor pode impedir a elaboração de uma proposta adequada e otimizada."
+        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, prazo, valor, requisitos e área de atuação, permitindo a análise completa do chamamento público.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar aos requisitos do edital, como ser uma pessoa jurídica de direito privado sem finalidade lucrativa, propor um projeto com orçamento entre R$ 500 mil e R$ 5 milhões, e contar com a chancela dos conselhos municipais ou estaduais. Além disso, o projeto deve beneficiar crianças e adolescentes nas cidades onde o BNDES possui sede ou escritório, ou seja, RJ, SP, PE e DF.",
+        "proximo_passo": "A associação comunitária deve verificar se atende aos requisitos do edital e, caso sim, preparar a proposta dentro do prazo de inscrição (14 de setembro a 2 de outubro de 2026).",
+        "risco": "O projeto pode não ser aprovado se a associação não atender aos requisitos específicos, como a chancela dos conselhos municipais ou estaduais, ou se o orçamento não estiver dentro do intervalo estabelecido."
       },
       "erro": null,
-      "segundos": 864,
+      "segundos": 773,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 5,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "dff21103a67e90b8f8e3",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 9,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "cat-1aef80529dcb",
       "encontrou": {
         "Objeto": {
-          "valor": "projetos nas áreas de Saúde e Educação que contribuam para a produção de conhecimento, o desenvolvimento de soluções, o fortalecimento de práticas e a melhoria de serviços nessas áreas, com impacto social relevante",
-          "trecho": "O presente edital tem como objetivo selecionar e apoiar projetos nas áreas de Saúde e Educação que contribuam para a produção de conhecimento, o desenvolvimento de soluções, o fort",
+          "valor": "apoiar projetos que beneficiem crianças e adolescentes nas cidades em que o BNDES possui sede ou escritório",
+          "trecho": "As iniciativas apoiadas devem beneficiar crianças e/ou adolescentes nas cidades em que o BNDES possui sede ou escritório (Rio de Janeiro, São Paulo, Recife e Brasília), a serem imp",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-09-14 a 2026-10-02",
+          "trecho": "Acesse o formulário on-line de documentação da Fase 2, que poderá ser enviado de 14.09.2026 a 02.10.2026 (até 17h59).",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "orçamento global de cada projeto deve ser de, no mínimo, R$ 500 mil e, no máximo, de R$ 5 milhões",
+          "trecho": "O orçamento global de cada projeto deve ser de, no mínimo, R$ 500 mil e, no máximo, de R$ 5 milhões.",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Fundação Maria Emília Pedreira Freire De Carvalho",
-          "trecho": "A Fundação Maria Emília Pedreira Freire De Carvalho, CNPJ sob nº 03.103.667/0001-08, doravante Fundação Maria Emília ou FME, através de sua Diretoria Executiva, no uso de suas atri",
+          "valor": "BNDES",
+          "trecho": "O BNDES irá selecionar de 2 (dois) a 8 (oito) projetos a serem apoiados por meio de doação de recursos incentivados, realizada no âmbito do art. 260 do Estatuto da Criança e do Ado",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "nacional",
-          "trecho": "A Fundação Maria Emília busca beneficiar a sociedade brasileira, fomentando e fortalecendo ações, pesquisas, tecnologias e processos que contribuam para a evolução da Saúde e da Ed",
+          "valor": "RJ, SP, PE, DF",
+          "trecho": "As iniciativas apoiadas devem beneficiar crianças e/ou adolescentes nas cidades em que o BNDES possui sede ou escritório (Rio de Janeiro, São Paulo, Recife e Brasília), a serem imp",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "saude",
-          "trecho": "O presente edital tem como objetivo selecionar e apoiar projetos nas áreas de Saúde e Educação que contribuam para a produção de conhecimento, o desenvolvimento de soluções, o fort",
+          "valor": "assistencia_social",
+          "trecho": "Os projetos devem atender a pelo menos um dos eixos de atuação a seguir: assistência e proteção de crianças e adolescentes em situação de rua;",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "projetos devem ser propostos e realizados por pessoas jurídicas de direito privado sem finalidade lucrativa ou por pesso, projetos devem contar com a chancela para captação de recursos incentivados dos respectivos conselhos municipais, estadu",
+          "trecho": "Os projetos devem ser propostos e realizados por pessoas jurídicas de direito privado sem finalidade lucrativa ou por pessoas jurídicas de direito público, dos municípios do Rio de",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Fundação Maria Emília",
-      "indicios": [
-        {
-          "url": "https://capitaai.com.br/captacao/edital-fme-transforma-022026-fundacao-maria-emilia-co1738",
-          "tipo": "agregador"
-        }
-      ],
+      "financiador": "Ministério dos Direitos Humanos e da Cidadania",
+      "indicios": [],
       "rotas": [
         "site_do_financiador",
         "site_do_financiador_edital"
