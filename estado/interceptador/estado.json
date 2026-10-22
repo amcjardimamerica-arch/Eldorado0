@@ -641,11 +641,12 @@
    "de": "fila de resgate"
   },
   "cat-af40956a098a": {
-   "em": "2026-09-27T10:46:03+00:00",
+   "em": "2026-10-22T23:00:14+00:00",
    "tipo": "edital",
-   "qualidade": "validada",
-   "comprovados": 10,
-   "de": "fila de resgate"
+   "qualidade": "parcial",
+   "comprovados": 7,
+   "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 20 abordagens; busc",
+   "buscas": 2
   },
   "cat-43fddafa0704": {
    "em": "2026-09-27T10:57:15+00:00",
@@ -12300,49 +12301,6 @@
  },
  "rodadas": [
   {
-   "em": "2026-10-16T15:34:44+00:00",
-   "papel": "Piloto - Interceptador",
-   "modelo": "qwen3-8b",
-   "parametros": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
-   "inicio": "2026-10-16T15:34:44+00:00",
-   "fonte_nova_para_os_motores": false,
-   "id": "5589064f136c44db35a6",
-   "modo": "validar",
-   "tipo": "edital",
-   "alvo": "Instituto Cooperforte lança chamada pública para organizações e cooperativas de 15 estados",
-   "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
-   "qualidade": "insuficiente",
-   "comprovados": 8,
-   "dispensados": 0,
-   "total": 12,
-   "nao_resolvidos": [
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Área de atuação"
-   ],
-   "pagina_oficial": null,
-   "fontes_oficiais": [],
-   "parecer_fonte": {
-    "serve_como_fonte": "sim",
-    "por_que": "O texto comprova que o Instituto Cooperforte oferece subsídio para projetos sociais com qualificação profissional de pessoas em vulnerabilidade, sendo uma fonte válida para organizações da sociedade civil.",
-    "para_a_amc": "A associação comunitária de Goiânia precisaria ser uma Organização da Sociedade Civil ou Cooperativa constituída há mais de cinco anos e apresentar um projeto social que atue com qualificação profissional de pessoas em situação de vulnerabilidade, além de anexar os documentos exigidos.",
-    "proximo_passo": "Verificar os requisitos específicos e preparar os documentos necessários para a inscrição na chamada pública.",
-    "risco": "A falta de informações sobre o prazo de inscrição pode impedir a participação oportunamente."
-   },
-   "erro": null,
-   "fluxo": {
-    "confirmadas": 41,
-    "possiveis": 376
-   },
-   "saude": 4,
-   "para_o_claude": {
-    "a_analisar": 1185,
-    "proxima": "2026-10-16"
-   },
-   "segundos": 865
-  },
-  {
    "em": "2026-10-16T15:51:53+00:00",
    "papel": "Piloto - Interceptador",
    "modelo": "qwen3-8b",
@@ -15086,6 +15044,61 @@
     "proxima": "2026-10-22"
    },
    "segundos": 700
+  },
+  {
+   "em": "2026-10-22T22:46:53+00:00",
+   "papel": "Piloto - Interceptador",
+   "modelo": "qwen3-8b",
+   "parametros": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
+   "inicio": "2026-10-22T22:46:53+00:00",
+   "fila_de_resgate": {
+    "total_incompletos": 197,
+    "na_fila": 60,
+    "total": 64,
+    "por_estado": {
+     "resgatado": 4,
+     "aguardando": 60
+    }
+   },
+   "fonte_nova_para_os_motores": true,
+   "id": "cat-af40956a098a",
+   "modo": "validar",
+   "tipo": "edital",
+   "alvo": "Itau viver mais abre inscricoes para a 7a edicao do edital de projetos voltados a longevidade",
+   "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 20 abordagens; busc",
+   "qualidade": "parcial",
+   "comprovados": 7,
+   "dispensados": 2,
+   "total": 12,
+   "nao_resolvidos": [
+    "Prazo de recurso",
+    "Valor",
+    "Território",
+    "Requisitos"
+   ],
+   "pagina_oficial": "https://www.itauvivermais.com.br/pilares/editais/edital-ivm-2025/",
+   "fontes_oficiais": [
+    "Objeto",
+    "Resultado",
+    "Órgão / financiador",
+    "Esfera",
+    "Anexos"
+   ],
+   "parecer_fonte": {
+    "serve_como_fonte": "sim",
+    "por_que": "O texto comprova que o edital é voltado para projetos que promovem e garantem os direitos da população 60+ e fornece informações sobre o objeto, prazo de inscrição e resultado.",
+    "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando projetos voltados para a longevidade, que promovam e garantam os direitos da população 60+.",
+    "proximo_passo": "Consultar os anexos do edital para obter mais detalhes sobre as exigências e submeter a proposta no prazo estabelecido.",
+    "risco": "O prazo de inscrição não foi especificado no texto, o que pode dificultar a definição do momento exato para submissão."
+   },
+   "erro": null,
+   "fluxo": "falhou: KeyError",
+   "saude": 6,
+   "para_o_claude": {
+    "a_analisar": 240,
+    "proxima": "2026-10-22"
+   },
+   "segundos": 824
   }
  ]
 }
