@@ -1,5 +1,5 @@
 {
- "em": "2026-10-22T08:34:34+00:00",
+ "em": "2026-10-22T14:51:20+00:00",
  "conselho": [
   {
    "id": "falso_verde",
@@ -351,7 +351,7 @@
     {
      "url": "https://diariooficial.abc.go.gov.br",
      "http": 200,
-     "bytes": 206
+     "bytes": 173
     }
    ],
    "achados_total": 20,
@@ -372,7 +372,7 @@
     {
      "conselheiro": "redundancia",
      "falha": "CUSTO SEM RETORNO",
-     "prova": "219 s na última leitura sem achado",
+     "prova": "142 s na última leitura sem achado",
      "melhoria": "reduzir páginas por leitura ou a cadência; transferir o tempo para motores que rendem"
     }
    ]
@@ -382,19 +382,19 @@
    "tipo": "diario_oficial",
    "saude": [
     {
-     "url": "https://www.in.gov.br/leiturajornal?data=21-10-2026&secao=do1",
+     "url": "https://www.in.gov.br/leiturajornal?data=22-10-2026&secao=do1",
      "http": 200,
      "bytes": 0
     },
     {
-     "url": "https://www.in.gov.br/leiturajornal?data=21-10-2026&secao=do3",
+     "url": "https://www.in.gov.br/leiturajornal?data=22-10-2026&secao=do3",
      "http": 200,
      "bytes": 0
     }
    ],
    "achados_total": 27,
    "valor": "ruído",
-   "achados_30d": 27,
+   "achados_30d": 26,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -416,17 +416,17 @@
     {
      "url": "https://portal.al.go.leg.br/",
      "http": 200,
-     "bytes": 132941
+     "bytes": 133445
     },
     {
      "url": "https://portal.al.go.leg.br/credenciamento-imprensa",
      "http": 200,
-     "bytes": 102797
+     "bytes": 102775
     }
    ],
    "achados_total": 3,
    "valor": "baixo volume",
-   "achados_30d": 7,
+   "achados_30d": 5,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -436,7 +436,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "89 leituras vazias seguidas",
+     "prova": "90 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -448,7 +448,13 @@
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
-     "bytes": 13118,
+     "bytes": 284560,
+     "itens": 22
+    },
+    {
+     "url": "https://www.goiania.go.leg.br",
+     "http": 200,
+     "bytes": 13334,
      "itens": 0
     }
    ],
@@ -470,7 +476,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "137 leituras vazias seguidas",
+     "prova": "138 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -529,7 +535,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CEGO",
-     "prova": "respondeu 200 em 15 de 30 dias e não achou nada em 30 dias",
+     "prova": "respondeu 200 em 14 de 30 dias e não achou nada em 30 dias",
      "melhoria": "conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)"
     },
     {
@@ -541,7 +547,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "82 leituras vazias seguidas",
+     "prova": "83 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -1996,7 +2002,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 10 dias",
+     "prova": "o mesmo achado repetido em 11 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     },
     {
@@ -2018,19 +2024,19 @@
    "tipo": "plataforma",
    "saude": [
     {
-     "url": "https://captadores.org.br/editais/",
+     "url": "https://captadores.org.br/transparencia",
      "http": 200,
-     "bytes": 139061
+     "bytes": 120424
     },
     {
-     "url": "https://www.alcoa.com/brasil/pt/institute/local-project-support-program",
+     "url": "https://captadores.org.br/noticias",
      "http": 200,
-     "bytes": 48554
+     "bytes": 140728
     }
    ],
-   "achados_total": 54,
+   "achados_total": 59,
    "valor": "ruído",
-   "achados_30d": 250,
+   "achados_30d": 255,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -2040,7 +2046,7 @@
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "54 achados e nenhuma oportunidade confirmada",
+     "prova": "59 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     },
     {
@@ -2522,7 +2528,7 @@
     {
      "url": "https://www.cnj.jus.br/",
      "http": 200,
-     "bytes": 1621932,
+     "bytes": 1621944,
      "itens": 48
     }
    ],
@@ -2538,7 +2544,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "30 leituras vazias seguidas",
+     "prova": "31 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -2572,13 +2578,13 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CEGO",
-     "prova": "respondeu 200 em 19 de 19 dias e não achou nada em 30 dias",
+     "prova": "respondeu 200 em 20 de 20 dias e não achou nada em 30 dias",
      "melhoria": "conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)"
     },
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "90 leituras vazias seguidas",
+     "prova": "91 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -4057,7 +4063,7 @@
     {
      "url": "https://www.cnj.jus.br/",
      "http": 200,
-     "bytes": 1621932,
+     "bytes": 1621944,
      "itens": 48
     }
    ],
@@ -4073,7 +4079,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "70 leituras vazias seguidas",
+     "prova": "71 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -4508,14 +4514,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.bndes.gov.br/wps/portal/site/home/onde-atuamos/social/!ut/p/z1/fY6xDoIwEIZ3noKFkVyNBuOIYmKUiGPpQipULUIP7GF8fIGgbi73XfLfd_lBOK7rOMB79Ms0PgRh5FNfJWk0sgIOqQiyeHXY7hYJi5OILVkYbYLjKZjP2HoG-1H8-cOH_wafjOn8C0h12bYiBJGjIfUi4GdTKJtpY0lTl4-NPHbDWnkM-8iX1Mkarccs5nrIVKFJVn7zwFIRWv9S5BKau0jfFZMM9Q!!/",
+     "url": "https://ovetor.com.br/ampliacao-do-acesso-a-alimentos-governo-de-goias-seleciona-propostas-para-fortalecimento-da-agricultura-familiar/",
      "http": 200,
-     "bytes": 88185
+     "bytes": 74601
     },
     {
-     "url": "https://fundopositivo.org.br/editais/",
+     "url": "https://www.ghc.com.br/contratacoesdiretas",
      "http": 200,
-     "bytes": 194386
+     "bytes": 506564
     }
    ],
    "achados_total": 189,
@@ -4540,14 +4546,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.sicredi.com.br/media/produtos/filer_public/2024/01/05/plano-de-trabalho-termo-de-fomento-municipio-de-planaltopufv2024.pdf",
+     "url": "https://conexoes.bndes.gov.br/chamadas-e-editais",
      "http": 200,
-     "bytes": 195520
+     "bytes": 20622
     },
     {
-     "url": "https://periferiasfortes.phi.org.br/",
+     "url": "https://colinasdosul.go.gov.br/",
      "http": 200,
-     "bytes": 308124
+     "bytes": 206648
     }
    ],
    "achados_total": 20,
@@ -4556,7 +4562,7 @@
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "terça"
+    "dia_forte": "quinta"
    },
    "falhas": [
     {
@@ -4572,14 +4578,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
+     "url": "https://www.fcw.org.br/premio-fotografia-2026",
+     "http": 200,
+     "bytes": 907039
+    },
+    {
      "url": "https://festivalnortedanca.org/",
      "http": 200,
      "bytes": 111961
-    },
-    {
-     "url": "https://institutoalcoa.sponsor.com/",
-     "http": 200,
-     "bytes": 5848
     }
    ],
    "achados_total": 78,
@@ -4610,14 +4616,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://acessoainformacao.palmas.to.gov.br/cidadao/outras_informacoes/sg_execucao_orcamentaria",
-     "http": 200,
-     "bytes": 47280
-    },
-    {
      "url": "https://portaldoss.com.br/edital-criancas-adolescentes-conanda-2026/",
      "http": 200,
      "bytes": 209231
+    },
+    {
+     "url": "https://www.comunidadesicoob.com.br/responsabilidade-social/programas-e-projetos/desenvolvimento-sustentavel/edital-projetos-sociais/",
+     "http": 200,
+     "bytes": 110566
     }
    ],
    "achados_total": 54,
@@ -4642,14 +4648,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.bondinho.com.br",
-     "http": 200,
-     "bytes": 207987
-    },
-    {
      "url": "http://admin.adjorisc.com.br/data/ccj/304/temp/304_35.pdf",
      "http": 200,
      "bytes": 2376096
+    },
+    {
+     "url": "https://www.ekloos.org/periferiasfortes",
+     "http": 200,
+     "bytes": 1880491
     }
    ],
    "achados_total": 46,
@@ -4680,14 +4686,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.ibermusicas.org/index.php/convocatorias/",
+     "url": "https://www.doccoimbra.com/",
      "http": 200,
-     "bytes": 112708
+     "bytes": 1879692
     },
     {
-     "url": "https://difusionconcausa.com/convocatorias/",
+     "url": "https://portal-api.sinir.gov.br/wp-content/uploads/2025/01/AnexoIXEditalFNMA_SQA1de2024MINUTATermodeColaboracao-1.pdf",
      "http": 200,
-     "bytes": 191188
+     "bytes": 789776
     }
    ],
    "achados_total": 98,
@@ -4778,14 +4784,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "http://fapespa.pa.gov.br",
+     "url": "https://comitedeculturasc.org/editais",
      "http": 200,
-     "bytes": 294264
+     "bytes": 171705
     },
     {
-     "url": "https://www.fundopositivoprojetos.org.br/Edital/Details/63",
+     "url": "https://contato.sebraesp.com.br/credenciamento/",
      "http": 200,
-     "bytes": 12626
+     "bytes": 70897
     }
    ],
    "achados_total": 29,
@@ -4816,14 +4822,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://rit.org.br/busca-de-chamadas-abertas-conselho-nacional-de-desenvolvimento/",
+     "url": "https://www.saude.mg.gov.br/transparencia/",
      "http": 200,
-     "bytes": 130897
+     "bytes": 394247
     },
     {
-     "url": "https://portaldatransparencia.gov.br/",
+     "url": "https://www.ipora.pr.gov.br/",
      "http": 200,
-     "bytes": 746300
+     "bytes": 103070
     }
    ],
    "achados_total": 1,

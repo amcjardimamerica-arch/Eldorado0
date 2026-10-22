@@ -111,8 +111,8 @@
   },
   {
    "motor": "plat-empresas-editais-incentivados",
-   "achados_total_1a": 54,
-   "achados_total_agora": 54,
+   "achados_total_1a": 59,
+   "achados_total_agora": 59,
    "no_fluxo": 0,
    "confirmadas": 0
   },
@@ -201,7 +201,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 33437
+ "exemplos_da_rede_de_rotas": 33525
 }
 ```
 
@@ -247,7 +247,7 @@
  "dia_de_referencia": "2026-10-22",
  "ativos": 172,
  "lidos_ontem": 19,
- "lidos_hoje": 0,
+ "lidos_hoje": 17,
  "nao_lidos_ontem_nem_hoje": [
   "do-goiania",
   "f260-captacao-001",
@@ -330,7 +330,7 @@
   "Cartório (site oficial certificado)": 190,
   "Espião (privado/internacional)": 48
  },
- "lidas_nas_ultimas_24h": 137,
+ "lidas_nas_ultimas_24h": 136,
  "dimensionamento": {
   "fontes": 404,
   "sites_por_execucao": 17,
@@ -346,44 +346,44 @@
  },
  "clones_que_ja_leram": {
   "outras-oportunidades-1": {
-   "ultima": "2026-10-21T11:51:44+00:00",
-   "duracao_s": 88,
-   "achados": 46
+   "ultima": "2026-10-22T11:54:05+00:00",
+   "duracao_s": 72,
+   "achados": 50
   },
   "outras-oportunidades-3": {
-   "ultima": "2026-10-21T11:54:06+00:00",
-   "duracao_s": 68,
-   "achados": 1
+   "ultima": "2026-10-22T11:57:06+00:00",
+   "duracao_s": 85,
+   "achados": 7
   },
   "outras-oportunidades-4": {
-   "ultima": "2026-10-21T11:55:31+00:00",
-   "duracao_s": 84,
+   "ultima": "2026-10-22T11:58:17+00:00",
+   "duracao_s": 71,
    "achados": 3
   },
   "outras-oportunidades-5": {
-   "ultima": "2026-10-21T11:57:23+00:00",
-   "duracao_s": 112,
-   "achados": 2
+   "ultima": "2026-10-22T11:59:56+00:00",
+   "duracao_s": 98,
+   "achados": 1
   },
   "outras-oportunidades-6": {
-   "ultima": "2026-10-21T11:58:31+00:00",
-   "duracao_s": 69,
+   "ultima": "2026-10-22T12:01:12+00:00",
+   "duracao_s": 76,
    "achados": 0
   },
   "outras-oportunidades-7": {
-   "ultima": "2026-10-21T11:59:53+00:00",
-   "duracao_s": 81,
-   "achados": 10
+   "ultima": "2026-10-22T12:02:50+00:00",
+   "duracao_s": 98,
+   "achados": 11
   },
   "outras-oportunidades-8": {
-   "ultima": "2026-10-21T12:01:16+00:00",
-   "duracao_s": 84,
-   "achados": 2
+   "ultima": "2026-10-22T12:03:39+00:00",
+   "duracao_s": 49,
+   "achados": 1
   },
   "outras-oportunidades-2": {
-   "ultima": "2026-10-21T11:52:58+00:00",
-   "duracao_s": 75,
-   "achados": 1
+   "ultima": "2026-10-22T11:55:41+00:00",
+   "duracao_s": 95,
+   "achados": 0
   }
  },
  "com_achado": 60
