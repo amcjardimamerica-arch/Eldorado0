@@ -1,5 +1,5 @@
 {
- "em": "2026-10-22T22:34:28+00:00",
+ "em": "2026-10-22T22:53:49+00:00",
  "finalidade": {
   "sistemas": [
    {
@@ -87,7 +87,7 @@
     {
      "id": "do-goiania",
      "nome": "Diário Oficial do Município de Goiânia",
-     "resultado": "falha — não lê há 2 dia(s) (58 h); última leitura 20/10 08:52"
+     "resultado": "falha — não lê há 2 dia(s) (59 h); última leitura 20/10 08:52"
     },
     {
      "id": "pncp-api",
@@ -132,7 +132,7 @@
     {
      "id": "prefeituras-50-go",
      "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
-     "resultado": "falha — não lê há 4 dia(s) (111 h); última leitura 18/10 03:49"
+     "resultado": "falha — não lê há 4 dia(s) (112 h); última leitura 18/10 03:49"
     },
     {
      "id": "estaduais-go-gov",
@@ -147,7 +147,7 @@
      "resultado": "funcionando — última leitura 22/10 09:06 · 21 achado(s) (atenção: 3 página(s) com falha; as demais foram lidas)"
     }
    ],
-   "status_em": "2026-10-22T19:34-03:00",
+   "status_em": "2026-10-22T19:53-03:00",
    "auditoria": {
     "em": "2026-10-22T14:25:02+00:00",
     "total": 33,
@@ -161,17 +161,17 @@
    }
   },
   "maestro": {
-   "em": "2026-10-22T15:41:52+00:00",
-   "planejados": 129,
-   "cobertura_percentual": 6.2,
+   "em": "2026-10-22T22:47:58+00:00",
+   "planejados": 127,
+   "cobertura_percentual": 6.3,
    "cobertura": {
-    "pendente": 110,
+    "pendente": 108,
     "completa": 8,
     "parcial": 11
    },
    "dia_fechado": false,
    "esgotaram_tentativas": 0,
-   "a_disparar": 121
+   "a_disparar": 119
   },
   "rede_neural": {
    "em": "2026-10-18T03:51:17+00:00",
@@ -228,7 +228,7 @@
   "pilotos": {
    "interceptador": {
     "estado": "em atividade",
-    "ultimo_voo": "2026-10-22T22:23:11+00:00",
+    "ultimo_voo": "2026-10-22T22:33:01+00:00",
     "contagem": {
      "desde": "2026-10-19T03:00:00+00:00",
      "zerada_em": "2026-10-19T08:59:43+00:00",
@@ -237,8 +237,8 @@
     }
    },
    "espiao": {
-    "em": "2026-10-22T22:25:18+00:00",
-    "voos": 1203,
+    "em": "2026-10-22T22:40:16+00:00",
+    "voos": 1204,
     "empresas_novas": 247
    }
   },
@@ -277,16 +277,16 @@
    "sem_nada_na_base": 25
   },
   "fluxos_github": {
-   "total": 5,
+   "total": 7,
    "com_falha": []
   },
   "sala_controle": {
-   "em": "2026-10-22T22:34:05+00:00",
-   "indice_saude": 54,
+   "em": "2026-10-22T22:53:32+00:00",
+   "indice_saude": 56,
    "contagem": {
-    "verde": 15,
+    "verde": 16,
     "amarelo": 3,
-    "vermelho": 18,
+    "vermelho": 17,
     "cinza": 0
    }
   }
@@ -337,13 +337,13 @@
   },
   "idade_horas": {
    "repositorio": 0.0,
-   "fluxo": 114.7,
+   "fluxo": 115.0,
    "fichas": 0.0,
    "sala_controle": 0.0,
    "status_motores": 0.0,
-   "maestro": 6.9,
-   "rede_neural": 114.7,
-   "saude": 8.2
+   "maestro": 0.1,
+   "rede_neural": 115.0,
+   "saude": 8.5
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -912,10 +912,10 @@
    }
   },
   "maestro": {
-   "planejados": 129,
-   "cobertura_percentual": 6.2,
+   "planejados": 127,
+   "cobertura_percentual": 6.3,
    "cobertura": {
-    "pendente": 110,
+    "pendente": 108,
     "completa": 8,
     "parcial": 11
    },
@@ -1000,8 +1000,8 @@
    "etapa": "decidir",
    "decisao": "motores escolhidos para ler na passagem",
    "regra": "todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
-   "conferidos": 129,
-   "incorretos": 121,
+   "conferidos": 127,
+   "incorretos": 119,
    "veredito": "incorreto",
    "exemplos": [
     "plat-piloto-aberto",
@@ -1089,7 +1089,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 92.9 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 93.3 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1114,7 +1114,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 2 dia(s) (58 h); última leitura 20/10 08:52",
+   "texto": "motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 2 dia(s) (59 h); última leitura 20/10 08:52",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1186,7 +1186,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 4 dia(s) (111 h); última leitura 18/10 03:49",
+   "texto": "motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 4 dia(s) (112 h); última leitura 18/10 03:49",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1222,23 +1222,15 @@
   {
    "codigo": "atrasado_fluxo",
    "gravidade": "media",
-   "texto": "fluxo sem atualização há 114.7 h (limite 3 h)",
+   "texto": "fluxo sem atualização há 115.0 h (limite 3 h)",
    "correcao": "refazer a tela",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "atrasado_maestro",
-   "gravidade": "media",
-   "texto": "maestro sem atualização há 6.9 h (limite 3 h)",
-   "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
   },
   {
    "codigo": "atrasado_rede_neural",
    "gravidade": "media",
-   "texto": "rede_neural sem atualização há 114.7 h (limite 26 h)",
+   "texto": "rede_neural sem atualização há 115.0 h (limite 26 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1246,9 +1238,9 @@
   {
    "codigo": "decisao_decidir",
    "gravidade": "media",
-   "texto": "[decidir] motores escolhidos para ler na passagem: 121 de 129 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
+   "texto": "[decidir] motores escolhidos para ler na passagem: 119 de 127 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
    "correcao": "investigar o comando (sem correção automática)",
-   "quantidade": 121,
+   "quantidade": 119,
    "exemplos": [
     "plat-piloto-aberto",
     "pncp-api",
@@ -1396,7 +1388,7 @@
  ],
  "contagem_problemas": {
   "alta": 15,
-  "media": 13,
+  "media": 12,
   "baixa": 2
  },
  "corrigiveis": [
