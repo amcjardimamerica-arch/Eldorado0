@@ -1,6 +1,6 @@
-# Diagnóstico do sistema · 2026-10-22 09:00 UTC
+# Diagnóstico do sistema · 2026-10-22 10:27 UTC
 
-## Cumprimento da finalidade · índice geral 53%
+## Cumprimento da finalidade · índice geral 58%
 - Motores: 74% (atencao) — todo motor ativo lê dentro da sua cadência
 - Maestro: 0% (falha) — cobertura completa do dia planejado
 - Rede neural: 99% (ok) — discernimento (AUC) de pelo menos 0,85
@@ -11,25 +11,54 @@
 - Cartório: 66% (falha) — 12 de 12 itens certificados na fonte oficial
 - Tela e fichas: 94% (atencao) — tudo que está aberto aparece na tela e tem ficha
 - Integração: 30% (falha) — mesmas contagens e dados em dia em todos os sistemas
-- Fluxos automáticos: 57% (falha) — todo fluxo agendado roda na cadência e sem falha
-- Execução sem falha silenciosa: 0% (falha) — nenhuma etapa falha em silêncio
+- Fluxos automáticos: —% (sem_dados) — todo fluxo agendado roda na cadência e sem falha
+- Execução sem falha silenciosa: —% (sem_dados) — nenhuma etapa falha em silêncio
 
-## Execução · fluxos: {'falha': 3, 'atrasado': 4, 'ok': 30, 'atencao': 5, 'manual': 2}
-- 00 · Verificar prontidão: falha · última 2026-10-21T14:28 · sucesso 0% · cadência 24.0 h
-- acesso-mensal: atrasado · última 2026-09-01T09:14 · sucesso 100% · cadência 24.0 h
-- 35 · Alimentação diária externa (editais abertos): atencao · última 2026-10-21T14:38 · sucesso 60% · cadência 24.0 h
-- 06 · Alimentação manual (arquivos e links do titular): atencao · última 2026-10-17T18:15 · sucesso 40% · cadência None h
-- 05 · Busca ativa (a cada 3 dias): atencao · última 2026-10-15T17:32 · sucesso 10% · cadência None h
-- 09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes: atrasado · última 2026-10-03T11:56 · sucesso 100% · cadência 24.0 h
-- 10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar: atencao · última 2026-10-15T16:09 · sucesso 25% · cadência None h
-- 08 · Pacote do conselho (validação do Claude a cada 3 dias): atrasado · última 2026-10-16T11:47 · sucesso 100% · cadência 24.0 h
-- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: falha · última 2026-10-22T08:43 · sucesso 0% · cadência 1.0 h
-- 34 · Motores de empresas (semanal, com recuperação): atencao · última 2026-10-21T12:03 · sucesso 78% · cadência 24.0 h
-- 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): falha · última 2026-10-22T04:16 · sucesso 0% · cadência 6.0 h
-- 02 · Alexandria — revisão mensal de leis e procedimentos: atrasado · última 2026-10-01T10:36 · sucesso 50% · cadência 24.0 h
-- falha silenciosa em motores-da-vez.yml: NameError: name 'fases' is not defined | NameError: name 'ferramentas' is not defined | Traceback (most recent call last):
-- falha silenciosa em motor-agregadores.yml: mapa: falhou
-- falha silenciosa em monitoramento-diario.yml: "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-in
+## Execução · fluxos: {'sem_dados': 44} · SEM TOKEN: fluxos e falhas silenciosas não lidos
+- 00 · Verificar prontidão: sem_dados · última — · sucesso None% · cadência 24.0 h
+- acesso-mensal: sem_dados · última — · sucesso None% · cadência 24.0 h
+- 08 · Agenda dos motores — cada motor na hora em que sua fonte publica: sem_dados · última — · sucesso None% · cadência None h
+- 35 · Alimentação diária externa (editais abertos): sem_dados · última — · sucesso None% · cadência 24.0 h
+- 06 · Alimentação manual (arquivos e links do titular): sem_dados · última — · sucesso None% · cadência None h
+- 36 · Análise do sistema (diagnóstico único e correção): sem_dados · última — · sucesso None% · cadência None h
+- 14 · Arquivo frio — dados grandes e esporádicos para a Release do GitHub e o Google Drive: sem_dados · última — · sucesso None% · cadência 168.0 h
+- 28 · Atualizar a Biblioteca (completa, numa só execução): sem_dados · última — · sucesso None% · cadência None h
+- 39 · Avaliação do Cartório com gabarito: sem_dados · última — · sucesso None% · cadência 168.0 h
+- 05 · Busca ativa (a cada 3 dias): sem_dados · última — · sucesso None% · cadência None h
+- 30 · Cartório de fontes oficiais (certifica o que falta nas estrelas e nos livros): sem_dados · última — · sucesso None% · cadência None h
+- 25 · Certificado intermediário do SUAP (Câmara de Goiânia): sem_dados · última — · sucesso None% · cadência None h
+- 09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes: sem_dados · última — · sucesso None% · cadência 24.0 h
+- 26 · Coleta das páginas dos livros (verificação por blocos): sem_dados · última — · sucesso None% · cadência None h
+- 10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar: sem_dados · última — · sucesso None% · cadência None h
+- 08 · Pacote do conselho (validação do Claude a cada 3 dias): sem_dados · última — · sucesso None% · cadência 24.0 h
+- 33 · Decisão da titular sobre uma oportunidade: sem_dados · última — · sucesso None% · cadência None h
+- 18 · Diagnóstico da busca do Espião: sem_dados · última — · sucesso None% · cadência None h
+- 41 · Diagnóstico da ponte Brasil: sem_dados · última — · sucesso None% · cadência None h
+- 27 · Executor documental dos motores (robôs; o Claude no Chrome é o último recurso): sem_dados · última — · sucesso None% · cadência 24.0 h
+- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: sem_dados · última — · sucesso None% · cadência 1.0 h
+- 11 · Piloto - Interceptador (botão) — comprova os dados de um edital na fonte oficial: sem_dados · última — · sucesso None% · cadência None h
+- 19 · Medição dos limites de busca: sem_dados · última — · sucesso None% · cadência None h
+- 01 · Eldorado — motores por hora (00h–06h BRT): sem_dados · última — · sucesso None% · cadência 24.0 h
+- 16 · Motores indexadores (feeds, APIs, sitemaps, listagens, dados abertos, ponte Brasil, coleta assistida): sem_dados · última — · sucesso None% · cadência 3.0 h
+- 31 · Motor ligado/desligado no fogo do painel: sem_dados · última — · sucesso None% · cadência None h
+- 22 · Motores da vez — cada passagem calcula sozinha o que está pendente (agenda + maestro): sem_dados · última — · sucesso None% · cadência 1.0 h
+- 34 · Motores de empresas (semanal, com recuperação): sem_dados · última — · sucesso None% · cadência 24.0 h
+- 07 · Piloto — IA local da Biblioteca (benchmark e ciclos): sem_dados · última — · sucesso None% · cadência 2.0 h
+- 04 · Publicar painel Eldorado: sem_dados · última — · sucesso None% · cadência 6.0 h
+- 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): sem_dados · última — · sucesso None% · cadência 6.0 h
+- 02 · Alexandria — revisão mensal de leis e procedimentos: sem_dados · última — · sucesso None% · cadência 24.0 h
+- 37 · Sala de controle em tempo real: sem_dados · última — · sucesso None% · cadência 0.16666666666666666 h
+- 00 · Sentinela diária de editais: sem_dados · última — · sucesso None% · cadência 24.0 h
+- 15 · Sondagem dos agregadores de editais: sem_dados · última — · sucesso None% · cadência None h
+- 17 · Sondagem das fontes com falha: sem_dados · última — · sucesso None% · cadência None h
+- 13 · Sondagem das fontes de destinação tributária (Receita Federal e histórico da Lei do Esporte): sem_dados · última — · sucesso None% · cadência None h
+- 13 · Sondagem dos Ministérios Públicos (motor 12 — MP-GO/Destina, MPT-GO, MPU): sem_dados · última — · sucesso None% · cadência None h
+- 21 · Status dos motores (a cada 6 horas): sem_dados · última — · sucesso None% · cadência 4.0 h
+- 23 · Teste de acionamento dos motores (um por vez, na ordem do painel): sem_dados · última — · sucesso None% · cadência None h
+- 24 · Teste da ponte Hostgator (páginas e motores que bloqueiam a nuvem): sem_dados · última — · sucesso None% · cadência None h
+- 38 · Treino dos motores — fonte oficial e PDF do edital: sem_dados · última — · sucesso None% · cadência 168.0 h
+- 40 · Varredura de referência dos motores (Goiânia, Goiás, Câmara, ALEGO): sem_dados · última — · sucesso None% · cadência None h
+- 29 · Zerar contagem dos Pilotos (a pedido da titular): sem_dados · última — · sucesso None% · cadência None h
 
 ## Sala de controle · 36 indicadores · atualizada há 0.0 h
 - divergências com a fonte: nenhuma
@@ -46,56 +75,47 @@
 
 ## Sistemas
 - motores: 32 funcionando · 11 em falha · 2 inativos · 0 com leitura parcial
-  - em falha: Diário Oficial do Município de Goiânia — falha — não lê há 1 dia(s) (45 h); última leitura 20/10 08:52
-  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 4 dia(s) (101 h); última leitura 18/10 00:25
-  - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 4 dia(s) (100 h); última leitura 18/10 01:27
-  - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 4 dia(s) (100 h); última leitura 18/10 01:29
-  - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 4 dia(s) (100 h); última leitura 18/10 01:29
-  - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 4 dia(s) (98 h); última leitura 18/10 03:55
-  - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 4 dia(s) (98 h); última leitura 18/10 03:54
-  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (97 h); última leitura 18/10 04:07
-  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 4 dia(s) (98 h); última leitura 18/10 03:49
-  - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (100 h); última leitura 18/10 01:56
-  - em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 4 dia(s) (117 h); última leitura 17/10 08:29
+  - em falha: Diário Oficial do Município de Goiânia — falha — não lê há 1 dia(s) (46 h); última leitura 20/10 08:52
+  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 4 dia(s) (103 h); última leitura 18/10 00:25
+  - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 4 dia(s) (101 h); última leitura 18/10 01:27
+  - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 4 dia(s) (101 h); última leitura 18/10 01:29
+  - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 4 dia(s) (101 h); última leitura 18/10 01:29
+  - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 4 dia(s) (99 h); última leitura 18/10 03:55
+  - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 4 dia(s) (99 h); última leitura 18/10 03:54
+  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (99 h); última leitura 18/10 04:07
+  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 4 dia(s) (99 h); última leitura 18/10 03:49
+  - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (101 h); última leitura 18/10 01:56
+  - em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 4 dia(s) (118 h); última leitura 17/10 08:29
 - maestro: cobertura 0.0% · esgotados 0
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
-- Cartório: 0.6646 certificado · fluxos do GitHub com falha: []
-- saúde: 6 alerta(s) · índice da sala de controle: 54
+- Cartório: 0.6646 certificado · fluxos do GitHub com falha: ['12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos']
+- saúde: 6 alerta(s) · índice da sala de controle: 53
 
 ## Integração
 - contagens: {'repositorio_abertas': 226, 'diagnostico_abertas': 226, 'tela_cartoes': 224, 'fichas': 234, 'sala_controle_abertas': 226}
-- idade (h): {'repositorio': 0.0, 'fluxo': 101.1, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 2.9, 'rede_neural': 101.1, 'saude': 18.6}
+- idade (h): {'repositorio': 0.0, 'fluxo': 102.6, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 4.3, 'rede_neural': 102.6, 'saude': 20.1}
 - decisões da titular: 0 · não aplicadas: 0
 
-## Problemas (39)
-- [alta] o comando único não fecha um ciclo há 79.4 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
-- [alta] 3 etapa(s) falharam em silêncio na última execução de motores-da-vez.yml: NameError: name 'fases' is not defined | NameError: name 'ferramentas' is not defined | Traceback (most recent call last): → investigar a etapa (sem correção automática)
-- [alta] 1 etapa(s) falharam em silêncio na última execução de motor-agregadores.yml: mapa: falhou → investigar a etapa (sem correção automática)
-- [alta] 9 etapa(s) falharam em silêncio na última execução de monitoramento-diario.yml: "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu → investigar a etapa (sem correção automática)
-- [alta] fluxo '00 · Verificar prontidão' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
-- [alta] fluxo '12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
-- [alta] fluxo '03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
+## Problemas (30)
+- [alta] o comando único não fecha um ciclo há 80.8 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
-- [alta] motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 1 dia(s) (45 h); última leitura 20/10 08:52 → investigar o motor (sem correção automática)
-- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 4 dia(s) (101 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 4 dia(s) (100 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 4 dia(s) (100 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 4 dia(s) (100 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 4 dia(s) (98 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 4 dia(s) (98 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (97 h); última leitura 18/10 04:07 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 4 dia(s) (98 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (100 h); última leitura 18/10 01:56 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 4 dia(s) (117 h); última leitura 17/10 08:29 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 1 dia(s) (46 h); última leitura 20/10 08:52 → investigar o motor (sem correção automática)
+- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 4 dia(s) (103 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 4 dia(s) (101 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 4 dia(s) (101 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 4 dia(s) (101 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 4 dia(s) (99 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 4 dia(s) (99 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (99 h); última leitura 18/10 04:07 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 4 dia(s) (99 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (101 h); última leitura 18/10 01:56 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 4 dia(s) (118 h); última leitura 17/10 08:29 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 226 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 101.1 h (limite 3 h) → refazer a tela
-- [media] rede_neural sem atualização há 101.1 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 102.6 h (limite 3 h) → refazer a tela
+- [media] maestro sem atualização há 4.3 h (limite 3 h) → ver o fluxo que gera este dado
+- [media] rede_neural sem atualização há 102.6 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 131 de 131 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
-- [media] fluxo 'acesso-mensal' sem rodar há 1223.8 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 453.1 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '08 · Pacote do conselho (validação do Claude a cada 3 dias)' sem rodar há 141.2 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
-- [media] fluxo '02 · Alexandria — revisão mensal de leis e procedimentos' sem rodar há 502.4 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 95 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 240 item(ns) esperando a análise do Claude (próxima: 2026-10-21) → ver o fluxo/arquivo indicado
