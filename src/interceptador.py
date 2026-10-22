@@ -26,6 +26,12 @@ from pathlib import Path
 from .investigador import DOZE, investigar_um, registro
 from .nucleo import load_json, now_iso, write_json
 
+
+def _op(i) -> str:
+    """22/10/2026: o identificador do alvo de livro recebe o prefixo "op-" uma única vez (havia "op-op-…")."""
+    i = str(i)
+    return i if i.startswith("op-") else "op-" + i
+
 ROOT = Path(__file__).resolve().parents[1]
 FILA = ROOT / "biblioteca_alexandria/livros/especiais/espiao/fila_resgate.json"
 ESTADO = ROOT / "estado/interceptador/estado.json"          # pasta PRÓPRIA: o Espião nunca a toca
@@ -463,7 +469,7 @@ def _proximo_alvo_base() -> dict | None:
         return {"id": x["id"], "titulo": x.get("titulo"), "url": x.get("link_oficial") or x.get("url"), "de": de, "modo": "validar", "tipo": "edital", "uf": uf}
 
     def alvo_livro(x, de):
-        oid = "op-" + x["id"]
+        oid = _op(x["id"])
         arq = ROOT / "dados/editais/extraidos" / f"{oid}.json"
         if not arq.exists():
             write_json(arq, {"edital_id": oid, "titulo": x.get("nome_classificado") or x.get("programa"), "url": x.get("pagina"), "orgao": x.get("orgao"), "origem": de, "livro": x["id"]})
@@ -477,7 +483,7 @@ def _proximo_alvo_base() -> dict | None:
         cat = []
     def precisa(x):
         p = x.get("parametros") or {}
-        return x.get("pagina") and x.get("ativa") not in (False, "False") and x.get("papel") != "fonte_de_busca" and not recente("op-" + x["id"]) \
+        return x.get("pagina") and x.get("ativa") not in (False, "False") and x.get("papel") != "fonte_de_busca" and not recente(_op(x["id"])) \
             and (not p or str(p.get("decisao") or "") == "P" or str(x.get("validacao")) in ("não lida ainda", "None", ""))
     # 01/10: RESTRIÇÕES FIXAS (só negativas) e ESTRATÉGIA CRIATIVA (foco de área, trocado a cada 100 estudos)
     _pi = _par().get("interceptador") or {}; _rf = _pi.get("restricoes_fixas") or {}
@@ -485,7 +491,7 @@ def _proximo_alvo_base() -> dict | None:
     _foco = (_pi.get("estrategia_criativa") or {}).get("foco_area")
     def _barrado(i, url, tit=""):
         h = re.sub(r"^www\.", "", (re.sub(r"^https?://", "", str(url or "")).split("/")[0]).lower())
-        return i in _proib or "op-" + str(i) in _proib or re.sub(r"\W+", "", str(tit).lower())[:60] in _proib or (h and h in _ileg)
+        return i in _proib or _op(i) in _proib or re.sub(r"\W+", "", str(tit).lower())[:60] in _proib or (h and h in _ileg)
     livros = [x for x in cat if precisa(x) and not _barrado(x["id"], x.get("pagina"), x.get("programa"))]
     ordem_livro = lambda x: (not x.get("aberta_agora"), x.get("objeto_area") != _foco, x.get("regime_inscricao") != "anual", str(x.get("nome_classificado") or ""))
     ordem_fluxo = lambda kx: (str(kx[1].get("fim") or "9999") < hoje, str(kx[1].get("fim") or "9999"))
@@ -522,7 +528,7 @@ def _proximo_alvo_base() -> dict | None:
         _por_id = {x.get("id"): x for x in cat}
         for _f in ((load_json(ROOT / "docs/dados/esteira.json") or {}).get("filas") or {}).get("bronze") or []:
             _x = _por_id.get(_f.get("livro"))
-            if _x and _x.get("pagina") and not recente(f"op-{_x['id']}") and not recente(_x["id"]) and not _barrado(_x["id"], _x.get("pagina"), _x.get("programa")):
+            if _x and _x.get("pagina") and not recente(_op(_x['id'])) and not recente(_x["id"]) and not _barrado(_x["id"], _x.get("pagina"), _x.get("programa")):
                 _bronze.append(_x); _tent[_x["id"]] = _f.get("tentativa") or 1
     except Exception:  # noqa: BLE001 — a esteira nunca impede o voo
         _bronze = []
@@ -616,7 +622,7 @@ def livros_sem_leitura(maximo: int = 40) -> list[dict]:
         if chave in vistos:                      # 'Convênios e parcerias' criado 4 vezes: estuda uma
             continue
         vistos.add(chave)
-        out.append({"id": "op-" + x["id"], "livro_vinculado": x["id"], "titulo": f"{x.get('programa')} — {x.get('orgao')}"[:160], "url": pag,
+        out.append({"id": _op(x["id"]), "livro_vinculado": x["id"], "titulo": f"{x.get('programa')} — {x.get('orgao')}"[:160], "url": pag,
                     "de": "livro sem leitura", "orgao": x.get("orgao")})
         if len(out) >= maximo:
             break
@@ -784,8 +790,16 @@ def voo(ia) -> dict:
         par = parecer_fonte(ia, reg.get("titulo") or a.get("titulo") or "", inv) if inv.get("campos") else {}
         inv["qualidade"] = q; inv["parecer_fonte"] = par
         arq = ROOT / "dados/editais/extraidos" / f"{a['id']}.json"
-        if arq.exists():
-            e = json.loads(arq.read_text(encoding="utf-8")); e["investigacao_ia"] = inv; arq.write_text(json.dumps(e, ensure_ascii=False, indent=1), encoding="utf-8")
+        try:                                   # 22/10: o extraído vive no livro — ler e gravar pelo núcleo (antes se perdia)
+            e = load_json(arq)
+        except (FileNotFoundError, ValueError):
+            e = {}
+        if isinstance(e, dict):
+            e["investigacao_ia"] = inv
+            try:
+                write_json(arq, e)
+            except FileNotFoundError:
+                arq.parent.mkdir(parents=True, exist_ok=True); write_json(arq, e)
         _devolver_a_fila(a, inv); _abate_proprio(reg, inv, a)
         if a.get("livro_vinculado"):
             try:
