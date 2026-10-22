@@ -131,7 +131,9 @@ jobs:
           cp -r estado/interceptador /tmp/int/ 2>/dev/null || true
           mkdir -p /tmp/int/extra && for P in config/parametros_pilotos_fixos.json estado/pilotos docs/dados/achados_pilotos.json config/parametros_pilotos.json estado/aprendizado docs/dados/dossies_empresas.json docs/dados/aprendizado_pilotos.json docs/dados/resgates_piloto.json biblioteca_alexandria/livros/especiais/espiao/fila_do_claude.json; do [ -e "$P" ] && cp -r --parents "$P" /tmp/int/extra/; done; true   # 17/10: + fila de resgate publicada
           for f in $(git diff --name-only -- dados/editais/extraidos biblioteca_alexandria/livros/anexos docs/dados/esquadrilha.json; git ls-files --others --exclude-standard dados/editais/extraidos biblioteca_alexandria/livros/anexos); do mkdir -p "/tmp/int/$(dirname "$f")"; cp "$f" "/tmp/int/$f"; done
-          for i in 1 2 3 4 5; do
+          # 22/10/2026 (titular: manter o Interceptador gerando aprendizado até a parada do Eldorado0): 10 tentativas com
+          # espera variável; cada tentativa leva segundos, porque os derivados compartilhados não são mais regenerados aqui.
+          for i in 1 2 3 4 5 6 7 8 9 10; do
             git fetch -q origin main && git reset -q --hard origin/main
             cp /tmp/int/interceptador.json docs/dados/ 2>/dev/null || true
             cp /tmp/int/fila_resgate.json biblioteca_alexandria/livros/especiais/espiao/ 2>/dev/null || true
@@ -144,11 +146,11 @@ jobs:
             timeout 120 python -m src.skills.aprendizado >/dev/null 2>&1 || echo 'aprendizado: falhou'   # skill: a cada 100 erros, parâmetros novos
             timeout 60 python -m src.achados_pilotos >/dev/null 2>&1 || echo 'achados por dia: falhou'
             cp biblioteca_alexandria/fontes/motores.json /tmp/catalogo_da_main.json   # 04/10: o catálogo da main ANTES de regenerar
-            timeout 300 python -m src.fluxo_oportunidades --completo >/dev/null 2>&1 || echo "mapa (curadoria + validação + fluxo): falhou"
+            # 22/10: retirado do laço de gravação — o derivado é regenerado pelo ciclo do sistema (decisão de 04/10)
             # 04/10 (titular): o Piloto grava SÓ o livro em que trabalhou — o resto da Biblioteca volta a ser o da main
             timeout 60 python scripts/gravar_so_o_livro.py /tmp/catalogo_da_main.json biblioteca_alexandria/livros/especiais/interceptador/relatorios || cp /tmp/catalogo_da_main.json biblioteca_alexandria/fontes/motores.json   # falhou: nada da Biblioteca muda
-            timeout 120 python -m src.achados_motores >/dev/null 2>&1 || echo "oportunidades por motor: falhou"   # lista única de cada motor, a cada pouso
-            GITHUB_TOKEN="${{ github.token }}" timeout 120 python -m src.saude >/dev/null 2>&1 || echo "saúde: falhou"
+            # 22/10: retirado do laço de gravação — o derivado é regenerado pelo ciclo do sistema (decisão de 04/10)
+            # 22/10: a saúde é regenerada pelo ciclo do sistema (fora do laço de gravação)
             # 04/10 (titular): o Piloto grava SÓ o que é dele e o seu livro — os DERIVADOS (mapa, ligados, preditivo, saúde,
             # achados por motor) ficam com o ciclo do sistema (fluxo 22), que os regenera de forma consistente
             # 30/09: só os caminhos que EXISTEM — "git add" de arquivo inexistente (dossies_empresas.json, ainda sem dossiê) saía com erro e a etapa inteira falhava: nenhum resultado do Interceptador era gravado
@@ -156,7 +158,7 @@ jobs:
             python3 -m src.trava_livros > /dev/null 2>&1 || true   # 17/10: trava dos livros (nada apagado nem sobrescrito)
             git commit -q -m "interceptador: voo $(date -u +%F\ %H:%M)" || { echo "nada a gravar"; ENVIADO=1; break; }
             if git push -q origin main; then echo "gravado ($i)"; ENVIADO=1; break; fi
-            sleep $((i * 5))
+            sleep $(( (RANDOM % 9) + i * 2 ))
           done
           [ "${ENVIADO:-0}" = "1" ] || { echo "::error::não gravou — o resultado está no artefato"; exit 1; }
           curl -s -o /dev/null -w "painel republicado: %{http_code}\n" -X POST -H "Authorization: Bearer ${{ github.token }}" -H "Accept: application/vnd.github+json" \
