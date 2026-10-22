@@ -1083,9 +1083,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-21T23:29:12+00:00",
+  "em": "2026-10-22T01:00:26+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": false
+  "ponte_respondeu": true
  },
  "f260-captacao-238": {
   "em": "2026-10-21T17:23:46+00:00",
@@ -2669,8 +2669,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-234": {
-  "em": "2026-10-21T12:44:17+00:00",
-  "testes": 14,
+  "em": "2026-10-22T01:00:24+00:00",
+  "testes": 21,
   "melhor": null,
   "detalhe": [
    {
@@ -2680,8 +2680,17 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/editais-iu",
+    "origem": "biblioteca",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -2727,29 +2736,27 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutounibanco.org.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/noticias",
+    "url": "https://www.institutounibanco.org.br/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2766,8 +2773,37 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/noticias",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -2788,41 +2824,17 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/chamadas-publicas",
+    "url": "https://www.institutounibanco.org.br/chamamento-publico",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "ErroPonte",
     "funcionou": false
    }
   ],
@@ -6351,7 +6363,7 @@
   "resultado": "rota nova em teste"
  },
  "judiciario-cnj": {
-  "em": "2026-10-21T12:43:45+00:00",
+  "em": "2026-10-22T00:59:40+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://www.cnj.jus.br/editais",
@@ -6431,9 +6443,9 @@
     "url": "https://www.cnj.jus.br/vara-unica-de-acari-rn-destina-r-153-mil-a-projetos-sociais/",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 17,
+    "pontos": 19,
     "links": 447,
-    "sinais": 8,
+    "sinais": 9,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -6442,9 +6454,9 @@
     "url": "https://www.cnj.jus.br/quatro-iniciativas-vencem-premiacao-do-cnj-em-gestao-de-pessoas-do-judiciario",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 13,
+    "pontos": 15,
     "links": 449,
-    "sinais": 6,
+    "sinais": 7,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -6454,7 +6466,7 @@
     "origem": "rota original",
     "via": "direto",
     "pontos": 91,
-    "links": 555,
+    "links": 556,
     "sinais": 45,
     "formato": "html",
     "erro": null,
@@ -6494,23 +6506,23 @@
     "funcionou": true
    },
    {
-    "url": "http://www.cnj.jus.br",
-    "origem": "biblioteca",
+    "url": "https://www.cnj.jus.br/",
+    "origem": "rota original",
     "via": "direto",
-    "pontos": 21,
+    "pontos": 19,
     "links": 713,
-    "sinais": 10,
+    "sinais": 9,
     "formato": "html",
     "erro": null,
     "funcionou": true
    },
    {
-    "url": "https://www.cnj.jus.br/",
-    "origem": "rota original",
+    "url": "http://www.cnj.jus.br",
+    "origem": "biblioteca",
     "via": "direto",
-    "pontos": 21,
+    "pontos": 19,
     "links": 713,
-    "sinais": 10,
+    "sinais": 9,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -8285,16 +8297,16 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-255": {
-  "em": "2026-10-21T12:44:37+00:00",
-  "testes": 20,
+  "em": "2026-10-22T01:00:26+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://www.cjrfund.org/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 1,
-    "links": 103,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -8304,10 +8316,21 @@
     "url": "https://www.cjrfund.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 12,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "sitemap/feed",
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
     "erro": null,
     "funcionou": false
    },
@@ -8318,17 +8341,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -8338,18 +8352,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "json",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 10,
-    "sinais": 0,
-    "formato": "sitemap/feed",
+    "formato": "html",
     "erro": null,
     "funcionou": false
    },
@@ -8360,17 +8363,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/noticias",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -8380,17 +8374,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/edital",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -8400,17 +8385,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -8420,17 +8396,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/chamamento-publico",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -8440,24 +8407,37 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/chamadas-publicas",
+    "url": "https://www.cjrfund.org/chamamentos",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "ErroPonte",
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    }
   ],
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-259": {
-  "em": "2026-10-21T12:43:55+00:00",
+  "em": "2026-10-22T00:59:52+00:00",
   "testes": 20,
   "melhor": null,
   "detalhe": [
@@ -8504,17 +8484,6 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "json",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://echoinggreen.org/feed",
     "origem": "padrão",
     "via": "direto",
@@ -8526,7 +8495,18 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/noticias",
+    "url": "https://echoinggreen.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://echoinggreen.org/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8536,7 +8516,7 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/noticias",
+    "url": "https://echoinggreen.org/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -8546,7 +8526,7 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/editais",
+    "url": "https://echoinggreen.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8556,7 +8536,7 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/editais",
+    "url": "https://echoinggreen.org/noticias",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -9753,7 +9733,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-257": {
-  "em": "2026-10-21T12:44:13+00:00",
+  "em": "2026-10-22T01:00:16+00:00",
   "testes": 20,
   "melhor": null,
   "detalhe": [
@@ -9800,17 +9780,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.rockefellerfoundation.org/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "json",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.rockefellerfoundation.org/feed",
     "origem": "padrão",
     "via": "direto",
@@ -9822,7 +9791,18 @@
     "funcionou": false
    },
    {
-    "url": "https://www.rockefellerfoundation.org/noticias",
+    "url": "https://www.rockefellerfoundation.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.rockefellerfoundation.org/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9832,7 +9812,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.rockefellerfoundation.org/noticias",
+    "url": "https://www.rockefellerfoundation.org/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -9842,7 +9822,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.rockefellerfoundation.org/editais",
+    "url": "https://www.rockefellerfoundation.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9852,7 +9832,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.rockefellerfoundation.org/editais",
+    "url": "https://www.rockefellerfoundation.org/noticias",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -14274,7 +14254,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-232": {
-  "em": "2026-10-21T09:42:46+00:00",
+  "em": "2026-10-22T00:59:11+00:00",
   "testes": 23,
   "melhor": null,
   "detalhe": [
@@ -14290,26 +14270,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutoneoenergia.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutoneoenergia.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutoneoenergia.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -14330,7 +14290,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutoneoenergia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.institutoneoenergia.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -14340,7 +14300,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutoneoenergia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.institutoneoenergia.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -14370,7 +14330,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutoneoenergia.org.br/noticias",
+    "url": "https://www.institutoneoenergia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -14380,7 +14340,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutoneoenergia.org.br/noticias",
+    "url": "https://www.institutoneoenergia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -14401,6 +14361,26 @@
    },
    {
     "url": "https://www.institutoneoenergia.org.br/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/noticias",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/noticias",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
