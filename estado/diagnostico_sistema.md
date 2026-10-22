@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-22 14:56 UTC
+# Diagnóstico do sistema · 2026-10-22 15:29 UTC
 
 ## Cumprimento da finalidade · índice geral 58%
 - Motores: 72% (atencao) — todo motor ativo lê dentro da sua cadência
@@ -76,47 +76,47 @@
 ## Sistemas
 - motores: 31 funcionando · 12 em falha · 2 inativos · 1 com leitura parcial
   - em falha: Diário Oficial do Município de Goiânia — falha — não lê há 2 dia(s) (51 h); última leitura 20/10 08:52
-  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 4 dia(s) (107 h); última leitura 18/10 00:25
-  - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 4 dia(s) (106 h); última leitura 18/10 01:27
+  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 4 dia(s) (108 h); última leitura 18/10 00:25
+  - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 4 dia(s) (107 h); última leitura 18/10 01:27
   - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 4 dia(s) (106 h); última leitura 18/10 01:29
   - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 4 dia(s) (106 h); última leitura 18/10 01:29
   - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 4 dia(s) (104 h); última leitura 18/10 03:55
   - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 4 dia(s) (104 h); última leitura 18/10 03:54
-  - em falha: GIFE — Grupo de Institutos, Fundações e Empresas — falha — não lê há 1 dia(s) (26 h); última leitura 21/10 09:03
-  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (103 h); última leitura 18/10 04:07
+  - em falha: GIFE — Grupo de Institutos, Fundações e Empresas — falha — não lê há 1 dia(s) (27 h); última leitura 21/10 09:03
+  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (104 h); última leitura 18/10 04:07
   - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 4 dia(s) (104 h); última leitura 18/10 03:49
-  - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (105 h); última leitura 18/10 01:56
+  - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (106 h); última leitura 18/10 01:56
   - em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 5 dia(s) (123 h); última leitura 17/10 08:29
 - maestro: cobertura 0.0% · esgotados 0
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
 - Cartório: 0.6646 certificado · fluxos do GitHub com falha: ['00 · Verificar prontidão']
-- saúde: 6 alerta(s) · índice da sala de controle: 52
+- saúde: 6 alerta(s) · índice da sala de controle: 53
 
 ## Integração
 - contagens: {'repositorio_abertas': 226, 'diagnostico_abertas': 226, 'tela_cartoes': 224, 'fichas': 234, 'sala_controle_abertas': 226}
-- idade (h): {'repositorio': 0.0, 'fluxo': 107.1, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 8.8, 'rede_neural': 107.1, 'saude': 0.5}
+- idade (h): {'repositorio': 0.0, 'fluxo': 107.6, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 9.4, 'rede_neural': 107.6, 'saude': 1.1}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (31)
-- [alta] o comando único não fecha um ciclo há 85.3 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+- [alta] o comando único não fecha um ciclo há 85.9 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
 - [alta] motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 2 dia(s) (51 h); última leitura 20/10 08:52 → investigar o motor (sem correção automática)
-- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 4 dia(s) (107 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 4 dia(s) (106 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
+- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 4 dia(s) (108 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 4 dia(s) (107 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
 - [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 4 dia(s) (106 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
 - [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 4 dia(s) (106 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 4 dia(s) (104 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 4 dia(s) (104 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
-- [alta] motor em falha: GIFE — Grupo de Institutos, Fundações e Empresas — falha — não lê há 1 dia(s) (26 h); última leitura 21/10 09:03 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (103 h); última leitura 18/10 04:07 → investigar o motor (sem correção automática)
+- [alta] motor em falha: GIFE — Grupo de Institutos, Fundações e Empresas — falha — não lê há 1 dia(s) (27 h); última leitura 21/10 09:03 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (104 h); última leitura 18/10 04:07 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 4 dia(s) (104 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (105 h); última leitura 18/10 01:56 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (106 h); última leitura 18/10 01:56 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 5 dia(s) (123 h); última leitura 17/10 08:29 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 226 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 107.1 h (limite 3 h) → refazer a tela
-- [media] maestro sem atualização há 8.8 h (limite 3 h) → ver o fluxo que gera este dado
-- [media] rede_neural sem atualização há 107.1 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 107.6 h (limite 3 h) → refazer a tela
+- [media] maestro sem atualização há 9.4 h (limite 3 h) → ver o fluxo que gera este dado
+- [media] rede_neural sem atualização há 107.6 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 131 de 131 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 99 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
