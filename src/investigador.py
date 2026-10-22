@@ -29,6 +29,28 @@ from urllib.parse import urljoin, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 EXTRAIDOS = ROOT / "dados/editais/extraidos"
+
+
+# 22/10/2026 (titular: corrigir o Interceptador até a parada total do Eldorado0): desde 16/10 a pasta dos extraídos não
+# existe mais — o conteúdo vive nos livros, e o núcleo desvia a gravação para eles (nucleo.write_json / load_json).
+# Ler e gravar SEMPRE pelo núcleo; gravar direto na pasta quebrava o voo (FileNotFoundError) e perdia a investigação.
+def _ler_extraido(eid: str) -> dict:
+    from .nucleo import load_json
+    try:
+        v = load_json(EXTRAIDOS / f"{eid}.json")
+    except (FileNotFoundError, ValueError):
+        return {}
+    return v if isinstance(v, dict) else {}
+
+
+def _gravar_extraido(eid: str, dados: dict) -> None:
+    from .nucleo import write_json
+    arq = EXTRAIDOS / f"{eid}.json"
+    try:
+        write_json(arq, dados)
+    except FileNotFoundError:
+        arq.parent.mkdir(parents=True, exist_ok=True)
+        write_json(arq, dados)
 SAIDA = ROOT / "docs/dados/investigacoes_ia.json"
 UA = {"User-Agent": "Mozilla/5.0 (Eldorado Investigador; associacao sem fins lucrativos)"}
 
@@ -352,8 +374,7 @@ def registro(eid: str) -> dict | None:
     """O registro MESTRE (título, URL) vem de oportunidades.jsonl; a verificação (site oficial confirmado,
     anexos) vem do extraído, que é criado se não existir. Os dois juntos são o edital."""
     m = _mestre().get(eid)
-    arq = EXTRAIDOS / f"{eid}.json"
-    ex = json.loads(arq.read_text(encoding="utf-8")) if arq.exists() else {}
+    ex = _ler_extraido(eid)
     if not m and not ex:
         return None
     e = {**(m or {}), **ex, "id": eid}
@@ -383,14 +404,14 @@ def investigar(ids: list[str], ia, modelo: str, prazo_s: float = 280 * 60) -> di
             pass
         if not texto.strip():
             e["investigacao_ia"] = {"em": time.strftime("%Y-%m-%dT%H:%M:%S"), "modelo": modelo, "fontes": fontes, "campos": {}, "comprovados": 0, "total": len(DOZE), "erro": "nenhuma fonte legível"}
-            arq.write_text(json.dumps(e, ensure_ascii=False, indent=1), encoding="utf-8")
+            _gravar_extraido(eid, e)
             saida["editais"].append({"id": eid, "titulo": e.get("titulo"), "comprovados": 0, "erro": "nenhuma fonte legível", "fontes": fontes}); continue
         r = responder(ia, e, texto)
         if not isinstance(r, dict):
             saida["editais"].append({"id": eid, "titulo": e.get("titulo"), "comprovados": 0, "erro": "o modelo não devolveu JSON", "s": round(time.time() - t0)}); continue
         inv = aplicar(e, r, texto, fontes, modelo)
         e.setdefault("edital_id", eid)
-        arq.write_text(json.dumps(e, ensure_ascii=False, indent=1), encoding="utf-8")
+        _gravar_extraido(eid, e)
         saida["editais"].append({"id": eid, "titulo": e.get("titulo"), "comprovados": inv["comprovados"], "total": inv["total"],
                                  "nao_comprovados": [k for k, v in inv["campos"].items() if not v["comprovado"]],
                                  "s": round(time.time() - t0), "chars": len(texto), "fontes": len([f for f in fontes if f.get("ok")])})
@@ -540,7 +561,7 @@ def investigar_um(eid: str, ia, modelo: str, avisar=None) -> dict:
     if not texto.strip():
         e["investigacao_ia"] = {"em": time.strftime("%Y-%m-%dT%H:%M:%S"), "modelo": modelo, "passos": passos, "fontes": fontes,
                                 "campos": {}, "comprovados": 0, "dispensados": 0, "total": len(DOZE), "erro": "nenhuma fonte legível"}
-        (EXTRAIDOS / f"{eid}.json").write_text(json.dumps({**e, "edital_id": eid}, ensure_ascii=False, indent=1), encoding="utf-8")
+        _gravar_extraido(eid, {**e, "edital_id": eid})
         return {"id": eid, "titulo": e.get("titulo"), "comprovados": 0, "erro": "nenhuma fonte legível", "passos": passos, "s": round(time.time() - t0)}
     avisar("perguntando ao modelo as doze condições", "Qwen3-8B lendo o texto")
     r = responder(ia, e, texto)
@@ -560,7 +581,7 @@ def investigar_um(eid: str, ia, modelo: str, avisar=None) -> dict:
                               f"sem informação nem dispensa: {', '.join(k for k, v in inv['campos'].items() if not (v['comprovado'] or v.get('dispensado'))) or 'nenhum'}"]
     inv["s"] = round(time.time() - t0)
     e["confirmacao"] = f"investigado pela IA ({modelo}) em {time.strftime('%d/%m/%Y')}: {inv['comprovados']}/{len(DOZE)} itens (comprovados ou dispensados)"
-    (EXTRAIDOS / f"{eid}.json").write_text(json.dumps({**e, "edital_id": eid}, ensure_ascii=False, indent=1), encoding="utf-8")
+    _gravar_extraido(eid, {**e, "edital_id": eid})
     return {"id": eid, "titulo": e.get("titulo"), "comprovados": inv["comprovados"], "dispensados": len(disp), "total": len(DOZE),
             "nao_resolvidos": [k for k, v in inv["campos"].items() if not (v["comprovado"] or v.get("dispensado"))],
             "s": inv["s"], "chars": len(texto), "fontes": len([f for f in fontes if f.get("ok")]), "pagina_oficial": oficial, "passos": passos}
