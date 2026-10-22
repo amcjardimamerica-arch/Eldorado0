@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-22 14:38 UTC
+# Diagnóstico do sistema · 2026-10-22 14:42 UTC
 
 ## Cumprimento da finalidade · índice geral 58%
 - Motores: 72% (atencao) — todo motor ativo lê dentro da sua cadência
@@ -89,16 +89,16 @@
   - em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 5 dia(s) (123 h); última leitura 17/10 08:29
 - maestro: cobertura 0.0% · esgotados 0
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
-- Cartório: 0.6646 certificado · fluxos do GitHub com falha: []
+- Cartório: 0.6646 certificado · fluxos do GitHub com falha: ['00 · Verificar prontidão']
 - saúde: 6 alerta(s) · índice da sala de controle: 47
 
 ## Integração
 - contagens: {'repositorio_abertas': 226, 'diagnostico_abertas': 226, 'tela_cartoes': 224, 'fichas': 234, 'sala_controle_abertas': 226}
-- idade (h): {'repositorio': 0.0, 'fluxo': 106.8, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 8.5, 'rede_neural': 106.8, 'saude': 0.2}
+- idade (h): {'repositorio': 0.0, 'fluxo': 106.9, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 8.6, 'rede_neural': 106.9, 'saude': 0.3}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (31)
-- [alta] o comando único não fecha um ciclo há 85.0 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+- [alta] o comando único não fecha um ciclo há 85.1 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
 - [alta] motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 2 dia(s) (50 h); última leitura 20/10 08:52 → investigar o motor (sem correção automática)
 - [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 4 dia(s) (107 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
@@ -114,9 +114,9 @@
 - [alta] motor em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 5 dia(s) (123 h); última leitura 17/10 08:29 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 226 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 106.8 h (limite 3 h) → refazer a tela
-- [media] maestro sem atualização há 8.5 h (limite 3 h) → ver o fluxo que gera este dado
-- [media] rede_neural sem atualização há 106.8 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 106.9 h (limite 3 h) → refazer a tela
+- [media] maestro sem atualização há 8.6 h (limite 3 h) → ver o fluxo que gera este dado
+- [media] rede_neural sem atualização há 106.9 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 131 de 131 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 99 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
