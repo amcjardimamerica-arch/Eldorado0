@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-22 00:48 UTC
+# Diagnóstico do sistema · 2026-10-22 00:50 UTC
 
 ## Cumprimento da finalidade · índice geral 54%
 - Motores: 74% (atencao) — todo motor ativo lê dentro da sua cadência
@@ -14,7 +14,7 @@
 - Fluxos automáticos: 57% (falha) — todo fluxo agendado roda na cadência e sem falha
 - Execução sem falha silenciosa: 0% (falha) — nenhuma etapa falha em silêncio
 
-## Execução · fluxos: {'falha': 3, 'atrasado': 4, 'ok': 30, 'atencao': 5, 'manual': 2}
+## Execução · fluxos: {'falha': 2, 'atrasado': 4, 'ok': 30, 'atencao': 6, 'manual': 2}
 - 00 · Verificar prontidão: falha · última 2026-10-21T14:28 · sucesso 0% · cadência 24.0 h
 - acesso-mensal: atrasado · última 2026-09-01T09:14 · sucesso 100% · cadência 24.0 h
 - 35 · Alimentação diária externa (editais abertos): atencao · última 2026-10-21T14:38 · sucesso 60% · cadência 24.0 h
@@ -23,7 +23,7 @@
 - 09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes: atrasado · última 2026-10-03T11:56 · sucesso 100% · cadência 24.0 h
 - 10 · Histórico de doações da Rouanet (empresa por empresa) — retoma sozinho até completar: atencao · última 2026-10-15T16:09 · sucesso 25% · cadência None h
 - 08 · Pacote do conselho (validação do Claude a cada 3 dias): atrasado · última 2026-10-16T11:47 · sucesso 100% · cadência 24.0 h
-- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: falha · última 2026-10-22T00:43 · sucesso 0% · cadência 1.0 h
+- 12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos: atencao · última 2026-10-22T00:49 · sucesso 0% · cadência 1.0 h
 - 34 · Motores de empresas (semanal, com recuperação): atencao · última 2026-10-21T12:03 · sucesso 78% · cadência 24.0 h
 - 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): falha · última 2026-10-21T21:29 · sucesso 0% · cadência 6.0 h
 - 02 · Alexandria — revisão mensal de leis e procedimentos: atrasado · última 2026-10-01T10:36 · sucesso 50% · cadência 24.0 h
@@ -54,26 +54,25 @@
   - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 3 dia(s) (89 h); última leitura 18/10 03:55
   - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 3 dia(s) (89 h); última leitura 18/10 03:54
   - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 3 dia(s) (89 h); última leitura 18/10 04:07
-  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 3 dia(s) (89 h); última leitura 18/10 03:49
+  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 3 dia(s) (90 h); última leitura 18/10 03:49
   - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 3 dia(s) (91 h); última leitura 18/10 01:56
   - em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 4 dia(s) (109 h); última leitura 17/10 08:29
 - maestro: cobertura 8.8% · esgotados 0
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
 - Cartório: 0.6646 certificado · fluxos do GitHub com falha: []
-- saúde: 6 alerta(s) · índice da sala de controle: 54
+- saúde: 6 alerta(s) · índice da sala de controle: 53
 
 ## Integração
 - contagens: {'repositorio_abertas': 226, 'diagnostico_abertas': 226, 'tela_cartoes': 224, 'fichas': 234, 'sala_controle_abertas': 226}
-- idade (h): {'repositorio': 0.0, 'fluxo': 92.9, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 2.0, 'rede_neural': 92.9, 'saude': 10.4}
+- idade (h): {'repositorio': 0.0, 'fluxo': 93.0, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 2.0, 'rede_neural': 93.0, 'saude': 10.4}
 - decisões da titular: 0 · não aplicadas: 0
 
-## Problemas (39)
+## Problemas (38)
 - [alta] o comando único não fecha um ciclo há 71.2 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 3 etapa(s) falharam em silêncio na última execução de motores-da-vez.yml: NameError: name 'fases' is not defined | NameError: name 'ferramentas' is not defined | Traceback (most recent call last): → investigar a etapa (sem correção automática)
 - [alta] 3 etapa(s) falharam em silêncio na última execução de motor-agregadores.yml: "rede: URLError: timed out", | "rede: robots.txt inacessível: URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)" | mapa: falhou → investigar a etapa (sem correção automática)
 - [alta] 9 etapa(s) falharam em silêncio na última execução de monitoramento-diario.yml: "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ba | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-ed | "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/biblioteca_alexandria/livros/anexos/abcr-continue-lendo-fu → investigar a etapa (sem correção automática)
 - [alta] fluxo '00 · Verificar prontidão' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
-- [alta] fluxo '12 · Piloto - Interceptador — um alvo por voo, a cada 3 segundos' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
 - [alta] fluxo '03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)' falhou nas últimas execuções (0% de sucesso) → investigar o fluxo (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
 - [alta] motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 1 dia(s) (36 h); última leitura 20/10 08:52 → investigar o motor (sem correção automática)
@@ -84,13 +83,13 @@
 - [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 3 dia(s) (89 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 3 dia(s) (89 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 3 dia(s) (89 h); última leitura 18/10 04:07 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 3 dia(s) (89 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 3 dia(s) (90 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 3 dia(s) (91 h); última leitura 18/10 01:56 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Piloto - Interceptador — comprova na fonte oficial — falha — não lê há 4 dia(s) (109 h); última leitura 17/10 08:29 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 226 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 92.9 h (limite 3 h) → refazer a tela
-- [media] rede_neural sem atualização há 92.9 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 93.0 h (limite 3 h) → refazer a tela
+- [media] rede_neural sem atualização há 93.0 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 114 de 125 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
 - [media] fluxo 'acesso-mensal' sem rodar há 1215.6 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
 - [media] fluxo '09 · Base histórica dos incentivos (5 anos) — Rouanet, Esporte, PRONON, PRONAS, FIA, Idoso, PAT, Goyazes' sem rodar há 444.9 h (cadência 24.0 h) → investigar o agendamento (sem correção automática)
