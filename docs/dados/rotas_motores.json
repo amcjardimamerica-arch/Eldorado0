@@ -1,5 +1,5 @@
 {
- "em": "2026-10-22T02:30:59+00:00",
+ "em": "2026-10-22T04:01:23+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,21 +7,21 @@
   "alterar_rota": 60,
   "rota_nova": 52,
   "via_ponte": 5,
-  "exemplos_da_rede": 32989
+  "exemplos_da_rede": 33102
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "origem:rota original",
-    3.2248
+    3.4586
    ],
    [
     "origem:biblioteca",
-    2.7341
+    2.715
    ],
    [
     "tok:feed",
-    2.6199
+    2.6854
    ],
    [
     "tok:secult",
@@ -29,7 +29,7 @@
    ],
    [
     "tok:inscricoes",
-    2.4757
+    2.4771
    ],
    [
     "tok:mpf",
@@ -40,24 +40,24 @@
     2.2405
    ],
    [
-    "tld:br",
-    2.2335
-   ],
-   [
     "tok:unidades",
     2.214
+   ],
+   [
+    "tld:br",
+    2.2101
    ],
    [
     "tok:imprensa",
     1.9941
    ],
    [
-    "tok:sitemap",
-    1.9489
+    "tok:leipaulogustavo",
+    1.8789
    ],
    [
-    "tok:xml",
-    1.9489
+    "tok:sitemap",
+    1.8741
    ]
   ],
   "piores_sinais": [
@@ -78,16 +78,16 @@
     -2.6093
    ],
    [
-    "origem:padrão",
-    -3.307
-   ],
-   [
     "tok:content",
     -3.3237
    ],
    [
     "tok:uploads",
     -3.3237
+   ],
+   [
+    "origem:padrão",
+    -3.5585
    ],
    [
     "origem:câmara",
@@ -707,7 +707,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-21T15:40:31+00:00",
+    "em": "2026-10-22T04:00:29+00:00",
     "testes": 20,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -762,8 +762,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-21T14:13:52+00:00",
-    "testes": 12,
+    "em": "2026-10-22T04:00:16+00:00",
+    "testes": 20,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1557,17 +1557,17 @@
     "urls": [
      "https://senadorcanedo.go.gov.br/aldirblanc/"
     ],
-    "via": "ponte",
+    "via": "direto",
     "origem": "rota original",
     "pontos": 91,
-    "aprendido_em": "2026-10-21T15:41:46+00:00"
+    "aprendido_em": "2026-10-22T04:01:14+00:00"
    },
    "afinado": {
-    "em": "2026-10-21T15:41:46+00:00",
-    "testes": 32,
+    "em": "2026-10-22T04:01:14+00:00",
+    "testes": 16,
     "melhor": {
      "url": "https://senadorcanedo.go.gov.br/aldirblanc/",
-     "via": "ponte",
+     "via": "direto",
      "origem": "rota original",
      "pontos": 91,
      "formato": "html"
@@ -1689,10 +1689,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-21T15:41:55+00:00"
+    "aprendido_em": "2026-10-22T04:01:23+00:00"
    },
    "afinado": {
-    "em": "2026-10-21T15:41:55+00:00",
+    "em": "2026-10-22T04:01:23+00:00",
     "testes": 22,
     "melhor": {
      "url": "https://www.gatesfoundation.org/sitemap.xml",
@@ -1730,11 +1730,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 18,
-    "aprendido_em": "2026-10-21T15:41:07+00:00"
+    "aprendido_em": "2026-10-22T04:01:01+00:00"
    },
    "afinado": {
-    "em": "2026-10-21T15:41:07+00:00",
-    "testes": 21,
+    "em": "2026-10-22T04:01:01+00:00",
+    "testes": 23,
     "melhor": {
      "url": "https://oakfnd.org/sitemap.xml",
      "via": "direto",
@@ -1771,10 +1771,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 3,
-    "aprendido_em": "2026-10-21T15:40:47+00:00"
+    "aprendido_em": "2026-10-22T04:00:45+00:00"
    },
    "afinado": {
-    "em": "2026-10-21T15:40:47+00:00",
+    "em": "2026-10-22T04:00:45+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://skoll.org/feed",
@@ -3565,14 +3565,15 @@
    "nome": "Editais incentivados — sites das maiores contribuintes do ICMS de Goiás (destinação tributária)",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 35,
-   "ok": 27,
+   "leituras": 36,
+   "ok": 28,
    "ultima": {
-    "em": "2026-10-22T00:16:35+00:00",
+    "em": "2026-10-22T03:03:03+00:00",
     "classe": "ok",
     "motivo": ""
    },
    "historico": [
+    "o",
     "o",
     "o",
     "o",
