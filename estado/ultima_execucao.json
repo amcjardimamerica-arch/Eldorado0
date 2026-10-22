@@ -1,22 +1,16 @@
 {
-  "executado_em": "2026-10-08T13:06:58+00:00",
+  "executado_em": "2026-10-22T11:19:55+00:00",
   "fontes_catalogadas": 85,
   "fontes_total": 68,
-  "fontes_ok": 52,
-  "fontes_falha": 16,
+  "fontes_ok": 50,
+  "fontes_falha": 18,
   "fontes_fora_escopo": 0,
   "fontes_manuais": 2,
   "fontes_api": 2,
-  "novas": 1,
-  "atualizadas": 38,
+  "novas": 9,
+  "atualizadas": 7,
   "quarentena": 0,
   "falhas": [
-    {
-      "fonte": "goias-cultura-raiz",
-      "erro": "TimeoutError",
-      "mensagem": "The read operation timed out",
-      "etapa": "leitura do site"
-    },
     {
       "fonte": "capta",
       "erro": "HTTPError",
@@ -24,19 +18,43 @@
       "etapa": "processamento (http_error_default)"
     },
     {
-      "fonte": "fundacao-bb",
+      "fonte": "goiania",
       "erro": "ValueError",
       "mensagem": "tipo não permitido: application/pdf",
       "etapa": "leitura do site"
     },
     {
-      "fonte": "goias-cultura",
+      "fonte": "goias-cultura-raiz",
       "erro": "TimeoutError",
       "mensagem": "The read operation timed out",
       "etapa": "leitura do site"
     },
     {
       "fonte": "goias-pnab",
+      "erro": "TimeoutError",
+      "mensagem": "The read operation timed out",
+      "etapa": "leitura do site"
+    },
+    {
+      "fonte": "goyazes-programa",
+      "erro": "TimeoutError",
+      "mensagem": "The read operation timed out",
+      "etapa": "leitura do site"
+    },
+    {
+      "fonte": "portal-pi",
+      "erro": "TimeoutError",
+      "mensagem": "The read operation timed out",
+      "etapa": "leitura do site"
+    },
+    {
+      "fonte": "fundacao-bb",
+      "erro": "HTTPError",
+      "mensagem": "HTTP Error 503: Service Unavailable",
+      "etapa": "processamento (http_error_default)"
+    },
+    {
+      "fonte": "goias-cultura",
       "erro": "ValueError",
       "mensagem": "tipo não permitido: application/pdf",
       "etapa": "leitura do site"
@@ -78,16 +96,10 @@
       "etapa": "processamento (do_open)"
     },
     {
-      "fonte": "portal-pb",
-      "erro": "URLError",
-      "mensagem": "<urlopen error timed out>",
-      "etapa": "processamento (do_open)"
-    },
-    {
-      "fonte": "portal-se",
-      "erro": "URLError",
-      "mensagem": "<urlopen error [Errno 101] Network is unreachable>",
-      "etapa": "processamento (do_open)"
+      "fonte": "portal-ro",
+      "erro": "HTTPError",
+      "mensagem": "HTTP Error 403: Forbidden",
+      "etapa": "processamento (http_error_default)"
     },
     {
       "fonte": "pronon-pronas",
@@ -146,6 +158,6 @@
       "internacional"
     ]
   },
-  "paginas_alteradas": 186,
-  "fora_do_terceiro_setor": 357
+  "paginas_alteradas": 179,
+  "fora_do_terceiro_setor": 340
 }
