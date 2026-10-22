@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-22T22:21:16+00:00",
+  "em": "2026-10-22T22:30:52+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-22T22:07:47+00:00",
+  "ultimo_voo": "2026-10-22T22:23:11+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,8 +38,8 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
-    "parciais": 0,
+    "validadas": 0,
+    "parciais": 1,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
@@ -47,87 +47,77 @@
       "sim": 1
     },
     "estrelas_de_ouro": 1,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.9
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 7.2
   },
   "missoes": [
     {
-      "em": "2026-10-22T22:07:47+00:00",
+      "em": "2026-10-22T22:23:11+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 16 abordagens; busc",
-      "alvo": "Projetos para crianças e adolescentes: edital recebe propostas até 17 ...",
-      "qualidade": "validada",
-      "comprovados": 9,
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
+      "alvo": "Zurich abre edital nacional para apoiar projetos sociais via leis de ...",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://www.bndes.gov.br/wps/vanityurl/editalfca2026",
+      "pagina_oficial": "https://www.zurich.com.br/leis-de-incentivo-2026",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, prazo, valor, requisitos e área de atuação, permitindo a análise completa do chamamento público.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar aos requisitos do edital, como ser uma pessoa jurídica de direito privado sem finalidade lucrativa, propor um projeto com orçamento entre R$ 500 mil e R$ 5 milhões, e contar com a chancela dos conselhos municipais ou estaduais. Além disso, o projeto deve beneficiar crianças e adolescentes nas cidades onde o BNDES possui sede ou escritório, ou seja, RJ, SP, PE e DF.",
-        "proximo_passo": "A associação comunitária deve verificar se atende aos requisitos do edital e, caso sim, preparar a proposta dentro do prazo de inscrição (14 de setembro a 2 de outubro de 2026).",
-        "risco": "O projeto pode não ser aprovado se a associação não atender aos requisitos específicos, como a chancela dos conselhos municipais ou estaduais, ou se o orçamento não estiver dentro do intervalo estabelecido."
+        "por_que": "O edital foi comprovado com informações sobre o objeto, órgão financiador, território e requisitos necessários para acesso.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ter relação direta com um dos três programas de Responsabilidade Social Corporativa da Zurich, alinhando seu projeto social à estratégia da companhia.",
+        "proximo_passo": "Verificar os anexos do edital para obter detalhes completos sobre os programas de Responsabilidade Social Corporativa da Zurich e os critérios de elegibilidade.",
+        "risco": "A falta de relação direta com um dos três programas de Responsabilidade Social Corporativa da Zurich pode impedir o acesso ao edital."
       },
       "erro": null,
-      "segundos": 773,
+      "segundos": 434,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 9,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "cat-1aef80529dcb",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 0,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "rec-eincentivofiscal",
       "encontrou": {
         "Objeto": {
-          "valor": "apoiar projetos que beneficiem crianças e adolescentes nas cidades em que o BNDES possui sede ou escritório",
-          "trecho": "As iniciativas apoiadas devem beneficiar crianças e/ou adolescentes nas cidades em que o BNDES possui sede ou escritório (Rio de Janeiro, São Paulo, Recife e Brasília), a serem imp",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-09-14 a 2026-10-02",
-          "trecho": "Acesse o formulário on-line de documentação da Fase 2, que poderá ser enviado de 14.09.2026 a 02.10.2026 (até 17h59).",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "orçamento global de cada projeto deve ser de, no mínimo, R$ 500 mil e, no máximo, de R$ 5 milhões",
-          "trecho": "O orçamento global de cada projeto deve ser de, no mínimo, R$ 500 mil e, no máximo, de R$ 5 milhões.",
-          "oficial": true,
+          "valor": "selecionar e apoiar projetos sociais alinhados à estratégia de Responsabilidade Social Corporativa da compania",
+          "trecho": "O Edital de Seleção de Projetos via Incentivo Fiscal 2026 da Zurich Seguros tem como objetivo selecionar e apoiar projetos sociais alinhados à estratégia de Responsabilidade Social",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "BNDES",
-          "trecho": "O BNDES irá selecionar de 2 (dois) a 8 (oito) projetos a serem apoiados por meio de doação de recursos incentivados, realizada no âmbito do art. 260 do Estatuto da Criança e do Ado",
-          "oficial": true,
+          "valor": "Zurich Seguros",
+          "trecho": "A Zurich Seguros torna público o presente Edital de Seleção de Projetos via Incentivo Fiscal 2026",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "RJ, SP, PE, DF",
-          "trecho": "As iniciativas apoiadas devem beneficiar crianças e/ou adolescentes nas cidades em que o BNDES possui sede ou escritório (Rio de Janeiro, São Paulo, Recife e Brasília), a serem imp",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "assistencia_social",
-          "trecho": "Os projetos devem atender a pelo menos um dos eixos de atuação a seguir: assistência e proteção de crianças e adolescentes em situação de rua;",
-          "oficial": true,
+          "valor": "BR",
+          "trecho": "Com apoio técnico do Instituto para o Desenvolvimento do Investimento Social (IDIS), este Edital integra o compromisso da Zurich Seguros com a geração de impacto social positivo e ",
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "projetos devem ser propostos e realizados por pessoas jurídicas de direito privado sem finalidade lucrativa ou por pesso, projetos devem contar com a chancela para captação de recursos incentivados dos respectivos conselhos municipais, estadu",
-          "trecho": "Os projetos devem ser propostos e realizados por pessoas jurídicas de direito privado sem finalidade lucrativa ou por pessoas jurídicas de direito público, dos municípios do Rio de",
-          "oficial": true,
+          "valor": "relação direta com um dos três programas de Responsabilidade Social Corporativa da Zurich",
+          "trecho": "Os projetos inscritos deverão apresentar relação direta com um dos três programas de Responsabilidade Social Corporativa da Zurich.",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Ministério dos Direitos Humanos e da Cidadania",
-      "indicios": [],
+      "financiador": "Zurich Seguros",
+      "indicios": [
+        {
+          "url": "https://esginside.com.br/2026/09/28/zurich-abre-edital-nacional-para-apoiar-projetos-sociais-via-leis-de-incentivo-fiscal/",
+          "tipo": "noticia"
+        }
+      ],
       "rotas": [
         "site_do_financiador",
         "site_do_financiador_edital"
