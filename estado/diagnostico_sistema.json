@@ -1,5 +1,5 @@
 {
- "em": "2026-10-22T12:19:04+00:00",
+ "em": "2026-10-22T12:29:56+00:00",
  "finalidade": {
   "sistemas": [
    {
@@ -92,17 +92,17 @@
     {
      "id": "pncp-api",
      "nome": "PNCP — API de contratações (chamamentos e credenciamentos)",
-     "resultado": "falha — não lê há 4 dia(s) (104 h); última leitura 18/10 00:25"
+     "resultado": "falha — não lê há 4 dia(s) (105 h); última leitura 18/10 00:25"
     },
     {
      "id": "mpgo-destinacao",
      "nome": "MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)",
-     "resultado": "falha — não lê há 4 dia(s) (103 h); última leitura 18/10 01:27"
+     "resultado": "falha — não lê há 4 dia(s) (104 h); última leitura 18/10 01:27"
     },
     {
      "id": "mptgo-destinacao",
      "nome": "MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)",
-     "resultado": "falha — não lê há 4 dia(s) (103 h); última leitura 18/10 01:29"
+     "resultado": "falha — não lê há 4 dia(s) (104 h); última leitura 18/10 01:29"
     },
     {
      "id": "mpu-destinacao",
@@ -140,10 +140,16 @@
      "resultado": "falha — não lê há 5 dia(s) (120 h); última leitura 17/10 08:29"
     }
    ],
-   "leitura_parcial": [],
-   "status_em": "2026-10-22T09:18-03:00",
+   "leitura_parcial": [
+    {
+     "id": "empresas-editais-incentivados",
+     "nome": "Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes",
+     "resultado": "funcionando — última leitura 22/10 09:06 · 21 achado(s) (atenção: 3 página(s) com falha; as demais foram lidas)"
+    }
+   ],
+   "status_em": "2026-10-22T09:29-03:00",
    "auditoria": {
-    "em": "2026-10-21T14:24:45+00:00",
+    "em": "2026-10-22T12:28:30+00:00",
     "total": 33,
     "por_estado": {
      "BLOQUEADO": 4,
@@ -235,7 +241,7 @@
    }
   },
   "saude": {
-   "em": "2026-10-21T14:24:16+00:00",
+   "em": "2026-10-22T12:28:04+00:00",
    "alertas": [
     {
      "area": "coerência",
@@ -247,7 +253,11 @@
     },
     {
      "area": "claude",
-     "texto": "240 item(ns) esperando a análise do Claude (próxima: 2026-10-21)"
+     "texto": "239 item(ns) esperando a análise do Claude (próxima: 2026-10-22)"
+    },
+    {
+     "area": "livros_do_sistema",
+     "texto": "2 livro(es) duplicado(s) no catálogo"
     },
     {
      "area": "workflows",
@@ -264,7 +274,7 @@
    ]
   },
   "auditoria_cega": {
-   "em": "2026-10-21T14:24:42+00:00",
+   "em": "2026-10-22T12:28:27+00:00",
    "taxa_de_perda": null,
    "sem_nada_na_base": 25
   },
@@ -275,12 +285,12 @@
    ]
   },
   "sala_controle": {
-   "em": "2026-10-22T12:18:48+00:00",
-   "indice_saude": 48,
+   "em": "2026-10-22T12:29:40+00:00",
+   "indice_saude": 49,
    "contagem": {
     "verde": 11,
-    "amarelo": 6,
-    "vermelho": 19,
+    "amarelo": 7,
+    "vermelho": 18,
     "cinza": 0
    }
   }
@@ -331,13 +341,13 @@
   },
   "idade_horas": {
    "repositorio": 0.0,
-   "fluxo": 104.5,
+   "fluxo": 104.6,
    "fichas": 0.0,
    "sala_controle": 0.0,
    "status_motores": 0.0,
-   "maestro": 6.2,
-   "rede_neural": 104.5,
-   "saude": 21.9
+   "maestro": 6.4,
+   "rede_neural": 104.6,
+   "saude": 0.0
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -915,17 +925,17 @@
    "dia_fechado": false
   },
   "retentativa": {
-   "aguardando_retentativa": 1196,
-   "fora_da_fila": 95,
+   "aguardando_retentativa": 1197,
+   "fora_da_fila": 99,
    "fora_da_fila_por_escopo": {
     "outras-oportunidades-1": 5,
     "outras-oportunidades-6": 5,
     "recorrencia": 4,
     "outras-oportunidades-5": 6,
-    "outras-oportunidades-8": 3,
-    "outras-oportunidades-3": 5,
+    "outras-oportunidades-8": 4,
+    "outras-oportunidades-3": 6,
     "f260-captacao-044": 1,
-    "outras-oportunidades-2": 3,
+    "outras-oportunidades-2": 4,
     "plat-empresas-editais-incentivados": 2,
     "f260-captacao-238": 2,
     "cartorio": 46,
@@ -935,7 +945,8 @@
     "empresas-incentivadas": 2,
     "f260-espalhado-sistema-mirassoldoeste-mt-gov-br": 1,
     "f260-captacao-218": 1,
-    "f260-captacao-113": 3
+    "f260-captacao-113": 3,
+    "outras-oportunidades-4": 1
    },
    "regra": "volta em 30 min; sai após 5 tentativas com o mesmo erro"
   },
@@ -1071,7 +1082,7 @@
    "etapa": "biblioteca",
    "decisao": "livros da Biblioteca",
    "regra": "ato legislativo não gera livro",
-   "conferidos": 2619,
+   "conferidos": 2624,
    "incorretos": 0,
    "veredito": "correto",
    "exemplos": []
@@ -1081,7 +1092,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 82.7 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 82.9 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1114,7 +1125,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 4 dia(s) (104 h); última leitura 18/10 00:25",
+   "texto": "motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 4 dia(s) (105 h); última leitura 18/10 00:25",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1122,7 +1133,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 4 dia(s) (103 h); última leitura 18/10 01:27",
+   "texto": "motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 4 dia(s) (104 h); última leitura 18/10 01:27",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1130,7 +1141,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 4 dia(s) (103 h); última leitura 18/10 01:29",
+   "texto": "motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 4 dia(s) (104 h); última leitura 18/10 01:29",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1214,7 +1225,7 @@
   {
    "codigo": "atrasado_fluxo",
    "gravidade": "media",
-   "texto": "fluxo sem atualização há 104.5 h (limite 3 h)",
+   "texto": "fluxo sem atualização há 104.6 h (limite 3 h)",
    "correcao": "refazer a tela",
    "quantidade": null,
    "exemplos": []
@@ -1222,7 +1233,7 @@
   {
    "codigo": "atrasado_maestro",
    "gravidade": "media",
-   "texto": "maestro sem atualização há 6.2 h (limite 3 h)",
+   "texto": "maestro sem atualização há 6.4 h (limite 3 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1230,7 +1241,7 @@
   {
    "codigo": "atrasado_rede_neural",
    "gravidade": "media",
-   "texto": "rede_neural sem atualização há 104.5 h (limite 26 h)",
+   "texto": "rede_neural sem atualização há 104.6 h (limite 26 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1272,9 +1283,9 @@
   {
    "codigo": "pagina_fora_da_fila",
    "gravidade": "media",
-   "texto": "95 página(s)/documento(s) fora da fila após 5 erros iguais",
+   "texto": "99 página(s)/documento(s) fora da fila após 5 erros iguais",
    "correcao": "corrigir a rota ou ler no Chrome (sem correção automática)",
-   "quantidade": 95,
+   "quantidade": 99,
    "exemplos": [
     "https://www.boavista.rr.gov.br/",
     "https://tuifund.com/fo/2026-2027-grants-and-funding-opportunities-for-ngos-and-organizations/",
@@ -1289,7 +1300,7 @@
   {
    "codigo": "saude_claude",
    "gravidade": "media",
-   "texto": "saúde · claude: 240 item(ns) esperando a análise do Claude (próxima: 2026-10-21)",
+   "texto": "saúde · claude: 239 item(ns) esperando a análise do Claude (próxima: 2026-10-22)",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1306,6 +1317,14 @@
    "codigo": "saude_gerador",
    "gravidade": "media",
    "texto": "saúde · gerador: o gerador principal do painel falhou depois da última geração",
+   "correcao": "ver o fluxo/arquivo indicado",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "saude_livros_do_sistema",
+   "gravidade": "media",
+   "texto": "saúde · livros_do_sistema: 2 livro(es) duplicado(s) no catálogo",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1388,7 +1407,7 @@
  ],
  "contagem_problemas": {
   "alta": 15,
-  "media": 13,
+  "media": 14,
   "baixa": 2
  },
  "corrigiveis": [
