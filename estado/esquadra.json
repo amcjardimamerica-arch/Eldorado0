@@ -992,30 +992,30 @@
     "empresas-incentivadas": {
       "nome": "Editais incentivados de empresas — destinação tributária (Rouanet, LIE, FIA, PRONON)",
       "tipo": "empresas_incentivo",
-      "leituras": 34,
-      "achados_total": 40,
+      "leituras": 35,
+      "achados_total": 41,
       "vazias_seguidas": 0,
-      "ultima": "2026-10-21T03:04:52+00:00",
+      "ultima": "2026-10-22T00:16:35+00:00",
       "motivo": "ativação manual pelo titular",
       "achados_ultima": 4,
-      "falhas_ultima": 1,
+      "falhas_ultima": 2,
       "saude": [
         {
           "url": "https://www.saneago.com.br/",
           "http": 200,
-          "bytes": 59491
+          "bytes": 59556
         },
         {
           "url": "https://paraquemdoar.org",
           "http": 200,
-          "bytes": 300878
+          "bytes": 301108
         }
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 26,
-        "links_total": 2969,
-        "links_candidatos": 1560,
+        "paginas_lidas": 24,
+        "links_total": 2799,
+        "links_candidatos": 1470,
         "descobertas": [
           {
             "de": "https://www.saneago.com.br/",
@@ -1040,19 +1040,20 @@
         ],
         "pdf_links": 55,
         "motivo_zero": null,
-        "camada1_vetados": 36,
-        "camada1_direcionados": 71,
+        "camada1_vetados": 27,
+        "camada1_direcionados": 65,
         "paginas_alem_do_limite": 13,
         "fora_da_fila": [
-          "https://go.equatorialenergia.com.br/"
+          "https://go.equatorialenergia.com.br/",
+          "https://www.abcdacomunicacao.com.br"
         ]
       },
-      "duracao_s": 80,
-      "relidas_total": 116,
+      "duracao_s": 75,
+      "relidas_total": 119,
       "totais_por_distintas": true,
       "novas_ultima": 1,
       "relidas_ultima": 3,
-      "fora_do_portao": 12
+      "fora_do_portao": 13
     },
     "f260-captacao-051": {
       "nome": "Programa estadual de eventos esportivos",
@@ -10093,62 +10094,24 @@
   },
   "ultima_execucao": {
     "data": "2026-10-21",
-    "em": "2026-10-21T12:03:47+00:00",
-    "manual": null,
-    "bloco": "completo",
-    "sensores_executados": 20,
-    "adiados_por_tempo": [
-      "do-goiania",
-      "plat-estaduais-go-gov",
-      "plat-prefeituras-50-go",
-      "plat-salic",
-      "plataforma-mapas-culturais",
-      "plataforma-wordpress",
-      "pncp-api",
-      "f260-captacao-001",
-      "f260-captacao-018",
-      "f260-captacao-034",
-      "f260-captacao-051",
-      "f260-captacao-081",
-      "f260-captacao-113",
-      "f260-captacao-118",
-      "f260-captacao-196",
-      "f260-curadoria-006",
-      "f260-curadoria-009",
-      "f260-espalhado-acessoainformacao-cavalcante-go-gov-br",
-      "recorrencia"
+    "em": "2026-10-22T00:16:36+00:00",
+    "manual": [
+      "empresas-incentivadas"
     ],
-    "duracao_s": 1376,
-    "em_espera": 91,
-    "total_esquadra": 130,
+    "bloco": "manual",
+    "sensores_executados": 1,
+    "adiados_por_tempo": [],
+    "duracao_s": 77,
+    "em_espera": 130,
+    "total_esquadra": 131,
     "previsoes_ativas": 1,
-    "achados": 134,
-    "novos_na_base": 6,
+    "achados": 4,
+    "novos_na_base": 1,
     "por_tipo": {
-      "legislativo": {
-        "sensores": 3,
-        "achados": 0,
-        "falhas": 1
-      },
-      "diario_justica": {
-        "sensores": 3,
-        "achados": 0,
+      "empresas_incentivo": {
+        "sensores": 1,
+        "achados": 4,
         "falhas": 2
-      },
-      "diario_oficial": {
-        "sensores": 2,
-        "achados": 1,
-        "falhas": 0
-      },
-      "site_oficial": {
-        "sensores": 8,
-        "achados": 65,
-        "falhas": 16
-      },
-      "plataforma": {
-        "sensores": 4,
-        "achados": 68,
-        "falhas": 7
       }
     }
   }
