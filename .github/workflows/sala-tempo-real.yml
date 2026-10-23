@@ -70,13 +70,20 @@ jobs:
           done
           echo "não gravou após 5 tentativas"
 
-      - name: Batimento do Eldorado novo (garantia, 22/10/2026)
+      - name: Vigia do Eldorado novo (religa a cadeia permanente só se ela parou)
         if: always()
         env:
           TOKEN: ${{ secrets.ELDORADO_NOVO_ACIONAR }}
         run: |
-          if [ "$(date -u +%M)" -lt 10 ]; then
-            curl -s -o /dev/null -w "batimento do Eldorado novo: %{http_code}\n" -X POST -H "Authorization: Bearer $TOKEN" \
-              -H "Accept: application/vnd.github+json" https://api.github.com/repos/amcjardimamerica-arch/Eldorado/actions/workflows/eldorado.yml/dispatches \
-              -d '{"ref":"main","inputs":{"gravar_banco":"false","acionar_todos":"false"}}' || true
+          API=https://api.github.com/repos/amcjardimamerica-arch/Eldorado/actions/workflows/eldorado.yml
+          estado=$(curl -s -H "Authorization: Bearer $TOKEN" "$API/runs?per_page=5" | python3 -c "
+          import json,sys,datetime as d
+          r=json.load(sys.stdin).get('workflow_runs',[])
+          if any(x['status']!='completed' for x in r): print('rodando'); raise SystemExit
+          fim=max((d.datetime.fromisoformat(x['updated_at'].replace('Z','+00:00')) for x in r),default=None)
+          print('parado' if fim is None or (d.datetime.now(d.timezone.utc)-fim).total_seconds()>1200 else 'recente')" || echo erro)
+          echo "Eldorado novo: $estado"
+          if [ "$estado" = "parado" ]; then
+            curl -s -o /dev/null -w "religado: %{http_code}\n" -X POST -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github+json" \
+              "$API/dispatches" -d '{"ref":"main","inputs":{"gravar_banco":"false","acionar_todos":"false"}}' || true
           fi
