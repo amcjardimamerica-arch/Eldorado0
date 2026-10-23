@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-23T10:53:07+00:00",
+  "em": "2026-10-23T11:07:35+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-23T10:31:09+00:00",
+  "ultimo_voo": "2026-10-23T10:54:47+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,84 +48,64 @@
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 21.3
+    "tempo_medio_min": 12.1
   },
   "missoes": [
     {
-      "em": "2026-10-23T10:31:09+00:00",
+      "em": "2026-10-23T10:54:47+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Execução de ações culturais (apoio direto a projetos) — seleção para Termo de Execução Cultural PNAB — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 8,
+      "alvo": "Edital estadual da Secult Goiás (Ocupa Goiás – Brasilidades & Futuros 2027) que seleciona 7 projetos de artist… — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 2,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/09/SEI_94290506_Edital.pdf",
+      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações sobre o objeto, valor, financiador, território, esfera, requisitos e área de atuação do edital.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ser residente e sediada no Estado de Goiás há pelo menos 2 anos, atuar na área de cultura e apresentar um projeto relacionado à seleção de apresentações artísticas para compor a programação do NATAL DO BEM – EDIÇÃO 2026.",
-        "proximo_passo": "Verificar os anexos do edital e preparar o projeto conforme os requisitos estabelecidos.",
-        "risco": "A falta de residência e sede no Estado de Goiás por pelo menos 2 anos pode impedir o acesso ao edital."
+        "por_que": "O edital foi comprovado como estadual da Secult Goiás, pertencente ao estado de Goiás.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital se aplica à sua área de atuação e se ela atende aos requisitos não especificados, além de preparar a documentação necessária para submissão do projeto.",
+        "proximo_passo": "Consultar os anexos e requisitos não encontrados para entender melhor os critérios de seleção e preparar o projeto.",
+        "risco": "A falta de informações sobre requisitos, prazos e área de atuação pode impedir a associação de se candidatar adequadamente."
       },
       "erro": null,
-      "segundos": 1276,
+      "segundos": 724,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 8,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
-      "id": "op-a978edc890dc",
+      "fontes_oficiais": 2,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-8f4adfd08fab",
       "encontrou": {
-        "Objeto": {
-          "valor": "selecionar apresentações artísticas para compor a programação do NATAL DO BEM – EDIÇÃO 2026",
-          "trecho": "O presente Edital destina-se a apoiar projetos apresentados por agentes culturais do Estado de Goiás. Deste modo, a Secretaria de Estado da Cultura de Goiás, tendo em vista o que c",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$ 502.000,00 (quinhentos e dois mil reais)",
-          "trecho": "O valor total disponibilizado para este Edital é de R$ 502.000,00 (quinhentos e dois mil reais), dividido entre as categorias de apoio descritas no Anexo I",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "SECRETARIA DE ESTADO DA CULTURA",
-          "trecho": "ESTADO DE GOIÁS\nSECRETARIA DE ESTADO DA CULTURA",
-          "oficial": true,
-          "dispensado": false
-        },
         "Território": {
           "valor": "GO",
-          "trecho": "proponentes residentes e sediados no Estado de Goiás",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "A presente Chamada Pública tem por objeto selecionar apresentações artísticas para compor a programação do NATAL DO BEM – EDIÇÃO 2026, promovido pela Organização das Voluntárias de",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "proponentes residentes e sediados no Estado de Goiás há, há pelo menos, 2 (dois) anos",
-          "trecho": "proponentes residentes e sediados no Estado de Goiás há, há pelo menos, 2 (dois) anos",
+          "trecho": "Secretaria de Estado da Cultura (Secult)",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura de Goiás",
+      "financiador": "Secretaria de Estado da Cultura",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
