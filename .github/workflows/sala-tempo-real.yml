@@ -69,3 +69,14 @@ jobs:
             sleep 5
           done
           echo "não gravou após 5 tentativas"
+
+      - name: Batimento do Eldorado novo (garantia, 22/10/2026)
+        if: always()
+        env:
+          TOKEN: ${{ secrets.ELDORADO_NOVO_ACIONAR }}
+        run: |
+          if [ "$(date -u +%M)" -lt 10 ]; then
+            curl -s -o /dev/null -w "batimento do Eldorado novo: %{http_code}\n" -X POST -H "Authorization: Bearer $TOKEN" \
+              -H "Accept: application/vnd.github+json" https://api.github.com/repos/amcjardimamerica-arch/Eldorado/actions/workflows/eldorado.yml/dispatches \
+              -d '{"ref":"main","inputs":{"gravar_banco":"false","acionar_todos":"false"}}' || true
+          fi
