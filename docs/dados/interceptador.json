@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-23T02:11:20+00:00",
+  "em": "2026-10-23T02:20:55+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-23T01:58:56+00:00",
+  "ultimo_voo": "2026-10-23T02:13:17+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,93 +39,63 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 1,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 11.8
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 7.0
   },
   "missoes": [
     {
-      "em": "2026-10-23T01:58:56+00:00",
+      "em": "2026-10-23T02:13:17+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 36 abordagens; busc",
-      "alvo": "Banco de Projetos",
-      "qualidade": "parcial",
-      "comprovados": 7,
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 16 abordagens; busc",
+      "alvo": "Chamada pública seleciona jovens para produção audiovisual sobre justiça climática",
+      "qualidade": "insuficiente",
+      "comprovados": 0,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://culturapresente.com.br/editais-para-projetos-aprovados-em-leis-de-incentivo/",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O Banco de Projetos oferece fomento a projetos aprovados na Lei Rouanet, criados e realizados por e para mulheres negras, alinhando-se ao escopo de apoio à cultura e à assistência social.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa desenvolver um projeto aprovado na Lei Rouanet, voltado para mulheres negras, com foco em cultura, e seguir os requisitos estabelecidos pelo Banco de Projetos.",
-        "proximo_passo": "Realizar a inscrição no edital do Banco de Projetos, apresentando o projeto conforme os requisitos e anexos exigidos.",
-        "risco": "A falta de projetos aprovados na Lei Rouanet ou a não conformidade com os requisitos específicos do edital pode impedir o acesso ao fomento."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações suficientes para confirmar a existência da chamada pública mencionada.",
+        "para_a_amc": null,
+        "proximo_passo": null,
+        "risco": null
       },
       "erro": null,
-      "segundos": 706,
+      "segundos": 422,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "92825ff6a76bab0bc977",
-      "encontrou": {
-        "Objeto": {
-          "valor": "fomento de projetos aprovados na Lei Rouanet, criados e realizados por e para mulheres negras em todo o Brasil",
-          "trecho": "Destinada ao fomento de projetos aprovados na Lei Rouanet, criados e realizados por e para mulheres negras em todo o Brasil.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Banco de Projetos",
-          "trecho": "Banco BV – Seleção Cultural",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "BR",
-          "trecho": "em todo o Brasil",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "fomento de projetos aprovados na Lei Rouanet, criados e realizados por e para mulheres negras em todo o Brasil",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "projetos aprovados na Lei Rouanet, criados e realizados por e para mulheres negras",
-          "trecho": "Destinada ao fomento de projetos aprovados na Lei Rouanet, criados e realizados por e para mulheres negras em todo o Brasil.",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "Instituto Cactus",
-      "indicios": [
-        {
-          "url": "https://forms.gle/VQN8q4buLpwc8qNE6",
-          "tipo": "encurtador"
-        }
-      ],
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "agr-9239bd21e3b0",
+      "encontrou": {},
+      "financiador": "",
+      "indicios": [],
       "rotas": [
-        "financiador_programa_edital",
-        "financiador_regulamento"
+        "programa_puro"
       ]
     }
   ],
