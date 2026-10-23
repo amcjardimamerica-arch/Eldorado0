@@ -1,5 +1,5 @@
 {
- "em": "2026-10-23T22:29:41+00:00",
+ "em": "2026-10-23T22:49:26+00:00",
  "finalidade": {
   "sistemas": [
    {
@@ -11,7 +11,7 @@
    {
     "sistema": "Maestro",
     "finalidade": "cobertura completa do dia planejado",
-    "atingido_pct": 8,
+    "atingido_pct": 9,
     "estado": "falha"
    },
    {
@@ -75,7 +75,7 @@
     "estado": "sem_dados"
    }
   ],
-  "indice_geral_pct": 62
+  "indice_geral_pct": 63
  },
  "sistemas": {
   "motores": {
@@ -102,12 +102,12 @@
     {
      "id": "mptgo-destinacao",
      "nome": "MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)",
-     "resultado": "falha — não lê há 5 dia(s) (137 h); última leitura 18/10 01:29"
+     "resultado": "falha — não lê há 5 dia(s) (138 h); última leitura 18/10 01:29"
     },
     {
      "id": "mpu-destinacao",
      "nome": "MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)",
-     "resultado": "falha — não lê há 5 dia(s) (137 h); última leitura 18/10 01:29"
+     "resultado": "falha — não lê há 5 dia(s) (138 h); última leitura 18/10 01:29"
     },
     {
      "id": "plataforma-wordpress",
@@ -147,7 +147,7 @@
      "resultado": "funcionando — última leitura 23/10 08:53 · 21 achado(s) (atenção: 2 página(s) com falha; as demais foram lidas)"
     }
    ],
-   "status_em": "2026-10-23T19:29-03:00",
+   "status_em": "2026-10-23T19:49-03:00",
    "auditoria": {
     "em": "2026-10-23T14:07:00+00:00",
     "total": 33,
@@ -161,17 +161,17 @@
    }
   },
   "maestro": {
-   "em": "2026-10-23T15:30:03+00:00",
-   "planejados": 130,
-   "cobertura_percentual": 8.5,
+   "em": "2026-10-23T22:40:24+00:00",
+   "planejados": 125,
+   "cobertura_percentual": 8.8,
    "cobertura": {
     "completa": 11,
-    "pendente": 106,
+    "pendente": 101,
     "parcial": 13
    },
    "dia_fechado": false,
    "esgotaram_tentativas": 0,
-   "a_disparar": 119
+   "a_disparar": 114
   },
   "rede_neural": {
    "em": "2026-10-18T03:51:17+00:00",
@@ -186,7 +186,7 @@
    "pendentes_provaveis_reais": 421
   },
   "cartorio": {
-   "em": "2026-10-23T21:14:48+00:00",
+   "em": "2026-10-23T22:41:41+00:00",
    "resumo": {
     "pontos_12_total": 4800,
     "pontos_certificados": 3019,
@@ -228,7 +228,7 @@
   "pilotos": {
    "interceptador": {
     "estado": "em atividade",
-    "ultimo_voo": "2026-10-23T22:11:40+00:00",
+    "ultimo_voo": "2026-10-23T22:23:30+00:00",
     "contagem": {
      "desde": "2026-10-19T03:00:00+00:00",
      "zerada_em": "2026-10-19T08:59:43+00:00",
@@ -237,8 +237,8 @@
     }
    },
    "espiao": {
-    "em": "2026-10-23T22:16:46+00:00",
-    "voos": 1297,
+    "em": "2026-10-23T22:33:49+00:00",
+    "voos": 1298,
     "empresas_novas": 253
    }
   },
@@ -277,16 +277,16 @@
    "sem_nada_na_base": 25
   },
   "fluxos_github": {
-   "total": 5,
+   "total": 7,
    "com_falha": []
   },
   "sala_controle": {
-   "em": "2026-10-23T22:29:24+00:00",
-   "indice_saude": 55,
+   "em": "2026-10-23T22:49:04+00:00",
+   "indice_saude": 58,
    "contagem": {
-    "verde": 15,
+    "verde": 16,
     "amarelo": 4,
-    "vermelho": 17,
+    "vermelho": 16,
     "cinza": 0
    }
   }
@@ -337,13 +337,13 @@
   },
   "idade_horas": {
    "repositorio": 0.0,
-   "fluxo": 138.6,
+   "fluxo": 139.0,
    "fichas": 0.0,
    "sala_controle": 0.0,
    "status_motores": 0.0,
-   "maestro": 7.0,
-   "rede_neural": 138.6,
-   "saude": 8.4
+   "maestro": 0.1,
+   "rede_neural": 139.0,
+   "saude": 8.7
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -912,11 +912,11 @@
    }
   },
   "maestro": {
-   "planejados": 130,
-   "cobertura_percentual": 8.5,
+   "planejados": 125,
+   "cobertura_percentual": 8.8,
    "cobertura": {
     "completa": 11,
-    "pendente": 106,
+    "pendente": 101,
     "parcial": 13
    },
    "dia_fechado": false
@@ -1000,8 +1000,8 @@
    "etapa": "decidir",
    "decisao": "motores escolhidos para ler na passagem",
    "regra": "todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
-   "conferidos": 130,
-   "incorretos": 119,
+   "conferidos": 125,
+   "incorretos": 114,
    "veredito": "incorreto",
    "exemplos": [
     "pncp-api",
@@ -1089,7 +1089,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 116.9 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 117.2 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1138,7 +1138,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 5 dia(s) (137 h); última leitura 18/10 01:29",
+   "texto": "motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 5 dia(s) (138 h); última leitura 18/10 01:29",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1146,7 +1146,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 5 dia(s) (137 h); última leitura 18/10 01:29",
+   "texto": "motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 5 dia(s) (138 h); última leitura 18/10 01:29",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1206,23 +1206,15 @@
   {
    "codigo": "atrasado_fluxo",
    "gravidade": "media",
-   "texto": "fluxo sem atualização há 138.6 h (limite 3 h)",
+   "texto": "fluxo sem atualização há 139.0 h (limite 3 h)",
    "correcao": "refazer a tela",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "atrasado_maestro",
-   "gravidade": "media",
-   "texto": "maestro sem atualização há 7.0 h (limite 3 h)",
-   "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
   },
   {
    "codigo": "atrasado_rede_neural",
    "gravidade": "media",
-   "texto": "rede_neural sem atualização há 138.6 h (limite 26 h)",
+   "texto": "rede_neural sem atualização há 139.0 h (limite 26 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1230,9 +1222,9 @@
   {
    "codigo": "decisao_decidir",
    "gravidade": "media",
-   "texto": "[decidir] motores escolhidos para ler na passagem: 119 de 130 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
+   "texto": "[decidir] motores escolhidos para ler na passagem: 114 de 125 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
    "correcao": "investigar o comando (sem correção automática)",
-   "quantidade": 119,
+   "quantidade": 114,
    "exemplos": [
     "pncp-api",
     "plat-estaduais-go-gov",
@@ -1247,7 +1239,7 @@
   {
    "codigo": "gabarito_desatualizado",
    "gravidade": "media",
-   "texto": "avaliação do Cartório com gabarito tem 194.6 h (semanal)",
+   "texto": "avaliação do Cartório com gabarito tem 194.9 h (semanal)",
    "correcao": "disparar o fluxo 39",
    "quantidade": null,
    "exemplos": []
@@ -1388,7 +1380,7 @@
  ],
  "contagem_problemas": {
   "alta": 13,
-  "media": 14,
+  "media": 13,
   "baixa": 2
  },
  "corrigiveis": [
