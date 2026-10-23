@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-23T04:36:56+00:00",
+  "em": "2026-10-23T04:56:02+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-23T04:23:02+00:00",
+  "ultimo_voo": "2026-10-23T04:38:39+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,94 +39,79 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 1,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 13.2
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 16.7
   },
   "missoes": [
     {
-      "em": "2026-10-23T04:23:02+00:00",
+      "em": "2026-10-23T04:38:39+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
-      "alvo": "Premio mol reconhece reportagens que inspiram solidariedade e a cultura de doacao",
-      "qualidade": "parcial",
-      "comprovados": 6,
-      "dispensados": 1,
+      "alvo": "Goiânia — Diário Oficial de Goiânia — edição 8874 (2026-09-30) — chamamento público — Goiás / Goiânia",
+      "qualidade": "insuficiente",
+      "comprovados": 3,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Anexos"
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://premiodejornalismo.institutomol.org.br/",
+      "pagina_oficial": "https://www.goiania.go.gov.br/wp-content/uploads/2024/04/CENTRALIZA-COMPLETO.key.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que o prêmio reconhece reportagens que inspiram solidariedade e a cultura de doação, alinhando-se com a missão de organizações da sociedade civil que atuam na área de assistência social.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria produzir uma reportagem que aborde a atuação de iniciativas, organizações, grupos ou pessoas que contribuam para a transformação social, com notável competência.",
-        "proximo_passo": "Elaborar uma proposta de reportagem que atenda aos requisitos do prêmio e enviar para avaliação.",
-        "risco": "A falta de competência na elaboração da reportagem ou a não correspondência com os eixos temáticos pode impedir o acesso ao prêmio."
+        "por_que": "O edital foi comprovado com informações sobre o objeto e o órgão financiador, o que permite identificar a fonte de financiamento para ações de desenvolvimento local.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no chamamento público, apresentar propostas alinhadas ao objeto do edital e demonstrar como sua atuação contribui para os objetivos de segurança, mobilidade, lazer, cultura e desenvolvimento econômico.",
+        "proximo_passo": "Consultar os anexos do edital para obter detalhes sobre os requisitos e a forma de inscrição.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos específicos pode impedir a associação de se candidatar adequadamente."
       },
       "erro": null,
-      "segundos": 789,
+      "segundos": 1000,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 5,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "rec-aculturadedoacao",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 2,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-op-f2026a409e7c",
       "encontrou": {
         "Objeto": {
-          "valor": "reportagens que abordem a atuação de iniciativas, organizações, grupos ou pessoas que contribuam para a transformação social",
-          "trecho": "Serão premiadas reportagens que abordem, com notável competência, a atuação de iniciativas, organizações, grupos ou pessoas que contribuam para a transformação social",
+          "valor": "Requalificação do Setor Central de Goiânia com foco em segurança, mobilidade, lazer, cultura e desenvolvimento econômico.",
+          "trecho": "O Centraliza é um amplo programa de requalificação do Setor Central, dividido em sete eixos temáticos, com o objetivo de levar o goianiense de volta à emblemática região da cidade ",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Instituto MOL",
-          "trecho": "PRÊMIO MOL de Jornalismo",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "nacional",
-          "trecho": "Temas possíveis: Amazônia, periferias urbanas, comunidades tradicionais, povos indígenas, quilombolas, desenvolvimento comunitário, cultura local, proteção territorial, reconstruçã",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "dispensado — O texto menciona que o prêmio é aberto a reportagens que abordam temas específicos, indicando que a área de atuação é definida por esses eixos temáticos.",
-          "trecho": "Temas possíveis: Redes de Cuidado e Solidariedade, Mobilização e Participação Social, Inovação Social e Futuro, Cultura de Doação e Fortalecimento da Sociedade Civil, Transformação",
-          "oficial": false,
-          "dispensado": true
-        },
-        "Requisitos": {
-          "valor": "reportagens que abordem, com notável competência, a atuação de iniciativas, organizações, grupos ou pessoas que contribu",
-          "trecho": "Serão premiadas reportagens que abordem, com notável competência, a atuação de iniciativas, organizações, grupos ou pessoas que contribuam para a transformação social",
+          "valor": "Prefeitura de Goiânia, através do GT Fomento Econômico (SEFIN, SEPLANH e SEDEC)",
+          "trecho": "A Prefeitura de Goiânia, através do GT Fomento Econômico, formado pela SEFIN, SEPLANH e SEDEC, iniciou um trabalho amplo de diagnóstico e elaboração de propostas em busca de soluçõ",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Instituto MOL",
+      "financiador": "Prefeitura de Goiânia",
       "indicios": [
         {
-          "url": "https://observatorio3setor.org.br/premio-mol-reconhece-reportagens-que-inspiram-solidariedade-e-a-cultura-de-doacao/",
-          "tipo": "noticia"
+          "url": "https://data.queridodiario.ok.org.br/5208707/2026-09-30/eae53a46f7108198ed438c9c4bc4996767a5a08a.pdf",
+          "tipo": "agregador"
         }
       ],
       "rotas": [
-        "financiador_programa_edital",
-        "financiador_regulamento"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
