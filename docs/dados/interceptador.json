@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-23T23:20:51+00:00",
+  "em": "2026-10-23T23:39:39+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-23T23:05:09+00:00",
+  "ultimo_voo": "2026-10-23T23:22:40+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,42 +39,84 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 4,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.2
+    "tempo_medio_min": 16.2
   },
   "missoes": [
     {
-      "em": "2026-10-23T23:05:09+00:00",
+      "em": "2026-10-23T23:22:40+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Municipio de trindade — credenciamento de instituições de assistência social para acolhimento institucional de… — Goiás / Trindade",
-      "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "alvo": "Pdf edital de credenciamento de no001/2026 - organizações da sociedade civil — Goiás — Goiás / Goianésia",
+      "qualidade": "parcial",
+      "comprovados": 6,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 909,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Área de atuação"
+      ],
+      "pagina_oficial": "https://goias.gov.br/social/edital-de-credenciamento-em-fluxo-continuo-n001-2026/",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital comprova a existência de um processo de credenciamento para OSCs no Estado de Goiás, com informações sobre o objeto e os requisitos necessários.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria estar regularmente constituída e atuante no Estado de Goiás, além de seguir as instruções dos anexos mencionados no edital.",
+        "proximo_passo": "Consultar os anexos do edital para entender os requisitos detalhados e preparar a documentação necessária.",
+        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a associação de se inscrever no prazo correto."
+      },
+      "erro": null,
+      "segundos": 974,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-0dc389eec43b",
-      "encontrou": {},
-      "financiador": null,
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-6dde4cc20d6f",
+      "encontrou": {
+        "Objeto": {
+          "valor": "credenciamento de Organizações da Sociedade Civil – OSCs regularmente constituídas e atuantes no Estado de Goiás",
+          "trecho": "O presente Edital tem por objeto o credenciamento, em fluxo contínuo, de Organizações da Sociedade Civil – OSCs regularmente constituídas e atuantes no Estado de Goiás",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL – SEDS",
+          "trecho": "O ESTADO DE GOIÁS, por intermédio da SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL – SEDS",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "para formação de cadastro de entidades juridicamente, documentalmente e tecnicamente aptas à futura e eventual inclusão nos Programas de Auxílio Nutricional e/ou Auxílio Água e Ene",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "regularmente constituídas e atuantes no Estado de Goiás",
+          "trecho": "O presente Edital tem por objeto o credenciamento, em fluxo contínuo, de Organizações da Sociedade Civil – OSCs regularmente constituídas e atuantes no Estado de Goiás",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "MUNICÍPIO DE GOIANÉSIA, ESTADO DE GOIÁS",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital"
+      ]
     }
   ],
   "contagem": {
