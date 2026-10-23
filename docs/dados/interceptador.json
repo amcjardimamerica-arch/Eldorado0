@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-23T13:01:11+00:00",
+  "em": "2026-10-23T13:14:56+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-23T12:45:39+00:00",
+  "ultimo_voo": "2026-10-23T13:02:59+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,38 +43,79 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.0
+    "tempo_medio_min": 11.3
   },
   "missoes": [
     {
-      "em": "2026-10-23T12:45:39+00:00",
+      "em": "2026-10-23T13:02:59+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Chamamento público nº 02/2024 visando a seleção de projetos para firmar termo de execução cultural com recurso… — Goiás",
+      "alvo": "Edital de premiação cultural nº 01/2026 – pnab — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 6,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 898,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações sobre seu objeto, financiador, território e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto cultural de interesse da comunidade e seguir as instruções dos anexos para se candidatar.",
+        "proximo_passo": "Consultar os anexos do edital para entender as exigências e preparar a proposta do projeto cultural.",
+        "risco": "A falta de clareza nos anexos ou a não conformidade com as exigências do edital pode impedir o acesso."
+      },
+      "erro": null,
+      "segundos": 676,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-a5aaa3370a01",
-      "encontrou": {},
-      "financiador": null,
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-nova-3a2f1a2d8a1a",
+      "encontrou": {
+        "Objeto": {
+          "valor": "Premiação cultural para projetos culturais de interesse da comunidade",
+          "trecho": "EDITAL DE PREMIAÇÃO CULTURAL Nº 01/2026 – PNAB",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Prefeitura de Colinas do Sul",
+          "trecho": "EDITAL DE PREMIAÇÃO CULTURAL Nº 01/2026 – PNAB",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Prefeitura de Colinas do Sul",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "EDITAL DE PREMIAÇÃO CULTURAL Nº 01/2026 – PNAB",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Prefeitura de Colinas do Sul",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "financiador_programa_edital"
+      ]
     }
   ],
   "contagem": {
