@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-23T22:09:28+00:00",
+  "em": "2026-10-23T22:21:47+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-23T21:55:45+00:00",
+  "ultimo_voo": "2026-10-23T22:11:40+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,8 +38,8 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
-    "parciais": 0,
+    "validadas": 0,
+    "parciais": 1,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
@@ -48,79 +48,80 @@
     },
     "estrelas_de_ouro": 4,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.2
+    "tempo_medio_min": 9.5
   },
   "missoes": [
     {
-      "em": "2026-10-23T21:55:45+00:00",
+      "em": "2026-10-23T22:11:40+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Governo de Goiás abre inscrições para o Agrocolégio Estadual Maguito Vilela — Goiás — Goiás",
-      "qualidade": "validada",
-      "comprovados": 9,
-      "dispensados": 2,
+      "alvo": "Gráfica do Exército — AVISO DE CHAMAMENTO PÚBLICO Nº 1/2026 — é selecionar as associações e/ou cooperativas de… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 8,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Resultado",
         "Prazo de recurso",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": "https://goias.gov.br/educacao/selecao-de-estudantes-agrocolegio/",
+      "pagina_oficial": "https://goias.gov.br/inovacao/wp-content/uploads/sites/26/2026/03/Chamamento-Publico-01-2026-Aviso-de-Chamamento.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a existência do processo de matrícula para o Ensino Médio Integrado à Educação Profissional – Técnico em Agropecuária, com prazo e outros requisitos definidos.",
-        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria verificar se seus membros atendem ao requisito de conclusão do Ensino Fundamental – Anos Finais até a data da matrícula e se há vagas disponíveis no curso.",
-        "proximo_passo": "Consultar o endereço eletrônico da Seduc para obter informações sobre o resultado e o processo de matrícula.",
-        "risco": "A falta de vagas ou não atendimento aos requisitos pode impedir o acesso."
+        "por_que": "O edital menciona a seleção de Organizações da Sociedade Civil (OSC) para execução de um projeto educacional voltado a lideranças e gestores públicos, o que se alinha com a busca por associações comunitárias de Goiânia.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, demonstrando sua qualificação como OSC, e apresentar um plano de execução do projeto educacional em Transformação Digital, alinhado ao objeto do edital.",
+        "proximo_passo": "Verificar os anexos do edital para compreender melhor os requisitos e o processo de inscrição.",
+        "risco": "O prazo de inscrição não foi especificado, o que pode impedir a participação a tempo."
       },
       "erro": null,
-      "segundos": 790,
+      "segundos": 572,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "op-6483cff39e38",
+      "fontes_oficiais": 8,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor",
+      "id": "op-83594f2b678d",
       "encontrou": {
         "Objeto": {
-          "valor": "Processo de Matrícula de estudantes para Ensino Médio Integrado à Educação Profissional – Técnico em Agropecuária",
-          "trecho": "abertura das inscrições para o Processo de Matrícula do Agrocolégio Estadual Maguito Vilela – Código INEP 52108929, no período de 8 a 31 de outubro de 2026, para a oferta do Ensino",
+          "valor": "seleção de Organização da Sociedade Civil (OSC) para celebração de Termo de Colaboração objetivando a execução do Projeto Educacional em Transformação Digital voltado a lideranças, gestores e servidores públicos municipais",
+          "trecho": "para seleção de Organização da Sociedade Civil (OSC) para celebração de Termo de Colaboração objetivando a execução do Projeto Educacional em Transformação Digital voltado a lidera",
           "oficial": true,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "2026-10-08 a 2026-10-31",
-          "trecho": "abertura das inscrições para o Processo de Matrícula do Agrocolégio Estadual Maguito Vilela – Código INEP 52108929, no período de 8 a 31 de outubro de 2026, para a oferta do Ensino",
+          "valor": "? a 2026-04-30",
+          "trecho": "até às 18h00 do dia 30/04/2026",
           "oficial": true,
           "dispensado": false
         },
-        "Valor": {
-          "valor": "dispensado — O curso ofertado é público e gratuito.",
-          "trecho": "O Curso Ensino Médio Integrado à Educação Profissional – Técnico em Agropecuária - 2027 ofertado, neste Processo de Matrícula, será público e gratuito.",
-          "oficial": false,
-          "dispensado": true
-        },
         "Órgão / financiador": {
-          "valor": "SECRETARIA DE ESTADO DA EDUCAÇÃO",
-          "trecho": "SECRETARIA DE ESTADO DA EDUCAÇÃO, em parceria com a Agência Goiana de Assistência Técnica, Extensão Rural e Pesquisa Agropecuária – Emater",
+          "valor": "Secretaria de Estado de Ciência, Tecnologia e Inovação",
+          "trecho": "Secretaria de Estado de Ciência, Tecnologia e Inovação – SECTI",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "abertura das inscrições para o Processo de Matrícula do Agrocolégio Estadual Maguito Vilela – Código INEP 52108929, no período de 8 a 31 de outubro de 2026, para a oferta do Ensino",
+          "trecho": "ESTADO DE GOIÁS",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "educacao",
+          "trecho": "Projeto Educacional em Transformação Digital",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "conclusão do Ensino Fundamental – Anos Finais até a data da matrícula",
-          "trecho": "requisito a conclusão do Ensino Fundamental – Anos Finais até a data da matrícula, sendo necessária a comprovação por meio de Histórico Escolar ou Declaração de Conclusão.",
+          "valor": "Organização da Sociedade Civil (OSC)",
+          "trecho": "para seleção de Organização da Sociedade Civil (OSC) para celebração de Termo de Colaboração",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Governo de Goiás",
+      "financiador": "Gráfica do Exército",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
