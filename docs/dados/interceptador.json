@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-23T00:48:22+00:00",
+  "em": "2026-10-23T01:00:27+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-23T00:33:32+00:00",
+  "ultimo_voo": "2026-10-23T00:49:51+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,88 +39,88 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 1,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 14.2
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 9.9
   },
   "missoes": [
     {
-      "em": "2026-10-23T00:33:32+00:00",
+      "em": "2026-10-23T00:49:51+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 16 abordagens; busc",
-      "alvo": "Instituto abre edital nacional para apoiar projetos educacionais",
-      "qualidade": "parcial",
-      "comprovados": 7,
+      "alvo": "SIM para Cuidar do Futuro 2026: inscrições abertas para projetos ...",
+      "qualidade": "insuficiente",
+      "comprovados": 4,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Território",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://www.univates.br/tecnovates/media/editais/Edital_Educacao_com_Cidadania_VF.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital do Instituto Chamex está relacionado à educação e abrange o território nacional, sendo compatível com as atividades de uma associação comunitária de Goiânia.",
-        "para_a_amc": "A associação comunitária precisaria elaborar um plano de trabalho detalhado, com escopo de atividades mensais, e anexar os documentos exigidos no edital para participar da seleção de projetos.",
-        "proximo_passo": "Consultar o edital completo para verificar os requisitos específicos e o processo de inscrição.",
-        "risco": "A falta de um plano de trabalho detalhado ou a não conformidade com os requisitos do edital pode impedir a participação da associação."
+        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição e órgão financiador.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria inscrever um projeto que se enquadre no objeto do edital, ou seja, projetos sociais, culturais, esportivos e socioambientais.",
+        "proximo_passo": "Verificar se o projeto se enquadra no objeto do edital e iniciar a inscrição no prazo estabelecido.",
+        "risco": "O projeto não se enquadrar no objeto do edital ou a data de inscrição ultrapassar o prazo estabelecido."
       },
       "erro": null,
-      "segundos": 850,
+      "segundos": 595,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "cat-255c1f6a826b",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "cat-6cce0a52a07c",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de 5 projetos, nas frentes I, III e IV das finalidades descritas acima",
-          "trecho": "Constitui objeto da Chamada Edital Educação com Cidadania a seleção de 5 projetos, nas frentes I, III e IV das finalidades descritas acima",
-          "oficial": true,
+          "valor": "apoia projetos sociais, culturais, esportivos e socioambientais",
+          "trecho": "apoia projetos sociais, culturais, esportivos e socioambientais",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-07-15 a 2026-08-31",
+          "trecho": "inscreva sua proposta entre 15 de julho e 31 de agosto",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "INSTITUTO CHAMEX",
-          "trecho": "O INSTITUTO CHAMEX tem o propósito de encorajar, por meio da educação, o uso da criatividade como fonte de soluções transformadoras para o mundo e para a sociedade.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "nacional",
-          "trecho": "Poderão participar deste Edital: a) Organizações da Sociedade Civil, pessoas jurídicas regularmente constituídas na forma de associação ou fundação, de natureza privada, sem fins l",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "educacao",
-          "trecho": "O INSTITUTO CHAMEX tem o propósito de encorajar, por meio da educação, o uso da criatividade como fonte de soluções transformadoras para o mundo e para a sociedade.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Plano de Trabalho detalhado, com escopo de atividades mensais.",
-          "trecho": "Os projetos aderentes às categorias deste Regulamento devem conter Plano de Trabalho detalhado, com escopo de atividades mensais.",
-          "oficial": true,
+          "valor": "Instituto EDP",
+          "trecho": "iniciativa do Instituto EDP",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Instituto Chamex",
-      "indicios": [],
+      "financiador": "Instituto EDP",
+      "indicios": [
+        {
+          "url": "https://sindienergia.org.br/2026/07/31/sim-para-cuidar-do-futuro-2026-inscricoes-abertas-para-projetos-sociais-culturais-e-esportivos/",
+          "tipo": "noticia"
+        }
+      ],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
