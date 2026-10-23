@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-23T11:56:45+00:00",
+  "em": "2026-10-23T12:08:54+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-23T11:43:14+00:00",
+  "ultimo_voo": "2026-10-23T11:58:58+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,60 +48,70 @@
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.8
+    "tempo_medio_min": 9.4
   },
   "missoes": [
     {
-      "em": "2026-10-23T11:43:14+00:00",
+      "em": "2026-10-23T11:58:58+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás abre seleção de pareceristas para projetos cultura… — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 4,
-      "dispensados": 0,
+      "alvo": "SECULT-GO (cultura) — Pnab 2026: Divulgado resultado Final da Fase de Habilitação Infância e Juventude na Cult… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 6,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
-        "Resultado",
         "Prazo de recurso",
         "Valor",
         "Requisitos",
-        "Área de atuação"
+        "Anexos"
       ],
-      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
+      "pagina_oficial": "https://pnab.cultura.go.gov.br",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O órgão financiador é a Secretaria de Estado da Cultura (Secult) — Governo de Goiás, que está abrindo seleção de pareceristas para projetos culturais.",
-        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria se inscrever como parecerista, apresentando proposta de trabalho relacionada à cultura, seguindo os critérios e normas estabelecidos no edital, mesmo que não tenha sido encontrado os requisitos específicos.",
-        "proximo_passo": "Consultar o edital completo para obter informações detalhadas sobre os requisitos, prazos e processo de inscrição.",
-        "risco": "A falta de informações específicas como prazo, requisitos e área de atuação pode impedir a participação efetiva da associação."
+        "por_que": "O edital foi comprovado com informações sobre o objeto, resultado e órgão financiador, sendo suficiente para orientar ações relacionadas ao acesso.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é o apoio à cultura e educação voltado para a infância e juventude, e verificar se atende aos requisitos implícitos para participar da fase seguinte.",
+        "proximo_passo": "Verificar se a associação atende aos requisitos implícitos do edital e se inscrever na fase seguinte, caso haja.",
+        "risco": "A falta de informações sobre requisitos e prazos pode impedir a associação de se inscrever adequadamente no processo."
       },
       "erro": null,
-      "segundos": 769,
+      "segundos": 562,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-34f370bb0a3c",
+      "fontes_oficiais": 4,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Prazo de recurso, Valor, Requisitos",
+      "id": "op-949274b2d8e7",
       "encontrou": {
-        "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás",
-          "trecho": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás",
+        "Objeto": {
+          "valor": "Programa de apoio à cultura e à educação voltado para a infância e juventude",
+          "trecho": "Divulgado resultado Final da Fase de Habilitação Infância e Juventude na Cult…",
           "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria de Estado da Cultura",
+          "trecho": "PNAB Política Nacional Aldir Blanc – Secretaria de Estado da Cultura",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás",
-          "oficial": false,
+          "trecho": "GOIAS.GOV.BR",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "PNAB Política Nacional Aldir Blanc – Secretaria de Estado da Cultura",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura (Secult)",
+      "financiador": "Secretaria de Estado da Cultura",
       "indicios": [],
       "rotas": [
         "site_do_financiador"
