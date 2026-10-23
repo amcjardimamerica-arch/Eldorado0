@@ -1,5 +1,5 @@
 {
- "em": "2026-10-22T22:58:26+00:00",
+ "em": "2026-10-23T00:32:27+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
@@ -15,7 +15,7 @@
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
   "certidoes": 2711,
   "nesta_execucao": 36,
-  "fila_estrelas": 152,
+  "fila_estrelas": 150,
   "fila_livros": 2542,
   "itens_que_faltavam": 24800,
   "itens_obtidos": 8411,
@@ -121,12 +121,12 @@
  },
  "por_balcao": {
   "revisão": {
-   "certidoes": 203,
-   "com_link_oficial": 143,
-   "faltavam": 2436,
-   "resolvidos": 990,
-   "eficiencia": 0.406,
-   "taxa_link_oficial": 0.704
+   "certidoes": 204,
+   "com_link_oficial": 144,
+   "faltavam": 2448,
+   "resolvidos": 1002,
+   "eficiencia": 0.409,
+   "taxa_link_oficial": 0.706
   },
   "pncp": {
    "certidoes": 113,
@@ -153,11 +153,11 @@
    "taxa_link_oficial": 0.184
   },
   "orgao": {
-   "certidoes": 1262,
-   "com_link_oficial": 1008,
-   "faltavam": 11177,
-   "resolvidos": 5115,
-   "eficiencia": 0.458,
+   "certidoes": 1261,
+   "com_link_oficial": 1007,
+   "faltavam": 11165,
+   "resolvidos": 5103,
+   "eficiencia": 0.457,
    "taxa_link_oficial": 0.799
   },
   "privado": {
@@ -189,18 +189,18 @@
   "primeira tentativa": {
    "certidoes": 2174,
    "faltavam": 18777,
-   "resolvidos": 6206,
+   "resolvidos": 6218,
    "eficiencia": 0.331,
-   "com_link_oficial": 1399,
+   "com_link_oficial": 1400,
    "taxa_link_oficial": 0.644
   },
   "refeitas": {
    "certidoes": 537,
    "faltavam": 6023,
-   "resolvidos": 2641,
-   "eficiencia": 0.438,
-   "com_link_oficial": 423,
-   "taxa_link_oficial": 0.788
+   "resolvidos": 2629,
+   "eficiencia": 0.436,
+   "com_link_oficial": 422,
+   "taxa_link_oficial": 0.786
   }
  },
  "por_versao": {
@@ -221,20 +221,20 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2494,
-   "faltavam": 22273,
-   "resolvidos": 7809,
-   "eficiencia": 0.351,
-   "com_link_oficial": 1666,
+   "certidoes": 2493,
+   "faltavam": 22261,
+   "resolvidos": 7797,
+   "eficiencia": 0.35,
+   "com_link_oficial": 1665,
    "taxa_link_oficial": 0.668
   },
   "revisão manual": {
-   "certidoes": 203,
-   "faltavam": 2436,
-   "resolvidos": 990,
-   "eficiencia": 0.406,
-   "com_link_oficial": 143,
-   "taxa_link_oficial": 0.704
+   "certidoes": 204,
+   "faltavam": 2448,
+   "resolvidos": 1002,
+   "eficiencia": 0.409,
+   "com_link_oficial": 144,
+   "taxa_link_oficial": 0.706
   }
  },
  "por_abordagem": {
@@ -256,7 +256,7 @@
   },
   "3": {
    "nome": "página oficial e citados",
-   "vezes": 341,
+   "vezes": 342,
    "renderam": 84,
    "itens": 480,
    "links_oficiais": 53,
@@ -304,11 +304,11 @@
   },
   "9": {
    "nome": "leitura profunda",
-   "vezes": 83,
+   "vezes": 82,
    "renderam": 14,
    "itens": 58,
    "links_oficiais": 8,
-   "taxa_de_acerto": 0.169
+   "taxa_de_acerto": 0.171
   },
   "10": {
    "nome": "busca no domínio",
@@ -2640,258 +2640,6 @@
    }
   },
   {
-   "id": "1b6c6ff730a5ee203166",
-   "tipo": "estrela",
-   "titulo": "Aviso do Chamamento Público Nº 3/2026 Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis Aceita:   organizações da soc",
-   "balcao": "orgao",
-   "link_oficial": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce",
-   "degrau": 0,
-   "como": "revisão manual: leitura do documento oficial no Chrome da titular",
-   "faltavam": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [],
-   "tentativa": 3,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": null,
-   "estagio": "ouro",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 1.0,
-   "encaminhado": null,
-   "selo_antes": "prata",
-   "selo_depois": "ouro",
-   "em": "2026-10-22T22:51:38+00:00",
-   "prazo": "2026-10-22T23:00",
-   "uf": null,
-   "orgao": null,
-   "fim": "2026-10-22",
-   "itens": {
-    "Objeto": {
-     "valor": "Edital de Chamamento Público destinado à seleção de Organização da Sociedade Civil para",
-     "trecho": "v.br EDITAL Nº 3/2026 - DIQUA/DGA Processo nº 02001.022530/2026-71 OBJETO : Edital de Chamamento Público destinado à seleção de Organização da Sociedade Civil para celebração de Instrumento Jurídico sui generis , na condição de enti",
-     "pagina": 1,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "metodo": "texto"
-    },
-    "Prazo de inscrição": {
-     "valor": "23/09/2026 a 22/10/2026, 23h (nota oficial; Tabela 1 do edital)",
-     "trecho": "23/09/2026 a 22/10/2026",
-     "pagina": 4,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "metodo": "webfetch-pdf"
-    },
-    "Resultado": {
-     "valor": "Preliminar 30/10/2026; definitivo 01/12/2026",
-     "trecho": "Divulgação do resultado preliminar. 30/10/2026",
-     "pagina": 5,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "metodo": "webfetch-pdf"
-    },
-    "Prazo de recurso": {
-     "valor": "03/11/2026 a 07/11/2026",
-     "trecho": "bela 2 a seguir: 4 Divulgação do resultado preliminar. 30/10/2026 5 Interposição de recursos contra o resultado preliminar. 03/11/2026 a 07/11/2026 6 Análise dos recursos pela Comissão de Seleção, para reconsideração",
-     "pagina": 5,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "metodo": "seção"
-    },
-    "Valor": {
-     "valor": "Até R$ 392.207.654,73 (valor global estimado)",
-     "trecho": "O valor global estimado deste INSTRUMENTO é de até R$ 392.207.654,73",
-     "pagina": 13,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "metodo": "webfetch-pdf"
-    },
-    "Órgão / financiador": {
-     "valor": "Ibama (recursos do Fundo Rio Doce)",
-     "trecho": "Edital de Chamamento Público seleciona organização para executar aplicação de recursos do Fundo Rio Doce",
-     "pagina": null,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce",
-     "metodo": "webfetch-html"
-    },
-    "Território": {
-     "valor": "Minas Gerais e Espírito Santo (bacia do Rio Doce)",
-     "trecho": "abrangendo os estados de Minas Gerais e Espírito Santo",
-     "pagina": 23,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "metodo": "webfetch-pdf"
-    },
-    "Esfera": {
-     "valor": "federal",
-     "trecho": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
-     "pagina": 1,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "metodo": "webfetch-pdf"
-    },
-    "Requisitos": {
-     "valor": "OSCs do art. 2º, I, a/b/c da Lei 13.019; PJ de direito privado sem fins lucrativos; sem tempo mínimo",
-     "trecho": "Poderão participar deste Edital as organizações da sociedade civil (OSCs)",
-     "pagina": 2,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "metodo": "webfetch-pdf"
-    },
-    "Anexos": {
-     "valor": "Anexo I Declaração de Ciência e Concordância; II Relação dos Dirigentes; III Roteiro da Proposta; IV Minuta do Instrumento; V Modelo do Plano de Trabalho",
-     "trecho": "Anexo I – Declaração de Ciência e Concordância;",
-     "pagina": 9,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "metodo": "webfetch-pdf"
-    },
-    "Modalidade": {
-     "valor": null,
-     "trecho": "destinam-se exclusivamente ao custeio das ações abrangidas pelos Projetos de Intervenção aprovados",
-     "pagina": 13,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "metodo": "webfetch-pdf"
-    },
-    "Área de atuação": {
-     "valor": "Meio ambiente: áreas contaminadas, monitoramento integrado, recuperação de áreas degradadas",
-     "trecho": "a) Gerenciamento de Áreas Contaminadas (GAC); b) Plano de Monitoramento Integrado (PMI);",
-     "pagina": 1,
-     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "metodo": "webfetch-pdf"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "revisão manual (P3-BR-PRIVADAS-2026-10-10)",
-     "em": "2026-10-10T20:09:23+00:00",
-     "ganhou": [
-      "Anexos",
-      "Modalidade",
-      "Esfera",
-      "Objeto",
-      "Prazo de inscrição",
-      "Prazo de recurso",
-      "Requisitos",
-      "Resultado",
-      "Território",
-      "Valor",
-      "Área de atuação",
-      "Órgão / financiador"
-     ],
-     "legado": null
-    },
-    {
-     "n": 3,
-     "nome": "página oficial e citados",
-     "em": "2026-10-16T17:02:19+00:00",
-     "ganhou": [
-      "Modalidade"
-     ],
-     "legado": null
-    },
-    {
-     "n": 9,
-     "nome": "leitura profunda",
-     "em": "2026-10-22T22:51:38+00:00",
-     "ganhou": [],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce",
-     "degrau": null,
-     "como": null,
-     "motivo": null,
-     "falha": null,
-     "oficial": "documento oficial lido na revisão",
-     "paginas": null,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "degrau": null,
-     "como": null,
-     "motivo": null,
-     "falha": null,
-     "oficial": "documento oficial lido na revisão",
-     "paginas": null,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce",
-     "degrau": 0,
-     "como": "leitura profunda (até 150 páginas e tabelas)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
-     "degrau": 0,
-     "como": "leitura profunda (até 150 páginas e tabelas)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 28,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://www.gov.br/ibama/pt-br/",
-     "degrau": 0,
-     "como": "leitura profunda (até 150 páginas e tabelas)",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "certificado",
-     "Prazo de inscrição": "certificado",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "certificado",
-     "Território": "certificado",
-     "Esfera": "certificado",
-     "Requisitos": "certificado",
-     "Anexos": "certificado",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 12,
-    "dispensados": 0,
-    "ja_constavam": 0,
-    "faltam": 0,
-    "pct_certificado_12": 1.0,
-    "pct_cobertura_12": 1.0
-   }
-  },
-  {
    "id": "op-op-2fe4d5ad7972",
    "tipo": "estrela",
    "titulo": "BNDES Periferias – 6º ciclo da Chamada Permanente do Fundo Socioambiental (frente Periferias em Rede): apoio não reembolsável a OSCs que estruturem projetos de no mínimo R$ 20 mi com 10+ subprojetos (",
@@ -3310,7 +3058,7 @@
    "encaminhado": null,
    "selo_antes": "ouro",
    "selo_depois": "ouro",
-   "em": "2026-10-22T22:52:27+00:00",
+   "em": "2026-10-23T00:26:33+00:00",
    "prazo": "2026-12-04",
    "uf": null,
    "orgao": "BNDES",
@@ -3438,7 +3186,7 @@
     {
      "n": 9,
      "nome": "leitura profunda",
-     "em": "2026-10-22T22:52:27+00:00",
+     "em": "2026-10-23T00:26:33+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -12067,6 +11815,221 @@
     "ja_constavam": 1,
     "faltam": 0,
     "pct_certificado_12": 0.9167,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
+   "id": "1b6c6ff730a5ee203166",
+   "tipo": "estrela",
+   "titulo": "Chamamento Público nº 3/2026 do Ibama para selecionar uma OSC que executará recursos do Fundo Rio Doce (áreas contaminadas, monitoramento, recuperação de áreas degradadas) em MG e ES, valor global est",
+   "balcao": "revisão",
+   "link_oficial": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce",
+   "degrau": 0,
+   "como": "revisão manual: leitura do documento oficial no Chrome da titular",
+   "faltavam": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "resolvidos": [
+    "Objeto",
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Modalidade",
+    "Área de atuação"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 1,
+   "versao": "revisão manual (P3-BR-PRIVADAS-2026-10-10)",
+   "gabarito": null,
+   "estagio": "ouro",
+   "estagio_inicio": "prata",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": "prata",
+   "selo_depois": "ouro",
+   "em": "2026-10-10T20:09:23+00:00",
+   "prazo": "2026-10-22T23:00",
+   "uf": null,
+   "orgao": null,
+   "fim": "2026-10-22T23:00",
+   "itens": {
+    "Objeto": {
+     "valor": "Seleção de OSC para Instrumento Jurídico sui generis de aplicação de recursos do Fundo Rio Doce (GAC, PMI, recuperação de áreas degradadas)",
+     "trecho": "A finalidade do presente Chamamento Público é a seleção de proposta para a celebração de Instrumento Jurídico sui generis",
+     "pagina": 1,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "metodo": "webfetch-pdf"
+    },
+    "Prazo de inscrição": {
+     "valor": "23/09/2026 a 22/10/2026, 23h (nota oficial; Tabela 1 do edital)",
+     "trecho": "23/09/2026 a 22/10/2026",
+     "pagina": 4,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "metodo": "webfetch-pdf"
+    },
+    "Resultado": {
+     "valor": "Preliminar 30/10/2026; definitivo 01/12/2026",
+     "trecho": "Divulgação do resultado preliminar. 30/10/2026",
+     "pagina": 5,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "metodo": "webfetch-pdf"
+    },
+    "Prazo de recurso": {
+     "valor": "03/11 a 07/11/2026 (5 dias corridos)",
+     "trecho": "03/11/2026 a 07/11/2026",
+     "pagina": 5,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "metodo": "webfetch-pdf"
+    },
+    "Valor": {
+     "valor": "Até R$ 392.207.654,73 (valor global estimado)",
+     "trecho": "O valor global estimado deste INSTRUMENTO é de até R$ 392.207.654,73",
+     "pagina": 13,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "metodo": "webfetch-pdf"
+    },
+    "Órgão / financiador": {
+     "valor": "Ibama (recursos do Fundo Rio Doce)",
+     "trecho": "Edital de Chamamento Público seleciona organização para executar aplicação de recursos do Fundo Rio Doce",
+     "pagina": null,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce",
+     "metodo": "webfetch-html"
+    },
+    "Território": {
+     "valor": "Minas Gerais e Espírito Santo (bacia do Rio Doce)",
+     "trecho": "abrangendo os estados de Minas Gerais e Espírito Santo",
+     "pagina": 23,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "metodo": "webfetch-pdf"
+    },
+    "Esfera": {
+     "valor": "federal",
+     "trecho": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
+     "pagina": 1,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "metodo": "webfetch-pdf"
+    },
+    "Requisitos": {
+     "valor": "OSCs do art. 2º, I, a/b/c da Lei 13.019; PJ de direito privado sem fins lucrativos; sem tempo mínimo",
+     "trecho": "Poderão participar deste Edital as organizações da sociedade civil (OSCs)",
+     "pagina": 2,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "metodo": "webfetch-pdf"
+    },
+    "Anexos": {
+     "valor": "Anexo I Declaração de Ciência e Concordância; II Relação dos Dirigentes; III Roteiro da Proposta; IV Minuta do Instrumento; V Modelo do Plano de Trabalho",
+     "trecho": "Anexo I – Declaração de Ciência e Concordância;",
+     "pagina": 9,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "metodo": "webfetch-pdf"
+    },
+    "Modalidade": {
+     "valor": null,
+     "trecho": "destinam-se exclusivamente ao custeio das ações abrangidas pelos Projetos de Intervenção aprovados",
+     "pagina": 13,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "metodo": "webfetch-pdf"
+    },
+    "Área de atuação": {
+     "valor": "Meio ambiente: áreas contaminadas, monitoramento integrado, recuperação de áreas degradadas",
+     "trecho": "a) Gerenciamento de Áreas Contaminadas (GAC); b) Plano de Monitoramento Integrado (PMI);",
+     "pagina": 1,
+     "documento": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "metodo": "webfetch-pdf"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "revisão manual (P3-BR-PRIVADAS-2026-10-10)",
+     "em": "2026-10-10T20:09:23+00:00",
+     "ganhou": [
+      "Anexos",
+      "Modalidade",
+      "Esfera",
+      "Objeto",
+      "Prazo de inscrição",
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Território",
+      "Valor",
+      "Área de atuação",
+      "Órgão / financiador"
+     ],
+     "legado": null
+    },
+    {
+     "n": 3,
+     "nome": "página oficial e citados",
+     "em": "2026-10-16T17:02:19+00:00",
+     "ganhou": [
+      "Modalidade"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce",
+     "degrau": null,
+     "como": null,
+     "motivo": null,
+     "falha": null,
+     "oficial": "documento oficial lido na revisão",
+     "paginas": null,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://www.gov.br/ibama/pt-br/assuntos/notas/2026/edital-de-chamamento-publico-seleciona-organizacao-para-executar-aplicacao-de-recursos-do-fundo-rio-doce/20260923_SEI_Ibama_28844023_Edital_3.pdf",
+     "degrau": null,
+     "como": null,
+     "motivo": null,
+     "falha": null,
+     "oficial": "documento oficial lido na revisão",
+     "paginas": null,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 12,
+    "dispensados": 0,
+    "ja_constavam": 0,
+    "faltam": 0,
+    "pct_certificado_12": 1.0,
     "pct_cobertura_12": 1.0
    }
   },
@@ -32856,7 +32819,7 @@
    "encaminhado": null,
    "selo_antes": "bronze",
    "selo_depois": "ouro",
-   "em": "2026-10-22T22:52:22+00:00",
+   "em": "2026-10-23T00:26:27+00:00",
    "prazo": "2026-12-03",
    "uf": "PE",
    "orgao": "FUNDACAO JOAQUIM NABUCO FUNDAJ",
@@ -32974,7 +32937,7 @@
     {
      "n": 2,
      "nome": "anexos completos",
-     "em": "2026-10-22T22:52:22+00:00",
+     "em": "2026-10-23T00:26:27+00:00",
      "ganhou": [
       "Prazo de recurso",
       "Requisitos",
@@ -39155,7 +39118,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "bronze",
-   "em": "2026-10-22T22:53:34+00:00",
+   "em": "2026-10-23T00:27:51+00:00",
    "prazo": "2035-01-15",
    "uf": "MG",
    "orgao": null,
@@ -39292,7 +39255,7 @@
     {
      "n": 3,
      "nome": "página oficial e citados",
-     "em": "2026-10-22T22:53:34+00:00",
+     "em": "2026-10-23T00:27:51+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -39313,9 +39276,9 @@
      "degrau": 1,
      "como": "página oficial e documentos citados nela",
      "motivo": null,
-     "falha": "aguardando_retentativa",
-     "oficial": null,
-     "paginas": null,
+     "falha": null,
+     "oficial": "domínio público oficial",
+     "paginas": 1,
      "edicao_inteira": null
     }
    ],
@@ -45719,7 +45682,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-22T22:57:54+00:00",
+   "em": "2026-10-23T00:31:45+00:00",
    "prazo": null,
    "uf": null,
    "orgao": null,
@@ -45815,7 +45778,7 @@
     {
      "n": 1,
      "nome": "documento na mão",
-     "em": "2026-10-22T22:57:54+00:00",
+     "em": "2026-10-23T00:31:45+00:00",
      "ganhou": [
       "Anexos",
       "Esfera",
@@ -59252,7 +59215,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": "bronze",
    "selo_depois": "bronze",
-   "em": "2026-10-22T22:53:03+00:00",
+   "em": "2026-10-23T00:27:12+00:00",
    "prazo": "2026-12-31",
    "uf": null,
    "orgao": "DEFENSORIA PUBLICA DO ESTADO DO PARANA",
@@ -59382,7 +59345,7 @@
     {
      "n": 3,
      "nome": "página oficial e citados",
-     "em": "2026-10-22T22:53:03+00:00",
+     "em": "2026-10-23T00:27:12+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -62045,7 +62008,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": null,
    "selo_depois": "prata",
-   "em": "2026-10-22T22:52:15+00:00",
+   "em": "2026-10-23T00:26:17+00:00",
    "prazo": "2026-12-02",
    "uf": null,
    "orgao": null,
@@ -62167,7 +62130,7 @@
     {
      "n": 9,
      "nome": "leitura profunda",
-     "em": "2026-10-22T22:52:15+00:00",
+     "em": "2026-10-23T00:26:17+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -79150,15 +79113,15 @@
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2442,
+   "sem_estrela": 2441,
    "bronze": 119,
-   "prata": 133
+   "prata": 132
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 132,
+    "sem_estrela": 131,
     "bronze": 9,
-    "prata": 11
+    "prata": 10
    },
    "livro": {
     "sem_estrela": 2310,
@@ -79166,10 +79129,10 @@
     "prata": 122
    }
   },
-  "fila_oportunidades": 152,
+  "fila_oportunidades": 150,
   "fila_livros": 2542,
-  "devidas_nesta_hora": 2694,
-  "promovidas_nesta_execucao": 4,
+  "devidas_nesta_hora": 2692,
+  "promovidas_nesta_execucao": 3,
   "sem_material_agora": 4,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
