@@ -12442,41 +12442,17 @@
    "comprovados": 9,
    "de": "repositório único: Interceptador: completar 12 item(ns) a partir do site oficial certificado",
    "buscas": 1
+  },
+  "rec-aculturadedoacao": {
+   "em": "2026-10-23T04:35:49+00:00",
+   "tipo": "edital",
+   "qualidade": "parcial",
+   "comprovados": 6,
+   "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
+   "buscas": 1
   }
  },
  "rodadas": [
-  {
-   "em": "2026-10-17T11:28:41+00:00",
-   "papel": "Piloto - Interceptador",
-   "modelo": "qwen3-8b",
-   "parametros": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
-   "inicio": "2026-10-17T11:28:41+00:00",
-   "fonte_nova_para_os_motores": false,
-   "id": "op-curadoria-007",
-   "modo": "validar",
-   "tipo": "edital",
-   "alvo": "Banrisul Instituto Cultural e Social — Edital Merece! — Banrisul Instituto Cultural e Social",
-   "de": "repositório único: Interceptador: achar o site oficial (sem pista no livro nem certidão — pesquisa ",
-   "qualidade": "insuficiente",
-   "comprovados": null,
-   "dispensados": null,
-   "total": 12,
-   "nao_resolvidos": null,
-   "pagina_oficial": null,
-   "fontes_oficiais": [],
-   "parecer_fonte": {},
-   "erro": "registro não encontrado",
-   "fluxo": {
-    "confirmadas": 4,
-    "possiveis": 167
-   },
-   "saude": 6,
-   "para_o_claude": {
-    "a_analisar": 88,
-    "proxima": "2026-10-17"
-   },
-   "segundos": 50
-  },
   {
    "em": "2026-10-22T15:34:47+00:00",
    "papel": "Piloto - Interceptador",
@@ -15574,6 +15550,62 @@
     "proxima": "2026-10-23"
    },
    "segundos": 721
+  },
+  {
+   "em": "2026-10-23T04:23:02+00:00",
+   "papel": "Piloto - Interceptador",
+   "modelo": "qwen3-8b",
+   "parametros": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
+   "inicio": "2026-10-23T04:23:02+00:00",
+   "fila_de_resgate": {
+    "total_incompletos": 197,
+    "na_fila": 60,
+    "total": 64,
+    "por_estado": {
+     "resgatado": 4,
+     "aguardando": 60
+    }
+   },
+   "fonte_nova_para_os_motores": true,
+   "id": "rec-aculturadedoacao",
+   "modo": "validar",
+   "tipo": "edital",
+   "alvo": "Premio mol reconhece reportagens que inspiram solidariedade e a cultura de doacao",
+   "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
+   "qualidade": "parcial",
+   "comprovados": 6,
+   "dispensados": 1,
+   "total": 12,
+   "nao_resolvidos": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Anexos"
+   ],
+   "pagina_oficial": "https://premiodejornalismo.institutomol.org.br/",
+   "fontes_oficiais": [
+    "Objeto",
+    "Órgão / financiador",
+    "Território",
+    "Esfera",
+    "Requisitos"
+   ],
+   "parecer_fonte": {
+    "serve_como_fonte": "sim",
+    "por_que": "O texto comprova que o prêmio reconhece reportagens que inspiram solidariedade e a cultura de doação, alinhando-se com a missão de organizações da sociedade civil que atuam na área de assistência social.",
+    "para_a_amc": "A associação comunitária de Goiânia precisaria produzir uma reportagem que aborde a atuação de iniciativas, organizações, grupos ou pessoas que contribuam para a transformação social, com notável competência.",
+    "proximo_passo": "Elaborar uma proposta de reportagem que atenda aos requisitos do prêmio e enviar para avaliação.",
+    "risco": "A falta de competência na elaboração da reportagem ou a não correspondência com os eixos temáticos pode impedir o acesso ao prêmio."
+   },
+   "erro": null,
+   "fluxo": "falhou: KeyError",
+   "saude": 6,
+   "para_o_claude": {
+    "a_analisar": 240,
+    "proxima": "2026-10-23"
+   },
+   "segundos": 789
   }
  ]
 }
