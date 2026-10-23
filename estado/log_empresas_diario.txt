@@ -9,61 +9,61 @@
     "novas": 0,
     "verificadas": 5
   },
-  "empresas_com_patrocinio": 254,
-  "novas_na_base": 169,
-  "executado_em": "2026-10-22T03:01:52+00:00"
+  "empresas_com_patrocinio": 255,
+  "novas_na_base": 171,
+  "executado_em": "2026-10-23T03:02:38+00:00"
 }
 rc_patrocinios=0
-  empresas-incentivadas: 3 achado(s), 1 falha(s), 69 s
+  empresas-incentivadas: 3 achado(s), 2 falha(s), 61 s
 {
-  "data": "2026-10-22",
-  "em": "2026-10-22T03:03:03+00:00",
+  "data": "2026-10-23",
+  "em": "2026-10-23T03:03:43+00:00",
   "manual": [
     "empresas-incentivadas"
   ],
   "bloco": "manual",
   "sensores_executados": 1,
   "adiados_por_tempo": [],
-  "duracao_s": 69,
-  "em_espera": 130,
-  "total_esquadra": 131,
+  "duracao_s": 62,
+  "em_espera": 127,
+  "total_esquadra": 128,
   "previsoes_ativas": 1,
   "achados": 3,
-  "novos_na_base": 0,
+  "novos_na_base": 1,
   "por_tipo": {
     "empresas_incentivo": {
       "sensores": 1,
       "achados": 3,
-      "falhas": 1
+      "falhas": 2
     }
   }
 }
 rc_sites_icms=0
 {
   "destinacao_tributaria": 100,
-  "patrocinio_privado": 169
+  "patrocinio_privado": 171
 }
 rc_biblioteca=0
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
-  File "/home/runner/work/Eldorado/Eldorado/src/catalogo_incentivos.py", line 354, in <module>
+  File "/home/runner/work/Eldorado0/Eldorado0/src/catalogo_incentivos.py", line 354, in <module>
     print(json.dumps(construir(), ensure_ascii=False, indent=1))
                      ^^^^^^^^^^^
-  File "/home/runner/work/Eldorado/Eldorado/src/catalogo_incentivos.py", line 193, in construir
+  File "/home/runner/work/Eldorado0/Eldorado0/src/catalogo_incentivos.py", line 193, in construir
     gz = _goyazes(); grupos = []
          ^^^^^^^^^^
-  File "/home/runner/work/Eldorado/Eldorado/src/catalogo_incentivos.py", line 74, in _goyazes
+  File "/home/runner/work/Eldorado0/Eldorado0/src/catalogo_incentivos.py", line 74, in _goyazes
     import openpyxl
 ModuleNotFoundError: No module named 'openpyxl'
 rc_ranking_apoiadores=0
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
-  File "/home/runner/work/Eldorado/Eldorado/src/dossies.py", line 32, in <module>
+  File "/home/runner/work/Eldorado0/Eldorado0/src/dossies.py", line 32, in <module>
     if __name__ == "__main__": print(run())
                                      ^^^^^
-  File "/home/runner/work/Eldorado/Eldorado/src/dossies.py", line 16, in run
+  File "/home/runner/work/Eldorado0/Eldorado0/src/dossies.py", line 16, in run
     item=json.loads(line); groups.setdefault(item["fonte_id"],[]).append(item)
                                              ~~~~^^^^^^^^^^^^
 KeyError: 'fonte_id'
@@ -73,6 +73,6 @@ rc_radar=0
   "atualizado": true,
   "empresas": 362,
   "com_incentivo_no_catalogo": 79,
-  "em": "2026-10-22T03:03:07+00:00"
+  "em": "2026-10-23T03:03:47+00:00"
 }
 rc_painel_empresas=0
