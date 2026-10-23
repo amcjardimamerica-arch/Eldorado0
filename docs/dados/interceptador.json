@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-23T03:02:56+00:00",
+  "em": "2026-10-23T03:20:12+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-23T02:48:23+00:00",
+  "ultimo_voo": "2026-10-23T03:04:51+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,69 +48,89 @@
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.8
+    "tempo_medio_min": 14.7
   },
   "missoes": [
     {
-      "em": "2026-10-23T02:48:23+00:00",
+      "em": "2026-10-23T03:04:51+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
-      "alvo": "Ministério da Cultura — editais de fomento cultural",
-      "qualidade": "insuficiente",
-      "comprovados": 4,
-      "dispensados": 0,
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 16 abordagens; busc",
+      "alvo": "EDP abre inscrições para seleção de projetos incentivados e prevê ...",
+      "qualidade": "parcial",
+      "comprovados": 8,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos"
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://www.gov.br/cultura/pt-br",
+      "pagina_oficial": "https://prosas.com.br/editais/15802-sim-para-cuidar-do-futuro-2026-chamada-projetos-incentivados-edp",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O Ministério da Cultura é um órgão federal comprovado, atuando na área de cultura no território brasileiro.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há editais específicos para a área de atuação (assistência social, cultura, educação, esporte) e se qualifica como organização da sociedade civil, além de seguir as normas e procedimentos estabelecidos pelo Ministério da Cultura.",
-        "proximo_passo": "Consultar o site oficial do Ministério da Cultura para verificar a existência de editais e seus requisitos.",
-        "risco": "A falta de informações sobre requisitos, prazos e objetos dos editais pode impedir o acesso ao fomento."
+        "por_que": "O texto comprova a abertura de inscrições para projetos incentivados pela EDP, especificando o objeto, prazo, valor e requisitos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa ser uma organização socioambiental, cultural ou esportiva, e deve se inscrever no período de 01 de julho a 04 de agosto de 2025, apresentando os 5 anexos necessários.",
+        "proximo_passo": "Verificar os requisitos e preparar os documentos necessários para a inscrição no prazo estabelecido.",
+        "risco": "A falta de documentos ou não atender aos requisitos pode impedir a participação."
       },
       "erro": null,
-      "segundos": 831,
+      "segundos": 879,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 3,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-9c2617472614",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Área de atuação",
+      "id": "cat-e311d40d4596",
       "encontrou": {
+        "Objeto": {
+          "valor": "apoio a projetos que melhorem as condições de vida e o desenvolvimento das comunidades, com foco em geração de renda, empoderamento cultural, democratização do acesso à cultura e ao esporte, preservação ambiental, economia circular e transição energética justa",
+          "trecho": "O objetivo é apoiar projetos que melhorem as condições de vida e o desenvolvimento das comunidades, com foco em geração de renda, empoderamento cultural, democratização do acesso à",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O texto menciona o período de inscrições entre 01 de julho e 04 de agosto de 2025.",
+          "trecho": "durante o período de inscrições entre 01 de julho e 04 de agosto de 2025 [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Valor": {
+          "valor": "R$ 8.400.000,00",
+          "trecho": "O valor total projetado para esta Chamada de Projetos é de até R$ 8,4 milhões",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Ministério da Cultura",
-          "trecho": "Ministério da Cultura",
+          "valor": "Instituto EDP",
+          "trecho": "O Instituto EDP, em consonância à Política de Responsabilidade Social da EDP, convida organizações socioambientais, culturais e esportivas a apresentarem propostas para o processo ",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "BR",
-          "trecho": "abrangência nacional",
-          "oficial": false,
+          "valor": "GO",
+          "trecho": "Abadia de Goiás - GO",
+          "oficial": true,
           "dispensado": false
         },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "cultura",
+        "Requisitos": {
+          "valor": "organizações socioambientais, culturais e esportivas",
+          "trecho": "convida organizações socioambientais, culturais e esportivas a apresentarem propostas para o processo da chamada de projetos incentivados",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Ministério da Cultura",
-      "indicios": [],
+      "financiador": "EDP",
+      "indicios": [
+        {
+          "url": "https://esginside.com.br/2026/07/24/edp-abre-inscricoes-para-selecao-de-projetos-incentivados-e-preve-destinar-ate-r-12-milhoes-a-iniciativas-sociais-esportivas-e-de-saude/",
+          "tipo": "noticia"
+        }
+      ],
       "rotas": [
-        "site_do_financiador"
+        "financiador_programa_edital",
+        "financiador_regulamento"
       ]
     }
   ],
