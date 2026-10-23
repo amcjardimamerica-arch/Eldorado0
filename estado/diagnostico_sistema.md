@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-23 23:57 UTC
+# Diagnóstico do sistema · 2026-10-23 23:58 UTC
 
 ## Cumprimento da finalidade · índice geral 63%
 - Motores: 77% (atencao) — todo motor ativo lê dentro da sua cadência
@@ -92,7 +92,7 @@
 
 ## Integração
 - contagens: {'repositorio_abertas': 224, 'diagnostico_abertas': 224, 'tela_cartoes': 224, 'fichas': 231, 'sala_controle_abertas': 224}
-- idade (h): {'repositorio': 0.0, 'fluxo': 140.1, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 1.3, 'rede_neural': 140.1, 'saude': 9.8}
+- idade (h): {'repositorio': 0.0, 'fluxo': 140.1, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 1.3, 'rede_neural': 140.1, 'saude': 9.9}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (29)
@@ -144,4 +144,4 @@
 - certificar · itens certificados pelo Cartório: **correto** (0 de 2706) — regra: todo item certificado tem trecho literal e documento
 - validar · validação por exceção: **correto** (0 de 0) — regra: só valida sozinho com acerto do Cartório ≥ 85% no gabarito e link oficial aprovado na curadoria
 - farol · oportunidades prontas para o Farol: **correto** (0 de 15) — regra: pronta só com prazo vigente e link oficial aprovado na curadoria
-- biblioteca · livros da Biblioteca: **correto** (0 de 2660) — regra: ato legislativo não gera livro
+- biblioteca · livros da Biblioteca: **correto** (0 de 2661) — regra: ato legislativo não gera livro
