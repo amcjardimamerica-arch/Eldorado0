@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-23T07:14:27+00:00",
+  "em": "2026-10-23T07:31:34+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-23T07:02:42+00:00",
+  "ultimo_voo": "2026-10-23T07:16:22+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,73 +48,78 @@
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.2
+    "tempo_medio_min": 14.5
   },
   "missoes": [
     {
-      "em": "2026-10-23T07:02:42+00:00",
+      "em": "2026-10-23T07:16:22+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Secretaria de Estado da Cultura (Secult) — Secult Goiás publica novo Chamamento Público para apoio na execução… — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 5,
+      "alvo": "Senador Canedo — Edital nº 005/2024 – 2ª Convocação, referente à Lei Aldir Blanc — Goiás / Senador Canedo",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Requisitos"
+        "Valor"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://senadorcanedo.go.gov.br/edital-no-005-2024-2a-convocacao-referente-a-lei-aldir-blanc/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O Chamamento Público da Secult Goiás é uma fonte válida para apoio à execução de projetos culturais, conforme comprovado pela Secretaria de Estado da Cultura.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no Chamamento Público da Secult Goiás, apresentando um projeto cultural alinhado às áreas de atuação da secretaria, e seguir as instruções contidas nos anexos disponibilizados.",
-        "proximo_passo": "Consultar os anexos do Chamamento Público para entender as diretrizes e requisitos específicos do edital.",
-        "risco": "A falta de informações sobre os requisitos e prazos pode impedir a associação de se inscrever adequadamente no edital."
+        "por_que": "O edital foi comprovado com informações sobre o objeto, órgão financiador, território, esfera, requisitos, anexos e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria possuir quadro de dirigentes majoritariamente composto por pessoas negras, indígenas ou co, e ter seus dirigentes e equipe do projeto submeterem-se aos regramentos do edital, além de se enquadrar na área de atuação de cultura.",
+        "proximo_passo": "Verificar os anexos do edital e se a associação comunitária atende aos requisitos estabelecidos.",
+        "risco": "A falta de conformidade com os requisitos de composição do quadro de dirigentes pode impedir o acesso ao edital."
       },
       "erro": null,
-      "segundos": 670,
+      "segundos": 870,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-246bfd02fd39",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-e65e3a0ff3cf",
       "encontrou": {
+        "Objeto": {
+          "valor": "Fomento a projetos continuados de pontos de cultura",
+          "trecho": "FOMENTO A PROJETOS CONTINUADOS DE PONTOS DE CULTURA",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura (Secult)",
-          "trecho": "Secretaria de Estado da Cultura (Secult) - Secult Goiás",
-          "oficial": false,
+          "valor": "REDE MUNICIPAL DE PONTOS DE CULTURA DE SENADOR CANEDO - GO",
+          "trecho": "REDE MUNICIPAL DE PONTOS DE CULTURA DE SENADOR CANEDO - GO",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Secretaria de Estado da Cultura (Secult) - Secult Goiás",
-          "oficial": false,
+          "trecho": "SENADOR CANEDO - GO",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "Secretaria de Estado da Cultura (Secult) - Secult Goiás",
-          "oficial": false,
+          "trecho": "CULTURA VIVA DO TAMANHO DO BRASIL!",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "possuir quadro de dirigentes majoritariamente (cinquenta por cento mais um) composto por pessoas negras, indígenas ou co, pessoas físicas que compõem a direção da entidade proponente ou da equipe do projeto devem se submeter aos regramentos d",
+          "trecho": "As cotas serão destinadas às entidades que possuam quadro de dirigentes majoritariamente (cinquenta por cento mais um) composto por pessoas negras, indígenas ou com deficiência, ou",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura (Secult)",
+      "financiador": "Prefeitura Municipal de Senador Canedo",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
