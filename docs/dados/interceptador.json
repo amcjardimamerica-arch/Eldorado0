@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-23T19:40:33+00:00",
+  "em": "2026-10-23T20:00:58+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-23T19:26:40+00:00",
+  "ultimo_voo": "2026-10-23T19:42:29+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,64 +48,73 @@
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.2
+    "tempo_medio_min": 17.8
   },
   "missoes": [
     {
-      "em": "2026-10-23T19:26:40+00:00",
+      "em": "2026-10-23T19:42:29+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Chamamento publico para credenciamento de agentes culturais pnab ciclo 2. — fundo municipal da cultura de coli… — Goiás",
+      "alvo": "Chamamento público publicado no Diário Oficial em 25/09/2026 — Goiás / Goiânia",
       "qualidade": "insuficiente",
-      "comprovados": 3,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260925_000008871.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado identifica o órgão financiador e o território, o que é essencial para validar a fonte.",
-        "para_a_amc": "A associação comunitária precisaria verificar se o edital se aplica à sua área de atuação e entrar em contato com a Prefeitura de Colinas do Sul para obter informações sobre os requisitos e o processo de credenciamento.",
-        "proximo_passo": "Contatar a Prefeitura de Colinas do Sul para obter detalhes sobre os requisitos e o processo de credenciamento.",
-        "risco": "A falta de informações sobre os requisitos e o prazo de inscrição pode impedir a associação de se credenciar."
+        "por_que": "O chamamento público foi publicado no Diário Oficial em 25/09/2026 e tem como objeto atender às programações previstas no Anexo I deste Decreto, sendo financiado pela Prefeitura de Goiânia.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar o conteúdo do Anexo I para alinhar suas atividades às programações previstas, além de se certificar de que atende aos critérios de elegibilidade estabelecidos no edital, mesmo que não encontrados explicitamente.",
+        "proximo_passo": "Consultar o Anexo I do edital para entender as programações e verificar se a associação comunitária se enquadra nas áreas de atuação previstas.",
+        "risco": "A falta de informações sobre prazo de inscrição, requisitos e área de atuação pode impedir que a associação comunitária se candidate adequadamente."
       },
       "erro": null,
-      "segundos": 791,
+      "segundos": 1068,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 5,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-690f9928042c",
+      "id": "op-b6129b4007f2",
       "encontrou": {
+        "Objeto": {
+          "valor": "atender às programações previstas no Anexo I deste Decreto",
+          "trecho": "Art. 1º Ficam abertos à Secretaria Municipal de Infraestrutura Urbana, dois créditos adicionais de natureza suplementar, no valor de R$ 4.253.257,53 (quatro milhões, duzentos e cin",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Colinas do Sul",
-          "trecho": "Prefeitura de Colinas do Sul",
-          "oficial": false,
+          "valor": "Prefeitura de Goiânia",
+          "trecho": "PREFEITURA DE GOIÂNIA SECRETARIA MUNICIPAL DA CASA CIVIL",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Colinas do Sul/GO",
-          "oficial": false,
+          "trecho": "PREFEITURA DE GOIÂNIA SECRETARIA MUNICIPAL DA CASA CIVIL",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Colinas do Sul",
+      "financiador": "Prefeitura de Goiânia",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
