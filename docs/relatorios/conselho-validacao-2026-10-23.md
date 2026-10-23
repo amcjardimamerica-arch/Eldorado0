@@ -76,8 +76,8 @@
   },
   {
    "motor": "empresas-incentivadas",
-   "achados_total_1a": 41,
-   "achados_total_agora": 41,
+   "achados_total_1a": 42,
+   "achados_total_agora": 42,
    "no_fluxo": 0,
    "confirmadas": 0
   },
@@ -201,7 +201,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 34214
+ "exemplos_da_rede_de_rotas": 34287
 }
 ```
 
@@ -244,10 +244,10 @@
 
 ```json
 {
- "dia_de_referencia": "2026-10-22",
+ "dia_de_referencia": "2026-10-23",
  "ativos": 172,
- "lidos_ontem": 19,
- "lidos_hoje": 17,
+ "lidos_ontem": 17,
+ "lidos_hoje": 0,
  "nao_lidos_ontem_nem_hoje": [
   "do-goiania",
   "f260-captacao-001",
