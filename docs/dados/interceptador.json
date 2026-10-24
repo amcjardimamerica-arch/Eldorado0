@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-24T05:40:10+00:00",
+  "em": "2026-10-24T05:52:39+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-24T05:27:08+00:00",
+  "ultimo_voo": "2026-10-24T05:41:59+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,88 +48,69 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.3
+    "tempo_medio_min": 10.0
   },
   "missoes": [
     {
-      "em": "2026-10-24T05:27:08+00:00",
+      "em": "2026-10-24T05:41:59+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anápolis — Fundo Municipal de Cultura recebe inscrições até domingo (19) — Goiás / Anápolis",
-      "qualidade": "parcial",
-      "comprovados": 9,
-      "dispensados": 1,
+      "alvo": "Aviso de Chamamento Público 02/2026 — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 5,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://www.anapolis.go.gov.br/fundo-municipal-de-cultura-recebe-inscricoes-ate-domingo-19/",
+      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/02/SEI_86425409_Aviso_de_Chamamento_Publico_02.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova a existência do edital com informações sobre objeto, prazo de inscrição, valor, financiador, território, esfera, requisitos e anexos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar um projeto cultural, seguir os requisitos do edital e anexar os documentos solicitados, mesmo que o edital seja da Prefeitura de Anápolis.",
-        "proximo_passo": "Verificar os requisitos e anexos do edital e preparar o projeto cultural para inscrição.",
-        "risco": "O edital é municipal e abrange apenas Anápolis, portanto, a associação de Goiânia não pode acessá-lo."
+        "por_que": "O aviso de chamamento público descreve o objeto da seleção de uma OSC para executar o Circuito das Cavalhadas 2026, indicando que a SECRETARIA DE ESTADO DA CULTURA busca parcerias para a realização do evento.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no chamamento público, apresentando proposta de colaboração para a execução do Circuito das Cavalhadas 2026, demonstrando capacidade técnica e recursos para o projeto.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre o processo seletivo e os requisitos necessários para inscrição.",
+        "risco": "A falta de informações sobre prazos e requisitos específicos pode impedir a associação de se inscrever adequadamente no processo seletivo."
       },
       "erro": null,
-      "segundos": 739,
+      "segundos": 601,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 8,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso",
-      "id": "op-21b31c90e94a",
+      "fontes_oficiais": 4,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-d92cec021e4e",
       "encontrou": {
         "Objeto": {
-          "valor": "financiamento de 34 projetos culturais",
-          "trecho": "Mais de R$ 2 milhões serão destinados pela gestão municipal, por meio da Secretaria de Integração, para o financiamento de 34 projetos culturais",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O texto menciona explicitamente o prazo de inscrição.",
-          "trecho": "Terminam no próximo domingo, 19, as inscrições para o processo seletivo do Fundo Municipal de Cultura 2023/2024 [rejeitado: data implausível para edital aberto]",
-          "oficial": false,
-          "dispensado": true
-        },
-        "Valor": {
-          "valor": "Mais de R$ 2 milhões",
-          "trecho": "Mais de R$ 2 milhões serão destinados pela gestão municipal, por meio da Secretaria de Integração, para o financiamento de 34 projetos culturais",
+          "valor": "selecionar Organização da Sociedade Civil (OSC) para firmar parceria por meio de Termo de Colaboração, para executar em regime de colaboração o Circuito das Cavalhadas 2026",
+          "trecho": "selecionar Organização da Sociedade Civil (OSC) para firmar parceria por meio de Termo de Colaboração, para executar em regime de colaboração o Circuito das Cavalhadas 2026",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Anápolis",
-          "trecho": "Fundo Municipal de Cultura recebe inscrições até domingo (19) | Notícias | Sem categoria | Prefeitura de Anápolis",
+          "valor": "SECRETARIA DE ESTADO DA CULTURA",
+          "trecho": "SECRETARIA DE ESTADO DA CULTURA",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Fundo Municipal de Cultura recebe inscrições até domingo (19) | Notícias | Sem categoria | Prefeitura de Anápolis",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "Mais de R$ 2 milhões serão destinados pela gestão municipal, por meio da Secretaria de Integração, para o financiamento de 34 projetos culturais",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "apresentação de projetos pela sociedade civil",
-          "trecho": "Outra mudança importante é que, antes, o poder público também podia participar do processo e agora, o mecanismo é exclusivo para projetos apresentados pela sociedade civil",
+          "trecho": "ESTADO DE GOIÁS",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Anápolis",
+      "financiador": "SECRETARIA DE ESTADO DA CULTURA",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
