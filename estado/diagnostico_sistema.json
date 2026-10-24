@@ -1,11 +1,11 @@
 {
- "em": "2026-10-24T11:18:23+00:00",
+ "em": "2026-10-24T11:36:12+00:00",
  "finalidade": {
   "sistemas": [
    {
     "sistema": "Motores",
     "finalidade": "todo motor ativo lê dentro da sua cadência",
-    "atingido_pct": 77,
+    "atingido_pct": 79,
     "estado": "atencao"
    },
    {
@@ -80,8 +80,8 @@
  "sistemas": {
   "motores": {
    "total": 45,
-   "funcionando": 33,
-   "em_falha": 10,
+   "funcionando": 34,
+   "em_falha": 9,
    "inativos": 2,
    "em_falha_lista": [
     {
@@ -92,22 +92,17 @@
     {
      "id": "pncp-api",
      "nome": "PNCP — API de contratações (chamamentos e credenciamentos)",
-     "resultado": "falha — não lê há 6 dia(s) (151 h); última leitura 18/10 00:25"
+     "resultado": "falha — não lê há 6 dia(s) (152 h); última leitura 18/10 00:25"
     },
     {
      "id": "mpgo-destinacao",
      "nome": "MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)",
-     "resultado": "falha — não lê há 6 dia(s) (150 h); última leitura 18/10 01:27"
-    },
-    {
-     "id": "mptgo-destinacao",
-     "nome": "MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)",
-     "resultado": "falha — não lê há 6 dia(s) (150 h); última leitura 18/10 01:29"
+     "resultado": "falha — não lê há 6 dia(s) (151 h); última leitura 18/10 01:27"
     },
     {
      "id": "mpu-destinacao",
      "nome": "MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)",
-     "resultado": "falha — não lê há 6 dia(s) (150 h); última leitura 18/10 01:29"
+     "resultado": "falha — não lê há 6 dia(s) (151 h); última leitura 18/10 01:29"
     },
     {
      "id": "plataforma-wordpress",
@@ -135,10 +130,16 @@
      "resultado": "falha na leitura de 24/10 01:34"
     }
    ],
-   "leitura_parcial": [],
-   "status_em": "2026-10-24T08:18-03:00",
+   "leitura_parcial": [
+    {
+     "id": "empresas-editais-incentivados",
+     "nome": "Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes",
+     "resultado": "funcionando — última leitura 24/10 08:15 · 21 achado(s) (atenção: 3 página(s) com falha; as demais foram lidas)"
+    }
+   ],
+   "status_em": "2026-10-24T08:35-03:00",
    "auditoria": {
-    "em": "2026-10-23T14:07:00+00:00",
+    "em": "2026-10-24T11:34:33+00:00",
     "total": 33,
     "por_estado": {
      "BLOQUEADO": 4,
@@ -216,7 +217,7 @@
   "pilotos": {
    "interceptador": {
     "estado": "em atividade",
-    "ultimo_voo": "2026-10-24T10:52:58+00:00",
+    "ultimo_voo": "2026-10-24T11:21:12+00:00",
     "contagem": {
      "desde": "2026-10-19T03:00:00+00:00",
      "zerada_em": "2026-10-19T08:59:43+00:00",
@@ -225,13 +226,13 @@
     }
    },
    "espiao": {
-    "em": "2026-10-24T11:12:38+00:00",
-    "voos": 1344,
+    "em": "2026-10-24T11:28:45+00:00",
+    "voos": 1345,
     "empresas_novas": 262
    }
   },
   "saude": {
-   "em": "2026-10-23T14:06:33+00:00",
+   "em": "2026-10-24T11:34:05+00:00",
    "alertas": [
     {
      "area": "coerência",
@@ -243,7 +244,11 @@
     },
     {
      "area": "claude",
-     "texto": "239 item(ns) esperando a análise do Claude (próxima: 2026-10-23)"
+     "texto": "240 item(ns) esperando a análise do Claude (próxima: 2026-10-24)"
+    },
+    {
+     "area": "livros_do_sistema",
+     "texto": "2 livro(es) duplicado(s) no catálogo"
     },
     {
      "area": "publicação",
@@ -255,26 +260,26 @@
     },
     {
      "area": "workflows",
-     "texto": "03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): últimas 5 execuções sem sucesso"
+     "texto": "03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): últimas 4 execuções sem sucesso"
     }
    ]
   },
   "auditoria_cega": {
-   "em": "2026-10-23T14:06:58+00:00",
+   "em": "2026-10-24T11:34:31+00:00",
    "taxa_de_perda": null,
    "sem_nada_na_base": 25
   },
   "fluxos_github": {
-   "total": 8,
+   "total": 6,
    "com_falha": []
   },
   "sala_controle": {
-   "em": "2026-10-24T11:18:06+00:00",
-   "indice_saude": 54,
+   "em": "2026-10-24T11:35:57+00:00",
+   "indice_saude": 55,
    "contagem": {
     "verde": 15,
-    "amarelo": 3,
-    "vermelho": 18,
+    "amarelo": 4,
+    "vermelho": 17,
     "cinza": 0
    }
   }
@@ -325,13 +330,13 @@
   },
   "idade_horas": {
    "repositorio": 0.0,
-   "fluxo": 151.4,
+   "fluxo": 151.7,
    "fichas": 0.0,
    "sala_controle": 0.0,
    "status_motores": 0.0,
-   "maestro": 5.4,
-   "rede_neural": 151.4,
-   "saude": 21.2
+   "maestro": 5.7,
+   "rede_neural": 151.7,
+   "saude": 0.0
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -909,18 +914,18 @@
    "dia_fechado": false
   },
   "retentativa": {
-   "aguardando_retentativa": 1197,
-   "fora_da_fila": 104,
+   "aguardando_retentativa": 1199,
+   "fora_da_fila": 106,
    "fora_da_fila_por_escopo": {
     "outras-oportunidades-1": 7,
     "outras-oportunidades-6": 5,
     "recorrencia": 4,
     "outras-oportunidades-5": 7,
-    "outras-oportunidades-8": 5,
+    "outras-oportunidades-8": 6,
     "outras-oportunidades-3": 7,
     "f260-captacao-044": 1,
     "outras-oportunidades-2": 4,
-    "plat-empresas-editais-incentivados": 2,
+    "plat-empresas-editais-incentivados": 3,
     "f260-captacao-238": 2,
     "cartorio": 46,
     "outras-oportunidades-7": 4,
@@ -1076,7 +1081,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 129.7 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 130.0 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1109,7 +1114,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 6 dia(s) (151 h); última leitura 18/10 00:25",
+   "texto": "motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 6 dia(s) (152 h); última leitura 18/10 00:25",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1117,7 +1122,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 6 dia(s) (150 h); última leitura 18/10 01:27",
+   "texto": "motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 6 dia(s) (151 h); última leitura 18/10 01:27",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1125,15 +1130,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 6 dia(s) (150 h); última leitura 18/10 01:29",
-   "correcao": "investigar o motor (sem correção automática)",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "motor_em_falha",
-   "gravidade": "alta",
-   "texto": "motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 6 dia(s) (150 h); última leitura 18/10 01:29",
+   "texto": "motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 6 dia(s) (151 h); última leitura 18/10 01:29",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1201,7 +1198,7 @@
   {
    "codigo": "atrasado_fluxo",
    "gravidade": "media",
-   "texto": "fluxo sem atualização há 151.4 h (limite 3 h)",
+   "texto": "fluxo sem atualização há 151.7 h (limite 3 h)",
    "correcao": "refazer a tela",
    "quantidade": null,
    "exemplos": []
@@ -1209,7 +1206,7 @@
   {
    "codigo": "atrasado_maestro",
    "gravidade": "media",
-   "texto": "maestro sem atualização há 5.4 h (limite 3 h)",
+   "texto": "maestro sem atualização há 5.7 h (limite 3 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1217,7 +1214,7 @@
   {
    "codigo": "atrasado_rede_neural",
    "gravidade": "media",
-   "texto": "rede_neural sem atualização há 151.4 h (limite 26 h)",
+   "texto": "rede_neural sem atualização há 151.7 h (limite 26 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1242,7 +1239,7 @@
   {
    "codigo": "gabarito_desatualizado",
    "gravidade": "media",
-   "texto": "avaliação do Cartório com gabarito tem 207.4 h (semanal)",
+   "texto": "avaliação do Cartório com gabarito tem 207.7 h (semanal)",
    "correcao": "disparar o fluxo 39",
    "quantidade": null,
    "exemplos": []
@@ -1267,9 +1264,9 @@
   {
    "codigo": "pagina_fora_da_fila",
    "gravidade": "media",
-   "texto": "104 página(s)/documento(s) fora da fila após 5 erros iguais",
+   "texto": "106 página(s)/documento(s) fora da fila após 5 erros iguais",
    "correcao": "corrigir a rota ou ler no Chrome (sem correção automática)",
-   "quantidade": 104,
+   "quantidade": 106,
    "exemplos": [
     "https://www.boavista.rr.gov.br/",
     "https://tuifund.com/fo/2026-2027-grants-and-funding-opportunities-for-ngos-and-organizations/",
@@ -1284,7 +1281,7 @@
   {
    "codigo": "saude_claude",
    "gravidade": "media",
-   "texto": "saúde · claude: 239 item(ns) esperando a análise do Claude (próxima: 2026-10-23)",
+   "texto": "saúde · claude: 240 item(ns) esperando a análise do Claude (próxima: 2026-10-24)",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1301,6 +1298,14 @@
    "codigo": "saude_gerador",
    "gravidade": "media",
    "texto": "saúde · gerador: o gerador principal do painel falhou depois da última geração",
+   "correcao": "ver o fluxo/arquivo indicado",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "saude_livros_do_sistema",
+   "gravidade": "media",
+   "texto": "saúde · livros_do_sistema: 2 livro(es) duplicado(s) no catálogo",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1324,7 +1329,7 @@
   {
    "codigo": "saude_workflows",
    "gravidade": "media",
-   "texto": "saúde · workflows: 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): últimas 5 execuções sem sucesso",
+   "texto": "saúde · workflows: 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): últimas 4 execuções sem sucesso",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1382,8 +1387,8 @@
   }
  ],
  "contagem_problemas": {
-  "alta": 14,
-  "media": 14,
+  "alta": 13,
+  "media": 15,
   "baixa": 2
  },
  "corrigiveis": [
