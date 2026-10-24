@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-24T19:17:42+00:00",
+  "em": "2026-10-24T19:34:04+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-24T18:58:36+00:00",
+  "ultimo_voo": "2026-10-24T19:19:35+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,96 +38,69 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
+    "validadas": 0,
     "parciais": 0,
-    "insuficientes": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 18.4
+    "tempo_medio_min": 14.0
   },
   "missoes": [
     {
-      "em": "2026-10-24T18:58:36+00:00",
+      "em": "2026-10-24T19:19:35+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anexo 6 – Declaração de Representação de Grupo ou Coletivo – Edital 11 (Docx) — Goiás",
-      "qualidade": "validada",
-      "comprovados": 11,
+      "alvo": "Anexo 6 – Declaração de Representação de Grupo ou Coletivo – Edital 12 (Docx) — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 0,
       "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": [],
-      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/03/Edital-de-Musica-no-112026.pdf",
+      "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
+      ],
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado fornece informações detalhadas sobre o edital, incluindo prazo, valor, objeto e requisitos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria estar sediada e residir no Estado de Goiás há pelo menos dois anos, e seu projeto deve estar na área da música, contemplando iniciativas de produção, lançamento e circulação de obras musicais.",
-        "proximo_passo": "Verificar se a associação comunitária atende aos requisitos do edital e preparar a documentação necessária para inscrição no prazo de 2026-03-01 a 2026-03-31.",
-        "risco": "A associação pode não atender aos requisitos de residência e sediação no Estado de Goiás por pelo menos dois anos, o que impediria seu acesso ao edital."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações comprovadas sobre o edital mencionado para servir como fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria fazer para acessar não pode ser determinada devido à falta de informações comprovadas.",
+        "proximo_passo": "Consultar fontes oficiais ou contatos relacionados ao edital para obter detalhes atualizados.",
+        "risco": "A falta de informações comprovadas pode impedir a obtenção de dados essenciais para a participação no edital."
       },
       "erro": null,
-      "segundos": 1103,
+      "segundos": 841,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 10,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "op-f876eb87c21a",
-      "encontrou": {
-        "Objeto": {
-          "valor": "selecionar e apoiar projetos na área da música, contemplando iniciativas de produção, lançamento e circulação de obras musicais",
-          "trecho": "O presente edital tem por objeto selecionar e apoiar projetos na área da música, contemplando iniciativas de produção, lançamento e circulação de obras musicais.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-03-01 a 2026-03-31",
-          "trecho": "O presente Edital de Música nº 11/2026, elaborado com base na Lei nº 14.399/2022 (Lei PNAB), na Lei nº 14.903/2024 (Marco Regulatório do Fomento à Cultura), no Decreto nº 11.740/20",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$ 2.500.000,00 (dois milhões e quinhentos mil reais)",
-          "trecho": "O valor total disponibilizado para este Edital é de R$ 2.500.000,00 (dois milhões e quinhentos mil reais), dividido entre as categorias de apoio descritas no Anexo I, para o apoio ",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura de Goiás",
-          "trecho": "A Secretaria de Estado da Cultura de Goiás, tendo em vista o que consta no processo nº 202517645004356, torna público o presente Edital de Música nº 11/2026.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "proponentes residentes e sediados no Estado de Goiás",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "O presente edital tem por objeto selecionar e apoiar projetos na área da música, contemplando iniciativas de produção, lançamento e circulação de obras musicais.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "proponentes residentes e sediados no Estado de Goiás há, há pelo menos, 2 (dois) anos",
-          "trecho": "proponentes residentes e sediados no Estado de Goiás há, há pelo menos, 2 (dois) anos",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "Governo do Estado de Goiás",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-835f2a0f2965",
+      "encontrou": {},
+      "financiador": "GOIÂNIA/GO",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
