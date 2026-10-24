@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-24T04:12:47+00:00",
+  "em": "2026-10-24T04:23:34+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-24T03:55:21+00:00",
+  "ultimo_voo": "2026-10-24T04:14:27+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,21 +44,21 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.7
+    "tempo_medio_min": 8.4
   },
   "missoes": [
     {
-      "em": "2026-10-24T03:55:21+00:00",
+      "em": "2026-10-24T04:14:27+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "SEGENP (gestão de negócios e parcerias) — Edital nº 001/2026 — Celebração de Termo de Colaboração com Organiza… — Goiás / Goiânia",
+      "alvo": "SES-GO (saúde) — Edital nº 01/2026 — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 4,
+      "comprovados": 0,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -66,50 +66,41 @@
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
         "Território",
+        "Esfera",
         "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre valor e financiador, o que permite identificar a fonte de recursos.",
-        "para_a_amc": "A associação comunitária precisaria verificar os requisitos não encontrados, como prazo de inscrição, área de atuação e outros anexos, e se enquadraria no edital.",
-        "proximo_passo": "Consultar os anexos disponíveis para obter detalhes sobre requisitos e área de atuação do edital.",
-        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir que a associação comunitária se candidate adequadamente."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações comprovadas sobre o edital mencionado.",
+        "para_a_amc": "Não há informações suficientes para orientar a associação comunitária.",
+        "proximo_passo": "Consultar o site oficial da SES-GO para obter detalhes sobre o edital.",
+        "risco": "A falta de informações pode impedir a participação da associação no processo seletivo."
       },
       "erro": null,
-      "segundos": 1004,
+      "segundos": 504,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-daffb076a595",
-      "encontrou": {
-        "Valor": {
-          "valor": "R$ 4.253.257,53",
-          "trecho": "Dispõe sobre a abertura de crédito suplementar, em favor da Secretaria Municipal de Infraestrutura Urbana, no valor de R$ 4.253.257,53",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia",
-          "trecho": "PREFEITURA DE GOIÂNIA SECRETARIA MUNICIPAL DA CASA CIVIL",
-          "oficial": false,
-          "dispensado": false
-        }
-      },
-      "financiador": "Prefeitura de Goiânia",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-35d382a2d259",
+      "encontrou": {},
+      "financiador": "SES-GO",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano"
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
