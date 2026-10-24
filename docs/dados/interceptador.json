@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-24T19:49:56+00:00",
+  "em": "2026-10-24T20:44:34+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-24T19:35:57+00:00",
+  "ultimo_voo": "2026-10-24T20:23:30+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,17 +48,17 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.5
+    "tempo_medio_min": 20.5
   },
   "missoes": [
     {
-      "em": "2026-10-24T19:35:57+00:00",
+      "em": "2026-10-24T20:23:30+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anexo 6 – Declaração de Representação de Grupo ou Coletivo – Edital 12 (Docx) — Goiás / Goiânia",
+      "alvo": "Anexo 7 – Declaração Étnico-Racial – Edital 09 (Docx) — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 1,
+      "comprovados": 3,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -67,8 +67,6 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
-        "Esfera",
         "Requisitos",
         "Anexos",
         "Área de atuação"
@@ -76,33 +74,43 @@
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O documento menciona o território como GO, confirmando que é referente ao estado de Goiás.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital se aplica à sua área de atuação e seguir as instruções para apresentação da Declaração de Representação de Grupo ou Coletivo.",
-        "proximo_passo": "Consultar os anexos e instruções do edital para preencher e submeter a Declaração de Representação de Grupo ou Coletivo.",
-        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir a associação de entender se é elegível para o edital."
+        "por_que": "O documento menciona o Edital 09 e o Anexo 7 – Declaração Étnico-Racial, indicando que é uma fonte relevante para editais de fomento da Secult de Goiânia.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria preencher e submeter a Declaração Étnico-Racial como parte do processo de inscrição, além de atender aos requisitos gerais do edital, que não foram especificados no texto.",
+        "proximo_passo": "Consultar diretamente o Edital 09 para obter informações detalhadas sobre os requisitos, prazos e processo de inscrição.",
+        "risco": "A falta de informações sobre requisitos, prazos e área de atuação pode impedir a associação de se qualificar adequadamente para o edital."
       },
       "erro": null,
-      "segundos": 808,
+      "segundos": 1229,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-b89cb42bf389",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-7b87b520f974",
       "encontrou": {
+        "Órgão / financiador": {
+          "valor": "Secult de Goiânia",
+          "trecho": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-09-anexo-7.docx",
+          "oficial": false,
+          "dispensado": false
+        },
         "Território": {
           "valor": "GO",
-          "trecho": "Goiânia",
+          "trecho": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-09-anexo-7.docx",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "GOIÂNIA/GOIÁS",
+      "financiador": "GOIANIA.GO.GOV.BR",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
