@@ -118,8 +118,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "dj-trf1-go": {
-  "em": "2026-10-20T06:26:10+00:00",
-  "testes": 14,
+  "em": "2026-10-24T12:22:01+00:00",
+  "testes": 16,
   "melhor": {
    "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
    "via": "direto",
@@ -151,16 +151,6 @@
     "funcionou": true
    },
    {
-    "url": "https://www.trf1.jus.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.trf1.jus.br/sjgo/conteudo/secos/SEI_24768109_Edital (2).pdf",
     "origem": "biblioteca",
     "via": "direto",
@@ -171,7 +161,18 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/transparencia/editais",
+    "url": "https://www.trf1.jus.br/sjgo/conteudo/secos/SEI_24768109_Edital (2).pdf",
+    "origem": "biblioteca",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.trf1.jus.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -181,7 +182,17 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.trf1.jus.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.trf1.jus.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -201,7 +212,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/editais",
+    "url": "https://www.trf1.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -211,7 +222,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/noticias",
+    "url": "https://www.trf1.jus.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -231,7 +242,27 @@
     "funcionou": false
    },
    {
+    "url": "https://www.trf1.jus.br/noticias",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.trf1.jus.br/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.trf1.jus.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -252,16 +283,6 @@
    },
    {
     "url": "https://www.trf1.jus.br/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.trf1.jus.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1073,12 +1094,12 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-24T10:53:01+00:00",
+  "em": "2026-10-24T12:26:40+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
  "f260-captacao-238": {
-  "em": "2026-10-24T00:07:47+00:00",
+  "em": "2026-10-24T12:26:18+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -2005,13 +2026,13 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "alego-pl": {
-  "em": "2026-10-20T07:54:47+00:00",
-  "testes": 17,
+  "em": "2026-10-24T12:24:04+00:00",
+  "testes": 16,
   "melhor": {
    "url": "https://portal.al.go.leg.br/",
    "via": "direto",
    "origem": "rota original",
-   "pontos": 19,
+   "pontos": 23,
    "formato": "html"
   },
   "detalhe": [
@@ -2030,16 +2051,16 @@
     "url": "https://portal.al.go.leg.br/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 19,
+    "pontos": 23,
     "links": 260,
-    "sinais": 9,
+    "sinais": 11,
     "formato": "html",
     "erro": null,
     "funcionou": true
    },
    {
-    "url": "https://portal.al.go.leg.br/sitemap.xml",
-    "origem": "padrão",
+    "url": "https://portal.al.go.leg.br/feed",
+    "origem": "câmara",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2048,13 +2069,23 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "ponte",
+    "url": "https://alegodigital.al.go.leg.br/feed",
+    "origem": "câmara",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
     "funcionou": false
    },
    {
@@ -2074,7 +2105,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "URLError",
     "funcionou": false
    },
    {
@@ -2108,48 +2139,8 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/feed",
-    "origem": "câmara",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/feed",
-    "origem": "câmara",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
     "url": "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
     "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://portal.al.go.leg.br/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/editais",
-    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2170,6 +2161,36 @@
    {
     "url": "https://alegodigital.al.go.leg.br/noticias",
     "origem": "câmara",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/edital",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -7233,8 +7254,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-www-ipora-pr-gov-br": {
-  "em": "2026-10-24T00:05:45+00:00",
-  "testes": 13,
+  "em": "2026-10-24T12:24:16+00:00",
+  "testes": 12,
   "melhor": {
    "url": "https://www.ipora.pr.gov.br/",
    "via": "direto",
@@ -7262,16 +7283,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.ipora.pr.gov.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
     "funcionou": false
    },
    {
@@ -8532,7 +8543,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-259": {
-  "em": "2026-10-24T00:08:04+00:00",
+  "em": "2026-10-24T12:26:24+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -9808,7 +9819,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-257": {
-  "em": "2026-10-24T00:08:19+00:00",
+  "em": "2026-10-24T12:26:40+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
