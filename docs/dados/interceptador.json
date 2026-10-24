@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-24T08:59:04+00:00",
+  "em": "2026-10-24T09:11:58+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-24T08:45:04+00:00",
+  "ultimo_voo": "2026-10-24T09:01:00+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,17 +48,17 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.3
+    "tempo_medio_min": 10.4
   },
   "missoes": [
     {
-      "em": "2026-10-24T08:45:04+00:00",
+      "em": "2026-10-24T09:01:00+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Rede Municipal de Pontos de Cultura de Goiânia — Política Nacional Cultura Viva — Goiás / Goiânia",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "Secretaria de Estado da Cultura (Secult) — Chamamento público de OSC que apoiará Secult Goiás com Política Nac… — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 2,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -66,62 +66,52 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
         "Anexos"
       ],
-      "pagina_oficial": "https://culturaviva.cultura.gov.br/site/certificados/",
+      "pagina_oficial": "https://pnab.cultura.go.gov.br",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações sobre o Objeto, Órgão / financiador, Território, Esfera, Requisitos e Área de atuação da iniciativa, sendo suficiente para compreender a base da ação.",
-        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisa preencher o formulário específico com histórico atualizado e comprovação de atuação, assinar os Termos de Adesão à PNCV, Termos de Uso e Privacidade, e demonstrar compromisso com os objetivos da Política Nacional de Cultura Viva.",
-        "proximo_passo": "A associação comunitária deve se cadastrar no sistema da Secretaria de Cidadania e Diversidade Cultural do Ministério da Cultura e preencher os documentos exigidos.",
-        "risco": "A falta de documentos necessários, como histórico atualizado e comprovação de atuação, pode impedir o acesso."
+        "por_que": "O texto comprovado menciona o objeto e a área de atuação do edital, o que é suficiente para identificar a fonte como relevante.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é apoiar a Secretaria de Estado da Cultura (Secult) Goiás com a Política Nacional Aldir Blanc, e demonstrar como sua atuação na área de cultura se encaixa nesse apoio.",
+        "proximo_passo": "Verificar os requisitos e anexos do edital para se preparar adequadamente para a inscrição.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se inscrever no edital a tempo."
       },
       "erro": null,
-      "segundos": 798,
+      "segundos": 624,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-db2d54eeb38d",
+      "fontes_oficiais": 1,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-fc4ae54b664e",
       "encontrou": {
         "Objeto": {
-          "valor": "reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura",
-          "trecho": "A Certificação Simplificada como Ponto ou Pontão de Cultura é o reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura pela Secretaria de Cidadania e D",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Secretaria de Cidadania e Diversidade Cultural do Ministério da Cultura",
-          "trecho": "A Certificação Simplificada como Ponto ou Pontão de Cultura é o reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura pela Secretaria de Cidadania e D",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "A Plataforma Rede Cultura Viva é o sistema responsável pelo registro, identificação, reconhecimento, divulgação, georreferenciamento, comunicação, interação e articulação da Rede C",
-          "oficial": true,
+          "valor": "apoio à Secretaria de Estado da Cultura (Secult) Goiás com a Política Nacional Aldir Blanc",
+          "trecho": "apoio à Secretaria de Estado da Cultura (Secult) Goiás com a Política Nacional Aldir Blanc",
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "A Certificação Simplificada como Ponto ou Pontão de Cultura é o reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura pela Secretaria de Cidadania e D",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Formulário específico preenchido, contendo o histórico atualizado e a comprovação de atuação da entidade ou coletivo cul, Termos de Adesão à PNCV, documento no qual a entidade ou coletivo cultural afirmará seu compromisso com os objetivos da , Termos de Uso e Privacidade, documento no qual a entidad",
-          "trecho": "Formulário específico preenchido, contendo o histórico atualizado e a comprovação de atuação da entidade ou coletivo cultural no campo da cultura e as atividades desenvolvidas em r",
+          "trecho": "PNAB Política Nacional Aldir Blanc – Secretaria de Estado da Cultura",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Ministério da Cultura",
+      "financiador": "Secretaria de Estado da Cultura (Secult) Goiás",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
