@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-24T21:48:10+00:00",
+  "em": "2026-10-24T22:09:03+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-24T21:27:32+00:00",
+  "ultimo_voo": "2026-10-24T21:50:09+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,38 +43,75 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 20.0
+    "tempo_medio_min": 18.4
   },
   "missoes": [
     {
-      "em": "2026-10-24T21:27:32+00:00",
+      "em": "2026-10-24T21:50:09+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anexo 7 – Declaração Étnico-Racial – Edital 11 (Docx) — Goiás",
+      "alvo": "Anexo 7 – Declaração Étnico-Racial – Edital 12 (Docx) — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 5,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 1202,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos",
+        "Área de atuação"
+      ],
+      "pagina_oficial": "https://www10.goiania.go.gov.br/DadosINTER/PUBLIC/arq_8210014.pdf",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O documento menciona o Objeto, Órgão / financiador, Território e Esfera, o que é suficiente para identificar a fonte como válida.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se credenciar para eventual contratação de serviços de artistas e/ou grupos das linguagens de Teatro, Dança, Circo, Música, Audiovisual, Artes Visuais, Literatura e Expressões Culturais da Tradição.",
+        "proximo_passo": "Consultar os anexos mencionados para obter mais detalhes sobre o processo de credenciamento.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se preparar adequadamente para o processo."
+      },
+      "erro": null,
+      "segundos": 1101,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 4,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-09c9cd957a0d",
-      "encontrou": {},
-      "financiador": null,
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-64d21c7bfd00",
+      "encontrou": {
+        "Objeto": {
+          "valor": "Credenciamento para eventual contratação de serviços de artistas e/ou grupos das linguagens de Teatro, Dança, Circo, Música, Audiovisual, Artes Visuais, Literatura e Expressões Culturais da Tradição",
+          "trecho": "ConstuiobjetodesteoCredenciamentoparansdeeventualcontrataçãodeserviçosdearstase/ougruposarscosdaslinguagensdeTeatro,Dança,Circo,Música,Audiovisual,ArtesVisuais,LiteraturaeExpr",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Prefeitura de Goiânia, através da Secretaria Municipal de Cultura (SECULT)",
+          "trecho": "A Prefeitura de Goiânia, através da Secretaria Municipal de Cultura (SECULT), torna público torna público para conhecimento dos interessadosopresenteCHAMAMENTOPÚBLICO,paransdeCRED",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "A Prefeitura de Goiânia, através da Secretaria Municipal de Cultura (SECULT), torna público torna público para conhecimento dos interessadosopresenteCHAMAMENTOPÚBLICO,paransdeCRED",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "GOIÂNIA - PREFEITURA MUNICIPAL DE GOIÂNIA",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital"
+      ]
     }
   ],
   "contagem": {
