@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-24 13:11 UTC
+# Diagnóstico do sistema · 2026-10-24 13:26 UTC
 
 ## Cumprimento da finalidade · índice geral 59%
 - Motores: 79% (atencao) — todo motor ativo lê dentro da sua cadência
@@ -76,7 +76,7 @@
 ## Sistemas
 - motores: 34 funcionando · 9 em falha · 2 inativos · 1 com leitura parcial
   - em falha: Diário Oficial do Município de Goiânia — falha — não lê há 4 dia(s) (97 h); última leitura 20/10 08:52
-  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 6 dia(s) (153 h); última leitura 18/10 00:25
+  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 6 dia(s) (154 h); última leitura 18/10 00:25
   - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 6 dia(s) (152 h); última leitura 18/10 01:27
   - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 6 dia(s) (152 h); última leitura 18/10 01:29
   - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 6 dia(s) (150 h); última leitura 18/10 03:55
@@ -86,19 +86,19 @@
   - em falha: ABCR — Associação Brasileira de Captadores de Recursos — editais divulgados pela associação dos captadores — falha na leitura de 24/10 01:34
 - maestro: cobertura 0.0% · esgotados 0
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
-- Cartório: 0.6646 certificado · fluxos do GitHub com falha: []
+- Cartório: 0.6646 certificado · fluxos do GitHub com falha: ['00 · Verificar prontidão']
 - saúde: 6 alerta(s) · índice da sala de controle: 54
 
 ## Integração
 - contagens: {'repositorio_abertas': 223, 'diagnostico_abertas': 223, 'tela_cartoes': 224, 'fichas': 228, 'sala_controle_abertas': 223}
-- idade (h): {'repositorio': 0.0, 'fluxo': 153.3, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 7.3, 'rede_neural': 153.3, 'saude': 0.0}
+- idade (h): {'repositorio': 0.0, 'fluxo': 153.6, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 7.5, 'rede_neural': 153.6, 'saude': 0.3}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (29)
-- [alta] o comando único não fecha um ciclo há 131.6 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+- [alta] o comando único não fecha um ciclo há 131.8 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
 - [alta] motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 4 dia(s) (97 h); última leitura 20/10 08:52 → investigar o motor (sem correção automática)
-- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 6 dia(s) (153 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
+- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 6 dia(s) (154 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
 - [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 6 dia(s) (152 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
 - [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 6 dia(s) (152 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 6 dia(s) (150 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
@@ -108,11 +108,11 @@
 - [alta] motor em falha: ABCR — Associação Brasileira de Captadores de Recursos — editais divulgados pela associação dos captadores — falha na leitura de 24/10 01:34 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 223 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 153.3 h (limite 3 h) → refazer a tela
-- [media] maestro sem atualização há 7.3 h (limite 3 h) → ver o fluxo que gera este dado
-- [media] rede_neural sem atualização há 153.3 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 153.6 h (limite 3 h) → refazer a tela
+- [media] maestro sem atualização há 7.5 h (limite 3 h) → ver o fluxo que gera este dado
+- [media] rede_neural sem atualização há 153.6 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 128 de 128 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
-- [media] avaliação do Cartório com gabarito tem 209.3 h (semanal) → disparar o fluxo 39
+- [media] avaliação do Cartório com gabarito tem 209.6 h (semanal) → disparar o fluxo 39
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 106 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 240 item(ns) esperando a análise do Claude (próxima: 2026-10-24) → ver o fluxo/arquivo indicado
