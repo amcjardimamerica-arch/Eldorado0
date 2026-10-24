@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-24T10:35:30+00:00",
+  "em": "2026-10-24T10:51:29+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-24T10:20:53+00:00",
+  "ultimo_voo": "2026-10-24T10:37:28+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,53 +48,73 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.9
+    "tempo_medio_min": 13.3
   },
   "missoes": [
     {
-      "em": "2026-10-24T10:20:53+00:00",
+      "em": "2026-10-24T10:37:28+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Secretaria de Estado da Cultura (Secult) — Secult abre chamamento público para OSC atuar na operacionalização … — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 2,
+      "alvo": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável (Semad) — Edital para credenciamento — Goi… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
+        "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": "https://goias.gov.br/cultura/canto-da-primavera-2025-abre-inscricoes-para-novo-edital-de-shows-de-musica-instrumental/",
+      "pagina_oficial": "https://www.meioambiente.go.gov.br/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O resultado do chamamento público está comprovado com data de 2025-04-30, indicando que a Secult de Goiás está realizando um processo seletivo para OSCs.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no chamamento público da Secult, apresentar os documentos exigidos e demonstrar sua capacidade de atuar na área de cultura, assistência social, educação ou esporte.",
-        "proximo_passo": "Verificar os anexos disponibilizados pela Secult para obter detalhes sobre os requisitos e o edital completo.",
-        "risco": "A falta de informações sobre os requisitos e o edital pode impedir a associação de se preparar adequadamente para o processo seletivo."
+        "por_que": "O edital comprovado refere-se ao credenciamento de entidades para atuar na gestão ambiental, o que pode ser relevante para a AMC se estiver interessada em atividades relacionadas ao meio ambiente.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se credenciar para atuar na gestão ambiental, demonstrando capacidade técnica e legal para desenvolver atividades na área, conforme o objeto do edital.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre os requisitos e processo de credenciamento.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos específicos pode impedir a associação de se preparar adequadamente para o processo."
       },
       "erro": null,
-      "segundos": 836,
+      "segundos": 799,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 2,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-258a0859666a",
-      "encontrou": {},
-      "financiador": "Secretaria de Estado da Cultura (Secult)",
+      "fontes_oficiais": 0,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-d323464c4331",
+      "encontrou": {
+        "Objeto": {
+          "valor": "credenciamento de entidades para atuar na gestão ambiental",
+          "trecho": "Edital para credenciamento — Goiás",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável (Semad)",
+          "trecho": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável (Semad) — Edital para credenciamento — Goiás",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Edital para credenciamento — Goiás",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "meio_ambiente",
+          "trecho": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável (Semad) — Edital para credenciamento — Goiás",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável (Semad)",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador"
       ]
     }
   ],
