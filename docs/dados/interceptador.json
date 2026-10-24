@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-24T08:43:01+00:00",
+  "em": "2026-10-24T08:59:04+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-24T08:35:38+00:00",
+  "ultimo_voo": "2026-10-24T08:45:04+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,70 +48,80 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 6.7
+    "tempo_medio_min": 13.3
   },
   "missoes": [
     {
-      "em": "2026-10-24T08:35:38+00:00",
+      "em": "2026-10-24T08:45:04+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Realização de Chamamento Público visando a Seleção de Agentes Culturais de Audiovisual que tenham prestado rel… — Goiás / Alvorada do Norte",
-      "qualidade": "insuficiente",
-      "comprovados": 2,
+      "alvo": "Rede Municipal de Pontos de Cultura de Goiânia — Política Nacional Cultura Viva — Goiás / Goiânia",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Anexos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://culturaviva.cultura.gov.br/site/certificados/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O PNCP é uma fonte oficial de informações sobre contratações públicas, incluindo editais de fomento.",
-        "para_a_amc": "A associação comunitária precisaria verificar se o edital se aplica à sua área de atuação e se ela atende aos requisitos estabelecidos no edital, mesmo que não estejam disponíveis no texto fornecido.",
-        "proximo_passo": "Consultar o PNCP diretamente para obter detalhes completos do edital, como objeto, prazo e requisitos.",
-        "risco": "A falta de informações detalhadas pode impedir que a associação comunitária compreenda se é elegível ou como proceder para participar."
+        "por_que": "O texto fornece informações sobre o Objeto, Órgão / financiador, Território, Esfera, Requisitos e Área de atuação da iniciativa, sendo suficiente para compreender a base da ação.",
+        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisa preencher o formulário específico com histórico atualizado e comprovação de atuação, assinar os Termos de Adesão à PNCV, Termos de Uso e Privacidade, e demonstrar compromisso com os objetivos da Política Nacional de Cultura Viva.",
+        "proximo_passo": "A associação comunitária deve se cadastrar no sistema da Secretaria de Cidadania e Diversidade Cultural do Ministério da Cultura e preencher os documentos exigidos.",
+        "risco": "A falta de documentos necessários, como histórico atualizado e comprovação de atuação, pode impedir o acesso."
       },
       "erro": null,
-      "segundos": 400,
+      "segundos": 798,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-731a21590bd3",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-db2d54eeb38d",
       "encontrou": {
+        "Objeto": {
+          "valor": "reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura",
+          "trecho": "A Certificação Simplificada como Ponto ou Pontão de Cultura é o reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura pela Secretaria de Cidadania e D",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "PNCP - Portal Nacional de Contratações Públicas",
-          "trecho": "PNCP - Portal Nacional de Contratações Públicas",
-          "oficial": false,
+          "valor": "Secretaria de Cidadania e Diversidade Cultural do Ministério da Cultura",
+          "trecho": "A Certificação Simplificada como Ponto ou Pontão de Cultura é o reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura pela Secretaria de Cidadania e D",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "null",
-          "trecho": "nacional",
-          "oficial": false,
+          "valor": "GO",
+          "trecho": "A Plataforma Rede Cultura Viva é o sistema responsável pelo registro, identificação, reconhecimento, divulgação, georreferenciamento, comunicação, interação e articulação da Rede C",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "A Certificação Simplificada como Ponto ou Pontão de Cultura é o reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura pela Secretaria de Cidadania e D",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Formulário específico preenchido, contendo o histórico atualizado e a comprovação de atuação da entidade ou coletivo cul, Termos de Adesão à PNCV, documento no qual a entidade ou coletivo cultural afirmará seu compromisso com os objetivos da , Termos de Uso e Privacidade, documento no qual a entidad",
+          "trecho": "Formulário específico preenchido, contendo o histórico atualizado e a comprovação de atuação da entidade ou coletivo cultural no campo da cultura e as atividades desenvolvidas em r",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura de Goiás",
+      "financiador": "Ministério da Cultura",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
