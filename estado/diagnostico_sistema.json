@@ -1,5 +1,5 @@
 {
- "em": "2026-10-24T16:56:55+00:00",
+ "em": "2026-10-24T17:12:23+00:00",
  "finalidade": {
   "sistemas": [
    {
@@ -117,7 +117,7 @@
     {
      "id": "salic",
      "nome": "Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)",
-     "resultado": "falha — não lê há 6 dia(s) (153 h); última leitura 18/10 04:07"
+     "resultado": "falha — não lê há 6 dia(s) (154 h); última leitura 18/10 04:07"
     },
     {
      "id": "prefeituras-50-go",
@@ -127,7 +127,7 @@
     {
      "id": "estaduais-go-gov",
      "nome": "Oportunidade Estaduais Governamentais de Goiás",
-     "resultado": "falha — não lê há 1 dia(s) (28 h); última leitura 23/10 08:58"
+     "resultado": "falha — não lê há 1 dia(s) (29 h); última leitura 23/10 08:58"
     },
     {
      "id": "site-abcr",
@@ -142,7 +142,7 @@
      "resultado": "funcionando — última leitura 24/10 08:15 · 21 achado(s) (atenção: 3 página(s) com falha; as demais foram lidas)"
     }
    ],
-   "status_em": "2026-10-24T13:56-03:00",
+   "status_em": "2026-10-24T14:12-03:00",
    "auditoria": {
     "em": "2026-10-24T13:10:12+00:00",
     "total": 33,
@@ -232,8 +232,8 @@
     }
    },
    "espiao": {
-    "em": "2026-10-24T16:40:42+00:00",
-    "voos": 1363,
+    "em": "2026-10-24T17:05:57+00:00",
+    "voos": 1364,
     "empresas_novas": 267
    }
   },
@@ -272,11 +272,11 @@
    "sem_nada_na_base": 25
   },
   "fluxos_github": {
-   "total": 5,
+   "total": 6,
    "com_falha": []
   },
   "sala_controle": {
-   "em": "2026-10-24T16:56:36+00:00",
+   "em": "2026-10-24T17:12:08+00:00",
    "indice_saude": 57,
    "contagem": {
     "verde": 15,
@@ -332,13 +332,13 @@
   },
   "idade_horas": {
    "repositorio": 0.0,
-   "fluxo": 157.1,
+   "fluxo": 157.3,
    "fichas": 0.0,
    "sala_controle": 0.0,
    "status_motores": 0.0,
-   "maestro": 2.8,
-   "rede_neural": 157.1,
-   "saude": 3.8
+   "maestro": 3.1,
+   "rede_neural": 157.3,
+   "saude": 4.0
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -1084,7 +1084,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 135.3 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 135.6 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1157,7 +1157,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 6 dia(s) (153 h); última leitura 18/10 04:07",
+   "texto": "motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 6 dia(s) (154 h); última leitura 18/10 04:07",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1173,7 +1173,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 1 dia(s) (28 h); última leitura 23/10 08:58",
+   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 1 dia(s) (29 h); última leitura 23/10 08:58",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1209,15 +1209,23 @@
   {
    "codigo": "atrasado_fluxo",
    "gravidade": "media",
-   "texto": "fluxo sem atualização há 157.1 h (limite 3 h)",
+   "texto": "fluxo sem atualização há 157.3 h (limite 3 h)",
    "correcao": "refazer a tela",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "atrasado_maestro",
+   "gravidade": "media",
+   "texto": "maestro sem atualização há 3.1 h (limite 3 h)",
+   "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
   },
   {
    "codigo": "atrasado_rede_neural",
    "gravidade": "media",
-   "texto": "rede_neural sem atualização há 157.1 h (limite 26 h)",
+   "texto": "rede_neural sem atualização há 157.3 h (limite 26 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1242,7 +1250,7 @@
   {
    "codigo": "gabarito_desatualizado",
    "gravidade": "media",
-   "texto": "avaliação do Cartório com gabarito tem 213.1 h (semanal)",
+   "texto": "avaliação do Cartório com gabarito tem 213.3 h (semanal)",
    "correcao": "disparar o fluxo 39",
    "quantidade": null,
    "exemplos": []
@@ -1383,7 +1391,7 @@
  ],
  "contagem_problemas": {
   "alta": 14,
-  "media": 13,
+  "media": 14,
   "baixa": 2
  },
  "corrigiveis": [
