@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T02:21:00+00:00",
+  "em": "2026-10-25T02:42:08+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T02:10:16+00:00",
+  "ultimo_voo": "2026-10-25T02:22:51+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,84 +48,83 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.1
+    "tempo_medio_min": 18.7
   },
   "missoes": [
     {
-      "em": "2026-10-25T02:10:16+00:00",
+      "em": "2026-10-25T02:22:51+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anápolis — Fundo Municipal de Cultura recebe inscrições até domingo (19) — Goiás / Anápolis — Goiás / Anápolis",
-      "qualidade": "insuficiente",
-      "comprovados": 6,
-      "dispensados": 1,
+      "alvo": "Anápolis — Prefeitura lança editais da Lei Aldir Blanc para o setor cultural — Goiás / Anápolis — Goiás / Anápolis",
+      "qualidade": "parcial",
+      "comprovados": 8,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Território",
-        "Requisitos",
-        "Anexos"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/09/SEI_94290506_Edital.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que o Fundo Municipal de Cultura de Anápolis oferece financiamento de projetos culturais, com valor superior a R$ 2 milhões, e que o prazo de inscrição foi explicitado.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no Fundo Municipal de Cultura de Anápolis, mesmo que não esteja localizada na cidade, pois o financiamento é para projetos culturais, e pode ser acessado por organizações da sociedade civil.",
-        "proximo_passo": "Verificar se a associação comunitária de Goiânia está elegível para participar do edital e se pode se inscrever no prazo estabelecido.",
-        "risco": "A associação comunitária de Goiânia pode não estar elegível para participar do edital ou pode não ter acesso ao prazo de inscrição, já que o edital é específico para Anápolis."
+        "por_que": "O edital foi comprovado com informações sobre objeto, valor, órgão financiador, território, esfera, requisitos e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria estar sediada e ter residência no Estado de Goiás há pelo menos 2 anos, e atuar na área de cultura para acessar o edital.",
+        "proximo_passo": "Verificar os anexos do edital para obter mais detalhes sobre o processo de inscrição e os critérios de seleção.",
+        "risco": "A falta de informações sobre o prazo de inscrição e o resultado pode impedir a associação de se inscrever oportunamente."
       },
       "erro": null,
-      "segundos": 608,
+      "segundos": 1121,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-1aa878592994",
+      "fontes_oficiais": 8,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
+      "id": "op-f0664c0352d1",
       "encontrou": {
         "Objeto": {
-          "valor": "financiamento de projetos culturais",
-          "trecho": "Serão mais de R$ 2 milhões para o financiamento de projetos culturais.",
-          "oficial": false,
+          "valor": "selecionar apresentações artísticas para compor a programação do NATAL DO BEM – EDIÇÃO 2026",
+          "trecho": "O presente Edital destina-se a apoiar projetos apresentados por agentes culturais do Estado de Goiás. Deste modo, a Secretaria de Estado da Cultura de Goiás, tendo em vista o que c",
+          "oficial": true,
           "dispensado": false
         },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O prazo de inscrição foi explicitado no texto.",
-          "trecho": "As inscrições podem ser realizadas até o dia 19 de maio. [rejeitado: data implausível para edital aberto]",
-          "oficial": false,
-          "dispensado": true
-        },
         "Valor": {
-          "valor": "mais de R$ 2 milhões",
-          "trecho": "Serão mais de R$ 2 milhões para o financiamento de projetos culturais.",
-          "oficial": false,
+          "valor": "R$ 502.000,00 (quinhentos e dois mil reais)",
+          "trecho": "O valor total disponibilizado para este Edital é de R$ 502.000,00 (quinhentos e dois mil reais), dividido entre as categorias de apoio descritas no Anexo I, para o apoio a 58 proje",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Anápolis",
-          "trecho": "A gestão municipal, por meio da Secretaria de Integração, acaba de lançar o regulamento...",
-          "oficial": false,
+          "valor": "SECRETARIA DE ESTADO DA CULTURA",
+          "trecho": "ESTADO DE GOIÁS SECRETARIA DE ESTADO DA CULTURA Edital EDITAL DE CHAMAMENTO PÚBLICO Nº 19/2026 SELEÇÃO DE PROJETOS PARA FIRMAR TERMO DE EXECUÇÃO CULTURAL COM RECURSOS DA POLÍTICA N",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "O presente Edital destina-se a apoiar projetos apresentados por agentes culturais do Estado de Goiás.",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "financiamento de projetos culturais",
-          "oficial": false,
+          "trecho": "ESTADO DE GOIÁS SECRETARIA DE ESTADO DA CULTURA Edital EDITAL DE CHAMAMENTO PÚBLICO Nº 19/2026 SELEÇÃO DE PROJETOS PARA FIRMAR TERMO DE EXECUÇÃO CULTURAL COM RECURSOS DA POLÍTICA N",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "proponentes residentes e sediados no Estado de Goiás há, há pelo menos, 2 (dois) anos",
+          "trecho": "O valor total disponibilizado para este Edital é de R$ 502.000,00 (quinhentos e dois mil reais), dividido entre as categorias de apoio descritas no Anexo I, para o apoio a 58 proje",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Anápolis",
+      "financiador": "Secretaria de Estado da Cultura",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
