@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T05:26:22+00:00",
+  "em": "2026-10-25T05:41:31+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T05:22:25+00:00",
+  "ultimo_voo": "2026-10-25T05:28:04+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,49 +43,94 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 3.4
+    "tempo_medio_min": 12.8
   },
   "missoes": [
     {
-      "em": "2026-10-25T05:22:25+00:00",
+      "em": "2026-10-25T05:28:04+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Aviso de Chamamento Público Nº 6/2026 - Prefeitura Municipal de Arenópolis — Goiás / Arenópolis Aviso de Chamamento Público",
+      "alvo": "Aviso de Chamamento Público nº 1/2026 – PNAB Ciclo II – Prefeitura de Nova América — Goiás / Nova América Aviso de Chamamento",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 9,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Resultado",
+        "Prazo de recurso"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "nenhuma fonte legível",
-      "segundos": 206,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O aviso de chamamento público descreve claramente o objeto, prazo, valor e requisitos para a seleção de projetos culturais, sendo uma fonte válida para a associação comunitária.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa atuar ou residir no Município de Nova América – Go, há pelo menos 06 (seis) meses, e submeter um projeto cultural dentro das categorias descritas no Anexo I.",
+        "proximo_passo": "Verificar os anexos e garantir que a associação atenda aos requisitos de residência ou atuação no município de Nova América – Go.",
+        "risco": "A associação pode não atender ao requisito de residência ou atuação no município de Nova América – Go, o que impediria o acesso ao edital."
+      },
+      "erro": null,
+      "segundos": 769,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: nenhuma fonte legível",
-      "id": "op-8912a2d8b538",
-      "encontrou": {},
-      "financiador": "Prefeitura Municipal de Arenópolis",
-      "indicios": [
-        {
-          "url": "http://pesquisa.in.gov.br/imprensa/jsp/visualiza/index.jsp?data=06/10/2026&jornal=530&pagina=162",
-          "tipo": "noticia"
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-d37cd23a3e06",
+      "encontrou": {
+        "Objeto": {
+          "valor": "seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I",
+          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de mani",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-08-03 a 2026-08-14",
+          "trecho": "Das 07:00 horas do dia 03/08/2026 até às 17:00 horas do dia 14/08/2026.",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$40.266,87",
+          "trecho": "O valor total deste edital é de R$40.266,87 (quarenta mil duzentos e sessenta e seis reais e oitenta e sete centavos).",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Prefeitura Municipal de Nova América",
+          "trecho": "ESTADO DE GOIAS Prefeitura Municipal de NOVA AMÉRICA",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "ESTADO DE GOIAS Prefeitura Municipal de NOVA AMÉRICA",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de mani",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "atuar ou residir no Município de Nova América – Go, há pelo menos 06 (seis) meses",
+          "trecho": "Pode se inscrever no Edital qualquer agente cultural que atua ou reside no Município de Nova América – Go, há pelo menos 06 (seis) meses.",
+          "oficial": false,
+          "dispensado": false
         }
-      ],
+      },
+      "financiador": "Prefeitura Municipal de Nova América",
+      "indicios": [],
       "rotas": [
         "site_municipal",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo"
+        "financiador_programa_edital"
       ]
     }
   ],
