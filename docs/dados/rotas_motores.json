@@ -1,5 +1,5 @@
 {
- "em": "2026-10-24T23:25:29+00:00",
+ "em": "2026-10-25T01:00:59+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,21 +7,17 @@
   "alterar_rota": 60,
   "rota_nova": 52,
   "via_ponte": 5,
-  "exemplos_da_rede": 37223
+  "exemplos_da_rede": 37303
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "origem:rota original",
-    3.3268
+    3.3842
    ],
    [
     "origem:biblioteca",
-    2.8804
-   ],
-   [
-    "tok:feed",
-    2.7947
+    2.8264
    ],
    [
     "tok:secult",
@@ -32,16 +28,20 @@
     2.4918
    ],
    [
+    "tok:feed",
+    2.4511
+   ],
+   [
     "tok:mpf",
     2.3968
    ],
    [
     "tok:imprensa",
-    2.3053
+    2.3119
    ],
    [
     "tok:deputados",
-    2.258
+    2.2953
    ],
    [
     "tok:unidades",
@@ -56,8 +56,8 @@
     1.8548
    ],
    [
-    "tok:transparencia",
-    1.7655
+    "tok:sala",
+    1.7227
    ]
   ],
   "piores_sinais": [
@@ -87,11 +87,11 @@
    ],
    [
     "origem:câmara",
-    -3.6482
+    -3.6852
    ],
    [
     "origem:padrão",
-    -4.0891
+    -4.2759
    ]
   ]
  },
@@ -535,7 +535,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-24T04:36:41+00:00",
+    "em": "2026-10-25T00:57:07+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1101,7 +1101,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-24T12:26:24+00:00",
+    "em": "2026-10-25T01:00:59+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1359,7 +1359,7 @@
     "aprendido_em": "2026-10-16T02:15:34+00:00"
    },
    "afinado": {
-    "em": "2026-10-24T12:26:18+00:00",
+    "em": "2026-10-25T01:00:52+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1933,10 +1933,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 11,
-    "aprendido_em": "2026-10-24T12:24:16+00:00"
+    "aprendido_em": "2026-10-25T00:58:50+00:00"
    },
    "afinado": {
-    "em": "2026-10-24T12:24:16+00:00",
+    "em": "2026-10-25T00:58:50+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.ipora.pr.gov.br/",
@@ -1998,10 +1998,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 23,
-    "aprendido_em": "2026-10-24T12:24:04+00:00"
+    "aprendido_em": "2026-10-25T00:58:38+00:00"
    },
    "afinado": {
-    "em": "2026-10-24T12:24:04+00:00",
+    "em": "2026-10-25T00:58:38+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://portal.al.go.leg.br/",
@@ -2063,11 +2063,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 29,
-    "aprendido_em": "2026-10-24T12:22:01+00:00"
+    "aprendido_em": "2026-10-25T00:57:11+00:00"
    },
    "afinado": {
-    "em": "2026-10-24T12:22:01+00:00",
-    "testes": 16,
+    "em": "2026-10-25T00:57:11+00:00",
+    "testes": 15,
     "melhor": {
      "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
      "via": "direto",
