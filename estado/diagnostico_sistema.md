@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-25 18:33 UTC
+# Diagnóstico do sistema · 2026-10-25 18:34 UTC
 
 ## Cumprimento da finalidade · índice geral 57%
 - Motores: 60% (falha) — todo motor ativo lê dentro da sua cadência
@@ -99,7 +99,7 @@
 
 ## Integração
 - contagens: {'repositorio_abertas': 223, 'diagnostico_abertas': 223, 'tela_cartoes': 224, 'fichas': 228, 'sala_controle_abertas': 223}
-- idade (h): {'repositorio': 0.0, 'fluxo': 182.7, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 0.7, 'rede_neural': 182.7, 'saude': 4.9}
+- idade (h): {'repositorio': 0.0, 'fluxo': 182.7, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 0.7, 'rede_neural': 182.7, 'saude': 5.0}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (37)
