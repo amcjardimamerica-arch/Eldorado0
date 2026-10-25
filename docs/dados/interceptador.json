@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T21:08:32+00:00",
+  "em": "2026-10-25T21:23:17+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T20:57:31+00:00",
+  "ultimo_voo": "2026-10-25T21:10:12+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,73 +48,69 @@
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.4
+    "tempo_medio_min": 12.5
   },
   "missoes": [
     {
-      "em": "2026-10-25T20:57:31+00:00",
+      "em": "2026-10-25T21:10:12+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital Aldir Blanc 2026 já... — Goiás",
+      "alvo": "Edital Arranjos Regionais — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 6,
-      "dispensados": 2,
+      "comprovados": 4,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos"
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
       "parecer_fonte": {
         "serve_como_fonte": "nao",
-        "por_que": "O edital mencionado é referente à Prefeitura Municipal de Jaraguá, GO, e não ao Edital Aldir Blanc 2026, que é federal e abrange todo o Brasil. Portanto, não é uma fonte válida para o Edital Aldir Blanc 2026.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao edital federal do Aldir Blanc 2026, que abrange áreas como cultura, educação, assistência social e esporte, e seguir as regras específicas desse edital para se candidatar.",
-        "proximo_passo": "Consultar o edital oficial do Aldir Blanc 2026 para entender os requisitos e processos de inscrição.",
-        "risco": "A falta de informações específicas sobre o edital, como prazo, valor e requisitos, pode impedir a associação de se candidatar adequadamente."
+        "por_que": "O edital mencionado não fornece informações sobre prazo de inscrição, valor, requisitos ou área de atuação, sendo insuficiente para servir como fonte direta para a associação comunitária de Goiânia.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar outros editais específicos de fomento à cultura, educação, assistência social ou esporte, pois o edital mencionado é voltado para o evento O Canto da Primavera, que é realizado em Pirenópolis e não abrange atividades locais em Goiânia.",
+        "proximo_passo": "Consultar editais específicos de fomento à cultura, educação, assistência social ou esporte disponibilizados por órgãos públicos em Goiânia ou no Estado de Goiás.",
+        "risco": "A falta de informações sobre prazo, valor, requisitos e área de atuação torna impossível a participação da associação comunitária nesse edital."
       },
       "erro": null,
-      "segundos": 623,
+      "segundos": 748,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 4,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-f6b1b51a42c3",
+      "id": "op-fb6320b8b761",
       "encontrou": {
-        "Prazo de inscrição": {
-          "valor": "dispensado — O texto menciona o prazo de inscrição.",
-          "trecho": "As inscrições começam no dia 27 de abril de 2026",
-          "oficial": false,
-          "dispensado": true
+        "Objeto": {
+          "valor": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na cidade de Pirenópolis, desde o ano 2000.",
+          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "oficial": true,
+          "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Jaraguá",
-          "trecho": "Prefeitura Municipal de Jaraguá",
-          "oficial": false,
+          "valor": "Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult)",
+          "trecho": "Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult)",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Jaraguá - GO",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "Cultura e Prefeitura",
-          "oficial": false,
+          "trecho": "na cidade de Pirenópolis",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura Municipal de Jaraguá",
+      "financiador": "Secretaria de Estado da Cultura",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital"
+        "site_do_financiador"
       ]
     }
   ],
