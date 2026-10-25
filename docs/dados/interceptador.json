@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T11:21:12+00:00",
+  "em": "2026-10-25T11:36:03+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T11:13:44+00:00",
+  "ultimo_voo": "2026-10-25T11:22:45+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,27 +48,25 @@
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 6.8
+    "tempo_medio_min": 12.7
   },
   "missoes": [
     {
-      "em": "2026-10-25T11:13:44+00:00",
+      "em": "2026-10-25T11:22:45+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Chamamento público para fins de credenciamento de pessoas físicas e jurídicas, com atuação artística de nível…… — Goiás",
+      "alvo": "Chamamento público para qualificação de pessoas jurídicas dedireito privado, sem fins lucrativos, como organiz… — Goiás / Porangatu",
       "qualidade": "insuficiente",
-      "comprovados": 1,
+      "comprovados": 3,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Objeto",
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Território",
-        "Esfera",
         "Requisitos",
         "Anexos",
         "Área de atuação"
@@ -76,37 +74,39 @@
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O PNCP é a fonte oficial de informações sobre contratações públicas, incluindo chamamentos públicos para credenciamento.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o chamamento público está disponível no PNCP, verificar os requisitos necessários para credenciamento e se inscrever conforme as normas estabelecidas.",
-        "proximo_passo": "Consultar o PNCP para obter detalhes sobre o chamamento público e verificar se há requisitos específicos para credenciamento.",
-        "risco": "A falta de informações detalhadas sobre requisitos, prazos e área de atuação pode impedir a associação de se credenciar adequadamente."
+        "por_que": "O texto comprovado menciona o prazo de inscrição, órgão financiador e esfera da chamada, o que é suficiente para identificar a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende aos requisitos da chamada, mesmo que não estejam explicitados, e se inscrever no prazo definido (2026-09-08 a 2026-09-16).",
+        "proximo_passo": "Consultar os anexos da chamada para entender os requisitos e preparar a documentação necessária.",
+        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir a associação de se qualificar adequadamente para o edital."
       },
       "erro": null,
-      "segundos": 411,
+      "segundos": 760,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-457280912c7f",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-6f9819b24392",
       "encontrou": {
+        "Prazo de inscrição": {
+          "valor": "2026-09-08 a 2026-09-16",
+          "trecho": "Inscrições são gratuitas e podem ser feitas de 8 a 16 de setembro",
+          "oficial": false,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "PNCP - Portal Nacional de Contratações Públicas",
-          "trecho": "PNCP - Portal Nacional de Contratações Públicas",
+          "valor": "Prefeitura de Porangatu",
+          "trecho": "Prefeitura de Porangatu",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura de Goiás",
+      "financiador": "Prefeitura de Porangatu",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_municipal",
+        "financiador_programa_edital"
       ]
     }
   ],
