@@ -1,0 +1,26 @@
+name: Transferir a ponte BR (temporário)
+# Cifra os segredos da ponte da HostGator com a chave pública do repositório Eldorado (só o GitHub os decifra), para
+# gravá-los lá; o valor nunca aparece. Fluxo temporário (titular, 25/10/2026), apagado em seguida.
+on:
+  workflow_dispatch:
+    inputs:
+      chave_publica:
+        required: true
+jobs:
+  cifrar:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pip install -q pynacl==1.5.0
+      - env:
+          URL_: ${{ secrets.ELDORADO_PONTE_URL }}
+          CHAVE_: ${{ secrets.ELDORADO_PONTE_CHAVE }}
+          PUB: ${{ inputs.chave_publica }}
+        run: |
+          python - <<'P'
+          import base64, os
+          from nacl import encoding, public
+          caixa = public.SealedBox(public.PublicKey(os.environ["PUB"].encode(), encoding.Base64Encoder()))
+          for nome, var in (("URL", "URL_"), ("CHAVE", "CHAVE_")):
+              v = os.environ.get(var, "")
+              print(f"CIFRADO_{nome}=" + (base64.b64encode(caixa.encrypt(v.encode())).decode() if v else "VAZIO"))
+          P
