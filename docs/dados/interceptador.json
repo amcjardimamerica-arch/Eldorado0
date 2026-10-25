@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T11:36:03+00:00",
+  "em": "2026-10-25T11:56:27+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T11:22:45+00:00",
+  "ultimo_voo": "2026-10-25T11:37:57+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,65 +48,79 @@
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.7
+    "tempo_medio_min": 17.8
   },
   "missoes": [
     {
-      "em": "2026-10-25T11:22:45+00:00",
+      "em": "2026-10-25T11:37:57+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Chamamento público para qualificação de pessoas jurídicas dedireito privado, sem fins lucrativos, como organiz… — Goiás / Porangatu",
+      "alvo": "Chamamento público publicado no Diário Oficial em 28/08/2026 — Goiás / Pinhais — Goiás / Catalão",
       "qualidade": "insuficiente",
-      "comprovados": 3,
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
         "Território",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Esfera"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o prazo de inscrição, órgão financiador e esfera da chamada, o que é suficiente para identificar a fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende aos requisitos da chamada, mesmo que não estejam explicitados, e se inscrever no prazo definido (2026-09-08 a 2026-09-16).",
-        "proximo_passo": "Consultar os anexos da chamada para entender os requisitos e preparar a documentação necessária.",
-        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir a associação de se qualificar adequadamente para o edital."
+        "por_que": "O chamamento público foi publicado no Diário Oficial em 28/08/2026 e tem como objeto fomento à execução de ações culturais, com valor de R$591.740,18, financiado pelo órgão Catalão / Goiás.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa pertencer a uma comunidade tradicional, apresentar os 3 anexos exigidos e desenvolver ações culturais alinhadas ao objeto do chamamento público.",
+        "proximo_passo": "Verificar se a associação comunitária atende ao requisito de pertencer a uma comunidade tradicional e preparar os anexos necessários para a inscrição.",
+        "risco": "O prazo de inscrição não foi encontrado, o que pode impedir a participação da associação no chamamento público."
       },
       "erro": null,
-      "segundos": 760,
+      "segundos": 1070,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-6f9819b24392",
+      "id": "op-aec042b9fb89",
       "encontrou": {
-        "Prazo de inscrição": {
-          "valor": "2026-09-08 a 2026-09-16",
-          "trecho": "Inscrições são gratuitas e podem ser feitas de 8 a 16 de setembro",
+        "Objeto": {
+          "valor": "fomento à execução de ações culturais",
+          "trecho": "EDITAL DE FOMENTO À EXECUÇÃO DE AÇÕES CULTURAIS",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$591.740,18",
+          "trecho": "O presente edital possui valor total de R$591.740,18 (quinhentos e noventa e um mil setecentos e quarenta reais e dezoito centavos).",
           "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Porangatu",
-          "trecho": "Prefeitura de Porangatu",
+          "valor": "Catalão / Goiás",
+          "trecho": "EDITAL DE FOMENTO À EXECUÇÃO DE AÇÕES CULTURAIS (https://catalao.go.gov.br/storage/notice/e7e29043132b26387d73758efd59053f.pdf)",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "EDITAL DE FOMENTO À EXECUÇÃO DE AÇÕES CULTURAIS",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Pertence a alguma comunidade tradicional?",
+          "trecho": "Pertence a alguma comunidade tradicional? ( ) Nã",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Porangatu",
+      "financiador": "Prefeitura Municipal de Catalão",
       "indicios": [],
       "rotas": [
-        "site_municipal",
-        "financiador_programa_edital"
+        "site_do_financiador"
       ]
     }
   ],
