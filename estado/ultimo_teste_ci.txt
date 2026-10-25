@@ -1,5 +1,5 @@
-commit: a20f8b50ad0e31bfd90c1964119c354d490c0756
-em: 2026-10-24T13:03:15Z
+commit: f06ddbe8822642853fc4f7d9aad009b6622d2a79
+em: 2026-10-25T13:30:26Z
 rc: 1
 ::error title=teste falhou::tests.test_livros_parametros.TestArquivo.test_dez_blocos_e_todos_decididos — AssertionError: 282 not greater than or equal to 300
 ::error title=teste falhou::tests.test_motor01_diario_goiania.TestCoberturaDoDia.test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida — AssertionError: True is not false
@@ -115,13 +115,13 @@ FAIL: test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo (tests.test_consiste
 Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_consistencia_transversal_2026_10_17.py", line 140, in test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo
     self.assertEqual(sorted(i for i in cat if not (L / f"{i}.json").exists()), [])
-AssertionError: Lists differ: ['nova-11754f7f2ba8', 'nova-2a156b780d10',[2343 chars]56a'] != []
+AssertionError: Lists differ: ['nova-11754f7f2ba8', 'nova-2a156b780d10',[2440 chars]56a'] != []
 
-First list contains 124 additional elements.
+First list contains 129 additional elements.
 First extra element 0:
 'nova-11754f7f2ba8'
 
-Diff is 2767 characters long. Set self.maxDiff to None to see it.
+Diff is 2879 characters long. Set self.maxDiff to None to see it.
 
 ======================================================================
 FAIL: test_relatorio_do_cartorio_das_certidoes_guardadas (tests.test_consistencia_transversal_2026_10_17.MesmoRetrato.test_relatorio_do_cartorio_das_certidoes_guardadas)
@@ -293,17 +293,17 @@ Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_verificacao_63_2026_09_15.py", line 92, in test_todo_ausente_saiu_pela_regra_territorial
     self.assertEqual(saiu, set(EXPURGADOS), "saída sem identificação conferida neste teste")
 AssertionError: Items in the first set but not the second:
-'898d930ce5601d1616e3'
+'ced063d82912665631c2'
 'd6ff07772a8525e4a45c'
-'52715deee843fac8f817'
-'ced063d82912665631c2' : saída sem identificação conferida neste teste
+'898d930ce5601d1616e3'
+'52715deee843fac8f817' : saída sem identificação conferida neste teste
 
 ----------------------------------------------------------------------
-Ran 1366 tests in 118.843s
+Ran 1366 tests in 112.949s
 
 FAILED (failures=20, errors=6, skipped=3)
 ::error title=teste falhou::tests.test_abertos_sem_informacao.TesteSaida.test_resumo_bate_com_a_lista — AssertionError: 107 != 19
 ::error title=teste falhou::tests.test_acervo_goias.TesteFontesDeGoias.test_fonte_do_fica_aponta_para_a_plataforma_das_chamadas — AssertionError: [] is not true
 ::error title=teste falhou::tests.test_acervo_goias.TesteFontesDeGoias.test_fontes_pnab_de_goias_apontam_para_a_pagina_dos_editais — AssertionError: 0 not greater than or equal to 16
-::error title=teste falhou::tests.test_consistencia_transversal_2026_10_17.CapaConteudoIndice.test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo — Diff is 2767 characters long. Set self.maxDiff to None to see it.
+::error title=teste falhou::tests.test_consistencia_transversal_2026_10_17.CapaConteudoIndice.test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo — Diff is 2879 characters long. Set self.maxDiff to None to see it.
 ::error title=teste falhou::tests.test_consistencia_transversal_2026_10_17.MesmoRetrato.test_relatorio_do_cartorio_das_certidoes_guardadas — + (2706, 1817)

@@ -1,4 +1,4 @@
-Ofício nº 008/2026 – AMC-JA      Goiânia, 24 de outubro de 2026.
+Ofício nº 008/2026 – AMC-JA      Goiânia, 25 de outubro de 2026.
 
 Ao Excelentíssimo Senhor
 
