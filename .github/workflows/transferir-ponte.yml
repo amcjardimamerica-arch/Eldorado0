@@ -22,5 +22,5 @@ jobs:
           caixa = public.SealedBox(public.PublicKey(os.environ["PUB"].encode(), encoding.Base64Encoder()))
           for nome, var in (("URL", "URL_"), ("CHAVE", "CHAVE_")):
               v = os.environ.get(var, "")
-              print(f"CIFRADO_{nome}=" + (base64.b64encode(caixa.encrypt(v.encode())).decode() if v else "VAZIO"))
+              print(f"::notice title=CIFRADO_{nome}::" + (base64.b64encode(caixa.encrypt(v.encode())).decode() if v else "VAZIO"))
           P
