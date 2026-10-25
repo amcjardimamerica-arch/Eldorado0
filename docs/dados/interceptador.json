@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T10:04:02+00:00",
+  "em": "2026-10-25T10:18:10+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T09:49:29+00:00",
+  "ultimo_voo": "2026-10-25T10:05:40+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,74 +48,64 @@
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.9
+    "tempo_medio_min": 11.9
   },
   "missoes": [
     {
-      "em": "2026-10-25T09:49:29+00:00",
+      "em": "2026-10-25T10:05:40+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Canguçu — Norma do CNJ garante verbas para projetos sociais em Canguçu (RS) — Goiás — Goiás",
+      "alvo": "Certificado de Vacinação — Goiás — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 5,
+      "comprovados": 2,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Território",
         "Requisitos",
-        "Anexos"
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://cnj15anos.cnj.jus.br",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o objeto do edital como financiamento de projetos sociais em Canguçu (RS), vinculado ao Conselho Nacional de Justiça (CNJ), o que confirma a existência do edital.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange a região de Goiânia, se houver requisitos específicos para projetos sociais e se o objeto do edital se alinha com suas atividades de assistência social, cultura, educação ou esporte.",
-        "proximo_passo": "Consultar o edital completo para entender os requisitos, prazos e critérios de seleção, e verificar se o projeto se enquadra nas diretrizes do CNJ.",
-        "risco": "O edital não menciona prazos, requisitos ou anexos, o que pode impedir a associação de se preparar adequadamente para a inscrição e submissão do projeto."
+        "por_que": "O órgão financiador é a Secretaria de Estado de Administração, que é um órgão estadual com competência para oferecer editais de fomento.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange a área de atuação da AMC e se há requisitos específicos para acesso, mesmo que não tenham sido encontrados no texto.",
+        "proximo_passo": "Contatar a Secretaria de Estado de Administração para obter mais informações sobre o edital e os requisitos necessários.",
+        "risco": "A falta de informações detalhadas sobre o edital pode impedir a associação de se qualificar adequadamente para o processo de acesso."
       },
       "erro": null,
-      "segundos": 836,
+      "segundos": 712,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 1,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-29ee662cd737",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-ad34e4aeb414",
       "encontrou": {
-        "Objeto": {
-          "valor": "financiamento de projetos sociais em Canguçu (RS)",
-          "trecho": "Norma do CNJ garante verbas para projetos sociais em Canguçu (RS)",
-          "oficial": false,
-          "dispensado": false
-        },
         "Órgão / financiador": {
-          "valor": "Conselho Nacional de Justiça (CNJ)",
-          "trecho": "Norma do CNJ garante verbas para projetos sociais em Canguçu (RS)",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "RS",
-          "trecho": "Canguçu (RS)",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "assistencia_social",
-          "trecho": "projetos sociais",
+          "valor": "Secretaria de Estado de Administração",
+          "trecho": "Desenvolvido e mantido pela Secretaria de Estado de Administração - v2.0.8",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "CNJ",
+      "financiador": "Secretaria de Estado de Administração",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
