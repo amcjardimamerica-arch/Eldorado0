@@ -1,5 +1,5 @@
 {
- "em": "2026-10-25T19:33:07+00:00",
+ "em": "2026-10-25T21:06:10+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,13 +7,17 @@
   "alterar_rota": 60,
   "rota_nova": 52,
   "via_ponte": 5,
-  "exemplos_da_rede": 38412
+  "exemplos_da_rede": 38501
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "origem:rota original",
-    3.436
+    3.5263
+   ],
+   [
+    "tok:feed",
+    2.7859
    ],
    [
     "origem:biblioteca",
@@ -26,10 +30,6 @@
    [
     "tok:inscricoes",
     2.496
-   ],
-   [
-    "tok:feed",
-    2.4908
    ],
    [
     "tok:mpf",
@@ -49,11 +49,11 @@
    ],
    [
     "tok:sitemap",
-    1.9896
+    1.9849
    ],
    [
     "tok:xml",
-    1.9896
+    1.9849
    ],
    [
     "tok:leipaulogustavo",
@@ -75,7 +75,7 @@
    ],
    [
     "tok:2026",
-    -2.7785
+    -2.7823
    ],
    [
     "tok:content",
@@ -91,7 +91,7 @@
    ],
    [
     "origem:padrão",
-    -4.2982
+    -3.7376
    ]
   ]
  },
@@ -433,8 +433,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-25T08:54:51+00:00",
-    "testes": 12,
+    "em": "2026-10-25T21:05:44+00:00",
+    "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -580,8 +580,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-25T10:27:04+00:00",
-    "testes": 24,
+    "em": "2026-10-25T21:05:45+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -625,8 +625,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-25T10:27:32+00:00",
-    "testes": 24,
+    "em": "2026-10-25T21:05:59+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -667,8 +667,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-25T10:27:22+00:00",
-    "testes": 22,
+    "em": "2026-10-25T21:05:57+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -882,8 +882,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-25T08:54:33+00:00",
-    "testes": 12,
+    "em": "2026-10-25T21:05:25+00:00",
+    "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1850,11 +1850,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 14,
-    "aprendido_em": "2026-10-25T10:27:52+00:00"
+    "aprendido_em": "2026-10-25T21:06:10+00:00"
    },
    "afinado": {
-    "em": "2026-10-25T10:27:52+00:00",
-    "testes": 27,
+    "em": "2026-10-25T21:06:10+00:00",
+    "testes": 16,
     "melhor": {
      "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
      "via": "direto",
