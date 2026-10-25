@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T20:55:09+00:00",
+  "em": "2026-10-25T21:08:32+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T20:36:57+00:00",
+  "ultimo_voo": "2026-10-25T20:57:31+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,93 +39,82 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 17.5
+    "tempo_medio_min": 10.4
   },
   "missoes": [
     {
-      "em": "2026-10-25T20:36:57+00:00",
+      "em": "2026-10-25T20:57:31+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital 13 – Cultura Viva para fomento a Pontos de Cultura (PDF) — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 8,
-      "dispensados": 0,
+      "alvo": "Edital Aldir Blanc 2026 já... — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 6,
+      "dispensados": 2,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
+        "Objeto",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos"
       ],
-      "pagina_oficial": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-13-edital-cultura-viva-para-fomento-a-pontos-de-cultura.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, valor, órgão financiador, território, esfera, requisitos e área de atuação.",
-        "para_a_amc": "A associação comunitária precisaria atuar na área de cultura, obter pontuação mínima de 50 pontos no Bloco 1 dos Critérios e seguir as diretrizes do edital para a seleção de projetos.",
-        "proximo_passo": "Consultar os anexos do edital para obter detalhes sobre os critérios de avaliação e os requisitos específicos para inscrição.",
-        "risco": "A falta de informações sobre o prazo de inscrição e resultado pode impedir a associação de se inscrever oportunamente."
+        "serve_como_fonte": "nao",
+        "por_que": "O edital mencionado é referente à Prefeitura Municipal de Jaraguá, GO, e não ao Edital Aldir Blanc 2026, que é federal e abrange todo o Brasil. Portanto, não é uma fonte válida para o Edital Aldir Blanc 2026.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao edital federal do Aldir Blanc 2026, que abrange áreas como cultura, educação, assistência social e esporte, e seguir as regras específicas desse edital para se candidatar.",
+        "proximo_passo": "Consultar o edital oficial do Aldir Blanc 2026 para entender os requisitos e processos de inscrição.",
+        "risco": "A falta de informações específicas sobre o edital, como prazo, valor e requisitos, pode impedir a associação de se candidatar adequadamente."
       },
       "erro": null,
-      "segundos": 1052,
+      "segundos": 623,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 8,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
-      "id": "op-b49de64b9f8b",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-f6b1b51a42c3",
       "encontrou": {
-        "Objeto": {
-          "valor": "seleção de projetos que promovam o acesso da população aos bens e aos serviços culturais nos territórios e comunidades onde atuam",
-          "trecho": "1.1. Este Edital tem por objeto a seleção de projetos que promovam o acesso da população aos bens e aos serviços culturais nos territórios e comunidades onde atuam, nos termos da P",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$ 2.401.960,50 (dois milhões, quatrocentos e um mil, novecentos e sessenta reais e cinquenta centavos), para a seleção de 40 projetos, no valor de R$ 60.049,02 (sessenta mil, quarenta e nove reais e dois centavos) cada projeto",
-          "trecho": "2.1. Este Edital é realizado com recursos do Governo Federal, repassados ao Município de Goiânia por meio da PNAB, e tem o valor total de R$ 2.401.960,50 (dois milhões, quatrocento",
-          "oficial": true,
-          "dispensado": false
+        "Prazo de inscrição": {
+          "valor": "dispensado — O texto menciona o prazo de inscrição.",
+          "trecho": "As inscrições começam no dia 27 de abril de 2026",
+          "oficial": false,
+          "dispensado": true
         },
         "Órgão / financiador": {
-          "valor": "Secretaria Municipal de Cultura",
-          "trecho": "Secretaria Municipal de Cultura",
-          "oficial": true,
+          "valor": "Prefeitura Municipal de Jaraguá",
+          "trecho": "Prefeitura Municipal de Jaraguá",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "EDITAL DE FOMENTO A PROJETOS CONTINUADOS DE PONTOS DE CULTURA DA CIDADE DE GOIÂNIA",
-          "oficial": true,
+          "trecho": "Jaraguá - GO",
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "1.1. Este Edital tem por objeto a seleção de projetos que promovam o acesso da população aos bens e aos serviços culturais nos territórios e comunidades onde atuam, nos termos da P",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Obter pontuação mínima de 50 pontos (50% do total) no Bloco 1 (Avaliação da atuação da entidade cultural) dos Critérios ",
-          "trecho": "III. Obter pontuação mínima de 50 pontos (50% do total) no Bloco 1 (Avaliação da atuação da entidade cultural) dos Critérios de Avaliação (Anexo 2), relacionado ao histórico de atu",
-          "oficial": true,
+          "trecho": "Cultura e Prefeitura",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Município de Goiânia",
+      "financiador": "Prefeitura Municipal de Jaraguá",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital"
       ]
     }
   ],
