@@ -201,7 +201,7 @@
  "pontos_com_redundancia": 17,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 37402
+ "exemplos_da_rede_de_rotas": 37488
 }
 ```
 
@@ -244,14 +244,15 @@
 
 ```json
 {
- "dia_de_referencia": "2026-10-24",
+ "dia_de_referencia": "2026-10-25",
  "ativos": 172,
  "lidos_ontem": 22,
- "lidos_hoje": 22,
+ "lidos_hoje": 0,
  "nao_lidos_ontem_nem_hoje": [
   "do-goiania",
   "f260-captacao-018",
   "f260-captacao-025",
+  "f260-captacao-034",
   "f260-captacao-035",
   "f260-captacao-038",
   "f260-captacao-039",
@@ -287,8 +288,7 @@
   "f260-captacao-206",
   "f260-captacao-207",
   "f260-captacao-208",
-  "f260-captacao-212",
-  "f260-captacao-216"
+  "f260-captacao-212"
  ],
  "ainda_sem_primeira_leitura": [
   "motor-gife",
