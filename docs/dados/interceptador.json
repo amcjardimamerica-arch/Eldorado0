@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T22:07:11+00:00",
+  "em": "2026-10-25T22:24:56+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T21:52:06+00:00",
+  "ultimo_voo": "2026-10-25T22:09:19+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,16 +48,16 @@
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.5
+    "tempo_medio_min": 15.0
   },
   "missoes": [
     {
-      "em": "2026-10-25T21:52:06+00:00",
+      "em": "2026-10-25T22:09:19+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital Prefeitura Municipal de Planaltina 2026 — Goiás / Planaltina — Goiás / Planaltina",
-      "qualidade": "parcial",
+      "alvo": "Edital Prefeitura Municipal de Planaltina 2026 — Goiás / Planaltina — Goiás / Planaltina — Goiás / Planaltina",
+      "qualidade": "insuficiente",
       "comprovados": 7,
       "dispensados": 0,
       "total": 12,
@@ -67,60 +67,64 @@
         "Prazo de recurso",
         "Valor"
       ],
-      "pagina_oficial": "https://planaltina.go.gov.br/chamamento-publico-no-06-2026-processo-no-23713-2026/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
         "por_que": "O edital comprovado menciona a seleção de Organizações da Sociedade Civil para execução de projetos esportivos, o que é relevante para a AMC.",
         "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentar proposta de projeto esportivo alinhada ao objeto do edital e atender aos requisitos de OSC.",
         "proximo_passo": "Verificar os anexos do edital para obter detalhes sobre os requisitos e a elaboração da proposta.",
-        "risco": "A falta de prazo de inscrição e outros detalhes críticos no edital pode impedir a participação da AMC."
+        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a participação da AMC no processo."
       },
       "erro": null,
-      "segundos": 868,
+      "segundos": 899,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-c8057f2d2501",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-d4763b6386e2",
       "encontrou": {
         "Objeto": {
           "valor": "seleção de Organização da Sociedade Civil para celebração de Termo de Colaboração visando à execução integrada dos seguintes projetos esportivos",
           "trecho": "Constitui objeto do presente Chamamento Público a seleção de Organização da Sociedade Civil para celebração de Termo de Colaboração visando à execução integrada dos seguintes proje",
-          "oficial": true,
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "SECRETARIA DE ESPORTE E LAZER",
-          "trecho": "ÓRGÃOS INTERESSADOS: SECRETARIA DE ESPORTE E LAZER",
-          "oficial": true,
+          "valor": "SECRETARIA MUNICIPAL DE ESPORTE E LAZER",
+          "trecho": "O MUNICÍPIO DE PLANALTINA – ESTADO DE GOIÁS, por intermédio da Secretaria Municipal de Esporte e Lazer,",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
           "trecho": "Município de Planaltina – Estado de Goiás",
-          "oficial": true,
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "esporte",
           "trecho": "visando à execução integrada dos seguintes projetos esportivos",
-          "oficial": true,
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
           "valor": "Organizações da Sociedade Civil – OSCs interessadas",
           "trecho": "para conhecimento das Organizações da Sociedade Civil – OSCs interessadas",
-          "oficial": true,
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Município de Planaltina",
+      "financiador": "Município de Planaltina – Estado de Goiás",
       "indicios": [],
       "rotas": [
-        "site_municipal",
-        "financiador_programa_edital"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
