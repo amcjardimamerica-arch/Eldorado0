@@ -284,7 +284,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-196": {
-  "em": "2026-10-24T23:25:10+00:00",
+  "em": "2026-10-25T13:29:10+00:00",
   "testes": 17,
   "melhor": {
    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
@@ -1083,9 +1083,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-25T11:59:10+00:00",
+  "em": "2026-10-25T13:29:27+00:00",
   "motores_testados": 6,
-  "ponte_respondeu": true
+  "ponte_respondeu": false
  },
  "f260-captacao-238": {
   "em": "2026-10-25T01:00:52+00:00",
@@ -7055,7 +7055,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-256": {
-  "em": "2026-10-24T23:25:25+00:00",
+  "em": "2026-10-25T13:29:27+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -10140,8 +10140,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-258": {
-  "em": "2026-10-24T21:51:28+00:00",
-  "testes": 12,
+  "em": "2026-10-25T13:28:20+00:00",
+  "testes": 19,
   "melhor": {
    "url": "https://skoll.org/feed",
    "via": "direto",
@@ -10176,11 +10176,20 @@
     "url": "https://skoll.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 13,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
+    "erro": "TimeoutError",
+    "funcionou": false
+   },
+   {
+    "url": "https://skoll.org/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -10190,19 +10199,37 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "TimeoutError",
+    "funcionou": false
+   },
+   {
+    "url": "https://skoll.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
     "url": "https://skoll.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 105,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "TimeoutError",
+    "funcionou": false
+   },
+   {
+    "url": "https://skoll.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -10220,22 +10247,40 @@
     "url": "https://skoll.org/editais",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 105,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "TimeoutError",
+    "funcionou": false
+   },
+   {
+    "url": "https://skoll.org/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
     "url": "https://skoll.org/noticias",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 105,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "TimeoutError",
+    "funcionou": false
+   },
+   {
+    "url": "https://skoll.org/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -10253,33 +10298,20 @@
     "url": "https://skoll.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 105,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "TimeoutError",
     "funcionou": false
    },
    {
-    "url": "https://skoll.org/chamamentos",
+    "url": "https://skoll.org/chamadas-publicas",
     "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 105,
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://skoll.org/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 105,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "ErroPonte",
     "funcionou": false
    }
   ],
@@ -10719,7 +10751,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-247": {
-  "em": "2026-10-24T23:24:45+00:00",
+  "em": "2026-10-25T13:28:38+00:00",
   "testes": 22,
   "melhor": {
    "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
@@ -10772,7 +10804,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/feed",
+    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10782,7 +10814,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/feed",
+    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -10792,7 +10824,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
+    "url": "https://international-partnerships.ec.europa.eu/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10802,7 +10834,7 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
+    "url": "https://international-partnerships.ec.europa.eu/feed",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -11952,7 +11984,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-011": {
-  "em": "2026-10-24T23:24:59+00:00",
+  "em": "2026-10-25T13:28:53+00:00",
   "testes": 20,
   "melhor": {
    "url": "https://mariaemilia.org.br/feed",
@@ -12252,7 +12284,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-www-detran-rj-gov-br": {
-  "em": "2026-10-24T23:25:22+00:00",
+  "em": "2026-10-25T13:29:23+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.detran.rj.gov.br/sitemap.xml",

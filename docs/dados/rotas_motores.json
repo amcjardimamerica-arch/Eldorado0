@@ -1,5 +1,5 @@
 {
- "em": "2026-10-25T11:59:10+00:00",
+ "em": "2026-10-25T13:29:27+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,21 +7,21 @@
   "alterar_rota": 60,
   "rota_nova": 52,
   "via_ponte": 5,
-  "exemplos_da_rede": 37981
+  "exemplos_da_rede": 38083
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "origem:rota original",
-    3.2996
-   ],
-   [
-    "tok:feed",
-    2.7241
+    3.4059
    ],
    [
     "origem:biblioteca",
-    2.5551
+    2.8205
+   ],
+   [
+    "tok:feed",
+    2.8194
    ],
    [
     "tok:secult",
@@ -33,7 +33,7 @@
    ],
    [
     "tok:mpf",
-    2.3968
+    2.3969
    ],
    [
     "tok:imprensa",
@@ -45,19 +45,19 @@
    ],
    [
     "tok:unidades",
-    2.2142
-   ],
-   [
-    "tok:sitemap",
-    1.9866
-   ],
-   [
-    "tok:xml",
-    1.9866
+    2.2143
    ],
    [
     "tok:leipaulogustavo",
     1.8789
+   ],
+   [
+    "tok:aldirblanc",
+    1.8664
+   ],
+   [
+    "tok:transparencia",
+    1.8368
    ]
   ],
   "piores_sinais": [
@@ -75,15 +75,15 @@
    ],
    [
     "tok:2026",
-    -2.766
+    -2.7785
    ],
    [
     "tok:content",
-    -3.5322
+    -3.5447
    ],
    [
     "tok:uploads",
-    -3.5322
+    -3.5447
    ],
    [
     "origem:câmara",
@@ -91,7 +91,7 @@
    ],
    [
     "origem:padrão",
-    -3.9096
+    -4.079
    ]
   ]
  },
@@ -939,7 +939,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-24T23:25:25+00:00",
+    "em": "2026-10-25T13:29:27+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1475,10 +1475,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 13,
-    "aprendido_em": "2026-10-24T23:25:10+00:00"
+    "aprendido_em": "2026-10-25T13:29:10+00:00"
    },
    "afinado": {
-    "em": "2026-10-24T23:25:10+00:00",
+    "em": "2026-10-25T13:29:10+00:00",
     "testes": 17,
     "melhor": {
      "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
@@ -1727,11 +1727,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 3,
-    "aprendido_em": "2026-10-24T21:51:28+00:00"
+    "aprendido_em": "2026-10-25T13:28:20+00:00"
    },
    "afinado": {
-    "em": "2026-10-24T21:51:28+00:00",
-    "testes": 12,
+    "em": "2026-10-25T13:28:20+00:00",
+    "testes": 19,
     "melhor": {
      "url": "https://skoll.org/feed",
      "via": "direto",
@@ -1809,10 +1809,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-24T23:24:45+00:00"
+    "aprendido_em": "2026-10-25T13:28:38+00:00"
    },
    "afinado": {
-    "em": "2026-10-24T23:24:45+00:00",
+    "em": "2026-10-25T13:28:38+00:00",
     "testes": 22,
     "melhor": {
      "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
@@ -1892,10 +1892,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-24T23:24:59+00:00"
+    "aprendido_em": "2026-10-25T13:28:53+00:00"
    },
    "afinado": {
-    "em": "2026-10-24T23:24:59+00:00",
+    "em": "2026-10-25T13:28:53+00:00",
     "testes": 20,
     "melhor": {
      "url": "https://mariaemilia.org.br/feed",
@@ -2186,10 +2186,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-24T23:25:22+00:00"
+    "aprendido_em": "2026-10-25T13:29:23+00:00"
    },
    "afinado": {
-    "em": "2026-10-24T23:25:22+00:00",
+    "em": "2026-10-25T13:29:23+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.detran.rj.gov.br/sitemap.xml",
