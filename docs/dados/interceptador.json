@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T11:11:55+00:00",
+  "em": "2026-10-25T11:21:12+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T10:57:58+00:00",
+  "ultimo_voo": "2026-10-25T11:13:44+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,89 +48,65 @@
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.3
+    "tempo_medio_min": 6.8
   },
   "missoes": [
     {
-      "em": "2026-10-25T10:57:58+00:00",
+      "em": "2026-10-25T11:13:44+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Chamamento Público Nº 006/2026 para Seleção de Projetos — Goiás / Alvorada do Norte — Goiás / Alvorada do Nort… — Goiás / Alvorada do Norte",
-      "qualidade": "parcial",
-      "comprovados": 9,
-      "dispensados": 1,
+      "alvo": "Chamamento público para fins de credenciamento de pessoas físicas e jurídicas, com atuação artística de nível…… — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 1,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://alvoradadonorte.go.gov.br/aviso-de-chamamento-publicoedital-no-006-2026/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações detalhadas sobre o objeto, valor, prazo de inscrição, requisitos e área de atuação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria atuar na área de cultura, estar ativa no Município de Alvorada do Norte-GO e seguir os requisitos do edital para se candidatar ao projeto cultural.",
-        "proximo_passo": "Verificar os anexos do edital e se a associação atende aos requisitos para participar da seleção.",
-        "risco": "A associação pode não atender aos requisitos do edital ou não estar ativa no Município de Alvorada do Norte-GO, o que impediria sua participação."
+        "por_que": "O PNCP é a fonte oficial de informações sobre contratações públicas, incluindo chamamentos públicos para credenciamento.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o chamamento público está disponível no PNCP, verificar os requisitos necessários para credenciamento e se inscrever conforme as normas estabelecidas.",
+        "proximo_passo": "Consultar o PNCP para obter detalhes sobre o chamamento público e verificar se há requisitos específicos para credenciamento.",
+        "risco": "A falta de informações detalhadas sobre requisitos, prazos e área de atuação pode impedir a associação de se credenciar adequadamente."
       },
       "erro": null,
-      "segundos": 799,
+      "segundos": 411,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso",
-      "id": "op-130c5d06aff0",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-457280912c7f",
       "encontrou": {
-        "Objeto": {
-          "valor": "seleção de 01 (um) projeto cultural para a realização da Virada Cultural no Município de Alvorada do Norte - GO",
-          "trecho": "O objeto deste Edital é a seleção de 01 (um) projeto cultural para a realização da Virada Cultural no Município de Alvorada do Norte - GO, a ser realizada no dia 23 de outubro de 2",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O edital menciona o prazo de inscrição explicitamente.",
-          "trecho": "Prazo de inscrição /no_think",
-          "oficial": false,
-          "dispensado": true
-        },
-        "Valor": {
-          "valor": "R$ 50.000,00 (Cinquenta mil reais)",
-          "trecho": "O valor total deste edital é de R$ 50.000,00 (Cinquenta mil reais).",
-          "oficial": true,
-          "dispensado": false
-        },
         "Órgão / financiador": {
-          "valor": "Secretaria Municipal competente",
-          "trecho": "Deste modo, a Secretaria Municipal competente torna público o presente edital elaborado com base na:",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "SELEÇÃO DE PROJETOS PARA FIRMAR TERMO DE EXECUÇÃO CULTURAL COM RECURSOS DA POLÍTICA NACIONAL ALDIR BLANC DE FOMENTO À CULTURA - PNAB (LEI Nº 14.399/2022)",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "SELEÇÃO DE PROJETOS PARA FIRMAR TERMO DE EXECUÇÃO CULTURAL COM RECURSOS DA POLÍTICA NACIONAL ALDIR BLANC DE FOMENTO À CULTURA - PNAB (LEI Nº 14.399/2022)",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "agentes culturais atuantes no Município de Alvorada do Norte-GO",
-          "trecho": "A presente edital destina-se a apoiar financeiramente projetos de agentes culturais atuantes no Município de Alvorada do Norte-GO.",
-          "oficial": true,
+          "valor": "PNCP - Portal Nacional de Contratações Públicas",
+          "trecho": "PNCP - Portal Nacional de Contratações Públicas",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Alvorada do Norte",
+      "financiador": "Secretaria de Estado da Cultura de Goiás",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
