@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T01:21:52+00:00",
+  "em": "2026-10-25T01:39:31+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T00:57:18+00:00",
+  "ultimo_voo": "2026-10-25T01:23:39+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,42 +39,84 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 23.9
+    "tempo_medio_min": 15.2
   },
   "missoes": [
     {
-      "em": "2026-10-25T00:57:18+00:00",
+      "em": "2026-10-25T01:23:39+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anexo 8 – Declaração Pessoa com Deficiência – Edital 12 (Docx) — Goiás / Goiânia",
-      "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "alvo": "Anexo ix – minuta do termo de colaboração — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 6,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 1436,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Área de atuação"
+      ],
+      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/02/SEI_86425409_Aviso_de_Chamamento_Publico_02.pdf",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O texto comprovado menciona o objeto da parceria e os requisitos para a participação, o que é suficiente para identificar a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa ser uma Organização da Sociedade Civil e se alinhar ao objeto da parceria, que é a realização de finalidade de interesse público e recíproco envolvendo transferência de recursos financeiros.",
+        "proximo_passo": "Consultar os anexos mencionados para obter mais detalhes sobre os requisitos e a modalidade de inscrição.",
+        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a participação da associação."
+      },
+      "erro": null,
+      "segundos": 913,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-00d2a5044a17",
-      "encontrou": {},
-      "financiador": null,
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-84574a6a5f96",
+      "encontrou": {
+        "Objeto": {
+          "valor": "parceria para realização de finalidade de interesse público e recíproco que envolve a transferência de recursos financeiros à Organizações da Sociedade Civil",
+          "trecho": "O presente Termo de Colaboração, decorrente do Chamamento Público nº 02/2026-SECULT, tem por objeto a parceria para realização de finalidade de interesse público e recíproco que en",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "SECRETARIA DE ESTADO DA CULTURA",
+          "trecho": "SECRETARIA DE ESTADO DA CULTURA",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "ESTADO DE GOIÁS",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Organização da Sociedade Civil",
+          "trecho": "A SECRETÁRIA DE ESTADO DA CULTURA, no uso de suas atribuições legais, torna público o Chamamento Público nº 02/2026 - SECULT, processo SEI Nº 202517645004523, com a finalidade de s",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "ESTADO DE GOIÁS",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital"
+      ]
     }
   ],
   "contagem": {
