@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T21:50:05+00:00",
+  "em": "2026-10-25T22:07:11+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T21:37:33+00:00",
+  "ultimo_voo": "2026-10-25T21:52:06+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,58 +48,79 @@
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.0
+    "tempo_medio_min": 14.5
   },
   "missoes": [
     {
-      "em": "2026-10-25T21:37:33+00:00",
+      "em": "2026-10-25T21:52:06+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital Natal do Bem — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "Edital Prefeitura Municipal de Planaltina 2026 — Goiás / Planaltina — Goiás / Planaltina",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Território",
-        "Requisitos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
+      "pagina_oficial": "https://planaltina.go.gov.br/chamamento-publico-no-06-2026-processo-no-23713-2026/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital é comprovado por informações oficiais da Secretaria de Estado da Cultura (Secult) - Governo de Goiás, indicando que é um edital estadual com anexos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar os anexos do edital para conhecer os requisitos, área de atuação e outros detalhes necessários para a candidatura, além de se certificar de que atende ao perfil solicitado.",
-        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre requisitos, área de atuação e outros critérios de elegibilidade.",
-        "risco": "A falta de informações específicas como objeto, prazo de inscrição, valor e requisitos pode impedir a associação de se preparar adequadamente para o processo de candidatura."
+        "por_que": "O edital comprovado menciona a seleção de Organizações da Sociedade Civil para execução de projetos esportivos, o que é relevante para a AMC.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentar proposta de projeto esportivo alinhada ao objeto do edital e atender aos requisitos de OSC.",
+        "proximo_passo": "Verificar os anexos do edital para obter detalhes sobre os requisitos e a elaboração da proposta.",
+        "risco": "A falta de prazo de inscrição e outros detalhes críticos no edital pode impedir a participação da AMC."
       },
       "erro": null,
-      "segundos": 719,
+      "segundos": 868,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-nova-44786ad1bb03",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-c8057f2d2501",
       "encontrou": {
+        "Objeto": {
+          "valor": "seleção de Organização da Sociedade Civil para celebração de Termo de Colaboração visando à execução integrada dos seguintes projetos esportivos",
+          "trecho": "Constitui objeto do presente Chamamento Público a seleção de Organização da Sociedade Civil para celebração de Termo de Colaboração visando à execução integrada dos seguintes proje",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura (Secult) - Governo de Goiás",
-          "trecho": "Secretaria de Estado da Cultura (Secult) - Governo de Goiás",
-          "oficial": false,
+          "valor": "SECRETARIA DE ESPORTE E LAZER",
+          "trecho": "ÓRGÃOS INTERESSADOS: SECRETARIA DE ESPORTE E LAZER",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Município de Planaltina – Estado de Goiás",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "esporte",
+          "trecho": "visando à execução integrada dos seguintes projetos esportivos",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Organizações da Sociedade Civil – OSCs interessadas",
+          "trecho": "para conhecimento das Organizações da Sociedade Civil – OSCs interessadas",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura",
+      "financiador": "Município de Planaltina",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_municipal",
+        "financiador_programa_edital"
       ]
     }
   ],
