@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T10:42:02+00:00",
+  "em": "2026-10-25T10:56:16+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T10:34:43+00:00",
+  "ultimo_voo": "2026-10-25T10:43:41+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,21 +44,21 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 6.9
+    "tempo_medio_min": 11.9
   },
   "missoes": [
     {
-      "em": "2026-10-25T10:34:43+00:00",
+      "em": "2026-10-25T10:43:41+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Chamada pública nº 18/2026 - senar/fapeg - acelera campo 2026 — Goiás — Goiás",
+      "alvo": "Chamamento Público Nº 006/2026 para Seleção de Projetos — Goiás / Alvorada do Norte — Goiás / Alvorada do Norte",
       "qualidade": "insuficiente",
-      "comprovados": 0,
+      "comprovados": 3,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -67,40 +67,45 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
         "Requisitos",
         "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://acessoainformacao.alvoradadonorte.go.gov.br/cidadao/ouvidoria/inicio",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações comprovadas sobre a chamada pública mencionada para ser utilizada como fonte.",
-        "para_a_amc": null,
-        "proximo_passo": null,
-        "risco": null
+        "serve_como_fonte": "sim",
+        "por_que": "O Chamamento Público foi comprovado como iniciativa da Prefeitura de Alvorada do Norte - GO, que é um órgão municipal responsável por financiar projetos no território de Goiás.",
+        "para_a_amc": "Para acessar o Chamamento Público, uma associação comunitária de Goiânia (que atua em assistência social, cultura, educação ou esporte) precisaria verificar se o edital abrange sua região, preparar um projeto alinhado ao objeto do edital (ainda não encontrado), e seguir as etapas de inscrição conforme indicado no edital.",
+        "proximo_passo": "Verificar se o edital abrange a região de Goiânia e coletar informações adicionais sobre o objeto, prazos e requisitos do Chamamento Público.",
+        "risco": "O risco é que o edital não abrange a região de Goiânia ou não contenha informações suficientes sobre o objeto, prazos e requisitos, impedindo o acesso da associação comunitária."
       },
       "erro": null,
-      "segundos": 414,
+      "segundos": 715,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 3,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-7fe6fda6e128",
-      "encontrou": {},
-      "financiador": "FAPEG",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-1b340d2f77e8",
+      "encontrou": {
+        "Órgão / financiador": {
+          "valor": "Prefeitura de Alvorada do Norte - GO",
+          "trecho": "Prefeitura de Alvorada do Norte - GO",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Alvorada do Norte - GO",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Prefeitura Municipal de Alvorada do Norte",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
