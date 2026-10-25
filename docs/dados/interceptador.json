@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T02:08:24+00:00",
+  "em": "2026-10-25T02:21:00+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T01:57:58+00:00",
+  "ultimo_voo": "2026-10-25T02:10:16+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,84 +48,84 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.9
+    "tempo_medio_min": 10.1
   },
   "missoes": [
     {
-      "em": "2026-10-25T01:57:58+00:00",
+      "em": "2026-10-25T02:10:16+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anápolis — CRAS Leste 1 recebe inscrições para o Programa Bombeiro Mirim em Anápolis — Goiás / Anápolis — Goiás / Anápolis",
-      "qualidade": "parcial",
-      "comprovados": 8,
+      "alvo": "Anápolis — Fundo Municipal de Cultura recebe inscrições até domingo (19) — Goiás / Anápolis — Goiás / Anápolis",
+      "qualidade": "insuficiente",
+      "comprovados": 6,
       "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
         "Resultado",
         "Prazo de recurso",
-        "Área de atuação"
+        "Território",
+        "Requisitos",
+        "Anexos"
       ],
-      "pagina_oficial": "https://www.anapolis.go.gov.br/cras-leste-1-recebe-inscricoes-para-o-programa-bombeiro-mirim-em-anapolis/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova a existência do Programa Bombeiro Mirim com vagas gratuitas, prazo de inscrição até 2026-09-02, requisitos e informações sobre o órgão financiador.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende aos requisitos do edital, como residir em Anápolis e possuir CPF próprio, e se alinhar ao objeto do edital, que é oferecer vagas gratuitas para crianças em atividades de bombeiro mirim.",
-        "proximo_passo": "Verificar se a associação comunitária atende aos requisitos do edital e se alinha ao objeto do programa.",
-        "risco": "A associação pode não atender aos requisitos de residência em Anápolis ou não se alinhar ao objeto do edital, o que impediria o acesso ao fomento."
+        "por_que": "O texto comprova que o Fundo Municipal de Cultura de Anápolis oferece financiamento de projetos culturais, com valor superior a R$ 2 milhões, e que o prazo de inscrição foi explicitado.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no Fundo Municipal de Cultura de Anápolis, mesmo que não esteja localizada na cidade, pois o financiamento é para projetos culturais, e pode ser acessado por organizações da sociedade civil.",
+        "proximo_passo": "Verificar se a associação comunitária de Goiânia está elegível para participar do edital e se pode se inscrever no prazo estabelecido.",
+        "risco": "A associação comunitária de Goiânia pode não estar elegível para participar do edital ou pode não ter acesso ao prazo de inscrição, já que o edital é específico para Anápolis."
       },
       "erro": null,
-      "segundos": 597,
+      "segundos": 608,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Área de atuação",
-      "id": "op-55221ed6acfc",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-1aa878592994",
       "encontrou": {
         "Objeto": {
-          "valor": "oferecer 60 vagas gratuitas para crianças de 9 a 11 anos e 11 meses",
-          "trecho": "São oferecidas 60 vagas gratuitas para crianças de 9 a 11 anos e 11 meses",
-          "oficial": true,
+          "valor": "financiamento de projetos culturais",
+          "trecho": "Serão mais de R$ 2 milhões para o financiamento de projetos culturais.",
+          "oficial": false,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "? a 2026-09-02",
-          "trecho": "Estão abertas até às 17h da sexta-feira (02) as inscrições",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "dispensado — O texto menciona que as vagas são gratuitas.",
-          "trecho": "São oferecidas 60 vagas gratuitas para crianças de 9 a 11 anos e 11 meses",
+          "valor": "dispensado — O prazo de inscrição foi explicitado no texto.",
+          "trecho": "As inscrições podem ser realizadas até o dia 19 de maio. [rejeitado: data implausível para edital aberto]",
           "oficial": false,
           "dispensado": true
         },
+        "Valor": {
+          "valor": "mais de R$ 2 milhões",
+          "trecho": "Serão mais de R$ 2 milhões para o financiamento de projetos culturais.",
+          "oficial": false,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Corpo de Bombeiros Militar do Estado de Goiás",
-          "trecho": "Programa Educacional Bombeiro Mirim (PROEBOM) Itinerante, do Corpo de Bombeiros Militar do Estado de Goiás (CBMGO)",
-          "oficial": true,
+          "valor": "Prefeitura de Anápolis",
+          "trecho": "A gestão municipal, por meio da Secretaria de Integração, acaba de lançar o regulamento...",
+          "oficial": false,
           "dispensado": false
         },
-        "Território": {
-          "valor": "GO",
-          "trecho": "residir em Anápolis",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "residir em Anápolis, possuir CPF próprio, estar regularmente matriculada e frequentando a escola, ter nascido entre 3 de outubro de 2014 e 2 de outubro de 2017, apresentar atestado médico que comprove aptidão para a realização das atividades, não ter participado anteriormente do PROEBOM, exceto nos ",
-          "trecho": "Para participar, a criança deve residir em Anápolis, possuir CPF próprio, estar regularmente matriculada e frequentando a escola e ter nascido entre 3 de outubro de 2014 e 2 de out",
-          "oficial": true,
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "financiamento de projetos culturais",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Segurança Pública",
+      "financiador": "Prefeitura de Anápolis",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
