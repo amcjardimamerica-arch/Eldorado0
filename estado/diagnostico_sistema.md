@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-25 23:31 UTC
+# Diagnóstico do sistema · 2026-10-25 23:41 UTC
 
 ## Cumprimento da finalidade · índice geral 57%
 - Motores: 60% (falha) — todo motor ativo lê dentro da sua cadência
@@ -99,12 +99,12 @@
 
 ## Integração
 - contagens: {'repositorio_abertas': 223, 'diagnostico_abertas': 223, 'tela_cartoes': 224, 'fichas': 228, 'sala_controle_abertas': 223}
-- idade (h): {'repositorio': 0.0, 'fluxo': 187.7, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 1.4, 'rede_neural': 187.7, 'saude': 9.9}
+- idade (h): {'repositorio': 0.0, 'fluxo': 187.8, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 1.6, 'rede_neural': 187.8, 'saude': 10.1}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (38)
 - [alta] cobertura do dia 0.0% ao fim do dia (meta 98%) → investigar os motores pendentes (sem correção automática)
-- [alta] o comando único não fecha um ciclo há 165.9 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+- [alta] o comando único não fecha um ciclo há 166.1 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
 - [alta] motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 5 dia(s) (131 h); última leitura 20/10 08:52 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Diário Oficial da União — falha — não lê há 1 dia(s) (36 h); última leitura 24/10 08:00 → investigar o motor (sem correção automática)
@@ -125,10 +125,10 @@
 - [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 2 dia(s) (59 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 223 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 187.7 h (limite 3 h) → refazer a tela
-- [media] rede_neural sem atualização há 187.7 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 187.8 h (limite 3 h) → refazer a tela
+- [media] rede_neural sem atualização há 187.8 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 126 de 126 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
-- [media] avaliação do Cartório com gabarito tem 243.6 h (semanal) → disparar o fluxo 39
+- [media] avaliação do Cartório com gabarito tem 243.8 h (semanal) → disparar o fluxo 39
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 106 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 241 item(ns) esperando a análise do Claude (próxima: 2026-10-25) → ver o fluxo/arquivo indicado
