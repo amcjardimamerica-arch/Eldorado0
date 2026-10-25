@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T06:38:57+00:00",
+  "em": "2026-10-25T06:47:12+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T06:26:28+00:00",
+  "ultimo_voo": "2026-10-25T06:40:46+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,47 +44,46 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.8
+    "tempo_medio_min": 6.0
   },
   "missoes": [
     {
-      "em": "2026-10-25T06:26:28+00:00",
+      "em": "2026-10-25T06:40:46+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Aviso de Chamamento Público — Goiás / Goiânia",
+      "alvo": "Aviso de Chamamento Público — SMS Goiânia - parceria com entidade de saúde — Goiás / Goiânia",
       "qualidade": "parcial",
-      "comprovados": 6,
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Área de atuação"
+        "Valor"
       ],
       "pagina_oficial": "https://saude.goiania.go.gov.br/editas-de-chamamento-publico/edital-de-chamamento-publico-no-003-2025/",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O aviso de chamamento público mencionado é sobre credenciamento de prestadores de serviços médicos, não relacionado a editais de fomento para organizações da sociedade civil.",
-        "para_a_amc": "A associação comunitária de Goiânia não se enquadra no objeto do edital, que é credenciamento de prestadores de serviços médicos, portanto, não pode acessá-lo.",
-        "proximo_passo": "Consultar editais específicos de fomento para organizações da sociedade civil divulgados por órgãos públicos de Goiânia.",
-        "risco": "A falta de alinhamento do objeto do edital com as atividades da associação comunitária impede o acesso ao chamamento público."
+        "serve_como_fonte": "sim",
+        "por_que": "O aviso de chamamento público descreve o objeto e os requisitos para credenciamento de prestadores de serviços médicos, o que é relevante para a associação comunitária de Goiânia que atua na área de saúde.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se enquadrar nos requisitos de credenciamento, apresentar os documentos necessários e demonstrar que sua atuação está alinhada com o objeto do edital, que é a prestação de serviços complementares à saúde.",
+        "proximo_passo": "Verificar os documentos exigidos no edital e se a associação comunitária atende aos requisitos para participar do processo de credenciamento.",
+        "risco": "A associação comunitária pode não atender aos requisitos estabelecidos no edital, como a necessidade de atuar na área de saúde e possuir os documentos necessários para inscrição."
       },
       "erro": null,
-      "segundos": 711,
+      "segundos": 359,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
+      "fontes_oficiais": 7,
       "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
       "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-nova-137bf6a88373",
+      "id": "op-26799d660665",
       "encontrou": {
         "Objeto": {
           "valor": "Credenciamento de Prestadores de Serviços Médicos e de natureza comum, pessoa física, interessados para início imediato, de acordo com a necessidade da CREDENCIANTE, que atendam às condições estabelecidas neste instrumento, para prestação de serviço complementar junto ao Sistema Único de Saúde e à Rede Municipal de Saúde, de acordo com a necessidade e interesse dos serviços de saúde no Município de Goiânia.",
@@ -101,6 +100,12 @@
         "Território": {
           "valor": "GO",
           "trecho": "Município de Goiânia",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "saude",
+          "trecho": "Sistema Único de Saúde e à Rede Municipal de Saúde",
           "oficial": true,
           "dispensado": false
         },
