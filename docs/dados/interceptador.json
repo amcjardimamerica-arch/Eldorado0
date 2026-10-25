@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T07:05:15+00:00",
+  "em": "2026-10-25T07:19:17+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T06:48:56+00:00",
+  "ultimo_voo": "2026-10-25T07:06:42+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,84 +48,79 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.7
+    "tempo_medio_min": 11.9
   },
   "missoes": [
     {
-      "em": "2026-10-25T06:48:56+00:00",
+      "em": "2026-10-25T07:06:42+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Aviso de Reabertura de Prazo de Inscrições (até 05/02/2026) — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 8,
-      "dispensados": 1,
+      "alvo": "Aviso de chamada pública nº 5/2026 — Goiás / Ceres",
+      "qualidade": "insuficiente",
+      "comprovados": 6,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Anexos"
       ],
-      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/01/1768591320_SEI_85022756_Edital.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O aviso menciona a reabertura do prazo de inscrições até 05/02/2026 e o objeto do edital, que é a adesão institucional voluntária de municípios ao projeto CineLeitura do Bem.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar aos requisitos do edital, como o IMCF, inexistência ou insuficiência de equipamentos culturais permanentes, relevância social das comunidades e viabilidade técnica da execução das ações, além de anexar os documentos necessários.",
-        "proximo_passo": "A associação deve se inscrever no prazo estabelecido, até 05/02/2026, apresentando os documentos exigidos e demonstrando a conformidade com os requisitos do edital.",
-        "risco": "A falta de conformidade com os requisitos do edital ou a não apresentação dos anexos pode impedir a participação da associação no projeto."
+        "por_que": "O aviso de chamada pública nº 5/2026 — Goiás / Ceres foi comprovado com informações sobre o objeto, órgão financiador, território, esfera, requisitos e área de atuação.",
+        "para_a_amc": "Uma associação comunitária de Goiânia, atuando em áreas como assistência social, cultura, educação ou esporte, precisaria se alinhar ao objeto do edital, que é promover ações de inovação e desenvolvimento de soluções para problemas reais da saúde, e formar equipes multidisciplinares para acessar o financiamento.",
+        "proximo_passo": "Verificar se há prazo de inscrição e outros detalhes não encontrados no texto fornecido, como resultado, prazo de recurso, valor e anexos.",
+        "risco": "A falta de informações sobre prazo de inscrição, resultado, prazo de recurso, valor e anexos pode impedir a associação de se candidatar ao edital."
       },
       "erro": null,
-      "segundos": 941,
+      "segundos": 716,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor",
-      "id": "op-e0523b51e763",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-bf4c3af441cc",
       "encontrou": {
         "Objeto": {
-          "valor": "adesão institucional voluntária de até 120 (cento e vinte) municípios e distritos do Estado de Goiás ao projeto CineLeitura do Bem – Cultura que Aproxima",
-          "trecho": "A presente Chamada Pública tem por objeto a adesão institucional voluntária de até 120 (cento e vinte) municípios e distritos do Estado de Goiás ao projeto CineLeitura do Bem – Cul",
-          "oficial": true,
+          "valor": "Promover ações de inovação e desenvolvimento de soluções para problemas reais da saúde",
+          "trecho": "O Ideathon da Saúde",
+          "oficial": false,
           "dispensado": false
         },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O prazo de inscrição foi especificado como sendo de 16/12/2025 a 20/01/2026.",
-          "trecho": "Aviso de Reabertura de Prazo de Inscrições (até 05/02/2026)",
-          "oficial": false,
-          "dispensado": true
-        },
         "Órgão / financiador": {
-          "valor": "SECRETARIA DE ESTADO DA CULTURA DE GOIÁS – SECULT",
-          "trecho": "A SECRETARIA DE ESTADO DA CULTURA DE GOIÁS – SECULT, no uso de suas atribuições legais",
-          "oficial": true,
+          "valor": "Prefeitura Municipal de Ceres",
+          "trecho": "Prefeitura Municipal de Ceres",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "municípios e distritos do Estado de Goiás",
-          "oficial": true,
+          "trecho": "Ceres",
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "iniciativa de caráter cultural, social e educativo",
-          "oficial": true,
+          "valor": "saude",
+          "trecho": "saúde",
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "Índice Multidimensional de Carência das Famílias – IMCF, inexistência ou insuficiência de equipamentos culturais permanentes, relevância social das comunidades indicadas, viabilidade técnica, logística, territorial e operacional da execução das ações",
-          "trecho": "Serão considerados, prioritariamente, o Índice Multidimensional de Carência das Famílias – IMCF, adotado oficialmente pelo Programa Goiás Social e pelo Fundo PROTEGE Goiás, a inexi",
-          "oficial": true,
+          "valor": "Formação de equipes multidisciplinares",
+          "trecho": "O NASA Space Apps Challenge não é uma competição exclusiva para programadores. A dinâmica do evento estimula a formação de equipes com diferentes competências, reunindo tecnologia,",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura",
+      "financiador": "Prefeitura Municipal de Ceres",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador"
       ]
     }
   ],
