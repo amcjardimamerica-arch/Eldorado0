@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T03:21:27+00:00",
+  "em": "2026-10-26T03:40:35+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T03:11:53+00:00",
+  "ultimo_voo": "2026-10-26T03:22:58+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,79 +44,92 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 0,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 9.0
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 16.9
   },
   "missoes": [
     {
-      "em": "2026-10-26T03:11:53+00:00",
+      "em": "2026-10-26T03:22:58+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "0 · PNCP · faltam Resultado, Prazo de recurso, Requisitos, Modalidade, Área de atuação",
-      "alvo": "CONSELHO DE ARQUITETURA E URBANISMO DO ESTADO DE MINAS GERAIS — O concurso PRÊMIO DE BOAS PRÁTICAS URBANAS: AMBIENTAL, SANEAMENTO E SOCIAL - 2026, visa a seleção e premiação de 05 (cinco) projetos, obras ou instalações arquitetônicas que tenham sido realizadas em qualquer município m",
+      "alvo": "SAO PAULO TRIBUNAL DE JUSTICA — Chamamento Público para seleção e cadastro de cooperativas e/ou associações de catadores de materiais recicláveis aptas a realiz",
       "qualidade": "insuficiente",
-      "comprovados": 5,
-      "dispensados": 0,
+      "comprovados": 8,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": "https://radargeral.com.br/minas-gerais/conselho-de-arquitetura-e-urbanismo-de-minas-abre-inscricoes-para-premio-de-boas-praticas-urbanas/",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, valor e financiador, sendo suficiente para identificar a fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange sua área de atuação e se há possibilidade de participação em projetos relacionados ao desenvolvimento sustentável nas cidades, mesmo que o território seja MG.",
-        "proximo_passo": "Consultar o edital completo para verificar se há possibilidade de participação e se os requisitos podem ser atendidos.",
-        "risco": "O território do edital é MG, enquanto a associação está em Goiânia, o que pode impedir a participação."
+        "serve_como_fonte": "nao",
+        "por_que": "A associação comunitária de Goiânia não atende ao território especificado no edital, que é SP, e o objeto do edital é voltado para catadores de materiais recicláveis, não para áreas de atuação como assistência social, cultura, educação e esporte.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar se há editais ou programas estaduais ou federais em Goiás que sejam alinhados com suas áreas de atuação, como assistência social, cultura, educação e esporte.",
+        "proximo_passo": "Pesquisar editais de fomento disponíveis em Goiás que sejam compatíveis com as atividades da associação comunitária.",
+        "risco": "A falta de alinhamento entre o território e o objeto do edital pode impedir o acesso à oportunidade de fomento."
       },
       "erro": null,
-      "segundos": 541,
+      "segundos": 1015,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 5,
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "eedf3e2c1d25c3dfbbc2",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-342a90a9c465",
       "encontrou": {
         "Objeto": {
-          "valor": "reconhecer projetos que promovam o desenvolvimento sustentável nas cidades do estado",
-          "trecho": "visa reconhecer projetos que promovem o desenvolvimento sustentável nas cidades do estado",
-          "oficial": true,
+          "valor": "Chamamento Público para seleção e cadastro de cooperativas e/ou associações de catadores de materiais recicláveis aptas a realizarem a triagem dos resíduos sólidos passíveis de reciclagem, beneficiamento e comercialização, visando a destinação ambientalmente correta dos resíduos sólidos gerados pelas unidades do Tribunal de Justiça de São Paulo, excetuados os prédios da Capital",
+          "trecho": "Chamamento Público para seleção e cadastro de cooperativas e/ou associações de catadores de materiais recicláveis aptas a realizarem a triagem dos resíduos sólidos passíveis de rec",
+          "oficial": false,
           "dispensado": false
         },
-        "Valor": {
-          "valor": "até R$ 45 mil",
-          "trecho": "Os projetos vencedores receberão prêmios de até R$ 45 mil",
-          "oficial": true,
-          "dispensado": false
+        "Prazo de inscrição": {
+          "valor": "dispensado — O prazo de inscrição é explicitado no texto.",
+          "trecho": "A partir de 09/09/2025 até 01/10/2025, das 10h00 às 18h00. [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
         },
         "Órgão / financiador": {
-          "valor": "Conselho de Arquitetura e Urbanismo de Minas Gerais",
-          "trecho": "Conselho de Arquitetura e Urbanismo de Minas Gerais (CAU/MG)",
-          "oficial": true,
+          "valor": "TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO",
+          "trecho": "TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "MG",
-          "trecho": "Conselho de Arquitetura e Urbanismo de Minas Gerais (CAU/MG)",
-          "oficial": true,
+          "valor": "SP",
+          "trecho": "TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "meio_ambiente",
+          "trecho": "visando a destinação ambientalmente correta dos resíduos sólidos gerados pelas unidades do Tribunal de Justiça de São Paulo, excetuados os prédios da Capital",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "aptas a realizarem a triagem dos resíduos sólidos passíveis de reciclagem, beneficiamento e comercialização, visando a d",
+          "trecho": "aptas a realizarem a triagem dos resíduos sólidos passíveis de reciclagem, beneficiamento e comercialização, visando a destinação ambientalmente correta dos resíduos sólidos gerado",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Conselho de Arquitetura e Urbanismo do Estado de Minas Gerais",
+      "financiador": "SAO PAULO TRIBUNAL DE JUSTICA",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
