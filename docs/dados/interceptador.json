@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T03:00:20+00:00",
+  "em": "2026-10-26T03:10:07+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T02:49:32+00:00",
+  "ultimo_voo": "2026-10-26T03:01:57+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,95 +39,75 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
-    "estrelas_de_ouro": 6,
+    "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.2
+    "tempo_medio_min": 7.5
   },
   "missoes": [
     {
-      "em": "2026-10-26T02:49:32+00:00",
+      "em": "2026-10-26T03:01:57+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "0 · PNCP · faltam Resultado, Prazo de recurso, Requisitos, Modalidade, Área de atuação",
-      "alvo": "Fundo municipal de assistencia social — edital de chamamento público visando à seleção de organizações da soci… — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 7,
+      "alvo": "FUNDACAO JOAQUIM NABUCO FUNDAJ — Realização de concurso de premiação destinado à seleção de Práticas Pedagógic… — Brasil",
+      "qualidade": "insuficiente",
+      "comprovados": 0,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://www10.goiania.go.gov.br/DadosINTER/Sicon/2025/SICON775411.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre o objeto, financiador, território, esfera, requisitos e área de atuação, o que permite identificar a fonte de financiamento para a AMC.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria cumprir o plano de trabalho que é parte integrante e indissociável do edital, além de apresentar os anexos exigidos para a seleção.",
-        "proximo_passo": "Consultar o edital completo para verificar os anexos e os requisitos específicos detalhados, bem como o prazo de inscrição, que não foi encontrado no texto fornecido.",
-        "risco": "A falta de informações sobre o prazo de inscrição e outros detalhes pode impedir a associação de se inscrever no edital a tempo."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações comprovadas sobre o edital mencionado.",
+        "para_a_amc": "null",
+        "proximo_passo": "null",
+        "risco": "null"
       },
       "erro": null,
-      "segundos": 615,
+      "segundos": 451,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-op-2cf1888b82c9",
-      "encontrou": {
-        "Objeto": {
-          "valor": "custeio para estruturação da Rede de Serviços no âmbito do Sistema Único de Assistência Social – SUAS",
-          "trecho": "O objeto do presente Termo de Fomento é custeio para estruturação da Rede de Serviços no âmbito do Sistema Único de Assistência Social – SUAS ,visando a consecução de finalidade de",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia",
-          "trecho": "Prefeitura de Goiânia",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Prefeitura de Goiânia",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "assistencia_social",
-          "trecho": "O objeto do presente Termo de Fomento é custeio para estruturação da Rede de Serviços no âmbito do Sistema Único de Assistência Social – SUAS ,visando a consecução de finalidade de",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "cumprir o plano de trabalho que, independentemente de transcrição, é a parte integrante e indissociável do presente Term",
-          "trecho": "Os ajustes no plano de trabalho serão formalizados por termo de apos(cid:67)lamento, sendo vedada a alteração do objeto da parceria.",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "Prefeitura Municipal de Goiânia",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-op-c29ea5dde3a2",
+      "encontrou": {},
+      "financiador": "FUNDACAO JOAQUIM NABUCO FUNDAJ",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
   "contagem": {
-    "desde": "2026-10-19T03:00:00+00:00",
-    "zerada_em": "2026-10-19T08:59:43+00:00",
+    "desde": "2026-10-26T03:00:00+00:00",
+    "zerada_em": "2026-10-26T03:01:57+00:00",
     "motivo": "segunda-feira 0h (Brasília)",
-    "missoes_contadas_desde": "2026-10-19T03:00:00+00:00"
+    "missoes_contadas_desde": "2026-10-26T03:00:00+00:00"
   }
 }
