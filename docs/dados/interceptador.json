@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T23:43:12+00:00",
+  "em": "2026-10-26T23:59:14+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T23:24:20+00:00",
+  "ultimo_voo": "2026-10-26T23:44:49+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,38 +43,84 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 18.2
+    "tempo_medio_min": 13.8
   },
   "missoes": [
     {
-      "em": "2026-10-26T23:24:20+00:00",
+      "em": "2026-10-26T23:44:49+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Goianésia — Edital de Chamamento Público Credenciamento nº 002/2025 — Goiás / Goianésia",
+      "alvo": "Goiás Social — Conselho Estadual dos Direitos da Criança e do Adolescente abre Edital de convocação para repre… — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 6,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 1095,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações sobre o objeto e o órgão financiador, o que permite identificar a possibilidade de acesso para uma associação comunitária.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital de convocação para representantes da sociedade civil, demonstrando sua atuação na área de direitos, assistência social, cultura, educação ou esporte.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre o processo de inscrição e os critérios de seleção.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se inscrever dentro do prazo adequado e com os documentos necessários."
+      },
+      "erro": null,
+      "segundos": 828,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-14b69d1fee00",
-      "encontrou": {},
-      "financiador": null,
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-b7fa89c45add",
+      "encontrou": {
+        "Objeto": {
+          "valor": "convocação para representantes da sociedade civil – Desenvolvimento Social",
+          "trecho": "Conselho Estadual dos Direitos da Criança e do Adolescente abre Edital de convocação para representantes da sociedade civil – Desenvolvimento Social",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Conselho Estadual dos Direitos da Criança e do Adolescente",
+          "trecho": "Conselho Estadual dos Direitos da Criança e do Adolescente abre Edital de convocação para representantes da sociedade civil – Desenvolvimento Social",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "GOIAS.GOV.BR",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "direitos",
+          "trecho": "Conselho Estadual dos Direitos da Criança e do Adolescente abre Edital de convocação para representantes da sociedade civil – Desenvolvimento Social",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Conselho Estadual dos Direitos da Criança e do Adolescente",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
+      ]
     }
   ],
   "contagem": {
