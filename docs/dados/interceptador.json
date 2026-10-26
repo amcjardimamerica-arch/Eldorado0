@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T15:26:26+00:00",
+  "em": "2026-10-26T15:37:22+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T15:17:18+00:00",
+  "ultimo_voo": "2026-10-26T15:28:25+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,46 +43,84 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.7
+    "tempo_medio_min": 8.5
   },
   "missoes": [
     {
-      "em": "2026-10-26T15:17:18+00:00",
+      "em": "2026-10-26T15:28:25+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
       "alvo": "Convênios - Repasse Concedido — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 6,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
+        "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://goias.gov.br/imb/wp-content/uploads/sites/29/2025/09/Boletim_033_2025_projecoes_macroeconomicas_3_tri.pdf",
-      "parecer_fonte": {},
+      "pagina_oficial": null,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O convênio menciona a concessão de auxílio e implementação de bolsas, o que pode ser uma fonte de recursos para a associação comunitária.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do convênio, que é a concessão de auxílio e implementação de bolsas, e demonstrar como sua atuação se enquadra nesse objetivo, mesmo que os requisitos específicos não estejam disponíveis.",
+        "proximo_passo": "Consultar o órgão financiador (Universidade Federal de Goiás) para obter mais informações sobre os requisitos e processos de acesso ao convênio.",
+        "risco": "A falta de informações sobre prazo de inscrição, requisitos e área de atuação pode impedir a associação de se candidatar adequadamente ao convênio."
+      },
       "erro": null,
-      "segundos": 519,
+      "segundos": 510,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-nova-7f7e1e240bfd",
-      "encontrou": {},
+      "id": "op-e04e5106ccbc",
+      "encontrou": {
+        "Objeto": {
+          "valor": "CONCESSÃO DE AUXILIO E IMPLEMENTAÇÃO DE BOLSAS P",
+          "trecho": "CONCESSÃO DE AUXILIO E IMPLEMENTAÇÃO DE BOLSAS P",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$534.600,00",
+          "trecho": "R$534.600,00",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "UNIVERSIDADE FEDERAL DE GOIÁS - ( UFG )",
+          "trecho": "UNIVERSIDADE FEDERAL DE GOIÁS - ( UFG )",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "ESTRUTURAR EM 36 MESES O CENTRO DE PESQUISA, DESENVOLVIMENTO E INOVAÇÃO TECNOLÓGICA EM FÁRMACOS, MEDICAMENTOS E COSMÉTICOS - FARMATEC",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
       "financiador": "SECRETARIA DA ECONOMIA DO ESTADO DE GOIÁS",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
