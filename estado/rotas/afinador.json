@@ -284,8 +284,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-196": {
-  "em": "2026-10-25T13:29:10+00:00",
-  "testes": 17,
+  "em": "2026-10-26T00:27:05+00:00",
+  "testes": 16,
   "melhor": {
    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
    "via": "direto",
@@ -393,16 +393,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.mpf.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
     "url": "https://mpt.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -455,6 +445,16 @@
    },
    {
     "url": "https://mpt.mp.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.mpf.mp.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1083,7 +1083,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-26T00:09:56+00:00",
+  "em": "2026-10-26T00:27:23+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -6783,7 +6783,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-256": {
-  "em": "2026-10-25T13:29:27+00:00",
+  "em": "2026-10-26T00:27:23+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -9786,8 +9786,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-241": {
-  "em": "2026-10-25T11:59:10+00:00",
-  "testes": 22,
+  "em": "2026-10-26T00:26:28+00:00",
+  "testes": 13,
   "melhor": {
    "url": "https://www.unicef.org/sitemap.xml",
    "via": "direto",
@@ -9835,7 +9835,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "ErroPonte",
+    "erro": "RuntimeError",
     "funcionou": false
    },
    {
@@ -9849,16 +9849,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.unicef.org/feed",
     "origem": "padrão",
     "via": "direto",
@@ -9866,16 +9856,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.unicef.org/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -9889,16 +9869,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/edital",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.unicef.org/editais",
     "origem": "padrão",
     "via": "direto",
@@ -9906,16 +9876,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.unicef.org/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -9929,16 +9889,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/noticias",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.unicef.org/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
@@ -9949,13 +9899,33 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/chamamento-publico",
+    "url": "https://www.unicef.org/chamadas-publicas",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "ErroPonte",
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.unicef.org/chamamentos",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.unicef.org/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
@@ -10229,8 +10199,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-247": {
-  "em": "2026-10-25T13:28:38+00:00",
-  "testes": 22,
+  "em": "2026-10-26T00:26:39+00:00",
+  "testes": 12,
   "melhor": {
    "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
    "via": "direto",
@@ -10272,16 +10242,6 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -10289,16 +10249,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://international-partnerships.ec.europa.eu/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -10312,16 +10262,6 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://international-partnerships.ec.europa.eu/edital",
     "origem": "padrão",
     "via": "direto",
@@ -10329,16 +10269,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://international-partnerships.ec.europa.eu/edital",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -10352,16 +10282,6 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://international-partnerships.ec.europa.eu/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -10369,16 +10289,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://international-partnerships.ec.europa.eu/noticias",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -10392,13 +10302,33 @@
     "funcionou": false
    },
    {
-    "url": "https://international-partnerships.ec.europa.eu/chamamento-publico",
+    "url": "https://international-partnerships.ec.europa.eu/chamadas-publicas",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "ErroPonte",
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://international-partnerships.ec.europa.eu/chamamentos",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://international-partnerships.ec.europa.eu/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
@@ -11432,8 +11362,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-011": {
-  "em": "2026-10-25T13:28:53+00:00",
-  "testes": 20,
+  "em": "2026-10-26T00:26:54+00:00",
+  "testes": 14,
   "melhor": {
    "url": "https://mariaemilia.org.br/feed",
    "via": "direto",
@@ -11448,7 +11378,7 @@
     "via": "direto",
     "pontos": 30,
     "links": 10,
-    "sinais": 43,
+    "sinais": 39,
     "formato": "sitemap/feed",
     "erro": null,
     "funcionou": true
@@ -11519,16 +11449,6 @@
     "funcionou": false
    },
    {
-    "url": "https://mariaemilia.org.br/edital",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://mariaemilia.org.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -11547,16 +11467,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mariaemilia.org.br/noticias",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -11581,16 +11491,6 @@
     "funcionou": false
    },
    {
-    "url": "https://mariaemilia.org.br/chamamento-publico",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://mariaemilia.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
@@ -11601,13 +11501,23 @@
     "funcionou": false
    },
    {
-    "url": "https://mariaemilia.org.br/chamadas-publicas",
+    "url": "https://mariaemilia.org.br/chamamentos",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "ErroPonte",
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
@@ -11732,7 +11642,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-www-detran-rj-gov-br": {
-  "em": "2026-10-25T13:29:23+00:00",
+  "em": "2026-10-26T00:27:18+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.detran.rj.gov.br/sitemap.xml",
@@ -11819,7 +11729,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 118,
+    "links": 117,
     "sinais": 0,
     "formato": "html",
     "erro": null,
