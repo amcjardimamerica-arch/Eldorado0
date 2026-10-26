@@ -1093,7 +1093,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-26T05:06:38+00:00",
+  "em": "2026-10-26T06:39:20+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1635,8 +1635,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "judiciario-tjgo": {
-  "em": "2026-10-25T19:32:14+00:00",
-  "testes": 16,
+  "em": "2026-10-26T06:38:02+00:00",
+  "testes": 17,
   "melhor": null,
   "detalhe": [
    {
@@ -1647,6 +1647,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br",
+    "origem": "biblioteca",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
     "funcionou": false
    },
    {
@@ -1662,26 +1672,6 @@
    {
     "url": "https://corregedoria.tjgo.jus.br/sitemap.xml",
     "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs",
-    "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs?format=feed&type=rss",
-    "origem": "rota original",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -1722,6 +1712,26 @@
    {
     "url": "https://corregedoria.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs?format=feed&type=rss",
+    "origem": "rota original",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -1782,16 +1792,6 @@
    },
    {
     "url": "https://www.tjgo.jus.br/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://corregedoria.tjgo.jus.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3209,7 +3209,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-235": {
-  "em": "2026-10-25T19:33:07+00:00",
+  "em": "2026-10-26T06:38:49+00:00",
   "testes": 16,
   "melhor": null,
   "detalhe": [
@@ -3226,7 +3226,7 @@
    },
    {
     "url": "https://www.institutolojasrenner.org.br/edital-encantando-comunidades/",
-    "origem": "biblioteca",
+    "origem": "rota original",
     "via": "direto",
     "pontos": 1,
     "links": 23,
@@ -3386,8 +3386,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-acessoainformacao-cavalcante-go-gov-br": {
-  "em": "2026-10-25T21:05:25+00:00",
-  "testes": 24,
+  "em": "2026-10-26T06:38:51+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -3401,17 +3401,6 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/",
-    "origem": "rota original",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -3419,17 +3408,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -3443,17 +3421,6 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -3461,17 +3428,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -3485,17 +3441,6 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -3503,17 +3448,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -3527,17 +3461,6 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/edital",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -3548,14 +3471,43 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/noticias",
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/chamamento-publico",
     "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/chamadas-publicas",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/chamamentos",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
@@ -3702,8 +3654,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-224": {
-  "em": "2026-10-25T21:05:44+00:00",
-  "testes": 13,
+  "em": "2026-10-26T06:39:10+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -3736,16 +3688,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaotelefonicavivo.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
     "funcionou": false
    },
    {
@@ -4744,7 +4686,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-228": {
-  "em": "2026-10-25T21:05:45+00:00",
+  "em": "2026-10-26T06:39:11+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -4872,7 +4814,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-242": {
-  "em": "2026-10-25T21:05:57+00:00",
+  "em": "2026-10-26T06:39:20+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
