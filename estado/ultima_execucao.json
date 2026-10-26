@@ -1,21 +1,45 @@
 {
-  "executado_em": "2026-10-22T11:19:55+00:00",
+  "executado_em": "2026-10-26T12:28:01+00:00",
   "fontes_catalogadas": 85,
   "fontes_total": 68,
-  "fontes_ok": 50,
-  "fontes_falha": 18,
+  "fontes_ok": 46,
+  "fontes_falha": 22,
   "fontes_fora_escopo": 0,
   "fontes_manuais": 2,
   "fontes_api": 2,
-  "novas": 9,
-  "atualizadas": 7,
+  "novas": 4,
+  "atualizadas": 11,
   "quarentena": 0,
   "falhas": [
+    {
+      "fonte": "ministerio-cultura",
+      "erro": "ValueError",
+      "mensagem": "URL deve ser HTTPS e não pode conter credenciais",
+      "etapa": "leitura do site"
+    },
+    {
+      "fonte": "portal-mg",
+      "erro": "ValueError",
+      "mensagem": "tipo não permitido: image/jpeg",
+      "etapa": "leitura do site"
+    },
     {
       "fonte": "capta",
       "erro": "HTTPError",
       "mensagem": "HTTP Error 404: Not Found",
       "etapa": "processamento (http_error_default)"
+    },
+    {
+      "fonte": "conanda",
+      "erro": "HTTPError",
+      "mensagem": "HTTP Error 404: Not Found",
+      "etapa": "processamento (http_error_default)"
+    },
+    {
+      "fonte": "fundacao-bb",
+      "erro": "URLError",
+      "mensagem": "<urlopen error timed out>",
+      "etapa": "processamento (do_open)"
     },
     {
       "fonte": "goiania",
@@ -24,40 +48,40 @@
       "etapa": "leitura do site"
     },
     {
-      "fonte": "goias-cultura-raiz",
-      "erro": "TimeoutError",
-      "mensagem": "The read operation timed out",
-      "etapa": "leitura do site"
-    },
-    {
-      "fonte": "goias-pnab",
-      "erro": "TimeoutError",
-      "mensagem": "The read operation timed out",
-      "etapa": "leitura do site"
-    },
-    {
-      "fonte": "goyazes-programa",
-      "erro": "TimeoutError",
-      "mensagem": "The read operation timed out",
-      "etapa": "leitura do site"
-    },
-    {
-      "fonte": "portal-pi",
-      "erro": "TimeoutError",
-      "mensagem": "The read operation timed out",
-      "etapa": "leitura do site"
-    },
-    {
-      "fonte": "fundacao-bb",
+      "fonte": "goias-cultura",
       "erro": "HTTPError",
-      "mensagem": "HTTP Error 503: Service Unavailable",
+      "mensagem": "HTTP Error 404: Not Found",
       "etapa": "processamento (http_error_default)"
     },
     {
-      "fonte": "goias-cultura",
-      "erro": "ValueError",
-      "mensagem": "tipo não permitido: application/pdf",
-      "etapa": "leitura do site"
+      "fonte": "goias-cultura-raiz",
+      "erro": "HTTPError",
+      "mensagem": "HTTP Error 404: Not Found",
+      "etapa": "processamento (http_error_default)"
+    },
+    {
+      "fonte": "goias-esporte",
+      "erro": "HTTPError",
+      "mensagem": "HTTP Error 404: Not Found",
+      "etapa": "processamento (http_error_default)"
+    },
+    {
+      "fonte": "goias-pnab",
+      "erro": "HTTPError",
+      "mensagem": "HTTP Error 404: Not Found",
+      "etapa": "processamento (http_error_default)"
+    },
+    {
+      "fonte": "goias-social",
+      "erro": "HTTPError",
+      "mensagem": "HTTP Error 404: Not Found",
+      "etapa": "processamento (http_error_default)"
+    },
+    {
+      "fonte": "goyazes-programa",
+      "erro": "HTTPError",
+      "mensagem": "HTTP Error 404: Not Found",
+      "etapa": "processamento (http_error_default)"
     },
     {
       "fonte": "itau-social",
@@ -72,15 +96,9 @@
       "etapa": "leitura do site"
     },
     {
-      "fonte": "ministerio-cultura",
-      "erro": "ValueError",
-      "mensagem": "URL deve ser HTTPS e não pode conter credenciais",
-      "etapa": "leitura do site"
-    },
-    {
       "fonte": "petrobras",
       "erro": "ValueError",
-      "mensagem": "URL deve ser HTTPS e não pode conter credenciais",
+      "mensagem": "tipo não permitido: application/pdf",
       "etapa": "leitura do site"
     },
     {
@@ -90,16 +108,22 @@
       "etapa": "leitura do site"
     },
     {
+      "fonte": "portal-go",
+      "erro": "HTTPError",
+      "mensagem": "HTTP Error 404: Not Found",
+      "etapa": "processamento (http_error_default)"
+    },
+    {
       "fonte": "portal-pa",
       "erro": "URLError",
       "mensagem": "<urlopen error timed out>",
       "etapa": "processamento (do_open)"
     },
     {
-      "fonte": "portal-ro",
-      "erro": "HTTPError",
-      "mensagem": "HTTP Error 403: Forbidden",
-      "etapa": "processamento (http_error_default)"
+      "fonte": "portal-pb",
+      "erro": "URLError",
+      "mensagem": "<urlopen error timed out>",
+      "etapa": "processamento (do_open)"
     },
     {
       "fonte": "pronon-pronas",
@@ -158,6 +182,6 @@
       "internacional"
     ]
   },
-  "paginas_alteradas": 179,
-  "fora_do_terceiro_setor": 340
+  "paginas_alteradas": 163,
+  "fora_do_terceiro_setor": 258
 }

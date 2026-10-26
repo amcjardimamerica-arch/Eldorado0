@@ -1,784 +1,227 @@
 {
-  "executado_em": "2026-10-21T11:21:22+00:00",
+  "executado_em": "2026-10-26T12:28:00+00:00",
   "etapas": {
     "coleta": {
-      "erro": "InvalidURL: URL can't contain control characters. '/agencia/noticias/Esporte e Lazer/bolsa_atleta_sergipe_fortalece_preparacao_de_atletas_para_novas_competicoes' (found at least ' ')"
+      "executado_em": "2026-10-26T12:28:01+00:00",
+      "fontes_catalogadas": 85,
+      "fontes_total": 68,
+      "fontes_ok": 46,
+      "fontes_falha": 22,
+      "fontes_fora_escopo": 0,
+      "fontes_manuais": 2,
+      "fontes_api": 2,
+      "novas": 4,
+      "atualizadas": 11,
+      "quarentena": 0,
+      "falhas": [
+        {
+          "fonte": "ministerio-cultura",
+          "erro": "ValueError",
+          "mensagem": "URL deve ser HTTPS e não pode conter credenciais",
+          "etapa": "leitura do site"
+        },
+        {
+          "fonte": "portal-mg",
+          "erro": "ValueError",
+          "mensagem": "tipo não permitido: image/jpeg",
+          "etapa": "leitura do site"
+        },
+        {
+          "fonte": "capta",
+          "erro": "HTTPError",
+          "mensagem": "HTTP Error 404: Not Found",
+          "etapa": "processamento (http_error_default)"
+        },
+        {
+          "fonte": "conanda",
+          "erro": "HTTPError",
+          "mensagem": "HTTP Error 404: Not Found",
+          "etapa": "processamento (http_error_default)"
+        },
+        {
+          "fonte": "fundacao-bb",
+          "erro": "URLError",
+          "mensagem": "<urlopen error timed out>",
+          "etapa": "processamento (do_open)"
+        },
+        {
+          "fonte": "goiania",
+          "erro": "ValueError",
+          "mensagem": "tipo não permitido: application/pdf",
+          "etapa": "leitura do site"
+        },
+        {
+          "fonte": "goias-cultura",
+          "erro": "HTTPError",
+          "mensagem": "HTTP Error 404: Not Found",
+          "etapa": "processamento (http_error_default)"
+        },
+        {
+          "fonte": "goias-cultura-raiz",
+          "erro": "HTTPError",
+          "mensagem": "HTTP Error 404: Not Found",
+          "etapa": "processamento (http_error_default)"
+        },
+        {
+          "fonte": "goias-esporte",
+          "erro": "HTTPError",
+          "mensagem": "HTTP Error 404: Not Found",
+          "etapa": "processamento (http_error_default)"
+        },
+        {
+          "fonte": "goias-pnab",
+          "erro": "HTTPError",
+          "mensagem": "HTTP Error 404: Not Found",
+          "etapa": "processamento (http_error_default)"
+        },
+        {
+          "fonte": "goias-social",
+          "erro": "HTTPError",
+          "mensagem": "HTTP Error 404: Not Found",
+          "etapa": "processamento (http_error_default)"
+        },
+        {
+          "fonte": "goyazes-programa",
+          "erro": "HTTPError",
+          "mensagem": "HTTP Error 404: Not Found",
+          "etapa": "processamento (http_error_default)"
+        },
+        {
+          "fonte": "itau-social",
+          "erro": "ValueError",
+          "mensagem": "tipo não permitido: application/pdf",
+          "etapa": "leitura do site"
+        },
+        {
+          "fonte": "mds",
+          "erro": "ValueError",
+          "mensagem": "tipo não permitido: application/pdf",
+          "etapa": "leitura do site"
+        },
+        {
+          "fonte": "petrobras",
+          "erro": "ValueError",
+          "mensagem": "tipo não permitido: application/pdf",
+          "etapa": "leitura do site"
+        },
+        {
+          "fonte": "portal-es",
+          "erro": "ValueError",
+          "mensagem": "tipo não permitido: application/pdf",
+          "etapa": "leitura do site"
+        },
+        {
+          "fonte": "portal-go",
+          "erro": "HTTPError",
+          "mensagem": "HTTP Error 404: Not Found",
+          "etapa": "processamento (http_error_default)"
+        },
+        {
+          "fonte": "portal-pa",
+          "erro": "URLError",
+          "mensagem": "<urlopen error timed out>",
+          "etapa": "processamento (do_open)"
+        },
+        {
+          "fonte": "portal-pb",
+          "erro": "URLError",
+          "mensagem": "<urlopen error timed out>",
+          "etapa": "processamento (do_open)"
+        },
+        {
+          "fonte": "pronon-pronas",
+          "erro": "RemoteDisconnected",
+          "mensagem": "Remote end closed connection without response",
+          "etapa": "processamento (_read_status)"
+        },
+        {
+          "fonte": "tjgo-banco-projetos",
+          "erro": "HTTPError",
+          "mensagem": "HTTP Error 403: Forbidden",
+          "etapa": "processamento (http_error_default)"
+        },
+        {
+          "fonte": "transferegov",
+          "erro": "HTTPError",
+          "mensagem": "HTTP Error 401: ",
+          "etapa": "processamento (http_error_default)"
+        }
+      ],
+      "escopo": {
+        "ufs_ativas": [
+          "AC",
+          "AL",
+          "AM",
+          "AP",
+          "BA",
+          "CE",
+          "DF",
+          "ES",
+          "GO",
+          "MA",
+          "MG",
+          "MS",
+          "MT",
+          "PA",
+          "PB",
+          "PE",
+          "PI",
+          "PR",
+          "RJ",
+          "RN",
+          "RO",
+          "RR",
+          "RS",
+          "SC",
+          "SE",
+          "SP",
+          "TO"
+        ],
+        "niveis_ativos": [
+          "municipal",
+          "estadual",
+          "federal",
+          "privada",
+          "internacional"
+        ]
+      },
+      "paginas_alteradas": 163,
+      "fora_do_terceiro_setor": 258
     },
     "apis_oficiais": {
-      "executado_em": "2026-10-21T11:36:55+00:00",
-      "novas": 0,
-      "itens": 0,
+      "executado_em": "2026-10-26T12:45:19+00:00",
+      "novas": 27,
+      "itens": 58,
       "falhas": [
         {
           "api": "querido_diario",
-          "base": "https://api.queridodiario.org.br",
-          "erro": "HTTPError"
-        },
-        {
-          "api": "querido_diario",
-          "base": "https://queridodiario.ok.org.br/api",
-          "erro": "HTTPError"
-        },
-        {
-          "api": "querido_diario",
-          "base": "https://api.queridodiario.ok.org.br",
-          "erro": "URLError"
+          "eliminadas_no_motor_M14": 754,
+          "por_motivo": {
+            "o trecho não mostra ato de abertura (edital, chamamento, seleção, inscrições)": 398,
+            "ato posterior (resultado, homologação, extrato, aditivo)": 252,
+            "o trecho não mostra destinatário do terceiro setor": 104
+          },
+          "nota": "edições cujo trecho não mostra ato de abertura para o terceiro setor (não entram como oportunidade)"
         }
       ]
     },
     "capilaridade": {
-      "executado_em": "2026-10-21T11:36:57+00:00",
+      "executado_em": "2026-10-26T12:45:50+00:00",
       "consultas": 40,
       "consultas_com_falha": 0,
       "pistas_novas": 0
     },
     "diarios_regiao_metropolitana": {
-      "executado_em": "2026-10-21T11:37:47+00:00",
+      "executado_em": "2026-10-26T12:46:40+00:00",
       "municipios_configurados": 21,
       "municipios_resolvidos": 21,
       "municipios_pendentes": [],
       "consultas": 147,
-      "novas": 0,
-      "falhas": [
-        {
-          "municipio": "Goiânia/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goiânia/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goiânia/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goiânia/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goiânia/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goiânia/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goiânia/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Abadia de Goiás/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Abadia de Goiás/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Abadia de Goiás/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Abadia de Goiás/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Abadia de Goiás/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Abadia de Goiás/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Abadia de Goiás/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aparecida de Goiânia/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aparecida de Goiânia/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aparecida de Goiânia/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aparecida de Goiânia/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aparecida de Goiânia/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aparecida de Goiânia/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aparecida de Goiânia/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aragoiânia/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aragoiânia/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aragoiânia/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aragoiânia/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aragoiânia/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aragoiânia/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Aragoiânia/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bela Vista de Goiás/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bela Vista de Goiás/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bela Vista de Goiás/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bela Vista de Goiás/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bela Vista de Goiás/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bela Vista de Goiás/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bela Vista de Goiás/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bonfinópolis/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bonfinópolis/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bonfinópolis/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bonfinópolis/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bonfinópolis/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bonfinópolis/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Bonfinópolis/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Brazabrantes/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Brazabrantes/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Brazabrantes/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Brazabrantes/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Brazabrantes/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Brazabrantes/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Brazabrantes/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caldazinha/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caldazinha/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caldazinha/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caldazinha/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caldazinha/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caldazinha/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caldazinha/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caturaí/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caturaí/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caturaí/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caturaí/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caturaí/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caturaí/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Caturaí/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianápolis/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianápolis/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianápolis/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianápolis/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianápolis/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianápolis/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianápolis/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianira/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianira/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianira/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianira/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianira/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianira/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Goianira/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Guapó/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Guapó/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Guapó/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Guapó/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Guapó/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Guapó/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Guapó/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Hidrolândia/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Hidrolândia/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Hidrolândia/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Hidrolândia/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Hidrolândia/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Hidrolândia/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Hidrolândia/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Inhumas/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Inhumas/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Inhumas/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Inhumas/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Inhumas/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Inhumas/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Inhumas/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nerópolis/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nerópolis/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nerópolis/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nerópolis/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nerópolis/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nerópolis/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nerópolis/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nova Veneza/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nova Veneza/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nova Veneza/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nova Veneza/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nova Veneza/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nova Veneza/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Nova Veneza/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santa Bárbara de Goiás/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santa Bárbara de Goiás/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santa Bárbara de Goiás/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santa Bárbara de Goiás/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santa Bárbara de Goiás/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santa Bárbara de Goiás/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santa Bárbara de Goiás/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santo Antônio de Goiás/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santo Antônio de Goiás/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santo Antônio de Goiás/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santo Antônio de Goiás/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santo Antônio de Goiás/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santo Antônio de Goiás/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Santo Antônio de Goiás/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Senador Canedo/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Senador Canedo/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Senador Canedo/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Senador Canedo/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Senador Canedo/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Senador Canedo/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Senador Canedo/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Terezópolis de Goiás/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Terezópolis de Goiás/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Terezópolis de Goiás/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Terezópolis de Goiás/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Terezópolis de Goiás/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Terezópolis de Goiás/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Terezópolis de Goiás/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Trindade/GO",
-          "consulta": "\"chamamento público\" \"organizações da so",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Trindade/GO",
-          "consulta": "\"edital de chamamento público\" associaçã",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Trindade/GO",
-          "consulta": "CMDCA resolução edital projeto",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Trindade/GO",
-          "consulta": "CMAS resolução chamamento entidade",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Trindade/GO",
-          "consulta": "\"fundo municipal\" edital projeto entidad",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Trindade/GO",
-          "consulta": "\"termo de fomento\" | \"termo de colaboraç",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        },
-        {
-          "municipio": "Trindade/GO",
-          "consulta": "\"conselho municipal do idoso\" edital | r",
-          "erro": "api.queridodiario.org.br: HTTPError HTTP 503; queridodiario.ok.org.br/api: HTTPError HTTP 503; api.queridodiario.ok.org.br: URLError"
-        }
-      ]
+      "novas": 36,
+      "falhas": []
     },
     "redes_indireta": {
-      "executado_em": "2026-10-21T11:39:10+00:00",
+      "executado_em": "2026-10-26T12:49:24+00:00",
       "rota": "indexacao_de_buscador",
       "consultas": 30,
       "pistas_novas": 0,
@@ -797,7 +240,7 @@
       "pistas_acumuladas": 0
     },
     "verificacao_social": {
-      "executado_em": "2026-10-21T11:39:43+00:00",
+      "executado_em": "2026-10-26T12:49:57+00:00",
       "fontes_total": 0,
       "fontes_ok": 0,
       "fontes_falha": 0,
@@ -805,44 +248,49 @@
       "falhas": []
     },
     "verificacao_assistida": {
-      "executado_em": "2026-10-21T11:39:43+00:00",
+      "executado_em": "2026-10-26T12:49:57+00:00",
       "avaliadas": 10,
-      "promovidas": 0,
-      "recusadas": 10,
-      "falhas": []
+      "promovidas": 2,
+      "recusadas": 7,
+      "falhas": [
+        {
+          "oportunidade": "bcc71dbe870764438941",
+          "erro": "ValueError"
+        }
+      ]
     },
     "programas": {
-      "executado_em": "2026-10-21T11:39:46+00:00",
-      "avaliados": 1418,
-      "identificados": 556,
+      "executado_em": "2026-10-26T12:50:04+00:00",
+      "avaliados": 1505,
+      "identificados": 588,
       "por_programa": {
-        "PNAB — Política Nacional Aldir Blanc": 120,
-        "Chamamento público MROSC": 252,
+        "PNAB — Política Nacional Aldir Blanc": 127,
+        "Chamamento público MROSC": 261,
         "Fundo dos Direitos da Criança e do Adolescente": 6,
         "Lei Rouanet — PRONAC": 10,
         "Assistência social — SUAS": 19,
-        "Fundo de Defesa de Direitos Difusos": 117,
+        "Fundo de Defesa de Direitos Difusos": 130,
+        "Destinação de recursos judiciais": 9,
+        "Fundo dos Direitos da Pessoa Idosa": 5,
         "Lei Paulo Gustavo": 14,
-        "Destinação de recursos judiciais": 8,
-        "Fundo dos Direitos da Pessoa Idosa": 3,
         "Lei de Incentivo ao Esporte": 7
       }
     },
     "qualidade": {
-      "executado_em": "2026-10-21T11:39:47+00:00",
-      "avaliados": 1418,
+      "executado_em": "2026-10-26T12:50:06+00:00",
+      "avaliados": 1505,
       "por_classe": {
-        "reprovado": 1418
+        "reprovado": 1505
       },
       "nota_media": 0.0
     },
     "prazos": {
-      "gerado_em": "2026-10-21T11:39:49+00:00",
-      "referencia": "2026-10-21",
-      "com_prazo": 119,
-      "criticos": 32,
-      "encerrados": 53,
-      "sem_prazo": 1338,
+      "gerado_em": "2026-10-26T12:50:08+00:00",
+      "referencia": "2026-10-26",
+      "com_prazo": 122,
+      "criticos": 24,
+      "encerrados": 65,
+      "sem_prazo": 1422,
       "faixas_alerta": [
         30,
         15,
@@ -855,13 +303,13 @@
       "erro": "KeyError: 'fonte_id'"
     },
     "aprendizado": {
-      "executado_em": "2026-10-21T11:39:53+00:00",
-      "fontes_analisadas": 74,
+      "executado_em": "2026-10-26T12:50:12+00:00",
+      "fontes_analisadas": 79,
       "previsoes": 0,
       "padroes": 0
     },
     "rotas_monitoramento": {
-      "gerado_em": "2026-10-21T11:39:53+00:00",
+      "gerado_em": "2026-10-26T12:50:12+00:00",
       "total_catalogo": 260,
       "com_rota_de_monitoramento": 260,
       "sem_rota": 0,
@@ -900,7 +348,7 @@
       "casos_criados": 0
     },
     "farol_ia": {
-      "executado_em": "2026-10-21T11:39:53+00:00",
+      "executado_em": "2026-10-26T12:50:12+00:00",
       "casos_pendentes": 0,
       "casos_processados": 0,
       "sem_chances": 0,
@@ -908,18 +356,18 @@
       "falhas": []
     },
     "fichas_html": {
-      "fichas_geradas": 390,
-      "gerado_em": "2026-10-21T11:39:54+00:00"
+      "fichas_geradas": 392,
+      "gerado_em": "2026-10-26T12:50:12+00:00"
     },
     "resultados_editais": {
-      "executado_em": "2026-10-21T11:39:54+00:00",
-      "consultados": 0,
-      "eventos_novos": 0,
+      "executado_em": "2026-10-26T12:50:13+00:00",
+      "consultados": 2,
+      "eventos_novos": 2,
       "prorrogacoes": 0,
       "falhas": []
     },
     "dashboard": {
-      "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado/Eldorado/dados/editais/extraidos/op-op-0f80746cf4b3.json'"
+      "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Eldorado0/Eldorado0/dados/editais/extraidos/op-op-0f80746cf4b3.json'"
     },
     "relatorio_datado": {
       "status": "desativado — dashboard interativo é a saída padrão"
