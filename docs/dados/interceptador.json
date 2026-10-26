@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T20:45:01+00:00",
+  "em": "2026-10-26T21:00:57+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T20:28:05+00:00",
+  "ultimo_voo": "2026-10-26T20:47:24+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,17 +48,17 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.2
+    "tempo_medio_min": 12.9
   },
   "missoes": [
     {
-      "em": "2026-10-26T20:28:05+00:00",
+      "em": "2026-10-26T20:47:24+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — Edital da Fapeg fomenta novas pesquisas sobre os be… — Goiás",
+      "alvo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — Fapeg lança chamada para apoio financeiro a periódi… — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 2,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -67,45 +67,49 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
-        "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/fapeg/chamada-publica-no-10-2023-programa-de-apoio-a-periodicos-cientificos-de-instituicoes-de-ensino-superior-do-estado-de-goias/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O FAPEG é um órgão estadual comprovado, o que o torna uma fonte válida para pesquisa no Estado de Goiás.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar se o edital abrange áreas de atuação relacionadas à assistência social, cultura, educação ou esporte, e se enquadrar nas condições estabelecidas pelo edital, mesmo que não encontrados requisitos específicos.",
-        "proximo_passo": "Consultar o edital completo do FAPEG para verificar se há abertura de chamada pública e se a associação comunitária se enquadra nas condições estabelecidas.",
-        "risco": "A falta de informações sobre requisitos, área de atuação e prazos pode impedir a associação comunitária de se candidatar adequadamente."
+        "por_que": "A FAPEG é um órgão estadual comprovado que lança chamadas para apoio financeiro, sendo uma fonte válida para obtenção de recursos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende aos requisitos da FAPEG, como possuir natureza de instituição de ensino superior, e seguir o processo de inscrição conforme os anexos disponibilizados.",
+        "proximo_passo": "Consultar os anexos da chamada para entender os requisitos e o processo de inscrição detalhado.",
+        "risco": "A associação comunitária pode não atender aos requisitos da FAPEG, como ser uma instituição de ensino superior, o que impediria o acesso ao apoio financeiro."
       },
       "erro": null,
-      "segundos": 974,
+      "segundos": 776,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 4,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-d9564733a007",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-d377780037cf",
       "encontrou": {
         "Órgão / financiador": {
           "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
-          "trecho": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
-          "oficial": false,
+          "trecho": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) torna público o lançamento da presente chamada pública",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Instituições de Ensino Superior (IES), públicas e privadas sem fins lucrativos, sediadas no Estado de Goiás",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Reitorias ou órgãos equivalentes das Instituições de Ensino Superior (IES), públicas e privadas sem fins lucrativos, sed",
+          "trecho": "convida as Reitorias ou órgãos equivalentes das Instituições de Ensino Superior (IES), públicas e privadas sem fins lucrativos, sediadas no Estado de Goiás a apresentarem propostas",
+          "oficial": true,
           "dispensado": false
         }
       },
       "financiador": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
