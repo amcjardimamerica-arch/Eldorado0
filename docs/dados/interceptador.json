@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T19:00:04+00:00",
+  "em": "2026-10-26T19:14:27+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T18:45:07+00:00",
+  "ultimo_voo": "2026-10-26T19:01:50+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -47,75 +47,60 @@
       "sim": 1
     },
     "estrelas_de_ouro": 0,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.4
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 12.0
   },
   "missoes": [
     {
-      "em": "2026-10-26T18:45:07+00:00",
+      "em": "2026-10-26T19:01:50+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Evento marca entrega de certificados de capacitação profissional a adolescentes e jovens em vulnerabilidade da… — Goiás / Goiânia",
+      "alvo": "Fomento a Amazônia — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 4,
+      "comprovados": 2,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Território",
+        "Esfera",
         "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://cdn.bancoamazonia.com.br/bancoamazonia/Plano_Estrategico_2026_2030_2cc916e7f8.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O evento mencionado é uma ação realizada por organizações da sociedade civil em parceria com o MPT-GO e TRT 18, o que demonstra que a AMC pode se beneficiar de editais de fomento similares.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é a capacitação profissional de adolescentes e jovens em vulnerabilidade, e demonstrar capacidade técnica e operacional para executar o projeto.",
-        "proximo_passo": "A AMC deve buscar informações adicionais sobre editais de fomento do MPT-GO e TRT 18, bem como se adequar aos critérios de elegibilidade.",
-        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir a AMC de se candidatar adequadamente ao edital."
+        "por_que": "O texto comprovado menciona a Diretoria Executiva como órgão financiador e indica a existência de anexos, o que sugere que há uma fonte disponível para acesso.",
+        "para_a_amc": "Para acessar o fomento, a associação comunitária de Goiânia precisaria verificar os anexos disponibilizados pela Diretoria Executiva, preencher os requisitos necessários e seguir o processo de inscrição conforme definido no edital.",
+        "proximo_passo": "Consultar os anexos disponibilizados pela Diretoria Executiva para obter detalhes sobre os requisitos e o processo de inscrição.",
+        "risco": "A falta de informações sobre prazo de inscrição, objeto e requisitos pode impedir a associação de se qualificar adequadamente para o fomento."
       },
       "erro": null,
-      "segundos": 862,
+      "segundos": 719,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 1,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-9f517d94dcda",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-nova-6592147851cb",
       "encontrou": {
-        "Objeto": {
-          "valor": "Entrega de certificados de capacitação profissional a adolescentes e jovens em vulnerabilidade",
-          "trecho": "Evento marca entrega de certificados de capacitação profissional a adolescentes e jovens em vulnerabilidade da Cidade de Goiás",
-          "oficial": false,
-          "dispensado": false
-        },
         "Órgão / financiador": {
-          "valor": "MPT-GO e TRT 18",
-          "trecho": "Iniciativa foi custeada por recursos destinados pelo MPT-GO e TRT 18",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Evento marca entrega de certificados de capacitação profissional a adolescentes e jovens em vulnerabilidade da Cidade de Goiás",
-          "oficial": false,
+          "valor": "Diretoria Executiva",
+          "trecho": "Diretoria Executiva",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Ministério Público do Trabalho em Goiás (MPT-GO)",
+      "financiador": "Banco da Amazônia S.A",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
