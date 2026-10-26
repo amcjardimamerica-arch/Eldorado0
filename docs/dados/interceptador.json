@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T13:35:11+00:00",
+  "em": "2026-10-26T13:55:40+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T13:23:15+00:00",
+  "ultimo_voo": "2026-10-26T13:37:40+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,51 +43,80 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.3
+    "tempo_medio_min": 17.4
   },
   "missoes": [
     {
-      "em": "2026-10-26T13:23:15+00:00",
+      "em": "2026-10-26T13:37:40+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Emenda estadual para projeto esportivo em Goiás — Goiás",
+      "alvo": "10-21: Monitoramento e Avaliação designados por ato específico publicado no Diário Oficial do Município, nos t… — Goiás / Goiânia",
       "qualidade": "insuficiente",
-      "comprovados": 0,
+      "comprovados": 4,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
         "Requisitos",
         "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O texto menciona o objeto do edital, que é a revisão do Plano de Trabalho, e identifica o órgão financiador e o território.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria revisar seu Plano de Trabalho para adequar as datas de execução das atividades, atualizar o endereço ou local de realização das ações e ajustar os registros do cronograma e das metas.",
+        "proximo_passo": "Consultar o ato específico publicado no Diário Oficial do Município para obter detalhes adicionais sobre o edital.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se candidatar ao edital."
+      },
       "erro": null,
-      "segundos": 679,
+      "segundos": 1043,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-captacao-046",
-      "encontrou": {},
-      "financiador": "Assembleia Legislativa de Goiás",
-      "indicios": [],
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-19e4cc0b0832",
+      "encontrou": {
+        "Objeto": {
+          "valor": "revisão do Plano de Trabalho para adequação das datas de execução das atividades, atualização do endereço ou local de realização das ações e ajustes nos registros do cronograma e das metas",
+          "trecho": "Expedir o presente apostilamento para fins de revisão do Plano de Trabalho, visando à adequação das datas de execução das atividades, a atualização do endereço ou local de realizaç",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria Municipal de Governo - SEGOV",
+          "trecho": "DAS PARTES: Secretaria Municipal de Governo - SEGOV e a Associação Floresta Cheia Instituto de Conservação Ambiental, CNPJ/MF sob o nº 35.407.689/0001-58.",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "PREFEITURA DE GOIÂNIA SECRETARIA MUNICIPAL DA CASA CIVIL",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Prefeitura de Goiânia",
+      "indicios": [
+        {
+          "url": "https://data.queridodiario.ok.org.br/5208707/2026-10-21/bbc6080c9fbd9ea1d19ab95247260bc94dce1a95.txt",
+          "tipo": "agregador"
+        }
+      ],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
