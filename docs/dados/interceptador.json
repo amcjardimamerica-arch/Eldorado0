@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T11:55:09+00:00",
+  "em": "2026-10-26T12:09:11+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T11:37:59+00:00",
+  "ultimo_voo": "2026-10-26T12:01:02+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,38 +43,79 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.6
+    "tempo_medio_min": 7.7
   },
   "missoes": [
     {
-      "em": "2026-10-26T11:37:59+00:00",
+      "em": "2026-10-26T12:01:02+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital nº 7/2023 - dinamização de salas de cinema - lei paulo gustavo — Goiás",
+      "alvo": "Edital nº 8/2023 - formação e difusão audiovisual - lei paulo gustavo — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 5,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 994,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado como pertencente à Secretaria de Estado da Cultura em Goiás, com área de atuação em cultura.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao edital de formação e difusão audiovisual, apresentando propostas que se encaixem na área de cultura, com possíveis ações de formação e difusão audiovisual voltadas para a comunidade local.",
+        "proximo_passo": "Consultar os anexos do edital para obter detalhes sobre as exigências, critérios de avaliação e outros requisitos específicos.",
+        "risco": "A falta de informações sobre requisitos e prazos pode impedir a associação de se preparar adequadamente para o processo seletivo."
+      },
+      "erro": null,
+      "segundos": 462,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-8495a642ef7b",
-      "encontrou": {},
-      "financiador": null,
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-66f930b94f79",
+      "encontrou": {
+        "Órgão / financiador": {
+          "valor": "Secretaria de Estado da Cultura",
+          "trecho": "Secretaria de Estado da Cultura",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "GOIÁS.GOV.BR",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "formação e difusão audiovisual",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Estado de Goiás",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
+      ]
     }
   ],
   "contagem": {
