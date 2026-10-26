@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T05:08:36+00:00",
+  "em": "2026-10-26T05:28:19+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T04:53:04+00:00",
+  "ultimo_voo": "2026-10-26T05:10:22+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,89 +39,42 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "nao": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.9
+    "tempo_medio_min": 17.3
   },
   "missoes": [
     {
-      "em": "2026-10-26T04:53:04+00:00",
+      "em": "2026-10-26T05:10:22+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital de chamamento público nº 02/2026 — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 7,
-      "dispensados": 0,
+      "alvo": "Edital de chamamento público voltado a associações e cooperativas de catadores de materiais recicláveis e reut… — Goiás / Goiânia",
+      "qualidade": "insuficiente",
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Área de atuação"
-      ],
-      "pagina_oficial": "https://culteditais.cultura.gov.br/files/opportunity/8278/edital-pnab-fomento.pdf",
-      "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O edital mencionado refere-se a Peixoto de Azevedo (MT), enquanto a associação comunitária de Goiânia está localizada em Goiás, o que torna o edital inaplicável à sua região.",
-        "para_a_amc": "Para acessar o edital, a associação comunitária de Goiânia precisaria verificar se há editais disponíveis para o Estado de Goiás ou municípios adjacentes que sejam compatíveis com sua atuação em assistência social, cultura, educação ou esporte.",
-        "proximo_passo": "Consultar editais disponíveis para o Estado de Goiás ou municípios próximos a Goiânia que sejam alinhados com as áreas de atuação da associação.",
-        "risco": "A localização da associação comunitária em Goiânia, diferente de Peixoto de Azevedo (MT), pode impedir o acesso ao edital mencionado."
-      },
-      "erro": null,
-      "segundos": 893,
+      "nao_resolvidos": null,
+      "pagina_oficial": null,
+      "parecer_fonte": {},
+      "erro": "o modelo não devolveu JSON",
+      "segundos": 1040,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Área de atuação",
-      "id": "op-4dc4ee482b3e",
-      "encontrou": {
-        "Objeto": {
-          "valor": "seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I",
-          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de mani",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$ 241.393,00 (duzentos e quarenta e um mil trezentos e noventa e três reais)",
-          "trecho": "O valor total deste edital é de R$ 241.393,00 (duzentos e quarenta e um mil trezentos e noventa e três reais).",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Secretaria Municipal de educação e cultura",
-          "trecho": "Deste modo, a Secretaria Municipal de educação e cultura torna público o presente edital elaborado com base na Lei nº 14.399/2022 (Lei PNAB), na Lei nº 14.903/2024 (Marco regulatór",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "MT",
-          "trecho": "O agente cultural pode ser: I - Pessoa física II- Microempreendedor Individual (MEI) III- Pessoa jurídica com fins lucrativos (Ex.: empresa de pequeno porte, empresa de grande port",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "atuar e residir no Município de Peixoto de Azevedo há pelo menos seis (6) meses",
-          "trecho": "Pode se inscrever no Edital qualquer agente cultural que atua e reside no Município de Peixoto de Azevedo há pelo menos seis (6) meses.",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "Secretaria Municipal de Cultura, Turismo, Esporte e Juventude de Potengi",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "falhou: o modelo não devolveu JSON",
+      "id": "op-37d39c7f1636",
+      "encontrou": {},
+      "financiador": null,
       "indicios": [],
-      "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
-      ]
+      "rotas": []
     }
   ],
   "contagem": {
