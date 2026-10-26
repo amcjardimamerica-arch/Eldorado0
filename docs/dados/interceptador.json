@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T19:32:11+00:00",
+  "em": "2026-10-26T19:49:41+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T19:16:24+00:00",
+  "ultimo_voo": "2026-10-26T19:33:48+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -52,69 +52,56 @@
   },
   "missoes": [
     {
-      "em": "2026-10-26T19:16:24+00:00",
+      "em": "2026-10-26T19:33:48+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — CHAMADA PÚBLICA FAPEG Nº 16/2025 – Apoio a Projetos… — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 10,
+      "alvo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — CHAMADA PÚBLICA Nº 24/2024 – Programa de Auxílio à … — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição"
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos",
+        "Área de atuação"
       ],
       "pagina_oficial": "https://apex.fapeg.go.gov.br/ords/r/charles/mapa/macrofluxo-de-processos",
       "parecer_fonte": {
         "serve_como_fonte": "nao",
-        "por_que": "O texto comprovado não menciona informações sobre prazo de inscrição, que é uma informação essencial para ações de acesso ao edital.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar se o edital se aplica à sua área de atuação (assistência social, cultura, educação, esporte), além de reunir os requisitos mencionados: cópia do CNPJ, declaração de elegibilidade e projeto técnico.",
-        "proximo_passo": "Verificar se o edital se aplica à área de atuação da associação e coletar os documentos necessários.",
-        "risco": "O edital não menciona o prazo de inscrição, o que pode impedir que a associação comunitária se candidate a tempo."
+        "por_que": "O texto comprovado menciona o objeto da chamada pública como 'Projetos de Pesquisa em Cannabis Medicinal', o que não se alinha com as áreas de atuação de uma associação comunitária de Goiânia, como assistência social, cultura, educação e esporte.",
+        "para_a_amc": "Para acessar a chamada pública, a associação comunitária precisaria verificar se há alinhamento entre o objeto da chamada (pesquisa em cannabis medicinal) e suas atividades, além de atender aos requisitos específicos da FAPEG, que não foram encontrados no texto.",
+        "proximo_passo": "Consultar os anexos da chamada pública para obter informações detalhadas sobre requisitos, prazos e outros detalhes necessários para a candidatura.",
+        "risco": "A falta de informações sobre prazos, requisitos e áreas de atuação pode impedir a associação comunitária de se qualificar adequadamente para a chamada pública."
       },
       "erro": null,
-      "segundos": 911,
+      "segundos": 915,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 2,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição",
-      "id": "op-118285c06323",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-eb371ce0739c",
       "encontrou": {
         "Objeto": {
-          "valor": "Apoio a Projetos de Pesquisa e Inovação em Saúde Digital",
-          "trecho": "CHAMADA PÚBLICA FAPEG Nº 16/2025 - APOIO A PROJETOS DE PESQUISA E INOVAÇÃO EM SAÚDE DIGITAL - 2ª RETIFICAÇÃO",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$ 1.000.000,00",
-          "trecho": "R$ 1.000.000,00",
+          "valor": "Projetos de Pesquisa em Cannabis Medicinal",
+          "trecho": "CHAMADA PÚBLICA Nº 24/2024 – PROGRAMA DE AUXÍLIO À PESQUISA – PROJETOS DE PESQUISA EM CANNABIS MEDICINAL",
           "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás — FAPEG",
-          "trecho": "Fundação de Amparo à Pesquisa do Estado de Goiás — FAPEG",
+          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
+          "trecho": "A Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) torna público o resultado final das propostas selecionadas no âmbito da Chamada Pública nº 24/2024 – Programa de Auxílio ",
           "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Fundação de Amparo à Pesquisa do Estado de Goiás — FAPEG",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "saude",
-          "trecho": "APOIO A PROJETOS DE PESQUISA E INOVAÇÃO EM SAÚDE DIGITAL",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Cópia do CNPJ, Declaração de elegibilidade, Projeto técnico",
-          "trecho": "1.1. A Fundação de Amparo à Pesquisa do Estado de Goiás — FAPEG por meio do lançamento da presente Chamada Pública, em conformidade com a decisão de seu Conselho Superior (CONSUP) ",
+          "trecho": "CHAMADA PÚBLICA Nº 24/2024 – PROGRAMA DE AUXÍLIO À PESQUISA – PROJETOS DE PESQUISA EM CANNABIS MEDICINAL",
           "oficial": false,
           "dispensado": false
         }
