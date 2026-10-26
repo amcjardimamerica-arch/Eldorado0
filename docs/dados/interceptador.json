@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-25T23:57:18+00:00",
+  "em": "2026-10-26T00:13:05+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-25T23:46:00+00:00",
+  "ultimo_voo": "2026-10-25T23:59:11+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,71 +48,80 @@
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.7
+    "tempo_medio_min": 13.2
   },
   "missoes": [
     {
-      "em": "2026-10-25T23:46:00+00:00",
+      "em": "2026-10-25T23:59:11+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital de Chamamento Público de Instituições sem Fins Lucrativos para a ... — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 5,
+      "alvo": "Edital de cadastramento de entidades no Sistema de Destinações (pré-requisito de todos os editais de indicação… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Anexos",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2025/05/PREMIACAO-CULTURA-VIVA-DE-PROJETOS-INICIATIVAS-ATIVIDADES-OU-ACOES-DE-PONTOS-DE-CULTURA-DE-GOIAS-1.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre o objeto e requisitos para instituições sem fins lucrativos no Estado de Goiás.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ser uma instituição sem fins lucrativos e alinhar suas atividades ao objeto do edital, que é a execução do Programa Aprendiz do Futuro, no âmbito da assistência social, cultura, educação ou esporte.",
-        "proximo_passo": "Verificar os requisitos detalhados e preparar os documentos necessários para a inscrição no edital.",
-        "risco": "A falta de informações sobre o prazo de inscrição e outros detalhes pode impedir a participação efetiva da associação."
+        "por_que": "O edital comprova a existência de uma iniciativa de premiação para projetos culturais em Goiás, com valor total de R$ 1.957.000,00, financiada pela Secretaria de Estado da Cultura de Goiás.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria estar certificada como Organização da Sociedade Civil sem fins lucrativos ou ter certificação simplificada concedida pelo Ministério da Cultura para acessar o edital.",
+        "proximo_passo": "Verificar os anexos do edital para obter mais detalhes sobre os requisitos e o processo de inscrição.",
+        "risco": "A falta de certificação simplificada concedida pelo Ministério da Cultura pode impedir o acesso ao edital."
       },
       "erro": null,
-      "segundos": 641,
+      "segundos": 793,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-109a827a27bd",
+      "fontes_oficiais": 8,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
+      "id": "op-400bbbdbafa8",
       "encontrou": {
         "Objeto": {
-          "valor": "Execução do Programa Aprendiz do Futuro",
-          "trecho": "Edital de Chamamento Público de Instituições sem Fins Lucrativos para a Execução do Programa Aprendiz do Futuro",
-          "oficial": false,
+          "valor": "premiação para o reconhecimento de projetos de Pontos de Cultura, Organizações da Sociedade Civil sem fins lucrativos ou Coletivos informais",
+          "trecho": "1.1 Este Edital tem por objeto a premiação para o reconhecimento de projetos de Pontos de Cultura, Organizações da Sociedade Civil sem fins lucrativos ou Coletivos informais (sem c",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 1.957.000,00 (um milhão novecentos e cinquenta e sete mil reais)",
+          "trecho": "2.1 Este Edital é realizado com recursos do Governo Federal, repassados a Secretaria de Estado da Cultura de Goiás por meio da PNAB, e tem o valor total de R$ 1.957.000,00 (um milh",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "ESTADO DE GOIÁS SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL GABINETE DO SECRETÁRIO",
-          "trecho": "ESTADO DE GOIÁS SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL GABINETE DO SECRETÁRIO",
-          "oficial": false,
+          "valor": "Secretaria de Estado da Cultura de Goiás",
+          "trecho": "Este Edital de Premiação é uma ação da Secretaria de Estado da Cultura de Goiás.",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "ESTADO DE GOIÁS",
-          "oficial": false,
+          "trecho": "O Estado de Goiás, através da Secretaria de Estado da Cultura, torna público o presente Edital para o desenvolvimento da Rede de Pontos de Cultura em Goiás",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "O Estado de Goiás, através da Secretaria de Estado da Cultura, torna público o presente Edital para o desenvolvimento da Rede de Pontos de Cultura em Goiás",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "Instituições sem Fins Lucrativos",
-          "trecho": "Edital de Chamamento Público de Instituições sem Fins Lucrativos",
-          "oficial": false,
+          "valor": "certificação simplificada concedida pelo Ministério da Cultura",
+          "trecho": "3.1 O Cadastro Nacional de Pontos e Pontões de Cultura é um dos instrumentos da Política Nacional de Cultura Viva, sendo integrado pelos grupos, coletivos e pessoas jurídicas de di",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Governo do Estado de Goiás",
+      "financiador": "Ministério Público do Trabalho",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
