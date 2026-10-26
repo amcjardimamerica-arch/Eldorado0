@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T12:57:14+00:00",
+  "em": "2026-10-26T13:01:20+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T12:47:30+00:00",
+  "ultimo_voo": "2026-10-26T12:59:02+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,64 +43,44 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.2
+    "tempo_medio_min": 1.8
   },
   "missoes": [
     {
-      "em": "2026-10-26T12:47:30+00:00",
+      "em": "2026-10-26T12:59:02+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital seleciona entidades sociais de Goiás para receber recursos de penas pecuniárias — Goiás",
+      "alvo": "Em busca de emprego? Feirão em Goiânia oferece mais de 10 mil oportunidades — Goiás / Goiânia",
       "qualidade": "insuficiente",
-      "comprovados": 3,
-      "dispensados": 0,
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Território",
-        "Requisitos",
-        "Área de atuação"
-      ],
-      "pagina_oficial": "https://atos.cnj.jus.br/files/original220357202608246a8cbfcd25262.pdf",
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado como parte do CNJ, que é um órgão federal responsável por selecionar entidades sociais para receber recursos de penas pecuniárias.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria se inscrever no edital, apresentando documentos comprobatórios de sua atuação em áreas como assistência social, cultura, educação e esporte, além de atender aos critérios estabelecidos no edital.",
-        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre os requisitos, prazos e processo de inscrição.",
-        "risco": "A falta de informações sobre os requisitos, prazos e área de atuação pode impedir a associação de se inscrever corretamente no edital."
-      },
-      "erro": null,
-      "segundos": 555,
+      "nao_resolvidos": null,
+      "pagina_oficial": null,
+      "parecer_fonte": {},
+      "erro": "nenhuma fonte legível",
+      "segundos": 109,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 2,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-a89e958cbd8b",
-      "encontrou": {
-        "Órgão / financiador": {
-          "valor": "CNJ",
-          "trecho": "Informativo de JURISPRUDÊNCIA do CNJ",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "CNJ",
+      "avaliacao": "falhou: nenhuma fonte legível",
+      "id": "op-1083f41fb56c",
+      "encontrou": {},
+      "financiador": "null",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
