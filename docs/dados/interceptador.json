@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T00:27:10+00:00",
+  "em": "2026-10-26T00:31:00+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T00:14:56+00:00",
+  "ultimo_voo": "2026-10-26T00:29:00+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,70 +43,44 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.7
+    "tempo_medio_min": 1.5
   },
   "missoes": [
     {
-      "em": "2026-10-26T00:14:56+00:00",
+      "em": "2026-10-26T00:29:00+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "0 · PNCP · faltam Resultado, Prazo de recurso, Requisitos, Modalidade, Área de atuação",
-      "alvo": "SUP. EST. DE LICITACAO — O presente Chamamento Público tem por objeto selecionar Organização da Sociedade Civil – OSC para celebração de Ter. Veredito: prata — Objeto, Prazo, Território, Valor e Requi",
+      "alvo": "FUNDACAO JOAQUIM NABUCO FUNDAJ — Realização de concurso de premiação destinado à seleção de Práticas Pedagógicas em Educação Contextualizada para a Convivência com o Semiárido Brasileiro, realizadas em escolas da rede municipal de ensino do Semiárido Br",
       "qualidade": "insuficiente",
-      "comprovados": 3,
-      "dispensados": 0,
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
-      ],
-      "pagina_oficial": "https://rondonia.ro.gov.br/supel/institucional/legislacao/decretos/",
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O texto menciona o Governo do Estado de Rondônia como órgão financiador e o território como RO, confirmando a origem do edital.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange a área de atuação da AMC e se ela atende aos requisitos não especificados, além de se inscrever no prazo não informado.",
-        "proximo_passo": "Consultar o edital completo para obter informações sobre requisitos, prazos e área de atuação, e se inscrever conforme orientado.",
-        "risco": "O edital não fornece informações sobre prazos, valor, requisitos ou área de atuação, o que pode impedir a associação de se qualificar adequadamente para o processo."
-      },
-      "erro": null,
-      "segundos": 703,
+      "nao_resolvidos": null,
+      "pagina_oficial": null,
+      "parecer_fonte": {},
+      "erro": "nenhuma fonte legível",
+      "segundos": 89,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 3,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "3b0a8b47aa7165a5b8da",
-      "encontrou": {
-        "Órgão / financiador": {
-          "valor": "Governo do Estado de Rondônia",
-          "trecho": "Governo do Estado de Rondônia",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "RO",
-          "trecho": "Governo do Estado de Rondônia",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "SUP. EST. DE LICITACAO",
+      "avaliacao": "falhou: nenhuma fonte legível",
+      "id": "f8684c2f36149d7434e3",
+      "encontrou": {},
+      "financiador": "FUNDACAO JOAQUIM NABUCO FUNDAJ",
       "indicios": [],
       "rotas": [
         "financiador_programa_edital",
-        "financiador_regulamento"
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
