@@ -1,11 +1,11 @@
 {
- "gerado_em": "2026-10-26T12:51-03:00",
- "proxima_atualizacao": "2026-10-26T18:51-03:00",
+ "gerado_em": "2026-10-26T13:14-03:00",
+ "proxima_atualizacao": "2026-10-26T19:14-03:00",
  "a_cada_horas": 6,
  "regra": "STATUS DOS MOTORES A CADA 6 HORAS (titular, 01/10/2026) — monitoramento e tomada de decisão.\n\nPara cada motor regular: a data e a hora da ÚLTIMA LEITURA, o resultado e UMA de três luzes:\n  VERDE     coletou hoje (horário de Brasília), com dados ou sem dados novos\n  VERMELHO  a coleta de hoje teve erro ou falha\n  CINZA     o motor não rodou hoje (fora da agenda, aguardando coleta local, parado)",
  "contagem": {
-  "verde": 23,
-  "vermelho": 20,
+  "verde": 34,
+  "vermelho": 9,
   "cinza": 2,
   "legenda": {
    "verde": "funcionando (leu dentro da cadência do motor: 26 h para os diários, a semana para os semanais)",
@@ -18,7 +18,7 @@
    "id": "do-goiania",
    "nome": "Diário Oficial do Município de Goiânia",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 6 dia(s) (147 h); última leitura 20/10 08:52",
+   "resultado": "falha — não lê há 6 dia(s) (148 h); última leitura 20/10 08:52",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -228,7 +228,7 @@
    "id": "plataforma-wordpress",
    "nome": "Adaptador WordPress — sites oficiais pela API pública",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 8 dia(s) (200 h); última leitura 18/10 03:55",
+   "resultado": "falha — não lê há 8 dia(s) (201 h); última leitura 18/10 03:55",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -243,7 +243,7 @@
    "id": "plataforma-mapas-culturais",
    "nome": "Adaptador Mapas Culturais — oportunidades com inscrição aberta",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 8 dia(s) (200 h); última leitura 18/10 03:54",
+   "resultado": "falha — não lê há 8 dia(s) (201 h); última leitura 18/10 03:54",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -380,7 +380,7 @@
    "id": "piloto-aberto",
    "nome": "Piloto - Espião — busca aberta no terceiro setor",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 26/10 12:45 · 10 achado(s)",
+   "resultado": "funcionando — última leitura 26/10 13:06 · 10 achado(s)",
    "leitura_do_dia": {
     "estado": "completa",
     "texto": "dia lido por completo"
@@ -388,14 +388,14 @@
    "luz_do_dia": "verde",
    "resultado_do_dia": "coletou hoje — 10 achado(s)",
    "observacoes": [],
-   "ultima_leitura": "2026-10-26T12:45-03:00",
+   "ultima_leitura": "2026-10-26T13:06-03:00",
    "agenda": "com o Piloto contínuo"
   },
   {
    "id": "estaduais-go-gov",
    "nome": "Oportunidade Estaduais Governamentais de Goiás",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 3 dia(s) (75 h); última leitura 23/10 08:58",
+   "resultado": "falha — não lê há 3 dia(s) (76 h); última leitura 23/10 08:58",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -409,8 +409,8 @@
   {
    "id": "site-farol-cultural",
    "nome": "Farol Cultural — editais de cultura de todo o Brasil, pela API pública do portal",
-   "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (35 h); última leitura 25/10 01:39",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -418,14 +418,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-25T01:39-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13,09:13,12:13,15:13,18:13,21:13"
   },
   {
    "id": "site-capitaai",
    "nome": "CapitaAI — editais e oportunidades de captação, incluindo a lista pública dos editais do Prosas",
-   "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (35 h); última leitura 25/10 01:39",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -433,14 +433,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-25T01:39-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13,09:13,12:13,15:13,18:13,21:13"
   },
   {
    "id": "site-observatorio-terceiro-setor",
    "nome": "Observatório do Terceiro Setor — editais publicados na seção temática do portal",
-   "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (35 h); última leitura 25/10 01:39",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -448,14 +448,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-25T01:39-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13,09:13,12:13,15:13,18:13,21:13"
   },
   {
    "id": "site-mapas-culturais",
    "nome": "Mapas Culturais — editais das redes estaduais e municipais de cultura que usam a plataforma",
-   "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (35 h); última leitura 25/10 01:39",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -463,14 +463,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-25T01:39-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13,09:13,12:13,15:13,18:13,21:13"
   },
   {
    "id": "site-abcr",
    "nome": "ABCR — Associação Brasileira de Captadores de Recursos — editais divulgados pela associação dos captadores",
-   "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (35 h); última leitura 25/10 01:39",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -478,14 +478,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-25T01:39-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13,09:13,12:13,15:13,18:13,21:13"
   },
   {
    "id": "site-funarte",
    "nome": "Funarte — editais da Fundação Nacional de Artes",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 24/10 17:48 · sem oportunidade nova",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -493,14 +493,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-24T17:48-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 07:13,19:13"
   },
   {
    "id": "site-transferegov",
    "nome": "Transferegov — programas e parcerias com OSC abertos na plataforma federal (dados abertos)",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 24/10 17:48 · sem oportunidade nova",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -508,14 +508,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-24T17:48-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 07:13"
   },
   {
    "id": "site-rede-comua",
    "nome": "Rede Comuá — editais dos fundos independentes de filantropia",
-   "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (43 h); última leitura 24/10 17:48",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -523,14 +523,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-24T17:48-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13,09:13,12:13,15:13,18:13,21:13"
   },
   {
    "id": "site-fundo-baoba",
    "nome": "Fundo Baobá — editais para equidade racial",
-   "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (43 h); última leitura 24/10 17:48",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -538,14 +538,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-24T17:48-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 07:13,19:13"
   },
   {
    "id": "site-editais-culturais",
    "nome": "Editais Culturais — editais de cultura reunidos no portal",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 24/10 17:48 · sem oportunidade nova",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -553,14 +553,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-24T17:48-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 07:13,19:13"
   },
   {
    "id": "site-fundo-brasil",
    "nome": "Fundo Brasil de Direitos Humanos — editais de direitos humanos",
-   "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (43 h); última leitura 24/10 17:48",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -568,14 +568,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-24T17:48-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13,09:13,12:13,15:13,18:13,21:13"
   },
   {
    "id": "site-idis",
    "nome": "IDIS — Instituto para o Desenvolvimento do Investimento Social — chamadas e editais de investimento social",
-   "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (35 h); última leitura 25/10 01:39",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -583,7 +583,7 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-25T01:39-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13,09:13,12:13,15:13,18:13,21:13"
   },
   {
@@ -604,8 +604,8 @@
   {
    "id": "site-fundo-casa",
    "nome": "Fundo Casa Socioambiental — chamadas socioambientais",
-   "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (43 h); última leitura 24/10 17:48",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -613,14 +613,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-24T17:48-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13,09:13,12:13,15:13,18:13,21:13"
   },
   {
    "id": "site-cese",
    "nome": "CESE — Coordenadoria Ecumênica de Serviço — editais de apoio a projetos populares",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 24/10 17:48 · sem oportunidade nova",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -628,14 +628,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-24T17:48-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13,09:13,12:13,15:13,18:13,21:13"
   },
   {
    "id": "site-brazilfoundation",
    "nome": "BrazilFoundation — editais de apoio a organizações brasileiras",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 24/10 17:48 · sem oportunidade nova",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -643,14 +643,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-24T17:48-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 07:13,19:13"
   },
   {
    "id": "site-rede-filantropia",
    "nome": "Rede Filantropia — editais divulgados pela rede (lida pelo computador do titular: recusa IP estrangeiro)",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 24/10 17:48 · sem oportunidade nova",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido — exige acesso pelo Brasil"
@@ -658,14 +658,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-24T17:48-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:10,09:10,12:10,15:10,18:10,21:10"
   },
   {
    "id": "site-mapa-osc",
    "nome": "Mapa das OSC (Ipea) — editais reunidos no portal",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 24/10 17:48 · sem oportunidade nova",
+   "resultado": "funcionando — última leitura 26/10 13:07 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -673,14 +673,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-24T17:48-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13"
   },
   {
    "id": "site-prosas",
    "nome": "Prosas — editais e prêmios para OSCs (três caminhos indiretos: listagem da CapitaAI, ângulo do Piloto e coleta assistida)",
-   "luz": "vermelho",
-   "resultado": "falha — a rota indireta (capitaai) não lê há 35 h",
+   "luz": "verde",
+   "resultado": "funcionando pela rota indireta (capitaai) — última leitura 26/10 13:07 · 82 cartão(ões) do site vistos",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -688,14 +688,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-25T01:39-03:00",
+   "ultima_leitura": "2026-10-26T13:07-03:00",
    "agenda": "todos 06:13"
   },
   {
    "id": "piloto-interceptador",
    "nome": "Piloto - Interceptador — comprova na fonte oficial",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 26/10 12:37 · 11 achado(s)",
+   "resultado": "funcionando — última leitura 26/10 13:12 · 11 achado(s)",
    "leitura_do_dia": {
     "estado": "completa",
     "texto": "dia lido por completo"
@@ -703,7 +703,7 @@
    "luz_do_dia": "verde",
    "resultado_do_dia": "coletou hoje — 11 achado(s)",
    "observacoes": [],
-   "ultima_leitura": "2026-10-26T12:37-03:00",
+   "ultima_leitura": "2026-10-26T13:12-03:00",
    "agenda": null
   }
  ]
