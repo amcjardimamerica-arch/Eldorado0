@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-26T05:28:19+00:00",
+  "em": "2026-10-26T05:41:47+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-26T05:10:22+00:00",
+  "ultimo_voo": "2026-10-26T05:30:21+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,38 +43,59 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 17.3
+    "tempo_medio_min": 10.9
   },
   "missoes": [
     {
-      "em": "2026-10-26T05:10:22+00:00",
+      "em": "2026-10-26T05:30:21+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital de chamamento público voltado a associações e cooperativas de catadores de materiais recicláveis e reut… — Goiás / Goiânia",
+      "alvo": "Edital de doação de bens móveis — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 2,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 1040,
+      "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Requisitos",
+        "Área de atuação"
+      ],
+      "pagina_oficial": "https://biblioteca.mpf.mp.br/server/api/core/bitstreams/637ae662-3fd1-4d52-a35d-d8a1113a2832/content",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado como sendo de esfera estadual e possui anexos, o que indica que é uma fonte válida para ações de fomento.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar os anexos do edital para entender os requisitos e condições de participação, além de se certificar de que sua área de atuação (assistência social, cultura, educação, esporte) está alinhada com o edital.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre os requisitos, prazos e processos de inscrição.",
+        "risco": "A falta de informações sobre requisitos, prazos e área de atuação pode impedir a associação de se qualificar adequadamente para o edital."
+      },
+      "erro": null,
+      "segundos": 652,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 1,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-37d39c7f1636",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-1d25fdab2714",
       "encontrou": {},
-      "financiador": null,
+      "financiador": "Ministério Público Federal",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital"
+      ]
     }
   ],
   "contagem": {
