@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T05:57:03+00:00",
+  "em": "2026-10-27T05:44:01+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T05:45:36+00:00",
+  "ultimo_voo": "2026-10-27T05:37:59+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,71 +48,60 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.8
+    "tempo_medio_min": 5.5
   },
   "missoes": [
     {
-      "em": "2026-10-27T05:45:36+00:00",
+      "em": "2026-10-27T05:37:59+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Itumbiara — inscrições abertas para editais de premiação e fomento de projetos culturais — Goiás / Itumbiara",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "Itumbiara — edital chamada pública – lei paulo gustavo — Goiás / Itumbiara — Goiás / Itumbiara",
+      "qualidade": "insuficiente",
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos",
-        "Anexos"
+        "Território",
+        "Requisitos"
       ],
-      "pagina_oficial": "https://itumbiara.go.gov.br/inscricoes-abertas-para-editais-de-premiacao-e-fomento-de-projetos-culturais/",
+      "pagina_oficial": "https://itumbiara.go.gov.br/edital-chamada-publica-lei-paulo-gustavo/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição, órgão financiador, território e esfera, o que permite identificar sua existência e alcance.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende ao objeto do edital (premiação e fomento de iniciativas culturais), se está localizada no território de Itumbiara (GO) e se tem atividades relacionadas à cultura para se inscrever.",
-        "proximo_passo": "Consultar o site da Prefeitura Municipal de Itumbiara para obter mais detalhes sobre o edital, como requisitos, anexos e prazo de inscrição.",
-        "risco": "O prazo de inscrição não está claro, o que pode impedir que a associação se inscreva a tempo."
+        "por_que": "O edital comprovado menciona o objeto e o financiador, o que é suficiente para identificar a fonte de financiamento.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto cultural de audiovisual e multilinguagem, alinhado às áreas de atuação da Prefeitura Municipal de Itumbiara, e seguir os anexos mencionados no edital.",
+        "proximo_passo": "Consultar os anexos do edital para entender melhor os requisitos e a elaboração do projeto.",
+        "risco": "A falta de informações sobre prazo de inscrição e outros requisitos pode dificultar o acesso ao edital."
       },
       "erro": null,
-      "segundos": 648,
+      "segundos": 333,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Requisitos",
-      "id": "op-9d076f742bf8",
+      "fontes_oficiais": 5,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-4137443b0737",
       "encontrou": {
         "Objeto": {
-          "valor": "premiação e fomento de iniciativas culturais",
-          "trecho": "premiação e fomento de iniciativas culturais",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "? a 2026-09-25",
-          "trecho": "as inscrições ficam abertas até 25 de setembro",
+          "valor": "PROJETOS CULTURAIS DE AUDIOVISUAL E MULTILINGUAGEM",
+          "trecho": "EDITAL CHAMADA PÚBLICA – LEI PAULO GUSTAVO – PROJETOS CULTURAIS DE AUDIOVISUAL E MULTILINGUAGEM",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
           "valor": "Prefeitura Municipal de Itumbiara",
-          "trecho": "Prefeitura Municipal de Itumbiara",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Itumbiara",
+          "trecho": "EDITAL CHAMADA PÚBLICA – LEI PAULO GUSTAVO – PROJETOS CULTURAIS DE AUDIOVISUAL E MULTILINGUAGEM",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "premiação e fomento de iniciativas culturais",
+          "trecho": "PROJETOS CULTURAIS DE AUDIOVISUAL E MULTILINGUAGEM",
           "oficial": true,
           "dispensado": false
         }
