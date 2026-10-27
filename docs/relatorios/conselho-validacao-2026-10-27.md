@@ -201,7 +201,7 @@
  "pontos_com_redundancia": 18,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 40672
+ "exemplos_da_rede_de_rotas": 40760
 }
 ```
 
@@ -330,7 +330,7 @@
   "Cartório (site oficial certificado)": 190,
   "Espião (privado/internacional)": 48
  },
- "lidas_nas_ultimas_24h": 156,
+ "lidas_nas_ultimas_24h": 138,
  "dimensionamento": {
   "fontes": 404,
   "sites_por_execucao": 17,
