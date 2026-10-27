@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T07:51:16+00:00",
+  "em": "2026-10-27T08:04:50+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T07:40:22+00:00",
+  "ultimo_voo": "2026-10-27T07:53:27+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,61 +48,66 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.3
+    "tempo_medio_min": 10.8
   },
   "missoes": [
     {
-      "em": "2026-10-27T07:40:22+00:00",
+      "em": "2026-10-27T07:53:27+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Jaraguá — 📢 As inscrições para a Lei Paulo Gustavo encerrarão no próximo domingo (22), não perca essa oportuni… — Goiás",
+      "alvo": "Jaraguá — 🚨👨‍🚒👩‍🚒 As inscrições para o Programa Bombeiro Mirim estão abertas em Goiás! Não perca a chance de a… — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 4,
-      "dispensados": 1,
+      "comprovados": 5,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos",
         "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto menciona o prazo de inscrição e identifica o órgão financiador, sendo suficiente para confirmar a fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no prazo estabelecido, que encerrará no próximo domingo (22), e comprovar sua atuação em áreas como assistência social, cultura, educação ou esporte, conforme o objeto da Lei Paulo Gustavo.",
-        "proximo_passo": "Verificar o prazo de inscrição e se a associação atende aos requisitos da Lei Paulo Gustavo para se inscrever.",
-        "risco": "O prazo de inscrição pode expirar antes que a associação finalize a inscrição, impedindo o acesso ao benefício."
+        "por_que": "O texto menciona que as inscrições para o Programa Bombeiro Mirim estão abertas em Goiás e que o objetivo é desenvolver habilidades para a vida cotidiana em sociedade, alinhando-se com ações de educação e esporte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se certificar de que atende aos requisitos do edital, como estar atento aos prazos e critérios disponíveis, e verificar se sua área de atuação se enquadra no objeto do edital.",
+        "proximo_passo": "Consultar o edital completo para verificar os prazos, critérios e requisitos específicos do Programa Bombeiro Mirim.",
+        "risco": "O prazo de inscrição não foi encontrado, o que pode impedir a associação de se inscrever a tempo."
       },
       "erro": null,
-      "segundos": 617,
+      "segundos": 647,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-35dba751a9ee",
+      "id": "op-13b5c16e7c19",
       "encontrou": {
-        "Prazo de inscrição": {
-          "valor": "dispensado — O texto menciona o prazo de inscrição.",
-          "trecho": "As inscrições para a Lei Paulo Gustavo encerrarão no próximo domingo (22) [rejeitado: data implausível para edital aberto]",
+        "Objeto": {
+          "valor": "desenvolver habilidades para a vida cotidiana em sociedade",
+          "trecho": "Além de assistir crianças em estado de vulnerabilidade, o programa tem como objetivo desenvolver habilidades para a vida cotidiana em sociedade.",
           "oficial": false,
-          "dispensado": true
+          "dispensado": false
         },
         "Órgão / financiador": {
           "valor": "Prefeitura Municipal de Jaraguá",
-          "trecho": "Acesse o site da prefeitura para saber mais.",
+          "trecho": "Prefeitura Municipal de Jaraguá",
           "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Jaraguá - GO.",
+          "trecho": "em Goiás",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "estar atento aos prazos e critérios disponíveis no edital",
+          "trecho": "Para se inscrever é preciso estar atento aos prazos e critérios disponíveis no edital!",
           "oficial": false,
           "dispensado": false
         }
