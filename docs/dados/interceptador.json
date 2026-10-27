@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T03:55:24+00:00",
+  "em": "2026-10-27T04:11:10+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T03:41:06+00:00",
+  "ultimo_voo": "2026-10-27T03:57:16+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,65 +48,60 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.7
+    "tempo_medio_min": 13.3
   },
   "missoes": [
     {
-      "em": "2026-10-27T03:41:06+00:00",
+      "em": "2026-10-27T03:57:16+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Inscrições Abertas — Goiás — Goiás",
+      "alvo": "Inscrições Abertas — Goiás — Goiás — Goiás",
       "qualidade": "insuficiente",
       "comprovados": 1,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
         "Território",
         "Esfera",
         "Requisitos",
         "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/fapeg",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o Objeto da iniciativa, que é a Inscrição de projetos de pesquisa e inovação em áreas prioritárias, o que indica que a fonte é relevante para a AMC.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria inscrever um projeto de pesquisa ou inovação em áreas prioritárias, conforme o Objeto definido.",
-        "proximo_passo": "Verificar os requisitos não encontrados, como prazo de inscrição, valor e anexos, para completar a inscrição do projeto.",
-        "risco": "A falta de informações sobre prazo de inscrição, valor e requisitos pode impedir a associação de se inscrever no edital."
+        "por_que": "O FAPEG é um órgão financiador reconhecido no estado de Goiás, responsável por apoiar pesquisas e projetos de interesse científico e tecnológico.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital se enquadra em sua área de atuação e, caso sim, seguir o processo de inscrição conforme as normas do FAPEG.",
+        "proximo_passo": "Consultar o site do FAPEG para obter informações detalhadas sobre o edital e os requisitos necessários para inscrição.",
+        "risco": "A falta de informações específicas como prazo de inscrição, objeto e requisitos pode dificultar o acesso ao edital."
       },
       "erro": null,
-      "segundos": 821,
+      "segundos": 796,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 1,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-08b743fa7f30",
+      "id": "op-e52499ba9793",
       "encontrou": {
-        "Objeto": {
-          "valor": "Inscrição de projetos de pesquisa e inovação em áreas prioritárias",
-          "trecho": "Inscrições Abertas – FAPEG",
-          "oficial": false,
+        "Órgão / financiador": {
+          "valor": "FAPEG – Fundação de Amparo à Pesquisa do Estado de Goiás",
+          "trecho": "FAPEG – Fundação de Amparo à Pesquisa do Estado de Goiás",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "FAPEG",
+      "financiador": "FAPEG – Fundação de Amparo à Pesquisa do Estado de Goiás",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
