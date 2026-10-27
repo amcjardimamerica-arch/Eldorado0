@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T14:23:18+00:00",
+  "em": "2026-10-27T14:37:01+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T14:07:01+00:00",
+  "ultimo_voo": "2026-10-27T14:24:51+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,21 +44,21 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.6
+    "tempo_medio_min": 11.5
   },
   "missoes": [
     {
-      "em": "2026-10-27T14:07:01+00:00",
+      "em": "2026-10-27T14:24:51+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Organizações sociais - Casa Civil — Goiás",
+      "alvo": "Out. 11:00 Medidas administrativas e debate previdenciário agitam a semana A Secretaria da Ciência, Tecnologia… — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 6,
+      "comprovados": 3,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -66,55 +66,52 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Território",
+        "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado descreve o objeto e os requisitos para a qualificação de organizações sociais no estado de Goiás, emitido pela Casa Civil.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar cópia autenticada da ata de eleição dos membros do Conselho de Administração e Diretoria, cópia autenticada do balanço patrimonial e da demonstração do resultado do exercício anterior, inscrição no CNPJ e declaração de que não está qualificada como outra entidade.",
-        "proximo_passo": "A associação deve coletar e preparar os documentos exigidos para submeter a solicitação de qualificação.",
-        "risco": "A falta de documentos necessários ou a não conformidade com os requisitos pode impedir a qualificação."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações suficientes sobre editais de fomento para organizações da sociedade civil no Brasil relacionadas a esse objeto e órgão.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar se há editais específicos para o setor de assistência social, cultura, educação e esporte, e se qualificar conforme os requisitos estabelecidos em tais editais.",
+        "proximo_passo": "Consultar o site da Secretaria da Ciência, Tecnologia… para verificar se há editais disponíveis e seus respectivos requisitos.",
+        "risco": "A falta de informações sobre prazos, requisitos e áreas de atuação pode impedir o acesso ao fomento."
       },
       "erro": null,
-      "segundos": 938,
+      "segundos": 691,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-0a781236293c",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-21c2a508a8aa",
       "encontrou": {
         "Objeto": {
-          "valor": "Qualificação de Organizações Sociais",
-          "trecho": "DOCUMENTOS QUE DEVEM INSTRUIR O REQUERIMENTO DE QUALIFICAÇÃO DE ORGANIZAÇÃO SOCIAL.",
+          "valor": "Medidas administrativas e debate previdenciário agitam a semana",
+          "trecho": "Medidas administrativas e debate previdenciário agitam a semana",
           "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Casa Civil",
-          "trecho": "Secretaria de Estado da Casa Civil",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Organizações sociais - Casa Civil — Goiás",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Cópia autenticada da Ata de eleição dos membros atuais do Conselho de Administração e da Diretoria, Cópia autenticada do Balanço patrimonial e da demonstração do resultado do exercício anterior, Inscrição no Cadastro Nacional da Pessoa Jurídica, Declaração de que a Entidade não está qualificada como",
-          "trecho": "DOCUMENTOS QUE DEVEM INSTRUIR O REQUERIMENTO DE QUALIFICAÇÃO COMO ORGANIZAÇÃO SOCIAL.",
+          "valor": "Secretaria da Ciência, Tecnologia…",
+          "trecho": "Secretaria da Ciência, Tecnologia…",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Casa Civil",
-      "indicios": [],
+      "financiador": "Conselho de Ética e Decoro Parlamentar",
+      "indicios": [
+        {
+          "url": "https://portal.al.go.leg.br/noticias/167827/medidas-administrativas-e-debate-previdenciario-agitam-a-semana",
+          "tipo": "noticia"
+        }
+      ],
       "rotas": [
-        "financiador_programa_edital"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
