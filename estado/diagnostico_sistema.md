@@ -1,15 +1,15 @@
-# Diagnóstico do sistema · 2026-10-26 23:31 UTC
+# Diagnóstico do sistema · 2026-10-27 00:45 UTC
 
-## Cumprimento da finalidade · índice geral 60%
+## Cumprimento da finalidade · índice geral 59%
 - Motores: 79% (atencao) — todo motor ativo lê dentro da sua cadência
 - Maestro: 10% (falha) — cobertura completa do dia planejado
 - Rede neural: 99% (ok) — discernimento (AUC) de pelo menos 0,85
 - Biblioteca: 100% (ok) — toda oportunidade aberta aplicável com livro existente
-- Validação: 23% (falha) — toda oportunidade aberta validada
-- Site oficial: 71% (atencao) — toda aberta com site oficial
-- Prazo: 26% (falha) — toda aberta com prazo (ou fluxo contínuo)
+- Validação: 20% (falha) — toda oportunidade aberta validada
+- Site oficial: 70% (atencao) — toda aberta com site oficial
+- Prazo: 22% (falha) — toda aberta com prazo (ou fluxo contínuo)
 - Cartório: 66% (falha) — 12 de 12 itens certificados na fonte oficial
-- Tela e fichas: 94% (atencao) — tudo que está aberto aparece na tela e tem ficha
+- Tela e fichas: 93% (atencao) — tudo que está aberto aparece na tela e tem ficha
 - Integração: 30% (falha) — mesmas contagens e dados em dia em todos os sistemas
 - Fluxos automáticos: —% (sem_dados) — todo fluxo agendado roda na cadência e sem falha
 - Execução sem falha silenciosa: —% (sem_dados) — nenhuma etapa falha em silêncio
@@ -67,52 +67,51 @@
 - sugestões de apresentação: ['decisões da titular (descartadas/inscritas aguardando aplicação e livros sinalizados para o Claude)']
 
 ## Oportunidades
-- abertas: 221 · validadas: 50 (22.6%) · por estado: {'em_verificacao': 150, 'validada': 50, 'validacao_manual': 21}
-- com livro: 221 · sem livro (problema): 0 · sem livro por regra: 0 {} · livro inexistente: 0
-- sem site oficial: 63 · sem prazo: 164 · prazo vencido ainda aberta: 0
+- abertas: 210 · validadas: 42 (20.0%) · por estado: {'em_verificacao': 147, 'validada': 42, 'validacao_manual': 21}
+- com livro: 210 · sem livro (problema): 0 · sem livro por regra: 0 {} · livro inexistente: 0
+- sem site oficial: 62 · sem prazo: 164 · prazo vencido ainda aberta: 0
 - fora da tela: 14 · sem ficha: 0
-- itens que mais faltam: {'Prazo de recurso': 145, 'Anexos': 137, 'Requisitos': 134, 'Prazo de inscrição': 130, 'Valor': 128, 'Resultado': 126, 'Objeto': 123, 'Território': 122, 'Modalidade': 102, 'Área de atuação': 88, 'Órgão / financiador': 84, 'Esfera': 80}
+- itens que mais faltam: {'Prazo de recurso': 144, 'Anexos': 136, 'Requisitos': 133, 'Prazo de inscrição': 129, 'Valor': 127, 'Resultado': 125, 'Objeto': 122, 'Território': 119, 'Modalidade': 99, 'Área de atuação': 87, 'Órgão / financiador': 83, 'Esfera': 79}
 
 ## Sistemas
 - motores: 34 funcionando · 9 em falha · 2 inativos · 3 com leitura parcial
-  - em falha: Diário Oficial do Município de Goiânia — falha — não lê há 6 dia(s) (155 h); última leitura 20/10 08:52
-  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 8 dia(s) (212 h); última leitura 18/10 00:25
-  - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 8 dia(s) (211 h); última leitura 18/10 01:27
-  - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 2 dia(s) (60 h); última leitura 24/10 08:16
-  - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 8 dia(s) (211 h); última leitura 18/10 01:29
-  - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 8 dia(s) (208 h); última leitura 18/10 03:55
-  - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 8 dia(s) (208 h); última leitura 18/10 03:54
-  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 8 dia(s) (208 h); última leitura 18/10 03:49
-  - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 3 dia(s) (83 h); última leitura 23/10 08:58
+  - em falha: Diário Oficial do Município de Goiânia — falha — não lê há 6 dia(s) (156 h); última leitura 20/10 08:52
+  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 8 dia(s) (213 h); última leitura 18/10 00:25
+  - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 8 dia(s) (212 h); última leitura 18/10 01:27
+  - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 2 dia(s) (61 h); última leitura 24/10 08:16
+  - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 8 dia(s) (212 h); última leitura 18/10 01:29
+  - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 8 dia(s) (209 h); última leitura 18/10 03:55
+  - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 8 dia(s) (209 h); última leitura 18/10 03:54
+  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 8 dia(s) (209 h); última leitura 18/10 03:49
+  - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 3 dia(s) (84 h); última leitura 23/10 08:58
 - maestro: cobertura 10.3% · esgotados 0
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
 - Cartório: 0.6646 certificado · fluxos do GitHub com falha: []
-- saúde: 6 alerta(s) · índice da sala de controle: 55
+- saúde: 6 alerta(s) · índice da sala de controle: 54
 
 ## Integração
-- contagens: {'repositorio_abertas': 221, 'diagnostico_abertas': 221, 'tela_cartoes': 224, 'fichas': 226, 'sala_controle_abertas': 221}
-- idade (h): {'repositorio': 0.0, 'fluxo': 211.7, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 0.1, 'rede_neural': 211.7, 'saude': 7.7}
+- contagens: {'repositorio_abertas': 210, 'diagnostico_abertas': 210, 'tela_cartoes': 224, 'fichas': 212, 'sala_controle_abertas': 210}
+- idade (h): {'repositorio': 0.0, 'fluxo': 212.9, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 1.4, 'rede_neural': 212.9, 'saude': 8.9}
 - decisões da titular: 0 · não aplicadas: 0
 
-## Problemas (29)
-- [alta] cobertura do dia 10.3% ao fim do dia (meta 98%) → investigar os motores pendentes (sem correção automática)
-- [alta] o comando único não fecha um ciclo há 189.9 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+## Problemas (28)
+- [alta] o comando único não fecha um ciclo há 191.1 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
-- [alta] motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 6 dia(s) (155 h); última leitura 20/10 08:52 → investigar o motor (sem correção automática)
-- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 8 dia(s) (212 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 8 dia(s) (211 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 2 dia(s) (60 h); última leitura 24/10 08:16 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 8 dia(s) (211 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 8 dia(s) (208 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 8 dia(s) (208 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 8 dia(s) (208 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 3 dia(s) (83 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
-- [alta] tela mostra 224 oportunidades e o repositório conta 221 → refazer a tela
+- [alta] motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 6 dia(s) (156 h); última leitura 20/10 08:52 → investigar o motor (sem correção automática)
+- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 8 dia(s) (213 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 8 dia(s) (212 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 2 dia(s) (61 h); última leitura 24/10 08:16 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 8 dia(s) (212 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 8 dia(s) (209 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 8 dia(s) (209 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 8 dia(s) (209 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 3 dia(s) (84 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
+- [alta] tela mostra 224 oportunidades e o repositório conta 210 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 211.7 h (limite 3 h) → refazer a tela
-- [media] rede_neural sem atualização há 211.7 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 212.9 h (limite 3 h) → refazer a tela
+- [media] rede_neural sem atualização há 212.9 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 113 de 126 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
-- [media] avaliação do Cartório com gabarito tem 267.6 h (semanal) → disparar o fluxo 39
+- [media] avaliação do Cartório com gabarito tem 268.9 h (semanal) → disparar o fluxo 39
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 111 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 241 item(ns) esperando a análise do Claude (próxima: 2026-10-26) → ver o fluxo/arquivo indicado
@@ -121,7 +120,7 @@
 - [media] saúde · publicação: o painel no ar (893e43e2dd3e) é diferente do código do repositório (b7ee4d28fe32) — publicação pendente → ver o fluxo/arquivo indicado
 - [media] saúde · workflows: 00 · Verificar prontidão: últimas 5 execuções sem sucesso → ver o fluxo/arquivo indicado
 - [media] saúde · workflows: 03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês): últimas 5 execuções sem sucesso → ver o fluxo/arquivo indicado
-- [media] 63 abertas ainda sem site oficial → Cartório/Interceptador (sem correção automática imediata)
+- [media] 62 abertas ainda sem site oficial → Cartório/Interceptador (sem correção automática imediata)
 - [baixa] 164 abertas sem prazo de inscrição conhecido → Cartório/Interceptador (sem correção automática imediata)
 - [baixa] 18 módulos de teste em quarentena (envelhecidos) → atualizar o teste à regra atual (sem correção automática)
 
@@ -136,11 +135,11 @@
 
 ## Decisões do Eldorado: agiu como deveria?
 - decidir · motores escolhidos para ler na passagem: **incorreto** (113 de 126) — regra: todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) · ex.: pncp-api; plat-prefeituras-50-go
-- qualificar · oportunidades abertas para associação: **correto** (0 de 221) — regra: pregão, registro de preços, credenciamento de prestadores, contratação de empresa, OS da saúde e seleção de pessoal não são oportunidade (ruído ou acompanhar)
-- legislativo · atos legislativos fora das oportunidades: **correto** (0 de 221) — regra: projeto de lei, utilidade pública e orçamento vão ao acompanhamento legislativo, nunca às abertas
-- prazo · oportunidades contadas como abertas: **correto** (0 de 221) — regra: prazo vencido sai das abertas
-- site_oficial · link oficial gravado no repositório: **correto** (0 de 158) — regra: agregador ou replicador nunca é link oficial
+- qualificar · oportunidades abertas para associação: **correto** (0 de 210) — regra: pregão, registro de preços, credenciamento de prestadores, contratação de empresa, OS da saúde e seleção de pessoal não são oportunidade (ruído ou acompanhar)
+- legislativo · atos legislativos fora das oportunidades: **correto** (0 de 210) — regra: projeto de lei, utilidade pública e orçamento vão ao acompanhamento legislativo, nunca às abertas
+- prazo · oportunidades contadas como abertas: **correto** (0 de 210) — regra: prazo vencido sai das abertas
+- site_oficial · link oficial gravado no repositório: **correto** (0 de 148) — regra: agregador ou replicador nunca é link oficial
 - certificar · itens certificados pelo Cartório: **correto** (0 de 2706) — regra: todo item certificado tem trecho literal e documento
 - validar · validação por exceção: **correto** (0 de 0) — regra: só valida sozinho com acerto do Cartório ≥ 85% no gabarito e link oficial aprovado na curadoria
-- farol · oportunidades prontas para o Farol: **correto** (0 de 15) — regra: pronta só com prazo vigente e link oficial aprovado na curadoria
+- farol · oportunidades prontas para o Farol: **correto** (0 de 10) — regra: pronta só com prazo vigente e link oficial aprovado na curadoria
 - biblioteca · livros da Biblioteca: **correto** (0 de 2700) — regra: ato legislativo não gera livro
