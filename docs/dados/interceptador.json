@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T02:57:44+00:00",
+  "em": "2026-10-27T03:14:31+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T02:46:29+00:00",
+  "ultimo_voo": "2026-10-27T02:59:27+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,74 +48,79 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.7
+    "tempo_medio_min": 14.6
   },
   "missoes": [
     {
-      "em": "2026-10-27T02:46:29+00:00",
+      "em": "2026-10-27T02:59:27+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Governo de Goiás abre inscrições para novo edital de Pontos de Cultura, com investimento de cerca de R$ 2 milh… — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 5,
+      "alvo": "Governo de Goiás — Edital nº 27/2025 — originalmente pactuado. FUNDAMENTAÇÃO LEGAL: Art — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos"
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://pnab.cultura.go.gov.br",
+      "pagina_oficial": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2025/08/Edital_27_2025.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre o objeto e o financiador, o que permite identificar a possibilidade de acesso para uma associação comunitária.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando um projeto de manutenção continua de grupos/cias de arte, alinhado ao objeto do edital, e atuando na área de cultura.",
-        "proximo_passo": "Consultar o edital completo para verificar os requisitos e prazos de inscrição.",
-        "risco": "A falta de informações sobre prazos e requisitos pode impedir a inscrição dentro do tempo necessário."
+        "por_que": "O edital foi comprovado com informações sobre objeto, valor, financiador, território, esfera e requisitos necessários para participação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria comprovar ensino superior completo, ter experiência mínima de 2 anos em projetos de inovação, demonstrar disponibilidade para dedicação integral ao projeto e apresentar um anexo conforme solicitado.",
+        "proximo_passo": "Verificar os requisitos do edital e preparar os documentos necessários para inscrição.",
+        "risco": "A falta de prazo de inscrição e outros detalhes como área de atuação podem dificultar a avaliação da oportunidade."
       },
       "erro": null,
-      "segundos": 644,
+      "segundos": 873,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 2,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-687683e14049",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Área de atuação",
+      "id": "op-1516ae38963c",
       "encontrou": {
         "Objeto": {
-          "valor": "Manutenção Continuada de Grupos/Cias de Arte",
-          "trecho": "02 Manutenção Continuada de Grupos/Cias de Arte",
+          "valor": "selecionar bolsistas para atuar em projetos com foco no desenvolvimento científico, tecnológico e de inovação",
+          "trecho": "Tem como objetivo selecionar bolsistas para atuar em projetos com foco no desenvolvimento científico, tecnológico e de inovação",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "até R$2.352.000,00",
+          "trecho": "Para esta Chamada, a FAPEG realizará um aporte financeiro de até R$2.352.000,00 (dois milhões, trezentos e cinquenta e dois mil reais)",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Governo de Goiás",
-          "trecho": "Governo de Goiás abre inscrições para novo edital de Pontos de Cultura",
-          "oficial": false,
+          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás – FAPEG",
+          "trecho": "A Fundação de Amparo à Pesquisa do Estado de Goiás – FAPEG, em parceria com o Instituto Euvaldo Lodi - Núcleo Regional de Goiás - IEL Goiás, torna público o lançamento da presente ",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Governo de Goiás abre inscrições para novo edital de Pontos de Cultura",
-          "oficial": false,
+          "trecho": "A Fundação de Amparo à Pesquisa do Estado de Goiás – FAPEG, em parceria com o Instituto Euvaldo Lodi - Núcleo Regional de Goiás - IEL Goiás, torna público o lançamento da presente ",
+          "oficial": true,
           "dispensado": false
         },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "02 Manutenção Continuada de Grupos/Cias de Arte",
+        "Requisitos": {
+          "valor": "Comprovante de ensino superior completo;, Comprovante de experiência de, no mínimo, 2 anos em projetos/programas de inovação;, Ter disponibilidade para dedicação integral ao projeto;, Autodeclaração de que possui disponibilidade para dedicação integral ao projeto.",
+          "trecho": "Modalidade CTI-B Apresentar experiência comprovada, de no mínimo 2 anos, em projetos/programas de inovação; e Comprovante de ensino superior completo; e Ter disponibilidade para de",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura",
+      "financiador": "Governo de Goiás",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
