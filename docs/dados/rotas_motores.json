@@ -1,5 +1,5 @@
 {
- "em": "2026-10-27T01:08:14+00:00",
+ "em": "2026-10-27T02:40:43+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,21 @@
   "alterar_rota": 59,
   "rota_nova": 53,
   "via_ponte": 5,
-  "exemplos_da_rede": 40010
+  "exemplos_da_rede": 40102
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.2112
+    2.9324
    ],
    [
     "origem:rota original",
-    3.0222
+    2.8376
+   ],
+   [
+    "origem:biblioteca",
+    2.7116
    ],
    [
     "tok:secult",
@@ -26,10 +30,6 @@
    [
     "tok:inscricoes",
     2.5055
-   ],
-   [
-    "origem:biblioteca",
-    2.4402
    ],
    [
     "tok:mpf",
@@ -49,15 +49,15 @@
    ],
    [
     "tok:transparencia",
-    1.9497
+    2.187
    ],
    [
-    "tok:sitemap",
-    1.925
+    "tok:edital",
+    2.0696
    ],
    [
-    "tok:xml",
-    1.925
+    "tok:aldirblanc",
+    1.8944
    ]
   ],
   "piores_sinais": [
@@ -91,7 +91,7 @@
    ],
    [
     "origem:padrão",
-    -3.8096
+    -3.9052
    ]
   ]
  },
@@ -535,7 +535,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-26T14:11:28+00:00",
+    "em": "2026-10-27T02:37:35+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -966,7 +966,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-26T14:11:22+00:00",
+    "em": "2026-10-27T02:37:31+00:00",
     "testes": 14,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -993,7 +993,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-26T14:14:36+00:00",
+    "em": "2026-10-27T02:40:43+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1101,7 +1101,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-26T14:14:23+00:00",
+    "em": "2026-10-27T02:40:30+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1359,7 +1359,7 @@
     "aprendido_em": "2026-10-16T02:15:34+00:00"
    },
    "afinado": {
-    "em": "2026-10-26T14:14:16+00:00",
+    "em": "2026-10-27T02:40:22+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -2116,22 +2116,22 @@
    ],
    "rota_aprendida": {
     "urls": [
-     "https://www.folhauberaba.com.br/wp-json/wp/v2/posts?search=edital&per_page=20"
+     "https://www.cultura.pr.gov.br/Pagina/Edital-de-Mobilidade-Cultural"
     ],
     "via": "direto",
-    "origem": "padrão",
-    "pontos": 30,
-    "aprendido_em": "2026-10-26T14:11:15+00:00"
+    "origem": "rota original",
+    "pontos": 193,
+    "aprendido_em": "2026-10-27T02:37:24+00:00"
    },
    "afinado": {
-    "em": "2026-10-26T14:11:15+00:00",
-    "testes": 22,
+    "em": "2026-10-27T02:37:24+00:00",
+    "testes": 16,
     "melhor": {
-     "url": "https://www.folhauberaba.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Mobilidade-Cultural",
      "via": "direto",
-     "origem": "padrão",
-     "pontos": 30,
-     "formato": "json"
+     "origem": "rota original",
+     "pontos": 193,
+     "formato": "html"
     },
     "resultado": "rota nova em teste"
    }
