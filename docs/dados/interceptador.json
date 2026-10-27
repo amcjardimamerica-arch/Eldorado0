@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T10:49:04+00:00",
+  "em": "2026-10-27T11:07:55+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T10:36:52+00:00",
+  "ultimo_voo": "2026-10-27T10:51:15+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,25 +48,22 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.7
+    "tempo_medio_min": 15.8
   },
   "missoes": [
     {
-      "em": "2026-10-27T10:36:52+00:00",
+      "em": "2026-10-27T10:51:15+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Jataí — inscrições abertas para o edital de fomento ao audiovisual da lei paulo gustavo em jataí — Goiás / Jataí",
+      "alvo": "Jataí — inscrições para edital lei paulo gustavo jataí chegam na reta final — Goiás / Jataí",
       "qualidade": "insuficiente",
-      "comprovados": 3,
-      "dispensados": 0,
+      "comprovados": 6,
+      "dispensados": 2,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Território",
         "Requisitos",
         "Anexos",
         "Área de atuação"
@@ -74,30 +71,48 @@
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre o objeto e o financiador, o que permite identificar a fonte de recursos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital se aplica a sua área de atuação e se ela atende aos requisitos não explicitados, como possuir CNPJ e estar regularmente registrada.",
-        "proximo_passo": "Consultar o edital completo para verificar os requisitos e prazos, mesmo que não estejam disponíveis no texto comprovado.",
-        "risco": "A falta de informações sobre prazos, requisitos e área de atuação pode impedir a associação de se candidatar adequadamente."
+        "por_que": "O texto comprova a existência do edital e fornece informações básicas como objeto, território e esfera.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende aos requisitos do edital, mesmo que não estejam explicitados, e se alinha ao objeto do edital, que é inscrição para lei Paulo Gustavo Jataí.",
+        "proximo_passo": "Consultar os requisitos do edital e se alinhar ao objeto do edital para se inscrever.",
+        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir a associação de se qualificar adequadamente para o edital."
       },
       "erro": null,
-      "segundos": 700,
+      "segundos": 950,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-0cbdeb2d5a21",
+      "id": "op-9c0115df8025",
       "encontrou": {
         "Objeto": {
-          "valor": "Fomento ao audiovisual",
-          "trecho": "EDITAL DE FOMENTO AO AUDIOVISUAL DA LEI PAULO GUSTAVO EM JATAÍ",
+          "valor": "Inscrição para edital lei Paulo Gustavo Jataí",
+          "trecho": "Inscrições para edital lei Paulo Gustavo Jataí chegam na reta final",
           "oficial": false,
           "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O prazo de inscrição é explicitado no texto.",
+          "trecho": "terça-feira, 27 outubro, 2026",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Valor": {
+          "valor": "dispensado — O valor total do edital é explicitado no texto.",
+          "trecho": "Serão 57 jataienses beneficiados com recurso Federal, um total de R$ 740.000,00",
+          "oficial": false,
+          "dispensado": true
         },
         "Órgão / financiador": {
           "valor": "Prefeitura de Jataí",
           "trecho": "PREFEITURA DE JATAÍ",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Jataí",
           "oficial": false,
           "dispensado": false
         }
