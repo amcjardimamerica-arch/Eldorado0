@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T13:31:34+00:00",
+  "em": "2026-10-27T13:47:51+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T13:14:03+00:00",
+  "ultimo_voo": "2026-10-27T13:33:21+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,92 +39,83 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.8
+    "tempo_medio_min": 13.9
   },
   "missoes": [
     {
-      "em": "2026-10-27T13:14:03+00:00",
+      "em": "2026-10-27T13:33:21+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Novo edital da Anater/MDA destina recursos para agroecologia, juventude e povos tradicionais — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 7,
+      "alvo": "Obter o Certificado de Registro e Licenciamento de Veículo (CRLV-e) — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/detran/",
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição, órgão financiador, território e requisitos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ser uma entidade privada credenciada pela Anater para acessar os recursos.",
-        "proximo_passo": "Verificar se a associação está credenciada pela Anater e preparar os documentos necessários conforme os anexos mencionados.",
-        "risco": "A falta de credenciamento pela Anater pode impedir o acesso aos recursos."
+        "serve_como_fonte": "nao",
+        "por_que": "O texto comprovado não fornece informações suficientes sobre o objeto específico de obtenção do CRLV-e, tampouco menciona detalhes relevantes como prazo, valor ou área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia não precisa realizar ações específicas para acessar o CRLV-e, pois o texto comprovado trata de seleção de examinadores de trânsito, não de obtenção do documento.",
+        "proximo_passo": "Consultar a Secretaria de Trânsito de Goiás ou o Departamento Estadual de Trânsito para obter informações detalhadas sobre o processo de obtenção do CRLV-e.",
+        "risco": "A falta de informações claras sobre o processo e os requisitos específicos pode impedir a associação de seguir corretamente os procedimentos necessários."
       },
       "erro": null,
-      "segundos": 1005,
+      "segundos": 832,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-e8ff42034ff2",
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-nova-2bea695cea29",
       "encontrou": {
         "Objeto": {
-          "valor": "recursos para agroecologia, juventude e povos tradicionais",
-          "trecho": "Novo edital da Anater/MDA destina recursos para agroecologia, juventude e povos tradicionais",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-10-09 a 2026-11-06",
-          "trecho": "O prazo para o envio das propostas de trabalho estará aberto de 9 de outubro a 6 de novembro de 2026",
-          "oficial": false,
+          "valor": "selecionar examinadores de trânsito para atuarem no Estado de Goiás",
+          "trecho": "O presente processo de credenciamento tem por objeto selecionar examinadores de trânsito para atuarem no Estado de Goiás;",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Agência Nacional de Assistência Técnica e Extensão Rural (Anater), em parceria com o Ministério do Desenvolvimento Agrário e Agricultura Familiar (MDA)",
-          "trecho": "Novo edital da Anater/MDA destina recursos para agroecologia, juventude e povos tradicionais Brasília, 11/09/2026 – A Agência Nacional de Assistência Técnica e Extensão Rural (Anat",
-          "oficial": false,
+          "valor": "DEPARTAMENTO ESTADUAL DE TRANSITO",
+          "trecho": "O PRESIDENTE DO DEPARTAMENTO ESTADUAL DE TRÂNSITO – DETRAN/GO, no uso da atribuição que lhe confere o Decreto Estadual nº 9.586/2019",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "O programa prestará serviços de assistência técnica e extensão rural para 4.540 Unidades Familiares de Produção Agrária (UFPAs) . Desse total, 1.100 UFPAs serão destinadas aos povo",
-          "oficial": false,
+          "trecho": "O presente processo de credenciamento de examinadores de trânsito terá validade de 01 (um) ano, prorrogável por mais 01(um, contados da data da publicação do seu resultado final.",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "entidades privadas credenciadas pela Anater",
-          "trecho": "O edital selecionará entidades privadas credenciadas pela Anater . As entidades interessadas em participar da seleção deverão submeter eletronicamente suas propostas por meio do Si",
-          "oficial": false,
+          "valor": "atender as exigências deste edital, ser cidadão, atender os requisitos para o desempenho da atividade de examinador de trânsito, ser servidor público ativo, de outros órgãos, somente pode comprometer-se com as atividades e responsabilidades em horár, as atividades sejam realizadas em horário diverso",
+          "trecho": "Poderão se inscrever os cidadãos que atendam as exigências deste edital, inclusive os servidores públicos ativos e inativos estaduais, municipais e federais da administração públic",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Anater/MDA",
+      "financiador": "GOVERNADOR DO ESTADO DE GOIÁS",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "parceiro"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
