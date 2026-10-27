@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T01:23:29+00:00",
+  "em": "2026-10-27T01:35:35+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T01:14:20+00:00",
+  "ultimo_voo": "2026-10-27T01:25:23+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,56 +48,80 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.7
+    "tempo_medio_min": 9.7
   },
   "missoes": [
     {
-      "em": "2026-10-27T01:14:20+00:00",
+      "em": "2026-10-27T01:25:23+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Goiás Social — Governo de Goiás confere documentação de 125 entidades para ingresso nos programas Auxílio Nutr… — Goiás",
+      "alvo": "Goiás Social — Governo de Goiás faz chamamento público para prestação de auxílios — Goiás — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 4,
-      "dispensados": 0,
+      "comprovados": 10,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://goias.gov.br/social/programa-de-agua-e-energia/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que o Estado de Goiás, por meio da Secretaria de Estado da Economia, concedeu documentação a 125 entidades para ingresso nos programas Auxílio Nutr…, o que indica uma ação de fomento a organizações da sociedade civil.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria apresentar a documentação exigida pelo Estado de Goiás, conforme o processo de concessão mencionado, e se enquadrar nos programas disponibilizados.",
-        "proximo_passo": "Consultar os anexos mencionados para obter detalhes sobre a documentação necessária e os programas disponíveis.",
-        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir a associação de se qualificar adequadamente para o acesso aos programas."
+        "por_que": "O edital comprovado menciona o credenciamento de Organizações da Sociedade Civil para inclusão nos Programas de Auxílio Nutricional e/ou Auxílio Água e Energia, o que é diretamente relacionado ao chamamento público feito pelo Governo de Goiás.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se regularmente constituir e atuar no Estado de Goiás, estar juridicamente, documentalmente e tecnicamente apta, além de preencher os anexos exigidos no edital.",
+        "proximo_passo": "Verificar os requisitos e anexos do edital e se inscrever no período de inscrição, que vai de 2026-08-01 a 2026-08-31.",
+        "risco": "A falta de regularidade jurídica, documental ou técnica pode impedir a associação de se credenciar."
       },
       "erro": null,
-      "segundos": 519,
+      "segundos": 582,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 3,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-bb7ab807f702",
+      "id": "op-5cbb86f04dba",
       "encontrou": {
+        "Objeto": {
+          "valor": "credenciamento de Organizações da Sociedade Civil para formação de cadastro de entidades aptas à inclusão nos Programas de Auxílio Nutricional e/ou Auxílio Água e Energia",
+          "trecho": "O presente Edital tem por objeto o credenciamento, em fluxo contínuo, de Organizações da Sociedade Civil – OSCs regularmente constituídas e atuantes no Estado de Goiás, para formaç",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-08-01 a 2026-08-31",
+          "trecho": "O credenciamento é exclusivamente habilitatório e cadastral. Eventual priorização correrá somente em Ato de Convocação específico, na fase de celebração do Termo de Fomento, median",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "dispensado — O edital dispensa o item valor, pois o apoio é em espécie, sem valor em dinheiro.",
+          "trecho": "O credenciamento, por si só, não exige reserva orçamentária correspondente à totalidade das OSCs potencialmente habilitadas. A indicação de dotação, a disponibilidade orçamentária ",
+          "oficial": false,
+          "dispensado": true
+        },
         "Órgão / financiador": {
-          "valor": "ESTADO DE GOIÁS, com a interveniência da SECRETARIA DE ESTADO DA ECONOMIA",
-          "trecho": "ESTADO DE GOIÁS, com a interveniência da SECRETARIA DE ESTADO DA ECONOMIA",
-          "oficial": true,
+          "valor": "SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL – SEDS",
+          "trecho": "O ESTADO DE GOIÁS, por intermédio da SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL – SEDS, com fundamento na Lei Federal nº 13.019, de 31 de julho de 2014...",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "ESTADO DE GOIÁS",
-          "oficial": true,
+          "trecho": "O presente Edital tem por objeto o credenciamento, em fluxo contínuo, de Organizações da Sociedade Civil – OSCs regularmente constituídas e atuantes no Estado de Goiás",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "assistencia_social",
+          "trecho": "A SEDS desenvolve ações destinadas à população goiana em situação de vulnerabilidade social, promovendo inclusão, proteção social, garantia de direitos e articulação com organizaçõ",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "regularmente constituídas e atuantes no Estado de Goiás, juridicamente, documentalmente e tecnicamente aptas",
+          "trecho": "O presente Edital tem por objeto o credenciamento, em fluxo contínuo, de Organizações da Sociedade Civil – OSCs regularmente constituídas e atuantes no Estado de Goiás, para formaç",
+          "oficial": false,
           "dispensado": false
         }
       },
@@ -105,7 +129,11 @@
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
