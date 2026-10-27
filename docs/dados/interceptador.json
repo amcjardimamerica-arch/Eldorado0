@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T02:33:04+00:00",
+  "em": "2026-10-27T02:44:19+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T02:25:43+00:00",
+  "ultimo_voo": "2026-10-27T02:34:53+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,17 +48,17 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 6.9
+    "tempo_medio_min": 8.9
   },
   "missoes": [
     {
-      "em": "2026-10-27T02:25:43+00:00",
+      "em": "2026-10-27T02:34:53+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Goiânia lança edital para seleção de OSCs em acolhimento a idosos — Goiás / Goiânia",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "Governo de Goiás abre inscrições para mais de 10 mil vagas em Colégios Militares — Goiás — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 4,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -66,55 +66,52 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador"
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://saude.goiania.go.gov.br/wp-content/uploads/sites/3/2026/04/Edital-de-Chamamento-no-001-2026-Completo-Publicado.pdf",
+      "pagina_oficial": "https://goias.gov.br/educacao/governo-de-goias-abre-inscricoes-para-mais-de-10-mil-vagas-nos-colegios-militares/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital menciona o objeto, território, esfera, requisitos, anexos e área de atuação, o que é suficiente para identificar a fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar ato constitutivo registrado com cópia autenticada, demonstrando sua natureza social relacionada à saúde, finalidade não econômica e obrigação de reinvestir excedentes financeiros no desenvolvimento de suas atividades.",
-        "proximo_passo": "Consultar os anexos do edital para obter detalhes adicionais sobre os requisitos e procedimentos de inscrição.",
-        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a associação de se inscrever oportunamente."
+        "por_que": "O texto comprovado menciona que o Governo de Goiás abre inscrições para mais de 10 mil vagas em Colégios Militares, o que é uma fonte relevante para atividades educacionais.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto da iniciativa, promovendo informações sobre as vagas e incentivando a participação da comunidade, especialmente em áreas de educação.",
+        "proximo_passo": "A associação comunitária deve monitorar oficialmente o edital para obter detalhes sobre prazos, requisitos e processos de inscrição.",
+        "risco": "A falta de informações específicas como prazo, requisitos e anexos pode impedir a associação de se envolver de forma eficaz no processo."
       },
       "erro": null,
-      "segundos": 415,
+      "segundos": 535,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-1d7e9a91d398",
+      "fontes_oficiais": 4,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-fd3d6cebadc0",
       "encontrou": {
         "Objeto": {
-          "valor": "QUALIFICAÇÃO EM ORGANIZAÇÃO SOCIAL DE SAÚDE (OSS)",
-          "trecho": "O MUNICÍPIO DE GOIÂNIA... TORNA PÚBLICO e por meio deste Edital de Chamamento, CONVOCA as entidades privadas sem fins lucrativos interessadas em obter a qualificação como ORGANIZAÇ",
+          "valor": "abre inscrições para mais de 10 mil vagas nos Colégios Militares",
+          "trecho": "Governo de Goiás abre inscrições para mais de 10 mil vagas nos Colégios Militares – SEDUC",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Governo de Goiás",
+          "trecho": "Governo de Goiás abre inscrições para mais de 10 mil vagas nos Colégios Militares – SEDUC",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "no âmbito do Município de GOIÂNIA - GO",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "saude",
-          "trecho": "no âmbito do Município de GOIÂNIA - GO, visando futura formalização de contrato de gestão dos serviços de gerenciamento, operacionalização e execução de ações e serviços nas unidad",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Ato constitutivo, devidamente registrado através de cópia autenticada, abordando os seguintes aspectos:, Natureza social de seus objetivos relacionados à área de atuação correspondente;, Finalidade não econômica, com a obrigação de reinvestir seus excedentes financeiros no desenvolvimento de suas at",
-          "trecho": "3.1.1. Ato constitutivo, devidamente registrado através de cópia autenticada, abordando os seguintes aspectos:",
+          "trecho": "Governo de Goiás abre inscrições para mais de 10 mil vagas nos Colégios Militares – SEDUC",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Goiânia",
+      "financiador": "Governo de Goiás",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
