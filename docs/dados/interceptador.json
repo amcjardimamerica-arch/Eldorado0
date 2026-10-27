@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T06:22:52+00:00",
+  "em": "2026-10-27T06:35:17+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T06:09:46+00:00",
+  "ultimo_voo": "2026-10-27T06:24:42+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,78 +48,79 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.5
+    "tempo_medio_min": 9.9
   },
   "missoes": [
     {
-      "em": "2026-10-27T06:09:46+00:00",
+      "em": "2026-10-27T06:24:42+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Itumbiara — inscrições em chamada pública de agentes culturais de itumbiara irão até o dia 8 de novembro — Goiás / Itumbiara",
-      "qualidade": "parcial",
+      "alvo": "Itumbiara — inscrições para projetos culturais de audiovisual e multilinguagem. pela lei paulo gustavo , irão … — Goiás / Itumbiara",
+      "qualidade": "insuficiente",
       "comprovados": 7,
-      "dispensados": 0,
+      "dispensados": 2,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Requisitos"
       ],
-      "pagina_oficial": "https://itumbiara.go.gov.br/inscricoes-em-chamada-publica-de-agentes-culturais-de-itumbiara-irao-ate-o-dia-8-de-novembro/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o objeto, órgão financiador, território, esfera, requisitos, anexos e área de atuação, o que é suficiente para identificar a fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever na chamada pública, apresentar os requisitos exigidos e anexos necessários, e demonstrar sua atuação na área de cultura.",
-        "proximo_passo": "Verificar os requisitos e anexos mencionados e se inscrever na chamada pública antes do prazo de inscrição, que não foi encontrado no texto.",
-        "risco": "O prazo de inscrição não foi encontrado, o que pode impedir a associação de se inscrever a tempo."
+        "por_que": "O texto comprova que o edital é voltado para financiamento de projetos culturais de audiovisual e multilinguagem, com inscrições abertas para Itumbiara, e é gerenciado pela Prefeitura Municipal.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital é aberto para sua região, pois o edital é específico para Itumbiara. Além disso, deve se certificar de que o projeto se enquadra na área de cultura e seguir as instruções do edital para inscrição.",
+        "proximo_passo": "Verificar se o edital é aberto para a região de Goiânia e se o projeto se enquadra na área de cultura.",
+        "risco": "O edital é aberto apenas para Itumbiara, o que pode impedir que a associação comunitária de Goiânia participe."
       },
       "erro": null,
-      "segundos": 748,
+      "segundos": 597,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-04c478f6e512",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-e63961be9563",
       "encontrou": {
         "Objeto": {
-          "valor": "destinação de recursos remanescentes da Lei Paulo Gustavo para agentes culturais de Itumbiara",
-          "trecho": "O prazo para artistas e agentes culturais de Itumbiara se inscreverem no processo de chamada pública para destinação de recursos remanescentes da Lei Paulo Gustavo",
-          "oficial": true,
+          "valor": "financiamento de projetos culturais de audiovisual e multilinguagem",
+          "trecho": "financiamento de projetos culturais de audiovisual e multilinguagem",
+          "oficial": false,
           "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O prazo de inscrição é explicitado no texto.",
+          "trecho": "O prazo para se inscrever irá até esta próxima quarta-feira, dia 8 de novembro. [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
         },
         "Órgão / financiador": {
           "valor": "Prefeitura Municipal de Itumbiara",
-          "trecho": "INSCRIÇÕES EM CHAMADA PÚBLICA DE AGENTES CULTURAIS DE ITUMBIARA IRÃO ATÉ O DIA 8 DE NOVEMBRO - Prefeitura Municipal de Itumbiara",
-          "oficial": true,
+          "trecho": "Prefeitura de Itumbiara, por meio da Secretaria Municipal de Cultura e Turismo",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "Itumbiara — inscrições em chamada pública de agentes culturais de itumbiara irão até o dia 8 de novembro — Goiás / Itumbiara",
-          "oficial": true,
-          "dispensado": false
+          "valor": "dispensado — O edital é aberto apenas para Itumbiara.",
+          "trecho": "Goiás / Itumbiara",
+          "oficial": false,
+          "dispensado": true
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "As inscrições são na área de audiovisual, na produção de curtas-metragens.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "pessoa física ou pessoa jurídica",
-          "trecho": "Pode se inscrever como pessoa física ou pessoa jurídica.",
-          "oficial": true,
+          "trecho": "financiamento de projetos culturais de audiovisual e multilinguagem",
+          "oficial": false,
           "dispensado": false
         }
       },
       "financiador": "Prefeitura Municipal de Itumbiara",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
