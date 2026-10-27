@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T18:07:41+00:00",
+  "em": "2026-10-27T18:23:59+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T17:53:10+00:00",
+  "ultimo_voo": "2026-10-27T18:09:43+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,48 +39,93 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 1,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.9
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 13.4
   },
   "missoes": [
     {
-      "em": "2026-10-27T17:53:10+00:00",
+      "em": "2026-10-27T18:09:43+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Parcerias Público-Privadas (PPP) — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 7,
+      "alvo": "Parque Bondinho Pão de Açúcar® abre inscrições para o Edital 2026 de Seleção de Projetos Culturais — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Resultado",
         "Prazo de recurso",
-        "Área de atuação"
+        "Valor",
+        "Anexos"
       ],
-      "pagina_oficial": "https://www.catalao.go.gov.br/storage/parcerias-pp/lei-programa-parceria.pdf",
-      "parecer_fonte": {},
+      "pagina_oficial": "https://blog.bondinho.com.br/parque-bondinho-pao-de-acucar-abre-inscricoes-para-o-edital-2026-de-selecao-de-projetos-culturais/",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição, resultado e requisitos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa ler o Regulamento, preencher os modelos de documentos obrigatórios e inscrever-se no prazo de 2026-09-16 a 2026-10-09.",
+        "proximo_passo": "Consultar o Regulamento do edital e preparar os documentos obrigatórios.",
+        "risco": "O prazo de inscrição pode expirar antes da conclusão da preparação dos documentos."
+      },
       "erro": null,
-      "segundos": 832,
+      "segundos": 807,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-nova-acbd65699030",
-      "encontrou": {},
-      "financiador": "Prefeitura Municipal de Catalão",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 8,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de recurso, Valor, Anexos",
+      "id": "op-24fc507a0a4f",
+      "encontrou": {
+        "Objeto": {
+          "valor": "apoio financeiro para projetos culturais",
+          "trecho": "apoio financeiro para projetos culturais, através de recurso incentivado pela Lei Municipal de Incentivo à Cultura da cidade do Rio de Janeiro (Lei do ISS)",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-09-16 a 2026-10-09",
+          "trecho": "Período de inscrições: 16/09 a 09/10/2026",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Parque Bondinho Pão de Açúcar®",
+          "trecho": "Parque Bondinho Pão de Açúcar®",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "RJ",
+          "trecho": "Lei Municipal de Incentivo à Cultura da cidade do Rio de Janeiro (Lei do ISS)",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "apoio financeiro para projetos culturais",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "ler o Regulamento, preencher os modelos de documentos obrigatórios",
+          "trecho": "Antes de se inscrever, leia o Regulamento e preencha os modelos de documentos obrigatórios.",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Parque Bondinho Pão de Açúcar®",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
