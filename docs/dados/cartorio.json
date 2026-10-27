@@ -1,33 +1,33 @@
 {
- "em": "2026-10-27T20:52:40+00:00",
+ "em": "2026-10-27T22:20:33+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
  "resumo": {
   "pontos_12_total": 4800,
-  "pontos_certificados": 3013,
+  "pontos_certificados": 3019,
   "pontos_dispensados": 171,
-  "pontos_ja_constavam": 1363,
-  "pontos_faltam": 253,
-  "pct_certificado_12": 0.6633,
-  "certidoes_12_de_12": 139,
-  "certidoes_sem_item_faltando": 280,
+  "pontos_ja_constavam": 1358,
+  "pontos_faltam": 252,
+  "pct_certificado_12": 0.6646,
+  "certidoes_12_de_12": 140,
+  "certidoes_sem_item_faltando": 281,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
   "certidoes": 2711,
   "nesta_execucao": 38,
   "fila_estrelas": 145,
   "fila_livros": 2615,
   "itens_que_faltavam": 24800,
-  "itens_obtidos": 8407,
+  "itens_obtidos": 8411,
   "itens_dispensados": 515,
   "eficiencia_itens": 0.36,
   "com_link_oficial": 1822,
   "taxa_link_oficial": 0.672,
-  "certidoes_completas": 261,
-  "para_o_interceptador": 1958,
+  "certidoes_completas": 262,
+  "para_o_interceptador": 1957,
   "para_o_chrome": 481,
   "selos_que_mudaram": {
-   "bronze → ouro": 6,
+   "bronze → ouro": 7,
    "bronze → prata": 1,
    "sem selo → ouro": 87,
    "sem selo → bronze": 49,
@@ -60,13 +60,13 @@
   },
   "Resultado": {
    "faltavam": 2411,
-   "obtidos": 607,
+   "obtidos": 608,
    "dispensados": 229,
    "eficiencia": 0.347
   },
   "Prazo de recurso": {
    "faltavam": 2372,
-   "obtidos": 525,
+   "obtidos": 526,
    "dispensados": 48,
    "eficiencia": 0.242
   },
@@ -96,7 +96,7 @@
   },
   "Requisitos": {
    "faltavam": 2345,
-   "obtidos": 572,
+   "obtidos": 573,
    "dispensados": 0,
    "eficiencia": 0.244
   },
@@ -114,7 +114,7 @@
   },
   "Área de atuação": {
    "faltavam": 2242,
-   "obtidos": 1336,
+   "obtidos": 1337,
    "dispensados": 0,
    "eficiencia": 0.596
   }
@@ -132,8 +132,8 @@
    "certidoes": 113,
    "com_link_oficial": 85,
    "faltavam": 1051,
-   "resolvidos": 596,
-   "eficiencia": 0.567,
+   "resolvidos": 600,
+   "eficiencia": 0.571,
    "taxa_link_oficial": 0.752
   },
   "?": {
@@ -197,7 +197,7 @@
   "refeitas": {
    "certidoes": 536,
    "faltavam": 6011,
-   "resolvidos": 2625,
+   "resolvidos": 2629,
    "eficiencia": 0.437,
    "com_link_oficial": 422,
    "taxa_link_oficial": 0.787
@@ -223,7 +223,7 @@
   "cartório v5 · linha de produção": {
    "certidoes": 2494,
    "faltavam": 22273,
-   "resolvidos": 7793,
+   "resolvidos": 7797,
    "eficiencia": 0.35,
    "com_link_oficial": 1666,
    "taxa_link_oficial": 0.668
@@ -249,10 +249,10 @@
   "2": {
    "nome": "anexos completos",
    "vezes": 229,
-   "renderam": 40,
-   "itens": 158,
+   "renderam": 41,
+   "itens": 162,
    "links_oficiais": 4,
-   "taxa_de_acerto": 0.175
+   "taxa_de_acerto": 0.179
   },
   "3": {
    "nome": "página oficial e citados",
@@ -331,10 +331,10 @@
   },
   "bronze": {
    "nome": "Bronze → prata",
-   "certidoes": 73,
-   "faltavam": 586,
-   "resolvidos": 397,
-   "eficiencia": 0.677,
+   "certidoes": 72,
+   "faltavam": 574,
+   "resolvidos": 389,
+   "eficiencia": 0.678,
    "entraram_aqui": 37,
    "esgotadas": 0
   },
@@ -349,10 +349,10 @@
   },
   "ouro": {
    "nome": "Ouro (saiu da linha)",
-   "certidoes": 86,
-   "faltavam": 900,
-   "resolvidos": 825,
-   "eficiencia": 0.917,
+   "certidoes": 87,
+   "faltavam": 912,
+   "resolvidos": 837,
+   "eficiencia": 0.918,
    "entraram_aqui": 0,
    "esgotadas": 0
   }
@@ -3058,7 +3058,7 @@
    "encaminhado": null,
    "selo_antes": "ouro",
    "selo_depois": "ouro",
-   "em": "2026-10-27T20:44:11+00:00",
+   "em": "2026-10-27T22:13:47+00:00",
    "prazo": "2026-12-04",
    "uf": null,
    "orgao": "BNDES",
@@ -3186,7 +3186,7 @@
     {
      "n": 9,
      "nome": "leitura profunda",
-     "em": "2026-10-27T20:44:11+00:00",
+     "em": "2026-10-27T22:13:47+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -32773,6 +32773,226 @@
    }
   },
   {
+   "id": "f8684c2f36149d7434e3",
+   "tipo": "estrela",
+   "titulo": "FUNDACAO JOAQUIM NABUCO FUNDAJ — Realização de concurso de premiação destinado à seleção de Práticas Pedagógic… — Brasil",
+   "balcao": "pncp",
+   "link_oficial": "https://pncp.gov.br",
+   "degrau": 0,
+   "como": "revisão manual: leitura do documento oficial no Chrome da titular",
+   "faltavam": [
+    "Resultado",
+    "Prazo de recurso",
+    "Órgão / financiador",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Área de atuação",
+    "Objeto",
+    "Prazo de inscrição",
+    "Valor",
+    "Território",
+    "Modalidade"
+   ],
+   "resolvidos": [
+    "Resultado",
+    "Prazo de recurso",
+    "Órgão / financiador",
+    "Esfera",
+    "Requisitos",
+    "Anexos",
+    "Área de atuação",
+    "Objeto",
+    "Prazo de inscrição",
+    "Valor",
+    "Território",
+    "Modalidade"
+   ],
+   "ainda_faltam": [],
+   "tentativa": 3,
+   "versao": "cartório v5 · linha de produção (09/10/2026)",
+   "gabarito": null,
+   "estagio": "ouro",
+   "estagio_inicio": "bronze",
+   "esgotada": null,
+   "eficiencia": 1.0,
+   "encaminhado": null,
+   "selo_antes": "bronze",
+   "selo_depois": "ouro",
+   "em": "2026-10-27T22:13:41+00:00",
+   "prazo": "2026-12-03",
+   "uf": "PE",
+   "orgao": "FUNDACAO JOAQUIM NABUCO FUNDAJ",
+   "fim": "2026-12-03",
+   "itens": {
+    "Esfera": {
+     "valor": "federal",
+     "trecho": "orgaoEntidade.esferaId: F (federal)",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/09773169000159/compras/2026/121",
+     "metodo": "metadados oficiais do PNCP"
+    },
+    "Órgão / financiador": {
+     "valor": "FUNDACAO JOAQUIM NABUCO FUNDAJ — FUNDACAO JOAQUIM NABUCO / MEC / PE",
+     "trecho": "orgaoEntidade.razaoSocial: FUNDACAO JOAQUIM NABUCO FUNDAJ — FUNDACAO JOAQUIM NABUCO / MEC / PE",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/09773169000159/compras/2026/121",
+     "metodo": "metadados oficiais do PNCP"
+    },
+    "Objeto": {
+     "valor": "concurso de práticas pedagógicas no Semiárido",
+     "trecho": "objetoCompra: Realização de concurso de premiação destinado à seleção de Práticas Pedagógicas em Educação Contextualizada",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/09773169000159/compras/2026/121",
+     "metodo": "pncp-api"
+    },
+    "Prazo de inscrição": {
+     "valor": "05/10 a 03/12/2026",
+     "trecho": "dataEncerramentoProposta: 2026-12-03T17:00:00",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/09773169000159/compras/2026/121",
+     "metodo": "pncp-api"
+    },
+    "Valor": {
+     "valor": "R$ 37.000,00",
+     "trecho": "valorTotalEstimado: 37000.00",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/09773169000159/compras/2026/121",
+     "metodo": "pncp-api"
+    },
+    "Território": {
+     "valor": "Semiárido Brasileiro",
+     "trecho": "realizadas em escolas da rede municipal de ensino do Semiárido Brasileiro",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/09773169000159/compras/2026/121",
+     "metodo": "pncp-api"
+    },
+    "Anexos": {
+     "valor": "Edital: EDITAL.pdf; Outros Documentos: CRONOGRAMA.pdf",
+     "trecho": "arquivos publicados no PNCP: Edital: EDITAL.pdf; Outros Documentos: CRONOGRAMA.pdf",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/09773169000159/compras/2026/121/arquivos",
+     "metodo": "lista de arquivos do PNCP"
+    },
+    "Modalidade": {
+     "valor": "Concurso (Lei 14.133, art. 28, III)",
+     "trecho": "modalidadeNome: Concurso",
+     "pagina": null,
+     "documento": "https://pncp.gov.br/api/consulta/v1/orgaos/09773169000159/compras/2026/121",
+     "metodo": "pncp-api"
+    },
+    "Resultado": {
+     "valor": "12 de fevereiro de 2027",
+     "trecho": "dos. - Até 06 de fevereiro de 2027. j) Recursos à homologação parcial dos resultados - 10 a 12 de fevereiro de 2027. k) Avaliação dos recursos. - 15 a 18 de fevereiro de 2027. l) Homo",
+     "pagina": 3,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/09773169000159/compras/2026/121/arquivos/1",
+     "metodo": "seção"
+    },
+    "Prazo de recurso": {
+     "valor": "10 (dez) dias",
+     "trecho": "ipótese de infringência de Normas deste Edital, poderá ser interposto recurso relativo à decisão da Comissão Julgadora, por meio de requerimento dirigido ao Pre sidente da Fundaj, no prazo de 10 (dez) dias, a contar da data da publicação do resultado do Concurso no D.O.U.",
+     "pagina": 5,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/09773169000159/compras/2026/121/arquivos/1",
+     "metodo": "seção"
+    },
+    "Requisitos": {
+     "valor": "Poderão se inscrever neste Concurso, práticas ped agógicas desenvolvidas em escolas da",
+     "trecho": "Convivência com o Semiárido Brasileiro. 7. DAS INSCRIÇÕES 7.1 Poderão se inscrever neste Concurso, práticas ped agógicas desenvolvidas em escolas da rede municipal de ensino de qualquer um dos municípios dos estados q",
+     "pagina": 5,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/09773169000159/compras/2026/121/arquivos/1",
+     "metodo": "texto"
+    },
+    "Área de atuação": {
+     "valor": "Cultura, Educação, Ciência e tecnologia",
+     "trecho": "termos do objeto e do título: Cultura, Educação, Ciência e tecnologia",
+     "pagina": 1,
+     "documento": "https://pncp.gov.br/pncp-api/v1/orgaos/09773169000159/compras/2026/121/arquivos/1",
+     "metodo": "palavras-chave do objeto"
+    }
+   },
+   "dispensas": {},
+   "abordagens": [
+    {
+     "n": 1,
+     "nome": "documento na mão",
+     "em": "2026-10-17T12:02:24+00:00",
+     "ganhou": [
+      "Anexos",
+      "Esfera",
+      "Objeto",
+      "Prazo de inscrição",
+      "Território",
+      "Valor",
+      "Órgão / financiador"
+     ],
+     "legado": true
+    },
+    {
+     "n": 3,
+     "nome": "página oficial e citados",
+     "em": "2026-10-17T12:39:16+00:00",
+     "ganhou": [],
+     "legado": null
+    },
+    {
+     "n": 2,
+     "nome": "anexos completos",
+     "em": "2026-10-27T22:13:41+00:00",
+     "ganhou": [
+      "Prazo de recurso",
+      "Requisitos",
+      "Resultado",
+      "Área de atuação"
+     ],
+     "legado": null
+    }
+   ],
+   "documentos": [
+    {
+     "url": "https://pncp.gov.br/api/consulta/v1/orgaos/09773169000159/compras/2026/121",
+     "degrau": null,
+     "como": null,
+     "motivo": null,
+     "falha": null,
+     "oficial": "documento oficial lido na revisão",
+     "paginas": null,
+     "edicao_inteira": null
+    },
+    {
+     "url": "https://pncp.gov.br/pncp-api/v1/orgaos/09773169000159/compras/2026/121/arquivos/1",
+     "degrau": 0,
+     "como": "PNCP: arquivo anexado pelo órgão (Edital)",
+     "motivo": null,
+     "falha": null,
+     "oficial": "arquivo do edital anexado pelo órgão no PNCP",
+     "paginas": 10,
+     "edicao_inteira": null
+    }
+   ],
+   "cobertura_12": {
+    "estados": {
+     "Objeto": "certificado",
+     "Prazo de inscrição": "certificado",
+     "Resultado": "certificado",
+     "Prazo de recurso": "certificado",
+     "Valor": "certificado",
+     "Órgão / financiador": "certificado",
+     "Território": "certificado",
+     "Esfera": "certificado",
+     "Requisitos": "certificado",
+     "Anexos": "certificado",
+     "Modalidade": "certificado",
+     "Área de atuação": "certificado"
+    },
+    "certificados": 12,
+    "dispensados": 0,
+    "ja_constavam": 0,
+    "faltam": 0,
+    "pct_certificado_12": 1.0,
+    "pct_cobertura_12": 1.0
+   }
+  },
+  {
    "id": "d1083dc9318cbddc7077",
    "tipo": "estrela",
    "titulo": "FUNDO MUNICIPAL DA CULTURA DE COLINAS DO SUL — CHAMAMENTO PUBLICO PARA CREDENCIAMENTO DE AGENTES CULTURAIS PNAB CICLO 2.",
@@ -38898,7 +39118,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "bronze",
-   "em": "2026-10-27T20:46:40+00:00",
+   "em": "2026-10-27T22:15:10+00:00",
    "prazo": "2035-01-15",
    "uf": "MG",
    "orgao": null,
@@ -39035,7 +39255,7 @@
     {
      "n": 3,
      "nome": "página oficial e citados",
-     "em": "2026-10-27T20:46:40+00:00",
+     "em": "2026-10-27T22:15:10+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -45462,7 +45682,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-27T20:51:35+00:00",
+   "em": "2026-10-27T22:19:36+00:00",
    "prazo": null,
    "uf": null,
    "orgao": null,
@@ -45558,7 +45778,7 @@
     {
      "n": 1,
      "nome": "documento na mão",
-     "em": "2026-10-27T20:51:35+00:00",
+     "em": "2026-10-27T22:19:36+00:00",
      "ganhou": [
       "Anexos",
       "Esfera",
@@ -58995,7 +59215,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": "bronze",
    "selo_depois": "bronze",
-   "em": "2026-10-27T20:44:59+00:00",
+   "em": "2026-10-27T22:14:33+00:00",
    "prazo": "2026-12-31",
    "uf": null,
    "orgao": "DEFENSORIA PUBLICA DO ESTADO DO PARANA",
@@ -59125,7 +59345,7 @@
     {
      "n": 3,
      "nome": "página oficial e citados",
-     "em": "2026-10-27T20:44:59+00:00",
+     "em": "2026-10-27T22:14:33+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -59166,9 +59386,9 @@
      "degrau": 1,
      "como": "página oficial e documentos citados nela",
      "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
+     "falha": "erro_rede: RemoteDisconnected",
+     "oficial": null,
+     "paginas": null,
      "edicao_inteira": null
     }
    ],
@@ -61788,7 +62008,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": null,
    "selo_depois": "prata",
-   "em": "2026-10-27T20:43:59+00:00",
+   "em": "2026-10-27T22:13:31+00:00",
    "prazo": "2026-12-02",
    "uf": null,
    "orgao": null,
@@ -61910,7 +62130,7 @@
     {
      "n": 9,
      "nome": "leitura profunda",
-     "em": "2026-10-27T20:43:59+00:00",
+     "em": "2026-10-27T22:13:31+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -78889,220 +79109,6 @@
     "pct_certificado_12": 0.5,
     "pct_cobertura_12": 0.9167
    }
-  },
-  {
-   "id": "op-a1f578b34696",
-   "tipo": "livro",
-   "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 009/2026 – PREMIAÇÃO",
-   "balcao": "orgao",
-   "link_oficial": "https://mapacultural.secult.ce.gov.br/oportunidade/8310/",
-   "degrau": 0,
-   "como": "página/documento oficial já conhecido",
-   "faltavam": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Requisitos",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Esfera",
-    "Modalidade",
-    "Área de atuação"
-   ],
-   "ainda_faltam": [
-    "Requisitos"
-   ],
-   "tentativa": 1,
-   "versao": "cartório v5 · linha de produção (09/10/2026)",
-   "gabarito": {
-    "orgao": "dominio:mapacultural.secult.ce.gov.br",
-    "itens_pelo_gabarito": [
-     "Modalidade"
-    ]
-   },
-   "estagio": "prata",
-   "estagio_inicio": "prata",
-   "esgotada": null,
-   "eficiencia": 0.857,
-   "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
-   "selo_antes": null,
-   "selo_depois": null,
-   "em": "2026-10-15T01:00:45+00:00",
-   "prazo": null,
-   "uf": "CE",
-   "orgao": "Mapa Cultural",
-   "fim": "2026-09-18",
-   "itens": {
-    "Esfera": {
-     "valor": "municipal",
-     "trecho": "domínio/órgão: mapacultural.secult.ce.gov.br · município de Trairi Mapa Cultural",
-     "pagina": 1,
-     "documento": "https://mapacultural.secult.ce.gov.br/oportunidade/8310/",
-     "metodo": "domínio e órgão"
-    },
-    "Área de atuação": {
-     "valor": "Cultura",
-     "trecho": "termos do objeto e do título: Cultura",
-     "pagina": 1,
-     "documento": "https://mapacultural.secult.ce.gov.br/oportunidade/8310/",
-     "metodo": "palavras-chave do objeto"
-    },
-    "Valor": {
-     "valor": "R$ 3.500,00",
-     "trecho": "corrência | Cotas pessoas negras | Total de vagas | Valor do prêmio | Valor total [TABELA] POVOS DE TERREIRO | 03 | 01 | 04 | R$ 3.500,00 | R$ 14.000,00",
-     "pagina": 1,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8310/anexo-1-categoria-e-cota-docx.pdf",
-     "metodo": "seção"
-    },
-    "Resultado": {
-     "valor": "28/09/2026",
-     "trecho": "Premiação Cultural CRONOGRAMA Inscrições 01/09/2026 à 15/09/2026 Resultado Preliminar 28/09/2026 Período de Recurso 28/09/2026 à 01/10/2026 Resultado Final 02/10/20",
-     "pagina": 4,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8310/edital-de-premiacao-povos-de-terreiros-assinado.pdf",
-     "metodo": "seção"
-    },
-    "Prazo de recurso": {
-     "valor": "01 de Setembro de 2026",
-     "trecho": "al Anexo V - Autodeclaração Étnico-racial Anexo VI – Formulário de Recurso Anexo VII - Declaração de Residência do Terreiro Trairi/Ce, 01 de Setembro de 2026 _______________________________ Izabele Ramile Sales Luca",
-     "pagina": 9,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8310/edital-de-premiacao-povos-de-terreiros-assinado.pdf",
-     "metodo": "seção"
-    },
-    "Modalidade": {
-     "valor": null,
-     "trecho": "es para a e xecução da PNAB foram criadas por meio do engajamento da sociedade e o presente edital destina -se a premiar agentes culturais atuantes no município de Trairi. 1.4 Deste modo, a Prefeitura Municipal de Trairi com bas",
-     "pagina": 1,
-     "documento": "https://mapacultural.secult.ce.gov.br/files/opportunity/8310/edital-de-premiacao-povos-de-terreiros-assinado.pdf",
-     "metodo": "gabarito do órgão (rótulo “sociedade e o presente edital”)"
-    }
-   },
-   "dispensas": {},
-   "abordagens": [
-    {
-     "n": 1,
-     "nome": "documento na mão",
-     "em": "2026-10-15T01:00:45+00:00",
-     "ganhou": [
-      "Modalidade",
-      "Esfera",
-      "Prazo de recurso",
-      "Resultado",
-      "Valor",
-      "Área de atuação"
-     ],
-     "legado": null
-    }
-   ],
-   "documentos": [
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/oportunidade/8310/",
-     "degrau": 0,
-     "como": "página/documento oficial já conhecido",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8310/anexo-1-categoria-e-cota-docx.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8310/esse.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": "pdf_escaneado",
-     "falha": null,
-     "oficial": null,
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8310/edital-de-premiacao-povos-de-terreiros-assinado.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 9,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8310/prorrogracao-de-prazos-bloco-2-assinado.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8310/portaria-04-2026-dos-editais-da-pnab-assinado-1.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8310/resultado-final-009-assinado.pdf",
-     "degrau": 1,
-     "como": "documento citado na página oficial: documento embutido na página",
-     "motivo": null,
-     "falha": null,
-     "oficial": "domínio público oficial",
-     "paginas": 1,
-     "edicao_inteira": null
-    },
-    {
-     "url": "https://mapacultural.secult.ce.gov.br/files/opportunity/8310/anexo-2-criterios-de-avaliacao.docx",
-     "degrau": 1,
-     "como": "documento citado na página oficial: ANEXO 2 - CRITÉRIOS DE AVALIAÇÃO",
-     "motivo": "zip_sem_pdf",
-     "falha": null,
-     "oficial": null,
-     "paginas": 0,
-     "edicao_inteira": null
-    }
-   ],
-   "cobertura_12": {
-    "estados": {
-     "Objeto": "ja_constava",
-     "Prazo de inscrição": "ja_constava",
-     "Resultado": "certificado",
-     "Prazo de recurso": "certificado",
-     "Valor": "certificado",
-     "Órgão / financiador": "ja_constava",
-     "Território": "ja_constava",
-     "Esfera": "certificado",
-     "Requisitos": "falta",
-     "Anexos": "ja_constava",
-     "Modalidade": "certificado",
-     "Área de atuação": "certificado"
-    },
-    "certificados": 6,
-    "dispensados": 0,
-    "ja_constavam": 5,
-    "faltam": 1,
-    "pct_certificado_12": 0.5,
-    "pct_cobertura_12": 0.9167
-   }
   }
  ],
  "linha_de_producao": {
@@ -79126,7 +79132,7 @@
   "fila_oportunidades": 145,
   "fila_livros": 2615,
   "devidas_nesta_hora": 2760,
-  "promovidas_nesta_execucao": 2,
+  "promovidas_nesta_execucao": 3,
   "sem_material_agora": 2,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
