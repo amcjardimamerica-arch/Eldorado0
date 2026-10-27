@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T03:27:01+00:00",
+  "em": "2026-10-27T03:39:10+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T03:16:24+00:00",
+  "ultimo_voo": "2026-10-27T03:28:49+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,74 +48,70 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.2
+    "tempo_medio_min": 9.8
   },
   "missoes": [
     {
-      "em": "2026-10-27T03:16:24+00:00",
+      "em": "2026-10-27T03:28:49+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Governo de Silvânia publica edital municipal do Ciclo 2 da Política Nacional Aldir Blanc — Goiás",
+      "alvo": "Inscrições Abertas — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 5,
-      "dispensados": 0,
+      "comprovados": 4,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
+        "Objeto",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Requisitos",
-        "Anexos"
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "http://www.fapeg.go.gov.br/prazo-para-submissao-de-propostas-para-bolsas-de-mestrado-e-doutorado-da-fapeg-termina-dia-19/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre o objeto e o financiador, o que permite identificar a possibilidade de acesso para uma associação comunitária.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é financiamento de projetos culturais e de apoio à cultura, e verificar se sua atividade se enquadra na área de atuação definida.",
-        "proximo_passo": "Consultar o edital completo para obter informações sobre prazos, requisitos e outros detalhes necessários para a inscrição.",
-        "risco": "A falta de informações sobre prazos, requisitos e anexos pode impedir a associação de se inscrever adequadamente no edital."
+        "por_que": "O texto menciona o prazo de inscrição e identifica o órgão financiador, o território e a esfera do edital, o que permite reconhecer a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende aos requisitos não explicitados no texto e se alinha ao objeto do edital, que não foi encontrado, para se inscrever.",
+        "proximo_passo": "Consultar o órgão financiador (FAPEG) para obter informações adicionais sobre o edital, como objeto, requisitos e área de atuação.",
+        "risco": "A falta de informações sobre o objeto, requisitos e área de atuação pode impedir que a associação comunitária se inscreva adequadamente."
       },
       "erro": null,
-      "segundos": 609,
+      "segundos": 588,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 3,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-c33a0bea5994",
+      "id": "op-88c2f74b9158",
       "encontrou": {
-        "Objeto": {
-          "valor": "Financiamento de projetos culturais e de apoio à cultura no âmbito municipal",
-          "trecho": "Edital Municipal do Ciclo 2 da Política Nacional Aldir Blanc – Governo Municipal de Silvânia",
+        "Prazo de inscrição": {
+          "valor": "dispensado — O prazo de inscrição foi mencionado no texto.",
+          "trecho": "prazo-para-submissao-de-propostas-para-bolsas-de-mestrado-e-doutorado-da-fapeg-termina-dia-19 [rejeitado: data implausível para edital aberto]",
           "oficial": false,
-          "dispensado": false
+          "dispensado": true
         },
         "Órgão / financiador": {
-          "valor": "Governo Municipal de Silvânia",
-          "trecho": "Governo Municipal de Silvânia",
-          "oficial": false,
+          "valor": "FAPEG – Fundação de Amparo à Pesquisa do Estado de Goiás",
+          "trecho": "FAPEG – Fundação de Amparo à Pesquisa do Estado de Goiás",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Edital Municipal do Ciclo 2 da Política Nacional Aldir Blanc – Governo Municipal de Silvânia",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "Edital Municipal do Ciclo 2 da Política Nacional Aldir Blanc – Governo Municipal de Silvânia",
-          "oficial": false,
+          "trecho": "GOIAS.GOV.BR",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Governo Municipal de Silvânia",
+      "financiador": "FAPEG",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
