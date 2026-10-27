@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T22:50:39+00:00",
+  "em": "2026-10-27T23:05:24+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T22:35:20+00:00",
+  "ultimo_voo": "2026-10-27T22:52:33+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,17 +48,17 @@
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.7
+    "tempo_medio_min": 12.1
   },
   "missoes": [
     {
-      "em": "2026-10-27T22:35:20+00:00",
+      "em": "2026-10-27T22:52:33+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prefeitura de Goiânia — Referência: Processo Nº 26.39.000001033-9 SEI Nº 11780957v1 Prefeitura de Goiânia Secr… — Goiás / Goiânia",
+      "alvo": "Prefeitura de Goiânia — administrativa da operacionalização de emendas impositivas municipais no âmbito do Pod… — Goiás / Goiânia",
       "qualidade": "insuficiente",
-      "comprovados": 6,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -66,48 +66,49 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.goiania.go.gov.br/html/gabinete_civil/sileg/dados/legis/2025/lc_20250526_000000383.html",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o Objeto, Órgão / financiador, Território, Esfera e Requisitos, o que é suficiente para identificar a fonte como válida.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria ser entidade da sociedade civil e representativa da comunidade grega para acessar o edital.",
-        "proximo_passo": "Verificar os anexos mencionados e se a associação atende aos requisitos de representatividade da comunidade grega.",
-        "risco": "A falta de informações sobre prazo de inscrição e valor pode impedir a associação de se inscrever oportunamente."
+        "por_que": "O objeto da emenda é a execução de emendas parlamentares de natureza impositiva destinadas à entidade privada sem fins lucrativos, o que se alinha com a atuação de uma associação comunitária de Goiânia.",
+        "para_a_amc": "A associação comunitária precisaria identificar o autor da emenda, indicar a entidade sem fins lucrativos, definir o órgão executor do objeto da emenda, indicar o programa ou ação orçamentária compatível e apresentar o valor da emenda.",
+        "proximo_passo": "Verificar junto ao autor da emenda se há interesse em associar a associação comunitária ao projeto e coletar os dados necessários para a formalização da emenda.",
+        "risco": "A falta de identificação do autor da emenda e do órgão executor pode impedir a viabilização da emenda."
       },
       "erro": null,
-      "segundos": 882,
+      "segundos": 724,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 5,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-48892fde2119",
+      "id": "op-7d715eb71312",
       "encontrou": {
         "Objeto": {
-          "valor": "promover eventos alusivos ao Dia Municipal do Imigrante Grego",
-          "trecho": "Art. 2º O Poder Executivo poderá promover, em parceria com entidades da sociedade civil e instituições representativas da comunidade grega, eventos alusivos à data.",
-          "oficial": false,
+          "valor": "execução de emendas parlamentares de natureza impositiva destinadas à entidade privada sem fins lucrativos",
+          "trecho": "Art. 6º A execução de emenda parlamentar de natureza impositiva, quando destinada à entidade privada sem fins lucrativos...",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
           "valor": "Prefeitura de Goiânia",
           "trecho": "Prefeitura de Goiânia",
-          "oficial": false,
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Goiânia – GO, CEP: 74.805-010",
-          "oficial": false,
+          "trecho": "Prefeitura de Goiânia",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "entidades da sociedade civil e instituições representativas da comunidade grega",
-          "trecho": "Art. 2º O Poder Executivo poderá promover, em parceria com entidades da sociedade civil e instituições representativas da comunidade grega, eventos alusivos à data.",
-          "oficial": false,
+          "valor": "a identificação do autor da emenda e da entidade sem fins lucrativos indicada, quando for o caso, a indicação do órgão executor do objeto da emenda, a indicação do programa ou da ação orçamentária compatível, o valor",
+          "trecho": "Art. 7º Em qualquer modalidade, as emendas individuais deverão conter, no mínimo: I - a identificação do autor da emenda e da entidade sem fins lucrativos indicada, quando for o ca",
+          "oficial": true,
           "dispensado": false
         }
       },
@@ -115,11 +116,7 @@
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
