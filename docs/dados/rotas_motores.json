@@ -1,5 +1,5 @@
 {
- "em": "2026-10-26T23:37:26+00:00",
+ "em": "2026-10-27T01:08:14+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,21 +7,17 @@
   "alterar_rota": 59,
   "rota_nova": 53,
   "via_ponte": 5,
-  "exemplos_da_rede": 39924
+  "exemplos_da_rede": 40010
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.2224
+    3.2112
    ],
    [
     "origem:rota original",
-    3.1884
-   ],
-   [
-    "origem:biblioteca",
-    2.6522
+    3.0222
    ],
    [
     "tok:secult",
@@ -30,6 +26,10 @@
    [
     "tok:inscricoes",
     2.5055
+   ],
+   [
+    "origem:biblioteca",
+    2.4402
    ],
    [
     "tok:mpf",
@@ -49,15 +49,15 @@
    ],
    [
     "tok:transparencia",
-    1.9674
-   ],
-   [
-    "tld:br",
-    1.9653
+    1.9497
    ],
    [
     "tok:sitemap",
-    1.9521
+    1.925
+   ],
+   [
+    "tok:xml",
+    1.925
    ]
   ],
   "piores_sinais": [
@@ -86,12 +86,12 @@
     -3.5718
    ],
    [
-    "origem:padrão",
-    -3.7324
-   ],
-   [
     "origem:câmara",
     -3.7345
+   ],
+   [
+    "origem:padrão",
+    -3.8096
    ]
   ]
  },
@@ -192,8 +192,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-26T05:05:58+00:00",
-    "testes": 12,
+    "em": "2026-10-27T01:07:43+00:00",
+    "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -240,7 +240,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-26T11:09:51+00:00",
+    "em": "2026-10-27T01:08:14+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -356,7 +356,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-26T11:09:50+00:00",
+    "em": "2026-10-27T01:08:13+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -786,7 +786,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-26T11:09:08+00:00",
+    "em": "2026-10-27T01:07:52+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1074,7 +1074,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-26T11:09:23+00:00",
+    "em": "2026-10-27T01:08:09+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1182,8 +1182,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-26T08:09:49+00:00",
-    "testes": 12,
+    "em": "2026-10-27T01:07:49+00:00",
+    "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }

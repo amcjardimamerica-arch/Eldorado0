@@ -1,5 +1,5 @@
 {
- "em": "2026-10-26T23:47:00+00:00",
+ "em": "2026-10-27T01:16:28+00:00",
  "versao": "cartório v5 · linha de produção (09/10/2026)",
  "regra": "CARTÓRIO DE FONTES OFICIAIS (titular, 09/10/2026).\n\nOs motores DESCOBREM; o Cartório CERTIFICA. Toda estrela (oportunidade aberta) e todo livro (histórico) que tenha\nQUALQUER um dos 12 itens indisponível entra na fila do Cartório. Para cada um, ele sobe uma escada de degraus — do mais\nbarato e confiável ao mais caro — até achar o documento OFICIAL, lê o documento por seções e emite uma CERTIDÃO:\nlink oficial (régua única: vetor nunca é fonte), degrau em que foi achado, impressão digital do documento, e cada item\ncom valor + trecho literal + página — ou a DISPENSA com a justificativa de que o requisito não existe naquele edital.\n\nBalcões (como chegar ao documento em cada tipo de fonte):\n  pncp      página do PNCP → API de arquivos do órgão (PDF ou ZIP), o edital primeiro\n  diario    DOU, Diário de Goiás/Goiânia, Querido Diário → o ato dentro da edição (só as páginas do ato)\n  orgao     domínio público → documentos da página + biblioteca de mídia do WordPress pelo número do edital\n  privado   site do financiador → documentos da página (regulamento, edital)\n  pista     agregador/notícia → links de SAÍDA para o financiador; o resto vai ao Interceptador\n  proprio   Ministério Público e Judiciário: já leem o PDF; o Cartório só converte em certidão\n\nEscada: 0 documento na mão · 1 link de saída da pista · 2 busca do número do edital dentro do domínio oficial ·\n        3 Interceptador (IA) · 4 Chrome. O Cartório resolve 0–2 sem IA; 3 e 4 recebem só o que sobrou.\nIntegração: a fila é ordenada pela urgência (prazo), pela nota da REDE NEURAL e pela distância até o ouro (menos\nitens faltando primeiro: cada certidão vira selo). Estrelas: o fluxo de oportunidades lê a certidão no checklist.\nLivros: linhas no formato do importador (scripts/importar_verificacao_livros.py), que confere e entrega à esteira.",
  "identidade_visual": "provisória (config/identidade_visual.json aguarda o design de referência)",
@@ -14,8 +14,8 @@
   "certidoes_sem_item_faltando": 281,
   "nota_denominador": "eficiencia_itens = resolvidos ÷ itens que faltavam na ENTRADA da fila (não é % dos 12); use pct_certificado_12",
   "certidoes": 2711,
-  "nesta_execucao": 36,
-  "fila_estrelas": 148,
+  "nesta_execucao": 38,
+  "fila_estrelas": 145,
   "fila_livros": 2602,
   "itens_que_faltavam": 24800,
   "itens_obtidos": 8411,
@@ -121,12 +121,12 @@
  },
  "por_balcao": {
   "revisão": {
-   "certidoes": 204,
-   "com_link_oficial": 144,
-   "faltavam": 2448,
+   "certidoes": 203,
+   "com_link_oficial": 143,
+   "faltavam": 2436,
    "resolvidos": 1002,
-   "eficiencia": 0.409,
-   "taxa_link_oficial": 0.706
+   "eficiencia": 0.411,
+   "taxa_link_oficial": 0.704
   },
   "pncp": {
    "certidoes": 113,
@@ -161,12 +161,12 @@
    "taxa_link_oficial": 0.799
   },
   "privado": {
-   "certidoes": 595,
-   "com_link_oficial": 415,
-   "faltavam": 5069,
+   "certidoes": 596,
+   "com_link_oficial": 416,
+   "faltavam": 5081,
    "resolvidos": 1521,
-   "eficiencia": 0.3,
-   "taxa_link_oficial": 0.697
+   "eficiencia": 0.299,
+   "taxa_link_oficial": 0.698
   },
   "diario": {
    "certidoes": 164,
@@ -187,20 +187,20 @@
  },
  "por_safra": {
   "primeira tentativa": {
-   "certidoes": 2174,
-   "faltavam": 18777,
+   "certidoes": 2175,
+   "faltavam": 18789,
    "resolvidos": 6218,
    "eficiencia": 0.331,
    "com_link_oficial": 1400,
    "taxa_link_oficial": 0.644
   },
   "refeitas": {
-   "certidoes": 537,
-   "faltavam": 6023,
+   "certidoes": 536,
+   "faltavam": 6011,
    "resolvidos": 2629,
-   "eficiencia": 0.436,
+   "eficiencia": 0.437,
    "com_link_oficial": 422,
-   "taxa_link_oficial": 0.786
+   "taxa_link_oficial": 0.787
   }
  },
  "por_versao": {
@@ -221,20 +221,20 @@
    "taxa_link_oficial": 0.909
   },
   "cartório v5 · linha de produção": {
-   "certidoes": 2493,
-   "faltavam": 22261,
+   "certidoes": 2494,
+   "faltavam": 22273,
    "resolvidos": 7797,
    "eficiencia": 0.35,
-   "com_link_oficial": 1665,
+   "com_link_oficial": 1666,
    "taxa_link_oficial": 0.668
   },
   "revisão manual": {
-   "certidoes": 204,
-   "faltavam": 2448,
+   "certidoes": 203,
+   "faltavam": 2436,
    "resolvidos": 1002,
-   "eficiencia": 0.409,
-   "com_link_oficial": 144,
-   "taxa_link_oficial": 0.706
+   "eficiencia": 0.411,
+   "com_link_oficial": 143,
+   "taxa_link_oficial": 0.704
   }
  },
  "por_abordagem": {
@@ -248,15 +248,15 @@
   },
   "2": {
    "nome": "anexos completos",
-   "vezes": 227,
+   "vezes": 229,
    "renderam": 41,
    "itens": 162,
    "links_oficiais": 4,
-   "taxa_de_acerto": 0.181
+   "taxa_de_acerto": 0.179
   },
   "3": {
    "nome": "página oficial e citados",
-   "vezes": 342,
+   "vezes": 341,
    "renderam": 84,
    "itens": 480,
    "links_oficiais": 53,
@@ -304,11 +304,11 @@
   },
   "9": {
    "nome": "leitura profunda",
-   "vezes": 82,
+   "vezes": 83,
    "renderam": 14,
    "itens": 58,
    "links_oficiais": 8,
-   "taxa_de_acerto": 0.171
+   "taxa_de_acerto": 0.169
   },
   "10": {
    "nome": "busca no domínio",
@@ -3058,7 +3058,7 @@
    "encaminhado": null,
    "selo_antes": "ouro",
    "selo_depois": "ouro",
-   "em": "2026-10-26T23:40:30+00:00",
+   "em": "2026-10-27T01:10:45+00:00",
    "prazo": "2026-12-04",
    "uf": null,
    "orgao": "BNDES",
@@ -3186,7 +3186,7 @@
     {
      "n": 9,
      "nome": "leitura profunda",
-     "em": "2026-10-26T23:40:30+00:00",
+     "em": "2026-10-27T01:10:45+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -32819,7 +32819,7 @@
    "encaminhado": null,
    "selo_antes": "bronze",
    "selo_depois": "ouro",
-   "em": "2026-10-26T23:40:24+00:00",
+   "em": "2026-10-27T01:10:40+00:00",
    "prazo": "2026-12-03",
    "uf": "PE",
    "orgao": "FUNDACAO JOAQUIM NABUCO FUNDAJ",
@@ -32937,7 +32937,7 @@
     {
      "n": 2,
      "nome": "anexos completos",
-     "em": "2026-10-26T23:40:24+00:00",
+     "em": "2026-10-27T01:10:40+00:00",
      "ganhou": [
       "Prazo de recurso",
       "Requisitos",
@@ -39118,7 +39118,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "bronze",
-   "em": "2026-10-26T23:41:51+00:00",
+   "em": "2026-10-27T01:11:51+00:00",
    "prazo": "2035-01-15",
    "uf": "MG",
    "orgao": null,
@@ -39255,7 +39255,7 @@
     {
      "n": 3,
      "nome": "página oficial e citados",
-     "em": "2026-10-26T23:41:51+00:00",
+     "em": "2026-10-27T01:11:51+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -45682,7 +45682,7 @@
    "encaminhado": null,
    "selo_antes": null,
    "selo_depois": "ouro",
-   "em": "2026-10-26T23:46:17+00:00",
+   "em": "2026-10-27T01:15:47+00:00",
    "prazo": null,
    "uf": null,
    "orgao": null,
@@ -45778,7 +45778,7 @@
     {
      "n": 1,
      "nome": "documento na mão",
-     "em": "2026-10-26T23:46:17+00:00",
+     "em": "2026-10-27T01:15:47+00:00",
      "ganhou": [
       "Anexos",
       "Esfera",
@@ -59215,7 +59215,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": "bronze",
    "selo_depois": "bronze",
-   "em": "2026-10-26T23:41:16+00:00",
+   "em": "2026-10-27T01:11:25+00:00",
    "prazo": "2026-12-31",
    "uf": null,
    "orgao": "DEFENSORIA PUBLICA DO ESTADO DO PARANA",
@@ -59345,7 +59345,7 @@
     {
      "n": 3,
      "nome": "página oficial e citados",
-     "em": "2026-10-26T23:41:16+00:00",
+     "em": "2026-10-27T01:11:25+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -62008,7 +62008,7 @@
    "encaminhado": "Interceptador: 1 item(ns) não estão no documento oficial lido",
    "selo_antes": null,
    "selo_depois": "prata",
-   "em": "2026-10-26T23:40:15+00:00",
+   "em": "2026-10-27T01:10:32+00:00",
    "prazo": "2026-12-02",
    "uf": null,
    "orgao": null,
@@ -62130,7 +62130,7 @@
     {
      "n": 9,
      "nome": "leitura profunda",
-     "em": "2026-10-26T23:40:15+00:00",
+     "em": "2026-10-27T01:10:32+00:00",
      "ganhou": [],
      "legado": null
     }
@@ -79113,13 +79113,13 @@
  ],
  "linha_de_producao": {
   "na_linha": {
-   "sem_estrela": 2500,
+   "sem_estrela": 2497,
    "bronze": 119,
    "prata": 131
   },
   "na_linha_por_tipo": {
    "estrela": {
-    "sem_estrela": 130,
+    "sem_estrela": 127,
     "bronze": 9,
     "prata": 9
    },
@@ -79129,11 +79129,11 @@
     "prata": 122
    }
   },
-  "fila_oportunidades": 148,
+  "fila_oportunidades": 145,
   "fila_livros": 2602,
-  "devidas_nesta_hora": 2750,
+  "devidas_nesta_hora": 2747,
   "promovidas_nesta_execucao": 3,
-  "sem_material_agora": 4,
+  "sem_material_agora": 2,
   "esgotadas_10_abordagens": 0,
   "biblioteca_de_sites": {
    "chaves": 1074,
