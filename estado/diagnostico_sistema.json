@@ -1,5 +1,5 @@
 {
- "em": "2026-10-27T15:15:12+00:00",
+ "em": "2026-10-27T15:26:25+00:00",
  "finalidade": {
   "sistemas": [
    {
@@ -87,7 +87,7 @@
     {
      "id": "pncp-api",
      "nome": "PNCP — API de contratações (chamamentos e credenciamentos)",
-     "resultado": "falha — não lê há 9 dia(s) (227 h); última leitura 18/10 00:25"
+     "resultado": "falha — não lê há 9 dia(s) (228 h); última leitura 18/10 00:25"
     },
     {
      "id": "mpgo-destinacao",
@@ -97,7 +97,7 @@
     {
      "id": "mptgo-destinacao",
      "nome": "MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)",
-     "resultado": "falha — não lê há 3 dia(s) (75 h); última leitura 24/10 08:16"
+     "resultado": "falha — não lê há 3 dia(s) (76 h); última leitura 24/10 08:16"
     },
     {
      "id": "mpu-destinacao",
@@ -149,10 +149,10 @@
     {
      "id": "piloto-aberto",
      "nome": "Piloto - Espião — busca aberta no terceiro setor",
-     "resultado": "funcionando — última leitura 27/10 12:11 · 26 achado(s) (atenção: 1 página(s) com falha; as demais foram lidas)"
+     "resultado": "funcionando — última leitura 27/10 12:20 · 26 achado(s) (atenção: 1 página(s) com falha; as demais foram lidas)"
     }
    ],
-   "status_em": "2026-10-27T12:14-03:00",
+   "status_em": "2026-10-27T12:26-03:00",
    "auditoria": {
     "em": "2026-10-27T15:13:43+00:00",
     "total": 33,
@@ -241,8 +241,8 @@
     }
    },
    "espiao": {
-    "em": "2026-10-27T15:06:36+00:00",
-    "voos": 1656,
+    "em": "2026-10-27T15:13:36+00:00",
+    "voos": 1657,
     "empresas_novas": 294
    }
   },
@@ -281,11 +281,13 @@
    "sem_nada_na_base": 25
   },
   "fluxos_github": {
-   "total": 8,
-   "com_falha": []
+   "total": 10,
+   "com_falha": [
+    "00 · Verificar prontidão"
+   ]
   },
   "sala_controle": {
-   "em": "2026-10-27T15:14:52+00:00",
+   "em": "2026-10-27T15:26:04+00:00",
    "indice_saude": 53,
    "contagem": {
     "verde": 14,
@@ -341,13 +343,13 @@
   },
   "idade_horas": {
    "repositorio": 0.0,
-   "fluxo": 227.4,
+   "fluxo": 227.6,
    "fichas": 0.0,
    "sala_controle": 0.0,
    "status_motores": 0.0,
-   "maestro": 9.0,
-   "rede_neural": 227.4,
-   "saude": 0.0
+   "maestro": 9.1,
+   "rede_neural": 227.6,
+   "saude": 0.2
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -1082,7 +1084,7 @@
    "etapa": "biblioteca",
    "decisao": "livros da Biblioteca",
    "regra": "ato legislativo não gera livro",
-   "conferidos": 2707,
+   "conferidos": 2713,
    "incorretos": 0,
    "veredito": "correto",
    "exemplos": []
@@ -1092,7 +1094,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 205.6 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 205.8 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1117,7 +1119,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 9 dia(s) (227 h); última leitura 18/10 00:25",
+   "texto": "motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 9 dia(s) (228 h); última leitura 18/10 00:25",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1133,7 +1135,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 3 dia(s) (75 h); última leitura 24/10 08:16",
+   "texto": "motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 3 dia(s) (76 h); última leitura 24/10 08:16",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1217,7 +1219,7 @@
   {
    "codigo": "atrasado_fluxo",
    "gravidade": "media",
-   "texto": "fluxo sem atualização há 227.4 h (limite 3 h)",
+   "texto": "fluxo sem atualização há 227.6 h (limite 3 h)",
    "correcao": "refazer a tela",
    "quantidade": null,
    "exemplos": []
@@ -1225,7 +1227,7 @@
   {
    "codigo": "atrasado_maestro",
    "gravidade": "media",
-   "texto": "maestro sem atualização há 9.0 h (limite 3 h)",
+   "texto": "maestro sem atualização há 9.1 h (limite 3 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1233,7 +1235,7 @@
   {
    "codigo": "atrasado_rede_neural",
    "gravidade": "media",
-   "texto": "rede_neural sem atualização há 227.4 h (limite 26 h)",
+   "texto": "rede_neural sem atualização há 227.6 h (limite 26 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1258,7 +1260,7 @@
   {
    "codigo": "gabarito_desatualizado",
    "gravidade": "media",
-   "texto": "avaliação do Cartório com gabarito tem 283.4 h (semanal)",
+   "texto": "avaliação do Cartório com gabarito tem 283.5 h (semanal)",
    "correcao": "disparar o fluxo 39",
    "quantidade": null,
    "exemplos": []
