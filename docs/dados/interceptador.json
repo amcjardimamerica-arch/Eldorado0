@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T11:59:21+00:00",
+  "em": "2026-10-27T12:12:44+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T11:42:09+00:00",
+  "ultimo_voo": "2026-10-27T12:01:16+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,61 +48,76 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.6
+    "tempo_medio_min": 10.8
   },
   "missoes": [
     {
-      "em": "2026-10-27T11:42:09+00:00",
+      "em": "2026-10-27T12:01:16+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Jataí — secretaria de cultura informa sobre os editais da política nacional aldir blanc — Goiás / Jataí",
+      "alvo": "Jul 2026 editais da pnab públicados — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 3,
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Esfera",
+        "Requisitos"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O Prefeitura de Jataí é o órgão financiador dos editais referentes à política nacional Aldir Blanc, sendo assim uma fonte válida para obtenção de informações sobre oportunidades de fomento.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar se o edital abrange a área de atuação da AMC, como cultura, educação ou assistência social, e seguir o processo de inscrição e submissão de propostas conforme as normas do edital.",
-        "proximo_passo": "Consultar o site oficial da Prefeitura de Jataí para obter informações detalhadas sobre os editais disponíveis.",
-        "risco": "A falta de informações específicas, como prazo de inscrição e requisitos, pode impedir a associação de se candidatar adequadamente."
+        "por_que": "O texto comprovado menciona editais da PNAB publicados em Jul 2026 para Goiás, especificando o objeto como fomento à cultura e o prazo de inscrição até 2026-07-31.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital de fomento à cultura, apresentar proposta alinhada ao objeto do edital e seguir as instruções dos anexos fornecidos.",
+        "proximo_passo": "Consultar os anexos do edital para entender os requisitos e prazos de inscrição.",
+        "risco": "O prazo de inscrição pode estar encerrado, e a falta de informações detalhadas pode dificultar o acesso ao edital."
       },
       "erro": null,
-      "segundos": 997,
+      "segundos": 648,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-4acc44b10c3e",
+      "id": "op-nova-86bc5be97387",
       "encontrou": {
+        "Objeto": {
+          "valor": "fomento à cultura",
+          "trecho": "Os editais da Política Nacional Aldir Blanc de Fomento à Cultura (PNAB) já foram publicados!",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "? a 2026-07-31",
+          "trecho": "As inscrições seguem abertas até 31 de julho de 2026.",
+          "oficial": false,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Jataí",
-          "trecho": "PREFEITURA DE JATAÍ",
+          "valor": "Prefeitura Municipal de Cidade Ocidental",
+          "trecho": "EDITAIS DA PNAB PÚBLICADOS - Prefeitura Municipal de Cidade",
           "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Jataí",
+          "trecho": "Cidade Ocidental-GO",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "fomento à cultura",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Jataí",
+      "financiador": "Prefeitura Municipal de Cidade Ocidental",
       "indicios": [],
       "rotas": [
         "site_do_financiador"
