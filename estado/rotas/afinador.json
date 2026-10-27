@@ -595,7 +595,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-218": {
-  "em": "2026-10-27T04:10:51+00:00",
+  "em": "2026-10-27T19:10:02+00:00",
   "testes": 11,
   "melhor": null,
   "detalhe": [
@@ -611,7 +611,7 @@
     "funcionou": false
    },
    {
-    "url": "https://prosas.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://prosas.com.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -631,7 +631,7 @@
     "funcionou": false
    },
    {
-    "url": "https://prosas.com.br/sitemap.xml",
+    "url": "https://prosas.com.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -641,7 +641,7 @@
     "funcionou": false
    },
    {
-    "url": "https://prosas.com.br/feed",
+    "url": "https://prosas.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1083,7 +1083,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-27T14:40:11+00:00",
+  "em": "2026-10-27T19:10:02+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -4449,8 +4449,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-229": {
-  "em": "2026-10-26T22:00:41+00:00",
-  "testes": 12,
+  "em": "2026-10-27T19:09:17+00:00",
+  "testes": 13,
   "melhor": null,
   "detalhe": [
    {
@@ -4486,14 +4486,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutovotorantim.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.institutovotorantim.org.br/transparencia/editais",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "json",
-    "erro": null,
+    "erro": "RuntimeError",
     "funcionou": false
    },
    {
@@ -4508,7 +4507,18 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutovotorantim.org.br/editais",
+    "url": "https://www.institutovotorantim.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutovotorantim.org.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4518,7 +4528,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutovotorantim.org.br/edital",
+    "url": "https://www.institutovotorantim.org.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8056,7 +8066,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-243": {
-  "em": "2026-10-27T04:10:28+00:00",
+  "em": "2026-10-27T19:09:21+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8072,13 +8082,14 @@
     "funcionou": false
    },
    {
-    "url": "https://www.worldbank.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.worldbank.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
+    "pontos": 1,
+    "links": 13,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "sitemap/feed",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -8092,18 +8103,17 @@
     "funcionou": false
    },
    {
-    "url": "https://www.worldbank.org/sitemap.xml",
+    "url": "https://www.worldbank.org/feed",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 13,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
-    "url": "https://www.worldbank.org/feed",
+    "url": "https://www.worldbank.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9898,7 +9908,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-245": {
-  "em": "2026-10-27T04:10:32+00:00",
+  "em": "2026-10-27T19:09:30+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -9913,7 +9923,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.usaid.gov/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.usaid.gov/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9933,7 +9943,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.usaid.gov/sitemap.xml",
+    "url": "https://www.usaid.gov/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9943,7 +9953,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.usaid.gov/feed",
+    "url": "https://www.usaid.gov/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10026,7 +10036,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-246": {
-  "em": "2026-10-27T04:10:47+00:00",
+  "em": "2026-10-27T19:09:57+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -10042,7 +10052,7 @@
     "funcionou": false
    },
    {
-    "url": "https://erasmus-plus.ec.europa.eu/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://erasmus-plus.ec.europa.eu/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10062,7 +10072,7 @@
     "funcionou": false
    },
    {
-    "url": "https://erasmus-plus.ec.europa.eu/sitemap.xml",
+    "url": "https://erasmus-plus.ec.europa.eu/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10072,7 +10082,7 @@
     "funcionou": false
    },
    {
-    "url": "https://erasmus-plus.ec.europa.eu/feed",
+    "url": "https://erasmus-plus.ec.europa.eu/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -12940,7 +12950,7 @@
   "resultado": "rota nova em teste"
  },
  "judiciario-cnj-tjgo": {
-  "em": "2026-10-27T04:10:31+00:00",
+  "em": "2026-10-27T19:09:29+00:00",
   "testes": 16,
   "melhor": null,
   "detalhe": [
@@ -12955,7 +12965,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.tjgo.jus.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -12965,7 +12975,7 @@
     "funcionou": false
    },
    {
-    "url": "https://corregedoria.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://corregedoria.tjgo.jus.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -12995,26 +13005,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://corregedoria.tjgo.jus.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.tjgo.jus.br/feed",
     "origem": "padrão",
     "via": "direto",
@@ -13026,6 +13016,26 @@
    },
    {
     "url": "https://corregedoria.tjgo.jus.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://corregedoria.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -13055,6 +13065,17 @@
     "funcionou": false
    },
    {
+    "url": "https://www.tjgo.jus.br/images/docs/CCS/editalitaberai.pdf",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs",
     "origem": "rota original",
     "via": "direto",
@@ -13072,17 +13093,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.tjgo.jus.br/images/docs/CCS/editalitaberai.pdf",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
     "funcionou": false
    },
    {
