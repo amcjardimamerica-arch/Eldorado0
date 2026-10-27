@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T01:35:35+00:00",
+  "em": "2026-10-27T01:52:46+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T01:25:23+00:00",
+  "ultimo_voo": "2026-10-27T01:37:40+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,92 +48,79 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.7
+    "tempo_medio_min": 14.6
   },
   "missoes": [
     {
-      "em": "2026-10-27T01:25:23+00:00",
+      "em": "2026-10-27T01:37:40+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Goiás Social — Governo de Goiás faz chamamento público para prestação de auxílios — Goiás — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 10,
-      "dispensados": 1,
+      "alvo": "Goiás Social — Inscrições abertas para representantes da sociedade civil interessados em integrar o Conselho E… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 7,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de recurso"
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/social/divulgacao-do-edital-de-convocacao-das-eleicoes-para-representantes-da-sociedade-civil-interessados-em-integrar-o-conselho-estadual-de-direitos-humanos-igualdade-racial-e-combate-ao-preconceito-cedh/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprovado menciona o credenciamento de Organizações da Sociedade Civil para inclusão nos Programas de Auxílio Nutricional e/ou Auxílio Água e Energia, o que é diretamente relacionado ao chamamento público feito pelo Governo de Goiás.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se regularmente constituir e atuar no Estado de Goiás, estar juridicamente, documentalmente e tecnicamente apta, além de preencher os anexos exigidos no edital.",
-        "proximo_passo": "Verificar os requisitos e anexos do edital e se inscrever no período de inscrição, que vai de 2026-08-01 a 2026-08-31.",
-        "risco": "A falta de regularidade jurídica, documental ou técnica pode impedir a associação de se credenciar."
+        "por_que": "O edital comprova a abertura de inscrições para representantes da sociedade civil interessados em integrar o Conselho Estadual de Direitos Humanos, Igualdade Racial e Combate ao Preconceito (CEDHIRCOP) no biênio 2026/2028, com foco na defesa e promoção dos direitos de comunidades negras, mulheres negras e indígenas.",
+        "para_a_amc": "Uma associação comunitária de Goiânia (assistência social, cultura, educação, esporte) precisaria demonstrar reconhecida atuação na defesa e promoção dos direitos da população negra, das mulheres negras e das comunidades/etnias indígenas, além de apresentar um anexo comprobatório.",
+        "proximo_passo": "A associação deve se inscrever no edital, apresentando os documentos comprovatórios de sua atuação na defesa e promoção dos direitos mencionados.",
+        "risco": "A falta de comprovação da atuação na defesa e promoção dos direitos de comunidades negras, mulheres negras e indígenas pode impedir a inclusão da associação no Conselho."
       },
       "erro": null,
-      "segundos": 582,
+      "segundos": 874,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-5cbb86f04dba",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-a314cbd1c585",
       "encontrou": {
         "Objeto": {
-          "valor": "credenciamento de Organizações da Sociedade Civil para formação de cadastro de entidades aptas à inclusão nos Programas de Auxílio Nutricional e/ou Auxílio Água e Energia",
-          "trecho": "O presente Edital tem por objeto o credenciamento, em fluxo contínuo, de Organizações da Sociedade Civil – OSCs regularmente constituídas e atuantes no Estado de Goiás, para formaç",
-          "oficial": false,
+          "valor": "escolha de 8 entidades da sociedade civil organizada que integrarão o Conselho Estadual de Direitos Humanos, Igualdade Racial e Combate ao Preconceito (CEDHIRCOP) no biênio 2026/2028",
+          "trecho": "O presente processo seletivo tem por objetivo a escolha de 8 (oito) entidades da sociedade civil organizada, uma para cada segmento abaixo relacionado, que integrarão o Conselho Es",
+          "oficial": true,
           "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-08-01 a 2026-08-31",
-          "trecho": "O credenciamento é exclusivamente habilitatório e cadastral. Eventual priorização correrá somente em Ato de Convocação específico, na fase de celebração do Termo de Fomento, median",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "dispensado — O edital dispensa o item valor, pois o apoio é em espécie, sem valor em dinheiro.",
-          "trecho": "O credenciamento, por si só, não exige reserva orçamentária correspondente à totalidade das OSCs potencialmente habilitadas. A indicação de dotação, a disponibilidade orçamentária ",
-          "oficial": false,
-          "dispensado": true
         },
         "Órgão / financiador": {
-          "valor": "SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL – SEDS",
-          "trecho": "O ESTADO DE GOIÁS, por intermédio da SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL – SEDS, com fundamento na Lei Federal nº 13.019, de 31 de julho de 2014...",
-          "oficial": false,
+          "valor": "Secretaria de Estado de Desenvolvimento Social",
+          "trecho": "Secretaria de Estado de Desenvolvimento Social, integrante da",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "O presente Edital tem por objeto o credenciamento, em fluxo contínuo, de Organizações da Sociedade Civil – OSCs regularmente constituídas e atuantes no Estado de Goiás",
-          "oficial": false,
+          "trecho": "GOIÂNIA, SEGUNDA-FEIRA, 6 DE ABRIL DE 2026",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "assistencia_social",
-          "trecho": "A SEDS desenvolve ações destinadas à população goiana em situação de vulnerabilidade social, promovendo inclusão, proteção social, garantia de direitos e articulação com organizaçõ",
-          "oficial": false,
+          "valor": "direitos",
+          "trecho": "TIPIFICAÇÃO LEGAL",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "regularmente constituídas e atuantes no Estado de Goiás, juridicamente, documentalmente e tecnicamente aptas",
-          "trecho": "O presente Edital tem por objeto o credenciamento, em fluxo contínuo, de Organizações da Sociedade Civil – OSCs regularmente constituídas e atuantes no Estado de Goiás, para formaç",
-          "oficial": false,
+          "valor": "reconhecida atuação na defesa e na promoção dos direitos da população negra, reconhecida atuação na defesa e na promoção dos direitos de mulheres negras, reconhecida atuação na defesa e na promoção dos direitos das comunidades/etnias indígenas, reconhecida atuação na defesa e na promoção dos direito",
+          "trecho": "reconhecida atuação na defesa e na promoção dos direitos da população negra; b) Um(a) representante de instituição da sociedade civil com reconhecida atuação na defesa e na promoçã",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Governo de Goiás",
+      "financiador": "Governo do Estado de Goiás",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
