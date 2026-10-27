@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-27T04:53:10+00:00",
+  "em": "2026-10-27T05:10:07+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-27T04:39:42+00:00",
+  "ultimo_voo": "2026-10-27T04:54:44+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,16 +48,16 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.8
+    "tempo_medio_min": 14.8
   },
   "missoes": [
     {
-      "em": "2026-10-27T04:39:42+00:00",
+      "em": "2026-10-27T04:54:44+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Itaberaí — Edital Complementar 005-2024 LEI PAULO GUSTAVO — Goiás",
-      "qualidade": "parcial",
+      "alvo": "Itaberaí — Edital seleciona projetos de Itaberaí (GO) para receberem recursos de prestação pecuniária — Goiás — Goiás",
+      "qualidade": "insuficiente",
       "comprovados": 6,
       "dispensados": 1,
       "total": 12,
@@ -68,54 +68,58 @@
         "Requisitos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://itaberai.go.gov.br/wp-content/uploads/2024/01/Edital-Complementar-005-2024-LEI-PAULO-GUSTAVO.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição, órgão financiador, território e esfera.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto cultural, preencher os anexos exigidos e submeter o projeto ao edital para execução de atividades culturais.",
-        "proximo_passo": "Verificar os anexos exigidos e preparar o projeto cultural conforme o objeto do edital.",
-        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir a elaboração de um projeto adequado ao edital."
+        "por_que": "O edital menciona o prazo de inscrição e o objeto da seleção, o que permite identificar a possibilidade de acesso para associações comunitárias.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria subscir um projeto com finalidade social, custeado por uma instituição pública ou privada, e seguir o processo de inscrição previsto no edital, mesmo que o prazo não esteja explicitado.",
+        "proximo_passo": "Verificar os anexos do edital para obter informações detalhadas sobre o processo de inscrição e os critérios de seleção.",
+        "risco": "O prazo de inscrição não está explicitado no texto, o que pode dificultar a definição do momento exato para participar do edital."
       },
       "erro": null,
-      "segundos": 770,
+      "segundos": 885,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Requisitos",
-      "id": "op-c61171b4dfd4",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-df56a16858bd",
       "encontrou": {
         "Objeto": {
-          "valor": "selecionar projetos culturais de proponentes para execução de atividades culturais",
-          "trecho": "visa selecionar projetos culturais de proponentes para execução de atividades culturais de maneira descentralizada",
-          "oficial": true,
+          "valor": "custeio de projetos subscritos por Instituições Públicas ou Privadas com finalidade social",
+          "trecho": "Edital de seleção para custeio de projetos subscritos por Instituições Públicas ou Privadas com finalidade social, previamente credenciada, e às atividades de caráter essencial à s",
+          "oficial": false,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "dispensado — O prazo de inscrição foi explicitado no texto.",
-          "trecho": "período de 29/01/2024 a 15/02/2024 [rejeitado: data implausível para edital aberto]",
+          "valor": "dispensado — O edital menciona o prazo de inscrição.",
+          "trecho": "no período de 20/07 a 18/08/2020.",
           "oficial": false,
           "dispensado": true
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Itaberaí",
-          "trecho": "Prefeitura Municipal de Itaberaí, por intermédio da Agência Municipal de Meio Ambiente, Turismo e Cultura",
-          "oficial": true,
+          "valor": "Gabinete da 1ª Vara Judicial",
+          "trecho": "Gabinete da 1ª Vara Judicial",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Itaberaí – Goiás",
-          "oficial": true,
+          "trecho": "Município de Itaberaí-GO",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Itaberaí",
+      "financiador": "Gabinete da 1ª Vara Judicial",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
