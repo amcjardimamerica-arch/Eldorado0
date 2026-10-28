@@ -1,5 +1,5 @@
-commit: 1ce4eaf54f085b3f6af9700d6a3f10812fbde74e
-em: 2026-10-28T12:19:32Z
+commit: 6942624b9a40b1754f4355fcfb3c3a457a7fe3bb
+em: 2026-10-28T15:47:05Z
 rc: 1
 ::error title=teste falhou::tests.test_livros_parametros.TestArquivo.test_dez_blocos_e_todos_decididos — AssertionError: 282 not greater than or equal to 300
 ::error title=teste falhou::tests.test_motor01_diario_goiania.TestCoberturaDoDia.test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida — AssertionError: True is not false
@@ -115,13 +115,13 @@ FAIL: test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo (tests.test_consiste
 Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_consistencia_transversal_2026_10_17.py", line 140, in test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo
     self.assertEqual(sorted(i for i in cat if not (L / f"{i}.json").exists()), [])
-AssertionError: Lists differ: ['nova-11754f7f2ba8', 'nova-2a156b780d10',[3299 chars]4f5'] != []
+AssertionError: Lists differ: ['nova-11754f7f2ba8', 'nova-2a156b780d10',[3394 chars]4f5'] != []
 
-First list contains 174 additional elements.
+First list contains 179 additional elements.
 First extra element 0:
 'nova-11754f7f2ba8'
 
-Diff is 3873 characters long. Set self.maxDiff to None to see it.
+Diff is 3983 characters long. Set self.maxDiff to None to see it.
 
 ======================================================================
 FAIL: test_relatorio_do_cartorio_das_certidoes_guardadas (tests.test_consistencia_transversal_2026_10_17.MesmoRetrato.test_relatorio_do_cartorio_das_certidoes_guardadas)
@@ -252,6 +252,14 @@ Traceback (most recent call last):
 AssertionError: True is not false
 
 ======================================================================
+FAIL: test_motores_da_vez_ordem_do_painel (tests.test_motores_2026_10_03.Fluxo22EStatus.test_motores_da_vez_ordem_do_painel)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/eldorado_testes/tests/test_motores_2026_10_03.py", line 140, in test_motores_da_vez_ordem_do_painel
+    self.assertLess(ids.index("dou"), ids.index("plat-gife"))
+AssertionError: 23 not less than 5
+
+======================================================================
 FAIL: test_atualizado_guarda_a_data_da_confirmacao (tests.test_parecer_23_09.TesteAtualizacaoAplicada.test_atualizado_guarda_a_data_da_confirmacao)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
@@ -299,11 +307,3 @@ AssertionError: 1046 != 308
 ======================================================================
 FAIL: test_universo_inteiro_decidido (tests.test_validacao_mapa.TestArquivoDeValidacao0929.test_universo_inteiro_decidido)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_validacao_mapa.py", line 31, in test_universo_inteiro_decidido
-    self.assertGreaterEqual(len(self.itens) + len(saiu), self.MINIMO)
-AssertionError: 142 not greater than or equal to 150
-
-======================================================================
-FAIL: test_todo_ausente_saiu_pela_regra_territorial (tests.test_verificacao_63_2026_09_15.TesteBaseDaVerificacao.test_todo_ausente_saiu_pela_regra_territorial)
-Nenhum dos 63 some sem motivo: cada ausente é municipal de outro estado, fora das capitais.
