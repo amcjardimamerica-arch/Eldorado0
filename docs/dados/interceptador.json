@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T10:59:52+00:00",
+  "em": "2026-10-28T11:11:32+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T10:43:45+00:00",
+  "ultimo_voo": "2026-10-28T11:01:56+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,55 +48,74 @@
     },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.3
+    "tempo_medio_min": 9.0
   },
   "missoes": [
     {
-      "em": "2026-10-28T10:43:45+00:00",
+      "em": "2026-10-28T11:01:56+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Regulamento do Prêmio Goiás Mais Transparente — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "Resultado Mérito Cultural – Edital 08 — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
-        "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Requisitos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": "https://transparencia.go.gov.br/8a-edicao-do-premio-goias-mais-transparente/",
+      "pagina_oficial": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2026/08/edital_05-2026-resultado-final-analise-merito.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O regulamento menciona o Território como GO e a Esfera como estadual, indicando que o Prêmio Goiás Mais Transparente é uma fonte válida para organizações da sociedade civil no Estado de Goiás.",
-        "para_a_amc": "Para acessar o prêmio, uma associação comunitária de Goiânia precisaria verificar os anexos mencionados (2 anexo(s)) para obter informações detalhadas sobre requisitos, área de atuação e outros critérios de elegibilidade.",
-        "proximo_passo": "Consultar os anexos do regulamento para entender os requisitos e critérios de participação.",
-        "risco": "A falta de informações específicas como prazo de inscrição, objeto e requisitos pode impedir a associação de se qualificar adequadamente para o prêmio."
+        "por_que": "O edital foi comprovado com dados de objeto, resultado, valor, órgão financiador, território, esfera e área de atuação.",
+        "para_a_amc": "A associação comunitária precisaria se inscrever no edital, apresentar proposta alinhada ao objeto do edital (fomento à cultura) e atender aos requisitos estabelecidos no edital, mesmo que não encontrados no texto.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre requisitos, prazos e processo seletivo.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se preparar adequadamente para o edital."
       },
       "erro": null,
-      "segundos": 920,
+      "segundos": 541,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 2,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-1b535dc30aa3",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Prazo de recurso, Requisitos",
+      "id": "op-449629d749cd",
       "encontrou": {
+        "Objeto": {
+          "valor": "fomento à cultura",
+          "trecho": "RESULTADO FINAL DA ANÁLISE DE MÉRITO CULTURAL dos projetos inscritos para fomento no município de Goiânia.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 172.114,38",
+          "trecho": "R$ 172.114,38",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria Municipal de Cultura de Goiânia (Secult)",
+          "trecho": "Secretaria Municipal de Cultura de Goiânia (Secult)",
+          "oficial": true,
+          "dispensado": false
+        },
         "Território": {
           "valor": "GO",
-          "trecho": "No Estado de Goiás",
+          "trecho": "município de Goiânia",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "fomento à cultura",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Controladoria-Geral do Estado - CGGEE",
+      "financiador": "Prefeitura de Goiânia",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
