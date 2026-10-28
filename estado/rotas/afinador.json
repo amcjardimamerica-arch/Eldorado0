@@ -284,8 +284,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-196": {
-  "em": "2026-10-27T11:39:01+00:00",
-  "testes": 16,
+  "em": "2026-10-28T02:44:02+00:00",
+  "testes": 17,
   "melhor": {
    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
    "via": "direto",
@@ -383,6 +383,47 @@
     "funcionou": true
    },
    {
+    "url": "https://www.mpf.mp.br/",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 7,
+    "links": 417,
+    "sinais": 3,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.mpf.mp.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.mpf.mp.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mpt.mp.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.mpf.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -403,37 +444,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.mpf.mp.br/",
-    "origem": "rota original",
-    "via": "direto",
-    "pontos": 5,
-    "links": 417,
-    "sinais": 2,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
-    "url": "https://www.mpf.mp.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mpt.mp.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.mpf.mp.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -445,16 +455,6 @@
    },
    {
     "url": "https://mpt.mp.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.mpf.mp.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1083,7 +1083,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-28T01:18:01+00:00",
+  "em": "2026-10-28T02:44:43+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1395,23 +1395,13 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-227": {
-  "em": "2026-10-27T11:39:29+00:00",
+  "em": "2026-10-28T02:44:14+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://www.institutococacolabrasil.com.br/",
     "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutococacolabrasil.com.br/transparencia/editais",
-    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -1431,6 +1421,16 @@
    },
    {
     "url": "https://www.institutococacolabrasil.com.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutococacolabrasil.com.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -6238,7 +6238,7 @@
   "resultado": "rota nova em teste"
  },
  "judiciario-cnj": {
-  "em": "2026-10-27T13:05:37+00:00",
+  "em": "2026-10-28T02:44:39+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://www.cnj.jus.br/editais",
@@ -6263,9 +6263,9 @@
     "url": "https://www.cnj.jus.br/arrecadacao-de-penas-pecuniarias-ira-para-projetos-sociais/",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 13,
+    "pontos": 15,
     "links": 438,
-    "sinais": 6,
+    "sinais": 7,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -6282,23 +6282,23 @@
     "funcionou": true
    },
    {
-    "url": "https://www.cnj.jus.br/norma-do-cnj-garante-verbas-para-projetos-sociais-em-cangucu-rs/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 15,
-    "links": 445,
-    "sinais": 7,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://www.cnj.jus.br/edital-seleciona-entidades-sociais-de-goias-para-receber-recursos-de-penas-pecuniarias/",
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 15,
     "links": 446,
     "sinais": 7,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.cnj.jus.br/norma-do-cnj-garante-verbas-para-projetos-sociais-em-cangucu-rs/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 13,
+    "links": 445,
+    "sinais": 6,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -6337,23 +6337,23 @@
     "funcionou": true
    },
    {
-    "url": "https://www.cnj.jus.br/editais",
-    "origem": "rota original",
-    "via": "direto",
-    "pontos": 91,
-    "links": 556,
-    "sinais": 45,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://www.cnj.jus.br/publicada-resolucao-que-destina-penas-pecuniarias-para-projetos-e-entidades-sociais/",
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 13,
     "links": 439,
     "sinais": 6,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.cnj.jus.br/editais",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 91,
+    "links": 557,
+    "sinais": 45,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -6373,9 +6373,9 @@
     "url": "https://www.cnj.jus.br/poder-judiciario/chamadas-publicas",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 77,
-    "links": 474,
-    "sinais": 38,
+    "pontos": 81,
+    "links": 479,
+    "sinais": 40,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -6384,9 +6384,9 @@
     "url": "https://www.cnj.jus.br/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 21,
+    "pontos": 23,
     "links": 713,
-    "sinais": 10,
+    "sinais": 11,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -6395,20 +6395,9 @@
     "url": "http://www.cnj.jus.br",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 21,
+    "pontos": 19,
     "links": 713,
-    "sinais": 10,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
-    "url": "https://www.cnj.jus.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 13,
-    "links": 449,
-    "sinais": 6,
+    "sinais": 9,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -6421,6 +6410,17 @@
     "links": 67,
     "sinais": 0,
     "formato": "sitemap/feed",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.cnj.jus.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 21,
+    "links": 714,
+    "sinais": 10,
+    "formato": "html",
     "erro": null,
     "funcionou": true
    }
@@ -6754,7 +6754,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-256": {
-  "em": "2026-10-27T11:39:26+00:00",
+  "em": "2026-10-28T02:44:13+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -6770,16 +6770,6 @@
     "funcionou": false
    },
    {
-    "url": "https://sgp.undp.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://sgp.undp.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -6792,6 +6782,16 @@
    },
    {
     "url": "https://sgp.undp.org/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://sgp.undp.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9308,8 +9308,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-248": {
-  "em": "2026-10-27T13:05:45+00:00",
-  "testes": 13,
+  "em": "2026-10-28T02:44:43+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -9324,26 +9324,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.opensocietyfoundations.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.opensocietyfoundations.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -9355,6 +9335,16 @@
    },
    {
     "url": "https://www.opensocietyfoundations.org/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.opensocietyfoundations.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11561,7 +11551,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-www-detran-rj-gov-br": {
-  "em": "2026-10-27T11:39:21+00:00",
+  "em": "2026-10-28T02:44:11+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.detran.rj.gov.br/sitemap.xml",
@@ -11594,7 +11584,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.detran.rj.gov.br/transparencia/editais",
+    "url": "https://www.detran.rj.gov.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11604,7 +11594,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.detran.rj.gov.br/feed",
+    "url": "https://www.detran.rj.gov.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
