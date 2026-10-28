@@ -1,4 +1,4 @@
-# Pacote para o Claude Desktop — 2026-10-27
+# Pacote para o Claude Desktop — 2026-10-28
 
 Você está no computador do titular, com IP brasileiro, navegador e o repositório Eldorado clonado. Use o modelo mais forte disponível (Opus 5) para validar. Trabalhe nesta ordem, sem pular etapa, e devolva os arquivos no formato indicado. Nunca estime datas; quando não houver base, escreva o motivo.
 
@@ -16,45 +16,47 @@ Nenhum motor aguardando coleta local hoje.
 
 ## Etapa 2 — motores em alerta (não leram, falharam ou passaram da cadência)
 
-- **Diário Oficial da União** — todas as páginas falharam em 2026-10-27. Ação: conferir bloqueio/mudança de formato; o Claude Desktop abre a rota no navegador.
-    - abrir https://www.in.gov.br/leiturajornal?secao=do1 e procurar: chamamento público, edital de chamamento, seleção pública, FNCA, CONANDA, Fundo Nacional do Idoso
-    - abrir https://www.in.gov.br/leiturajornal?secao=do3 e procurar: chamamento público, edital de chamamento, seleção pública, FNCA, CONANDA, Fundo Nacional do Idoso
-    - abrir https://www.in.gov.br/leiturajornal?secao=do1e e procurar: chamamento público, edital de chamamento, seleção pública, FNCA, CONANDA, Fundo Nacional do Idoso
-- **MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)** — 9 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)** — 10 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)** — 3 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)** — 4 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)** — 9 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)** — 10 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **Oportunidade Estaduais Governamentais de Goiás** — 4 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Oportunidade Estaduais Governamentais de Goiás** — 5 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://goias.gov.br/ e procurar: 
     - abrir https://goias.gov.br/cultura/editais/ e procurar: 
     - abrir https://goias.gov.br/social/editais/ e procurar: 
-- **Prefeituras das 25 maiores cidades de Goiás — portais de editais** — 9 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Prefeituras das 25 maiores cidades de Goiás — portais de editais** — 10 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://queridodiario.ok.org.br/ e procurar: chamamento público, termo de fomento, termo de colaboração, edital de seleção, organizações da sociedade civil, fundo municipal
     - abrir https://pncp.gov.br/ e procurar: chamamento público, termo de fomento, termo de colaboração, edital de seleção, organizações da sociedade civil, fundo municipal
-- **Adaptador Mapas Culturais — oportunidades com inscrição aberta** — 9 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Adaptador Mapas Culturais — oportunidades com inscrição aberta** — 10 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://mapa.cultura.gov.br/api/opportunity/find?@select=id,name,registrationTo e procurar: 
     - abrir https://mapa.cultura.gov.br/oportunidades/ e procurar: 
-- **Adaptador WordPress — sites oficiais pela API pública** — 9 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Adaptador WordPress — sites oficiais pela API pública** — 10 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://goias.gov.br/cultura/wp-json/wp/v2/posts?search=edital e procurar: 
     - abrir https://goias.gov.br/cultura/editais/ e procurar: 
-- **PNCP — API de contratações (chamamentos e credenciamentos)** — 9 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **PNCP — API de contratações (chamamentos e credenciamentos)** — 10 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://pncp.gov.br/api/consulta/v1/contratacoes/proposta e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
     - abrir https://pncp.gov.br/api/search/ e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
     - abrir https://pncp.gov.br/pncp-api/v1/orgaos/ e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
-- **Motor de Recorrência — revisita as oportunidades identificadas** — 9 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Motor de Recorrência — revisita as oportunidades identificadas** — 10 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://observatorio3setor.org.br/editais/ e procurar: retificação, prorrogação, errata, resultado, homologação, classificados
+- **Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://captadores.org.br/editais/ e procurar: edital, projetos incentivados, seleção de projetos, FIA, Fundo do Idoso, Lei de Incentivo ao Esporte
+- **Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/lei-rouanet e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
+    - abrir https://salic.cultura.gov.br/ e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
+    - abrir https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/lei-rouanet/legislacao e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
 
 Para cada rota aberta, liste os editais publicados nos últimos 30 dias que casem com o léxico e que ainda não estejam em `biblioteca_alexandria/livros/_acervo/editais/`. Devolva em `biblioteca_alexandria/livros/_acervo/editais/coleta_navegador/<data>-motores.json` no formato `{"<id ou novo>": {"objeto":..., "inicio":..., "fim":..., "pagina_oficial":..., "observacao":...}}`.
 
-## Etapa 3 — oportunidades aguardando ação externa (89)
+## Etapa 3 — oportunidades aguardando ação externa (90)
 
 - `op-op-6cce62c69c59` — Secretaria de Estado da Cultura (Secult) — Secult abre chamamento público de OSC para apoi · **o portal recusa o robô do GitHub (IP fora do Brasil)** → abrir no navegador do titular, com IP brasileiro · link: https://goias.gov.br/cultura/secult-abre-chamamento-publico-de-osc-para-apoio-com-a-politica-nacional-aldir-blanc-em-goias/
 - `op-op-ac99e093c742` — SEGENP (gestão de negócios e parcerias) — Edital nº 001/2026 — Celebração de Termo de Cola · **o portal recusa o robô do GitHub (IP fora do Brasil)** → abrir no navegador do titular, com IP brasileiro · link: https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260925_000008871.pdf
@@ -87,6 +89,7 @@ Para cada rota aberta, liste os editais publicados nos últimos 30 dias que case
 - `op-op-db8328a79d07` — SES-GO (saúde) — Edital nº 01/2026 — Goiás — Goiás · **só existe o anúncio no PNCP/diário; o site do órgão não foi localizado** → procurar o site oficial do órgão e localizar o edital · link: https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7394/#e:7394
 - `op-op-aff71483f39b` — Instituto Clima e Sociedade abre edital de até R$ 500 mil para projetos de comunicação cli · **só existe o anúncio no PNCP/diário; o site do órgão não foi localizado** → procurar o site oficial do órgão e localizar o edital · link: https://observatorio3setor.org.br/instituto-clima-e-sociedade-abre-edital-de-ate-r-500-mil-para-projetos-de-comunicacao-climatica
 - `op-op-786e5f51f56a` — Edital Rouanet nas Favelas 2 (2026): Guia de Captação · Capitaai — Brasil · **só existe o anúncio no PNCP/diário; o site do órgão não foi localizado** → procurar o site oficial do órgão e localizar o edital · link: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14535.htm
+- `op-op-fc3e32dc23e5` — Edital Itagibá 2026: Guia de Captação e Inscrições · Capitaai — Brasil · **só existe o anúncio no PNCP/diário; o site do órgão não foi localizado** → procurar o site oficial do órgão e localizar o edital · link: https://www.planalto.gov.br/ccivil_03/leis/L12305.htm
 - `op-op-f2026a409e7c` — Goiânia — Diário Oficial de Goiânia — edição 8874 (2026-09-30) — chamamento público — Goiá · **só existe o anúncio no PNCP/diário; o site do órgão não foi localizado** → procurar o site oficial do órgão e localizar o edital · link: https://data.queridodiario.ok.org.br/5208707/2026-09-30/eae53a46f7108198ed438c9c4bc4996767a5a08a.pdf
 - `61a6052d1609ca5e0201` — EDITAL LMIC 2026 – INCENTIVO FISCAL · **só existe o anúncio no PNCP/diário; o site do órgão não foi localizado** → procurar o site oficial do órgão e localizar o edital · link: https://prefeitura.pbh.gov.br/cultura/edital-lmic-2026-incentivo-fiscal
 - `065b7985dc9f28ef38ad` — INSTITUTO NACIONAL DE APOSENTADOS DEFICIENTES E IDOSOS — EDITAL DE CONVOCAÇÃO — social; 3. · **só existe o anúncio no PNCP/diário; o site do órgão não foi localizado** → procurar o site oficial do órgão e localizar o edital · link: https://www.in.gov.br/web/dou/-/edital-de-convocacao-738193115
@@ -95,7 +98,6 @@ Para cada rota aberta, liste os editais publicados nos últimos 30 dias que case
 - `ad045b40c6a72fa9a820` — MinC (cultura) — EDITAL IPHAN Nº 3/2026 · **só existe o anúncio no PNCP/diário; o site do órgão não foi localizado** → procurar o site oficial do órgão e localizar o edital · link: https://www.in.gov.br/web/dou/-/edital-iphan-n-3/2026-738017249
 - `838d74fe0f1282796d84` — MCTI (ciência e tecnologia) — EDITAL DE 3 DE JUNHO DE 2026 · **só existe o anúncio no PNCP/diário; o site do órgão não foi localizado** → procurar o site oficial do órgão e localizar o edital · link: https://www.in.gov.br/web/dou/-/edital-de-3-de-junho-de-2026-737721110
 - `68098dda8d7c05de8f15` — Secretaria de Governança e Gestão Estratégica — EDITAL SGE/AGU Nº 1, DE 6 DE OUTUBRO DE 20 · **só existe o anúncio no PNCP/diário; o site do órgão não foi localizado** → procurar o site oficial do órgão e localizar o edital · link: https://www.in.gov.br/web/dou/-/edital-sge/agu-n-1-de-6-de-outubro-de-2026-737293277
-- `716b137d3187877584f7` — Secretaria Administrativa — AVISO DE CHAMAMENTO PÚBLICO · **só existe o anúncio no PNCP/diário; o site do órgão não foi localizado** → procurar o site oficial do órgão e localizar o edital · link: https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-737300496
 
 ## Etapa 4 — oportunidades parciais do modo completo, para validar com Opus 5 (40)
 
