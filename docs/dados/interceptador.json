@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T06:38:17+00:00",
+  "em": "2026-10-28T06:55:03+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T06:25:26+00:00",
+  "ultimo_voo": "2026-10-28T06:40:27+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,89 +38,103 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
+    "validadas": 1,
     "parciais": 0,
-    "insuficientes": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
-    "estrelas_de_ouro": 2,
+    "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.2
+    "tempo_medio_min": 14.0
   },
   "missoes": [
     {
-      "em": "2026-10-28T06:25:26+00:00",
+      "em": "2026-10-28T06:40:27+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prefeitura de Senador Canedo lança Edital Aldir Blanc 2026 — Goiás / Senador Canedo",
-      "qualidade": "insuficiente",
-      "comprovados": 6,
+      "alvo": "Prefeitura de São Miguel do Araguaia — DOE - SÃO MIGUEL DO ARAGUAIA - CHAMAMENTO PNAB — Goiás / São Miguel do Araguaia",
+      "qualidade": "validada",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Requisitos",
-        "Anexos"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://saomigueldoaraguaia.go.gov.br/politica-nacional-aldir-blanc-ciclo-2/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, valor, órgão financiador, território, esfera e área de atuação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é apoio à cultura, e demonstrar relevância para o município de Senador Canedo, mesmo que não esteja localizada na mesma região.",
-        "proximo_passo": "Consultar o edital completo para verificar os requisitos e prazos, mesmo que não estejam disponíveis no texto comprovado.",
-        "risco": "A falta de informações sobre prazos, requisitos e anexos pode impedir a associação de se candidatar adequadamente."
+        "por_que": "O texto comprovado descreve claramente o objeto, prazo, valor, órgão financiador, território, esfera, requisitos, anexos e área de atuação do edital, o que permite a construção da resposta.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto cultural dentro das categorias descritas no item 3, preencher o formulário próprio disponibilizado em anexo e encaminhá-lo durante o prazo de inscrição (2026-10-22 a 2026-10-30).",
+        "proximo_passo": "Verificar os anexos disponibilizados pelo edital e preparar o projeto cultural de acordo com as categorias descritas no item 3.",
+        "risco": "O prazo de inscrição termina em 2026-10-30, e a associação pode não ter tempo suficiente para elaborar e enviar a proposta conforme exigido."
       },
       "erro": null,
-      "segundos": 732,
+      "segundos": 838,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-916f8a8772b7",
+      "fontes_oficiais": 8,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-0f9bf965b7d9",
       "encontrou": {
         "Objeto": {
-          "valor": "apoio aos artistas, produtores, coletivos e demais fazedores de cultura do município",
-          "trecho": "O novo edital reforça esse compromisso e busca garantir que os recursos destinados à cultura continuem chegando aos diferentes segmentos culturais, contribuindo para o desenvolvime",
-          "oficial": false,
+          "valor": "seleção de projetos culturais para receberem apoio Termo de Fomento e execução de projetos culturais nas categorias descritas abaixo no item 3",
+          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio Termo de Fomento e execução de projetos culturais nas categorias descritas abaixo no item 3",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-10-22 a 2026-10-30",
+          "trecho": "entre os dias 22 de outubro de 2026 das 08hs da manhã até 13hs (horário de funcionamento) até o dia 30 de outubro de 2026",
+          "oficial": true,
           "dispensado": false
         },
         "Valor": {
-          "valor": "R$ 800 mil no setor",
-          "trecho": "Em 2025, Senador Canedo realizou o segundo chamamento da Lei Aldir Blanc, contemplando 23 projetos culturais e garantindo um investimento de R$ 800 mil no setor, o maior repasse da",
-          "oficial": false,
+          "valor": "R$ 182.000,00 (cento e oitenta e dois mil reais)",
+          "trecho": "O valor total deste edital é de R$ 182.000,00 (cento e oitenta e dois mil reais)",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Senador Canedo",
-          "trecho": "A Prefeitura de Senador Canedo, através da Secretaria de Cultura, Esporte e Turismo, realiza, nesta terça, dia 9, o lançamento do Edital Aldir Blanc 2026...",
-          "oficial": false,
+          "valor": "Prefeitura Municipal de São Miguel do Araguaia – Goiás",
+          "trecho": "Prefeitura Municipal de São Miguel do Araguaia – Goiás",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Prefeitura de Senador Canedo lança Edital Aldir Blanc 2026 - Prefeitura Municipal de Senador Canedo",
-          "oficial": false,
+          "trecho": "município de São Miguel do Araguaia - Goiás",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "O novo edital reforça esse compromisso e busca garantir que os recursos destinados à cultura continuem chegando aos diferentes segmentos culturais, contribuindo para o desenvolvime",
-          "oficial": false,
+          "trecho": "seleção de projetos culturais para receberem apoio Termo de Fomento e execução de projetos culturais nas categorias descritas abaixo no item 3",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "encaminhar sua proposta de projeto em formulário próprio disposto em anexo",
+          "trecho": "o proponente deve encaminhar sua proposta de projeto em formulário próprio disposto em anexo",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura Municipal de Senador Canedo",
+      "financiador": "Prefeitura de São Miguel do Araguaia",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
