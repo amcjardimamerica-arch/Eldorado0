@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T00:12:41+00:00",
+  "em": "2026-10-28T00:23:55+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T00:10:24+00:00",
+  "ultimo_voo": "2026-10-28T00:14:37+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,44 +43,64 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "nao": 1
+    },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 1.6
+    "tempo_medio_min": 8.7
   },
   "missoes": [
     {
-      "em": "2026-10-28T00:10:24+00:00",
+      "em": "2026-10-28T00:14:37+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "0 · PNCP · faltam Resultado, Prazo de recurso, Requisitos, Modalidade, Área de atuação",
-      "alvo": "SUP. EST. DE LICITACAO — O presente Chamamento Público tem por objeto selecionar Organização da Sociedade Civil – OSC para celebração de Ter. Veredito: prata — Objeto, Prazo, Território, Valor e Requi",
+      "alvo": "FUNDACAO JOAQUIM NABUCO FUNDAJ — Realização de concurso de premiação destinado à seleção de Práticas Pedagógicas em Educação Contextualizada para a Convivência com o Semiárido Brasileiro, realizadas em escolas da rede municipal de ensino do Semiárido Br",
       "qualidade": "insuficiente",
       "comprovados": 0,
-      "dispensados": null,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "nenhuma fonte legível",
-      "segundos": 99,
+      "parecer_fonte": {
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações comprovadas sobre o edital para ser usado como fonte.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar se o edital está disponível e se os requisitos são atendidos, mas não há dados suficientes para detalhar.",
+        "proximo_passo": "Consultar diretamente a Fundação Joaquim Nabuco para obter informações atualizadas sobre o edital.",
+        "risco": "A falta de informações comprovadas pode impedir o acesso e a participação no edital."
+      },
+      "erro": null,
+      "segundos": 521,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: nenhuma fonte legível",
-      "id": "3b0a8b47aa7165a5b8da",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "f8684c2f36149d7434e3",
       "encontrou": {},
-      "financiador": "SUP. EST. DE LICITACAO",
+      "financiador": "FUNDACAO JOAQUIM NABUCO FUNDAJ",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano"
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
