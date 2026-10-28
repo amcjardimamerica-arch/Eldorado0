@@ -76,8 +76,8 @@
   },
   {
    "motor": "empresas-incentivadas",
-   "achados_total_1a": 44,
-   "achados_total_agora": 44,
+   "achados_total_1a": 46,
+   "achados_total_agora": 46,
    "no_fluxo": 0,
    "confirmadas": 0
   },
@@ -201,7 +201,7 @@
  "pontos_com_redundancia": 18,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 41233
+ "exemplos_da_rede_de_rotas": 41307
 }
 ```
 
@@ -244,11 +244,12 @@
 
 ```json
 {
- "dia_de_referencia": "2026-10-27",
+ "dia_de_referencia": "2026-10-28",
  "ativos": 172,
- "lidos_ontem": 22,
- "lidos_hoje": 19,
+ "lidos_ontem": 19,
+ "lidos_hoje": 0,
  "nao_lidos_ontem_nem_hoje": [
+  "f260-captacao-001",
   "f260-captacao-018",
   "f260-captacao-025",
   "f260-captacao-034",
@@ -267,6 +268,7 @@
   "f260-captacao-095",
   "f260-captacao-098",
   "f260-captacao-107",
+  "f260-captacao-113",
   "f260-captacao-118",
   "f260-captacao-119",
   "f260-captacao-134",
@@ -286,9 +288,7 @@
   "f260-captacao-200",
   "f260-captacao-206",
   "f260-captacao-207",
-  "f260-captacao-208",
-  "f260-captacao-212",
-  "f260-captacao-216"
+  "f260-captacao-208"
  ],
  "ainda_sem_primeira_leitura": [
   "motor-gife",
