@@ -1,5 +1,5 @@
 {
- "em": "2026-10-28T21:46:38+00:00",
+ "em": "2026-10-28T23:18:11+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,21 +7,21 @@
   "alterar_rota": 58,
   "rota_nova": 53,
   "via_ponte": 5,
-  "exemplos_da_rede": 42255
+  "exemplos_da_rede": 42337
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.6465
+    3.816
    ],
    [
     "origem:rota original",
-    3.0575
+    3.5359
    ],
    [
     "origem:biblioteca",
-    2.6978
+    2.7143
    ],
    [
     "tok:secult",
@@ -29,7 +29,7 @@
    ],
    [
     "tok:inscricoes",
-    2.5109
+    2.5143
    ],
    [
     "tok:mpf",
@@ -49,21 +49,21 @@
    ],
    [
     "tok:transparencia",
-    2.1338
+    2.0674
    ],
    [
-    "tok:aldirblanc",
-    1.9075
+    "tld:br",
+    2.0605
    ],
    [
-    "tok:leipaulogustavo",
-    1.8789
+    "tok:edital",
+    1.9522
    ]
   ],
   "piores_sinais": [
    [
-    "tipo:site_oficial",
-    -2.5996
+    "tipo:internacional",
+    -2.275
    ],
    [
     "tok:pgt",
@@ -75,7 +75,7 @@
    ],
    [
     "tok:2026",
-    -2.9143
+    -2.92
    ],
    [
     "tok:content",
@@ -91,7 +91,7 @@
    ],
    [
     "origem:padrão",
-    -4.0027
+    -3.8346
    ]
   ]
  },
@@ -1299,10 +1299,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 25,
-    "aprendido_em": "2026-10-28T10:45:33+00:00"
+    "aprendido_em": "2026-10-28T23:18:01+00:00"
    },
    "afinado": {
-    "em": "2026-10-28T10:45:33+00:00",
+    "em": "2026-10-28T23:18:01+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.globalfundforwomen.org/sitemap.xml",
@@ -1516,10 +1516,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 103,
-    "aprendido_em": "2026-10-28T10:45:24+00:00"
+    "aprendido_em": "2026-10-28T23:17:50+00:00"
    },
    "afinado": {
-    "em": "2026-10-28T10:45:24+00:00",
+    "em": "2026-10-28T23:17:50+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://senadorcanedo.go.gov.br/aldirblanc/",
@@ -1645,10 +1645,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-28T10:45:28+00:00"
+    "aprendido_em": "2026-10-28T23:17:55+00:00"
    },
    "afinado": {
-    "em": "2026-10-28T10:45:28+00:00",
+    "em": "2026-10-28T23:17:55+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.gatesfoundation.org/sitemap.xml",
@@ -1686,11 +1686,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 18,
-    "aprendido_em": "2026-10-28T10:45:00+00:00"
+    "aprendido_em": "2026-10-28T23:17:23+00:00"
    },
    "afinado": {
-    "em": "2026-10-28T10:45:00+00:00",
-    "testes": 13,
+    "em": "2026-10-28T23:17:23+00:00",
+    "testes": 14,
     "melhor": {
      "url": "https://oakfnd.org/sitemap.xml",
      "via": "direto",
@@ -1850,10 +1850,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 14,
-    "aprendido_em": "2026-10-28T10:45:10+00:00"
+    "aprendido_em": "2026-10-28T23:17:33+00:00"
    },
    "afinado": {
-    "em": "2026-10-28T10:45:10+00:00",
+    "em": "2026-10-28T23:17:33+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
@@ -1933,10 +1933,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 11,
-    "aprendido_em": "2026-10-28T12:18:42+00:00"
+    "aprendido_em": "2026-10-28T23:18:11+00:00"
    },
    "afinado": {
-    "em": "2026-10-28T12:18:42+00:00",
+    "em": "2026-10-28T23:18:11+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.ipora.pr.gov.br/",
