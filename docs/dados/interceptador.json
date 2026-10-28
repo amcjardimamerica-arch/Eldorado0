@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T18:33:41+00:00",
+  "em": "2026-10-28T18:44:21+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T18:10:22+00:00",
+  "ultimo_voo": "2026-10-28T18:36:05+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,38 +43,65 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "nao": 1
+    },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 22.6
+    "tempo_medio_min": 7.6
   },
   "missoes": [
     {
-      "em": "2026-10-28T18:10:22+00:00",
+      "em": "2026-10-28T18:36:05+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
       "alvo": "SES-GO (saúde) — Edital nº 01/2026 — Goiás — Goiás",
       "qualidade": "insuficiente",
       "comprovados": 0,
-      "dispensados": null,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 1356,
+      "parecer_fonte": {
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações comprovadas sobre o edital mencionado para ser utilizada como fonte.",
+        "para_a_amc": null,
+        "proximo_passo": null,
+        "risco": null
+      },
+      "erro": null,
+      "segundos": 458,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-5006993dfd1f",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-db8328a79d07",
       "encontrou": {},
-      "financiador": null,
+      "financiador": "SES-GO",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
+      ]
     }
   ],
   "contagem": {
