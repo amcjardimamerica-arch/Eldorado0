@@ -1,5 +1,5 @@
 {
- "em": "2026-10-28T15:56:24+00:00",
+ "em": "2026-10-28T16:06:52+00:00",
  "finalidade": {
   "sistemas": [
    {
@@ -142,7 +142,7 @@
     {
      "id": "estaduais-go-gov",
      "nome": "Oportunidade Estaduais Governamentais de Goiás",
-     "resultado": "falha — não lê há 5 dia(s) (123 h); última leitura 23/10 08:58"
+     "resultado": "falha — não lê há 5 dia(s) (124 h); última leitura 23/10 08:58"
     }
    ],
    "leitura_parcial": [
@@ -157,7 +157,7 @@
      "resultado": "funcionando — última leitura 28/10 09:47 · sem oportunidade nova (atenção: 1 falha(s) na leitura: direto: The read operation timed out · pela ponte Brasil: ponte_indisponivel: TimeoutError: The read)"
     }
    ],
-   "status_em": "2026-10-28T12:56-03:00",
+   "status_em": "2026-10-28T13:06-03:00",
    "auditoria": {
     "em": "2026-10-28T15:54:24+00:00",
     "total": 33,
@@ -246,8 +246,8 @@
     }
    },
    "espiao": {
-    "em": "2026-10-28T15:43:09+00:00",
-    "voos": 1746,
+    "em": "2026-10-28T15:52:28+00:00",
+    "voos": 1747,
     "empresas_novas": 300
    }
   },
@@ -286,11 +286,13 @@
    "sem_nada_na_base": 25
   },
   "fluxos_github": {
-   "total": 8,
-   "com_falha": []
+   "total": 10,
+   "com_falha": [
+    "00 · Verificar prontidão"
+   ]
   },
   "sala_controle": {
-   "em": "2026-10-28T15:56:03+00:00",
+   "em": "2026-10-28T16:06:35+00:00",
    "indice_saude": 53,
    "contagem": {
     "verde": 14,
@@ -308,7 +310,7 @@
    "validada": 41
   },
   "municipais_de_outro_estado_abertas": 0,
-  "livros_municipais_de_outro_estado": 53,
+  "livros_municipais_de_outro_estado": 54,
   "validadas": 41,
   "percentual_validadas": 19.6,
   "com_livro": 209,
@@ -346,13 +348,13 @@
   },
   "idade_horas": {
    "repositorio": 0.0,
-   "fluxo": 252.1,
+   "fluxo": 252.3,
    "fichas": 0.0,
    "sala_controle": 0.0,
    "status_motores": 0.0,
-   "maestro": 9.1,
-   "rede_neural": 252.1,
-   "saude": 0.0
+   "maestro": 9.2,
+   "rede_neural": 252.3,
+   "saude": 0.2
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -1087,7 +1089,7 @@
    "etapa": "biblioteca",
    "decisao": "livros da Biblioteca",
    "regra": "ato legislativo não gera livro",
-   "conferidos": 2725,
+   "conferidos": 2733,
    "incorretos": 0,
    "veredito": "correto",
    "exemplos": []
@@ -1097,7 +1099,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 230.3 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 230.5 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1210,7 +1212,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 5 dia(s) (123 h); última leitura 23/10 08:58",
+   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 5 dia(s) (124 h); última leitura 23/10 08:58",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1238,7 +1240,7 @@
   {
    "codigo": "atrasado_fluxo",
    "gravidade": "media",
-   "texto": "fluxo sem atualização há 252.1 h (limite 3 h)",
+   "texto": "fluxo sem atualização há 252.3 h (limite 3 h)",
    "correcao": "refazer a tela",
    "quantidade": null,
    "exemplos": []
@@ -1246,7 +1248,7 @@
   {
    "codigo": "atrasado_maestro",
    "gravidade": "media",
-   "texto": "maestro sem atualização há 9.1 h (limite 3 h)",
+   "texto": "maestro sem atualização há 9.2 h (limite 3 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1254,7 +1256,7 @@
   {
    "codigo": "atrasado_rede_neural",
    "gravidade": "media",
-   "texto": "rede_neural sem atualização há 252.1 h (limite 26 h)",
+   "texto": "rede_neural sem atualização há 252.3 h (limite 26 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1279,7 +1281,7 @@
   {
    "codigo": "gabarito_desatualizado",
    "gravidade": "media",
-   "texto": "avaliação do Cartório com gabarito tem 308.0 h (semanal)",
+   "texto": "avaliação do Cartório com gabarito tem 308.2 h (semanal)",
    "correcao": "disparar o fluxo 39",
    "quantidade": null,
    "exemplos": []
@@ -1287,9 +1289,9 @@
   {
    "codigo": "livro_municipal_de_outro_estado",
    "gravidade": "media",
-   "texto": "53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais)",
+   "texto": "54 livros municipais de outros estados no catálogo (só Goiás tem livros municipais)",
    "correcao": "refazer a tela",
-   "quantidade": 53,
+   "quantidade": 54,
    "exemplos": [
     "PNCP — MUNICIPIO DE BENTO GONCALVES — oportunidades (espalhado de edital validado) — Rio Grande do Sul [espalhado-www-bentogoncalves-rs-gov-br]",
     "PNCP — MUNICIPIO DE CACOAL — oportunidades (espalhado de edital validado) — Rondônia [espalhado-transparencia-cacoal-ro-gov-br]",
