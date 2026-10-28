@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T14:22:08+00:00",
+  "em": "2026-10-28T14:39:20+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T14:09:02+00:00",
+  "ultimo_voo": "2026-10-28T14:23:57+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,69 +48,76 @@
     },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.6
+    "tempo_medio_min": 14.8
   },
   "missoes": [
     {
-      "em": "2026-10-28T14:09:02+00:00",
+      "em": "2026-10-28T14:23:57+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Rio Verde — Edital de Chamamento Público 004/2025 — Goiás / Rio Verde",
-      "qualidade": "insuficiente",
-      "comprovados": 9,
+      "alvo": "Rio Verde — Inscrições para artistas interessados na Lei Paulo Gustavo começam nesta quarta em Rio Verde. Recu… — Goiás / Rio Verde",
+      "qualidade": "parcial",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Valor",
-        "Área de atuação"
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.rioverde.go.gov.br/secult/lei-paulo-gustavo/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição, resultado, prazo de recurso, órgão financiador, território, esfera e requisitos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentar uma proposta de solução inovadora para o ambiente regulatório experimental do Rio Verde, seguir os requisitos de documentação listados no item 3.4 e anexar os documentos necessários conforme o edital.",
-        "proximo_passo": "Verificar os requisitos de documentação e preparar a proposta de solução inovadora para o ambiente regulatório experimental.",
-        "risco": "A falta de documentação adequada ou a não conformidade com os requisitos do edital pode impedir a participação da associação."
+        "por_que": "O texto comprovado fornece informações sobre o objeto, valor, órgão financiador, território, esfera, requisitos, anexos e área de atuação do edital, o que é suficiente para identificar se a AMC pode se qualificar como beneficiária.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ser agente cultural residente no Município de Rio Verde/GO há pelo menos 06 (seis) meses e apresentar os anexos necessários para participar do processo seletivo.",
+        "proximo_passo": "Verificar se a AMC atende aos requisitos de residência e tempo de atuação no município de Rio Verde/GO e coletar os anexos exigidos.",
+        "risco": "A AMC pode não atender aos requisitos de residência no município de Rio Verde/GO ou não conseguir reunir os anexos necessários para participar do edital."
       },
       "erro": null,
-      "segundos": 753,
+      "segundos": 886,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-9182ec2b72d7",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
+      "id": "op-d666d1df2a42",
       "encontrou": {
         "Objeto": {
-          "valor": "Seleção de Projetos Inovadores no Ambiente Regulatório Experimental – Sandbox Rio Verde, por meio de propostas de soluções inovadoras a serem testadas em ambiente regulatório experimental (Sandbox Rio Verde)",
-          "trecho": "Seleção de Projetos Inovadores no Ambiente Regulatório Experimental – Sandbox Rio Verde, por meio de propostas de soluções inovadoras a serem testadas em ambiente regulatório exper",
-          "oficial": false,
+          "valor": "seleção de agentes culturais das demais áreas culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do município de Rio Verde, Goiás",
+          "trecho": "O objeto deste Edital é a seleção de agentes culturais das demais áreas culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do município d",
+          "oficial": true,
           "dispensado": false
         },
-        "Prazo de inscrição": {
-          "valor": "2025-09-01 a 2025-11-30",
-          "trecho": "As inscrições estarão abertas a partir da data de publicação deste Edital, por meio do envio da documentação listada no item 3.4 para o endereço eletrônico institucional: sandbox@r",
-          "oficial": false,
+        "Valor": {
+          "valor": "R$ 572.314,60",
+          "trecho": "O valor total disponibilizado para este Edital é de R$ 572.314,60 (quinhentos e setenta e dois mil, trezentos e quatorze reais e sessenta centavos), dividido entre as categorias el",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "PREFEITURA MUNICIPAL DE RIO VERDE",
-          "trecho": "A PREFEITURA MUNICIPAL DE RIO VERDE, através da Secretaria de Ciência, Tecnologia e Inovação, está procedendo ao CHAMAMENTO PÚBLICO",
-          "oficial": false,
+          "valor": "Prefeitura Municipal de Rio Verde",
+          "trecho": "A Prefeitura Municipal de Rio Verde, estado de Goiás torna público o presente edital elaborado com base na Lei Complementar 195/2022 (Lei Paulo Gustavo), no Decreto 11.525/2023 (De",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Rio Verde/GO, assinado e datado digitalmente.",
-          "oficial": false,
+          "trecho": "O presente edital destina-se à premiação de agentes culturais do município de Rio Verde, Goiás.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "O presente edital destina-se à premiação de agentes culturais do município de Rio Verde, Goiás.",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "documentação listada no item 3.4",
-          "trecho": "As inscrições estarão abertas a partir da data de publicação deste Edital, por meio do envio da documentação listada no item 3.4 para o endereço eletrônico institucional: sandbox@r",
-          "oficial": false,
+          "valor": "agente cultural residente no Município de Rio Verde/GO, há pelo menos 06 (seis) meses",
+          "trecho": "Pode se inscrever no Edital qualquer agente cultural residente no Município de Rio Verde/GO, há pelo menos 06 (seis) meses.",
+          "oficial": true,
           "dispensado": false
         }
       },
