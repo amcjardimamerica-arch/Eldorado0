@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T02:09:15+00:00",
+  "em": "2026-10-28T02:24:10+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T02:08:06+00:00",
+  "ultimo_voo": "2026-10-28T02:10:56+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -40,41 +40,84 @@
     "missoes": 1,
     "validadas": 0,
     "parciais": 0,
-    "insuficientes": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 2,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 0.3
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 12.4
   },
   "missoes": [
     {
-      "em": "2026-10-28T02:08:06+00:00",
+      "em": "2026-10-28T02:10:56+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "0 · PNCP · faltam Resultado, Prazo de recurso, Requisitos, Modalidade, Área de atuação",
-      "alvo": "TRIBUNAL DE JUSTICA DO ESTADO DE ALAGOAS — [LICITANET] - Chamamento público na forma de credenciamento de associações e/ou cooperativas de t",
-      "qualidade": "descartada",
-      "comprovados": 0,
-      "dispensados": null,
+      "alvo": "TRIBUNAL SUPERIOR DO TRABALHO — Credenciamento TRT4 n° 01/2023 Credenciamento de associações e/ou cooperativas de catadores de materiais recicláveis para recolhimento e processamento de material reciclável e reutilizável produzido nas dependências da J",
+      "qualidade": "insuficiente",
+      "comprovados": 5,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": null,
-      "erro": "entidade de outro estado, sem vínculo nacional nem com Goiás",
-      "segundos": 19,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Anexos",
+        "Área de atuação"
+      ],
+      "pagina_oficial": "https://buscarlicitacao.com.br/licitacao/rs/porto-alegre/00509968000148-1-000969/2024/edital-de-chamamento-publico-no-135-2024",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital comprovado refere-se ao credenciamento de associações e cooperativas de catadores de materiais recicláveis para atividades específicas relacionadas à Justiça do Trabalho, o que é compatível com a necessidade de uma associação comunitária de Goiânia que atue na área de assistência social, cultura, educação e esporte, desde que possua capacidade técnica e regularidade fiscal.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria comprovar sua regularidade fiscal federal, regularidade do FGTs, regularidade trabalhista, apresentar contrato social e alterações, atestado de capacidade técnica e garantir que seu objeto seja compatível com o edital.",
+        "proximo_passo": "Verificar se há prazo de inscrição e se a associação comunitária atende aos requisitos do edital, como regularidade fiscal e capacidade técnica.",
+        "risco": "O prazo de inscrição não foi encontrado, o que pode impedir a participação da associação no processo de credenciamento."
+      },
+      "erro": null,
+      "segundos": 743,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": null,
-      "fontes_oficiais": 0,
-      "justificativa": "entidade de outro estado, sem vínculo nacional nem com Goiás (regra do titular de 27/09)",
-      "avaliacao": "falhou: entidade de outro estado, sem vínculo nacional nem com Goiás",
-      "id": "a8b026eec92ee050dabe",
-      "encontrou": {},
-      "financiador": null,
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 5,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "9b629429aba64de24cec",
+      "encontrou": {
+        "Objeto": {
+          "valor": "Credenciamento de associações e/ou cooperativas de catadores de materiais recicláveis para recolhimento e processamento de material reciclável e reutilizável produzido nas dependências da Justiça do Trabalho da 4ª Região",
+          "trecho": "Credenciamento TRT4 n° 01/2023 Credenciamento de associações e/ou cooperativas de catadores de materiais recicláveis para recolhimento e processamento de material reciclável e reut",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "trecho": "Órgão TRIBUNAL SUPERIOR DO TRABALHO",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "RS",
+          "trecho": "Cidade Porto Alegre — RS",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Certidão de regularidade fiscal federalVálida na data da sessão, Certificado de regularidade do FGTSEmitido nos últimos 30 dias, Prova de regularidade trabalhistaCNDT sem débitos, Contrato social e alteraçõesObjeto compatível com o edital, Atestado de capacidade técnicaServiço semelhante, com quanti",
+          "trecho": "Certidão de regularidade fiscal federalVálida na data da sessão\nCertificado de regularidade do FGTSEmitido nos últimos 30 dias\nProva de regularidade trabalhistaCNDT sem débitos\nCon",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "TRIBUNAL SUPERIOR DO TRABALHO",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "financiador_programa_edital",
+        "financiador_regulamento"
+      ]
     }
   ],
   "contagem": {
