@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T19:47:22+00:00",
+  "em": "2026-10-28T20:05:57+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T19:32:42+00:00",
+  "ultimo_voo": "2026-10-28T19:49:24+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,60 +39,94 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 3,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.0
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 15.9
   },
   "missoes": [
     {
-      "em": "2026-10-28T19:32:42+00:00",
+      "em": "2026-10-28T19:49:24+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "SES-GO - chamamento para gestão/serviços de unidade de saúde — Goiás — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": 0,
+      "alvo": "Santana — Justiça do Amapá destina mais de R$ 450 mil em verbas pecuniárias a projetos sociais — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 9,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.diariodoamapa.com.br/cadernos/cidades/justica-do-amapa-abre-inscricoes-para-instituicoes-interessadas-em-receber-recursos-de-penas-pecuniarias/",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações comprovadas sobre o edital mencionado.",
-        "para_a_amc": null,
-        "proximo_passo": null,
-        "risco": null
+        "serve_como_fonte": "sim",
+        "por_que": "O texto menciona o prazo de inscrição e apresentação dos projetos como sendo de 2 de junho até 1º de julho de 2025.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria atuar diretamente na execução penal, no apoio à ressocialização de apenados, no atendimento às vítimas de crimes ou na p e manter, por maior tempo, número expressivo de pessoas em cumprimento de prestação de serviços à comunidade.",
+        "proximo_passo": "A associação comunitária deve se inscrever no prazo de 2 de junho até 1º de julho de 2025, apresentando projetos que atendam aos requisitos estabelecidos.",
+        "risco": "O prazo de inscrição pode expirar sem que a associação comunitária se inscreva, impedindo o acesso ao recurso."
       },
       "erro": null,
-      "segundos": 840,
+      "segundos": 954,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-85df3ba69786",
-      "encontrou": {},
-      "financiador": "SES-GO",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso",
+      "id": "op-58234d11f0b6",
+      "encontrou": {
+        "Objeto": {
+          "valor": "recebimento de verbas de prestação pecuniária e demais medidas alternativas impostas pelas Varas Criminais",
+          "trecho": "recebimento de verbas de prestação pecuniária e demais medidas alternativas impostas pelas Varas Criminais",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O texto menciona o prazo de inscrição e apresentação dos projetos como sendo de 2 de junho até 1º de julho de 2025.",
+          "trecho": "O período de inscrições e apresentação dos projetos é de 2 de junho até 1º de julho de 2025 [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Valor": {
+          "valor": "destina mais de R$ 450 mil em verbas pecuniárias a projetos sociais",
+          "trecho": "Santana — Justiça do Amapá destina mais de R$ 450 mil em verbas pecuniárias a projetos sociais",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Tribunal de Justiça do Amapá (TJAP)",
+          "trecho": "O Tribunal de Justiça do Amapá (TJAP), por meio da Central de Garantias e Execução de Penas e Medidas Alternativas da Comarca de Macapá",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "AP",
+          "trecho": "Comarca de Macapá",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "saude",
+          "trecho": "segurança pública, saúde, educação, assistência e geração de renda",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "mantenham, por maior tempo, número expressivo de pessoas em cumprimento de prestação de serviços à comunidade, atuem diretamente na execução penal, no apoio à ressocialização de apenados, no atendimento às vítimas de crimes ou na p",
+          "trecho": "Terão preferência entidades que mantenham, por maior tempo, número expressivo de pessoas em cumprimento de prestação de serviços à comunidade. Também serão priorizadas instituições",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Justiça do Amapá",
       "indicios": [],
       "rotas": [
         "financiador_programa_edital",
@@ -100,7 +134,7 @@
         "financiador_pdf",
         "financiador_ano",
         "governo",
-        "parceiro"
+        "programa_puro"
       ]
     }
   ],
