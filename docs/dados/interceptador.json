@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T10:41:50+00:00",
+  "em": "2026-10-28T10:59:52+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T10:26:14+00:00",
+  "ultimo_voo": "2026-10-28T10:43:45+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,75 +48,55 @@
     },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.9
+    "tempo_medio_min": 15.3
   },
   "missoes": [
     {
-      "em": "2026-10-28T10:26:14+00:00",
+      "em": "2026-10-28T10:43:45+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Regulamenta o cadastramento de entidades e órgãos para recebimento de bens e valores e a prestação de contas — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 7,
-      "dispensados": 1,
+      "alvo": "Regulamento do Prêmio Goiás Mais Transparente — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 3,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Órgão / financiador",
+        "Requisitos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://biblioteca.mpf.mp.br/server/api/core/bitstreams/f0a50f1b-b873-482a-b98b-52d48e4b5d65/content",
+      "pagina_oficial": "https://transparencia.go.gov.br/8a-edicao-do-premio-goias-mais-transparente/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto menciona que o objetivo é regulamentar o cadastramento de entidades e órgãos para recebimento de bens e valores e a prestação de contas, o que é relevante para a AMC.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria informar a área temática de sua atuação e seguir os requisitos mencionados no texto, que incluem documento ou exigência especificada.",
-        "proximo_passo": "Consultar os anexos mencionados no edital para obter mais detalhes sobre os requisitos e procedimentos.",
-        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a associação de se inscrever no prazo correto."
+        "por_que": "O regulamento menciona o Território como GO e a Esfera como estadual, indicando que o Prêmio Goiás Mais Transparente é uma fonte válida para organizações da sociedade civil no Estado de Goiás.",
+        "para_a_amc": "Para acessar o prêmio, uma associação comunitária de Goiânia precisaria verificar os anexos mencionados (2 anexo(s)) para obter informações detalhadas sobre requisitos, área de atuação e outros critérios de elegibilidade.",
+        "proximo_passo": "Consultar os anexos do regulamento para entender os requisitos e critérios de participação.",
+        "risco": "A falta de informações específicas como prazo de inscrição, objeto e requisitos pode impedir a associação de se qualificar adequadamente para o prêmio."
       },
       "erro": null,
-      "segundos": 897,
+      "segundos": 920,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-2333f2d2746d",
+      "fontes_oficiais": 2,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-1b535dc30aa3",
       "encontrou": {
-        "Objeto": {
-          "valor": "Regulamenta o cadastramento de entidades e órgãos para recebimento de bens e valores e a prestação de contas",
-          "trecho": "Regulamenta o cadastramento de pessoas jurídicas de direito privado sem fins lucrativos e de instituições, entidades e órgãos públicos federais, estaduais, distritais ou municipais",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Ministério Público Federal",
-          "trecho": "MINISTÉRIO PÚBLICO FEDERAL",
-          "oficial": true,
-          "dispensado": false
-        },
         "Território": {
           "valor": "GO",
-          "trecho": "Ministério Público Federal",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "dispensado — O texto menciona que os interessados devem informar a área temática de sua atuação.",
-          "trecho": "Os interessados devem informar, sempre que possível, a área temática de sua atuação.",
-          "oficial": false,
-          "dispensado": true
-        },
-        "Requisitos": {
-          "valor": "documento ou exigência",
-          "trecho": "Os editais devem seguir o padrão mínimo estabelecido no Anexo I desta Portaria, sem prejuízo de complementação que as unidades do MPF considerarem pertinentes de acordo com as espe",
+          "trecho": "No Estado de Goiás",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "MINISTÉRIO PÚBLICO FEDERAL",
+      "financiador": "Controladoria-Geral do Estado - CGGEE",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
