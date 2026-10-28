@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T03:35:21+00:00",
+  "em": "2026-10-28T03:49:42+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T03:33:01+00:00",
+  "ultimo_voo": "2026-10-28T03:37:15+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,44 +43,80 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 2,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 1.6
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 11.8
   },
   "missoes": [
     {
-      "em": "2026-10-28T03:33:01+00:00",
+      "em": "2026-10-28T03:37:15+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "0 · PNCP · faltam Resultado, Prazo de recurso, Requisitos, Modalidade, Área de atuação",
-      "alvo": "FUNDACAO JOAQUIM NABUCO FUNDAJ — Realização de concurso de premiação destinado à seleção de Práticas Pedagógic… — Brasil",
+      "alvo": "CONSELHO DE ARQUITETURA E URBANISMO DO ESTADO DE MINAS GERAIS — O concurso PRÊMIO DE BOAS PRÁTICAS URBANAS: AMBIENTAL, SANEAMENTO E SOCIAL - 2026, visa a seleção e premiação de 05 (cinco) projetos, obras ou instalações arquitetônicas que tenham sido realizadas em qualquer município m",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 5,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "nenhuma fonte legível",
-      "segundos": 96,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
+      ],
+      "pagina_oficial": "https://radargeral.com.br/minas-gerais/conselho-de-arquitetura-e-urbanismo-de-minas-abre-inscricoes-para-premio-de-boas-praticas-urbanas/",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O texto comprovado menciona o objeto, valor, órgão financiador e território do edital, o que é suficiente para identificar a fonte.",
+        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria verificar se o edital abrange sua região, mesmo que o território seja MG, e se há possibilidade de aliança ou parceria com entidades daquele estado.",
+        "proximo_passo": "Consultar o site do Conselho de Arquitetura e Urbanismo de Minas Gerais para obter informações adicionais sobre o edital.",
+        "risco": "O território do edital é MG, o que pode impedir que uma associação de Goiânia participe, a menos que haja aliança ou parceria com entidades do estado de Minas Gerais."
+      },
+      "erro": null,
+      "segundos": 709,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 5,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: nenhuma fonte legível",
-      "id": "op-op-c29ea5dde3a2",
-      "encontrou": {},
-      "financiador": "FUNDACAO JOAQUIM NABUCO FUNDAJ",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "eedf3e2c1d25c3dfbbc2",
+      "encontrou": {
+        "Objeto": {
+          "valor": "reconhecer projetos que promovam o desenvolvimento sustentável nas cidades do estado",
+          "trecho": "visa reconhecer projetos que promovem o desenvolvimento sustentável nas cidades do estado",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "até R$ 45 mil",
+          "trecho": "Os projetos vencedores receberão prêmios de até R$ 45 mil",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Conselho de Arquitetura e Urbanismo de Minas Gerais",
+          "trecho": "Conselho de Arquitetura e Urbanismo de Minas Gerais (CAU/MG)",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "MG",
+          "trecho": "Conselho de Arquitetura e Urbanismo de Minas Gerais (CAU/MG)",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "CONSELHO DE ARQUITETURA E URBANISMO DO ESTADO DE MINAS GERAIS",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
