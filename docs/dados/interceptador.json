@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T10:10:04+00:00",
+  "em": "2026-10-28T10:24:20+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T09:55:05+00:00",
+  "ultimo_voo": "2026-10-28T10:12:11+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,17 +48,17 @@
     },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.3
+    "tempo_medio_min": 11.7
   },
   "missoes": [
     {
-      "em": "2026-10-28T09:55:05+00:00",
+      "em": "2026-10-28T10:12:11+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prêmios e Reconhecimentos — Goiás — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 2,
+      "alvo": "Rede Municipal de Pontos de Cultura de Goiânia — Política Nacional Cultura Viva — Goiás / Goiânia — Goiás / Goiânia",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -66,52 +66,62 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Anexos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://culturaviva.cultura.gov.br/site/certificados/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o objeto como 'Prêmios e Reconhecimentos' e o financiador como 'Assaí Atacadista', indicando que é uma fonte válida para informações sobre premiações.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria se inscrever no edital de Prêmios e Reconhecimentos do Assaí Atacadista, apresentando projetos alinhados ao objeto do edital.",
-        "proximo_passo": "Consultar o edital completo do Assaí Atacadista para obter detalhes sobre os requisitos e o processo de inscrição.",
-        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se inscrever adequadamente no edital."
+        "por_que": "O texto fornece informações sobre o Objeto, Órgão / financiador, Território, Esfera, Requisitos e Área de atuação relacionados à Rede Municipal de Pontos de Cultura de Goiânia.",
+        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisa preencher um formulário específico com histórico atualizado e comprovação de atuação, assinar Termos de Adesão à PNCV e Termos de Uso e Privacidade.",
+        "proximo_passo": "Consultar o formulário específico e os Termos de Adesão à PNCV e Termos de Uso e Privacidade para preenchimento e assinatura.",
+        "risco": "A falta de informações sobre prazo de inscrição pode impedir a associação de se inscrever no prazo correto."
       },
       "erro": null,
-      "segundos": 860,
+      "segundos": 700,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-92e2b6527996",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-8380619ab8a3",
       "encontrou": {
         "Objeto": {
-          "valor": "Prêmios e Reconhecimentos",
-          "trecho": "Prêmios e Reconhecimentos | Assaí Atacadista",
-          "oficial": false,
+          "valor": "reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura",
+          "trecho": "A Certificação Simplificada como Ponto ou Pontão de Cultura é o reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura pela Secretaria de Cidadania e D",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Assaí Atacadista",
-          "trecho": "Prêmios e Reconhecimentos | Assaí Atacadista",
-          "oficial": false,
+          "valor": "Secretaria de Cidadania e Diversidade Cultural do Ministério da Cultura",
+          "trecho": "A Certificação Simplificada como Ponto ou Pontão de Cultura é o reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura pela Secretaria de Cidadania e D",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "A Plataforma Rede Cultura Viva é o sistema responsável pelo registro, identificação, reconhecimento, divulgação, georreferenciamento, comunicação, interação e articulação da Rede C",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "A Certificação Simplificada como Ponto ou Pontão de Cultura é o reconhecimento de entidades e coletivos culturais como Pontos ou Pontões de Cultura pela Secretaria de Cidadania e D",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Formulário específico preenchido, contendo o histórico atualizado e a comprovação de atuação da entidade ou coletivo cul, Termos de Adesão à PNCV, documento no qual a entidade ou coletivo cultural afirmará seu compromisso com os objetivos da , Termos de Uso e Privacidade, documento no qual a entidad",
+          "trecho": "Formulário específico preenchido, contendo o histórico atualizado e a comprovação de atuação da entidade ou coletivo cultural no campo da cultura e as atividades desenvolvidas em r",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Assaí Atacadista",
+      "financiador": "Ministério da Cultura",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
