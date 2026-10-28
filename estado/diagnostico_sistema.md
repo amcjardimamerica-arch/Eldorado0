@@ -1,7 +1,7 @@
-# Diagnóstico do sistema · 2026-10-28 02:57 UTC
+# Diagnóstico do sistema · 2026-10-28 05:48 UTC
 
 ## Cumprimento da finalidade · índice geral 58%
-- Motores: 77% (atencao) — todo motor ativo lê dentro da sua cadência
+- Motores: 74% (atencao) — todo motor ativo lê dentro da sua cadência
 - Maestro: 8% (falha) — cobertura completa do dia planejado
 - Rede neural: 99% (ok) — discernimento (AUC) de pelo menos 0,85
 - Biblioteca: 100% (ok) — toda oportunidade aberta aplicável com livro existente
@@ -74,49 +74,51 @@
 - itens que mais faltam: {'Prazo de recurso': 144, 'Anexos': 136, 'Requisitos': 133, 'Prazo de inscrição': 129, 'Valor': 127, 'Resultado': 125, 'Objeto': 122, 'Território': 119, 'Modalidade': 99, 'Área de atuação': 87, 'Órgão / financiador': 83, 'Esfera': 79}
 
 ## Sistemas
-- motores: 33 funcionando · 10 em falha · 2 inativos · 3 com leitura parcial
-  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 9 dia(s) (239 h); última leitura 18/10 00:25
-  - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 9 dia(s) (238 h); última leitura 18/10 01:27
-  - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 3 dia(s) (87 h); última leitura 24/10 08:16
-  - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 9 dia(s) (238 h); última leitura 18/10 01:29
-  - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 9 dia(s) (236 h); última leitura 18/10 03:55
-  - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 9 dia(s) (236 h); última leitura 18/10 03:54
-  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 1 dia(s) (37 h); última leitura 26/10 10:13
-  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 9 dia(s) (236 h); última leitura 18/10 03:49
-  - em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 1 dia(s) (37 h); última leitura 26/10 10:12
-  - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (110 h); última leitura 23/10 08:58
+- motores: 32 funcionando · 11 em falha · 2 inativos · 0 com leitura parcial
+  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 10 dia(s) (242 h); última leitura 18/10 00:25
+  - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 10 dia(s) (241 h); última leitura 18/10 01:27
+  - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 3 dia(s) (90 h); última leitura 24/10 08:16
+  - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 10 dia(s) (241 h); última leitura 18/10 01:29
+  - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 9 dia(s) (238 h); última leitura 18/10 03:55
+  - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 9 dia(s) (238 h); última leitura 18/10 03:54
+  - em falha: Motor Patrocínio Privado — mídia e eventos de Goiás (empresas) — falha — não lê há 1 dia(s) (26 h); última leitura 27/10 00:02
+  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 1 dia(s) (40 h); última leitura 26/10 10:13
+  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 9 dia(s) (238 h); última leitura 18/10 03:49
+  - em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 1 dia(s) (40 h); última leitura 26/10 10:12
+  - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (113 h); última leitura 23/10 08:58
 - maestro: cobertura 7.9% · esgotados 0
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
 - Cartório: 0.6646 certificado · fluxos do GitHub com falha: []
-- saúde: 6 alerta(s) · índice da sala de controle: 51
+- saúde: 6 alerta(s) · índice da sala de controle: 53
 
 ## Integração
 - contagens: {'repositorio_abertas': 209, 'diagnostico_abertas': 209, 'tela_cartoes': 224, 'fichas': 211, 'sala_controle_abertas': 209}
-- idade (h): {'repositorio': 0.0, 'fluxo': 239.1, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 10.9, 'rede_neural': 239.1, 'saude': 11.7}
+- idade (h): {'repositorio': 0.0, 'fluxo': 241.9, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 13.7, 'rede_neural': 241.9, 'saude': 14.6}
 - decisões da titular: 0 · não aplicadas: 0
 
-## Problemas (30)
-- [alta] o comando único não fecha um ciclo há 217.3 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+## Problemas (31)
+- [alta] o comando único não fecha um ciclo há 220.2 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
-- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 9 dia(s) (239 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 9 dia(s) (238 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 3 dia(s) (87 h); última leitura 24/10 08:16 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 9 dia(s) (238 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 9 dia(s) (236 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 9 dia(s) (236 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 1 dia(s) (37 h); última leitura 26/10 10:13 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 9 dia(s) (236 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 1 dia(s) (37 h); última leitura 26/10 10:12 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (110 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
+- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 10 dia(s) (242 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 10 dia(s) (241 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 3 dia(s) (90 h); última leitura 24/10 08:16 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 10 dia(s) (241 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 9 dia(s) (238 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 9 dia(s) (238 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Motor Patrocínio Privado — mídia e eventos de Goiás (empresas) — falha — não lê há 1 dia(s) (26 h); última leitura 27/10 00:02 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 1 dia(s) (40 h); última leitura 26/10 10:13 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 9 dia(s) (238 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 1 dia(s) (40 h); última leitura 26/10 10:12 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 4 dia(s) (113 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 209 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 239.1 h (limite 3 h) → refazer a tela
-- [media] maestro sem atualização há 10.9 h (limite 3 h) → ver o fluxo que gera este dado
-- [media] rede_neural sem atualização há 239.1 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 241.9 h (limite 3 h) → refazer a tela
+- [media] maestro sem atualização há 13.7 h (limite 3 h) → ver o fluxo que gera este dado
+- [media] rede_neural sem atualização há 241.9 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 116 de 126 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
-- [media] avaliação do Cartório com gabarito tem 295.1 h (semanal) → disparar o fluxo 39
+- [media] avaliação do Cartório com gabarito tem 297.9 h (semanal) → disparar o fluxo 39
 - [media] 53 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
-- [media] 112 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
+- [media] 113 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 239 item(ns) esperando a análise do Claude (próxima: 2026-10-27) → ver o fluxo/arquivo indicado
 - [media] saúde · coerência: mapa e lista divergem em GO, __nac__, PR, ES, RJ → refazer tela e indicadores
 - [media] saúde · gerador: o gerador principal do painel falhou depois da última geração → ver o fluxo/arquivo indicado
@@ -130,7 +132,7 @@
 ## Workflow (estrutura de 15/10)
 - comando único: 0 ciclo(s) hoje · 48 vermelho(s) · 0 etapa(s) com erro · fases puladas {}
 - cobertura do dia: 7.9% de 126 motores
-- retentativa: {'aguardando_retentativa': 1195, 'fora_da_fila': 112, 'fora_da_fila_por_escopo': {'outras-oportunidades-1': 7, 'outras-oportunidades-6': 5, 'recorrencia': 4, 'outras-oportunidades-5': 7, 'outras-oportunidades-8': 8, 'outras-oportunidades-3': 10, 'f260-captacao-044': 1, 'outras-oportunidades-2': 4, 'plat-empresas-editais-incentivados': 3, 'f260-captacao-238': 2, 'cartorio': 46, 'outras-oportunidades-7': 5, 'f260-captacao-242': 1, 'f260-captacao-224': 1, 'empresas-incentivadas': 2, 'f260-espalhado-sistema-mirassoldoeste-mt-gov-br': 1, 'f260-captacao-218': 1, 'f260-captacao-113': 3, 'outras-oportunidades-4': 1}, 'regra': 'volta em 30 min; sai após 5 tentativas com o mesmo erro'} · leitura parcial na fila: 1054
+- retentativa: {'aguardando_retentativa': 1193, 'fora_da_fila': 113, 'fora_da_fila_por_escopo': {'outras-oportunidades-1': 7, 'outras-oportunidades-6': 5, 'recorrencia': 4, 'outras-oportunidades-5': 7, 'outras-oportunidades-8': 8, 'outras-oportunidades-3': 10, 'f260-captacao-044': 1, 'outras-oportunidades-2': 4, 'plat-empresas-editais-incentivados': 3, 'f260-captacao-238': 2, 'cartorio': 46, 'outras-oportunidades-7': 5, 'f260-captacao-242': 1, 'f260-captacao-224': 1, 'empresas-incentivadas': 3, 'f260-espalhado-sistema-mirassoldoeste-mt-gov-br': 1, 'f260-captacao-218': 1, 'f260-captacao-113': 3, 'outras-oportunidades-4': 1}, 'regra': 'volta em 30 min; sai após 5 tentativas com o mesmo erro'} · leitura parcial na fila: 1054
 - curadoria do link oficial: {'em curadoria': 74, 'reprovado': 50, 'aprovado': 40, 'sem link oficial': 26}
 - validação por exceção: trava fechada: acerto do Cartório 77.4% < 85.0% — candidatas vão à frente da conferência humana
 - auditorias: {'gabarito_do_cartorio': {'em': '2026-10-15T19:53:25+00:00', 'acerto_pct': 77.4, 'documentos_lidos': 142}, 'varredura_referencia': '2026-10-01_2026-10-15', 'robots': {'em': '2026-10-15T10:07:53+00:00', 'motores_com_bloqueio': 5}, 'ponte': {'ponte_ok': 7, 'direto_ok': 5, 'so_pela_ponte': ['ALEGO · SPL (proposições)', 'MPGO'], 'nenhum': ['TJGO · portal'], 'total': 8}}
@@ -145,4 +147,4 @@
 - certificar · itens certificados pelo Cartório: **correto** (0 de 2706) — regra: todo item certificado tem trecho literal e documento
 - validar · validação por exceção: **correto** (0 de 0) — regra: só valida sozinho com acerto do Cartório ≥ 85% no gabarito e link oficial aprovado na curadoria
 - farol · oportunidades prontas para o Farol: **correto** (0 de 10) — regra: pronta só com prazo vigente e link oficial aprovado na curadoria
-- biblioteca · livros da Biblioteca: **correto** (0 de 2715) — regra: ato legislativo não gera livro
+- biblioteca · livros da Biblioteca: **correto** (0 de 2717) — regra: ato legislativo não gera livro
