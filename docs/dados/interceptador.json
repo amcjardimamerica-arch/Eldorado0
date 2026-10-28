@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T01:21:17+00:00",
+  "em": "2026-10-28T01:35:04+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T01:10:42+00:00",
+  "ultimo_voo": "2026-10-28T01:23:30+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,65 +48,52 @@
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.7
+    "tempo_medio_min": 11.0
   },
   "missoes": [
     {
-      "em": "2026-10-28T01:10:42+00:00",
+      "em": "2026-10-28T01:23:30+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "0 · PNCP · faltam Resultado, Prazo de recurso, Requisitos, Modalidade, Área de atuação",
-      "alvo": "DEFENSORIA PUBLICA DO ESTADO DO PARANA — O objeto do presente credenciamento selecionar associações e/ou cooperativas de catadores de materiais recicláveis para o recolhimento e a ",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "(UO) ESP-CIA.PTA DE TRENS METROPS-CPTM — Credenciamento de associações e/ou cooperativas de catadores de materiais recicláveis para coleta, transporte, fragmentação/trituração e de",
+      "qualidade": "insuficiente",
+      "comprovados": 1,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
+        "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Território",
+        "Esfera",
         "Requisitos",
         "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://pncp.gov.br/api/consulta/v1/orgaos/13950733000139/compras/2026/2",
+      "pagina_oficial": "https://pncp.gov.br/app/editais/71832679000123/2026/64",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O objeto do credenciamento menciona a seleção de associações e cooperativas de catadores de materiais recicláveis, o que indica que a Defensoria Pública do Estado do Paraná está buscando parcerias com esse tipo de organização.",
-        "para_a_amc": "Uma associação comunitária de Goiânia, atuando em áreas como assistência social, cultura, educação e esporte, precisaria se alinhar ao objeto do credenciamento, ou seja, estar envolvida com catadores de materiais recicláveis, o que não está alinhado com suas áreas de atuação.",
-        "proximo_passo": "Verificar se há outros editais que sejam alinhados com as áreas de atuação da associação comunitária de Goiânia.",
-        "risco": "A associação comunitária de Goiânia não está alinhada ao objeto do credenciamento, o que pode impedir seu acesso ao edital."
+        "por_que": "O PNCP é a fonte oficial de informações sobre editais de contratações públicas, incluindo credenciamentos para associações e cooperativas.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital está disponível no PNCP, se atende aos requisitos do edital e se inscrever conforme as normas estabelecidas.",
+        "proximo_passo": "Consultar o PNCP para obter detalhes sobre o edital e verificar se a associação se enquadra nos critérios de elegibilidade.",
+        "risco": "A falta de informações detalhadas sobre requisitos, prazos e área de atuação pode impedir a participação da associação no processo."
       },
       "erro": null,
-      "segundos": 584,
+      "segundos": 662,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de recurso, Valor, Requisitos, Anexos",
-      "id": "0dfc53b2787c26812fd2",
+      "fontes_oficiais": 1,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "4b7b01fdcbb766bdb605",
       "encontrou": {
-        "Objeto": {
-          "valor": "selecionar associações e/ou cooperativas de catadores de materiais recicláveis para o recolhimento e a destinação de resíduos recicláveis descartados pelas unidades de Atendimento Central, Administração Central, Núcleos Especializados e Centro de Distribuição e Logística da Defensoria Pública do Estado do Paraná, localizados em Curitiba e Colombo",
-          "trecho": "O objeto do presente credenciamento selecionar associações e/ou cooperativas de catadores de materiais recicláveis para o recolhimento e a destinação de resíduos recicláveis descar",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2025-09-25 a 2026-12-31",
-          "trecho": "dataAberturaProposta\":\"2025-09-25T10:30:00\",\"dataEncerramentoProposta\":\"2026-12-31T10:10:00",
-          "oficial": true,
-          "dispensado": false
-        },
         "Órgão / financiador": {
-          "valor": "DEFENSORIA PUBLICA DO ESTADO DO PARANA",
-          "trecho": "\"razaoSocial\":\"DEFENSORIA PUBLICA DO ESTADO DO PARANA\"",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "PR",
-          "trecho": "\"ufSigla\":\"PR\",\"municipioNome\":\"Curitiba\"",
+          "valor": "PNCP - Portal Nacional de Contratações Públicas",
+          "trecho": "PNCP - Portal Nacional de Contratações Públicas",
           "oficial": true,
           "dispensado": false
         }
