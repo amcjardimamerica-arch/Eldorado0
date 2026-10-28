@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T20:22:08+00:00",
+  "em": "2026-10-28T20:38:59+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T20:08:11+00:00",
+  "ultimo_voo": "2026-10-28T20:25:08+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,15 +48,15 @@
     },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.2
+    "tempo_medio_min": 13.1
   },
   "missoes": [
     {
-      "em": "2026-10-28T20:08:11+00:00",
+      "em": "2026-10-28T20:25:08+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Secretaria de Estado da Cultura (Secult) — Chamamentos Públicos Outros – 2021 — Goiás",
+      "alvo": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás abre chamamento público para execução do Projeto C… — Goiás",
       "qualidade": "insuficiente",
       "comprovados": 5,
       "dispensados": 0,
@@ -67,41 +67,47 @@
         "Prazo de recurso",
         "Valor",
         "Requisitos",
-        "Área de atuação"
+        "Anexos"
       ],
       "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "Porque o texto comprovado fornece informações sobre o objeto e o financiador do chamamento público, o que é essencial para entender a base de financiamento.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do chamamento, que é o evento musical O Canto da Primavera, e demonstrar como sua atuação pode contribuir para o desenvolvimento cultural e social da região, além de seguir as diretrizes e anexos fornecidos pela Secult.",
-        "proximo_passo": "Consultar os anexos disponibilizados pela Secult para entender as diretrizes específicas e os requisitos necessários para participar do chamamento.",
-        "risco": "A falta de informações sobre prazos, requisitos e área de atuação pode impedir a associação de se preparar adequadamente para o processo de inscrição."
+        "por_que": "O edital foi comprovado com informações sobre o objeto e o financiador, o que permite identificar a possibilidade de acesso para uma associação comunitária.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando um projeto alinhado ao objeto do edital, que é a execução do Projeto Canto da Primavera, e atender aos requisitos estabelecidos pelo edital.",
+        "proximo_passo": "Consultar o edital completo para verificar os requisitos e prazos de inscrição, mesmo que não tenham sido encontrados no texto fornecido.",
+        "risco": "A falta de informações sobre prazos, requisitos e anexos pode impedir a associação de se inscrever corretamente no edital."
       },
       "erro": null,
-      "segundos": 791,
+      "segundos": 788,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 4,
+      "fontes_oficiais": 2,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-3b4f859a9b9b",
+      "id": "op-34fe6648d23a",
       "encontrou": {
         "Objeto": {
-          "valor": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na cidade de Pirenópolis, desde o ano 2000.",
+          "valor": "O edital financia a execução do Projeto Canto da Primavera.",
           "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura (Secult)",
-          "trecho": "Secretaria de Estado da Cultura (Secult)",
-          "oficial": true,
+          "valor": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás",
+          "trecho": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás abre chamamento público para execução do Projeto C…",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Secretaria de Estado da Cultura (Secult)",
+          "trecho": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás abre chamamento público para execução do Projeto C…",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
           "oficial": true,
           "dispensado": false
         }
@@ -109,12 +115,7 @@
       "financiador": "Secretaria de Estado da Cultura (Secult)",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
