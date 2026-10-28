@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T08:21:47+00:00",
+  "em": "2026-10-28T08:37:31+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T08:02:27+00:00",
+  "ultimo_voo": "2026-10-28T08:23:46+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,65 +48,73 @@
     },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 18.7
+    "tempo_medio_min": 13.1
   },
   "missoes": [
     {
-      "em": "2026-10-28T08:02:27+00:00",
+      "em": "2026-10-28T08:23:46+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Projeto de segurança alimentar comunitária — Goiás — Goiás — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
-      "dispensados": 0,
+      "alvo": "Prorrogado prazo para submissão de propostas ao edital de Conservação da Biodiversidade Legado Verdes do Cerra… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 6,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Território",
-        "Requisitos",
-        "Anexos"
+        "Requisitos"
       ],
-      "pagina_oficial": "https://goias.gov.br/social/programa-maes-de-goias-lista-de-beneficiarias/",
+      "pagina_oficial": "https://goias.gov.br/fapeg/prazo-para-inscricao-no-edital-de-conservacao-da-biodiversidade-legado-verdes-do-cerrado-termina-no-proximo-dia-23/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O Governo do Estado de Goiás é o órgão financiador do projeto, o que o torna uma fonte válida para obtenção de recursos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando um projeto de segurança alimentar comunitária alinhado à área de atuação da assistência social, além de cumprir os requisitos estabelecidos pelo edital.",
-        "proximo_passo": "Consultar o edital completo para verificar os requisitos e o processo de inscrição.",
-        "risco": "A falta de informações sobre os requisitos e o prazo de inscrição pode impedir a associação de se candidatar adequadamente."
+        "por_que": "O edital foi prorrogado e o prazo de inscrição foi explicitado no título da notícia, indicando que a informação é válida e atualizada.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é a conservação da biodiversidade, e apresentar propostas que se encaixem na área de atuação do meio ambiente, além de seguir os anexos exigidos.",
+        "proximo_passo": "Verificar os anexos do edital e se alinhar com o objeto e área de atuação do edital para elaborar uma proposta adequada.",
+        "risco": "A falta de conhecimento sobre os anexos e requisitos específicos do edital pode impedir a elaboração de uma proposta adequada."
       },
       "erro": null,
-      "segundos": 1124,
+      "segundos": 786,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 3,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-7a832a21dc7e",
+      "fontes_oficiais": 4,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Território",
+      "id": "op-3cf5a29482ce",
       "encontrou": {
+        "Objeto": {
+          "valor": "Conservação da Biodiversidade Legado Verdes do Cerrado",
+          "trecho": "Conservação da Biodiversidade Legado Verdes do Cerrado",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O prazo de inscrição foi explicitado no título da notícia.",
+          "trecho": "Prazo para inscrição no edital de Conservação da Biodiversidade Legado Verdes do Cerrado termina no próximo dia 23 [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
+        },
         "Órgão / financiador": {
-          "valor": "Governo do Estado de Goiás",
-          "trecho": "GOIAS.GOV.BR",
+          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
+          "trecho": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "assistencia_social",
-          "trecho": "assistencia_social",
+          "valor": "meio_ambiente",
+          "trecho": "Conservação da Biodiversidade Legado Verdes do Cerrado",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Governo do Estado de Goiás",
+      "financiador": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador"
       ]
     }
   ],
