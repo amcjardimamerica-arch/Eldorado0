@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-28T15:40:27+00:00",
+  "em": "2026-10-28T15:53:57+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-28T15:30:04+00:00",
+  "ultimo_voo": "2026-10-28T15:42:25+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,42 +39,88 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.9
+    "tempo_medio_min": 11.0
   },
   "missoes": [
     {
-      "em": "2026-10-28T15:30:04+00:00",
+      "em": "2026-10-28T15:42:25+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Rio Verde — Prefeitura divulga novos editais da Lei Paulo Gustavo — Goiás / Rio Verde",
-      "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "alvo": "Rio verde — edital de chamamento público nº 001/2026 – programa orgulho rio-verdense (bolsa atleta) — Goiás / Rio Verde",
+      "qualidade": "parcial",
+      "comprovados": 7,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 597,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor"
+      ],
+      "pagina_oficial": "https://www.rioverde.go.gov.br/wp-content/uploads/2026/07/Edital-001-2026-Programa-Orgulho-Rio-Verdense.pdf",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações sobre o objeto, órgão financiador, território, esfera, requisitos e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar aos requisitos do edital, como residir no Município de Rio Verde há pelo menos 01 (um) ano, não receber outra bolsa de incentivo ou auxílio financeiro similar destinado ao esporte e apresentar currículo esportivo referente ao ano anterior ao da inscrição no Programa.",
+        "proximo_passo": "Verificar se a associação comunitária atende aos requisitos do edital e se alinha à área de atuação do programa.",
+        "risco": "A associação comunitária pode não atender aos requisitos do edital, como residir no Município de Rio Verde há pelo menos 01 (um) ano ou não ter currículo esportivo adequado."
+      },
+      "erro": null,
+      "segundos": 658,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-b5ab25c75864",
-      "encontrou": {},
-      "financiador": null,
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-d80284a7922b",
+      "encontrou": {
+        "Objeto": {
+          "valor": "apoiar e incentivar atletas e paratletas, não profissionais, que representem o Município de Rio Verde em competições oficiais",
+          "trecho": "destinado a apoiar e incentivar atletas e paratletas, não profissionais, que representem o Município de Rio Verde em competições oficiais",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Prefeitura Municipal de Rio Verde-GO",
+          "trecho": "Prefeitura Municipal de Rio Verde - GO",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Residir no Município de Rio Verde há, no mínimo, 01 (um) ano;",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "esporte",
+          "trecho": "Programa Orgulho Rio-verdense (Bolsa Atleta)",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Residir no Município de Rio Verde há, no mínimo, 01 (um) ano;, Não receber outra bolsa de incentivo ou auxílio financeiro similar destinado ao esporte, seja de origem municipal, estad, Apresentar currículo esportivo referente ao ano anterior ao da inscrição no Programa,",
+          "trecho": "I. Residir no Município de Rio Verde há, no mínimo, 01 (um) ano;\nII. Não receber outra bolsa de incentivo ou auxílio financeiro similar destinado ao esporte, seja de origem municip",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Prefeitura Municipal de Rio Verde",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador"
+      ]
     }
   ],
   "contagem": {
