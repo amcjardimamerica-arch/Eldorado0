@@ -1,5 +1,5 @@
 {
- "em": "2026-10-27T23:43:12+00:00",
+ "em": "2026-10-28T01:18:01+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,21 +7,25 @@
   "alterar_rota": 59,
   "rota_nova": 53,
   "via_ponte": 5,
-  "exemplos_da_rede": 41075
+  "exemplos_da_rede": 41152
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.5449
+    3.4921
    ],
    [
     "origem:rota original",
-    3.3813
+    3.4449
    ],
    [
     "origem:biblioteca",
-    2.7434
+    2.9569
+   ],
+   [
+    "tld:br",
+    2.6142
    ],
    [
     "tok:secult",
@@ -36,6 +40,10 @@
     2.3975
    ],
    [
+    "tok:transparencia",
+    2.3685
+   ],
+   [
     "tok:deputados",
     2.3645
    ],
@@ -48,16 +56,8 @@
     2.2149
    ],
    [
-    "tok:transparencia",
-    2.13
-   ],
-   [
-    "tld:br",
-    2.1073
-   ],
-   [
     "tok:edital",
-    2.0474
+    2.0278
    ]
   ],
   "piores_sinais": [
@@ -75,19 +75,19 @@
    ],
    [
     "tok:2026",
-    -2.8783
-   ],
-   [
-    "tok:content",
-    -3.5896
-   ],
-   [
-    "tok:uploads",
-    -3.5896
+    -2.9009
    ],
    [
     "origem:padrão",
-    -3.6734
+    -3.5591
+   ],
+   [
+    "tok:content",
+    -3.6122
+   ],
+   [
+    "tok:uploads",
+    -3.6122
    ],
    [
     "origem:câmara",
@@ -387,7 +387,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-27T10:09:41+00:00",
+    "em": "2026-10-28T01:17:20+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1604,11 +1604,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 4,
-    "aprendido_em": "2026-10-27T05:37:53+00:00"
+    "aprendido_em": "2026-10-28T01:16:53+00:00"
    },
    "afinado": {
-    "em": "2026-10-27T05:37:53+00:00",
-    "testes": 13,
+    "em": "2026-10-28T01:16:53+00:00",
+    "testes": 14,
     "melhor": {
      "url": "https://www.iadb.org/sitemap.xml",
      "via": "direto",
@@ -1768,10 +1768,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 15,
-    "aprendido_em": "2026-10-27T10:10:29+00:00"
+    "aprendido_em": "2026-10-28T01:17:38+00:00"
    },
    "afinado": {
-    "em": "2026-10-27T10:10:29+00:00",
+    "em": "2026-10-28T01:17:38+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.unicef.org/sitemap.xml",
@@ -1809,11 +1809,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-27T11:38:37+00:00"
+    "aprendido_em": "2026-10-28T01:17:47+00:00"
    },
    "afinado": {
-    "em": "2026-10-27T11:38:37+00:00",
-    "testes": 13,
+    "em": "2026-10-28T01:17:47+00:00",
+    "testes": 12,
     "melhor": {
      "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
      "via": "direto",
@@ -1892,10 +1892,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-10-27T11:38:50+00:00"
+    "aprendido_em": "2026-10-28T01:18:01+00:00"
    },
    "afinado": {
-    "em": "2026-10-27T11:38:50+00:00",
+    "em": "2026-10-28T01:18:01+00:00",
     "testes": 14,
     "melhor": {
      "url": "https://mariaemilia.org.br/feed",
@@ -1933,11 +1933,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 11,
-    "aprendido_em": "2026-10-27T08:36:53+00:00"
+    "aprendido_em": "2026-10-28T01:17:09+00:00"
    },
    "afinado": {
-    "em": "2026-10-27T08:36:53+00:00",
-    "testes": 13,
+    "em": "2026-10-28T01:17:09+00:00",
+    "testes": 12,
     "melhor": {
      "url": "https://www.ipora.pr.gov.br/",
      "via": "direto",
