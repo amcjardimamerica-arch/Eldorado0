@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T01:11:47+00:00",
+  "em": "2026-10-29T01:28:25+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T01:03:36+00:00",
+  "ultimo_voo": "2026-10-29T01:13:45+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,8 +38,8 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
-    "parciais": 0,
+    "validadas": 0,
+    "parciais": 1,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
@@ -48,80 +48,70 @@
     },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.6
+    "tempo_medio_min": 13.8
   },
   "missoes": [
     {
-      "em": "2026-10-29T01:03:36+00:00",
+      "em": "2026-10-29T01:13:45+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Senador Canedo — Senador Canedo abre inscrições para o Projeto Guardiões Ambientais 2026 — Goiás / Senador Can… — Goiás / Senador Canedo",
-      "qualidade": "validada",
-      "comprovados": 9,
-      "dispensados": 1,
+      "alvo": "Senador Canedo — Senador Canedo abre prazo para recursos da Lei Aldir Blanc — Goiás / Senador Canedo",
+      "qualidade": "parcial",
+      "comprovados": 7,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Requisitos"
       ],
-      "pagina_oficial": "https://senadorcanedo.go.gov.br/senador-canedo-abre-inscricoes-para-o-projeto-guardioes-ambientais-2026/",
+      "pagina_oficial": "https://senadorcanedo.go.gov.br/wp-content/uploads/2023/07/Lei-Aldir-Blanc-14.017-de-29-de-junho-de-2020.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações sobre o Projeto Guardiões Ambientais 2026, incluindo objeto, prazo de inscrição, valor, financiador, território, esfera, requisitos e anexos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever com matrícula na rede de ensino e anexar os documentos exigidos pelo edital para acessar o apoio.",
-        "proximo_passo": "Verificar o prazo de inscrição e preparar os documentos necessários para se inscrever no projeto.",
-        "risco": "O prazo de inscrição não foi especificado, o que pode impedir a participação em tempo hábil."
+        "por_que": "O texto comprovado descreve o objeto, valor, financiador, território e área de atuação do edital, o que é suficiente para identificar a fonte como relevante.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever em editais vinculados ao apoio ao setor cultural, apresentando projetos que se enquadrem nas ações emergenciais descritas no objeto do edital, como atividades artísticas, culturais, educativas ou de economia criativa.",
+        "proximo_passo": "Consultar os anexos disponibilizados para obter informações detalhadas sobre os requisitos, critérios de seleção e processo de inscrição.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se candidatar oportunamente ao edital."
       },
       "erro": null,
-      "segundos": 457,
+      "segundos": 831,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 8,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "op-038d338df133",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Requisitos",
+      "id": "op-5649ec4d88bb",
       "encontrou": {
         "Objeto": {
-          "valor": "educação ambiental e cidadania para crianças e adolescentes de 10 a 14 anos",
-          "trecho": "A iniciativa é voltada a crianças e adolescentes de 10 a 14 anos, matriculados na rede de ensino.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "? a 2026-02-22",
-          "trecho": "As inscrições poderão ser feitas de até 22 de fevereiro",
+          "valor": "ações emergenciais de apoio ao setor cultural por meio de editais, chamadas públicas, prêmios, aquisição de bens e serviços vinculados ao setor cultural e outros instrumentos destinados à manutenção de agentes, de espaços, de iniciativas, de cursos, de produções, de desenvolvimento de atividades de economia criativa e de economia solidária, de produções audiovisuais, de manifestações culturais, bem como à realização de atividades artísticas e culturais que possam ser transmitidas pela internet ou disponibilizadas por meio de redes sociais e outras plataformas digitais",
+          "trecho": "editais, chamadas públicas, prêmios, aquisição de bens e serviços vinculados ao setor cultural e outros instrumentos destinados à manutenção de agentes, de espaços, de iniciativas,",
           "oficial": true,
           "dispensado": false
         },
         "Valor": {
-          "valor": "dispensado — Apoio é em espécie, sem valor em dinheiro.",
-          "trecho": "Estão sendo ofertadas 50 vagas",
-          "oficial": false,
-          "dispensado": true
+          "valor": "R$ 3.000.000.000,00 (três bilhões de reais)",
+          "trecho": "valor de R$ 3.000.000.000,00 (três bilhões de reais)",
+          "oficial": true,
+          "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Senador Canedo",
-          "trecho": "A Prefeitura de Senador Canedo, por meio da Agência Municipal do Meio Ambiente (AMMA), da Secretaria Municipal de Assistência Social e Cidadania (SEMASC) e da Secretaria Municipal ",
+          "valor": "Presidência da República",
+          "trecho": "Presidência da República",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Senador Canedo abre inscrições para o Projeto Guardiões Ambientais 2026 - Prefeitura Municipal de Senador Canedo",
+          "trecho": "para aplicação, pelos Poderes Executivos locais, em ações emergenciais de apoio ao setor cultural por meio de:",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "meio_ambiente",
-          "trecho": "educação ambiental e cidadania",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "matrícula na rede de ensino",
-          "trecho": "A iniciativa é voltada a crianças e adolescentes de 10 a 14 anos, matriculados na rede de ensino.",
+          "valor": "cultura",
+          "trecho": "ações emergenciais de apoio ao setor cultural por meio de:",
           "oficial": true,
           "dispensado": false
         }
