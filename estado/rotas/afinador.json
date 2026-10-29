@@ -1083,12 +1083,12 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-29T12:56:23+00:00",
+  "em": "2026-10-29T14:31:49+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
  "f260-captacao-238": {
-  "em": "2026-10-29T03:51:27+00:00",
+  "em": "2026-10-29T14:31:35+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -2657,8 +2657,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-234": {
-  "em": "2026-10-29T02:20:58+00:00",
-  "testes": 13,
+  "em": "2026-10-29T14:29:19+00:00",
+  "testes": 14,
   "melhor": null,
   "detalhe": [
    {
@@ -2668,22 +2668,13 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
     "url": "https://www.institutounibanco.org.br/",
     "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/feed",
-    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2703,7 +2694,28 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutounibanco.org.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutounibanco.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2720,7 +2732,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -2741,7 +2754,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -2773,7 +2787,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -2794,7 +2809,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    }
   ],
@@ -3910,7 +3926,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-230": {
-  "em": "2026-10-29T02:21:14+00:00",
+  "em": "2026-10-29T14:29:21+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -3925,7 +3941,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaoarcelormittal.org.br/feed",
+    "url": "https://fundacaoarcelormittal.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3935,7 +3951,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaoarcelormittal.org.br/sitemap.xml",
+    "url": "https://fundacaoarcelormittal.org.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4204,8 +4220,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-222": {
-  "em": "2026-10-29T03:49:18+00:00",
-  "testes": 13,
+  "em": "2026-10-29T14:29:26+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -4220,26 +4236,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.fundacaoitau.org.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.fundacaoitau.org.br/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.fundacaoitau.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -4248,6 +4244,16 @@
     "sinais": 0,
     "formato": "sitemap/feed",
     "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.fundacaoitau.org.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -4295,7 +4301,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 67,
+    "links": 66,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -6797,7 +6803,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-252": {
-  "em": "2026-10-29T03:49:24+00:00",
+  "em": "2026-10-29T14:29:30+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -6806,18 +6812,7 @@
     "origem": "rota original",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.facebook.com/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -6828,7 +6823,18 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.facebook.com/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -6859,7 +6865,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -6870,7 +6876,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -6892,7 +6898,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -6903,7 +6909,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -6914,7 +6920,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 34,
+    "links": 35,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -7070,7 +7076,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-espalhado-transparencia-agilicloud-com-br": {
-  "em": "2026-10-29T03:51:40+00:00",
+  "em": "2026-10-29T14:31:49+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
