@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T15:34:47+00:00",
+  "em": "2026-10-29T15:48:35+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T15:22:10+00:00",
+  "ultimo_voo": "2026-10-29T15:36:53+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,74 +39,92 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 6,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.9
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 11.1
   },
   "missoes": [
     {
-      "em": "2026-10-29T15:22:10+00:00",
+      "em": "2026-10-29T15:36:53+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "Inscrições encerradas.",
+      "qualidade": "parcial",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Território",
-        "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://institutosabin.org.br/edital-da-jornada-transformacao-de-2026-e-lancado/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "A Chamada CNPq Nº 34/2026 é uma fonte de financiamento federal voltada para eventos científicos, tecnológicos e de inovação, o que se alinha com a missão de apoio à pesquisa e desenvolvimento.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria identificar um evento científico, tecnológico ou de inovação alinhado com suas atividades de assistência social, cultura, educação ou esporte, e apresentar um projeto comprovando a relevância e o impacto do evento.",
-        "proximo_passo": "Consultar o site oficial do CNPq para obter informações atualizadas sobre a chamada, incluindo prazos e requisitos, mesmo que não estejam disponíveis no texto fornecido.",
-        "risco": "A falta de informações específicas, como prazos, valor e requisitos, pode impedir a associação de se preparar adequadamente para a submissão do projeto."
+        "por_que": "O texto comprovado menciona que as inscrições encerraram, indicando que o edital está finalizado.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no prazo de 2026-06-17 a 2026-07-15, apresentar um empreendimento com foco na resolução de problemas socioambientais, com clareza da proposta e comprometimento com a sustentabilidade financeira.",
+        "proximo_passo": "Verificar se há disponibilidade de recursos e se a associação atende aos requisitos do edital para se inscrever.",
+        "risco": "O prazo de inscrição encerrou, o que pode impedir a associação de se candidatar."
       },
       "erro": null,
-      "segundos": 715,
+      "segundos": 664,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "affa35c4234765879175",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 8,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Área de atuação",
+      "id": "617304ecb5a435912ba3",
       "encontrou": {
         "Objeto": {
-          "valor": "Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação",
-          "trecho": "Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
-          "oficial": false,
+          "valor": "apoiar e impulsionar pessoas interessadas em empreender com foco na resolução de problemas socioambientais",
+          "trecho": "Com o objetivo de apoiar e impulsionar pessoas interessadas em empreender com foco na resolução de problemas socioambientais, o Instituto Sabin lança a edição 2026 do edital da Jor",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-06-17 a 2026-07-15",
+          "trecho": "As inscrições estarão abertas de 17 de junho a 15 de julho de 2026",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 30 mil em capital semente para impulsionar empreendimentos de impacto em todo o Brasil",
+          "trecho": "A Jornada TransformAção 2026, do Instituto Sabin em parceria com a Civicus, expande seu alcance e oferece trilha de capacitação, aumento na oferta de mentorias especializadas e R$ ",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Conselho Nacional de Desenvolvimento Científico e Tecnológico",
-          "trecho": "Conselho Nacional de Desenvolvimento Científico e Tecnológico",
-          "oficial": false,
+          "valor": "Instituto Sabin",
+          "trecho": "A Jornada TransformAção 2026 é uma iniciativa do Instituto Sabin, realizada em parceria com a CIVICUS.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "BR",
+          "trecho": "Podem se inscrever pessoas maiores de 18 anos residentes no Brasil.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "idade mínima de 18 anos, residência no Brasil, atividade principal do negócio seja a geradora do impacto, clareza da proposta, busca por sustentabilidade financeira no mercado, comprometimento com a jornada",
+          "trecho": "Podem se inscrever pessoas maiores de 18 anos residentes no Brasil. O processo seletivo avaliará critérios de enquadramento de negócios de impacto, como a exigência que a atividade",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Conselho Nacional de Desenvolvimento Científico e Tecnológico",
+      "financiador": "Instituto Sabin",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador"
       ]
     }
   ],
