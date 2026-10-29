@@ -1,5 +1,5 @@
 {
- "em": "2026-10-29T06:53:37+00:00",
+ "em": "2026-10-29T08:23:11+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,21 +7,21 @@
   "alterar_rota": 58,
   "rota_nova": 53,
   "via_ponte": 5,
-  "exemplos_da_rede": 42723
+  "exemplos_da_rede": 42797
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.4712
+    3.471
    ],
    [
     "origem:rota original",
-    2.8199
+    2.8178
    ],
    [
     "origem:biblioteca",
-    2.6659
+    2.6649
    ],
    [
     "tok:secult",
@@ -49,7 +49,7 @@
    ],
    [
     "tok:transparencia",
-    2.1909
+    2.1907
    ],
    [
     "tok:aldirblanc",
@@ -71,7 +71,7 @@
    ],
    [
     "tipo:site_oficial",
-    -2.8576
+    -2.8613
    ],
    [
     "tok:2026",
@@ -91,7 +91,7 @@
    ],
    [
     "origem:padrão",
-    -4.0271
+    -4.0277
    ]
   ]
  },
@@ -535,7 +535,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-28T21:46:06+00:00",
+    "em": "2026-10-29T08:23:11+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -580,7 +580,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-28T20:14:45+00:00",
+    "em": "2026-10-29T08:22:11+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -667,7 +667,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-28T20:15:07+00:00",
+    "em": "2026-10-29T08:22:23+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1155,8 +1155,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-28T21:46:02+00:00",
-    "testes": 13,
+    "em": "2026-10-29T08:23:07+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1182,7 +1182,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-28T17:09:12+00:00",
+    "em": "2026-10-29T08:22:10+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1209,7 +1209,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-28T20:15:44+00:00",
+    "em": "2026-10-29T08:22:37+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"

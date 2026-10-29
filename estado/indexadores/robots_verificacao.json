@@ -1,5 +1,5 @@
 {
- "em": "2026-10-29T06:53:38+00:00",
+ "em": "2026-10-29T08:23:12+00:00",
  "regra": "10/10 (titular, motor 40 — Mapa das OSC): a marcação \"o site proíbe robôs\" não tinha verificação registrada. Este\nscript lê o robots.txt, testa se cada caminho é permitido para robôs (RFC 9309, via urllib.robotparser), e — só nos\ncaminhos PERMITIDOS — abre a página e procura endpoints de dados (API/JSON) citados no código dela. Nada é lido em\ncaminho proibido. Resultado: estado/indexadores/robots_verificacao.json.\n",
  "sites": {
   "mapa-osc": {
@@ -19,7 +19,7 @@
      "permitido_para_robos": true,
      "http": 200,
      "tipo": "text/html; charset=UTF-8",
-     "tamanho": 34899,
+     "tamanho": 34878,
      "links_edital": 1
     },
     {
@@ -73,8 +73,8 @@
     {
      "caminho": "/dados-abertos",
      "permitido_para_robos": true,
-     "http": 404,
-     "tipo": "",
+     "http": null,
+     "tipo": "URLError",
      "tamanho": 0,
      "links_edital": 0
     },
@@ -94,7 +94,7 @@
    ],
    "api": {
     "https://mapaosc.ipea.gov.br/api/api/documentation": {
-     "http": null,
+     "http": 200,
      "specs": [
       "/api/docs?api-docs.json",
       "/api/api/docs?api-docs.json",
@@ -104,7 +104,7 @@
       "/api/api/docs/api-docs.json",
       "/api/swagger.json"
      ],
-     "trecho": ""
+     "trecho": " id=\"large-arrow\"> <path d=\"M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z\"/> </symbol> <symbol viewBox=\"0 0 20 20\" id=\"large-arrow-down\"> <path d=\"M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z\"/> </symbol> <symbol viewBox=\"0 0 24 24\" id=\"jump-to\"> <path d=\"M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z\"/> </symbol> <symbol viewBox=\"0 0 24 24\" id=\"expand\"> <path d=\"M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z\"/> </symbol> </defs> </svg> <div id=\"swagger-ui\"></div> <script src=\"https://mapaosc.ipea.gov.br/api/swagger-ui-assets/swagger-ui-bundle.js?v=6453ebe93502863637d73ffa3c6581eb\"> </script> <script src=\"https://mapaosc.ipea.gov.br/api/swagger-ui-assets/swagger-ui-standalone-preset.js?v=bdc38b93866d2925d87399a346bea69a\"> </script> <script> window.onload = function() { // Build a system const ui = SwaggerUIBundle({ dom_id: '#swagger-ui', url: \"https://mapaosc.ipea.gov.br/api/docs\", operationsSorter: null, configUrl: null, validatorUrl: null, oauth2RedirectUrl: \"https://mapaosc.ipea.gov.br/api/api/oauth2-callback\", presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: \"StandaloneLayout\" }) window.ui = ui } </script> </body> </html> "
     }
    },
    "conclusao": "há caminho PERMITIDO com dados: o motor pode sair da coleta assistida — /editais"
