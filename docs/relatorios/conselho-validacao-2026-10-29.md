@@ -201,7 +201,7 @@
  "pontos_com_redundancia": 18,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 42492
+ "exemplos_da_rede_de_rotas": 42565
 }
 ```
 
@@ -244,10 +244,10 @@
 
 ```json
 {
- "dia_de_referencia": "2026-10-28",
+ "dia_de_referencia": "2026-10-29",
  "ativos": 172,
- "lidos_ontem": 19,
- "lidos_hoje": 17,
+ "lidos_ontem": 17,
+ "lidos_hoje": 0,
  "nao_lidos_ontem_nem_hoje": [
   "f260-captacao-001",
   "f260-captacao-018",
