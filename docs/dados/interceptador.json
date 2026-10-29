@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T04:42:19+00:00",
+  "em": "2026-10-29T04:57:53+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T04:33:18+00:00",
+  "ultimo_voo": "2026-10-29T04:44:13+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,77 +39,83 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
-    "estrelas_de_ouro": 3,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.4
+    "estrelas_de_ouro": 4,
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 13.0
   },
   "missoes": [
     {
-      "em": "2026-10-29T04:33:18+00:00",
+      "em": "2026-10-29T04:44:13+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "ª Edição do Prêmio Goiás mais Transparente - Transparência Goiás — Goiás — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 4,
+      "de": "2 · Brasil · oportunidade do mapa · prazo até 2026-10-30",
+      "alvo": "Edital Não Incentivado 2026 do Instituto Genésio A. Mendes Instituto Genésio A. Mendes R$ 30 mil Aceita:   organizações da sociedade civil P",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Requisitos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://institutogenesio.org.br/wp-content/uploads/2026/01/EDITAL-INCENTIVADO-GAM-IRPJ-2026.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O Prêmio Goiás mais Transparente é uma iniciativa do Estado de Goiás, o que o torna uma fonte válida para organizações da sociedade civil no Estado.",
-        "para_a_amc": "Para acessar o prêmio, uma associação comunitária de Goiânia precisaria se inscrever no edital, apresentando projetos que promovam transparência e participação social, conforme os critérios estabelecidos no edital.",
-        "proximo_passo": "Consultar os anexos disponibilizados pelo Estado de Goiás para obter detalhes sobre os critérios de elegibilidade e o processo de inscrição.",
-        "risco": "A falta de informações sobre os requisitos e o prazo de inscrição pode impedir que a associação comunitária se candidate adequadamente ao prêmio."
+        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição, órgão financiador, território e anexos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no prazo de 2026-01-01 a 2026-12-11, apresentando um projeto social nas áreas de Cultura, Esporte, Saúde, etc., conforme o objeto do edital.",
+        "proximo_passo": "Verificar os anexos do edital para obter informações detalhadas sobre requisitos e área de atuação.",
+        "risco": "O prazo de inscrição pode expirar sem que a associação tenha completado todos os requisitos necessários."
       },
       "erro": null,
-      "segundos": 505,
+      "segundos": 781,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-e1dfc9cb8c03",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Requisitos",
+      "id": "e3c06695ce9b936f8792",
       "encontrou": {
+        "Objeto": {
+          "valor": "seleção e apoio a projetos sociais nas áreas de Cultura, Esporte, Saúde, etc.",
+          "trecho": "O presente Edital tem por objeto a seleção e o apoio a projetos sociais enquadrados nas Leis Federais de Incentivo, nas áreas de Cultura, Esporte, Programa Nacional de Apoio à Aten",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-01-01 a 2026-12-11",
+          "trecho": "As inscrições ocorrerão no período de 01 de janeiro de 2026 a 11 de dezembro de 2026",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Estado de Goiás",
-          "trecho": "ESTADO DE GOIÁS",
-          "oficial": false,
+          "valor": "Instituto Genésio Antônio Mendes – IGAM",
+          "trecho": "Instituto Genésio Antônio Mendes – IGAM, associação civil sem fins lucrativos, será responsável pela condução do processo de seleção, análise técnica e acompanhamento dos projetos ",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "ESTADO DE GOIÁS",
-          "oficial": false,
+          "valor": "nacional",
+          "trecho": "executados em municípios da região da AMUREL ou em localidades onde a empresa GAM possua unidades operacionais",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Transparência Goiás",
+      "financiador": "INSTITUTO GENÉSIO A. MENDES",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
