@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T16:43:56+00:00",
+  "em": "2026-10-29T17:00:34+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T16:26:50+00:00",
+  "ultimo_voo": "2026-10-29T16:46:02+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,93 +39,94 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 6,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 16.4
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 13.8
   },
   "missoes": [
     {
-      "em": "2026-10-29T16:26:50+00:00",
+      "em": "2026-10-29T16:46:02+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Instituto Lojas Renner abre edital para fortalecer organizações sociais em três estados",
-      "qualidade": "parcial",
-      "comprovados": 7,
-      "dispensados": 1,
+      "alvo": "Juventude Solidária abre inscrições com apoio financeiro de até R$ 24 ...",
+      "qualidade": "insuficiente",
+      "comprovados": 5,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos"
       ],
-      "pagina_oficial": "https://www.institutolojasrenner.org.br/edital-encantando-comunidades/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital do Instituto Lojas Renner visa fortalecer organizações da sociedade civil sem fins lucrativos, e a associação comunitária de Goiânia pode se enquadrar nessa categoria se atuar nos territórios contemplados.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria ter sede e atuação nos territórios RJ, RS ou SP, além de ser uma organização da sociedade civil sem fins lucrativos. Também deve apresentar os anexos exigidos no edital.",
-        "proximo_passo": "Verificar os requisitos do edital e os anexos exigidos para se candidatar.",
-        "risco": "A associação comunitária de Goiânia pode não atuar nos territórios RJ, RS ou SP, o que a exclui do edital."
+        "por_que": "O texto comprovado menciona o objeto, prazo de inscrição, valor e área de atuação do edital, o que é suficiente para identificar a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever na plataforma Juventude Solidária dentro do prazo de 2026-05-21 a 2026-06-09, demonstrando que atua na área de cultura, arte ou esporte.",
+        "proximo_passo": "Verificar os requisitos específicos do edital na plataforma Juventude Solidária e se inscrever dentro do prazo estabelecido.",
+        "risco": "O prazo de inscrição pode expirar antes que a associação se candidate, ou a associação pode não atender aos requisitos não explicitados no texto comprovado."
       },
       "erro": null,
-      "segundos": 981,
+      "segundos": 825,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 5,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "f901a7304e32de7b7f33",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "cat-4d3f3f43d6b2",
       "encontrou": {
         "Objeto": {
-          "valor": "fortalecer organizações da sociedade civil sem fins lucrativos",
-          "trecho": "O Instituto Lojas Renner, responsável pela gestão do investimento social privado da Lojas Renner S.A., lança o presente edital de recursos flexíveis com o objetivo de fortalecer or",
-          "oficial": true,
+          "valor": "fomento de coletivos e entidades nas áreas de cultura, arte e esporte",
+          "trecho": "fomento de coletivos e entidades nas áreas de cultura, arte e esporte",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-05-21 a 2026-06-09",
+          "trecho": "recebe inscrições desde o dia 21/5 até o dia 9 de junho",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "apoio financeiro de até R$ 24 mil",
+          "trecho": "apoio financeiro de até R$ 24 mil",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Instituto Lojas Renner",
-          "trecho": "O Instituto Lojas Renner, responsável pela gestão do investimento social privado da Lojas Renner S.A., lança o presente edital de recursos flexíveis...",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "RJ, RS, SP",
-          "trecho": "O Instituto Lojas Renner, responsável pela gestão do investimento social privado da Lojas Renner S.A., lança o presente edital de recursos flexíveis com o objetivo de fortalecer or",
-          "oficial": true,
+          "valor": "plataforma Juventude Solidária",
+          "trecho": "plataforma Juventude Solidária",
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "dispensado — O edital menciona áreas de atuação específicas.",
-          "trecho": "O recurso tem como finalidade impulsionar o desenvolvimento das organizações, e não o financiamento de projetos ou atividades finalísticas específicas, reconhecendo que instituiçõe",
+          "valor": "cultura",
+          "trecho": "fomento de coletivos e entidades nas áreas de cultura, arte e esporte",
           "oficial": false,
-          "dispensado": true
-        },
-        "Requisitos": {
-          "valor": "organizações da sociedade civil sem fins lucrativos com sede e atuação nos territórios contemplados",
-          "trecho": "O Instituto Lojas Renner, responsável pela gestão do investimento social privado da Lojas Renner S.A., lança o presente edital de recursos flexíveis com o objetivo de fortalecer or",
-          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Instituto Lojas Renner",
-      "indicios": [
-        {
-          "url": "https://captadores.org.br/editais/instituto-lojas-renner-abre-edital-para-fortalecer-organizacoes-sociais-em-tres-estados",
-          "tipo": "noticia"
-        }
-      ],
+      "financiador": "Secretaria Nacional de Juventude do governo federal",
+      "indicios": [],
       "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
         "financiador_programa_edital",
-        "financiador_regulamento"
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
