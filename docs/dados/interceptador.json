@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T11:52:53+00:00",
+  "em": "2026-10-29T12:08:06+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T11:40:11+00:00",
+  "ultimo_voo": "2026-10-29T11:55:08+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,50 +48,70 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.0
+    "tempo_medio_min": 12.3
   },
   "missoes": [
     {
-      "em": "2026-10-29T11:40:11+00:00",
+      "em": "2026-10-29T11:55:08+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Diário Oficial de Goiânia (GO) 2026-07-24 — \"chamamento público\" \"organizações da sociedade civil\"",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "Diário Oficial de Goiânia (GO) 2026-08-25 — \"chamamento público\" \"organizações da sociedade civil\"",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Território",
-        "Requisitos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": "https://www.goiania.go.gov.br/html/gabinete_civil/sileg/dados/legis/2026/lo_20260109_000011590_ane_000000001.pdf",
+      "pagina_oficial": "https://saude.goiania.go.gov.br/wp-content/uploads/sites/3/2026/04/Edital-de-Chamamento-no-001-2026-Completo-Publicado.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto menciona um chamamento público para organizações da sociedade civil, emitido pela Prefeitura de Goiânia/Secretaria Municipal da Casa Civil, indicando que é uma fonte válida para obtenção de informações sobre editais de fomento.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar os anexos mencionados, que provavelmente contêm os requisitos, objeto e outros detalhes do edital, e se enquadraria nos critérios de elegibilidade para participar do chamamento público.",
-        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre requisitos, prazos e outros aspectos relevantes.",
-        "risco": "A falta de informações específicas como prazo de inscrição, objeto e valor pode impedir a associação de se preparar adequadamente para o processo de candidatura."
+        "por_que": "O texto comprovado menciona o objeto, órgão financiador, território, esfera, requisitos e anexos do edital, o que é suficiente para identificar a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar o ato constitutivo, devidamente registrado através de cópia autenticada, abordando os aspectos sociais da organização, além de anexar os documentos exigidos no edital.",
+        "proximo_passo": "Consultar o edital completo para verificar os prazos, valor e outros requisitos não mencionados no texto comprovado.",
+        "risco": "A falta de informações sobre prazos, valor e outros requisitos pode impedir a associação de se inscrever adequadamente no edital."
       },
       "erro": null,
-      "segundos": 722,
+      "segundos": 740,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 2,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "rec-c8b8aed71ec01pdf",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "rec-c9a94ffcd58b9pdf",
       "encontrou": {
+        "Objeto": {
+          "valor": "QUALIFICAÇÃO EM ORGANIZAÇÃO SOCIAL DE SAÚDE (OSS)",
+          "trecho": "O MUNICÍPIO DE GOIÂNIA... TORNA PÚBLICO e por meio deste Edital de Chamamento, CONVOCA as entidades privadas sem fins lucrativos interessadas em obter a qualificação como ORGANIZAÇ",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia/Secretaria Municipal da Casa Civil",
-          "trecho": "Prefeitura de Goiânia/Secretaria Municipal da Casa Civil Assinado Digitalmente: www.goiania.go.gov.br",
+          "valor": "Prefeitura de Goiânia/Secretaria Municipal de Saúde",
+          "trecho": "O MUNICÍPIO DE GOIÂNIA, pessoa jurídica de direito público, sediada a Av. do Cerrado nº 999, Parque Lozandes, nesta Capital, com a interveniência da SECRETARIA MUNICIPAL DE SAÚDE /",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "no âmbito do Município de GOIÂNIA - GO",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "saude",
+          "trecho": "QUALIFICAÇÃO EM ORGANIZAÇÃO SOCIAL DE SAÚDE (OSS)",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Ato constitutivo, devidamente registrado através de cópia autenticada, abordando os seguintes aspectos: a)Natureza socia",
+          "trecho": "3.1.1. Ato constitutivo, devidamente registrado através de cópia autenticada, abordando os seguintes aspectos: a)Natureza social de seus objetivos relacionados à área de atuação co",
           "oficial": true,
           "dispensado": false
         }
@@ -99,7 +119,7 @@
       "financiador": "Prefeitura de Goiânia",
       "indicios": [
         {
-          "url": "https://data.queridodiario.ok.org.br/5208707/2026-07-24/3edf420cef024afe1f07f6dcae0c8b8aed71ec01.pdf",
+          "url": "https://data.queridodiario.ok.org.br/5208707/2026-08-25/5feab799740e34344bfad8eb6e2c9a94ffcd58b9.pdf",
           "tipo": "agregador"
         }
       ],
