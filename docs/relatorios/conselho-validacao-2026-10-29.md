@@ -10,7 +10,7 @@
 {
  "cegos_da_1a_rodada": 68,
  "testados": 58,
- "com_rota_nova": 26,
+ "com_rota_nova": 27,
  "via_ponte": 0,
  "continuam_cegos": [
   "camara-goiania-pl",
@@ -36,7 +36,6 @@
   "f260-captacao-252",
   "f260-captacao-253",
   "f260-captacao-248",
-  "f260-captacao-242",
   "f260-captacao-257",
   "f260-captacao-245",
   "f260-captacao-246",
@@ -201,7 +200,7 @@
  "pontos_com_redundancia": 18,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 43340
+ "exemplos_da_rede_de_rotas": 43426
 }
 ```
 
