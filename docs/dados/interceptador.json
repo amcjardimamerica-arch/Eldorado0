@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T15:10:27+00:00",
+  "em": "2026-10-29T15:19:30+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T15:03:24+00:00",
+  "ultimo_voo": "2026-10-29T15:12:37+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -47,76 +47,66 @@
       "sim": 1
     },
     "estrelas_de_ouro": 6,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 6.5
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 6.3
   },
   "missoes": [
     {
-      "em": "2026-10-29T15:03:24+00:00",
+      "em": "2026-10-29T15:12:37+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "IFSertãoPE lança edital de seleção para bolsistas de iniciação científica",
+      "alvo": "INSTITUTO NACIONAL DE APOSENTADOS DEFICIENTES E IDOSOS — EDITAL DE CONVOCAÇÃO — social; 3. Deliberação sobre a reestruturação da administração da entidade, compreendendo a composiç",
       "qualidade": "insuficiente",
       "comprovados": 3,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Órgão / financiador",
+        "Território",
         "Esfera",
-        "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.wonder.legal/br/modele/edital-convocacao-assembleia-geral-associacao",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição e território.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital é aplicável ao seu território, já que o edital é para o estado de Pernambuco.",
-        "proximo_passo": "Verificar se há alinhamento entre o edital e as atividades da associação comunitária.",
-        "risco": "O território do edital é Pernambuco, o que pode impedir o acesso para uma associação de Goiânia."
+        "por_que": "O edital comprova a convocação de assembleia geral de associação, que é um processo necessário para a organização e funcionamento de uma entidade da sociedade civil.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria realizar a assembleia geral conforme os requisitos do edital, incluindo data, hora e local de realização, assinatura do presidente e do secretário da assembleia, aprovação do estatuto, eleição e posse dos cargos diretivos, e demais assuntos objeto de discussão entre os participantes.",
+        "proximo_passo": "Realizar a assembleia geral conforme os requisitos do edital e anexar os documentos necessários.",
+        "risco": "A falta de conformidade com os requisitos do edital pode impedir a validação do processo."
       },
       "erro": null,
-      "segundos": 388,
+      "segundos": 380,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 3,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "5d88f25540fafdc13289",
+      "id": "065b7985dc9f28ef38ad",
       "encontrou": {
         "Objeto": {
-          "valor": "bolsas de iniciação científica para estudantes de graduação",
-          "trecho": "edital de seleção para bolsistas de iniciação científica",
-          "oficial": false,
+          "valor": "convocação de assembleia geral de associação",
+          "trecho": "Edital de convocação de assembleia geral de associação",
+          "oficial": true,
           "dispensado": false
         },
-        "Prazo de inscrição": {
-          "valor": "2026-10-29 a 2026-10-29",
-          "trecho": "October 29 2026, 15:04:56 UTC",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "PE",
-          "trecho": "IFSertãoPE",
-          "oficial": false,
+        "Requisitos": {
+          "valor": "data, hora e local de realização da assembleia, assinatura do presidente e do secretário da assembleia, aprovação do estatuto, eleição e posse dos cargos diretivos, demais assuntos objeto de discussão entre os participantes e as decisões por eles tomadas",
+          "trecho": "Um edital de convocação de assembleia geral de associação deve conter as seguintes informações: a data, a hora e o local de realização da assembleia; a assinatura, na própria ata, ",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "IFSertãoPE",
+      "financiador": "INSTITUTO NACIONAL DE APOSENTADOS DEFICIENTES E IDOSOS",
       "indicios": [],
       "rotas": [
         "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "financiador_regulamento"
       ]
     }
   ],
