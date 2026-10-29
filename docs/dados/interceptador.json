@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T00:21:53+00:00",
+  "em": "2026-10-29T00:34:52+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T00:13:40+00:00",
+  "ultimo_voo": "2026-10-29T00:23:44+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,8 +38,8 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
-    "parciais": 1,
+    "validadas": 1,
+    "parciais": 0,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
@@ -48,79 +48,80 @@
     },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.7
+    "tempo_medio_min": 10.5
   },
   "missoes": [
     {
-      "em": "2026-10-29T00:13:40+00:00",
+      "em": "2026-10-29T00:23:44+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Senador Canedo — Inscrições da 2ª Chamada da Lei Aldir Blanc começam nesta quinta-feira em Senador Canedo — Goiás / Senador Canedo",
-      "qualidade": "parcial",
-      "comprovados": 10,
-      "dispensados": 2,
+      "alvo": "Senador Canedo — Prefeitura de Senador Canedo lança Edital Aldir Blanc 2026 — Goiás / Senador Canedo — Goiás / Senador Canedo",
+      "qualidade": "validada",
+      "comprovados": 9,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
+        "Resultado",
         "Prazo de recurso"
       ],
-      "pagina_oficial": "https://senadorcanedo.go.gov.br/inscricoes-da-2a-chamada-da-lei-aldir-blanc-comecam-nesta-quinta-feira-em-senador-canedo/",
+      "pagina_oficial": "https://senadorcanedo.go.gov.br/senador-canedo-lanca-edital-aldir-blanc-2026-com-r-380-mil-destinado-a-projetos-culturais/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que o edital tem como objeto fomento e apoio à cultura local, e menciona requisitos como acesso à plataforma 1Doc e envio de projetos culturais.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria acessar a plataforma 1Doc, enviar projetos culturais e anexar os documentos exigidos para participar do edital.",
-        "proximo_passo": "Acessar a plataforma 1Doc e enviar os projetos culturais conforme os requisitos do edital.",
-        "risco": "A falta de acesso à plataforma 1Doc ou a não envio dos projetos culturais pode impedir a participação no edital."
+        "por_que": "O edital foi comprovado com informações sobre objeto, valor, prazo de inscrição, órgão financiador, território, esfera, requisitos e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar às iniciativas culturais de Senador Canedo, verificar os requisitos do edital, realizar a inscrição no site oficial da Prefeitura Municipal de Senador Canedo e preparar os documentos necessários conforme os anexos.",
+        "proximo_passo": "Consultar o edital completo da Prefeitura Municipal de Senador Canedo para entender os requisitos e anexos detalhados.",
+        "risco": "O território do edital é restrito apenas a Senador Canedo, o que pode impedir que uma associação de Goiânia participe, já que o edital não é aberto para outros municípios."
       },
       "erro": null,
-      "segundos": 461,
+      "segundos": 628,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de recurso",
-      "id": "op-d165eb2a5ffe",
+      "fontes_oficiais": 8,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-696a6e839597",
       "encontrou": {
         "Objeto": {
-          "valor": "fomento e apoio à cultura local",
-          "trecho": "A Prefeitura de Senador Canedo, por meio da Secretaria Municipal de Cultura (Secult), abre nesta quinta-feira (01/05), a partir das 08h, as inscrições para a segunda chamada da Lei",
+          "valor": "iniciativas que contribuam para o fortalecimento e a valorização das diferentes manifestações culturais de Senador Canedo",
+          "trecho": "Os recursos serão destinados a iniciativas que contribuam para o fortalecimento e a valorização das diferentes manifestações culturais de Senador Canedo.",
           "oficial": true,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "dispensado — O texto menciona o prazo limite para envio até às 23h59.",
-          "trecho": "As inscrições estarão abertas até o dia 09/05, com prazo limite para envio até às 23h59. [rejeitado: data implausível para edital aberto]",
-          "oficial": false,
-          "dispensado": true
+          "valor": "? a 2026-09-25",
+          "trecho": "As inscrições já estão abertas e podem ser realizadas até as 23h59 do dia 25 de setembro de 2026.",
+          "oficial": true,
+          "dispensado": false
         },
         "Valor": {
-          "valor": "dispensado — O apoio é em espécie, sem valor em dinheiro.",
-          "trecho": "apoio à cultura local.",
-          "oficial": false,
-          "dispensado": true
+          "valor": "R$ 383,5 mil",
+          "trecho": "Durante o lançamento, foram apresentadas as principais informações do edital, que prevê a seleção de 29 projetos culturais, com investimento total de R$ 383,5 mil.",
+          "oficial": true,
+          "dispensado": false
         },
         "Órgão / financiador": {
           "valor": "Prefeitura Municipal de Senador Canedo",
-          "trecho": "A Prefeitura de Senador Canedo, por meio da Secretaria Municipal de Cultura (Secult), abre nesta quinta-feira (01/05), a partir das 08h, as inscrições para a segunda chamada da Lei",
+          "trecho": "A Prefeitura de Senador Canedo, por meio da Secretaria Municipal de Esportes, Cultura e Turismo (SECULT), realizou nesta quarta-feira (9) o lançamento do Edital Aldir Blanc 2026.",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "Inscrições da 2ª Chamada da Lei Aldir Blanc começam nesta quinta-feira em Senador Canedo - Prefeitura Municipal de Senador Canedo",
-          "oficial": true,
-          "dispensado": false
+          "valor": "dispensado — O edital é aberto apenas para o município de Senador Canedo.",
+          "trecho": "Senador Canedo — Goiás / Senador Canedo — Goiás / Senador Canedo",
+          "oficial": false,
+          "dispensado": true
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "A Prefeitura de Senador Canedo, por meio da Secretaria Municipal de Cultura (Secult), abre nesta quinta-feira (01/05), a partir das 08h, as inscrições para a segunda chamada da Lei",
+          "trecho": "Os recursos serão destinados a iniciativas que contribuam para o fortalecimento e a valorização das diferentes manifestações culturais de Senador Canedo.",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "acesso à plataforma 1Doc, envio de projetos culturais",
-          "trecho": "O processo será totalmente digital, através da plataforma 1Doc, facilitando a inscrição para os projetos culturais.",
+          "valor": "consultar o edital e realizar a inscrição por meio do site oficial da Prefeitura",
+          "trecho": "Os interessados devem consultar o edital e realizar a inscrição por meio do site oficial da Prefeitura.",
           "oficial": true,
           "dispensado": false
         }
