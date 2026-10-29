@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T05:51:37+00:00",
+  "em": "2026-10-29T06:09:06+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T05:33:53+00:00",
+  "ultimo_voo": "2026-10-29T05:53:44+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,67 +48,76 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.9
+    "tempo_medio_min": 14.6
   },
   "missoes": [
     {
-      "em": "2026-10-29T05:33:53+00:00",
+      "em": "2026-10-29T05:53:44+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "2 · Brasil · oportunidade do mapa · prazo até 2026-12-04T17:00",
-      "alvo": "BNDES Periferias em Rede — 6º ciclo BNDES R$ 2,0 mi Aceita:   organizações da sociedade civil Prazo:  04/12/2026 (62d) Ver detalhes →",
-      "qualidade": "insuficiente",
-      "comprovados": 5,
-      "dispensados": 0,
+      "de": "2 · Brasil · oportunidade do mapa · prazo até 2026-12-30",
+      "alvo": "Chamada Rio Doce Participativo — Projetos Estruturantes para o Desenvolvimento Territorial",
+      "qualidade": "parcial",
+      "comprovados": 8,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Esfera",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.bndes.gov.br/wps/portal/site/home/transparencia/fundos-governamentais/fundo-rio-doce/chamada-rio-doce-participativo",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o prazo de inscrição, objeto e requisitos do edital, o que permite identificar as informações necessárias para a resposta.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria ser uma pessoa jurídica de direito privado sem fins lucrativos, alinhar seu projeto ao objeto do edital (inclusão produtiva urbana em favelas e periferias) e seguir as instruções dos anexos para inscrição.",
-        "proximo_passo": "Verificar os anexos do edital e preparar o projeto conforme o objeto e requisitos definidos.",
-        "risco": "A associação pode não atender aos requisitos do edital, como ser uma pessoa jurídica sem fins lucrativos, ou não alinhar seu projeto ao objeto do edital."
+        "por_que": "O edital foi comprovado com informações sobre objeto, valor, financiador, território, esfera, requisitos e anexos.",
+        "para_a_amc": "Uma associação comunitária de Goiânia precisaria estar localizada em Minas Gerais ou Espírito Santo, ter pelo menos 2 anos de existência para atuar no Eixo I ou 5 anos para atuar no Eixo II, e ter experiência relevante na execução de projetos relacionados ao(s) eixo(s) contemplado(s) na proposta.",
+        "proximo_passo": "Verificar se a associação comunitária atende aos requisitos de localização e experiência necessários para participar do edital.",
+        "risco": "A associação comunitária de Goiânia pode não atender aos requisitos de localização, já que o edital é aberto apenas para entidades localizadas em Minas Gerais e Espírito Santo."
       },
       "erro": null,
-      "segundos": 1017,
+      "segundos": 877,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "2f556273766464bcdc19",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
+      "id": "op-aa70ccf9ba8b",
       "encontrou": {
         "Objeto": {
-          "valor": "Inclusão produtiva urbana em favelas e periferias em uma única frente",
-          "trecho": "Serão elegíveis propostas relacionadas à inclusão produtiva urbana em favelas e periferias em uma única frente, a saber: BNDES Periferias em Rede: Destina-se a Instituições que vis",
-          "oficial": false,
+          "valor": "Projetos estruturantes para o desenvolvimento territorial",
+          "trecho": "Projetos estruturantes para o desenvolvimento territorial",
+          "oficial": true,
           "dispensado": false
         },
-        "Prazo de inscrição": {
-          "valor": "2026-08-18 a 2026-12-04",
-          "trecho": "Ciclo para recebimento de propostas: de 18.08.2026 até às 17h de 04.12.2026.",
-          "oficial": false,
+        "Valor": {
+          "valor": "R$ 5 milhões e, no máximo, R$ 10 milhões",
+          "trecho": "A proposta deverá ser de, no mínimo, R$ 5 milhões e, no máximo, R$ 10 milhões",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "BNDES e a Secretaria-Geral da Presidência da República",
+          "trecho": "O BNDES e a Secretaria-Geral da Presidência da República tornam pública a chamada",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "nacional",
-          "trecho": "A iniciativa BNDES Periferias reúne diversas formas de atuação do BNDES vinculadas ao apoio a periferias urbanas e sua população.",
-          "oficial": false,
+          "valor": "MG",
+          "trecho": "Estar localizada em Minas Gerais e Espírito Santo",
+          "oficial": true,
           "dispensado": false
         },
-        "Requisitos": {
-          "valor": "Pessoas jurídicas de direito privado sem fins lucrativos.",
-          "trecho": "Quem pode solicitar Pessoas jurídicas de direito privado sem fins lucrativos.",
+        "Área de atuação": {
+          "valor": "dispensado — O edital é aberto apenas para entidades localizadas em Minas Gerais e Espírito Santo.",
+          "trecho": "Projetos estruturantes para o desenvolvimento territorial",
           "oficial": false,
+          "dispensado": true
+        },
+        "Requisitos": {
+          "valor": "Estar constituída há, pelo menos: 2 anos, para atuação no Eixo I; 5 anos, para atuação no Eixo II ou em ambos os eixos., Estar localizada em Minas Gerais e Espírito Santo., Ter experiência relevante na execução de projetos relacionados ao(s) eixo(s) contemplado(s) na proposta, e na temática d",
+          "trecho": "Estar constituída há, pelo menos: 2 anos, para atuação no Eixo I; 5 anos, para atuação no Eixo II ou em ambos os eixos. Estar localizada em Minas Gerais e Espírito Santo. Ter exper",
+          "oficial": true,
           "dispensado": false
         }
       },
@@ -116,11 +125,7 @@
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
