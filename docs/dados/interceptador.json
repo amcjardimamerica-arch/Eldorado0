@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T03:54:48+00:00",
+  "em": "2026-10-29T04:14:40+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T03:38:03+00:00",
+  "ultimo_voo": "2026-10-29T03:56:37+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,74 +48,88 @@
     },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.9
+    "tempo_medio_min": 17.2
   },
   "missoes": [
     {
-      "em": "2026-10-29T03:38:03+00:00",
+      "em": "2026-10-29T03:56:37+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "[Portal de Compras Públicas] - Seleção de Propostas apresentadas pelas Organizações da Sociedade Civil de Plan… — Goiás / Planaltina",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "_-_Edital_Chamada_Publica_nBA_002.2024_assinado.pdf — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://goias.gov.br/governo/wp-content/uploads/sites/11/2025/07/Edital-No-02-2025-SGG-CHAMAMENTO-PUBLICO-PARA-CREDENCIAMENTO.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a existência de um processo seletivo para credenciamento de empresas, o que pode ser uma fonte para associações comunitárias buscarem parcerias ou apoio.",
-        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria identificar empresas credenciadas ou se credenciar como prestadora de serviços, alinhando-se ao objeto do edital, e buscar parcerias para projetos de assistência social, cultura, educação ou esporte que envolvam conservação de energia ou engenharia.",
-        "proximo_passo": "Pesquisar os anexos do edital para entender os requisitos de credenciamento e buscar contato com as empresas credenciadas ou se credenciar conforme os critérios estabelecidos.",
-        "risco": "A falta de informações sobre prazos e valor pode dificultar o acesso e a participação no processo seletivo, além de não haver área de atuação específica para associações comunitárias."
+        "por_que": "O edital comprovado descreve claramente o objeto, valor, financiador, território, esfera, requisitos e área de atuação, o que permite identificar as condições para acesso.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é a seleção de agentes culturais de audiovisual e demais áreas culturais que tenham contribuído para o desenvolvimento artístico ou cultural do município de Cidade Ocidental, Goiás. Ela deve comprovar residência no município por pelo menos dois anos, ou ser indígena, e ter pelo menos um ano de atividade na área cultural. A AMC pode se candidatar como agente cultural se atender a esses requisitos.",
+        "proximo_passo": "Verificar se a associação comunitária atende aos requisitos do edital, como residência no município e experiência na área cultural, e se inscrever no processo seletivo conforme o prazo estabelecido no edital (que não foi encontrado, mas deve ser consultado diretamente).",
+        "risco": "O risco é que a associação comunitária não atenda aos requisitos de residência ou experiência na área cultural, ou que o prazo de inscrição tenha expirado, impedindo o acesso ao edital."
       },
       "erro": null,
-      "segundos": 956,
+      "segundos": 1032,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-e2b154a00046",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-a6eb391bca6d",
       "encontrou": {
         "Objeto": {
-          "valor": "credenciamento de Empresas de Serviços de Conservação de Energia (ESCOs) e empresas de engenharia qualificadas",
-          "trecho": "O presente Chamamento Público (202518037003161) tem por objeto o credenciamento de Empresas de Serviços de Conservação de Energia (ESCOs) e empresas de engenharia qualificadas",
-          "oficial": true,
+          "valor": "utilização dos recursos remanescente para seleção de agentes culturais de audiovisual e demais áreas culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do município de Cidade Ocidental GO",
+          "trecho": "1.1 - O objeto deste Edital é utilização dos recursos remanescente para seleção de agentes culturais de audiovisual e demais áreas culturais que tenham prestado relevante contribui",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 34.300,00 (trinta e quatro mil e trezentos reais) dividido entre as categorias de apoio descritas no Anexo I deste edital",
+          "trecho": "2.1 - O valor total disponibilizado para este Edital é de R$ 34.300,00 (trinta e quatro mil e trezentos reais) dividido entre as categorias de apoio descritas no Anexo I deste edit",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Secretaria-Geral de Governo – SGG",
-          "trecho": "O Estado de Goiás, por meio da Secretaria-Geral de Governo – SGG",
-          "oficial": true,
+          "valor": "Prefeitura Municipal de Cidade Ocidental",
+          "trecho": "Prefeitura Municipal de Cidade Ocidental - Gabinete",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Os serviços das empresas credenciadas poderão ser requisitados para atender qualquer um dos órgãos públicos estaduais par(cid:415)cipantes",
-          "oficial": true,
+          "trecho": "município de Cidade Ocidental GO",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "audiovisual e demais áreas culturais",
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "credenciamento de Empresas de Serviços de Conservação de Energia (ESCOs) e empresas de engenharia qualificadas",
-          "trecho": "O presente Chamamento Público (202518037003161) tem por objeto o credenciamento de Empresas de Serviços de Conservação de Energia (ESCOs) e empresas de engenharia qualificadas",
-          "oficial": true,
+          "valor": "agente cultural residente no município de Cidade Ocidental há pelo menos 2 (dois) anos e que comprove no mínimo um ano d, comprovação de residência poderá ser dispensada nas hipóteses de agentes culturais pertencentes à comunidade indígena, q, agente cultural pode ser: Pessoa física ou Microempreend",
+          "trecho": "3.1 - Pode se inscrever no Edital qualquer agente cultural residente no município de Cidade Ocidental há pelo menos 2 (dois) anos e que comprove no mínimo um ano de atuação através",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Município de Planaltina - Estado de Goiás",
+      "financiador": "Lei Complementar nº 195/2022 - Lei Paulo Gustavo",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "parceiro"
       ]
     }
   ],
