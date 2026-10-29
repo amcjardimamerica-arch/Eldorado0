@@ -1,9 +1,9 @@
-commit: 6942624b9a40b1754f4355fcfb3c3a457a7fe3bb
-em: 2026-10-28T15:47:05Z
+commit: 0f4dce1c59b10bb4238a33aa9fc97aeace4e8138
+em: 2026-10-29T12:29:42Z
 rc: 1
 ::error title=teste falhou::tests.test_livros_parametros.TestArquivo.test_dez_blocos_e_todos_decididos — AssertionError: 282 not greater than or equal to 300
 ::error title=teste falhou::tests.test_motor01_diario_goiania.TestCoberturaDoDia.test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida — AssertionError: True is not false
-::error title=teste falhou::tests.test_motor01_diario_goiania.TestMotor.test_falha_da_api_vira_diagnostico_e_nao_silencio — AssertionError: 'TimeoutError' not found in '3 edição(ões) lida(s), 60 ato(s) do terceiro setor: nenhum chamamento aberto para OSC hoje · 22 a acompanhar · 38 ruído (credenciamento
+::error title=teste falhou::tests.test_motor01_diario_goiania.TestMotor.test_falha_da_api_vira_diagnostico_e_nao_silencio — AssertionError: 'TimeoutError' not found in '3 edição(ões) lida(s), 57 ato(s) do terceiro setor: nenhum chamamento aberto para OSC hoje · 23 a acompanhar · 34 ruído (credenciamento
 ::error title=teste falhou::tests.test_motor01_diario_goiania.TestMotor.test_leitura_na_nuvem_pelo_querido_diario — + OPORTUNIDADE
 ::error title=teste falhou::tests.test_motor_judiciario_go.Motor.test_computador_le_o_tjgo_e_a_nuvem_entrega_a_base — + nuvem
 ---- falhas ----
@@ -115,13 +115,13 @@ FAIL: test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo (tests.test_consiste
 Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_consistencia_transversal_2026_10_17.py", line 140, in test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo
     self.assertEqual(sorted(i for i in cat if not (L / f"{i}.json").exists()), [])
-AssertionError: Lists differ: ['nova-11754f7f2ba8', 'nova-2a156b780d10',[3394 chars]4f5'] != []
+AssertionError: Lists differ: ['nova-11754f7f2ba8', 'nova-129a8c0152b2',[3799 chars]4f5'] != []
 
-First list contains 179 additional elements.
+First list contains 200 additional elements.
 First extra element 0:
 'nova-11754f7f2ba8'
 
-Diff is 3983 characters long. Set self.maxDiff to None to see it.
+Diff is 4451 characters long. Set self.maxDiff to None to see it.
 
 ======================================================================
 FAIL: test_relatorio_do_cartorio_das_certidoes_guardadas (tests.test_consistencia_transversal_2026_10_17.MesmoRetrato.test_relatorio_do_cartorio_das_certidoes_guardadas)
@@ -129,13 +129,13 @@ FAIL: test_relatorio_do_cartorio_das_certidoes_guardadas (tests.test_consistenci
 Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_consistencia_transversal_2026_10_17.py", line 187, in test_relatorio_do_cartorio_das_certidoes_guardadas
     self.assertEqual((pub["certidoes"], pub["com_link_oficial"]), (r["certidoes"], r["com_link_oficial"]))
-AssertionError: Tuples differ: (2711, 1822) != (2706, 1817)
+AssertionError: Tuples differ: (2711, 1823) != (2706, 1817)
 
 First differing element 0:
 2711
 2706
 
-- (2711, 1822)
+- (2711, 1823)
 + (2706, 1817)
 
 ======================================================================
@@ -219,7 +219,7 @@ FAIL: test_falha_da_api_vira_diagnostico_e_nao_silencio (tests.test_motor01_diar
 Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_motor01_diario_goiania.py", line 182, in test_falha_da_api_vira_diagnostico_e_nao_silencio
     self.assertIn("TimeoutError", r["diagnostico"]["motivo_zero"])
-AssertionError: 'TimeoutError' not found in '3 edição(ões) lida(s), 60 ato(s) do terceiro setor: nenhum chamamento aberto para OSC hoje · 22 a acompanhar · 38 ruído (credenciamento, OS da saúde, decretos)'
+AssertionError: 'TimeoutError' not found in '3 edição(ões) lida(s), 57 ato(s) do terceiro setor: nenhum chamamento aberto para OSC hoje · 23 a acompanhar · 34 ruído (credenciamento, OS da saúde, decretos)'
 
 ======================================================================
 FAIL: test_leitura_na_nuvem_pelo_querido_diario (tests.test_motor01_diario_goiania.TestMotor.test_leitura_na_nuvem_pelo_querido_diario)
@@ -250,14 +250,6 @@ Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_motor_prefeituras_25_go.py", line 148, in test_github_sem_brasil_nao_tenta_sites_e_nao_marca_lida
     self.assertFalse(any(".go.gov.br" in str(a.args[0]) for a in g.call_args_list))
 AssertionError: True is not false
-
-======================================================================
-FAIL: test_motores_da_vez_ordem_do_painel (tests.test_motores_2026_10_03.Fluxo22EStatus.test_motores_da_vez_ordem_do_painel)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_motores_2026_10_03.py", line 140, in test_motores_da_vez_ordem_do_painel
-    self.assertLess(ids.index("dou"), ids.index("plat-gife"))
-AssertionError: 23 not less than 5
 
 ======================================================================
 FAIL: test_atualizado_guarda_a_data_da_confirmacao (tests.test_parecer_23_09.TesteAtualizacaoAplicada.test_atualizado_guarda_a_data_da_confirmacao)
@@ -307,3 +299,11 @@ AssertionError: 1046 != 308
 ======================================================================
 FAIL: test_universo_inteiro_decidido (tests.test_validacao_mapa.TestArquivoDeValidacao0929.test_universo_inteiro_decidido)
 ----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/eldorado_testes/tests/test_validacao_mapa.py", line 31, in test_universo_inteiro_decidido
+    self.assertGreaterEqual(len(self.itens) + len(saiu), self.MINIMO)
+AssertionError: 142 not greater than or equal to 150
+
+======================================================================
+FAIL: test_todo_ausente_saiu_pela_regra_territorial (tests.test_verificacao_63_2026_09_15.TesteBaseDaVerificacao.test_todo_ausente_saiu_pela_regra_territorial)
+Nenhum dos 63 some sem motivo: cada ausente é municipal de outro estado, fora das capitais.
