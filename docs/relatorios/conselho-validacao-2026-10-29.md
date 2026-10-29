@@ -201,7 +201,7 @@
  "pontos_com_redundancia": 18,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 42797
+ "exemplos_da_rede_de_rotas": 42877
 }
 ```
 
