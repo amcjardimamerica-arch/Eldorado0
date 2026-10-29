@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T14:11:45+00:00",
+  "em": "2026-10-29T14:31:14+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T14:01:11+00:00",
+  "ultimo_voo": "2026-10-29T14:13:33+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,42 +39,93 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "nao": 1
+    },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.0
+    "tempo_medio_min": 16.9
   },
   "missoes": [
     {
-      "em": "2026-10-29T14:01:11+00:00",
+      "em": "2026-10-29T14:13:33+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prefeitura de jussara — aviso de publicação chamada publica 03 -2026.docxdoe — Goiás / Jussara",
-      "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "de": "2 · Brasil · oportunidade do mapa",
+      "alvo": "Edital Paraná Literário",
+      "qualidade": "parcial",
+      "comprovados": 8,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 600,
+      "nao_resolvidos": [
+        "Resultado",
+        "Prazo de recurso",
+        "Valor"
+      ],
+      "pagina_oficial": "https://mapacultural.secult.ce.gov.br/files/event/14872/edital-n-110732025-xi-edital-das-artes.pdf",
+      "parecer_fonte": {
+        "serve_como_fonte": "nao",
+        "por_que": "O edital comprovado refere-se a Fortaleza, Ceará, enquanto a associação comunitária de Goiânia busca acesso a um edital específico para sua região, que não foi encontrado.",
+        "para_a_amc": "Para acessar o edital, a associação comunitária de Goiânia precisaria identificar e se inscrever em um edital de fomento específico para sua região, que não foi encontrado no texto.",
+        "proximo_passo": "Pesquisar e identificar editais de fomento disponíveis para organizações da sociedade civil em Goiânia, com foco em áreas como assistência social, cultura, educação e esporte.",
+        "risco": "A falta de informações sobre editais disponíveis para Goiânia pode impedir o acesso ao financiamento."
+      },
+      "erro": null,
+      "segundos": 1014,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-82ee5fdf8c61",
-      "encontrou": {},
-      "financiador": null,
+      "fontes_oficiais": 8,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor",
+      "id": "dfb3cef312e015ced2c4",
+      "encontrou": {
+        "Objeto": {
+          "valor": "SELEÇÃO DE PROJETOS DE ARTE E CULTURA PARA A PROMOÇÃO, PRODUÇÃO E FRUIÇÃO DAS ARTES, NO ÂMBITO DO MUNICÍPIO DE FORTALEZA, COM A FINALIDADE DE FOMENTAR INICIATIVAS INDIVIDUAIS E COLETIVAS DE ARTISTAS, CURADORES, PESQUISADORES, PRODUTORES, EDUCADORES E DEMAIS PROFISSIONAIS QUE REALIZAM ATIVIDADE NO CAMPO DA ARTE, CONTRIBUINDO PARA A INCLUSÃO SOCIAL, O FORTALECIMENTO DA CIDADANIA E A EFETIVAÇÃO DOS DIREITOS CULTURAIS DO MUNICÍPIO DE FORTALEZA.",
+          "trecho": "SELEÇÃO DE PROJETOS DE ARTE E CULTURA PARA A PROMOÇÃO, PRODUÇÃO E FRUIÇÃO DAS ARTES, NO ÂMBITO DO MUNICÍPIO DE FORTALEZA, COM A FINALIDADE DE FOMENTAR INICIATIVAS INDIVIDUAIS E COL",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-02-11 a 2026-03-12",
+          "trecho": "DE 11 DE FEVEREIRO DE 2026 A 12 DE MARÇO DE 2026.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "SECRETARIA MUNICIPAL DA CULTURA DE FORTALEZA - SECULTFOR",
+          "trecho": "SECRETARIA MUNICIPAL DA CULTURA DE FORTALEZA - SECULTFOR",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "CE",
+          "trecho": "NO ÂMBITO DO MUNICÍPIO DE FORTALEZA",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "SELEÇÃO DE PROJETOS DE ARTE E CULTURA PARA A PROMOÇÃO, PRODUÇÃO E FRUIÇÃO DAS ARTES, NO ÂMBITO DO MUNICÍPIO DE FORTALEZA, COM A FINALIDADE DE FOMENTAR INICIATIVAS INDIVIDUAIS E COL",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "AGENTE CULTURAL: agente atuante na arte ou na cultura, na qualidade de pessoa física, micro empresário individual, empre",
+          "trecho": "AGENTE CULTURAL: agente atuante na arte ou na cultura, na qualidade de pessoa física, micro empresário individual, empresário individual, organização da sociedade civil, sociedade ",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Secretaria da Cultura",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador"
+      ]
     }
   ],
   "contagem": {
