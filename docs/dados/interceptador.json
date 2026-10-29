@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T12:40:40+00:00",
+  "em": "2026-10-29T12:52:41+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T12:39:32+00:00",
+  "ultimo_voo": "2026-10-29T12:42:35+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -40,41 +40,97 @@
     "missoes": 1,
     "validadas": 0,
     "parciais": 0,
-    "insuficientes": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 0.5
+    "tempo_medio_min": 9.5
   },
   "missoes": [
     {
-      "em": "2026-10-29T12:39:32+00:00",
+      "em": "2026-10-29T12:42:35+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Edital 012/2026 - Seleção de Associações e/ou Cooperativas de Catadores ...",
-      "qualidade": "descartada",
-      "comprovados": 0,
-      "dispensados": null,
+      "alvo": "Edital 012/2026 – Seleção de Associações e/ou Cooperativas de Catadores de Materiais Recicláveis e Reutilizáveis para atuação no Programa Coleta Seletiva Cidadã",
+      "qualidade": "insuficiente",
+      "comprovados": 8,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Resultado",
+        "Prazo de recurso",
+        "Valor"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": null,
-      "erro": "entidade de outro estado, sem vínculo nacional nem com Goiás",
-      "segundos": 28,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital comprovado descreve claramente o objeto, prazo de inscrição, requisitos e outros detalhes necessários para a análise.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ser formalmente constituída por catadores de materiais reutilizáveis e recicláveis, possuir infraestrutura para triagem e classificação de resíduos, apresentar um sistema de rateio entre os associados e cooperados, estar regularmente cadastrada e habilitada, e seguir o prazo de inscrição de 2026-05-01 a 2026-05-31.",
+        "proximo_passo": "Verificar se a associação comunitária atende aos requisitos do edital e preparar os documentos necessários para a inscrição.",
+        "risco": "A associação pode não atender aos requisitos específicos, como a infraestrutura necessária ou a regularidade cadastrada."
+      },
+      "erro": null,
+      "segundos": 570,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": null,
+      "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
-      "justificativa": "entidade de outro estado, sem vínculo nacional nem com Goiás (regra do titular de 27/09)",
-      "avaliacao": "falhou: entidade de outro estado, sem vínculo nacional nem com Goiás",
-      "id": "cat-91015166c6f9",
-      "encontrou": {},
-      "financiador": null,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "fe250f230f8acf1fc38b",
+      "encontrou": {
+        "Objeto": {
+          "valor": "selecionar associações e/ou cooperativas de catadores de materiais recicláveis aptos a participar do Programa Coleta Seletiva Cidadã",
+          "trecho": "O presente Edital por objetivo selecionar, nos termos do art. 41 do Decreto nº 10.936/2022 , associações e/ou cooperativas de catadores de materiais recicláveis aptos a participar ",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-05-01 a 2026-05-31",
+          "trecho": "O Diretor-geral do Campus Restinga do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, no uso das atribuições legais que lhe são conferidas pela Portaria n",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul - Campus Restinga",
+          "trecho": "Diretor-geral do Campus Restinga do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "RS",
+          "trecho": "Rua Alberto Hoffmann, 285 – Restinga – Porto Alegre/RS – CEP 91.791-508",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "meio_ambiente",
+          "trecho": "Programa Coleta Seletiva Cidadã",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "sejam formalmente constituídas por catadores de materiais reutilizáveis e recicláveis, possuam infraestrutura para realizar a triagem e a classificação dos resíduos recicláveis descartados, apresentem o sistema de rateio entre os associados e os cooperados, estejam regularmente cadastradas e habilit",
+          "trecho": "as associações e as cooperativas de catadores de materiais recicláveis e reutilizáveis que: I. sejam formalmente constituídas por catadores de materiais reutilizáveis e recicláveis",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
+      ]
     }
   ],
   "contagem": {
