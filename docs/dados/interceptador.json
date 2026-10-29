@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T02:58:26+00:00",
+  "em": "2026-10-29T03:11:23+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T02:44:46+00:00",
+  "ultimo_voo": "2026-10-29T03:00:30+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,64 +48,68 @@
     },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.8
+    "tempo_medio_min": 10.2
   },
   "missoes": [
     {
-      "em": "2026-10-29T02:44:46+00:00",
+      "em": "2026-10-29T03:00:30+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Termo de fomento sem chamamento por emenda — Goiás",
+      "alvo": "Termos de Fomento — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 2,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
         "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
       "parecer_fonte": {
         "serve_como_fonte": "nao",
-        "por_que": "Não há informações suficientes para confirmar que o Termo de fomento sem chamamento por emenda — Goiás é uma fonte válida para a AMC.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar diretamente com a Assembleia Legislativa de Goiás sobre as condições e critérios de acesso ao fomento.",
-        "proximo_passo": "Contatar a Assembleia Legislativa de Goiás para obter detalhes sobre o Termo de fomento e os requisitos de acesso.",
-        "risco": "A falta de informações detalhadas pode impedir a associação de se qualificar adequadamente para o fomento."
+        "por_que": "Não há informações suficientes sobre Termos de Fomento específicos para organizações da sociedade civil no Estado de Goiás, apenas informações sobre o evento O Canto da Primavera.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há programas ou editais específicos da Secretaria de Estado da Cultura (Secult) que sejam abertos ao público e que atendam às suas áreas de atuação (assistência social, cultura, educação, esporte).",
+        "proximo_passo": "Consultar diretamente a Secretaria de Estado da Cultura (Secult) para obter informações sobre editais de fomento disponíveis.",
+        "risco": "A falta de informações sobre prazos, requisitos e áreas de atuação pode impedir a associação de se candidatar a editais de fomento."
       },
       "erro": null,
-      "segundos": 769,
+      "segundos": 613,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 4,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-captacao-205",
+      "id": "op-nova-86a89ba66dfd",
       "encontrou": {
+        "Objeto": {
+          "valor": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na cidade de Pirenópolis, desde o ano 2000.",
+          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Assembleia Legislativa de Goiás",
-          "trecho": "Assembleia Legislativa de Goiás",
-          "oficial": false,
+          "valor": "Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult)",
+          "trecho": "Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult)",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "na cidade de Pirenópolis, desde o ano 2000.",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Assembleia Legislativa de Goiás",
+      "financiador": "Secretaria de Estado da Cultura",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
