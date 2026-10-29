@@ -1,5 +1,5 @@
 {
- "em": "2026-10-29T20:43:15+00:00",
+ "em": "2026-10-29T22:17:50+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,25 +7,25 @@
   "alterar_rota": 58,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 43426
+  "exemplos_da_rede": 43533
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.6602
+    3.9281
    ],
    [
     "origem:rota original",
-    3.3815
+    3.7147
    ],
    [
     "origem:biblioteca",
-    2.532
+    2.5639
    ],
    [
     "tok:inscricoes",
-    2.5208
+    2.5275
    ],
    [
     "tok:secult",
@@ -49,21 +49,21 @@
    ],
    [
     "tok:transparencia",
-    2.1961
+    2.1703
    ],
    [
-    "tok:aldirblanc",
-    1.9475
+    "tok:edital",
+    2.1496
    ],
    [
-    "tok:leipaulogustavo",
-    1.8789
+    "tld:br",
+    2.049
    ]
   ],
   "piores_sinais": [
    [
-    "tipo:site_oficial",
-    -2.3365
+    "tipo:internacional",
+    -2.275
    ],
    [
     "tok:pgt",
@@ -75,7 +75,11 @@
    ],
    [
     "tok:2026",
-    -2.9423
+    -2.9482
+   ],
+   [
+    "origem:padrão",
+    -3.6086
    ],
    [
     "tok:content",
@@ -88,10 +92,6 @@
    [
     "origem:câmara",
     -3.7345
-   ],
-   [
-    "origem:padrão",
-    -4.075
    ]
   ]
  },
@@ -478,8 +478,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-29T09:54:51+00:00",
-    "testes": 14,
+    "em": "2026-10-29T22:17:03+00:00",
+    "testes": 15,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -625,8 +625,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-29T09:54:26+00:00",
-    "testes": 12,
+    "em": "2026-10-29T22:16:12+00:00",
+    "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1451,8 +1451,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-29T09:54:38+00:00",
-    "testes": 12,
+    "em": "2026-10-29T22:16:38+00:00",
+    "testes": 23,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1530,10 +1530,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 103,
-    "aprendido_em": "2026-10-29T11:24:55+00:00"
+    "aprendido_em": "2026-10-29T22:17:50+00:00"
    },
    "afinado": {
-    "em": "2026-10-29T11:24:55+00:00",
+    "em": "2026-10-29T22:17:50+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://senadorcanedo.go.gov.br/aldirblanc/",
@@ -1700,10 +1700,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 18,
-    "aprendido_em": "2026-10-29T09:55:06+00:00"
+    "aprendido_em": "2026-10-29T22:17:20+00:00"
    },
    "afinado": {
-    "em": "2026-10-29T09:55:06+00:00",
+    "em": "2026-10-29T22:17:20+00:00",
     "testes": 13,
     "melhor": {
      "url": "https://oakfnd.org/sitemap.xml",
@@ -1864,10 +1864,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 14,
-    "aprendido_em": "2026-10-29T09:55:16+00:00"
+    "aprendido_em": "2026-10-29T22:17:32+00:00"
    },
    "afinado": {
-    "em": "2026-10-29T09:55:16+00:00",
+    "em": "2026-10-29T22:17:32+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
