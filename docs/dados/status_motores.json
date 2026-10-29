@@ -1,11 +1,11 @@
 {
- "gerado_em": "2026-10-29T03:10-03:00",
- "proxima_atualizacao": "2026-10-29T09:10-03:00",
+ "gerado_em": "2026-10-29T04:06-03:00",
+ "proxima_atualizacao": "2026-10-29T10:06-03:00",
  "a_cada_horas": 6,
  "regra": "STATUS DOS MOTORES A CADA 6 HORAS (titular, 01/10/2026) — monitoramento e tomada de decisão.\n\nPara cada motor regular: a data e a hora da ÚLTIMA LEITURA, o resultado e UMA de três luzes:\n  VERDE     coletou hoje (horário de Brasília), com dados ou sem dados novos\n  VERMELHO  a coleta de hoje teve erro ou falha\n  CINZA     o motor não rodou hoje (fora da agenda, aguardando coleta local, parado)",
  "contagem": {
-  "verde": 30,
-  "vermelho": 13,
+  "verde": 31,
+  "vermelho": 12,
   "cinza": 2,
   "legenda": {
    "verde": "funcionando (leu dentro da cadência do motor: 26 h para os diários, a semana para os semanais)",
@@ -126,7 +126,7 @@
    "id": "pncp-api",
    "nome": "PNCP — API de contratações (chamamentos e credenciamentos)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 11 dia(s) (266 h); última leitura 18/10 00:25",
+   "resultado": "falha — não lê há 11 dia(s) (267 h); última leitura 18/10 00:25",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -173,7 +173,7 @@
    "id": "mpgo-destinacao",
    "nome": "MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 11 dia(s) (265 h); última leitura 18/10 01:27",
+   "resultado": "falha — não lê há 11 dia(s) (266 h); última leitura 18/10 01:27",
    "leitura_do_dia": {
     "estado": "regra_fixa",
     "texto": "sem leitura automática: o site do MP-GO proíbe robôs. Leitura indireta pelo Diário do Estado: feita. Conferência manual mensal: ainda não registrada."
@@ -193,7 +193,7 @@
    "id": "mptgo-destinacao",
    "nome": "MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 4 dia(s) (114 h); última leitura 24/10 08:16",
+   "resultado": "falha — não lê há 4 dia(s) (115 h); última leitura 24/10 08:16",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -208,7 +208,7 @@
    "id": "mpu-destinacao",
    "nome": "MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 11 dia(s) (265 h); última leitura 18/10 01:29",
+   "resultado": "falha — não lê há 11 dia(s) (266 h); última leitura 18/10 01:29",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -228,7 +228,7 @@
    "id": "plataforma-wordpress",
    "nome": "Adaptador WordPress — sites oficiais pela API pública",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 10 dia(s) (263 h); última leitura 18/10 03:55",
+   "resultado": "falha — não lê há 11 dia(s) (264 h); última leitura 18/10 03:55",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -243,7 +243,7 @@
    "id": "plataforma-mapas-culturais",
    "nome": "Adaptador Mapas Culturais — oportunidades com inscrição aberta",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 10 dia(s) (263 h); última leitura 18/10 03:54",
+   "resultado": "falha — não lê há 11 dia(s) (264 h); última leitura 18/10 03:54",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -287,23 +287,23 @@
   {
    "id": "motor-patrocinio",
    "nome": "Motor Patrocínio Privado — mídia e eventos de Goiás (empresas)",
-   "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (27 h); última leitura 28/10 00:02",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 29/10 00:02 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "pendente",
-    "texto": "o dia ainda não foi lido"
+    "estado": "completa",
+    "texto": "dia lido por completo"
    },
-   "luz_do_dia": "cinza",
-   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
+   "luz_do_dia": "verde",
+   "resultado_do_dia": "coletou hoje — sem dados novos",
    "observacoes": [],
-   "ultima_leitura": "2026-10-28T00:02-03:00",
+   "ultima_leitura": "2026-10-29T00:02-03:00",
    "agenda": "todos 03:23"
   },
   {
    "id": "gife",
    "nome": "GIFE — Grupo de Institutos, Fundações e Empresas",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (41 h); última leitura 27/10 09:34",
+   "resultado": "falha — não lê há 1 dia(s) (42 h); última leitura 27/10 09:34",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -318,7 +318,7 @@
    "id": "salic",
    "nome": "Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 2 dia(s) (64 h); última leitura 26/10 10:13",
+   "resultado": "falha — não lê há 2 dia(s) (65 h); última leitura 26/10 10:13",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -333,7 +333,7 @@
    "id": "prefeituras-50-go",
    "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 10 dia(s) (263 h); última leitura 18/10 03:49",
+   "resultado": "falha — não lê há 11 dia(s) (264 h); última leitura 18/10 03:49",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -350,7 +350,7 @@
    "id": "empresas-editais-incentivados",
    "nome": "Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 2 dia(s) (64 h); última leitura 26/10 10:12",
+   "resultado": "falha — não lê há 2 dia(s) (65 h); última leitura 26/10 10:12",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -365,7 +365,7 @@
    "id": "cnpq-extensao",
    "nome": "CNPq / MCTI / Setec-MEC — chamadas com componente de extensão e parceria com OSC",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 1 dia(s) (41 h); última leitura 27/10 09:34",
+   "resultado": "falha — não lê há 1 dia(s) (42 h); última leitura 27/10 09:34",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -380,7 +380,7 @@
    "id": "piloto-aberto",
    "nome": "Piloto - Espião — busca aberta no terceiro setor",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 29/10 03:04 · sem oportunidade nova",
+   "resultado": "funcionando — última leitura 29/10 04:01 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "fora_da_agenda",
     "texto": "hoje não é dia deste motor"
@@ -388,14 +388,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — fora da agenda hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-10-29T03:04-03:00",
+   "ultima_leitura": "2026-10-29T04:01-03:00",
    "agenda": "com o Piloto contínuo"
   },
   {
    "id": "estaduais-go-gov",
    "nome": "Oportunidade Estaduais Governamentais de Goiás",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 5 dia(s) (138 h); última leitura 23/10 08:58",
+   "resultado": "falha — não lê há 5 dia(s) (139 h); última leitura 23/10 08:58",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -695,15 +695,15 @@
    "id": "piloto-interceptador",
    "nome": "Piloto - Interceptador — comprova na fonte oficial",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 29/10 03:09 · sem oportunidade nova",
+   "resultado": "funcionando — última leitura 29/10 03:53 · 8 achado(s)",
    "leitura_do_dia": {
-    "estado": "pendente",
-    "texto": "o dia ainda não foi lido"
+    "estado": "completa",
+    "texto": "dia lido por completo"
    },
-   "luz_do_dia": "cinza",
-   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
+   "luz_do_dia": "verde",
+   "resultado_do_dia": "coletou hoje — 8 achado(s)",
    "observacoes": [],
-   "ultima_leitura": "2026-10-29T03:09-03:00",
+   "ultima_leitura": "2026-10-29T03:53-03:00",
    "agenda": null
   }
  ]
