@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T05:32:07+00:00",
+  "em": "2026-10-29T05:51:37+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T05:20:21+00:00",
+  "ultimo_voo": "2026-10-29T05:33:53+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,83 +39,88 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
-    "estrelas_de_ouro": 4,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 11.2
+    "estrelas_de_ouro": 5,
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 16.9
   },
   "missoes": [
     {
-      "em": "2026-10-29T05:20:21+00:00",
+      "em": "2026-10-29T05:33:53+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "2 · Brasil · oportunidade do mapa · prazo até 2026-12-02",
-      "alvo": "Edital De Seleção De Projetos Via Incentivo Fiscal 2026 - Zurich Seguros",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "de": "2 · Brasil · oportunidade do mapa · prazo até 2026-12-04T17:00",
+      "alvo": "BNDES Periferias em Rede — 6º ciclo BNDES R$ 2,0 mi Aceita:   organizações da sociedade civil Prazo:  04/12/2026 (62d) Ver detalhes →",
+      "qualidade": "insuficiente",
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Órgão / financiador",
+        "Esfera",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://www.zurich.com.br/leis-de-incentivo-2026",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre seu objeto, financiador, território, esfera e requisitos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria alinhar seu projeto a um dos três programas de Responsabilidade Social Corporativa da Zurich e seguir as instruções dos anexos para inscrição.",
-        "proximo_passo": "Verificar os anexos do edital para entender melhor os requisitos e preparar o projeto conforme os critérios estabelecidos.",
-        "risco": "A falta de informações sobre prazo de inscrição e valor pode impedir a associação de planejar e submeter o projeto a tempo."
+        "por_que": "O texto comprovado menciona o prazo de inscrição, objeto e requisitos do edital, o que permite identificar as informações necessárias para a resposta.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ser uma pessoa jurídica de direito privado sem fins lucrativos, alinhar seu projeto ao objeto do edital (inclusão produtiva urbana em favelas e periferias) e seguir as instruções dos anexos para inscrição.",
+        "proximo_passo": "Verificar os anexos do edital e preparar o projeto conforme o objeto e requisitos definidos.",
+        "risco": "A associação pode não atender aos requisitos do edital, como ser uma pessoa jurídica sem fins lucrativos, ou não alinhar seu projeto ao objeto do edital."
       },
       "erro": null,
-      "segundos": 672,
+      "segundos": 1017,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
+      "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "rec-026zurichseguros",
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "2f556273766464bcdc19",
       "encontrou": {
         "Objeto": {
-          "valor": "selecionar e apoiar projetos sociais alinhados à estratégia de Responsabilidade Social Corporativa da compania",
-          "trecho": "O Edital de Seleção de Projetos via Incentivo Fiscal 2026 da Zurich Seguros tem como objetivo selecionar e apoiar projetos sociais alinhados à estratégia de Responsabilidade Social",
+          "valor": "Inclusão produtiva urbana em favelas e periferias em uma única frente",
+          "trecho": "Serão elegíveis propostas relacionadas à inclusão produtiva urbana em favelas e periferias em uma única frente, a saber: BNDES Periferias em Rede: Destina-se a Instituições que vis",
           "oficial": false,
           "dispensado": false
         },
-        "Órgão / financiador": {
-          "valor": "Zurich Seguros",
-          "trecho": "A Zurich Seguros torna público o presente Edital de Seleção de Projetos via Incentivo Fiscal 2026",
+        "Prazo de inscrição": {
+          "valor": "2026-08-18 a 2026-12-04",
+          "trecho": "Ciclo para recebimento de propostas: de 18.08.2026 até às 17h de 04.12.2026.",
           "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "BR",
-          "trecho": "Com apoio técnico do Instituto para o Desenvolvimento do Investimento Social (IDIS), este Edital integra o compromisso da Zurich Seguros com a geração de impacto social positivo e ",
+          "valor": "nacional",
+          "trecho": "A iniciativa BNDES Periferias reúne diversas formas de atuação do BNDES vinculadas ao apoio a periferias urbanas e sua população.",
           "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "relação direta com um dos três programas de Responsabilidade Social Corporativa da Zurich",
-          "trecho": "Os projetos inscritos deverão apresentar relação direta com um dos três programas de Responsabilidade Social Corporativa da Zurich.",
+          "valor": "Pessoas jurídicas de direito privado sem fins lucrativos.",
+          "trecho": "Quem pode solicitar Pessoas jurídicas de direito privado sem fins lucrativos.",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Zurich Seguros",
+      "financiador": "BNDES",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
