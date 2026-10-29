@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T13:29:41+00:00",
+  "em": "2026-10-29T13:39:55+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T13:13:24+00:00",
+  "ultimo_voo": "2026-10-29T13:32:08+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,8 +38,8 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
-    "parciais": 1,
+    "validadas": 1,
+    "parciais": 0,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
@@ -47,75 +47,89 @@
       "sim": 1
     },
     "estrelas_de_ouro": 5,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.5
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 7.3
   },
   "missoes": [
     {
-      "em": "2026-10-29T13:13:24+00:00",
+      "em": "2026-10-29T13:32:08+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Edital COMIRMA-GO 2026 em Goiânia: como se inscrever",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "Edital De Chamamento Público Nº 3/2026 — Ministério Das Mulheres",
+      "qualidade": "validada",
+      "comprovados": 10,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://www.goiania.go.gov.br/wp-content/uploads/2026/07/Edital-_-COMITE-MUNICIPAL-MIGRANTE.pdf",
+      "pagina_oficial": "https://institutoinad.org.br/editais/edital-de-chamamento-publico-no-3-2026-ministerio-das-mulheres/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a existência de uma oportunidade para associações comunitárias de Goiânia participarem da seleção para compor o Comitê Municipal Interinstitucional para a População Refugiada, Migrante e Apátrida.",
-        "para_a_amc": "A associação comunitária precisaria se inscrever e habilitar documentalmente, demonstrando interesse em participar da seleção para compor o COMIRMA-GO.",
-        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre o processo de inscrição e habilitação.",
-        "risco": "A falta de informações sobre o prazo de inscrição pode impedir a associação de se inscrever a tempo."
+        "por_que": "O edital foi comprovado com informações detalhadas sobre objeto, prazo, valor, resultado e requisitos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ter objetivos estatutários compatíveis com o objeto da parceria, possuir no mínimo 3 anos de existência com CNPJ ativo, comprovar experiência prévia de pelo menos 1 ano na realização de objetos similares e estar habilitada no Portal Transferegov.",
+        "proximo_passo": "Verificar se os requisitos do edital são atendidos e preparar os documentos necessários para inscrição no prazo de inscrição até 2026-05-12.",
+        "risco": "A falta de experiência prévia de pelo menos 1 ano ou a inabilitação no Portal Transferegov pode impedir o acesso ao edital."
       },
       "erro": null,
-      "segundos": 930,
+      "segundos": 436,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "cat-5a663ca4e529",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 10,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "cat-510c4be9890a",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de representantes titulares e suplentes da sociedade civil para compor o Comitê Municipal Interinstitucional para a População Refugiada, Migrante e Apátrida de Goiânia – COMIRMA-GO",
-          "trecho": "CONVOCA REPRESENTANTES DA SOCIEDADE CIVIL PARA SELEÇÃO DE TITULARES E SUPLENTES DESTINADOS A INTEGRAR O COMITÊ MUNICIPAL INTERINSTITUCIONAL PARA A POPULAÇÃO REFUGIADA, MIGRANTE E A",
+          "valor": "Apoio à organização, estruturação e formalização de Cooperativas, Associações, Empreendimentos de Economia Solidária e Coletivos de Mulheres, especificamente nos setores de Costura e Artesanato, com prioridade para mulheres quilombolas",
+          "trecho": "Tema: Apoio à organização, estruturação e formalização de Cooperativas, Associações, Empreendimentos de Economia Solidária e Coletivos de Mulheres, especificamente nos setores de C",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "? a 2026-05-12",
+          "trecho": "Inscrições abertas até: 12/05/2026 | 23:59",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 800.000,00 (oitocentos mil reais)",
+          "trecho": "Valor solicitado maximo: R$ 800.000,00 (oitocentos mil reais)",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia",
-          "trecho": "Prefeitura de Goiânia",
+          "valor": "Ministério Das Mulheres",
+          "trecho": "Instituição: Ministério das Mulheres",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "Prefeitura de Goiânia",
+          "valor": "nacional",
+          "trecho": "Instituição: Ministério das Mulheres",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "direitos",
+          "trecho": "Tema: Apoio à organização, estruturação e formalização de Cooperativas, Associações, Empreendimentos de Economia Solidária e Coletivos de Mulheres, especificamente nos setores de C",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "inscrição e habilitação documental das entidades, coletivos, associações e núcleos de pesquisa interessados",
-          "trecho": "a)inscrição e habilitação documental das entidades, coletivos, associações e núcleos de pesquisa interessados;",
+          "valor": "Possuir objetivos estatutários compatíveis com o objeto da parceria, Ter no mínimo 3 (três) anos de existência com CNPJ ativo, Comprovar experiência prévia de pelo menos 1 (um) ano na realização de objetos similares., Estar habilitada no Portal Transferegov",
+          "trecho": "Critérios de elegibilidade: a) Possuir objetivos estatutários compatíveis com o objeto da parceria b) Ter no mínimo 3 (três) anos de existência com CNPJ ativo c) Comprovar experiên",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Goiânia",
+      "financiador": "Ministério das Mulheres",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital",
+        "financiador_regulamento"
       ]
     }
   ],
