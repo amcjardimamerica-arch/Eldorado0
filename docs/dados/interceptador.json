@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T10:23:34+00:00",
+  "em": "2026-10-29T10:33:41+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T10:08:10+00:00",
+  "ultimo_voo": "2026-10-29T10:25:30+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,78 +48,79 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.6
+    "tempo_medio_min": 7.6
   },
   "missoes": [
     {
-      "em": "2026-10-29T10:08:10+00:00",
+      "em": "2026-10-29T10:25:30+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Aviso de Chamamento Público",
-      "qualidade": "parcial",
+      "alvo": "Convocatoria Actinver Apoya 2026 - Difusión con causa",
+      "qualidade": "insuficiente",
       "comprovados": 7,
-      "dispensados": 1,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos"
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://mapacultural.secult.ce.gov.br/oportunidade/5969/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O aviso de chamamento público descreve um processo de seleção de projetos culturais para apoio financeiro, com informações claras sobre o objeto, prazo de inscrição e órgãão financiador.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o projeto se enquadra nas categorias descritas no Anexo I e se está localizado no território do município de Ubajara, no Ceará, para acessar o apoio financeiro.",
-        "proximo_passo": "Verificar os anexos e as categorias de projetos culturais descritas no edital para alinhar o projeto à seleção.",
-        "risco": "O projeto não estar alinhado com as categorias descritas no Anexo I ou não estar localizado no território do município de Ubajara."
+        "por_que": "O texto fornece informações sobre o objeto, prazo de inscrição, órgão financiador, território, esfera e requisitos para acesso ao edital.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar documentação institucional, último informe de resultados, constância de situação fiscal, opinião de cumprimento de obrigações fiscais atualizada, organigrama e cronograma ou programa de atividades.",
+        "proximo_passo": "Verificar os requisitos e anexos do edital e preparar a documentação necessária para inscrição.",
+        "risco": "A falta de documentação adequada ou a não conformidade com os requisitos pode impedir o acesso ao edital."
       },
       "erro": null,
-      "segundos": 877,
+      "segundos": 457,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Requisitos",
-      "id": "85c87dec05f183609869",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "rec-ctinverapoya2026",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de manifestações culturais do município de Ubajara",
-          "trecho": "objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de manife",
-          "oficial": true,
+          "valor": "Impulsar proyectos sociales desarrollados por organizaciones de la sociedad civil sin fines de lucro enfocados en educación, salud y medio ambiente, mediante la entrega de donativos económicos que contribuyan a fortalecer su impacto y mejorar la calidad de vida de comunidades en situación de vulnerabilidad en México.",
+          "trecho": "Objetivo: Impulsar proyectos sociales desarrollados por organizaciones de la sociedad civil sin fines de lucro enfocados en educación, salud y medio ambiente, mediante la entrega d",
+          "oficial": false,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "dispensado — O prazo de inscrição está explicitado no texto.",
-          "trecho": "Inscrições abertas de 11/11/2024 a 25/11/2024 às 23:59 [rejeitado: data implausível para edital aberto]",
+          "valor": "2026-05-04 a 2026-06-26",
+          "trecho": "De acuerdo con la convocatoria, las organizaciones interesadas en participar, podrán realizar su registro del 4 de mayo al 26 de junio de 2026.",
           "oficial": false,
-          "dispensado": true
+          "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Mapa Cultural do Ceará",
-          "trecho": "Mapa Cultural do Ceará - EDITAL DE CHAMAMENTO PÚBLICO Nº 002/2024 SELEÇÃO DE PROJETOS PARA FIRMAR TERMO DE EXECUÇÃO CULTURAL COM RECURSOS DA POLÍTICA NACIONAL ALDIR BLANC DE FOMENT",
-          "oficial": true,
+          "valor": "Actinver",
+          "trecho": "El programa Actinver Apoya 2026 abrió su convocatoria dirigida a organizaciones de la sociedad civil que desarrollan proyectos en educación, salud y medio ambiente en México.",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "CE",
-          "trecho": "objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de manife",
-          "oficial": true,
+          "valor": "nacional",
+          "trecho": "Cobertura: Nacional",
+          "oficial": false,
           "dispensado": false
         },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de manife",
-          "oficial": true,
+        "Requisitos": {
+          "valor": "Presentación Institucional, Último Informe de Resultados, Constancia de Situación Fiscal, Opinión de Cumplimiento de Obligaciones Fiscales Actualizada, Organigrama de su organización, Cronograma o programa de actividades",
+          "trecho": "Las organizaciones interesadas en participar, deberán presentar la siguiente documentación: Presentación Institucional Último Informe de Resultados Constancia de Situación Fiscal O",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria da Cultura",
+      "financiador": "Actinver",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "financiador_programa_edital",
+        "financiador_regulamento"
       ]
     }
   ],
