@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-29 05:41 UTC
+# Diagnóstico do sistema · 2026-10-29 05:53 UTC
 
 ## Cumprimento da finalidade · índice geral 58%
 - Motores: 70% (atencao) — todo motor ativo lê dentro da sua cadência
@@ -84,7 +84,7 @@
   - em falha: Motor Patrocínio Privado — mídia e eventos de Goiás (empresas) — falha — não lê há 1 dia(s) (26 h); última leitura 28/10 00:02
   - em falha: GIFE — Grupo de Institutos, Fundações e Empresas — falha — não lê há 1 dia(s) (41 h); última leitura 27/10 09:34
   - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 2 dia(s) (64 h); última leitura 26/10 10:13
-  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 10 dia(s) (262 h); última leitura 18/10 03:49
+  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 10 dia(s) (263 h); última leitura 18/10 03:49
   - em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 2 dia(s) (64 h); última leitura 26/10 10:12
   - em falha: CNPq / MCTI / Setec-MEC — chamadas com componente de extensão e parceria com OSC — falha — não lê há 1 dia(s) (41 h); última leitura 27/10 09:34
   - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 5 dia(s) (137 h); última leitura 23/10 08:58
@@ -95,11 +95,11 @@
 
 ## Integração
 - contagens: {'repositorio_abertas': 209, 'diagnostico_abertas': 209, 'tela_cartoes': 224, 'fichas': 211, 'sala_controle_abertas': 209}
-- idade (h): {'repositorio': 0.0, 'fluxo': 265.8, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 6.0, 'rede_neural': 265.8, 'saude': 13.8}
+- idade (h): {'repositorio': 0.0, 'fluxo': 266.0, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 6.2, 'rede_neural': 266.0, 'saude': 14.0}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (33)
-- [alta] o comando único não fecha um ciclo há 244.1 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+- [alta] o comando único não fecha um ciclo há 244.3 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
 - [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 11 dia(s) (266 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
 - [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 11 dia(s) (265 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
@@ -110,17 +110,17 @@
 - [alta] motor em falha: Motor Patrocínio Privado — mídia e eventos de Goiás (empresas) — falha — não lê há 1 dia(s) (26 h); última leitura 28/10 00:02 → investigar o motor (sem correção automática)
 - [alta] motor em falha: GIFE — Grupo de Institutos, Fundações e Empresas — falha — não lê há 1 dia(s) (41 h); última leitura 27/10 09:34 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 2 dia(s) (64 h); última leitura 26/10 10:13 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 10 dia(s) (262 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 10 dia(s) (263 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 2 dia(s) (64 h); última leitura 26/10 10:12 → investigar o motor (sem correção automática)
 - [alta] motor em falha: CNPq / MCTI / Setec-MEC — chamadas com componente de extensão e parceria com OSC — falha — não lê há 1 dia(s) (41 h); última leitura 27/10 09:34 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 5 dia(s) (137 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 209 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 265.8 h (limite 3 h) → refazer a tela
-- [media] maestro sem atualização há 6.0 h (limite 3 h) → ver o fluxo que gera este dado
-- [media] rede_neural sem atualização há 265.8 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 266.0 h (limite 3 h) → refazer a tela
+- [media] maestro sem atualização há 6.2 h (limite 3 h) → ver o fluxo que gera este dado
+- [media] rede_neural sem atualização há 266.0 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 121 de 128 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
-- [media] avaliação do Cartório com gabarito tem 321.8 h (semanal) → disparar o fluxo 39
+- [media] avaliação do Cartório com gabarito tem 322.0 h (semanal) → disparar o fluxo 39
 - [media] 54 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 115 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 239 item(ns) esperando a análise do Claude (próxima: 2026-10-28) → ver o fluxo/arquivo indicado
