@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T10:06:12+00:00",
+  "em": "2026-10-29T10:23:34+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T09:50:04+00:00",
+  "ultimo_voo": "2026-10-29T10:08:10+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,73 +48,78 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.3
+    "tempo_medio_min": 14.6
   },
   "missoes": [
     {
-      "em": "2026-10-29T09:50:04+00:00",
+      "em": "2026-10-29T10:08:10+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Chamada pública para selecionar Organização da Sociedade Civil para a execução de ações de incubação de empreendimentos inovadores no Espírito Santo, visando fortalecer o ecossiste",
-      "qualidade": "insuficiente",
-      "comprovados": 5,
-      "dispensados": 0,
+      "alvo": "Aviso de Chamamento Público",
+      "qualidade": "parcial",
+      "comprovados": 7,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": "https://aderes.es.gov.br/edital-de-chamamento-publico-no-109-2026-selecao-de-organizacao-da-sociedade-civil-osc-especializada-na-prestacao-de-servicos-de-capacitacao-e-qualificacao-empreendedora-de-impacto-social-presencial-para-a-execucao-do-projeto-empreendendo-para-a-vida",
+      "pagina_oficial": "https://mapacultural.secult.ce.gov.br/oportunidade/5969/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a existência de uma chamada pública para seleção de organização da sociedade civil especializada em capacitação e qualificação empreendedora de impacto social presencial, visando ao projeto Empreendendo para a Vida, no Espírito Santo.",
-        "para_a_amc": "Uma associação comunitária de Goiânia precisaria verificar se há alinhamento entre sua área de atuação (assistência social, cultura, educação, esporte) e o objeto do edital, além de se adequar aos requisitos não especificados no texto, mas necessários para a seleção.",
-        "proximo_passo": "Verificar se há alinhamento entre a área de atuação da AMC e o objeto do edital, e buscar informações adicionais sobre requisitos e prazos.",
-        "risco": "A falta de informações sobre requisitos, prazos e área de atuação pode impedir que a AMC se candidate de forma adequada."
+        "por_que": "O aviso de chamamento público descreve um processo de seleção de projetos culturais para apoio financeiro, com informações claras sobre o objeto, prazo de inscrição e órgãão financiador.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o projeto se enquadra nas categorias descritas no Anexo I e se está localizado no território do município de Ubajara, no Ceará, para acessar o apoio financeiro.",
+        "proximo_passo": "Verificar os anexos e as categorias de projetos culturais descritas no edital para alinhar o projeto à seleção.",
+        "risco": "O projeto não estar alinhado com as categorias descritas no Anexo I ou não estar localizado no território do município de Ubajara."
       },
       "erro": null,
-      "segundos": 919,
+      "segundos": 877,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "76a87f11d38a7c21ba62",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Requisitos",
+      "id": "85c87dec05f183609869",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de organização da sociedade civil especializada na prestação de serviços de capacitação e qualificação empreendedora de impacto social presencial para a execução do projeto Empreendendo para a Vida",
-          "trecho": "Chamada pública para selecionar Organização da Sociedade Civil para a execução de ações de incubação de empreendimentos inovadores no Espírito Santo, visando fo",
+          "valor": "seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de manifestações culturais do município de Ubajara",
+          "trecho": "objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de manife",
           "oficial": true,
           "dispensado": false
         },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O prazo de inscrição está explicitado no texto.",
+          "trecho": "Inscrições abertas de 11/11/2024 a 25/11/2024 às 23:59 [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
+        },
         "Órgão / financiador": {
-          "valor": "ADERES - Agência de Desenvolvimento das Micro e Pequenas Empresas e do Empreendedorismo",
-          "trecho": "ADERES - Agência de Desenvolvimento das Micro e Pequenas Empresas e do Empreendedorismo",
+          "valor": "Mapa Cultural do Ceará",
+          "trecho": "Mapa Cultural do Ceará - EDITAL DE CHAMAMENTO PÚBLICO Nº 002/2024 SELEÇÃO DE PROJETOS PARA FIRMAR TERMO DE EXECUÇÃO CULTURAL COM RECURSOS DA POLÍTICA NACIONAL ALDIR BLANC DE FOMENT",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "ES",
-          "trecho": "no Espírito Santo",
+          "valor": "CE",
+          "trecho": "objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de manife",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de manife",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "ADERES - Agência de Desenvolvimento das Micro e Pequenas Empresas e do Empreendedorismo",
+      "financiador": "Secretaria da Cultura",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "site_do_financiador"
       ]
     }
   ],
