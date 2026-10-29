@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T08:43:45+00:00",
+  "em": "2026-10-29T08:48:42+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T08:30:52+00:00",
+  "ultimo_voo": "2026-10-29T08:45:52+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,80 +43,48 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 5,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 12.3
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 2.1
   },
   "missoes": [
     {
-      "em": "2026-10-29T08:30:52+00:00",
+      "em": "2026-10-29T08:45:52+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "CHAMADA PÚBLICA Nº 019/2026 – PROJETO DIAGNÓSTICO CENSITÁRIO DA POPULAÇÃO IDOSA DO BAIRRO DO UNA EM BELÉM/PA",
+      "alvo": "CMAS/FMAS — Edital nº 37/2026 — DA CONTRATAÇÃO DIRETA 1.1",
       "qualidade": "insuficiente",
-      "comprovados": 4,
-      "dispensados": 0,
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Esfera",
-        "Requisitos",
-        "Área de atuação"
-      ],
-      "pagina_oficial": "https://fapesp.br/17876/chamada-de-propostas-centros-de-ciencia-para-o-desenvolvimento-ccd-20252026",
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "A chamada pública menciona o objeto do projeto e o financiador, o que é suficiente para identificar a fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o projeto se alinha ao seu campo de atuação e se ela atende aos requisitos não especificados, como experiência com projetos semelhantes e capacidade técnica.",
-        "proximo_passo": "Consultar os anexos para obter informações detalhadas sobre requisitos e critérios de seleção.",
-        "risco": "A falta de informações sobre prazo de inscrição, valor e requisitos específicos pode impedir a associação de se candidatar adequadamente."
-      },
-      "erro": null,
-      "segundos": 738,
+      "nao_resolvidos": null,
+      "pagina_oficial": null,
+      "parecer_fonte": {},
+      "erro": "nenhuma fonte legível",
+      "segundos": 124,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 1,
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "58e9c96da09ab617f6d0",
-      "encontrou": {
-        "Objeto": {
-          "valor": "Realizar um projeto diagnóstico censitário da população idosa do bairro do Una em Belém/PA",
-          "trecho": "PROJETO DIAGNÓSTICO CENSITÁRIO DA POPULAÇÃO IDOSA DO BAIRRO DO UNA EM BELÉM/PA",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)",
-          "trecho": "Chamada de Propostas – Centros de Ciência para o Desenvolvimento (CCD) – 2025/2026",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "PA",
-          "trecho": "Belém/PA",
-          "oficial": false,
-          "dispensado": false
-        }
-      },
-      "financiador": "FUNDAÇÃO AMAZÔNIA DE AMPARO A ESTUDOS E PESQUISAS – FAPESPA",
+      "avaliacao": "falhou: nenhuma fonte legível",
+      "id": "8c36684df22eacb1614f",
+      "encontrou": {},
+      "financiador": "CMAS/FMAS",
       "indicios": [
         {
-          "url": "https://www.fapespa.pa.gov.br/2026/10/14/chamada-publica-no-019-2026-projeto-diagnostico-censitario-da-populacao-idosa-do-bairro-do-una-em-belem-pa/",
-          "tipo": "noticia"
+          "url": "https://data.queridodiario.ok.org.br/5208707/2026-09-17/30451b5613f9ebc1b09ee84816deb981d8d19944.pdf",
+          "tipo": "agregador"
         }
       ],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "programa_puro"
       ]
     }
   ],
