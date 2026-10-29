@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T05:01:30+00:00",
+  "em": "2026-10-29T05:18:02+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T04:59:34+00:00",
+  "ultimo_voo": "2026-10-29T05:03:09+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,38 +43,82 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 4,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 1.1
+    "tempo_medio_min": 14.1
   },
   "missoes": [
     {
-      "em": "2026-10-29T04:59:34+00:00",
+      "em": "2026-10-29T05:03:09+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "2 · Brasil · oportunidade do mapa · prazo até 2026-11-11",
-      "alvo": "Prêmio da Mega-Sena acumula e chega a R$ 170 milhões após concurso sem ganhador — Goiás",
+      "de": "2 · Brasil · oportunidade do mapa · prazo até 2026-11-27",
+      "alvo": "Agência Nacional de Transportes Terrestres — EDITAL DG Nº 23, DE 13 DE OUTUBRO DE 2026 — Prêmio ANTT - Destaques 2026 - 4ª Edição",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 6,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Área de atuação"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "nenhuma fonte legível",
-      "segundos": 69,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações sobre seu objeto, órgão financiador, território, esfera e requisitos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa estar em situação regular perante a ANTT e alinhar suas ações às iniciativas de destaque no âmbito dos setores regulados pela agência.",
+        "proximo_passo": "Verificar se a associação está em situação regular perante a ANTT e preparar os documentos necessários conforme os anexos do edital.",
+        "risco": "A associação pode não estar em situação regular perante a ANTT ou não conseguir alinhar suas ações aos critérios do edital."
+      },
+      "erro": null,
+      "segundos": 844,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: nenhuma fonte legível",
-      "id": "op-04d523eb2701",
-      "encontrou": {},
-      "financiador": "",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "879356841199971fd225",
+      "encontrou": {
+        "Objeto": {
+          "valor": "reconhecer os esforços positivos, as ações de destaque no âmbito dos setores regulados pela agência e incentivar o desenvolvimento de iniciativas inovadoras",
+          "trecho": "O Diretor-Geral da Agência Nacional de Transportes Terrestres - ANTT, no uso das atribuições que lhe confere o art. 12 do Regimento Interno, comunica a abertura das inscrições para",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Ministério dos Transportes/Agência Nacional de Transportes Terrestres",
+          "trecho": "Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "nacional",
+          "trecho": "Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "estar em situação regular perante a ANTT",
+          "trecho": "Poderão concorrer ao Prêmio as concessionárias e empresas reguladas que estejam em situação regular perante a ANTT, observadas as Classes e Categorias aplicáveis a cada segmento, c",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Agência Nacional de Transportes Terrestres",
       "indicios": [],
       "rotas": [
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
         "programa_puro"
       ]
     }
