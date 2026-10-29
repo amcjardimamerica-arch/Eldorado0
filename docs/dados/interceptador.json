@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-29T01:01:42+00:00",
+  "em": "2026-10-29T01:11:47+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-29T00:52:28+00:00",
+  "ultimo_voo": "2026-10-29T01:03:36+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,9 +38,9 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
+    "validadas": 1,
     "parciais": 0,
-    "insuficientes": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,71 +48,81 @@
     },
     "estrelas_de_ouro": 3,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.7
+    "tempo_medio_min": 7.6
   },
   "missoes": [
     {
-      "em": "2026-10-29T00:52:28+00:00",
+      "em": "2026-10-29T01:03:36+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Senador Canedo — Senador Canedo abre credenciamento para artistas locais do Canedo Fest Show 2026 — Goiás / Se… — Goiás / Senador Canedo",
-      "qualidade": "insuficiente",
-      "comprovados": 7,
+      "alvo": "Senador Canedo — Senador Canedo abre inscrições para o Projeto Guardiões Ambientais 2026 — Goiás / Senador Can… — Goiás / Senador Canedo",
+      "qualidade": "validada",
+      "comprovados": 9,
       "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
         "Resultado",
-        "Prazo de recurso",
-        "Território",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://senadorcanedo.go.gov.br/senador-canedo-abre-inscricoes-para-o-projeto-guardioes-ambientais-2026/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações detalhadas sobre o credenciamento de artistas locais e DJs para o Canedo Fest Show 2026, incluindo prazo, objeto e requisitos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se credenciar como artista local ou DJ, adequando-se às condições técnicas do evento e garantindo que nenhum membro da associação ocupe cargo ou emprego na Administração Pública do Município de Senador Canedo.",
-        "proximo_passo": "Verificar os requisitos e anexos mencionados no edital e se credenciar dentro do prazo de inscrição.",
-        "risco": "A associação pode ser impedida se algum membro da associação ocupar cargo ou emprego na Administração Pública do Município de Senador Canedo."
+        "por_que": "O texto fornece informações sobre o Projeto Guardiões Ambientais 2026, incluindo objeto, prazo de inscrição, valor, financiador, território, esfera, requisitos e anexos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever com matrícula na rede de ensino e anexar os documentos exigidos pelo edital para acessar o apoio.",
+        "proximo_passo": "Verificar o prazo de inscrição e preparar os documentos necessários para se inscrever no projeto.",
+        "risco": "O prazo de inscrição não foi especificado, o que pode impedir a participação em tempo hábil."
       },
       "erro": null,
-      "segundos": 520,
+      "segundos": 457,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-af372809ba93",
+      "fontes_oficiais": 8,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-038d338df133",
       "encontrou": {
         "Objeto": {
-          "valor": "credenciamento de artistas locais e DJs para realização de apresentações musicais durante o evento Canedo Fest Show 2026",
-          "trecho": "1.1. O credenciamento de artistas locais e DJs, para realização de apresentações musicais durante o evento \"Canedo Fest Show 2026\", a ser realizado na Antiga Estação Ferroviária, n",
-          "oficial": false,
+          "valor": "educação ambiental e cidadania para crianças e adolescentes de 10 a 14 anos",
+          "trecho": "A iniciativa é voltada a crianças e adolescentes de 10 a 14 anos, matriculados na rede de ensino.",
+          "oficial": true,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "2026-05-06 a 2026-05-15",
-          "trecho": "Início do Credenciamento: _06_/_05__/_2026__ AS _08_H:_00_MIN Fim do Credenciamento: _15_/_05__/_2026__ AS _23_H:_59_MIN",
-          "oficial": false,
+          "valor": "? a 2026-02-22",
+          "trecho": "As inscrições poderão ser feitas de até 22 de fevereiro",
+          "oficial": true,
           "dispensado": false
         },
         "Valor": {
-          "valor": "dispensado — O edital menciona apoio em espécie, sem valor em dinheiro.",
-          "trecho": "A banda de apoio será disponibilizada pela organização do evento, sendo responsável pelo suporte técnico e musical aos artistas locais, conforme previsto em Portaria de n° 7.403/20",
+          "valor": "dispensado — Apoio é em espécie, sem valor em dinheiro.",
+          "trecho": "Estão sendo ofertadas 50 vagas",
           "oficial": false,
           "dispensado": true
         },
         "Órgão / financiador": {
-          "valor": "MUNICIPIO DE SENADOR CANEDO/GO",
-          "trecho": "O MUNICIPIO DE SENADOR CANEDO/GO, por intermédio do AGENTE DE CONTRATAÇÃO através do Decreto 127/2025, torna público que fará realizar chamamento público...",
-          "oficial": false,
+          "valor": "Prefeitura Municipal de Senador Canedo",
+          "trecho": "A Prefeitura de Senador Canedo, por meio da Agência Municipal do Meio Ambiente (AMMA), da Secretaria Municipal de Assistência Social e Cidadania (SEMASC) e da Secretaria Municipal ",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Senador Canedo abre inscrições para o Projeto Guardiões Ambientais 2026 - Prefeitura Municipal de Senador Canedo",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "meio_ambiente",
+          "trecho": "educação ambiental e cidadania",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "estar apto a realizar suas apresentações conforme as condições técnicas do evento, adequando-se à estrutura de palco, so, não ser ocupante de cargo ou emprego na Administração Pública do Município de Senador Canedo., ser pessoal e intransferível, sendo vedada a substituição do artista credenciado po",
-          "trecho": "2.6. Os artistas deverão estar aptos a realizar suas apresentações conforme as condições técnicas do evento, adequando-se à estrutura de palco, som e iluminação disponibilizada pel",
-          "oficial": false,
+          "valor": "matrícula na rede de ensino",
+          "trecho": "A iniciativa é voltada a crianças e adolescentes de 10 a 14 anos, matriculados na rede de ensino.",
+          "oficial": true,
           "dispensado": false
         }
       },
