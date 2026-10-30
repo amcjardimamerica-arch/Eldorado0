@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T08:53:46+00:00",
+  "em": "2026-10-30T09:04:01+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T08:33:02+00:00",
+  "ultimo_voo": "2026-10-30T08:55:43+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,38 +43,104 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 20.1
+    "tempo_medio_min": 7.7
   },
   "missoes": [
     {
-      "em": "2026-10-30T08:33:02+00:00",
+      "em": "2026-10-30T08:55:43+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Contatos fiscais MMA - Edital catadores",
+      "alvo": "Para mais informações, basta acessar o Edital do Programa de Pagamento por Serviços Ambientais no Pantanal. Para saber mais sobre esta e outras chamadas, acesse a Central de Editai",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 9,
+      "dispensados": 1,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Resultado",
+        "Prazo de recurso"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 1205,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O texto menciona explicitamente o Edital do Programa de Pagamento por Serviços Ambientais no Pantanal e fornece informações sobre o objeto, prazo de inscrição, valor e requisitos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ter sede em Mato Grosso do Sul, comprovar pelo menos dois anos de atuação e estar regularizada conforme a Lei nº 13.019/2014.",
+        "proximo_passo": "Acessar o Edital do Programa de Pagamento por Serviços Ambientais no Pantanal para obter mais detalhes e verificar se os requisitos são atendidos.",
+        "risco": "A associação comunitária de Goiânia não tem sede em Mato Grosso do Sul, o que pode impedir o acesso ao edital."
+      },
+      "erro": null,
+      "segundos": 464,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "816456fc7f9c0ca4e920",
-      "encontrou": {},
-      "financiador": null,
-      "indicios": [],
-      "rotas": []
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "e45d79fd575e7887b45e",
+      "encontrou": {
+        "Objeto": {
+          "valor": "selecionar uma Organização para executar ações de conservação no Pantanal com apoio de até R$ 33 milhões",
+          "trecho": "Edital seleciona organização para executar ações de conservação no Pantanal com apoio de até R$ 33 milhões",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O texto menciona que as propostas devem ser entregues até o dia 8 de maio de 2025, das 8h às 17h.",
+          "trecho": "As propostas devem ser entregues até o dia 8 de maio de 2025, das 8h às 17h. [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Valor": {
+          "valor": "R$ 33 milhões",
+          "trecho": "com valor global de R$ 33 milhões a serem executados em um prazo de 19 meses",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Governo do Estado de Mato Grosso do Sul",
+          "trecho": "O Governo do Estado de Mato Grosso do Sul está com inscrições abertas para a seleção de uma organização",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "MS",
+          "trecho": "a organização deve ter sede em Mato Grosso do Sul",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "meio_ambiente",
+          "trecho": "Programa de Pagamento por Serviços Ambientais – PSA Bioma Pantanal",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "ter sede em Mato Grosso do Sul, comprovar pelo menos dois anos de atuação, estar regularizada conforme a Lei nº 13.019/2014",
+          "trecho": "Para participar, a organização deve ter sede em Mato Grosso do Sul, comprovar pelo menos dois anos de atuação e estar regularizada conforme a Lei nº 13.019/2014.",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Governo do Estado de Mato Grosso do Sul",
+      "indicios": [
+        {
+          "url": "https://observatorio3setor.org.br/central-de-editais",
+          "tipo": "noticia"
+        }
+      ],
+      "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
+      ]
     }
   ],
   "contagem": {
