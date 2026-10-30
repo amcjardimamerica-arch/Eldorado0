@@ -118,7 +118,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "dj-trf1-go": {
-  "em": "2026-10-26T01:57:40+00:00",
+  "em": "2026-10-30T13:53:21+00:00",
   "testes": 15,
   "melhor": {
    "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
@@ -151,7 +151,7 @@
     "funcionou": true
    },
    {
-    "url": "https://www.trf1.jus.br/sitemap.xml",
+    "url": "https://www.trf1.jus.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -161,7 +161,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/sitemap.xml",
+    "url": "https://www.trf1.jus.br/feed",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
@@ -171,7 +171,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/transparencia/editais",
+    "url": "https://www.trf1.jus.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -191,6 +191,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.trf1.jus.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.trf1.jus.br/sjgo/conteudo/secos/SEI_24768109_Edital (2).pdf",
     "origem": "biblioteca",
     "via": "direto",
@@ -201,7 +211,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/feed",
+    "url": "https://www.trf1.jus.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -212,16 +222,6 @@
    },
    {
     "url": "https://www.trf1.jus.br/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.trf1.jus.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1093,7 +1093,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-30T12:22:23+00:00",
+  "em": "2026-10-30T13:54:58+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1995,13 +1995,13 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "alego-pl": {
-  "em": "2026-10-26T01:59:25+00:00",
+  "em": "2026-10-30T13:54:44+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://portal.al.go.leg.br/",
    "via": "direto",
    "origem": "rota original",
-   "pontos": 23,
+   "pontos": 27,
    "formato": "html"
   },
   "detalhe": [
@@ -2020,12 +2020,32 @@
     "url": "https://portal.al.go.leg.br/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 23,
+    "pontos": 27,
     "links": 260,
-    "sinais": 11,
+    "sinais": 13,
     "formato": "html",
     "erro": null,
     "funcionou": true
+   },
+   {
+    "url": "https://portal.al.go.leg.br/feed",
+    "origem": "câmara",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/feed",
+    "origem": "câmara",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
    },
    {
     "url": "https://portal.al.go.leg.br/sitemap.xml",
@@ -2048,33 +2068,13 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
     "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -2088,8 +2088,8 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/feed",
-    "origem": "câmara",
+    "url": "https://portal.al.go.leg.br/transparencia/editais",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2098,8 +2098,8 @@
     "funcionou": false
    },
    {
-    "url": "https://alegodigital.al.go.leg.br/feed",
-    "origem": "câmara",
+    "url": "https://alegodigital.al.go.leg.br/transparencia/editais",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2118,7 +2118,7 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/editais",
+    "url": "https://portal.al.go.leg.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2128,27 +2128,27 @@
     "funcionou": false
    },
    {
-    "url": "https://alegodigital.al.go.leg.br/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://portal.al.go.leg.br/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
     "url": "https://alegodigital.al.go.leg.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2719,7 +2719,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-234": {
-  "em": "2026-10-30T01:26:38+00:00",
+  "em": "2026-10-30T13:54:51+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
@@ -4046,7 +4046,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-230": {
-  "em": "2026-10-30T01:26:40+00:00",
+  "em": "2026-10-30T13:54:52+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -4081,7 +4081,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaoarcelormittal.org.br/transparencia/editais",
+    "url": "https://fundacaoarcelormittal.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4091,7 +4091,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaoarcelormittal.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://fundacaoarcelormittal.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4340,8 +4340,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-222": {
-  "em": "2026-10-30T03:00:47+00:00",
-  "testes": 13,
+  "em": "2026-10-30T13:54:58+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -4366,16 +4366,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.fundacaoitau.org.br/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.fundacaoitau.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -4387,7 +4377,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.fundacaoitau.org.br/transparencia/editais",
+    "url": "https://www.fundacaoitau.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4397,7 +4387,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.fundacaoitau.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.fundacaoitau.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4431,7 +4421,7 @@
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
-    "links": 66,
+    "links": 67,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -6809,7 +6799,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-256": {
-  "em": "2026-10-30T01:26:34+00:00",
+  "em": "2026-10-30T13:54:47+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
