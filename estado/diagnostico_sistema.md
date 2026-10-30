@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-30 13:12 UTC
+# Diagnóstico do sistema · 2026-10-30 13:13 UTC
 
 ## Cumprimento da finalidade · índice geral 58%
 - Motores: 74% (atencao) — todo motor ativo lê dentro da sua cadência
@@ -84,7 +84,7 @@
   - em falha: Motor Patrocínio Privado — mídia e eventos de Goiás (empresas) — falha — não lê há 1 dia(s) (34 h); última leitura 29/10 00:02
   - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 3 dia(s) (95 h); última leitura 26/10 10:13
   - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 12 dia(s) (294 h); última leitura 18/10 03:49
-  - em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 3 dia(s) (95 h); última leitura 26/10 10:12
+  - em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 4 dia(s) (96 h); última leitura 26/10 10:12
   - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 7 dia(s) (169 h); última leitura 23/10 08:58
 - maestro: cobertura 6.9% · esgotados 0
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
@@ -108,7 +108,7 @@
 - [alta] motor em falha: Motor Patrocínio Privado — mídia e eventos de Goiás (empresas) — falha — não lê há 1 dia(s) (34 h); última leitura 29/10 00:02 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 3 dia(s) (95 h); última leitura 26/10 10:13 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 12 dia(s) (294 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 3 dia(s) (95 h); última leitura 26/10 10:12 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 4 dia(s) (96 h); última leitura 26/10 10:12 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 7 dia(s) (169 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 208 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
