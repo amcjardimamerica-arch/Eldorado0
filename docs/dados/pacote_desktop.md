@@ -1,4 +1,4 @@
-# Pacote para o Claude Desktop — 2026-10-29
+# Pacote para o Claude Desktop — 2026-10-30
 
 Você está no computador do titular, com IP brasileiro, navegador e o repositório Eldorado clonado. Use o modelo mais forte disponível (Opus 5) para validar. Trabalhe nesta ordem, sem pular etapa, e devolva os arquivos no formato indicado. Nunca estime datas; quando não houver base, escreva o motivo.
 
@@ -16,42 +16,44 @@ Nenhum motor aguardando coleta local hoje.
 
 ## Etapa 2 — motores em alerta (não leram, falharam ou passaram da cadência)
 
-- **MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)** — 11 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Diário Oficial da União** — todas as páginas falharam em 2026-10-30. Ação: conferir bloqueio/mudança de formato; o Claude Desktop abre a rota no navegador.
+    - abrir https://www.in.gov.br/leiturajornal?secao=do1 e procurar: chamamento público, edital de chamamento, seleção pública, FNCA, CONANDA, Fundo Nacional do Idoso
+    - abrir https://www.in.gov.br/leiturajornal?secao=do3 e procurar: chamamento público, edital de chamamento, seleção pública, FNCA, CONANDA, Fundo Nacional do Idoso
+    - abrir https://www.in.gov.br/leiturajornal?secao=do1e e procurar: chamamento público, edital de chamamento, seleção pública, FNCA, CONANDA, Fundo Nacional do Idoso
+- **MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)** — 12 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)** — 5 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)** — 6 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)** — 11 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)** — 12 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes** — 3 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
-    - abrir https://captadores.org.br/editais/ e procurar: edital, projetos incentivados, seleção de projetos, FIA, Fundo do Idoso, Lei de Incentivo ao Esporte
-- **Oportunidade Estaduais Governamentais de Goiás** — 6 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Oportunidade Estaduais Governamentais de Goiás** — 7 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://goias.gov.br/ e procurar: 
     - abrir https://goias.gov.br/cultura/editais/ e procurar: 
     - abrir https://goias.gov.br/social/editais/ e procurar: 
-- **Prefeituras das 25 maiores cidades de Goiás — portais de editais** — 11 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Prefeituras das 25 maiores cidades de Goiás — portais de editais** — 12 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://queridodiario.ok.org.br/ e procurar: chamamento público, termo de fomento, termo de colaboração, edital de seleção, organizações da sociedade civil, fundo municipal
     - abrir https://pncp.gov.br/ e procurar: chamamento público, termo de fomento, termo de colaboração, edital de seleção, organizações da sociedade civil, fundo municipal
-- **Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)** — 3 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)** — 4 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/lei-rouanet e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
     - abrir https://salic.cultura.gov.br/ e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
     - abrir https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/lei-rouanet/legislacao e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
-- **Adaptador Mapas Culturais — oportunidades com inscrição aberta** — 11 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Adaptador Mapas Culturais — oportunidades com inscrição aberta** — 12 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://mapa.cultura.gov.br/api/opportunity/find?@select=id,name,registrationTo e procurar: 
     - abrir https://mapa.cultura.gov.br/oportunidades/ e procurar: 
-- **Adaptador WordPress — sites oficiais pela API pública** — 11 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Adaptador WordPress — sites oficiais pela API pública** — 12 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://goias.gov.br/cultura/wp-json/wp/v2/posts?search=edital e procurar: 
     - abrir https://goias.gov.br/cultura/editais/ e procurar: 
-- **PNCP — API de contratações (chamamentos e credenciamentos)** — 11 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **PNCP — API de contratações (chamamentos e credenciamentos)** — 12 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://pncp.gov.br/api/consulta/v1/contratacoes/proposta e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
     - abrir https://pncp.gov.br/api/search/ e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
     - abrir https://pncp.gov.br/pncp-api/v1/orgaos/ e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
-- **Motor de Recorrência — revisita as oportunidades identificadas** — 11 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Motor de Recorrência — revisita as oportunidades identificadas** — 12 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://observatorio3setor.org.br/editais/ e procurar: retificação, prorrogação, errata, resultado, homologação, classificados
 
 Para cada rota aberta, liste os editais publicados nos últimos 30 dias que casem com o léxico e que ainda não estejam em `biblioteca_alexandria/livros/_acervo/editais/`. Devolva em `biblioteca_alexandria/livros/_acervo/editais/coleta_navegador/<data>-motores.json` no formato `{"<id ou novo>": {"objeto":..., "inicio":..., "fim":..., "pagina_oficial":..., "observacao":...}}`.
@@ -121,6 +123,7 @@ Para cada uma, abra a página oficial (nunca PNCP, diário ou portal de notícia
 - `1033b090cd9af719f839` — SEDHS (desenvolvimento humano e social) — Edital nº 214/2026 · falta: Objeto, Prazo de inscrição · https://goiania.go.gov.br/
 - `cat-af40956a098a` — Itau viver mais abre inscricoes para a 7a edicao do edital de projetos voltados a longevid · falta: Objeto, Prazo de inscrição · https://captadores.org.br/editais/itau-viver-mais-abre-inscricoes-para-a-7a-edicao-do-edital-de-projetos-voltados-a-longevidade/
 - `04ce18e532fff5b6d4b2` — Prefeitura de Goiânia — âmbito da Secretaria Municipal de Governo – SEGOV. A SECRETÁRIA MU · falta: Objeto, Prazo de inscrição · https://goiania.go.gov.br/
+- `op-op-786e5f51f56a` — Edital Rouanet nas Favelas 2 (2026): Guia de Captação · Capitaai — Brasil · falta: Objeto, Prazo de inscrição · https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14535.htm
 - `cat-0afd299c9a0b` — Fundo Brasil de Direitos Humanos Abre Edital Geral 2026: Até R$ 50 Mil ... · falta: Objeto, Prazo de inscrição · https://www.editalong.com/blog/fundo-brasil-direitos-humanos-edital-geral-2026-osc
 - `rec-dtreinamento1256` — 01_inscricao.php · falta: Objeto, Prazo de inscrição · https://app.filantropia.ong/treinamentos/01_inscricao.php?Id_Turma=3133&Id_Treinamento=1256
 - `op-op-db8328a79d07` — SES-GO (saúde) — Edital nº 01/2026 — Goiás — Goiás · falta: Objeto, Prazo de inscrição · https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7394/#e:7394
@@ -130,6 +133,7 @@ Para cada uma, abra a página oficial (nunca PNCP, diário ou portal de notícia
 - `op-op-f6c04b6e4409` — Chamamento público para qualificação de pessoas jurídicas dedireito privado, sem fins lucr · falta: Objeto, Prazo de inscrição · https://www.porangatu.go.gov.br/
 - `rec-arargo0012026pdf` — 📄 Edital nº 001/2026 – Doação de Bens Móveis SENAR/AR-GO · falta: Objeto, Prazo de inscrição · https://www.sistemafaeg.com.br/storage/arquivos/EDITAL-DE-DOA%C3%87%C3%83O-DO-SENAR_AR-GO-001_2026.pdf
 - `ab0b0a6a2aca2f4d302a` — Prefeitura de Goiânia — transitório, sobre a coordenação e administrativa da operacionaliz · falta: Objeto, Prazo de inscrição · https://goiania.go.gov.br/
+- `cat-a64e0ffba4a2` — Juventude Solidária lança chamada para projetos sociais em todo o Brasil · falta: Objeto, Prazo de inscrição · https://cotidianosp.com/juventude-solidaria-lanca-chamada-para-projetos-sociais-em-todo-o-brasil/15177/2026/
 - `rec-sascombrempresas` — Otimize o processo de seleção de projetos sociais da sua empresa. · falta: Objeto, Prazo de inscrição · https://prosas.com.br/empresas
 - `rec-tivoseambientais` — Volvo apoia projetos culturais, sociais, esportivos e ambientais · falta: Objeto, Prazo de inscrição · https://www.volvogroup.com/content/dam/volvo-group/markets/brazil/sustentabilidade/patrocinios-e-apoios/VOLVO_politica_de_patrocinios_e_apoios_lagon_140119_2019.pdf
 - `8c36684df22eacb1614f` — CMAS/FMAS — Edital nº 37/2026 — DA CONTRATAÇÃO DIRETA 1.1 · falta: Objeto, Prazo de inscrição, Página oficial do edital
@@ -141,8 +145,6 @@ Para cada uma, abra a página oficial (nunca PNCP, diário ou portal de notícia
 - `op-op-f2026a409e7c` — Goiânia — Diário Oficial de Goiânia — edição 8874 (2026-09-30) — chamamento público — Goiá · falta: Objeto, Prazo de inscrição, Página oficial do edital
 - `e45d79fd575e7887b45e` — Para mais informações, basta acessar o Edital do Programa de Pagamento por Serviços Ambien · falta: Objeto, Prazo de inscrição · https://www.semadesc.ms.gov.br/wp-content/uploads/2025/04/EDITAL-CHAMAMENTO-FUNDO-CLIMA-PANTANAL-003.2025.pdf
 - `a0edd9ea12669fec69cc` — Prefeitura de Goiânia — administrativa da operacionalização de emendas impositivas municip · falta: Objeto, Prazo de inscrição · https://goiania.go.gov.br/
-- `op-nova-2a700cb1173c` — LUPPA abre inscrições para selecionar dez cidades e fortalecer políticas públicas alimenta · falta: Objeto, Prazo de inscrição · https://conjunta.org/
-- `op-op-786e5f51f56a` — Edital Rouanet nas Favelas 2 (2026): Guia de Captação · Capitaai — Brasil · falta: Objeto, Prazo de inscrição · https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14535.htm
 
 ## Etapa 4½ — IA local (organização automática, sem gastar Claude)
 

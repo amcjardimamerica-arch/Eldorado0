@@ -1,227 +1,43 @@
 {
-  "executado_em": "2026-10-26T12:28:00+00:00",
+  "executado_em": "2026-10-30T12:23:00+00:00",
   "etapas": {
     "coleta": {
-      "executado_em": "2026-10-26T12:28:01+00:00",
-      "fontes_catalogadas": 85,
-      "fontes_total": 68,
-      "fontes_ok": 46,
-      "fontes_falha": 22,
-      "fontes_fora_escopo": 0,
-      "fontes_manuais": 2,
-      "fontes_api": 2,
-      "novas": 4,
-      "atualizadas": 11,
-      "quarentena": 0,
-      "falhas": [
-        {
-          "fonte": "ministerio-cultura",
-          "erro": "ValueError",
-          "mensagem": "URL deve ser HTTPS e não pode conter credenciais",
-          "etapa": "leitura do site"
-        },
-        {
-          "fonte": "portal-mg",
-          "erro": "ValueError",
-          "mensagem": "tipo não permitido: image/jpeg",
-          "etapa": "leitura do site"
-        },
-        {
-          "fonte": "capta",
-          "erro": "HTTPError",
-          "mensagem": "HTTP Error 404: Not Found",
-          "etapa": "processamento (http_error_default)"
-        },
-        {
-          "fonte": "conanda",
-          "erro": "HTTPError",
-          "mensagem": "HTTP Error 404: Not Found",
-          "etapa": "processamento (http_error_default)"
-        },
-        {
-          "fonte": "fundacao-bb",
-          "erro": "URLError",
-          "mensagem": "<urlopen error timed out>",
-          "etapa": "processamento (do_open)"
-        },
-        {
-          "fonte": "goiania",
-          "erro": "ValueError",
-          "mensagem": "tipo não permitido: application/pdf",
-          "etapa": "leitura do site"
-        },
-        {
-          "fonte": "goias-cultura",
-          "erro": "HTTPError",
-          "mensagem": "HTTP Error 404: Not Found",
-          "etapa": "processamento (http_error_default)"
-        },
-        {
-          "fonte": "goias-cultura-raiz",
-          "erro": "HTTPError",
-          "mensagem": "HTTP Error 404: Not Found",
-          "etapa": "processamento (http_error_default)"
-        },
-        {
-          "fonte": "goias-esporte",
-          "erro": "HTTPError",
-          "mensagem": "HTTP Error 404: Not Found",
-          "etapa": "processamento (http_error_default)"
-        },
-        {
-          "fonte": "goias-pnab",
-          "erro": "HTTPError",
-          "mensagem": "HTTP Error 404: Not Found",
-          "etapa": "processamento (http_error_default)"
-        },
-        {
-          "fonte": "goias-social",
-          "erro": "HTTPError",
-          "mensagem": "HTTP Error 404: Not Found",
-          "etapa": "processamento (http_error_default)"
-        },
-        {
-          "fonte": "goyazes-programa",
-          "erro": "HTTPError",
-          "mensagem": "HTTP Error 404: Not Found",
-          "etapa": "processamento (http_error_default)"
-        },
-        {
-          "fonte": "itau-social",
-          "erro": "ValueError",
-          "mensagem": "tipo não permitido: application/pdf",
-          "etapa": "leitura do site"
-        },
-        {
-          "fonte": "mds",
-          "erro": "ValueError",
-          "mensagem": "tipo não permitido: application/pdf",
-          "etapa": "leitura do site"
-        },
-        {
-          "fonte": "petrobras",
-          "erro": "ValueError",
-          "mensagem": "tipo não permitido: application/pdf",
-          "etapa": "leitura do site"
-        },
-        {
-          "fonte": "portal-es",
-          "erro": "ValueError",
-          "mensagem": "tipo não permitido: application/pdf",
-          "etapa": "leitura do site"
-        },
-        {
-          "fonte": "portal-go",
-          "erro": "HTTPError",
-          "mensagem": "HTTP Error 404: Not Found",
-          "etapa": "processamento (http_error_default)"
-        },
-        {
-          "fonte": "portal-pa",
-          "erro": "URLError",
-          "mensagem": "<urlopen error timed out>",
-          "etapa": "processamento (do_open)"
-        },
-        {
-          "fonte": "portal-pb",
-          "erro": "URLError",
-          "mensagem": "<urlopen error timed out>",
-          "etapa": "processamento (do_open)"
-        },
-        {
-          "fonte": "pronon-pronas",
-          "erro": "RemoteDisconnected",
-          "mensagem": "Remote end closed connection without response",
-          "etapa": "processamento (_read_status)"
-        },
-        {
-          "fonte": "tjgo-banco-projetos",
-          "erro": "HTTPError",
-          "mensagem": "HTTP Error 403: Forbidden",
-          "etapa": "processamento (http_error_default)"
-        },
-        {
-          "fonte": "transferegov",
-          "erro": "HTTPError",
-          "mensagem": "HTTP Error 401: ",
-          "etapa": "processamento (http_error_default)"
-        }
-      ],
-      "escopo": {
-        "ufs_ativas": [
-          "AC",
-          "AL",
-          "AM",
-          "AP",
-          "BA",
-          "CE",
-          "DF",
-          "ES",
-          "GO",
-          "MA",
-          "MG",
-          "MS",
-          "MT",
-          "PA",
-          "PB",
-          "PE",
-          "PI",
-          "PR",
-          "RJ",
-          "RN",
-          "RO",
-          "RR",
-          "RS",
-          "SC",
-          "SE",
-          "SP",
-          "TO"
-        ],
-        "niveis_ativos": [
-          "municipal",
-          "estadual",
-          "federal",
-          "privada",
-          "internacional"
-        ]
-      },
-      "paginas_alteradas": 163,
-      "fora_do_terceiro_setor": 258
+      "erro": "IncompleteRead: IncompleteRead(73290 bytes read)"
     },
     "apis_oficiais": {
-      "executado_em": "2026-10-26T12:45:19+00:00",
-      "novas": 27,
-      "itens": 58,
+      "executado_em": "2026-10-30T12:41:12+00:00",
+      "novas": 34,
+      "itens": 72,
       "falhas": [
         {
           "api": "querido_diario",
-          "eliminadas_no_motor_M14": 754,
+          "eliminadas_no_motor_M14": 762,
           "por_motivo": {
-            "o trecho não mostra ato de abertura (edital, chamamento, seleção, inscrições)": 398,
-            "ato posterior (resultado, homologação, extrato, aditivo)": 252,
-            "o trecho não mostra destinatário do terceiro setor": 104
+            "o trecho não mostra ato de abertura (edital, chamamento, seleção, inscrições)": 405,
+            "ato posterior (resultado, homologação, extrato, aditivo)": 238,
+            "o trecho não mostra destinatário do terceiro setor": 119
           },
           "nota": "edições cujo trecho não mostra ato de abertura para o terceiro setor (não entram como oportunidade)"
         }
       ]
     },
     "capilaridade": {
-      "executado_em": "2026-10-26T12:45:50+00:00",
+      "executado_em": "2026-10-30T12:41:38+00:00",
       "consultas": 40,
-      "consultas_com_falha": 0,
+      "consultas_com_falha": 30,
       "pistas_novas": 0
     },
     "diarios_regiao_metropolitana": {
-      "executado_em": "2026-10-26T12:46:40+00:00",
+      "executado_em": "2026-10-30T12:41:57+00:00",
       "municipios_configurados": 21,
       "municipios_resolvidos": 21,
       "municipios_pendentes": [],
       "consultas": 147,
-      "novas": 36,
+      "novas": 50,
       "falhas": []
     },
     "redes_indireta": {
-      "executado_em": "2026-10-26T12:49:24+00:00",
+      "executado_em": "2026-10-30T12:43:26+00:00",
       "rota": "indexacao_de_buscador",
       "consultas": 30,
       "pistas_novas": 0,
@@ -240,7 +56,7 @@
       "pistas_acumuladas": 0
     },
     "verificacao_social": {
-      "executado_em": "2026-10-26T12:49:57+00:00",
+      "executado_em": "2026-10-30T12:44:01+00:00",
       "fontes_total": 0,
       "fontes_ok": 0,
       "fontes_falha": 0,
@@ -248,28 +64,23 @@
       "falhas": []
     },
     "verificacao_assistida": {
-      "executado_em": "2026-10-26T12:49:57+00:00",
+      "executado_em": "2026-10-30T12:44:01+00:00",
       "avaliadas": 10,
-      "promovidas": 2,
-      "recusadas": 7,
-      "falhas": [
-        {
-          "oportunidade": "bcc71dbe870764438941",
-          "erro": "ValueError"
-        }
-      ]
+      "promovidas": 0,
+      "recusadas": 10,
+      "falhas": []
     },
     "programas": {
-      "executado_em": "2026-10-26T12:50:04+00:00",
-      "avaliados": 1505,
-      "identificados": 588,
+      "executado_em": "2026-10-30T12:44:04+00:00",
+      "avaliados": 1597,
+      "identificados": 636,
       "por_programa": {
-        "PNAB — Política Nacional Aldir Blanc": 127,
-        "Chamamento público MROSC": 261,
-        "Fundo dos Direitos da Criança e do Adolescente": 6,
-        "Lei Rouanet — PRONAC": 10,
-        "Assistência social — SUAS": 19,
-        "Fundo de Defesa de Direitos Difusos": 130,
+        "PNAB — Política Nacional Aldir Blanc": 132,
+        "Chamamento público MROSC": 277,
+        "Fundo dos Direitos da Criança e do Adolescente": 7,
+        "Lei Rouanet — PRONAC": 13,
+        "Assistência social — SUAS": 24,
+        "Fundo de Defesa de Direitos Difusos": 148,
         "Destinação de recursos judiciais": 9,
         "Fundo dos Direitos da Pessoa Idosa": 5,
         "Lei Paulo Gustavo": 14,
@@ -277,20 +88,20 @@
       }
     },
     "qualidade": {
-      "executado_em": "2026-10-26T12:50:06+00:00",
-      "avaliados": 1505,
+      "executado_em": "2026-10-30T12:44:06+00:00",
+      "avaliados": 1597,
       "por_classe": {
-        "reprovado": 1505
+        "reprovado": 1597
       },
       "nota_media": 0.0
     },
     "prazos": {
-      "gerado_em": "2026-10-26T12:50:08+00:00",
-      "referencia": "2026-10-26",
-      "com_prazo": 122,
-      "criticos": 24,
-      "encerrados": 65,
-      "sem_prazo": 1422,
+      "gerado_em": "2026-10-30T12:44:08+00:00",
+      "referencia": "2026-10-30",
+      "com_prazo": 123,
+      "criticos": 17,
+      "encerrados": 73,
+      "sem_prazo": 1513,
       "faixas_alerta": [
         30,
         15,
@@ -303,13 +114,13 @@
       "erro": "KeyError: 'fonte_id'"
     },
     "aprendizado": {
-      "executado_em": "2026-10-26T12:50:12+00:00",
-      "fontes_analisadas": 79,
+      "executado_em": "2026-10-30T12:44:14+00:00",
+      "fontes_analisadas": 80,
       "previsoes": 0,
       "padroes": 0
     },
     "rotas_monitoramento": {
-      "gerado_em": "2026-10-26T12:50:12+00:00",
+      "gerado_em": "2026-10-30T12:44:14+00:00",
       "total_catalogo": 260,
       "com_rota_de_monitoramento": 260,
       "sem_rota": 0,
@@ -348,7 +159,7 @@
       "casos_criados": 0
     },
     "farol_ia": {
-      "executado_em": "2026-10-26T12:50:12+00:00",
+      "executado_em": "2026-10-30T12:44:14+00:00",
       "casos_pendentes": 0,
       "casos_processados": 0,
       "sem_chances": 0,
@@ -357,12 +168,12 @@
     },
     "fichas_html": {
       "fichas_geradas": 392,
-      "gerado_em": "2026-10-26T12:50:12+00:00"
+      "gerado_em": "2026-10-30T12:44:15+00:00"
     },
     "resultados_editais": {
-      "executado_em": "2026-10-26T12:50:13+00:00",
+      "executado_em": "2026-10-30T12:44:16+00:00",
       "consultados": 2,
-      "eventos_novos": 2,
+      "eventos_novos": 0,
       "prorrogacoes": 0,
       "falhas": []
     },

@@ -1,9 +1,9 @@
-commit: 5c24af6e9ecf9898efd714399a9261f8a6bb3356
-em: 2026-10-29T15:49:36Z
+commit: 4d312023b524be0f64292a9b61f0b39747256eb7
+em: 2026-10-30T12:23:00Z
 rc: 1
 ::error title=teste falhou::tests.test_livros_parametros.TestArquivo.test_dez_blocos_e_todos_decididos — AssertionError: 282 not greater than or equal to 300
 ::error title=teste falhou::tests.test_motor01_diario_goiania.TestCoberturaDoDia.test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida — AssertionError: True is not false
-::error title=teste falhou::tests.test_motor01_diario_goiania.TestMotor.test_falha_da_api_vira_diagnostico_e_nao_silencio — AssertionError: 'TimeoutError' not found in '3 edição(ões) lida(s), 57 ato(s) do terceiro setor: nenhum chamamento aberto para OSC hoje · 23 a acompanhar · 34 ruído (credenciamento
+::error title=teste falhou::tests.test_motor01_diario_goiania.TestMotor.test_falha_da_api_vira_diagnostico_e_nao_silencio — AssertionError: 'TimeoutError' not found in '4 edição(ões) lida(s), 117 ato(s) do terceiro setor: nenhum chamamento aberto para OSC hoje · 62 a acompanhar · 55 ruído (credenciament
 ::error title=teste falhou::tests.test_motor01_diario_goiania.TestMotor.test_leitura_na_nuvem_pelo_querido_diario — + OPORTUNIDADE
 ::error title=teste falhou::tests.test_motor_judiciario_go.Motor.test_computador_le_o_tjgo_e_a_nuvem_entrega_a_base — + nuvem
 ---- falhas ----
@@ -115,13 +115,13 @@ FAIL: test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo (tests.test_consiste
 Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_consistencia_transversal_2026_10_17.py", line 140, in test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo
     self.assertEqual(sorted(i for i in cat if not (L / f"{i}.json").exists()), [])
-AssertionError: Lists differ: ['nova-11754f7f2ba8', 'nova-129a8c0152b2',[3932 chars]4f5'] != []
+AssertionError: Lists differ: ['nova-11754f7f2ba8', 'nova-129a8c0152b2',[4257 chars]4f5'] != []
 
-First list contains 207 additional elements.
+First list contains 224 additional elements.
 First extra element 0:
 'nova-11754f7f2ba8'
 
-Diff is 4605 characters long. Set self.maxDiff to None to see it.
+Diff is 4981 characters long. Set self.maxDiff to None to see it.
 
 ======================================================================
 FAIL: test_relatorio_do_cartorio_das_certidoes_guardadas (tests.test_consistencia_transversal_2026_10_17.MesmoRetrato.test_relatorio_do_cartorio_das_certidoes_guardadas)
@@ -219,7 +219,7 @@ FAIL: test_falha_da_api_vira_diagnostico_e_nao_silencio (tests.test_motor01_diar
 Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_motor01_diario_goiania.py", line 182, in test_falha_da_api_vira_diagnostico_e_nao_silencio
     self.assertIn("TimeoutError", r["diagnostico"]["motivo_zero"])
-AssertionError: 'TimeoutError' not found in '3 edição(ões) lida(s), 57 ato(s) do terceiro setor: nenhum chamamento aberto para OSC hoje · 23 a acompanhar · 34 ruído (credenciamento, OS da saúde, decretos)'
+AssertionError: 'TimeoutError' not found in '4 edição(ões) lida(s), 117 ato(s) do terceiro setor: nenhum chamamento aberto para OSC hoje · 62 a acompanhar · 55 ruído (credenciamento, OS da saúde, decretos)'
 
 ======================================================================
 FAIL: test_leitura_na_nuvem_pelo_querido_diario (tests.test_motor01_diario_goiania.TestMotor.test_leitura_na_nuvem_pelo_querido_diario)
