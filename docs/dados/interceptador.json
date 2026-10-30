@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T16:33:35+00:00",
+  "em": "2026-10-30T16:53:10+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T16:18:41+00:00",
+  "ultimo_voo": "2026-10-30T16:35:21+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,77 +39,93 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 8,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.1
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 17.1
   },
   "missoes": [
     {
-      "em": "2026-10-30T16:18:41+00:00",
+      "em": "2026-10-30T16:35:21+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Regulamento - Chamada Pública Doação de Computadores – Instituições do Terceiro Setor",
-      "qualidade": "insuficiente",
-      "comprovados": 4,
-      "dispensados": 0,
+      "alvo": "Instituto Lojas Renner abre edital para fortalecer organizações sociais em três estados",
+      "qualidade": "parcial",
+      "comprovados": 7,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Território",
-        "Requisitos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": "https://petrobras.com.br/negocios/doacao-de-bens",
+      "pagina_oficial": "https://www.institutolojasrenner.org.br/edital-encantando-comunidades/",
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O regulamento menciona a doação de computadores para instituições do terceiro setor, o que é relevante para a AMC.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever na chamada pública, apresentando os requisitos necessários para receber a doação de computadores.",
-        "proximo_passo": "Verificar os anexos para obter informações detalhadas sobre os requisitos e o processo de inscrição.",
-        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se inscrever a tempo."
+        "serve_como_fonte": "nao",
+        "por_que": "O edital mencionado não inclui informações sobre prazo de inscrição, resultado, prazo de recurso ou valor, tornando impossível determinar se é uma fonte válida para o propósito descrito.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange seu território, mas o edital menciona apenas RJ, RS e SP, portanto, não se aplica à AMC em Goiânia.",
+        "proximo_passo": "Consultar editais específicos para Goiânia ou outras instituições que ofereçam apoio a organizações sociais na região.",
+        "risco": "A falta de informações sobre prazo, valor e áreas de atuação específicas para Goiânia pode impedir a associação de se candidatar a editais semelhantes."
       },
       "erro": null,
-      "segundos": 846,
+      "segundos": 1024,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 3,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "65fb62820c8a55991936",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "2d48def6fc7003aab268",
       "encontrou": {
         "Objeto": {
-          "valor": "Doação de computadores para instituições do terceiro setor",
-          "trecho": "Doação de Bens",
+          "valor": "fortalecer organizações da sociedade civil sem fins lucrativos com sede e atuação na Zona Oeste do Rio de Janeiro/RJ, na comunidade Bom Jesus, em Porto Alegre/RS e nos municípios paulistas de Cabreúva, Itu, Jundiaí, Sorocaba, Votorantim, Porto Feliz e Pirapora do Bom Jesus",
+          "trecho": "O Instituto Lojas Renner, responsável pela gestão do investimento social privado da Lojas Renner S.A., lança o presente edital de recursos flexíveis com o objetivo de fortalecer or",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Petrobras",
-          "trecho": "Doação de Bens",
+          "valor": "Instituto Lojas Renner",
+          "trecho": "O Instituto Lojas Renner, responsável pela gestão do investimento social privado da Lojas Renner S.A., lança o presente edital de recursos flexíveis...",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "RJ, RS, SP",
+          "trecho": "O Instituto Lojas Renner, responsável pela gestão do investimento social privado da Lojas Renner S.A., lança o presente edital de recursos flexíveis com o objetivo de fortalecer or",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "dispensado — O edital menciona áreas contempladas.",
+          "trecho": "O recurso tem como finalidade impulsionar o desenvolvimento das organizações, e não o financiamento de projetos ou atividades finalísticas específicas, reconhecendo que instituiçõe",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Requisitos": {
+          "valor": "ser organização da sociedade civil sem fins lucrativos com sede e atuação nos territórios contemplados",
+          "trecho": "O Instituto Lojas Renner, responsável pela gestão do investimento social privado da Lojas Renner S.A., lança o presente edital de recursos flexíveis com o objetivo de fortalecer or",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Petrobras",
-      "indicios": [],
+      "financiador": "Instituto Lojas Renner",
+      "indicios": [
+        {
+          "url": "https://captadores.org.br/editais/instituto-lojas-renner-abre-edital-para-fortalecer-organizacoes-sociais-em-tres-estados",
+          "tipo": "noticia"
+        }
+      ],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
