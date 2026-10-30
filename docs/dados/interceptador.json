@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T21:13:05+00:00",
+  "em": "2026-10-30T21:21:47+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T21:00:40+00:00",
+  "ultimo_voo": "2026-10-30T21:15:04+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,91 +39,88 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 8,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 11.7
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 6.2
   },
   "missoes": [
     {
-      "em": "2026-10-30T21:00:40+00:00",
+      "em": "2026-10-30T21:15:04+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Santander abre inscrições para os programas Amigo de Valor e Parceiro do Idoso",
-      "qualidade": "parcial",
-      "comprovados": 7,
+      "alvo": "MDS (desenvolvimento e assistência social) — EXTRATO DE AUTORIZAÇÃO — Autorização para operacionalizar a função Ordem de Pagamento de Parcer",
+      "qualidade": "insuficiente",
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
+        "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador"
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://cms.santander.com.br/sites/WPS/documentos/url-parceirodoidoso-saiba-listaItem-2/25-09-08_205123_parceiro-idoso_projetos-2025.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprovado descreve o objeto, resultado, território, esfera, requisitos, anexos e área de atuação, o que permite identificar a possibilidade de acesso para a AMC.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria ser uma entidade ou órgão executor, com área de atuação em assistência social, e apresentar um anexo conforme solicitado no edital.",
-        "proximo_passo": "Verificar se a AMC atende aos requisitos do edital e preparar os documentos necessários para a inscrição.",
-        "risco": "A AMC pode não atender aos requisitos do edital ou não conseguir reunir os documentos necessários para a inscrição."
+        "por_que": "O documento comprovado descreve a autorização para operacionalizar a função Ordem de Pagamento de Parcerias (OPP) ao Convenente na Plataforma Transferegov.br, o que é relevante para ações de parceria e financiamento.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto da autorização, garantindo que suas atividades estejam alinhadas com o objeto da autorização, e utilizar a plataforma Transferegov.br para operacionalizar pagamentos de parcerias.",
+        "proximo_passo": "Verificar se a associação comunitária está apta a utilizar a plataforma Transferegov.br para operacionalizar pagamentos de parcerias, conforme o objeto da autorização.",
+        "risco": "A falta de alinhamento com o objeto da autorização ou a impossibilidade de utilizar a plataforma Transferegov.br pode impedir o acesso ao financiamento."
       },
       "erro": null,
-      "segundos": 702,
+      "segundos": 372,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Prazo de recurso, Valor, Órgão / financiador",
-      "id": "585cdaad8f1fbce79fdf",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "63b4696c8cf7c3de80b3",
       "encontrou": {
         "Objeto": {
-          "valor": "proteção, cuidado, acolhimento e dignidade ao idoso",
-          "trecho": "proteção cuidado acolhimento dignidade",
-          "oficial": true,
+          "valor": "Autorização para operacionalizar a função Ordem de Pagamento de Parcerias (OPP) ao Convenente na Plataforma Transferegov.br",
+          "trecho": "OBJETO: Autorização para operacionalizar a função Ordem de Pagamento de Parcerias (OPP) ao Convenente na Plataforma Transferegov.br, em Termo de Colaboração firmado entre a União, ",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 111.840,00",
+          "trecho": "VALOR: R$ 111.840,00 (cento e onze mil e oitocentos e quarenta reais)",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome",
+          "trecho": "Órgão: Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "RO",
-          "trecho": "Ariquemes - RO",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "assistencia_social",
-          "trecho": "Atendimento Domiciliar",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Entidade ou Órgão Executor",
-          "trecho": "Entidade ou Órgão Executor",
-          "oficial": true,
+          "valor": "nacional",
+          "trecho": "Órgão: Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Santander",
-      "indicios": [
-        {
-          "url": "https://captadores.org.br/editais/santander-abre-inscricoes-para-os-programas-amigo-de-valor-e-parceiro-do-idoso",
-          "tipo": "noticia"
-        }
-      ],
+      "financiador": "Ministério do Desenvolvimento Social",
+      "indicios": [],
       "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "financiador_ano"
       ]
     }
   ],
