@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T15:50:43+00:00",
+  "em": "2026-10-30T16:01:21+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T15:36:25+00:00",
+  "ultimo_voo": "2026-10-30T15:52:46+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -47,74 +47,80 @@
       "sim": 1
     },
     "estrelas_de_ouro": 8,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.6
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 8.0
   },
   "missoes": [
     {
-      "em": "2026-10-30T15:36:25+00:00",
+      "em": "2026-10-30T15:52:46+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Projeto de convivência de crianças e adolescentes — Goiás",
+      "de": "2 · Brasil · oportunidade do mapa",
+      "alvo": "Instituto Genésio A. Mendes amplia investimento social privado em 2026 e aumenta apoio a organizações sociais do Sul de Santa Catarina",
       "qualidade": "parcial",
-      "comprovados": 6,
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Requisitos"
       ],
-      "pagina_oficial": "https://goias.gov.br/administracao/wp-content/uploads/sites/27/2019/08/projeto-de-estruturacao-un-nm_processo-seletivo-interno-001_2017-185.pdf",
+      "pagina_oficial": "https://institutogenesio.org.br/wp-content/uploads/2026/01/EDITAL-INCENTIVADO-GAM-IRPJ-2026.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado descreve o objeto e o financiador do projeto, o que é suficiente para identificar a fonte de financiamento.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital do Governo do Estado de Goiás, demonstrando sua capacidade de executar o projeto de criação do Centro de Convivência de Adolescentes, na unidade do Jardim Novo Mundo.",
-        "proximo_passo": "Verificar os anexos do edital para obter mais detalhes sobre os requisitos e o processo de inscrição.",
-        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se candidatar oportunamente."
+        "por_que": "O texto comprovado menciona o Instituto Genésio Antônio Mendes (IGAM) e sua atuação em projetos sociais nas áreas de Cultura, Esporte, Saúde, Educação e Assistência Social, com território em SC e esfera privada.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar às áreas de atuação mencionadas (como cultura) e verificar se há alinhamento territorial, já que o edital é voltado para o Sul de Santa Catarina.",
+        "proximo_passo": "Verificar se há edital específico para Goiânia ou se a associação pode se candidatar a projetos em áreas como cultura, mesmo que o território principal do edital seja SC.",
+        "risco": "O território do edital é SC, o que pode impedir a associação de Goiânia de acessar recursos, a menos que haja uma ampliação da área de atuação ou parcerias."
       },
       "erro": null,
-      "segundos": 817,
+      "segundos": 478,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 6,
       "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-captacao-120",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Requisitos",
+      "id": "fbfcc009b3bc4eccc4f9",
       "encontrou": {
         "Objeto": {
-          "valor": "criação do Centro de Convivência de Adolescentes, na unidade do Jardim Novo Mundo, que tem como finalidade assegurar espaços de referência para o convívio social e o desenvolvimento de relações de afetividade, solidariedade e respeito mútuo",
-          "trecho": "criação do Centro de Convivência de Adolescentes, na unidade do Jardim Novo Mundo, que tem como finalidade assegurar espaços de referência para o convívio social e o desenvolviment",
+          "valor": "seleção e apoio a projetos sociais nas áreas de Cultura, Esporte, Saúde, Educação e Assistência Social",
+          "trecho": "O presente Edital tem por objeto a seleção e o apoio a projetos sociais enquadrados nas Leis Federais de Incentivo, nas áreas de Cultura, Esporte, Programa Nacional de Apoio à Aten",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-01-01 a 2026-12-11",
+          "trecho": "As inscrições ocorrerão no período de 01 de janeiro de 2026 a 11 de dezembro de 2026",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Governo do Estado de Goiás",
-          "trecho": "Os investimentos serão, a priori, oriundos do Contrato de Gestão firmado entre a OVG e o Governo do Estado de Goiás",
+          "valor": "Instituto Genésio Antônio Mendes – IGAM e empresa GAM Distribuidora",
+          "trecho": "A empresa GAM Distribuidora realizará o aporte dos recursos financeiros, enquanto o Instituto Genésio Antônio Mendes – IGAM, associação civil sem fins lucrativos, será responsável ",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "Fundada em 30 de outubro de 1947, a Organização das Voluntárias de Goiás",
+          "valor": "SC",
+          "trecho": "executados em municípios da região da AMUREL ou em localidades onde a empresa GAM possua unidades operacionais",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "assistencia_social",
-          "trecho": "A Organização das Voluntárias de Goiás, instituição que se tornou referência no cuidado às famílias goianas, é desenvolver programas de assistência social baseados nos princípios d",
+          "valor": "cultura",
+          "trecho": "Estímulo à aprendizagem de crianças, adolescentes e pessoas idosas. Promoção dos direitos humanos; Redução de desigualdades Estímulo à diversidade, à equidade e à inclusão; Ações d",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Ministério dos Direitos Humanos e da Cidadania",
+      "financiador": "Instituto Genésio A. Mendes",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
