@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T06:36:49+00:00",
+  "em": "2026-10-30T06:24:57+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T06:26:46+00:00",
+  "ultimo_voo": "2026-10-30T06:07:36+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,74 +38,104 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
+    "validadas": 1,
     "parciais": 0,
-    "insuficientes": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 7,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.2
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 16.5
   },
   "missoes": [
     {
-      "em": "2026-10-30T06:26:46+00:00",
+      "em": "2026-10-30T06:07:36+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
-      "alvo": "01_inscricao.php",
-      "qualidade": "insuficiente",
-      "comprovados": 0,
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 16 abordagens; busc",
+      "alvo": "Fundo Brasil de Direitos Humanos Abre Edital Geral 2026: Até R$ 50 Mil ...",
+      "qualidade": "validada",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.fundobrasil.org.br/edital/geral-2026-fortalecendo-direitos-e-gestando-um-mundo-novo/",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações comprovadas sobre o edital referente a \"01_inscricao.php\".",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar as informações do edital, que não foram encontradas.",
-        "proximo_passo": "Consultar fontes oficiais ou contatos relacionados ao edital para obter detalhes.",
-        "risco": "A falta de informações específicas pode impedir o acesso e a participação no edital."
+        "serve_como_fonte": "sim",
+        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, prazo, valor e requisitos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar propostas para apoio ao seu trabalho no âmbito do Edital Geral 2026 – Fortalecendo direitos e gestando um mun, promover a equidade racial, de gênero em sua composição e atuação e propostas que abordam as dimensões racial, étnica, t",
+        "proximo_passo": "A associação deve se inscrever no edital entre 2025-12-06 e 2026-03-06, apresentando propostas que atendam aos requisitos estabelecidos.",
+        "risco": "A associação pode ser impedida de acessar o edital se não atender aos requisitos de propostas que abordam as dimensões racial, étnica, t e se não apresentar os anexos necessários."
       },
       "erro": null,
-      "segundos": 554,
+      "segundos": 992,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "rec-dtreinamento1256",
-      "encontrou": {},
-      "financiador": "Rede Filantropia",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 8,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "cat-0afd299c9a0b",
+      "encontrou": {
+        "Objeto": {
+          "valor": "fortalecimento institucional de organizações que atuam na defesa de direitos",
+          "trecho": "Poderão ser apoiados projetos voltados ao fortalecimento institucional de organizações que atuam na defesa de direitos.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2025-12-06 a 2026-03-06",
+          "trecho": "O período de submissão de propostas vai de 6 de dezembro de 2025 a 6 de março de 2026, até 18h (horário de Brasília).",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "até R$ 50.000,00 (cinquenta mil reais) cada, totalizando até R$ 1.000.000,00 (um milhão de reais) em doações neste Edital",
+          "trecho": "Serão apoiadas 20 organizações, grupos e coletivos, com o valor de até R$ 50.000,00 (cinquenta mil reais) cada, totalizando até R$ 1.000.000,00 (um milhão de reais) em doações nest",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Fundo Brasil de Direitos Humanos",
+          "trecho": "O Fundo Brasil de Direitos Humanos convida grupos, coletivos, movimentos e organizações da sociedade civil que atuam no enfrentamento de violações e na defesa de direitos humanos e",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "nacional",
+          "trecho": "O Fundo Brasil de Direitos Humanos convida grupos, coletivos, movimentos e organizações da sociedade civil que atuam no enfrentamento de violações e na defesa de direitos humanos e",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "direitos",
+          "trecho": "O Fundo Brasil de Direitos Humanos convida grupos, coletivos, movimentos e organizações da sociedade civil que atuam no enfrentamento de violações e na defesa de direitos humanos e",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "apresentar propostas para apoio ao seu trabalho no âmbito do Edital Geral 2026 – Fortalecendo direitos e gestando um mun, promover a equidade racial, de gênero em sua composição e atuação e propostas que abordam as dimensões racial, étnica, t",
+          "trecho": "O Fundo Brasil entende que o trabalho dessas organizações deve ser fortalecido, para que continuem enfrentando retrocessos e contribuam para que debates essenciais sobre direitos h",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Fundo Brasil de Direitos Humanos",
       "indicios": [
         {
-          "url": "https://app.filantropia.ong/treinamentos/01_inscricao.php?Id_Turma=3133&Id_Treinamento=1256",
+          "url": "https://www.editalong.com/blog/fundo-brasil-direitos-humanos-edital-geral-2026-osc",
           "tipo": "noticia"
         }
       ],
       "rotas": [
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
