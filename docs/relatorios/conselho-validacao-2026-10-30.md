@@ -75,8 +75,8 @@
   },
   {
    "motor": "empresas-incentivadas",
-   "achados_total_1a": 46,
-   "achados_total_agora": 46,
+   "achados_total_1a": 47,
+   "achados_total_agora": 47,
    "no_fluxo": 0,
    "confirmadas": 0
   },
@@ -200,7 +200,7 @@
  "pontos_com_redundancia": 18,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 43761
+ "exemplos_da_rede_de_rotas": 43838
 }
 ```
 
@@ -243,10 +243,10 @@
 
 ```json
 {
- "dia_de_referencia": "2026-10-29",
+ "dia_de_referencia": "2026-10-30",
  "ativos": 172,
- "lidos_ontem": 17,
- "lidos_hoje": 18,
+ "lidos_ontem": 18,
+ "lidos_hoje": 0,
  "nao_lidos_ontem_nem_hoje": [
   "f260-captacao-001",
   "f260-captacao-018",
