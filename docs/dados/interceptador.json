@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T17:03:12+00:00",
+  "em": "2026-10-30T17:18:16+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T16:55:20+00:00",
+  "ultimo_voo": "2026-10-30T17:05:44+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,56 +48,76 @@
     },
     "estrelas_de_ouro": 8,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.3
+    "tempo_medio_min": 11.9
   },
   "missoes": [
     {
-      "em": "2026-10-30T16:55:20+00:00",
+      "em": "2026-10-30T17:05:44+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "SEDHS (desenvolvimento humano e social) — Edital nº 214/2026",
-      "qualidade": "insuficiente",
-      "comprovados": 1,
+      "alvo": "EDITAL DO CICLO NATALINO DE FORTALEZA – 2026",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": "https://www10.goiania.go.gov.br/DadosINTER/PUBLIC/arq_7992685.pdf",
+      "pagina_oficial": "https://mapacultural.secult.ce.gov.br/files/opportunity/8181/edital-grupos-ciclo-ceara-natalino-2026.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com anexos, indicando que é uma fonte válida para obtenção de informações.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar os anexos do edital para entender os requisitos específicos, área de atuação e outros detalhes necessários para a candidatura.",
-        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre requisitos, área de atuação e outros critérios de elegibilidade.",
-        "risco": "A falta de informações detalhadas sobre requisitos, área de atuação e outros critérios pode impedir a associação de se qualificar adequadamente para o edital."
+        "por_que": "O edital foi comprovado com informações sobre objeto, valor, órgão financiador, território, esfera e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se sua atividade se enquadra na área de cultura e se há alinhamento com as manifestações populares do Ciclo Natalino do Ceará, além de seguir as orientações dos anexos para submissão da proposta.",
+        "proximo_passo": "Consultar os anexos do edital para entender as diretrizes e requisitos detalhados para participação.",
+        "risco": "A falta de alinhamento com o objeto do edital e a ausência de informações sobre prazos e requisitos específicos podem impedir o acesso."
       },
       "erro": null,
-      "segundos": 438,
+      "segundos": 713,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "1033b090cd9af719f839",
-      "encontrou": {},
-      "financiador": "Prefeitura de Goiânia",
-      "indicios": [
-        {
-          "url": "https://data.queridodiario.ok.org.br/5208707/2026-10-05/21610df56f2e97ab575f8405826e6cc38e8012a5.pdf",
-          "tipo": "agregador"
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Requisitos",
+      "id": "8296e00f6514a57a1380",
+      "encontrou": {
+        "Objeto": {
+          "valor": "fomento de bens culturais imateriais, produtos e serviços relacionados às manifestações populares do Ciclo Natalino das várias regiões do Estado do Ceará",
+          "trecho": "OBJETO: EDITAL GRUPOS CICLO CEARÁ NATALINO – 2026",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 980.644,51",
+          "trecho": "VALOR: R$ 980.644,51 (NOVECENTOS E OITENTA MIL, SEISCENTOS E QUARENTA E QUATRO REAIS E CINQUENTA E UM CENTAVOS)",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria da Cultura do Estado do Ceará - SECULT",
+          "trecho": "ORIGEM DO EDITAL: SECRETARIA DA CULTURA DO ESTADO DO CEARÁ - SECULT",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "CE",
+          "trecho": "Secretaria da Cultura do Estado do Ceará",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "OBJETIVOS: ... fomento de bens culturais imateriais, produtos e serviços relacionados às manifestações populares do Ciclo Natalino das várias regiões do Estado do Ceará",
+          "oficial": true,
+          "dispensado": false
         }
-      ],
+      },
+      "financiador": "Mapa Cultural do Ceará",
+      "indicios": [],
       "rotas": [
         "site_do_financiador",
         "site_do_financiador_edital"
