@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T10:22:56+00:00",
+  "em": "2026-10-30T10:41:26+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T10:08:41+00:00",
+  "ultimo_voo": "2026-10-30T10:24:44+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,64 +39,83 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 8,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.5
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 16.1
   },
   "missoes": [
     {
-      "em": "2026-10-30T10:08:41+00:00",
+      "em": "2026-10-30T10:24:44+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Plataforma de Inscrições (PIC)",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "Convocatoria a Organizaciones Territoriales 2026 - América Solidaria",
+      "qualidade": "parcial",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
-        "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
-        "Requisitos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://www.cultura.sc.gov.br/index.php/editais-e-acoes/programa-de-incentivo-a-cultura/plataforma-de-inscricoes-pic",
+      "pagina_oficial": "https://sumate.americasolidaria.org/convocatoria/convocatoria-a-organizaciones-territoriales-2026/68a3686caa6d97964c50ab0a/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O FCC - Fundação Catarinense de Cultura é um órgão estadual que oferece editais de fomento, sendo uma fonte válida para obtenção de recursos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange sua área de atuação, verificar os anexos para entender os requisitos e seguir o processo de inscrição conforme definido no edital.",
-        "proximo_passo": "Consultar os anexos do edital para obter detalhes sobre requisitos, prazos e outros critérios de elegibilidade.",
-        "risco": "A falta de informações sobre requisitos, prazos e área de atuação pode impedir a associação de se qualificar adequadamente para o edital."
+        "por_que": "O convocatório foi comprovado com dados específicos como objeto, prazo de inscrição, resultado, órgão financiador e requisitos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria preencher o Formulario de Postulación, Anexo #1 Carta de Compromiso, Anexo #2 Carta Gantt, apresentar Certificado de habilitación para trabajar con NNA do responsável pelo projeto, Certificado de vigencia de pessoa jurídica sem fins de lucro (máximo 30 dias de antigüedad) e Certificado de directorio de pessoa jurídica.",
+        "proximo_passo": "Verificar os requisitos e preparar os documentos necessários para a inscrição no prazo de 2026-09-08 a 2026-10-17.",
+        "risco": "A falta de documentos necessários ou a não conformidade com os requisitos pode impedir o acesso ao convocatório."
       },
       "erro": null,
-      "segundos": 812,
+      "segundos": 963,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 2,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "2d3326e039c43c0a70d4",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 8,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de recurso, Valor, Área de atuação",
+      "id": "cat-6be596714834",
       "encontrou": {
+        "Objeto": {
+          "valor": "fortalecer la capacidad organizacional y social de las organizaciones de la sociedad civil mediante el apoyo durante 9 meses de una dupla de voluntarios",
+          "trecho": "Al trabajar con nosotros, tu organización podrá fortalecer su capacidad organizacional y social, a través del apoyo durante 9 meses de una dupla de voluntarios que cuentan con un t",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-09-08 a 2026-10-17",
+          "trecho": "POSTULACIONES ABIERTAS HASTA EL VIERNES 17 DE OCTUBRE 23:59 HRS.",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "FCC - Fundação Catarinense de Cultura",
-          "trecho": "FCC - Fundação Catarinense de Cultura - Plataforma de Inscrições (PIC)",
+          "valor": "Fundación América Solidaria",
+          "trecho": "Invitamos a todas las organizaciones de la sociedad civil con foco en la niñez y adolescencia a postularse como “Socios Territoriales” (ST) de la Fundación América Solidaria.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "null",
+          "trecho": "Alcance de la convocatoria:Nacional, Internacional",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Formulario de Postulación, Anexo #1 Carta de Compromiso, Anexo #2 Carta Gantt, Certificado de habilitación para trabajar con NNA del responsable del proyecto., Certificado de vigencia de persona jurídica sin fines de lucro (máximo 30 días de antigüedad)., Certificado de directorio de persona jurídic",
+          "trecho": "Para postular debes ingresar tu correo electrónico, hacer click en “¡Postula a la convocatoria!”, rellenar tus datos y adjuntar los siguientes documentos requeridos: Formulario de ",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "FCC - Fundação Catarinense de Cultura",
+      "financiador": "Fundación América Solidaria",
       "indicios": [],
       "rotas": [
         "financiador_programa_edital",
