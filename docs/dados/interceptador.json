@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T10:54:08+00:00",
+  "em": "2026-10-30T11:07:49+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T10:43:22+00:00",
+  "ultimo_voo": "2026-10-30T10:56:34+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,68 +44,73 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 8,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.1
+    "tempo_medio_min": 10.4
   },
   "missoes": [
     {
-      "em": "2026-10-30T10:43:22+00:00",
+      "em": "2026-10-30T10:56:34+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Quem exatamente pode aplicar neste edital?",
+      "alvo": "Prefeitura de Diorama — AVISO DE CREDENCIAMENTO Nº 5/2026",
       "qualidade": "insuficiente",
-      "comprovados": 0,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
         "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://www.pi.gov.br/orgao-publico/sejus/",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações disponíveis sobre quem pode aplicar no edital.",
-        "para_a_amc": "Não há informações disponíveis sobre os requisitos necessários para uma associação comunitária de Goiânia acessar o edital.",
-        "proximo_passo": "Consultar o edital completo para obter detalhes sobre os requisitos e elegibilidade.",
-        "risco": "A falta de informações sobre os requisitos pode impedir a associação de se qualificar adequadamente para o edital."
+        "serve_como_fonte": "sim",
+        "por_que": "O aviso de credenciamento refere-se a um edital de fomento da Prefeitura Municipal de Diorama, que pode ser utilizado por organizações da sociedade civil para acesso a recursos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se credenciar conforme o edital, apresentar proposta alinhada ao objeto do edital e atender aos requisitos estabelecidos pelo órgão financiador.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre o processo de credenciamento e os requisitos necessários.",
+        "risco": "A falta de informações sobre prazos, requisitos e área de atuação pode impedir a associação de se credenciar adequadamente."
       },
       "erro": null,
-      "segundos": 608,
+      "segundos": 627,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "f7ad33f83b1880bb679f",
-      "encontrou": {},
-      "financiador": "Secretaria de Estado da Justiça (SEJUS-PI)",
-      "indicios": [
-        {
-          "url": "https://capitaai.com.br/captacao/aviso-chamamento-publico-22026-sejuspi-secretaria-estado-justica-eybqo1",
-          "tipo": "agregador"
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "d65d0e3f47e15c14b9fc",
+      "encontrou": {
+        "Objeto": {
+          "valor": "Fortalecimento de Vínculos Familiares e Comunitários para o Público-Alvo Crianças, Adolescentes, Jovens, Adultos e Idosos",
+          "trecho": "Prestação de Serviços Socioeducativos Voltados ao Fortalecimento de Vínculos Familiares e Comunitários para o Público-Alvo Crianças, Adolescentes, Jovens, Adultos e Idosos atendido",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Prefeitura Municipal de Diorama",
+          "trecho": "Órgão: Prefeituras/Estado de Goiás/Prefeitura Municipal de Diorama",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Órgão: Prefeituras/Estado de Goiás/Prefeitura Municipal de Diorama",
+          "oficial": false,
+          "dispensado": false
         }
-      ],
+      },
+      "financiador": "Prefeitura de Diorama",
+      "indicios": [],
       "rotas": [
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "site_municipal",
+        "financiador_programa_edital"
       ]
     }
   ],
