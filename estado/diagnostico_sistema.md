@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-10-30 23:12 UTC
+# Diagnóstico do sistema · 2026-10-30 23:14 UTC
 
 ## Cumprimento da finalidade · índice geral 58%
 - Motores: 77% (atencao) — todo motor ativo lê dentro da sua cadência
@@ -81,7 +81,7 @@
   - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 12 dia(s) (306 h); última leitura 18/10 01:29
   - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 12 dia(s) (304 h); última leitura 18/10 03:55
   - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 12 dia(s) (304 h); última leitura 18/10 03:54
-  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (105 h); última leitura 26/10 10:13
+  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (106 h); última leitura 26/10 10:13
   - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 12 dia(s) (304 h); última leitura 18/10 03:49
   - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 7 dia(s) (179 h); última leitura 23/10 08:58
   - em falha: CESE — Coordenadoria Ecumênica de Serviço — editais de apoio a projetos populares — falha na leitura de 30/10 02:45
@@ -92,7 +92,7 @@
 
 ## Integração
 - contagens: {'repositorio_abertas': 208, 'diagnostico_abertas': 208, 'tela_cartoes': 224, 'fichas': 210, 'sala_controle_abertas': 208}
-- idade (h): {'repositorio': 0.0, 'fluxo': 307.3, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 6.4, 'rede_neural': 307.3, 'saude': 7.6}
+- idade (h): {'repositorio': 0.0, 'fluxo': 307.4, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 6.4, 'rede_neural': 307.4, 'saude': 7.7}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (31)
@@ -105,15 +105,15 @@
 - [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 12 dia(s) (306 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 12 dia(s) (304 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 12 dia(s) (304 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (105 h); última leitura 26/10 10:13 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 4 dia(s) (106 h); última leitura 26/10 10:13 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 12 dia(s) (304 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 7 dia(s) (179 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
 - [alta] motor em falha: CESE — Coordenadoria Ecumênica de Serviço — editais de apoio a projetos populares — falha na leitura de 30/10 02:45 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 208 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 307.3 h (limite 3 h) → refazer a tela
+- [media] fluxo sem atualização há 307.4 h (limite 3 h) → refazer a tela
 - [media] maestro sem atualização há 6.4 h (limite 3 h) → ver o fluxo que gera este dado
-- [media] rede_neural sem atualização há 307.3 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] rede_neural sem atualização há 307.4 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 117 de 126 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
 - [media] avaliação do Cartório com gabarito tem 363.3 h (semanal) → disparar o fluxo 39
 - [media] 54 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
