@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T13:45:05+00:00",
+  "em": "2026-10-30T14:03:24+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T13:28:47+00:00",
+  "ultimo_voo": "2026-10-30T13:46:59+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -52,77 +52,68 @@
   },
   "missoes": [
     {
-      "em": "2026-10-30T13:28:47+00:00",
+      "em": "2026-10-30T13:46:59+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 006/2026 DE CIRCULAÇÃO CULTURAL ARACATI: CULTURA VISTA DA CALÇADA",
-      "qualidade": "parcial",
-      "comprovados": 8,
+      "de": "1 · Goiás · livro da Biblioteca",
+      "alvo": "10-26: goiânia a licença ambietal simplificada para atividade de: fabricação de massas alimentícias, com SEDE … — Goiás / Aparecida de Goiânia",
+      "qualidade": "insuficiente",
+      "comprovados": 4,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://mapacultural.secult.ce.gov.br/oportunidade/8409/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprovado descreve o objeto, valor, financiador, território, esfera, requisitos e área de atuação, o que permite identificar se uma associação comunitária pode se qualificar para o apoio financeiro.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto cultural em uma das linguagens citadas (teatro, dança, circo e artes cênicas), alinhado aos requisitos do edital, e enviar a proposta para avaliação.",
-        "proximo_passo": "Verificar os anexos do edital para compreender melhor os requisitos e a forma de submissão da proposta.",
-        "risco": "A falta de informações sobre o prazo de inscrição e o resultado pode impedir a associação de se inscrever no prazo correto."
+        "por_que": "O edital comprova a existência de uma licença ambiental simplificada para fabricação de massas alimentícias no Município de Aparecida de Goiânia, Goiás.",
+        "para_a_amc": "A associação comunitária precisaria verificar se o objeto do edital se relaciona com suas atividades e, caso sim, se enquadrar na área de atuação prevista, mesmo que não esteja explicitamente listada.",
+        "proximo_passo": "Consultar o órgão municipal responsável pela licença ambiental para obter mais informações sobre o processo e os requisitos necessários.",
+        "risco": "A falta de informações sobre requisitos, área de atuação e prazos pode impedir o acesso e a participação no processo."
       },
       "erro": null,
-      "segundos": 929,
+      "segundos": 932,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
-      "id": "a49706efab59e0771dfa",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-30a73a9c24ef",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de projetos culturais de circulação, para receberem apoio financeiro nas linguagens culturais de TEATRO, DANÇA, CIRCO E ARTES CÊNICAS",
-          "trecho": "1.1 O objeto deste Edital é a seleção de projetos culturais de circulação, para receberem apoio financeiro nas linguagens culturais de TEATRO, DANÇA, CIRCO E ARTES CÊNICAS, por mei",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$ 20.000,00 (vinte mil reais), destinado à seleção de 02 (duas) propostas contempladas, no valor de R$ 10.000,00 (dez mil reais) cada uma",
-          "trecho": "2.1 O valor total disponibilizado para este Edital é de R$ 20.000,00 (vinte mil reais), destinado à seleção de 02 (duas) propostas contempladas, no valor de R$ 10.000,00 (dez mil r",
-          "oficial": true,
+          "valor": "fabricação de massas alimentícias",
+          "trecho": "licença ambiental simplificada para atividade de: fabricação de massas alimentícias, com SEDE …",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Município do Aracati, por meio da Secretaria de Cultura",
-          "trecho": "O Município do Aracati, inscrito no CNPJ sob o n° 07.684.756/0001-46, por meio da Secretaria de Cultura,",
-          "oficial": true,
+          "valor": "Município de Aparecida de Goiânia",
+          "trecho": "Município de Aparecida de Goiânia",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "CE",
-          "trecho": "O presente Edital de Circulação Cultural tem como objetivo principal descentralizar o acesso à cultura e democratizar a distribuição dos recursos públicos voltados ao setor artísti",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "O presente Edital de Circulação Cultural tem como objetivo principal descentralizar o acesso à cultura e democratizar a distribuição dos recursos públicos voltados ao setor artísti",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "propostas em qualquer uma das linguagens culturais citadas",
-          "trecho": "2.2 Poderão se inscrever propostas em qualquer uma das linguagens culturais citada",
-          "oficial": true,
+          "valor": "GO",
+          "trecho": "Aparecida de Goiânia, 26 de Outubro de 2026, Segunda - Feira - Ano 13 - Nº 2963",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Mapa Cultural do Ceará",
-      "indicios": [],
+      "financiador": "Câmara Municipal de Aparecida de Goiânia",
+      "indicios": [
+        {
+          "url": "https://data.queridodiario.ok.org.br/5201405/2026-10-26/6da1cc9bc1fe5683a10e5725e9e7eb18e08b7545.txt",
+          "tipo": "agregador"
+        }
+      ],
       "rotas": [
         "site_do_financiador",
         "site_do_financiador_edital"
