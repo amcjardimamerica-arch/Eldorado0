@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T23:10:57+00:00",
+  "em": "2026-10-30T23:28:26+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T22:57:31+00:00",
+  "ultimo_voo": "2026-10-30T23:12:43+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,92 +39,88 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 9,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.7
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 14.9
   },
   "missoes": [
     {
-      "em": "2026-10-30T22:57:31+00:00",
+      "em": "2026-10-30T23:12:43+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Plataforma abre inscrições para projetos sociais voltados à juventude ...",
-      "qualidade": "insuficiente",
+      "alvo": "Prêmio Contra a Fome destina R$ 600 mil a segurança alimentar - Boa ...",
+      "qualidade": "parcial",
       "comprovados": 7,
-      "dispensados": 1,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://pactocontrafome.org/premio-pacto-contra-a-fome-2026/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto descreve a Plataforma Juventude Solidária como uma plataforma que conecta entidades da sociedade civil e voluntários, com requisitos claros para participação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ser uma organização sem fins lucrativos, com CNPJ representado por pessoa física, e deve preencher um formulário com 1 anexo.",
-        "proximo_passo": "A associação deve se inscrever na Plataforma Juventude Solidária, preenchendo o formulário e anexando os documentos necessários.",
-        "risco": "A falta de CNPJ ou a não conformidade com os requisitos pode impedir a participação."
+        "por_que": "O texto comprovado descreve o Prêmio Contra a Fome, que destina recursos para segurança alimentar e redução do desperdício de alimentos, sendo uma fonte válida para ações de fomento.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ser uma organização da sociedade civil, sem fins lucrativos, institucionalizada ou não, atuante na área de segurança alimentar, redução ou reversão do desperdício de alimentos, e apresentar um projeto comprovado com um anexo.",
+        "proximo_passo": "A associação deve se inscrever no edital, apresentando um projeto alinhado ao objeto do prêmio e os requisitos estabelecidos.",
+        "risco": "A falta de inscrição no prazo definido ou a não apresentação de um projeto adequado com os anexos exigidos pode impedir o acesso ao recurso."
       },
       "erro": null,
-      "segundos": 759,
+      "segundos": 896,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "cat-ba9a1007b603",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Área de atuação",
+      "id": "cat-d0dea54d2837",
       "encontrou": {
         "Objeto": {
-          "valor": "conectar demandas de entidades da sociedade civil que possuem atuação relacionada a programas sociais do Governo Federal, e voluntários de 16 a 29 anos que se interessem em atuar em ações para sanar estas demandas",
-          "trecho": "A Plataforma Juventude Solidária tem como finalidade conectar demandas de entidades da sociedade civil que possuem atuação relacionada a programas sociais do Governo Federal, e vol",
-          "oficial": false,
+          "valor": "reconhecer e contribuir com iniciativas que trabalham na promoção da segurança alimentar, na redução e na reversão do desperdício de alimentos",
+          "trecho": "Realizado em cooperação com a UNICEF, UNESCO, FAO, UNEP e WFP, o Prêmio Pacto Contra a Fome tem como objetivo reconhecer e contribuir com iniciativas que trabalham na promoção da s",
+          "oficial": true,
           "dispensado": false
         },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O prazo de inscrição não foi mencionado no texto, mas o tempo máximo para preenchimento do formulário é de 5 minutos.",
-          "trecho": "O tempo máximo para o preenchimento do formulário são de 5 minutos.",
-          "oficial": false,
-          "dispensado": true
+        "Valor": {
+          "valor": "R$ 100 mil para cada uma",
+          "trecho": "O Prêmio Pacto Contra a Fome contemplará até seis iniciativas com R$ 100 mil para cada uma.",
+          "oficial": true,
+          "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Plataforma Juventude Solidária",
-          "trecho": "A Plataforma Juventude Solidária tem como finalidade conectar demandas de entidades da sociedade civil que possuem atuação relacionada a programas sociais do Governo Federal, e vol",
-          "oficial": false,
+          "valor": "Pacto Contra a Fome",
+          "trecho": "Prêmio Pacto Contra a Fome - 2026 - Pacto Contra a Fome",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "nacional",
-          "trecho": "A Plataforma Juventude Solidária tem como finalidade conectar demandas de entidades da sociedade civil que possuem atuação relacionada a programas sociais do Governo Federal, e vol",
-          "oficial": false,
+          "trecho": "colaborando para a redução das desigualdades e para a transformação socioambiental dos sistemas alimentares no Brasil.",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "Organização sem CNPJ representado por pessoa física;, Pessoa jurídica sem fins lucrativos (Ex.: Associação, Fundação, Cooperativa, etc.) com caráter coletivo;",
-          "trecho": "Quem pode participar - a organização ou entidade que pode aderir à Plataforma deve se enquadrar em um desses tipos: I - Organização sem CNPJ representado por pessoa física;* II - P",
-          "oficial": false,
+          "valor": "Organizações sem fins lucrativos institucionalizadas, Institutos, fundações, associações sem fins lucrativos, sindicatos, cooperativas, organizações da sociedade civil intern, Organizações não institucionalizadas, Grupo de pessoas organizadas e atuantes que não estejam juridicamente constituídos (nã",
+          "trecho": "Organizações sem fins lucrativos institucionalizadas Institutos, fundações, associações sem fins lucrativos, sindicatos, cooperativas, organizações da sociedade civil internacionai",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Ministério da Cidadania",
+      "financiador": "Pacto Contra a Fome",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "parceiro"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
