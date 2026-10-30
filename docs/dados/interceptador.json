@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T04:32:32+00:00",
+  "em": "2026-10-30T04:50:00+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T04:15:33+00:00",
+  "ultimo_voo": "2026-10-30T04:34:37+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,80 +44,83 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 7,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.1
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 14.7
   },
   "missoes": [
     {
-      "em": "2026-10-30T04:15:33+00:00",
+      "em": "2026-10-30T04:34:37+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
-      "alvo": "Senar goias abre edital para doacao de bens moveis a entidades parceiras",
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 4 abordagens; busca",
+      "alvo": "Edital FME Transforma nº 02/2026 Fundação Maria Emília R$ 1,0 mi Aceita:   organizações da sociedade civil, universidades, pesquisadores  e ",
       "qualidade": "parcial",
-      "comprovados": 9,
-      "dispensados": 2,
+      "comprovados": 6,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
         "Valor",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": "https://goias.go.gov.br/publicacoes/editais/edital002_2025_LEILOEIRO.pdf",
+      "pagina_oficial": "https://mariaemilia.org.br/wp-content/uploads/2026/08/Edital-FME-Transforma-2026.pdf",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O texto comprovado menciona um edital de credenciamento de leiloeiros oficiais, mas não trata da doação de bens móveis a entidades parceiras, tampouco fornece informações sobre valor, área de atuação ou como a AMC poderia acessar os recursos.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria se credenciar como leiloeiro oficial, conforme os requisitos estabelecidos no edital, e demonstrar capacidade de atender ao objeto do credenciamento.",
-        "proximo_passo": "Verificar os requisitos de credenciamento e se a AMC se enquadra como leiloeiro oficial, além de analisar se o edital se aplica à sua atividade.",
-        "risco": "A AMC pode não se enquadrar como leiloeiro oficial, ou o edital pode não se aplicar diretamente às suas atividades, impedindo o acesso aos recursos."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações sobre seu objeto, financiador, território e área de atuação, o que permite identificar sua existência e alcance.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto nas áreas de Saúde ou Educação que contribua para a produção de conhecimento, desenvolvimento de soluções, fortalecimento de práticas ou melhoria de serviços, com impacto social relevante, e seguir as diretrizes do edital para submissão.",
+        "proximo_passo": "Pesquisar os anexos do edital para entender as diretrizes e requisitos detalhados para submissão de propostas.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode dificultar a preparação da proposta dentro do tempo necessário e com os critérios exigidos."
       },
       "erro": null,
-      "segundos": 969,
+      "segundos": 882,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 5,
       "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Valor, Área de atuação",
-      "id": "rec-tidadesparceiras",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "dff21103a67e90b8f8e3",
       "encontrou": {
         "Objeto": {
-          "valor": "CREDENCIAMENTO de LEILOEIROS OFICIAIS, regularmente registrados na Junta Comercial do Estado, para a eventual realização de leilões de bens móveis inservíveis, bens automotivos e bens imóveis do Município de GOIÁS - GO",
-          "trecho": "O presente Edital destina-se ao CREDENCIAMENTO de LEILOEIROS OFICIAIS, regularmente registrados na Junta Comercial do Estado, para a eventual realização de leilões de bens móveis i",
+          "valor": "projetos nas áreas de Saúde e Educação que contribuam para a produção de conhecimento, o desenvolvimento de soluções, o fortalecimento de práticas e a melhoria de serviços nessas áreas, com impacto social relevante",
+          "trecho": "O presente edital tem como objetivo selecionar e apoiar projetos nas áreas de Saúde e Educação que contribuam para a produção de conhecimento, o desenvolvimento de soluções, o fort",
           "oficial": true,
           "dispensado": false
         },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O prazo de inscrição está explicitado no texto.",
-          "trecho": "Os envelopes contendo a documentos de Habilitação serão recebidos no Departamento de Licitações da Prefeitura Municipal de Goiás – GO, situada na Praça da Bandeira n° 01, Centro, G",
-          "oficial": false,
-          "dispensado": true
-        },
         "Órgão / financiador": {
-          "valor": "PREFEITURA MUNICIPAL DE GOIÁS",
-          "trecho": "O MUNICÍPIO DE GOIÁS, Estado de Goiás, pessoa jurídica de direito público interno, inscrita no CNPJ/MF sob o n° 02.295.772/0001-23, com sede administrativa na Praça das Bandeiras, ",
+          "valor": "Fundação Maria Emília Pedreira Freire De Carvalho",
+          "trecho": "A Fundação Maria Emília Pedreira Freire De Carvalho, CNPJ sob nº 03.103.667/0001-08, doravante Fundação Maria Emília ou FME, através de sua Diretoria Executiva, no uso de suas atri",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "O MUNICÍPIO DE GOIÁS, Estado de Goiás, pessoa jurídica de direito público interno, inscrita no CNPJ/MF sob o n° 02.295.772/0001-23, com sede administrativa na Praça das Bandeiras, ",
+          "valor": "nacional",
+          "trecho": "A Fundação Maria Emília busca beneficiar a sociedade brasileira, fomentando e fortalecendo ações, pesquisas, tecnologias e processos que contribuam para a evolução da Saúde e da Ed",
           "oficial": true,
           "dispensado": false
         },
-        "Requisitos": {
-          "valor": "Que estejam devidamente matriculados na Junta Comercial do Estado, no pleno gozo de suas funções, e que preencham as con",
-          "trecho": "Poderão participar deste processo os interessados que atenderem a todas as exigências contidas neste edital e seus anexos.",
+        "Área de atuação": {
+          "valor": "saude",
+          "trecho": "O presente edital tem como objetivo selecionar e apoiar projetos nas áreas de Saúde e Educação que contribuam para a produção de conhecimento, o desenvolvimento de soluções, o fort",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Senar Goiás",
-      "indicios": [],
+      "financiador": "Fundação Maria Emília",
+      "indicios": [
+        {
+          "url": "https://capitaai.com.br/captacao/edital-fme-transforma-022026-fundacao-maria-emilia-co1738",
+          "tipo": "agregador"
+        }
+      ],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
