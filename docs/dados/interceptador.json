@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T13:26:59+00:00",
+  "em": "2026-10-30T13:45:05+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T13:13:30+00:00",
+  "ultimo_voo": "2026-10-30T13:28:47+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,64 +48,84 @@
     },
     "estrelas_de_ouro": 8,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.8
+    "tempo_medio_min": 15.5
   },
   "missoes": [
     {
-      "em": "2026-10-30T13:13:30+00:00",
+      "em": "2026-10-30T13:28:47+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "Prêmio Cruz e Sousa",
-      "qualidade": "insuficiente",
-      "comprovados": 2,
+      "alvo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 006/2026 DE CIRCULAÇÃO CULTURAL ARACATI: CULTURA VISTA DA CALÇADA",
+      "qualidade": "parcial",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Território",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://mapacultural.secult.ce.gov.br/oportunidade/8409/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O Fundo de Cultura da Fundação Catarinense de Cultura é uma fonte de financiamento para projetos culturais no Estado de Santa Catarina.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o prêmio abrange a área de atuação da AME e se há possibilidade de inscrição em outros editais da Fundação Catarinense de Cultura.",
-        "proximo_passo": "Consultar outros editais da Fundação Catarinense de Cultura para verificar se há oportunidades compatíveis com a AME.",
-        "risco": "A falta de informações sobre o objeto, prazo e requisitos do prêmio pode impedir a associação de se inscrever adequadamente."
+        "por_que": "O edital comprovado descreve o objeto, valor, financiador, território, esfera, requisitos e área de atuação, o que permite identificar se uma associação comunitária pode se qualificar para o apoio financeiro.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto cultural em uma das linguagens citadas (teatro, dança, circo e artes cênicas), alinhado aos requisitos do edital, e enviar a proposta para avaliação.",
+        "proximo_passo": "Verificar os anexos do edital para compreender melhor os requisitos e a forma de submissão da proposta.",
+        "risco": "A falta de informações sobre o prazo de inscrição e o resultado pode impedir a associação de se inscrever no prazo correto."
       },
       "erro": null,
-      "segundos": 771,
+      "segundos": 929,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "88e34878c262778144a9",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
+      "id": "a49706efab59e0771dfa",
       "encontrou": {
+        "Objeto": {
+          "valor": "seleção de projetos culturais de circulação, para receberem apoio financeiro nas linguagens culturais de TEATRO, DANÇA, CIRCO E ARTES CÊNICAS",
+          "trecho": "1.1 O objeto deste Edital é a seleção de projetos culturais de circulação, para receberem apoio financeiro nas linguagens culturais de TEATRO, DANÇA, CIRCO E ARTES CÊNICAS, por mei",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 20.000,00 (vinte mil reais), destinado à seleção de 02 (duas) propostas contempladas, no valor de R$ 10.000,00 (dez mil reais) cada uma",
+          "trecho": "2.1 O valor total disponibilizado para este Edital é de R$ 20.000,00 (vinte mil reais), destinado à seleção de 02 (duas) propostas contempladas, no valor de R$ 10.000,00 (dez mil r",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Fundação Catarinense de Cultura",
-          "trecho": "FCC - Fundação Catarinense de Cultura - Prêmio Cruz e Sousa",
-          "oficial": false,
+          "valor": "Município do Aracati, por meio da Secretaria de Cultura",
+          "trecho": "O Município do Aracati, inscrito no CNPJ sob o n° 07.684.756/0001-46, por meio da Secretaria de Cultura,",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "CE",
+          "trecho": "O presente Edital de Circulação Cultural tem como objetivo principal descentralizar o acesso à cultura e democratizar a distribuição dos recursos públicos voltados ao setor artísti",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "O presente Edital de Circulação Cultural tem como objetivo principal descentralizar o acesso à cultura e democratizar a distribuição dos recursos públicos voltados ao setor artísti",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "propostas em qualquer uma das linguagens culturais citadas",
+          "trecho": "2.2 Poderão se inscrever propostas em qualquer uma das linguagens culturais citada",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "FCC - Fundação Catarinense de Cultura",
+      "financiador": "Mapa Cultural do Ceará",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
