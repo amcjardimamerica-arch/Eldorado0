@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T06:24:57+00:00",
+  "em": "2026-10-30T06:55:56+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T06:07:36+00:00",
+  "ultimo_voo": "2026-10-30T06:38:49+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,8 +38,8 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
-    "parciais": 0,
+    "validadas": 0,
+    "parciais": 1,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
@@ -47,95 +47,84 @@
       "sim": 1
     },
     "estrelas_de_ouro": 7,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 16.5
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 16.3
   },
   "missoes": [
     {
-      "em": "2026-10-30T06:07:36+00:00",
+      "em": "2026-10-30T06:38:49+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 16 abordagens; busc",
-      "alvo": "Fundo Brasil de Direitos Humanos Abre Edital Geral 2026: Até R$ 50 Mil ...",
-      "qualidade": "validada",
-      "comprovados": 9,
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 32 abordagens; busc",
+      "alvo": "Equatorial Goiás abre chamada para projetos culturais e antecipa ...",
+      "qualidade": "parcial",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso"
       ],
-      "pagina_oficial": "https://www.fundobrasil.org.br/edital/geral-2026-fortalecendo-direitos-e-gestando-um-mundo-novo/",
+      "pagina_oficial": "https://cultura.goias.go.gov.br/storage/editais/SoSZ9sw3EUIzxSWBL4sk02RfnrsVoRm5S8donmJv.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, prazo, valor e requisitos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar propostas para apoio ao seu trabalho no âmbito do Edital Geral 2026 – Fortalecendo direitos e gestando um mun, promover a equidade racial, de gênero em sua composição e atuação e propostas que abordam as dimensões racial, étnica, t",
-        "proximo_passo": "A associação deve se inscrever no edital entre 2025-12-06 e 2026-03-06, apresentando propostas que atendam aos requisitos estabelecidos.",
-        "risco": "A associação pode ser impedida de acessar o edital se não atender aos requisitos de propostas que abordam as dimensões racial, étnica, t e se não apresentar os anexos necessários."
+        "por_que": "O texto comprovado descreve claramente o objeto, valor, órgão financiador, território, esfera, requisitos e área de atuação da chamada, o que é suficiente para identificar a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa ser um agente cultural atuante no Município de Goiás e se adequar aos requisitos descritos no Anexo I para acessar o apoio financeiro.",
+        "proximo_passo": "Verificar os requisitos do Anexo I e se a associação comunitária atende aos critérios para participar da chamada.",
+        "risco": "A associação comunitária pode não atender aos requisitos do Anexo I ou não ter acesso ao prazo de inscrição, que não foi encontrado no texto."
       },
       "erro": null,
-      "segundos": 992,
+      "segundos": 978,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
+      "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 8,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "cat-0afd299c9a0b",
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
+      "id": "cat-a7c5ee926a91",
       "encontrou": {
         "Objeto": {
-          "valor": "fortalecimento institucional de organizações que atuam na defesa de direitos",
-          "trecho": "Poderão ser apoiados projetos voltados ao fortalecimento institucional de organizações que atuam na defesa de direitos.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2025-12-06 a 2026-03-06",
-          "trecho": "O período de submissão de propostas vai de 6 de dezembro de 2025 a 6 de março de 2026, até 18h (horário de Brasília).",
+          "valor": "seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I",
+          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de mani",
           "oficial": true,
           "dispensado": false
         },
         "Valor": {
-          "valor": "até R$ 50.000,00 (cinquenta mil reais) cada, totalizando até R$ 1.000.000,00 (um milhão de reais) em doações neste Edital",
-          "trecho": "Serão apoiadas 20 organizações, grupos e coletivos, com o valor de até R$ 50.000,00 (cinquenta mil reais) cada, totalizando até R$ 1.000.000,00 (um milhão de reais) em doações nest",
+          "valor": "R$ 108.200,00",
+          "trecho": "O valor total deste Edital é de R$ 108.200,00 (cento e oito mil e duzentos reais).",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Fundo Brasil de Direitos Humanos",
-          "trecho": "O Fundo Brasil de Direitos Humanos convida grupos, coletivos, movimentos e organizações da sociedade civil que atuam no enfrentamento de violações e na defesa de direitos humanos e",
+          "valor": "Secretaria Municipal de Cultura",
+          "trecho": "O MUNICÍPIO DE GOIÁS/GO, por meio da Secretaria Municipal de Cultura, torna público o presente Edital de Chamamento Público para seleção de projetos de agentes culturais, e seus an",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "nacional",
-          "trecho": "O Fundo Brasil de Direitos Humanos convida grupos, coletivos, movimentos e organizações da sociedade civil que atuam no enfrentamento de violações e na defesa de direitos humanos e",
+          "valor": "GO",
+          "trecho": "O presente Edital é realizado com recursos do Governo Federal repassados pelo Ministério da Cultura, por meio da Política Nacional Aldir Blanc de Fomento à Cultura (PNAB).",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "direitos",
-          "trecho": "O Fundo Brasil de Direitos Humanos convida grupos, coletivos, movimentos e organizações da sociedade civil que atuam no enfrentamento de violações e na defesa de direitos humanos e",
+          "valor": "cultura",
+          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de mani",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "apresentar propostas para apoio ao seu trabalho no âmbito do Edital Geral 2026 – Fortalecendo direitos e gestando um mun, promover a equidade racial, de gênero em sua composição e atuação e propostas que abordam as dimensões racial, étnica, t",
-          "trecho": "O Fundo Brasil entende que o trabalho dessas organizações deve ser fortalecido, para que continuem enfrentando retrocessos e contribuam para que debates essenciais sobre direitos h",
+          "valor": "agentes culturais atuantes no Município de Goiás",
+          "trecho": "As condições para a execução da PNAB foram criadas por meio do engajamento da sociedade e o presente edital destina-se a premiar agentes culturais atuantes no Município de Goiás.",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Fundo Brasil de Direitos Humanos",
-      "indicios": [
-        {
-          "url": "https://www.editalong.com/blog/fundo-brasil-direitos-humanos-edital-geral-2026-osc",
-          "tipo": "noticia"
-        }
-      ],
+      "financiador": "Equatorial Goiás",
+      "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador"
       ]
     }
   ],
