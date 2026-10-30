@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T03:46:28+00:00",
+  "em": "2026-10-30T04:03:56+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T03:30:48+00:00",
+  "ultimo_voo": "2026-10-30T03:48:19+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,92 +44,73 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.0
+    "tempo_medio_min": 14.8
   },
   "missoes": [
     {
-      "em": "2026-10-30T03:30:48+00:00",
+      "em": "2026-10-30T03:48:19+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "0 · PNCP · faltam Resultado, Prazo de recurso, Requisitos, Modalidade, Área de atuação",
-      "alvo": "SAO PAULO TRIBUNAL DE JUSTICA — Chamamento Público para seleção e cadastro de cooperativas e/ou associações de catadores de materiais recicláveis aptas a realiz",
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 4 abordagens; busca",
+      "alvo": "Edital de chamamento público n° 001-cmdca-2026_compressed — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 8,
-      "dispensados": 1,
+      "comprovados": 5,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Requisitos",
+        "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "http://www.itaberai.go.gov.br",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O edital menciona a seleção e cadastro de cooperativas e associações de catadores de materiais recicláveis, mas não há informações sobre como uma associação comunitária de Goiânia, atuando em áreas como assistência social, cultura, educação e esporte, poderia se qualificar para o processo.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria se alinhar aos requisitos do edital, que envolvem a triagem, beneficiamento e comercialização de resíduos sólidos, o que não está alinhado com suas áreas de atuação atuais.",
-        "proximo_passo": "Consultar diretamente o edital completo para verificar se há possibilidade de adaptação das atividades da associação comunitária às demandas do chamamento público.",
-        "risco": "A falta de alinhamento entre as atividades da associação comunitária e os requisitos do edital pode impedir o acesso ao chamamento público."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital comprova que a Prefeitura de Itaberaí-GO está realizando um sorteio de autorização de uso de espaço público para comemorar o aniversário de 158 anos da cidade, o que pode envolver ações de cultura e educação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no sorteio de autorização de uso de espaço público, demonstrando como sua atividade se alinha à celebração do aniversário de Itaberaí-GO, mesmo que não haja informações sobre os requisitos específicos.",
+        "proximo_passo": "Verificar os anexos do edital para obter detalhes sobre o processo de inscrição e os critérios de seleção.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se preparar adequadamente para participar do sorteio."
       },
       "erro": null,
-      "segundos": 900,
+      "segundos": 890,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 5,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-342a90a9c465",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-op-3606c1c85bec",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção e cadastro de cooperativas e/ou associações de catadores de materiais recicláveis aptas a realizarem a triagem dos resíduos sólidos passíveis de reciclagem, beneficiamento e comercialização",
-          "trecho": "Chamamento Público para seleção e cadastro de cooperativas e/ou associações de catadores de materiais recicláveis aptas a realizarem a triagem dos resíduos sólidos passíveis de rec",
-          "oficial": false,
+          "valor": "Realizar o sorteio de autorização de uso de espaço público para comemorar o aniversário de 158 anos de Itaberaí-GO",
+          "trecho": "SORTEIO DE AUTORIZAÇÃO DE USO DE ESPAÇO PÚBLICO – ANIVERSÁRIO DE 158 ANOS DE ITABERAI-GO (DECRETO MUNICIPAL Nº 1.396/2026)",
+          "oficial": true,
           "dispensado": false
         },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O prazo de inscrição é explicitado no texto.",
-          "trecho": "A partir de 09/09/2025 até 01/10/2025, das 10h00 às 18h00. [rejeitado: data implausível para edital aberto]",
-          "oficial": false,
-          "dispensado": true
-        },
         "Órgão / financiador": {
-          "valor": "TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO",
-          "trecho": "TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO",
-          "oficial": false,
+          "valor": "Prefeitura de Itaberaí",
+          "trecho": "Prefeitura de Itaberaí",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "SP",
-          "trecho": "TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "meio_ambiente",
-          "trecho": "visando a destinação ambientalmente correta dos resíduos sólidos gerados pelas unidades do Tribunal de Justiça de São Paulo, excetuados os prédios da Capital",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "aptas a realizarem a triagem dos resíduos sólidos passíveis de reciclagem, beneficiamento e comercialização, visando a destinação ambientalmente correta dos resíduos sólidos gerados pelas unidades do Tribunal de Justiça de São Pa",
-          "trecho": "Chamamento Público para seleção e cadastro de cooperativas e/ou associações de catadores de materiais recicláveis aptas a realizarem a triagem dos resíduos sólidos passíveis de rec",
-          "oficial": false,
+          "valor": "GO",
+          "trecho": "Prefeitura de Itaberaí",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO",
+      "financiador": "CMDCA - Conselho Municipal de Defesa do Consumidor de Goiânia",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
