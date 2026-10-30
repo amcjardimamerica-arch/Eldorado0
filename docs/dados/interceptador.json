@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-30T07:13:12+00:00",
+  "em": "2026-10-30T07:28:40+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-30T06:57:42+00:00",
+  "ultimo_voo": "2026-10-30T07:15:12+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,93 +39,87 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.7
+    "tempo_medio_min": 12.7
   },
   "missoes": [
     {
-      "em": "2026-10-30T06:57:42+00:00",
+      "em": "2026-10-30T07:15:12+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "MinC (cultura) — EDITAL DE CHAMAMENTO PÚBLICO MINC Nº 12, DE 13 DE OUTUBRO DE 2026",
-      "qualidade": "parcial",
-      "comprovados": 8,
+      "alvo": "MinC (cultura) — EDITAL IPHAN Nº 3/2026",
+      "qualidade": "insuficiente",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://culteditais.cultura.gov.br/files/opportunity/11703/edital-19-2026-fomento-de-projetos-culturais-pj-mei.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O edital mencionado é referente ao Município de Santo André, enquanto a pergunta é sobre o Edital de Chamamento Público MINC Nº 12, de 13 de outubro de 2026, que não foi encontrado comprovado no texto fornecido.",
-        "para_a_amc": "Para acessar o edital, uma associação comunitária de Goiânia precisaria verificar se o edital é aberto ao seu território e se atende aos requisitos de pessoas jurídicas do setor cultural, além de se enquadrar nas categorias descritas no Anexo I.",
-        "proximo_passo": "Consultar o edital completo para verificar se há abertura para organizações da sociedade civil em Goiânia e se os requisitos são atendidos.",
-        "risco": "O edital não foi encontrado comprovado no texto, o que pode impedir a associação de acessá-lo ou utilizá-lo como fonte."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações sobre objeto, resultado, valor e financiador, o que permite identificar sua existência e alcance.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando um projeto de ação de preservação e salvaguarda do patrimônio cultural brasileiro, com valor máximo de R$ 40 mil.",
+        "proximo_passo": "Consultar o edital completo para verificar os prazos e requisitos específicos, bem como os anexos necessários para a inscrição.",
+        "risco": "O prazo de inscrição e recursos não foram encontrados, o que pode impedir a associação de se inscrever no prazo correto."
       },
       "erro": null,
-      "segundos": 884,
+      "segundos": 764,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 8,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
-      "id": "9eac54be7583d894bd3d",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "ad045b40c6a72fa9a820",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de propostas culturais exclusivamente apresentadas por agentes culturais, pessoas jurídicas do setor cultural que se enquadrem nos requisitos para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de manifestações culturais do município de Santo André",
-          "trecho": "O objeto deste Edital é a seleção de propostas culturais exclusivamente apresentadas por agentes culturais, pessoas jurídicas do setor cultural que se enquadrem nos requisitos para",
-          "oficial": true,
+          "valor": "ações de preservação e salvaguarda do patrimônio cultural brasileiro",
+          "trecho": "mechanismo de fomento às ações de preservação e salvaguarda do patrimônio cultural brasileiro",
+          "oficial": false,
           "dispensado": false
         },
         "Valor": {
-          "valor": "R$50.000,00 (cinquenta mil reais) cada",
-          "trecho": "Serão selecionadas 15 (quinze) propostas no valor de R$50.000,00 (cinquenta mil reais) cada.",
-          "oficial": true,
+          "valor": "R$ 40 mil cada",
+          "trecho": "contempladas com a premiação de R$ 40 mil cada",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Município de Santo André, por intermédio da Secretaria de Cultura",
-          "trecho": "O presente Edital é regido pela Lei nº 14.399/2022 (Lei da PNAB), pela Lei nº 14.903/2024 (Marco Regulatório do Fomento à Cultura), pelo Decreto nº 11.740/2023 (Decreto da PNAB), p",
-          "oficial": true,
+          "valor": "Ministério da Cultura/Instituto do Patrimônio Histórico e Artístico Nacional",
+          "trecho": "Órgão: Ministério da Cultura/Instituto do Patrimônio Histórico e Artístico Nacional",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "SP",
-          "trecho": "Com o objetivo de promover a descentralização territorial dos recursos e a democratização do acesso à cultura, no mínimo 50% (cinquenta por cento) do total de vagas homologadas ao ",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "O objeto deste Edital é a seleção de propostas culturais exclusivamente apresentadas por agentes culturais, pessoas jurídicas do setor cultural que se enquadrem nos requisitos para",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "pessoas jurídicas do setor cultural que se enquadrem nos requisitos para receberem apoio financeiro nas categorias descr",
-          "trecho": "O objeto deste Edital é a seleção de propostas culturais exclusivamente apresentadas por agentes culturais, pessoas jurídicas do setor cultural que se enquadrem nos requisitos para",
-          "oficial": true,
+          "valor": "nacional",
+          "trecho": "patrimônio cultural brasileiro",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Ministério da Cultura",
+      "financiador": "IPHAN",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "parceiro"
       ]
     }
   ],
