@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T08:14:59+00:00",
+  "em": "2026-10-31T08:32:58+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T08:04:09+00:00",
+  "ultimo_voo": "2026-10-31T08:16:54+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,58 +48,79 @@
     },
     "estrelas_de_ouro": 9,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.1
+    "tempo_medio_min": 15.2
   },
   "missoes": [
     {
-      "em": "2026-10-31T08:04:09+00:00",
+      "em": "2026-10-31T08:16:54+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás publica cronograma do edital de apoio a blocos de … — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 1,
-      "dispensados": 0,
+      "alvo": "MPF em Goiás cadastra entidades e órgãos públicos para recebimento de bens e valores decorrentes da atuação da… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 7,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
+      "pagina_oficial": "https://biblioteca.mpf.mp.br/server/api/core/bitstreams/f0a50f1b-b873-482a-b98b-52d48e4b5d65/content",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona anexos, o que indica que há uma publicação oficial relacionada ao edital, mesmo que alguns dados não sejam explicitados.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar os anexos publicados pela Secretaria de Estado da Cultura (Secult) para obter informações detalhadas sobre o edital, como requisitos, área de atuação e outros critérios de elegibilidade.",
-        "proximo_passo": "Consultar os anexos disponibilizados pela Secult para entender os critérios e procedimentos do edital.",
-        "risco": "A falta de informações claras sobre requisitos, prazos e outros detalhes pode dificultar o acesso ao edital e a elaboração de uma proposta adequada."
+        "por_que": "O texto comprova que o MPF em Goiás está cadastrando entidades e órgãos públicos para receber bens e valores decorrentes de instrumentos de autocomposição coletiva celebrados extrajudicialmente pelo Ministério Público Federal.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se cadastrar informando a área temática de sua atuação, que pode ser assistência social, cultura, educação ou esporte.",
+        "proximo_passo": "A associação deve se cadastrar no MPF em Goiás, informando a área temática de sua atuação.",
+        "risco": "A falta de informações sobre a área temática de atuação pode impedir o cadastro."
       },
       "erro": null,
-      "segundos": 608,
+      "segundos": 915,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-4b1d6a28a420",
-      "encontrou": {},
-      "financiador": "Secretaria de Estado da Cultura (Secult)",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-18e5c54444f0",
+      "encontrou": {
+        "Objeto": {
+          "valor": "cadastramento de pessoas jurídicas de direito privado sem fins lucrativos e de instituições, entidades e órgãos públicos interessados em receber bens e valores decorrentes de instrumento de autocomposição coletiva celebrado extrajudicialmente pelo Ministério Público Federal",
+          "trecho": "Regulamenta o cadastramento de pessoas jurídicas de direito privado sem fins lucrativos e de instituições, entidades e órgãos públicos federais, estaduais, distritais ou municipais",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Ministério Público Federal",
+          "trecho": "MINISTÉRIO PÚBLICO FEDERAL",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Ministério Público Federal",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "dispensado — O texto menciona que os interessados devem informar a área temática de sua atuação.",
+          "trecho": "informar, sempre que possível, a área temática de sua atuação",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Requisitos": {
+          "valor": "informar, sempre que possível, a área temática de sua atuação",
+          "trecho": "§ 3º No ato do cadastramento, os interessados devem informar, sempre que possível, a área temática de sua atuação.",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "MINISTÉRIO PÚBLICO FEDERAL",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
