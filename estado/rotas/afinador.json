@@ -1072,7 +1072,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-31T14:16:52+00:00",
+  "em": "2026-10-31T15:47:58+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -4370,7 +4370,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-229": {
-  "em": "2026-10-31T05:08:11+00:00",
+  "em": "2026-10-31T15:47:54+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -4382,6 +4382,17 @@
     "links": 21,
     "sinais": 0,
     "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutovotorantim.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
     "erro": null,
     "funcionou": false
    },
@@ -4415,17 +4426,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutovotorantim.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "json",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -7634,13 +7634,24 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-212": {
-  "em": "2026-10-31T03:37:52+00:00",
-  "testes": 12,
+  "em": "2026-10-31T15:47:34+00:00",
+  "testes": 13,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://www.tcm.go.gov.br/",
     "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tcm.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -7671,18 +7682,17 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tcm.go.gov.br/transparencia/editais",
+    "url": "https://www.tcm.go.gov.br/sitemap.xml",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "RuntimeError",
     "funcionou": false
    },
    {
-    "url": "https://www.tcm.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.tcm.go.gov.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7963,8 +7973,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-243": {
-  "em": "2026-10-31T05:07:05+00:00",
-  "testes": 13,
+  "em": "2026-10-31T15:47:38+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -7979,7 +7989,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.worldbank.org/feed",
+    "url": "https://www.worldbank.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7991,11 +8001,11 @@
    {
     "url": "https://www.worldbank.org/feed",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -8011,16 +8021,6 @@
    },
    {
     "url": "https://www.worldbank.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.worldbank.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9513,7 +9513,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-258": {
-  "em": "2026-10-31T03:37:43+00:00",
+  "em": "2026-10-31T15:47:20+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://skoll.org/feed",
@@ -9546,6 +9546,17 @@
     "funcionou": false
    },
    {
+    "url": "https://skoll.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://skoll.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -9562,17 +9573,6 @@
     "via": "direto",
     "pontos": 1,
     "links": 105,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://skoll.org/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -9795,8 +9795,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-245": {
-  "em": "2026-10-31T06:39:04+00:00",
-  "testes": 13,
+  "em": "2026-10-31T15:47:57+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -9810,13 +9810,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.usaid.gov/",
-    "origem": "rota original",
-    "via": "ponte",
+    "url": "https://www.usaid.gov/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -9841,16 +9841,6 @@
    },
    {
     "url": "https://www.usaid.gov/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.usaid.gov/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -12847,13 +12837,33 @@
   "resultado": "rota nova em teste"
  },
  "judiciario-cnj-tjgo": {
-  "em": "2026-10-31T05:08:14+00:00",
+  "em": "2026-10-31T15:47:57+00:00",
   "testes": 16,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://www.tjgo.jus.br",
     "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://corregedoria.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -12922,26 +12932,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://corregedoria.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.tjgo.jus.br/edital",
     "origem": "padrão",
     "via": "direto",
@@ -12962,17 +12952,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/images/docs/CCS/editalitaberai.pdf",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.tjgo.jus.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -12990,6 +12969,17 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/images/docs/CCS/editalitaberai.pdf",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
