@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T05:46:29+00:00",
+  "em": "2026-10-31T05:57:33+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T05:32:27+00:00",
+  "ultimo_voo": "2026-10-31T05:48:29+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,70 +48,83 @@
     },
     "estrelas_de_ouro": 9,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.5
+    "tempo_medio_min": 8.4
   },
   "missoes": [
     {
-      "em": "2026-10-31T05:32:27+00:00",
+      "em": "2026-10-31T05:48:29+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás destina R$ 2 milhões em edital emergencial para so… — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 4,
+      "alvo": "Senador Canedo — Edital nº03/2024 – Fomento — Goiás / Senador Canedo",
+      "qualidade": "parcial",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/03/ANEXO-I-Edital-de-Infancia-e-Cultura.pdf",
+      "pagina_oficial": "https://senadorcanedo.go.gov.br/edital-no03-2024-fomento/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado descreve o objeto, requisitos, anexos e área de atuação do edital, o que é suficiente para identificar as informações necessárias.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa incluir em sua descrição e no formulário de inscrição um conjunto de atividades relacionadas à criação, produção, ensaio, e as ações/atividades a serem realizadas devem acontecer durante o tempo de máximo 12 meses. Além disso, deve anexar os documentos exigidos.",
-        "proximo_passo": "Verificar os anexos necessários e preparar a documentação para inscrição no edital.",
-        "risco": "A falta de informações sobre o prazo de inscrição e outros detalhes pode impedir o acesso ao edital."
+        "por_que": "O edital foi comprovado com informações sobre objeto, valor, órgão financiador, território, esfera, requisitos, anexos e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria atuar ou residir no Município de Senador Canedo há pelo menos 3 (três) anos, ou comprovar a atuação em Senador Canedo caso seja um projeto iniciante (menos de 3 anos).",
+        "proximo_passo": "Verificar os anexos do edital e preparar a documentação necessária para submissão do projeto.",
+        "risco": "A falta de informações sobre o prazo de inscrição pode impedir a associação de se inscrever no edital a tempo."
       },
       "erro": null,
-      "segundos": 809,
+      "segundos": 507,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 3,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-22bd62602e2e",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
+      "id": "op-9ee790ad4a44",
       "encontrou": {
         "Objeto": {
-          "valor": "selecionar e apoiar projetos culturais voltados ao público da infância e da juventude, promovendo o acesso de crianças e adolescentes a experiências artísticas e culturais qualificadas",
-          "trecho": "O presente edital tem por objeto selecionar e apoiar projetos culturais voltados ao público da infância e da juventude, promovendo o acesso de crianças e adolescentes a experiência",
+          "valor": "seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I",
+          "trecho": "2.1.1 O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas d",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 517.000,00 (Quinhentos e dezessete mil reais)",
+          "trecho": "2.3.2 O valor total deste edital é de R$ 517.000,00 (Quinhentos e dezessete mil reais)",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria Municipal de Cultura",
+          "trecho": "Deste modo, a Secretaria Municipal de Cultura torna público o presente edital elaborado com base na Lei nº 14.399/2022 (Lei PNAB), no Decreto nº 11.740/2023 (Decreto PNAB), no Decr",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "2.1.1 O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas d",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "O presente edital tem por objeto selecionar e apoiar projetos culturais voltados ao público da infância e da juventude, promovendo o acesso de crianças e adolescentes a experiência",
+          "trecho": "2.1.1 O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas d",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "Incluir em sua descrição e no formulário de inscrição um conjunto de atividades relacionadas à criação, produção, ensaio, As ações/atividades a serem realizadas devem acontecer durante o tempo de máximo 12 meses., Contrapartida: Grupos, companhias, coletivos ou núcleos artísticos aprovados neste edi",
-          "trecho": "Ao inscrever o projeto na CATEGORIA A, no momento de preenchimento do formulário na PLATAFORMA BARU, você deve considerar as regras e itens obrigatórios abaixo listados. Toda a con",
+          "valor": "atuar ou residir no Município de Senador Canedo há pelo menos 3 (três) anos, projetos iniciantes (menos de 3 anos) poderão concorrer desde que comprovem a atuação em Senador Canedo (Documentação e ",
+          "trecho": "2.5.1 Pode se inscrever no Edital qualquer agente cultural que atua ou reside no Município de Senador Canedo há pelo menos 3 (três) anos. 2.5.1.1 Projetos iniciantes (menos de 3 an",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura (Secult) - Governo de Goiás",
+      "financiador": "Prefeitura Municipal de Senador Canedo",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador"
       ]
     }
   ],
