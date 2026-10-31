@@ -1,5 +1,5 @@
 {
- "em": "2026-10-31T12:43:19+00:00",
+ "em": "2026-10-31T14:14:19+00:00",
  "conselho": [
   {
    "id": "falso_verde",
@@ -49,14 +49,15 @@
   "motores_com_falha": 128,
   "falhas_por_tipo": {
    "RUÍDO": 23,
+   "ESTRANGULADO": 1,
    "CEGO": 59,
    "SILÊNCIO LONGO": 42,
+   "CUSTO SEM RETORNO": 2,
    "PÁGINA VAZIA": 9,
    "INTERMITENTE": 4,
    "VAZAMENTO": 33,
    "CADÊNCIA FORA DO RITMO": 1,
-   "CONGELADO": 27,
-   "CUSTO SEM RETORNO": 1
+   "CONGELADO": 27
   }
  },
  "cobertura": {
@@ -312,12 +313,12 @@
     {
      "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261029_000008894.pdf",
      "http": 200,
-     "bytes": 1005543
+     "bytes": 22622
     },
     {
-     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261029_000008894.pdf",
+     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261028_000008893.pdf",
      "http": 200,
-     "bytes": 972048
+     "bytes": 19597
     }
    ],
    "achados_total": 2,
@@ -337,12 +338,12 @@
     {
      "url": "https://diariooficial.abc.go.gov.br",
      "http": 200,
-     "bytes": 313
+     "bytes": 284
     }
    ],
    "achados_total": 26,
    "valor": "ruído",
-   "achados_30d": 107,
+   "achados_30d": 96,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -362,11 +363,14 @@
    "tipo": "diario_oficial",
    "saude": [
     {
-     "url": "https://www.in.gov.br/leiturajornal?data=30-10-2026&secao=do3",
-     "erro": "edicao_nao_lida",
-     "code": null,
-     "waf": null,
-     "causa": "a Leitura do Jornal respondeu sem matérias em dia útil"
+     "url": "https://www.in.gov.br/leiturajornal?data=31-10-2026&secao=do1",
+     "http": 200,
+     "bytes": 0
+    },
+    {
+     "url": "https://www.in.gov.br/leiturajornal?data=31-10-2026&secao=do3",
+     "http": 200,
+     "bytes": 0
     }
    ],
    "achados_total": 29,
@@ -378,6 +382,12 @@
     "dia_forte": "sexta"
    },
    "falhas": [
+    {
+     "conselheiro": "falso_verde",
+     "falha": "ESTRANGULADO",
+     "prova": "viu 2869 links e nenhum virou candidato",
+     "melhoria": "o filtro de candidatos está estreito demais: incluir termos de chamamento/edital da fonte e seguir PDFs"
+    },
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
@@ -419,7 +429,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "97 leituras vazias seguidas",
+     "prova": "98 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -431,7 +441,7 @@
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
-     "bytes": 217580,
+     "bytes": 148133,
      "itens": 0
     },
     {
@@ -459,8 +469,14 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "145 leituras vazias seguidas",
+     "prova": "146 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
+    },
+    {
+     "conselheiro": "redundancia",
+     "falha": "CUSTO SEM RETORNO",
+     "prova": "188 s na última leitura sem achado",
+     "melhoria": "reduzir páginas por leitura ou a cadência; transferir o tempo para motores que rendem"
     }
    ]
   },
@@ -524,7 +540,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "90 leituras vazias seguidas",
+     "prova": "91 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -1979,7 +1995,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 17 dias",
+     "prova": "o mesmo achado repetido em 18 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     },
     {
@@ -2001,14 +2017,14 @@
    "tipo": "plataforma",
    "saude": [
     {
+     "url": "https://captadores.org.br/transparencia",
+     "http": 200,
+     "bytes": 120416
+    },
+    {
      "url": "https://captadores.org.br/editais/",
      "http": 200,
      "bytes": 138719
-    },
-    {
-     "url": "https://www.alcoa.com/brasil/pt/institute/local-project-support-program",
-     "http": 200,
-     "bytes": 48553
     }
    ],
    "achados_total": 67,
@@ -2448,7 +2464,7 @@
     {
      "url": "https://html.duckduckgo.com/html/?q=edital+organiza%C3%A7%C3%B5es+da+sociedade+civil+2026",
      "http": 200,
-     "bytes": 37831
+     "bytes": 38572
     },
     {
      "url": "https://html.duckduckgo.com/html/?q=",
@@ -2456,9 +2472,9 @@
      "bytes": 3108
     }
    ],
-   "achados_total": 259,
+   "achados_total": 262,
    "valor": "ouro",
-   "achados_30d": 653,
+   "achados_30d": 637,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -2468,7 +2484,7 @@
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "259 achados e nenhuma oportunidade confirmada",
+     "prova": "262 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -2505,8 +2521,8 @@
     {
      "url": "https://www.cnj.jus.br/",
      "http": 200,
-     "bytes": 1079574,
-     "itens": 32
+     "bytes": 1623050,
+     "itens": 48
     }
    ],
    "achados_total": 1,
@@ -2521,7 +2537,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "38 leituras vazias seguidas",
+     "prova": "39 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -2533,7 +2549,7 @@
     {
      "url": "https://www.congressonacional.leg.br",
      "http": 200,
-     "bytes": 146218,
+     "bytes": 146217,
      "itens": 11
     },
     {
@@ -2555,13 +2571,13 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CEGO",
-     "prova": "respondeu 200 em 27 de 27 dias e não achou nada em 30 dias",
+     "prova": "respondeu 200 em 28 de 28 dias e não achou nada em 30 dias",
      "melhoria": "conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)"
     },
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "98 leituras vazias seguidas",
+     "prova": "99 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -4056,7 +4072,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "78 leituras vazias seguidas",
+     "prova": "79 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -4489,14 +4505,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://buscarlicitacao.com.br/licitacoes/cidade/sao-jose-do-vale-do-rio-preto/3252",
+     "url": "https://fapes.es.gov.br/Media/fapes/Editais/Ed.%2022.2026%20PROFIX-CB%20-%201%20Altera%C3%A7%C3%A3o%20-%20Publicada.pdf",
      "http": 200,
-     "bytes": 101844
+     "bytes": 783225
     },
     {
-     "url": "https://institutomattosfilho.org/desafio-de-acesso-a-justica/",
+     "url": "https://oakfnd.org/",
      "http": 200,
-     "bytes": 235468
+     "bytes": 140949
     }
    ],
    "achados_total": 189,
@@ -4505,7 +4521,7 @@
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "domingo"
+    "dia_forte": "sábado"
    },
    "falhas": [
     {
@@ -4521,19 +4537,19 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://fundacaogrupoboticario.org.br/etapa-de-inscricao-de-desafios-para-teia-esta-encerrada/",
+     "url": "https://www.licitario.com.br",
      "http": 200,
-     "bytes": 116310
+     "bytes": 222355
     },
     {
-     "url": "https://institutogenesio.org.br/wp-content/uploads/2026/10/Edital-Nao-Incentivado-Instituto-Genesio-A-Mendes-2026.pdf?utm_source=Link+da+Bio+do+RD+Station&utm_medium=social&utm_campaign=CTA+no+Link+da+Bio",
+     "url": "https://www.fondationfrancoisschneider.org/concours-talents-contemporains/concours-talents-contemporains-leau-wattwiller/",
      "http": 200,
-     "bytes": 2367530
+     "bytes": 56941
     }
    ],
-   "achados_total": 22,
+   "achados_total": 25,
    "valor": "ruído",
-   "achados_30d": 9,
+   "achados_30d": 12,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -4543,7 +4559,7 @@
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "22 achados e nenhuma oportunidade confirmada",
+     "prova": "25 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -4553,9 +4569,9 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.fcw.org.br/publicacoes",
+     "url": "https://www.portoitapoa.com/premiacoes/certificacoes",
      "http": 200,
-     "bytes": 961267
+     "bytes": 263465
     },
     {
      "url": "https://goiasemcena.com.br/prefeitura-de-goiania-chamamento-publico-para-selecao-de-instituicoes-de-permanencia-e-casa-lar-para-idosos/",
@@ -4591,19 +4607,19 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.grancursosonline.com.br/assinatura-ilimitada",
-     "http": 200,
-     "bytes": 1003475
-    },
-    {
      "url": "https://oncoguia.org.br/conteudo/programa-de-apoio-a-projetos-de-equidade-racial-no-cancer/17871/1424/",
      "http": 200,
      "bytes": 68028
+    },
+    {
+     "url": "https://www.fordfoundation.org/",
+     "http": 200,
+     "bytes": 171461
     }
    ],
-   "achados_total": 69,
+   "achados_total": 72,
    "valor": "ouro",
-   "achados_30d": 25,
+   "achados_30d": 28,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -4613,7 +4629,7 @@
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "69 achados e nenhuma oportunidade confirmada",
+     "prova": "72 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -4628,9 +4644,9 @@
      "bytes": 218101
     },
     {
-     "url": "https://cruzandohistorias.org",
+     "url": "https://institutocactus.org.br/inscricoes-abertas-para-o-laboratorio-de-projetos-2026/",
      "http": 200,
-     "bytes": 2260564
+     "bytes": 79273
     }
    ],
    "achados_total": 46,
@@ -4661,19 +4677,19 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://shop.aestheticamagazine.com/products/aesthetica-art-prize-entry",
+     "url": "https://dopaonlineupload.procempa.com.br/dopaonlineupload/5970_ce_601372_1.pdf",
      "http": 200,
-     "bytes": 347557
+     "bytes": 187825
     },
     {
-     "url": "https://www.microsoft.com/pt-br/corporate-responsibility/philanthropies",
+     "url": "https://www.gravatai.ifsul.edu.br/editais-e-projetos/item/305-edital-n-03-2026-chamamento-publico-programa-coleta-seletiva-cidada-selecao-de-associacoes-e-cooperativas-de-catadores-de-materiais-reciclaveis-e-reutilizaveis",
      "http": 200,
-     "bytes": 205586
+     "bytes": 37269
     }
    ],
-   "achados_total": 99,
+   "achados_total": 110,
    "valor": "ruído",
-   "achados_30d": 1,
+   "achados_30d": 12,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -4683,13 +4699,13 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 10 dias",
+     "prova": "o mesmo achado repetido em 11 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     },
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "99 achados e nenhuma oportunidade confirmada",
+     "prova": "110 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -4765,14 +4781,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://comitedeculturasc.org/editais",
+     "url": "https://lithoralnews.com.br/itajai-em-tracos-abre-inscricoes-para-concurso-de-artes-visuais/",
      "http": 200,
-     "bytes": 170032
+     "bytes": 190099
     },
     {
-     "url": "https://www.agenciadobem.org.br/inscricoes-abertas-para-o-vi-edital-de-microprojetos-da-rede-do-bem/",
+     "url": "https://comitedeculturasc.org/editais",
      "http": 200,
-     "bytes": 128726
+     "bytes": 169829
     }
    ],
    "achados_total": 35,
@@ -4803,14 +4819,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://coregov.com.br/produtos/calendario-centro-oeste.html",
+     "url": "https://cantodaprimavera.cultura.go.gov.br/",
      "http": 200,
-     "bytes": 49808
+     "bytes": 45377
     },
     {
-     "url": "https://premio.finep.gov.br/images/chamadas-publicas/2026/12_03_2026_TA_Regulamento.pdf",
+     "url": "https://www.institutodonanenembrz.com/edital-2026",
      "http": 200,
-     "bytes": 259509
+     "bytes": 533586
     }
    ],
    "achados_total": 3,
@@ -4900,7 +4916,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 5 dias",
+     "prova": "o mesmo achado repetido em 6 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     },
     {
