@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T21:10:17+00:00",
+  "em": "2026-10-31T21:25:22+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T20:56:59+00:00",
+  "ultimo_voo": "2026-10-31T21:12:22+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,8 +38,8 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
-    "parciais": 1,
+    "validadas": 1,
+    "parciais": 0,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
@@ -47,75 +47,99 @@
       "sim": 1
     },
     "estrelas_de_ouro": 10,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.5
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 12.2
   },
   "missoes": [
     {
-      "em": "2026-10-31T20:56:59+00:00",
+      "em": "2026-10-31T21:12:22+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa",
-      "alvo": "https://investidor.bussolasocial.com.br/petrobras/editais/habilitacao-cadastro-petrobras",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "Acesse aqui.",
+      "qualidade": "validada",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://petrobras.com.br/documents/d/f3a44542-113e-11ee-be56-0242ac120002/edital_abertura_psp_2023-2",
+      "pagina_oficial": "https://cdn.teatrinetv.com.br/upload/dn_arquivo/2025/11/ambev-brasilidades2026-regulamento-1.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O link fornecido descreve um edital de habilitação e cadastro para o cargo de profissional Petrobras de nível técnico junior, com informações sobre objeto, órgão financiador, território e esfera.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital se aplica a sua área de atuação e, caso sim, preencher os requisitos e anexos mencionados para se candidatar.",
-        "proximo_passo": "Consultar o edital completo para entender os requisitos e anexos necessários e verificar se a associação comunitária se enquadra no âmbito de atuação do edital.",
-        "risco": "O edital não menciona áreas de atuação específicas, o que pode impedir que a associação comunitária identifique se o edital se aplica a suas atividades."
+        "por_que": "O texto comprovado menciona diretamente o objeto, valor, prazo de inscrição, financiador, território, esfera, requisitos e área de atuação, sendo uma fonte válida para a análise.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto de cultura ou esporte, preencher o documento de intenção de patrocínio e anexar os documentos exigidos para habilitação.",
+        "proximo_passo": "Consultar o edital completo para verificar os requisitos específicos e o prazo de inscrição, além de preparar o projeto conforme o objeto do edital.",
+        "risco": "O prazo de inscrição não foi encontrado no texto comprovado, o que pode impedir a associação de se inscrever no prazo correto."
       },
       "erro": null,
-      "segundos": 749,
+      "segundos": 733,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "b7df125765c20f71b217",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 9,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "284a5058dbf66d8f9797",
       "encontrou": {
         "Objeto": {
-          "valor": "preencher vagas e formar cadastro para o cargo de profissional Petrobras de nível técnico junior",
-          "trecho": "PETROBRAS realizará processo seletivo público para provimento de vagas e formação de cadastro, mediante condições estabelecidas neste edital.",
+          "valor": "projetos de cultura e esporte",
+          "trecho": "Projetos de Cultura e Esporte",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "? a 2026-09-30",
+          "trecho": "as inscrições são gratuitas e serão recebidas até 30/09/2026",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 67.000.000,00",
+          "trecho": "Serão disponibilizados até R$ 67.000.000,00 (sessenta e sete milhões de reais)",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "PETRÓLEO BRASILEIRO S.A. – PETROBRAS",
-          "trecho": "PETRÓLEO BRASILEIRO S.A. (PETROBRAS) realizará processo seletivo público para provimento de vagas e formação de cadastro, mediante condições estabelecidas neste edital.",
+          "valor": "Ambev",
+          "trecho": "AMBEV - Edital Brasilidades 2026 | Regulamento_v1.0",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "nacional",
-          "trecho": "As provas objetivas e os procedimentos previstos nos subitens 3.1.11 e 3.2.6 deste edital serão realizados em cidades de provas vinculadas a cada um dos polos de trabalho correspon",
+          "trecho": "de todo Brasil",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "Projetos de Cultura e Esporte",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "requisitos, síntese de atribuições, remuneração",
-          "trecho": "As ênfases, o quantitativo de vagas e de cadastro de reserva, os requisitos, a síntese de atribuições e a remuneração estão estabelecidos nos Anexos I, II e III deste edital.",
+          "valor": "Documento de Intenção de patrocínio na habilitação",
+          "trecho": "*Poderão ser inscritos neste Edital projetos referentes às Leis Estaduais que exigem apresentação do Documento de Intenção de patrocínio na habilitação",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "PETROBRAS",
-      "indicios": [],
+      "financiador": "Google",
+      "indicios": [
+        {
+          "url": "https://drive.google.com/drive/folders/1NqknMHq1R5dsvFcVdD9HQeasIoJju0Ct?usp=sharing",
+          "tipo": "buscador"
+        }
+      ],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
