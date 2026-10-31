@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T07:04:48+00:00",
+  "em": "2026-10-31T07:24:15+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T06:50:03+00:00",
+  "ultimo_voo": "2026-10-31T07:07:19+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,65 +48,78 @@
     },
     "estrelas_de_ouro": 9,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.1
+    "tempo_medio_min": 16.2
   },
   "missoes": [
     {
-      "em": "2026-10-31T06:50:03+00:00",
+      "em": "2026-10-31T07:07:19+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Secretaria de Estado da Cultura (Secult) — Secult Goiás publica novo Chamamento Público para apoio na execução… — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "Senador Canedo — Edital nº 005/2024 – 2ª Convocação, referente à Lei Aldir Blanc — Goiás / Senador Canedo",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": "https://goias.gov.br/cultura/canto-da-primavera-2025-abre-inscricoes-para-novo-edital-de-shows-de-musica-instrumental/",
+      "pagina_oficial": "https://senadorcanedo.go.gov.br/edital-no-005-2024-2a-convocacao-referente-a-lei-aldir-blanc/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O órgão financiador é a Secretaria de Estado da Cultura (Secult) – Secult Goiás, que atua no estado de Goiás.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o Chamamento Público está alinhado com suas atividades em assistência social, cultura, educação ou esporte, e se enquadrar nos requisitos gerais do edital, mesmo que não estejam explicitados.",
-        "proximo_passo": "Consultar o site oficial da Secult Goiás para obter informações detalhadas sobre o Chamamento Público, como objeto, prazos e requisitos.",
-        "risco": "A falta de informações específicas como prazo de inscrição, requisitos e área de atuação pode dificultar o acesso e a elaboração da proposta."
+        "por_que": "O edital foi comprovado com informações sobre o objeto, órgão financiador, território, esfera, requisitos e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se enquadrar na área de cultura, reunir as pessoas físicas que compõem a direção da entidade ou da equipe do projeto e se submeter aos regramentos estabelecidos no edital, além de anexar os documentos necessários conforme os anexos mencionados.",
+        "proximo_passo": "Verificar os requisitos e anexos do edital para se preparar a candidatura.",
+        "risco": "A falta de informações sobre o prazo de inscrição e outros detalhes pode impedir a participação no edital."
       },
       "erro": null,
-      "segundos": 844,
+      "segundos": 973,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 3,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-246bfd02fd39",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-e65e3a0ff3cf",
       "encontrou": {
+        "Objeto": {
+          "valor": "Fomento a projetos continuados de pontos de cultura",
+          "trecho": "FOMENTO A PROJETOS CONTINUADOS DE PONTOS DE CULTURA",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura (Secult) – Secult Goiás",
-          "trecho": "Secretaria de Estado da Cultura (Secult) – Secult Goiás",
+          "valor": "REDE MUNICIPAL DE PONTOS DE CULTURA DE SENADOR CANEDO - GO",
+          "trecho": "REDE MUNICIPAL DE PONTOS DE CULTURA DE SENADOR CANEDO - GO",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Secretaria de Estado da Cultura (Secult) – Secult Goiás",
+          "trecho": "SENADOR CANEDO - GO",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "FOMENTO A PROJETOS CONTINUADOS DE PONTOS DE CULTURA",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "As entidades culturais que optarem por concorrer às cotas concorrerão concomitantemente às vagas destinadas à ampla conc, As pessoas físicas que compõem a direção da entidade proponente ou da equipe do projeto devem se submeter aos regramento",
+          "trecho": "As entidades culturais que optarem por concorrer às cotas concorrerão concomitantemente às vagas destinadas à ampla concorrência, ou seja, concorrerão ao mesmo tempo nas vagas da a",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura (Secult)",
+      "financiador": "Prefeitura Municipal de Senador Canedo",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador"
       ]
     }
   ],
