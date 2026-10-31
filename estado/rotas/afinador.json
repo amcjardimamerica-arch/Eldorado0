@@ -118,7 +118,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "dj-trf1-go": {
-  "em": "2026-10-31T02:04:10+00:00",
+  "em": "2026-10-31T12:44:38+00:00",
   "testes": 14,
   "melhor": {
    "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
@@ -151,7 +151,7 @@
     "funcionou": true
    },
    {
-    "url": "https://www.trf1.jus.br/feed",
+    "url": "https://www.trf1.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -161,7 +161,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/transparencia/editais",
+    "url": "https://www.trf1.jus.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -181,7 +181,17 @@
     "funcionou": false
    },
    {
-    "url": "https://www.trf1.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.trf1.jus.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.trf1.jus.br/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -198,16 +208,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "InvalidURL",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.trf1.jus.br/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -274,13 +274,13 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-196": {
-  "em": "2026-10-31T00:34:48+00:00",
+  "em": "2026-10-31T12:44:15+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
    "via": "direto",
    "origem": "rota original",
-   "pontos": 13,
+   "pontos": 11,
    "formato": "html"
   },
   "detalhe": [
@@ -288,20 +288,20 @@
     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/transparencia/bens-para-doacao",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 7,
-    "links": 414,
-    "sinais": 3,
+    "pontos": 1,
+    "links": 56,
+    "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": true
+    "funcionou": false
    },
    {
     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/mpf-em-goias-cadastra-entidades-e-orgaos-publicos-para-recebimento-bens-e-valores-decorrentes-da-atuacao-da-instituicao",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 7,
-    "links": 404,
-    "sinais": 3,
+    "pontos": 3,
+    "links": 37,
+    "sinais": 1,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -310,9 +310,9 @@
     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 13,
-    "links": 404,
-    "sinais": 6,
+    "pontos": 11,
+    "links": 38,
+    "sinais": 5,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -332,20 +332,20 @@
     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/mpf-divulga-lista-de-instituicoes-selecionadas-para-receber-bens-doados",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 5,
-    "links": 404,
-    "sinais": 2,
+    "pontos": 1,
+    "links": 36,
+    "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": true
+    "funcionou": false
    },
    {
     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-ba/destinacao-de-bens-e-valores",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 13,
-    "links": 418,
-    "sinais": 6,
+    "pontos": 9,
+    "links": 52,
+    "sinais": 4,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -354,12 +354,11 @@
     "url": "https://www.mpf.mp.br/atuacao/ccr4/normas/copy_of_portarias/portarias-2024/Portaria10972024PGRMPF.pdf/view",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 5,
-    "links": 408,
-    "sinais": 2,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
    },
    {
     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-se/destinacao-de-bens-e-valores/portaria-prse-145-2025-autoriza-chamamento-publico-destinacao-de-bens-e-valores-assinada.pdf/view",
@@ -376,12 +375,12 @@
     "url": "https://www.mpf.mp.br/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 7,
-    "links": 417,
-    "sinais": 3,
+    "pontos": 1,
+    "links": 77,
+    "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": true
+    "funcionou": false
    },
    {
     "url": "https://www.mpf.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
@@ -1073,7 +1072,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-31T11:17:33+00:00",
+  "em": "2026-10-31T12:44:38+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -8368,7 +8367,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-244": {
-  "em": "2026-10-31T00:34:58+00:00",
+  "em": "2026-10-31T12:44:24+00:00",
   "testes": 13,
   "melhor": {
    "url": "https://www.iadb.org/sitemap.xml",
@@ -8401,14 +8400,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/pt-br/como-podemos-trabalhar-juntos/chamada-para-propostas",
-    "origem": "biblioteca",
+    "url": "https://www.iadb.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 53,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -8422,17 +8420,18 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/transparencia/editais",
-    "origem": "padrão",
+    "url": "https://www.iadb.org/pt-br/como-podemos-trabalhar-juntos/chamada-para-propostas",
+    "origem": "biblioteca",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
+    "pontos": 1,
+    "links": 53,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.iadb.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11226,8 +11225,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-011": {
-  "em": "2026-10-31T00:34:37+00:00",
-  "testes": 14,
+  "em": "2026-10-31T12:44:02+00:00",
+  "testes": 15,
   "melhor": {
    "url": "https://mariaemilia.org.br/feed",
    "via": "direto",
@@ -11310,6 +11309,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
     "funcionou": false
    },
    {
@@ -11506,8 +11515,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-www-detran-rj-gov-br": {
-  "em": "2026-10-31T02:04:08+00:00",
-  "testes": 13,
+  "em": "2026-10-31T12:44:36+00:00",
+  "testes": 12,
   "melhor": {
    "url": "https://www.detran.rj.gov.br/sitemap.xml",
    "via": "direto",
@@ -11539,7 +11548,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.detran.rj.gov.br/feed",
+    "url": "https://www.detran.rj.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11551,25 +11560,15 @@
    {
     "url": "https://www.detran.rj.gov.br/feed",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
     "url": "https://www.detran.rj.gov.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.detran.rj.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -13743,8 +13742,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-232": {
-  "em": "2026-10-31T00:34:25+00:00",
-  "testes": 12,
+  "em": "2026-10-31T12:43:48+00:00",
+  "testes": 23,
   "melhor": null,
   "detalhe": [
    {
@@ -13769,6 +13768,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutoneoenergia.org.br/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutoneoenergia.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -13776,6 +13785,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -13789,6 +13808,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutoneoenergia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutoneoenergia.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -13796,6 +13825,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -13809,6 +13848,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutoneoenergia.org.br/edital",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutoneoenergia.org.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -13816,6 +13865,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutoneoenergia.org.br/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -13829,37 +13888,17 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutoneoenergia.org.br/noticias",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutoneoenergia.org.br/chamamento-publico",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutoneoenergia.org.br/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutoneoenergia.org.br/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutoneoenergia.org.br/licitacoes",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
