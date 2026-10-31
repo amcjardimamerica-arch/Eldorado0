@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T18:52:44+00:00",
+  "em": "2026-10-31T19:07:11+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T18:34:10+00:00",
+  "ultimo_voo": "2026-10-31T18:54:25+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,73 +48,75 @@
     },
     "estrelas_de_ouro": 10,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 17.7
+    "tempo_medio_min": 12.0
   },
   "missoes": [
     {
-      "em": "2026-10-31T18:34:10+00:00",
+      "em": "2026-10-31T18:54:25+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Chamamento público publicado no Diário Oficial em 25/09/2026 — Goiás / Goiânia",
+      "alvo": "Estudantes, não percam o prazo! Inscrições para Jogos Interculturais 2026 podem ser feitas até 23 de outubro —… — Goiás",
       "qualidade": "insuficiente",
       "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/educacao/inscricoes-para-os-jogos-interculturais-2026-seguem-abertas-ate-23-de-outubro/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O chamamento público foi publicado no Diário Oficial em 25/09/2026 e tem como objeto atender às programações previstas no Anexo I deste Decreto, sendo financiado pela Prefeitura de Goiânia.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar o conteúdo do Anexo I para alinhar suas propostas às programações previstas, além de se certificar de que atende aos critérios de elegibilidade estabelecidos no edital, mesmo que não encontrados explicitamente.",
-        "proximo_passo": "Consultar o Anexo I do edital para entender as programações e preparar a proposta de acordo com os objetivos do chamamento público.",
-        "risco": "A falta de informações sobre prazo de inscrição, requisitos e área de atuação pode impedir a associação de se candidatar adequadamente ao edital."
+        "por_que": "O texto comprova a existência de inscrições para os Jogos Interculturais 2026 com prazo até 23 de outubro, sendo financiado pelo SEDUC no estado de Goiás.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no processo de seleção para os Jogos Interculturais 2026, demonstrando sua capacidade de atuar na área de educação e cultura.",
+        "proximo_passo": "Verificar os requisitos e anexos necessários para a inscrição, mesmo que não encontrados no texto, e entrar em contato com o SEDUC para obter mais informações.",
+        "risco": "O prazo de inscrição pode ser encerrado antes do previsto, ou a associação pode não atender aos requisitos não explicitados no texto."
       },
       "erro": null,
-      "segundos": 1064,
+      "segundos": 718,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 5,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-b6129b4007f2",
+      "id": "op-24aa76e0bbaa",
       "encontrou": {
         "Objeto": {
-          "valor": "atender às programações previstas no Anexo I deste Decreto",
-          "trecho": "Art. 1º Ficam abertos à Secretaria Municipal de Infraestrutura Urbana, dois créditos adicionais de natureza suplementar, no valor de R$ 4.253.257,53 (quatro milhões, duzentos e cin",
-          "oficial": false,
+          "valor": "Inscrições para os Jogos Interculturais 2026",
+          "trecho": "Inscrições para os Jogos Interculturais 2026 seguem abertas até 23 de outubro – SEDUC",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "? a 2026-10-23",
+          "trecho": "Inscrições para os Jogos Interculturais 2026 seguem abertas até 23 de outubro – SEDUC",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia",
-          "trecho": "PREFEITURA DE GOIÂNIA SECRETARIA MUNICIPAL DA CASA CIVIL",
-          "oficial": false,
+          "valor": "SEDUC",
+          "trecho": "Inscrições para os Jogos Interculturais 2026 seguem abertas até 23 de outubro – SEDUC",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "PREFEITURA DE GOIÂNIA SECRETARIA MUNICIPAL DA CASA CIVIL",
-          "oficial": false,
+          "trecho": "GOIAS.GOV.BR",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Goiânia",
+      "financiador": "Governo do Estado de Goiás",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
