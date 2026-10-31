@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T19:52:54+00:00",
+  "em": "2026-10-31T20:03:06+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T19:41:04+00:00",
+  "ultimo_voo": "2026-10-31T19:54:56+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,26 +39,26 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 10,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 11.3
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 7.6
   },
   "missoes": [
     {
-      "em": "2026-10-31T19:41:04+00:00",
+      "em": "2026-10-31T19:54:56+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "SECTI-GO (ciência e tecnologia) — Edital nº 002/2026 — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 4,
+      "de": "2 · Brasil · oportunidade do mapa",
+      "alvo": "Edital Paraná Festivais 2025",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -66,50 +66,55 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
-        "Requisitos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": "https://goiaspelainovacao.org.br/busca-chamadas-publicas",
+      "pagina_oficial": "https://mapacultural.secult.ce.gov.br/oportunidade/7166",
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital comprovado menciona o Objeto e o Território, o que é suficiente para identificar sua relevância para a associação comunitária de Goiânia.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria alinhar suas atividades às áreas de ciência e tecnologia, demonstrar como suas ações contribuem para a inovação e desenvolvimento tecnológico no Estado de Goiás, e seguir as orientações dos anexos mencionados.",
-        "proximo_passo": "Consultar os anexos do edital para entender melhor os requisitos e diretrizes específicas para a elaboração da proposta.",
-        "risco": "A falta de informações sobre prazo de inscrição e requisitos específicos pode dificultar a preparação da proposta dentro do tempo necessário."
+        "serve_como_fonte": "nao",
+        "por_que": "O edital mencionado é sobre o Paraná Festivais 2025, mas o COMPROVADO refere-se ao Edital do Município de Aracati, que não está relacionado ao Paraná Festivais 2025.",
+        "para_a_amc": "null",
+        "proximo_passo": "null",
+        "risco": "null"
       },
       "erro": null,
-      "segundos": 676,
+      "segundos": 458,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 4,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-4fc981efebe4",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "db92516f2ada948875ad",
       "encontrou": {
         "Objeto": {
-          "valor": "Captação de doações para fomento à inovação e desenvolvimento tecnológico no Estado de Goiás",
-          "trecho": "Edital Contínuo de Captação de Doações – Pacto Goiás pela Inovação",
+          "valor": "seleção fomento à agentes culturais, coletivos e/ou instituições, para receberem apoio financeiro nas categorias artística segmentadas conforme Item 2.2",
+          "trecho": "1.1. O objeto deste edital é a seleção fomento à agentes culturais, coletivos e/ou instituições, para receberem apoio financeiro nas categorias artística segmentadas conforme Item ",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Município de Aracati",
+          "trecho": "O Município de Aracati, inscrito no CNPJ sob o nº 07.684.756/0001-46, por meio da Secretaria Municipal de Cultura",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "Edital Contínuo de Captação de Doações – Pacto Goiás pela Inovação",
+          "valor": "CE",
+          "trecho": "No contexto dos editais de fomento cultural, no âmbito da Política Nacional Aldir Blanc — PNAB, proporciona recursos para que projetos e iniciativas culturais possam ser impulsiona",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "No contexto dos editais de fomento cultural, no âmbito da Política Nacional Aldir Blanc — PNAB, proporciona recursos para que projetos e iniciativas culturais possam ser impulsiona",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado de Ciência, Tecnologia e Inovação",
+      "financiador": "Secretaria da Cultura",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
