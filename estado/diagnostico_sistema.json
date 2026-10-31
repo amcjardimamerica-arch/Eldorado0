@@ -1,5 +1,5 @@
 {
- "em": "2026-10-31T12:49:33+00:00",
+ "em": "2026-10-31T13:05:31+00:00",
  "finalidade": {
   "sistemas": [
    {
@@ -107,12 +107,12 @@
     {
      "id": "plataforma-wordpress",
      "nome": "Adaptador WordPress — sites oficiais pela API pública",
-     "resultado": "falha — não lê há 13 dia(s) (317 h); última leitura 18/10 03:55"
+     "resultado": "falha — não lê há 13 dia(s) (318 h); última leitura 18/10 03:55"
     },
     {
      "id": "plataforma-mapas-culturais",
      "nome": "Adaptador Mapas Culturais — oportunidades com inscrição aberta",
-     "resultado": "falha — não lê há 13 dia(s) (317 h); última leitura 18/10 03:54"
+     "resultado": "falha — não lê há 13 dia(s) (318 h); última leitura 18/10 03:54"
     },
     {
      "id": "salic",
@@ -122,12 +122,12 @@
     {
      "id": "prefeituras-50-go",
      "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
-     "resultado": "falha — não lê há 13 dia(s) (317 h); última leitura 18/10 03:49"
+     "resultado": "falha — não lê há 13 dia(s) (318 h); última leitura 18/10 03:49"
     },
     {
      "id": "estaduais-go-gov",
      "nome": "Oportunidade Estaduais Governamentais de Goiás",
-     "resultado": "falha — não lê há 8 dia(s) (192 h); última leitura 23/10 08:58"
+     "resultado": "falha — não lê há 8 dia(s) (193 h); última leitura 23/10 08:58"
     },
     {
      "id": "site-cese",
@@ -135,14 +135,25 @@
      "resultado": "falha na leitura de 31/10 02:38"
     }
    ],
-   "leitura_parcial": [],
-   "status_em": "2026-10-31T09:49-03:00",
+   "leitura_parcial": [
+    {
+     "id": "camara-goiania-pl",
+     "nome": "Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos",
+     "resultado": "funcionando — última leitura 31/10 09:21 · sem oportunidade nova (atenção: 1 falha(s) na leitura: direto: HTTP Error 504: Gateway Time-out · pela ponte Brasil: HTTP 504 pela ponte)"
+    },
+    {
+     "id": "empresas-editais-incentivados",
+     "nome": "Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes",
+     "resultado": "funcionando — última leitura 31/10 09:40 · 23 achado(s) (atenção: 1 página(s) com falha; as demais foram lidas)"
+    }
+   ],
+   "status_em": "2026-10-31T10:05-03:00",
    "auditoria": {
-    "em": "2026-10-30T15:33:28+00:00",
+    "em": "2026-10-31T13:04:08+00:00",
     "total": 33,
     "por_estado": {
-     "BLOQUEADO": 5,
-     "PARADO": 5,
+     "BLOQUEADO": 4,
+     "PARADO": 6,
      "NUNCA RODOU": 0,
      "LENDO SEM ACHAR": 3,
      "FUNCIONANDO": 20
@@ -174,7 +185,7 @@
    "pendentes_provaveis_reais": 421
   },
   "cartorio": {
-   "em": "2026-10-31T11:25:52+00:00",
+   "em": "2026-10-31T12:54:17+00:00",
    "resumo": {
     "pontos_12_total": 4800,
     "pontos_certificados": 3019,
@@ -216,7 +227,7 @@
   "pilotos": {
    "interceptador": {
     "estado": "em atividade",
-    "ultimo_voo": "2026-10-31T12:31:40+00:00",
+    "ultimo_voo": "2026-10-31T12:49:09+00:00",
     "contagem": {
      "desde": "2026-10-26T03:00:00+00:00",
      "zerada_em": "2026-10-26T03:01:57+00:00",
@@ -225,13 +236,13 @@
     }
    },
    "espiao": {
-    "em": "2026-10-31T12:36:37+00:00",
-    "voos": 2014,
+    "em": "2026-10-31T12:55:04+00:00",
+    "voos": 2015,
     "empresas_novas": 320
    }
   },
   "saude": {
-   "em": "2026-10-30T15:33:04+00:00",
+   "em": "2026-10-31T13:03:43+00:00",
    "alertas": [
     {
      "area": "coerência",
@@ -243,7 +254,11 @@
     },
     {
      "area": "claude",
-     "texto": "242 item(ns) esperando a análise do Claude (próxima: 2026-10-30)"
+     "texto": "239 item(ns) esperando a análise do Claude (próxima: 2026-10-31)"
+    },
+    {
+     "area": "livros_do_sistema",
+     "texto": "2 livro(es) duplicado(s) no catálogo"
     },
     {
      "area": "publicação",
@@ -260,16 +275,16 @@
    ]
   },
   "auditoria_cega": {
-   "em": "2026-10-30T15:33:26+00:00",
+   "em": "2026-10-31T13:04:06+00:00",
    "taxa_de_perda": null,
    "sem_nada_na_base": 25
   },
   "fluxos_github": {
-   "total": 7,
+   "total": 8,
    "com_falha": []
   },
   "sala_controle": {
-   "em": "2026-10-31T12:49:14+00:00",
+   "em": "2026-10-31T13:05:12+00:00",
    "indice_saude": 53,
    "contagem": {
     "verde": 14,
@@ -325,13 +340,13 @@
   },
   "idade_horas": {
    "repositorio": 0.0,
-   "fluxo": 321.0,
+   "fluxo": 321.2,
    "fichas": 0.0,
    "sala_controle": 0.0,
    "status_motores": 0.0,
-   "maestro": 5.8,
-   "rede_neural": 321.0,
-   "saude": 21.3
+   "maestro": 6.1,
+   "rede_neural": 321.2,
+   "saude": 0.0
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -909,15 +924,15 @@
    "dia_fechado": false
   },
   "retentativa": {
-   "aguardando_retentativa": 1189,
-   "fora_da_fila": 120,
+   "aguardando_retentativa": 1183,
+   "fora_da_fila": 123,
    "fora_da_fila_por_escopo": {
     "outras-oportunidades-1": 8,
-    "outras-oportunidades-6": 5,
+    "outras-oportunidades-6": 6,
     "recorrencia": 4,
     "outras-oportunidades-5": 8,
     "outras-oportunidades-8": 9,
-    "outras-oportunidades-3": 10,
+    "outras-oportunidades-3": 11,
     "f260-captacao-044": 1,
     "outras-oportunidades-2": 4,
     "plat-empresas-editais-incentivados": 3,
@@ -931,7 +946,7 @@
     "f260-captacao-218": 1,
     "f260-captacao-113": 3,
     "outras-oportunidades-4": 1,
-    "f260-captacao-001": 1
+    "f260-captacao-001": 2
    },
    "regra": "volta em 30 min; sai após 5 tentativas com o mesmo erro"
   },
@@ -1067,7 +1082,7 @@
    "etapa": "biblioteca",
    "decisao": "livros da Biblioteca",
    "regra": "ato legislativo não gera livro",
-   "conferidos": 2796,
+   "conferidos": 2808,
    "incorretos": 0,
    "veredito": "correto",
    "exemplos": []
@@ -1077,7 +1092,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 299.2 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 299.5 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1134,7 +1149,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 13 dia(s) (317 h); última leitura 18/10 03:55",
+   "texto": "motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 13 dia(s) (318 h); última leitura 18/10 03:55",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1142,7 +1157,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 13 dia(s) (317 h); última leitura 18/10 03:54",
+   "texto": "motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 13 dia(s) (318 h); última leitura 18/10 03:54",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1158,7 +1173,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 13 dia(s) (317 h); última leitura 18/10 03:49",
+   "texto": "motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 13 dia(s) (318 h); última leitura 18/10 03:49",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1166,7 +1181,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 8 dia(s) (192 h); última leitura 23/10 08:58",
+   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 8 dia(s) (193 h); última leitura 23/10 08:58",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1202,7 +1217,7 @@
   {
    "codigo": "atrasado_fluxo",
    "gravidade": "media",
-   "texto": "fluxo sem atualização há 321.0 h (limite 3 h)",
+   "texto": "fluxo sem atualização há 321.2 h (limite 3 h)",
    "correcao": "refazer a tela",
    "quantidade": null,
    "exemplos": []
@@ -1210,7 +1225,7 @@
   {
    "codigo": "atrasado_maestro",
    "gravidade": "media",
-   "texto": "maestro sem atualização há 5.8 h (limite 3 h)",
+   "texto": "maestro sem atualização há 6.1 h (limite 3 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1218,7 +1233,7 @@
   {
    "codigo": "atrasado_rede_neural",
    "gravidade": "media",
-   "texto": "rede_neural sem atualização há 321.0 h (limite 26 h)",
+   "texto": "rede_neural sem atualização há 321.2 h (limite 26 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1243,7 +1258,7 @@
   {
    "codigo": "gabarito_desatualizado",
    "gravidade": "media",
-   "texto": "avaliação do Cartório com gabarito tem 376.9 h (semanal)",
+   "texto": "avaliação do Cartório com gabarito tem 377.2 h (semanal)",
    "correcao": "disparar o fluxo 39",
    "quantidade": null,
    "exemplos": []
@@ -1268,9 +1283,9 @@
   {
    "codigo": "pagina_fora_da_fila",
    "gravidade": "media",
-   "texto": "120 página(s)/documento(s) fora da fila após 5 erros iguais",
+   "texto": "123 página(s)/documento(s) fora da fila após 5 erros iguais",
    "correcao": "corrigir a rota ou ler no Chrome (sem correção automática)",
-   "quantidade": 120,
+   "quantidade": 123,
    "exemplos": [
     "https://www.boavista.rr.gov.br/",
     "https://tuifund.com/fo/2026-2027-grants-and-funding-opportunities-for-ngos-and-organizations/",
@@ -1285,7 +1300,7 @@
   {
    "codigo": "saude_claude",
    "gravidade": "media",
-   "texto": "saúde · claude: 242 item(ns) esperando a análise do Claude (próxima: 2026-10-30)",
+   "texto": "saúde · claude: 239 item(ns) esperando a análise do Claude (próxima: 2026-10-31)",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1302,6 +1317,14 @@
    "codigo": "saude_gerador",
    "gravidade": "media",
    "texto": "saúde · gerador: o gerador principal do painel falhou depois da última geração",
+   "correcao": "ver o fluxo/arquivo indicado",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "saude_livros_do_sistema",
+   "gravidade": "media",
+   "texto": "saúde · livros_do_sistema: 2 livro(es) duplicado(s) no catálogo",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1384,7 +1407,7 @@
  ],
  "contagem_problemas": {
   "alta": 14,
-  "media": 14,
+  "media": 15,
   "baixa": 2
  },
  "corrigiveis": [
