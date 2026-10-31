@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T06:32:34+00:00",
+  "em": "2026-10-31T06:47:40+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T06:17:26+00:00",
+  "ultimo_voo": "2026-10-31T06:34:31+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,83 +48,64 @@
     },
     "estrelas_de_ouro": 9,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.3
+    "tempo_medio_min": 12.3
   },
   "missoes": [
     {
-      "em": "2026-10-31T06:17:26+00:00",
+      "em": "2026-10-31T06:34:31+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Senador Canedo — Política Nacional Aldir Blanc – Edital nº04/2024 — Goiás / Senador Canedo",
-      "qualidade": "parcial",
-      "comprovados": 8,
+      "alvo": "Destinação de bens e valores - chamamento público — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 4,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Território",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://senadorcanedo.go.gov.br/politica-nacional-aldir-blanc-edital-no03-2024-fomento/",
+      "pagina_oficial": "https://biblioteca.mpf.mp.br/server/api/core/bitstreams/f0a50f1b-b873-482a-b98b-52d48e4b5d65/content",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a existência de uma oportunidade de fomento à cultura em Senador Canedo, Goiás, com recursos da Secretaria Municipal de Cultura.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ser organização da sociedade civil, atuar na área de cultura e apresentar um projeto de manutenção de espaço, ambiente ou iniciativa artístico-cultural, além de anexar os documentos exigidos no edital.",
-        "proximo_passo": "Consultar os anexos do edital para compreender os requisitos e documentos necessários e preparar o projeto de manutenção de iniciativa cultural.",
-        "risco": "A falta de informações sobre o prazo de inscrição pode impedir a participação no edital."
+        "por_que": "O edital foi comprovado como uma iniciativa do Ministério Público Federal, que é uma fonte de fomento para organizações da sociedade civil.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisa informar a área temática de sua atuação e seguir as instruções dos anexos mencionados.",
+        "proximo_passo": "Consultar os anexos do edital para obter mais detalhes sobre os requisitos e procedimentos.",
+        "risco": "A falta de informações sobre o objeto, prazo e valor do edital pode impedir a associação de se qualificar adequadamente para o chamamento público."
       },
       "erro": null,
-      "segundos": 858,
+      "segundos": 738,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
-      "id": "op-3691d3c1aae1",
+      "fontes_oficiais": 4,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-174c8139a367",
       "encontrou": {
-        "Objeto": {
-          "valor": "seleção de espaços, ambientes e iniciativas artístico-culturais para receberem subsídio para manutenção",
-          "trecho": "O objeto deste Edital é a seleção de espaços, ambientes e iniciativas artístico-culturais para receberem subsídio para manutenção nas categorias descritas no Anexo I, com o objetiv",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$112.000,00",
-          "trecho": "O valor total deste edital é de R$112.000,00 (Cento e doze mil reais).",
-          "oficial": true,
-          "dispensado": false
-        },
         "Órgão / financiador": {
-          "valor": "Secretaria Municipal de Cultura",
-          "trecho": "A Secretaria Municipal de Cultura torna público o presente edital.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "agentes culturais que constituem espaços, ambientes e iniciativas artístico-culturais localizados no município de Senador Canedo",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "seleção de espaços, ambientes e iniciativas artístico-culturais para receberem subsídio para manutenção",
+          "valor": "Ministério Público Federal",
+          "trecho": "MINISTÉRIO PÚBLICO FEDERAL",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "ser organizado e mantido por pessoas, organizações da sociedade civil, microempresas culturais",
-          "trecho": "I – seja organizado e mantido por pessoas, organizações da sociedade civil, microempresas culturais /no_think",
+          "valor": "informar a área temática de sua atuação",
+          "trecho": "Os interessados devem informar, sempre que possível, a área temática de sua atuação.",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura Municipal de Senador Canedo",
+      "financiador": "Ministério Público Federal",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
