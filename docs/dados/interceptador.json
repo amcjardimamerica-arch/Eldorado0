@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T22:23:01+00:00",
+  "em": "2026-10-31T22:43:41+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T22:08:43+00:00",
+  "ultimo_voo": "2026-10-31T22:25:11+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,84 +39,42 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 10,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 13.5
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 17.7
   },
   "missoes": [
     {
-      "em": "2026-10-31T22:08:43+00:00",
+      "em": "2026-10-31T22:25:11+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "2 · Brasil · oportunidade do mapa · prazo até 2026-10-19",
-      "alvo": "Edital de Seleção de Projetos via Incentivo Fiscal 2026 – Zurich Seguros Zurich Seguros Aceita: organizações da sociedade civil Prazo: 19/10/2026 (20d) Ver d",
-      "qualidade": "parcial",
-      "comprovados": 6,
-      "dispensados": 0,
+      "de": "2 · Brasil · oportunidade do mapa · prazo até 2026-10-19T17:00",
+      "alvo": "Programa de Aceleração do Desenvolvimento de Lideranças Femininas Negras: Marielle Franco Fundo Baobá R$ 300 mil Aceita:   organizações da s",
+      "qualidade": "insuficiente",
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Área de atuação"
-      ],
-      "pagina_oficial": "https://www.zurich.com.br/leis-de-incentivo-2026",
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre o objeto, órgão financiador, território, esfera e requisitos, o que permite identificar as condições para acesso.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa alinhar seu projeto a um dos três programas de Responsabilidade Social Corporativa da Zurich Seguros e garantir relação direta com um desses programas.",
-        "proximo_passo": "Consultar o edital completo para verificar os anexos e os detalhes específicos dos programas de Responsabilidade Social Corporativa da Zurich Seguros.",
-        "risco": "A falta de alinhamento com os programas de Responsabilidade Social Corporativa da Zurich Seguros pode impedir o acesso ao edital."
-      },
-      "erro": null,
-      "segundos": 810,
+      "nao_resolvidos": null,
+      "pagina_oficial": null,
+      "parecer_fonte": {},
+      "erro": "o modelo não devolveu JSON",
+      "segundos": 1062,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
+      "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-31b4a13545ca",
-      "encontrou": {
-        "Objeto": {
-          "valor": "selecionar e apoiar projetos sociais alinhados à estratégia de Responsabilidade Social Corporativa da compania, por meio da destinação de recursos provenientes de leis federais de incentivo fiscal",
-          "trecho": "O Edital de Seleção de Projetos via Incentivo Fiscal 2026 da Zurich Seguros tem como objetivo selecionar e apoiar projetos sociais alinhados à estratégia de Responsabilidade Social",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Zurich Seguros",
-          "trecho": "A Zurich Seguros torna público o presente Edital de Seleção de Projetos via Incentivo Fiscal 2026",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "nacional",
-          "trecho": "Com apoio técnico do Instituto para o Desenvolvimento do Investimento Social (IDIS), este Edital integra o compromisso da Zurich Seguros com a geração de impacto social positivo e ",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "relação direta com um dos três programas de Responsabilidade Social Corporativa da Zurich",
-          "trecho": "Os projetos inscritos deverão apresentar relação direta com um dos três programas de Responsabilidade Social Corporativa da Zurich.",
-          "oficial": false,
-          "dispensado": false
-        }
-      },
-      "financiador": "Zurich Seguros",
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "falhou: o modelo não devolveu JSON",
+      "id": "d94cd9a3d245f2393f2f",
+      "encontrou": {},
+      "financiador": null,
       "indicios": [],
-      "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
-      ]
+      "rotas": []
     }
   ],
   "contagem": {
