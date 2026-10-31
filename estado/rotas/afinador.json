@@ -1072,7 +1072,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-31T18:48:47+00:00",
+  "em": "2026-10-31T20:20:10+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -3228,7 +3228,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-235": {
-  "em": "2026-10-31T08:10:08+00:00",
+  "em": "2026-10-31T20:19:35+00:00",
   "testes": 17,
   "melhor": null,
   "detalhe": [
@@ -3245,7 +3245,7 @@
    },
    {
     "url": "https://www.institutolojasrenner.org.br/edital-encantando-comunidades/",
-    "origem": "biblioteca",
+    "origem": "rota original",
     "via": "direto",
     "pontos": 1,
     "links": 22,
@@ -3277,7 +3277,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutolojasrenner.org.br/feed",
+    "url": "https://www.institutolojasrenner.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3287,13 +3287,23 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutolojasrenner.org.br/feed",
+    "url": "https://www.institutolojasrenner.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
     "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutolojasrenner.org.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -3319,16 +3329,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutolojasrenner.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutolojasrenner.org.br/edital",
     "origem": "padrão",
     "via": "direto",
@@ -3351,6 +3351,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutolojasrenner.org.br/noticias",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutolojasrenner.org.br/wp-content/uploads/2026/03/EDITAL-NACIONAL-DE-SELECAO-DE-PROJETOS-DE-INCLUSAO-SOCIOPRODUTIVA-DE-MULHERES-INSTITUTO-LOJAS-RENNER.pdf",
     "origem": "biblioteca",
     "via": "direto",
@@ -3359,16 +3369,6 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutolojasrenner.org.br/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -3405,13 +3405,23 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-acessoainformacao-cavalcante-go-gov-br": {
-  "em": "2026-10-31T08:10:12+00:00",
+  "em": "2026-10-31T20:19:37+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/",
     "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -3441,16 +3451,6 @@
    },
    {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3673,7 +3673,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-224": {
-  "em": "2026-10-31T08:10:33+00:00",
+  "em": "2026-10-31T20:19:56+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -3685,6 +3685,17 @@
     "links": 122,
     "sinais": 0,
     "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://fundacaotelefonicavivo.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
     "erro": null,
     "funcionou": false
    },
@@ -3718,17 +3729,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaotelefonicavivo.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "json",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -4695,13 +4695,23 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-228": {
-  "em": "2026-10-31T08:10:34+00:00",
+  "em": "2026-10-31T20:19:56+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://institutolocaliza.com.br/",
     "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://institutolocaliza.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -4731,16 +4741,6 @@
    },
    {
     "url": "https://institutolocaliza.com.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://institutolocaliza.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4823,7 +4823,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-242": {
-  "em": "2026-10-31T08:10:48+00:00",
+  "em": "2026-10-31T20:20:10+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.undp.org/pt/brazil",
@@ -4843,6 +4843,16 @@
     "formato": "html",
     "erro": null,
     "funcionou": true
+   },
+   {
+    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
    },
    {
     "url": "https://www.undp.org/feed",
@@ -4867,16 +4877,6 @@
    },
    {
     "url": "https://www.undp.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4959,13 +4959,23 @@
   "resultado": "rota nova em teste"
  },
  "f260-espalhado-rouanet-cultura-gov-br": {
-  "em": "2026-10-31T08:10:49+00:00",
+  "em": "2026-10-31T20:20:10+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://rouanet.cultura.gov.br/",
     "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://rouanet.cultura.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -4995,16 +5005,6 @@
    },
    {
     "url": "https://rouanet.cultura.gov.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://rouanet.cultura.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
