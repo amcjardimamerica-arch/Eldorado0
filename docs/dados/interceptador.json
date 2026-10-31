@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T04:45:49+00:00",
+  "em": "2026-10-31T04:59:41+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T04:33:36+00:00",
+  "ultimo_voo": "2026-10-31T04:47:45+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,77 +39,92 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 9,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.6
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 11.3
   },
   "missoes": [
     {
-      "em": "2026-10-31T04:33:36+00:00",
+      "em": "2026-10-31T04:47:45+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
-      "alvo": "Goiânia — Diário Oficial de Goiânia — edição 8874 (2026-09-30) — chamamento público — Goiás / Goiânia",
-      "qualidade": "insuficiente",
-      "comprovados": 5,
-      "dispensados": 0,
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 4 abordagens; busca",
+      "alvo": "Assistência para Projetos Comunitários e de Segurança do Ser Humano (APC) Consulado Geral do Japão Aceita:   organizações da sociedade civil",
+      "qualidade": "parcial",
+      "comprovados": 8,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://www.goiania.go.gov.br/wp-content/uploads/2024/04/CENTRALIZA-COMPLETO.key.pdf",
+      "pagina_oficial": "https://www.agencia.baciaspcj.org.br/docs/gestao/assistencia-para-projetos-consulado-japao-2018.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital menciona o objeto e o financiador, o que é suficiente para identificar a fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no chamamento público mencionado, apresentando propostas alinhadas ao objeto do edital, que é a requalificação do Setor Central com foco em segurança, mobilidade, lazer, cultura e desenvolvimento econômico.",
-        "proximo_passo": "Consultar os anexos mencionados para obter mais detalhes sobre o processo e os requisitos necessários.",
-        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se preparar adequadamente para o processo."
+        "por_que": "O edital comprova que o Consulado Geral do Japão em São Paulo oferece apoio a organizações da sociedade civil que promovem desenvolvimento socioeconômico comunitário, alinhando-se ao escopo da AMC.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa desenvolver um projeto de assistência social que promova o desenvolvimento socioeconômico de uma comunidade, beneficiando diretamente essa comunidade, e se enquadrar nos requisitos de ser uma organização sem fins lucrativos.",
+        "proximo_passo": "Consultar o anexo do edital para obter detalhes adicionais sobre a elaboração do projeto e os critérios de avaliação.",
+        "risco": "A falta de informações sobre o prazo de inscrição pode impedir a organização de se candidatar dentro do tempo necessário."
       },
       "erro": null,
-      "segundos": 693,
+      "segundos": 677,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 4,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-op-f2026a409e7c",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
+      "id": "68fb8ecc9bc448f187f0",
       "encontrou": {
         "Objeto": {
-          "valor": "Requalificação do Setor Central de Goiânia com foco em segurança, mobilidade, lazer, cultura e desenvolvimento econômico.",
-          "trecho": "O Centraliza é um amplo programa de requalificação do Setor Central, dividido em sete eixos temáticos, com o objetivo de levar o goianiense de volta à emblemática região da cidade ",
+          "valor": "qualquer projeto que promova o desenvolvimento socioeconômico de uma dada comunidade e que beneficie diretamente tal comunidade",
+          "trecho": "Qualquer projeto que promova o desenvolvimento socioeconômico de uma dada comunidade e que beneficie diretamente tal comunidade pode ser financiado pelo APC (construção ou reforma ",
           "oficial": true,
           "dispensado": false
         },
+        "Valor": {
+          "valor": "dispensado — O valor do investimento não é mencionado no edital.",
+          "trecho": "Não é mencionado no edital.",
+          "oficial": false,
+          "dispensado": true
+        },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia",
-          "trecho": "A Prefeitura de Goiânia, através do GT Fomento Econômico, formado pela SEFIN, SEPLANH e SEDEC, iniciou um trabalho amplo de diagnóstico e elaboração de propostas em busca de soluçõ",
+          "valor": "CONSULADO GERAL DO JAPÃO EM SÃO PAULO",
+          "trecho": "CONCEDENTE CONSULADO GERAL DO JAPÃO EM SÃO PAULO",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "O Centraliza é um amplo programa de requalificação do Setor Central, dividido em sete eixos temáticos, com o objetivo de levar o goianiense de volta à emblemática região da cidade ",
+          "valor": "SP",
+          "trecho": "O Consulado Geral do Japão em São Paulo atende à área circunscrita pelos estados de São Paulo, Mato Grosso, Mato Grosso do Sul e Minas Gerais (algumas cidades do Triângulo Mineiro)",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "assistencia_social",
+          "trecho": "ÁREAS COBERTAS PELO PROGRAMA APC Qualquer projeto que promova o desenvolvimento socioeconômico de uma dada comunidade e que beneficie diretamente tal comunidade pode ser financiado",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "organizações sem fins lucrativos, desde que desenvolvam atividades de desenvolvimento socioeconômico junto à comunidade",
+          "trecho": "Estão qualificadas para se candidatarem a este programa as organizações sem fins lucrativos, desde que desenvolvam atividades de desenvolvimento socioeconômico junto à comunidade.",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Goiânia",
+      "financiador": "Consulado Geral do Japão",
       "indicios": [
         {
-          "url": "https://data.queridodiario.ok.org.br/5208707/2026-09-30/eae53a46f7108198ed438c9c4bc4996767a5a08a.pdf",
+          "url": "https://capitaai.com.br/captacao/assistencia-projetos-comunitarios-seguranca-ser-humano-apc-consulado-zmokkh",
           "tipo": "agregador"
         }
       ],
