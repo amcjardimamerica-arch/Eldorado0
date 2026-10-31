@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T23:22:58+00:00",
+  "em": "2026-10-31T23:39:30+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T23:09:56+00:00",
+  "ultimo_voo": "2026-10-31T23:25:04+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,21 +44,21 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 10,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.3
+    "tempo_medio_min": 13.6
   },
   "missoes": [
     {
-      "em": "2026-10-31T23:09:56+00:00",
+      "em": "2026-10-31T23:25:04+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · oportunidade do mapa · prazo até 2026-10-26",
-      "alvo": "Chamamento Público nº 07/2026 – SE/MS – PRONAS/PCD: seleção de propostas de OSC (R$ 250 mil a R$ 4 milhões; inscrição pelo Transferegov)",
+      "alvo": "Credenciamento/Chamamento 006/2026 de Adustina-BA ('Adustina Bem Cuidada'): seleção de OSC para termo de colaboração de ~R$ 9,69 mi/ano em zeladoria, cozinhas, monitoramento escola",
       "qualidade": "insuficiente",
-      "comprovados": 2,
+      "comprovados": 4,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -67,45 +67,50 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
         "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "http://conselho.saude.gov.br/",
+      "pagina_oficial": "http://www.parceriassociais.sp.gov.br/OSC/Chamamento?pagina=1",
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O Conselho Nacional de Saúde é um órgão federal reconhecido como financiador de editais de fomento para organizações da sociedade civil.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital se enquadra na área de atuação da AMC, como assistência social, cultura, educação ou esporte, e seguir o processo de inscrição no Transferegov conforme o edital.",
-        "proximo_passo": "Consultar o edital completo para verificar os requisitos e o processo de inscrição no Transferegov.",
-        "risco": "A falta de informações sobre os requisitos e o prazo de inscrição pode impedir a associação de se candidatar adequadamente."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações suficientes para confirmar que o edital serve como fonte de financiamento para organizações comunitárias de Goiânia.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar se há alinhamento entre o objeto do edital e suas atividades, além de atender aos requisitos não especificados no texto.",
+        "proximo_passo": "Consultar diretamente a Secretaria da Saúde do Estado da Bahia para obter detalhes sobre o edital e seus requisitos.",
+        "risco": "A falta de informações sobre o objeto, prazo e requisitos do edital pode impedir que a associação comunitária de Goiânia participe da seleção."
       },
       "erro": null,
-      "segundos": 739,
+      "segundos": 816,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 2,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "der-inc-e179e7a83eab",
+      "id": "275bb41a215db2d707b1",
       "encontrou": {
         "Órgão / financiador": {
-          "valor": "Conselho Nacional de Saúde",
-          "trecho": "Conselho Nacional de Saúde",
+          "valor": "Secretaria da Saúde",
+          "trecho": "Secretaria da Saúde",
           "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "BA",
+          "trecho": "Adustina-BA",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Ministério da Saúde",
-      "indicios": [],
+      "financiador": "Prefeitura Municipal de Adustina/BA",
+      "indicios": [
+        {
+          "url": "https://pncp.gov.br/pncp-api/v1/orgaos/16298929000189/compras/2026/31/arquivos/1",
+          "tipo": "noticia"
+        }
+      ],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
