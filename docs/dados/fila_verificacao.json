@@ -1,16 +1,16 @@
 {
-  "gerado_em": "2026-10-30T15:33:26+00:00",
-  "total": 177,
+  "gerado_em": "2026-10-31T13:04:06+00:00",
+  "total": 174,
   "selos": {
-    "validadas": 27,
-    "nao_verificadas": 150,
+    "validadas": 25,
+    "nao_verificadas": 149,
     "regra": "VALIDADA (verde) exige objeto + prazo de inscrição + site oficial que divulga; sem qualquer um deles o selo é NÃO VERIFICADA (amarelo) e o item entra na verificação semanal da IA externa"
   },
   "informacoes_minimas": {
     "regra": "toda oportunidade precisa de OBJETO, PRAZO DE INSCRIÇÃO e PÁGINA OFICIAL DO EDITAL (site do órgão/patrocinador, nunca o vetor onde foi encontrada)",
-    "completas": 27,
-    "incompletas": 150,
-    "falta_objeto": 114,
+    "completas": 25,
+    "incompletas": 149,
+    "falta_objeto": 113,
     "falta_prazo": 135,
     "falta_pagina": 12
   },
@@ -20,7 +20,7 @@
   "edicoes_de_diario_sem_ato": 8,
   "por_uf": {
     "AP": 1,
-    "BR": 151,
+    "BR": 148,
     "GO": 19,
     "MG": 1,
     "PE": 1,
@@ -43,26 +43,17 @@
     "regra": "filtro de objeto (inconformidade.py): não é chamada aberta que repasse recurso a entidade — sai da fila e não vira alerta"
   },
   "fora_das_50_maiores": {
-    "total": 1,
-    "itens": [
-      {
-        "id": "27573e292cc55921c91d",
-        "titulo": "Prefeitura de São Miguel do Araguaia — DOE - SÃO MIGUEL DO ARAGUAIA - CHAMAMENTO PNAB",
-        "uf": "GO",
-        "cidade": "São Miguel do Araguaia",
-        "motivo": "São Miguel do Araguaia/GO não está entre as 50 maiores do estado — fica em rosa para aprovação manual",
-        "url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/html/7407/#e:7407/#m:751053"
-      }
-    ],
+    "total": 0,
+    "itens": [],
     "regra": "excluídas da fila por não estarem entre as 25 maiores cidades do estado; voltam em ROSA quando o titular aprovar a cidade"
   },
   "escopo": {
-    "nacional": 151,
+    "nacional": 148,
     "estadual": 24,
     "municipal": 2
   },
   "modo": {
-    "completo": 170,
+    "completo": 167,
     "leve": 7
   },
   "marcados_para_ia": 156,
@@ -1817,6 +1808,56 @@
       "selo_validacao": "nao_verificada"
     },
     {
+      "id": "cat-a3b0194f392f",
+      "titulo": "Juventude Solidária abre inscrições para projetos sociais",
+      "uf": null,
+      "area": null,
+      "fonte": "Piloto - Espião",
+      "situacao": "em_verificacao",
+      "sem_prazo": true,
+      "faltam": [
+        "Objeto",
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Modalidade",
+        "Área de atuação"
+      ],
+      "link_oficial": "https://jornalatual.com.br/juventude-solidaria-abre-inscricoes-para-projetos-sociais/",
+      "link_anuncio": "https://jornalatual.com.br/juventude-solidaria-abre-inscricoes-para-projetos-sociais/",
+      "anuncio_e_vetor": false,
+      "motivo": "sem prazo de inscrição confirmado",
+      "prioridade": 0,
+      "ja_investigado": true,
+      "escopo": "nacional",
+      "cidade": null,
+      "geo_motivo": "sem restrição geográfica declarada — vale para todo o Brasil",
+      "modo": "completo",
+      "instrucao": "automação completa: 12 itens, requisitos, documentos, pontuação, parecer e selo",
+      "minimas": {
+        "exigidas": [
+          "Objeto",
+          "Prazo de inscrição",
+          "Página oficial do edital"
+        ],
+        "tem": [
+          "Página oficial do edital"
+        ],
+        "faltam": [
+          "Objeto",
+          "Prazo de inscrição"
+        ],
+        "completa": false
+      },
+      "selo_validacao": "nao_verificada"
+    },
+    {
       "id": "69ad5e784807c33b8ebe",
       "titulo": "Câmara Municipal (emendas) — Parlamentares Impositivas Municipais. 2 A medida fundamenta-se no disposto no art. 138, §",
       "uf": null,
@@ -2089,56 +2130,6 @@
       ],
       "link_oficial": "https://conjunta.org/",
       "link_anuncio": "https://observatorio3setor.org.br/luppa-abre-inscricoes-para-selecionar-dez-cidades-e-fortalecer-politicas-publicas-alimentares",
-      "anuncio_e_vetor": false,
-      "motivo": "sem prazo de inscrição confirmado",
-      "prioridade": 0,
-      "ja_investigado": true,
-      "escopo": "nacional",
-      "cidade": null,
-      "geo_motivo": "sem restrição geográfica declarada — vale para todo o Brasil",
-      "modo": "completo",
-      "instrucao": "automação completa: 12 itens, requisitos, documentos, pontuação, parecer e selo",
-      "minimas": {
-        "exigidas": [
-          "Objeto",
-          "Prazo de inscrição",
-          "Página oficial do edital"
-        ],
-        "tem": [
-          "Página oficial do edital"
-        ],
-        "faltam": [
-          "Objeto",
-          "Prazo de inscrição"
-        ],
-        "completa": false
-      },
-      "selo_validacao": "nao_verificada"
-    },
-    {
-      "id": "cat-a3b0194f392f",
-      "titulo": "Juventude Solidária abre inscrições para projetos sociais",
-      "uf": null,
-      "area": null,
-      "fonte": "Piloto - Espião",
-      "situacao": "em_verificacao",
-      "sem_prazo": true,
-      "faltam": [
-        "Objeto",
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Modalidade",
-        "Área de atuação"
-      ],
-      "link_oficial": "https://jornalatual.com.br/juventude-solidaria-abre-inscricoes-para-projetos-sociais/",
-      "link_anuncio": "https://jornalatual.com.br/juventude-solidaria-abre-inscricoes-para-projetos-sociais/",
       "anuncio_e_vetor": false,
       "motivo": "sem prazo de inscrição confirmado",
       "prioridade": 0,
@@ -7240,88 +7231,6 @@
       "selo_validacao": "nao_verificada"
     },
     {
-      "id": "op-op-062ff40a5ba0",
-      "titulo": "Fundação Maria Emília abre edital com apoio de até R$ 1 milhão para projetos em saúde e educação — Brasil",
-      "uf": null,
-      "area": null,
-      "fonte": "Piloto - Interceptador",
-      "situacao": "em_verificacao",
-      "sem_prazo": false,
-      "faltam": [
-        "Prazo de recurso",
-        "Território",
-        "Requisitos",
-        "Anexos"
-      ],
-      "link_oficial": "https://mariaemilia.org.br/wp-content/uploads/2026/08/Edital-FME-Transforma-2026.pdf",
-      "link_anuncio": "https://mariaemilia.org.br/wp-content/uploads/2026/08/Edital-FME-Transforma-2026.pdf",
-      "anuncio_e_vetor": false,
-      "motivo": "informações incompletas",
-      "prioridade": 1,
-      "ja_investigado": true,
-      "escopo": "nacional",
-      "cidade": null,
-      "geo_motivo": "sem restrição geográfica declarada — vale para todo o Brasil",
-      "modo": "completo",
-      "instrucao": "automação completa: 12 itens, requisitos, documentos, pontuação, parecer e selo",
-      "minimas": {
-        "exigidas": [
-          "Objeto",
-          "Prazo de inscrição",
-          "Página oficial do edital"
-        ],
-        "tem": [
-          "Objeto",
-          "Prazo de inscrição",
-          "Página oficial do edital"
-        ],
-        "faltam": [],
-        "completa": true
-      },
-      "selo_validacao": "validada"
-    },
-    {
-      "id": "agr-493cf7e895a4",
-      "titulo": "Instituto Genésio A. Mendes abre edital de R$ 1 milhão para projetos de OSCs em Santa Catarina",
-      "uf": null,
-      "area": null,
-      "fonte": "motor agregadores · abcr",
-      "situacao": "em_verificacao",
-      "sem_prazo": false,
-      "faltam": [
-        "Objeto",
-        "Requisitos",
-        "Anexos"
-      ],
-      "link_oficial": "https://institutogenesio.org.br/wp-content/uploads/2026/10/Edital-Nao-Incentivado-Instituto-Genesio-A-Mendes-2026.pdf?utm_source=Link+da+Bio+do+RD+Station&utm_medium=social&utm_campaign=CTA+no+Link+da+Bio",
-      "link_anuncio": "https://institutogenesio.org.br/wp-content/uploads/2026/10/Edital-Nao-Incentivado-Instituto-Genesio-A-Mendes-2026.pdf?utm_source=Link+da+Bio+do+RD+Station&utm_medium=social&utm_campaign=CTA+no+Link+da+Bio",
-      "anuncio_e_vetor": false,
-      "motivo": "informações incompletas",
-      "prioridade": 1,
-      "ja_investigado": true,
-      "escopo": "nacional",
-      "cidade": null,
-      "geo_motivo": "sem restrição geográfica declarada — vale para todo o Brasil",
-      "modo": "completo",
-      "instrucao": "automação completa: 12 itens, requisitos, documentos, pontuação, parecer e selo",
-      "minimas": {
-        "exigidas": [
-          "Objeto",
-          "Prazo de inscrição",
-          "Página oficial do edital"
-        ],
-        "tem": [
-          "Prazo de inscrição",
-          "Página oficial do edital"
-        ],
-        "faltam": [
-          "Objeto"
-        ],
-        "completa": false
-      },
-      "selo_validacao": "nao_verificada"
-    },
-    {
       "id": "3b0a8b47aa7165a5b8da",
       "titulo": "SUP. EST. DE LICITACAO — O presente Chamamento Público tem por objeto selecionar Organização da Sociedade Civil – OSC para celebração de Ter",
       "uf": null,
@@ -7441,44 +7350,6 @@
         "completa": false
       },
       "selo_validacao": "nao_verificada"
-    },
-    {
-      "id": "670a8b39181ce331da24",
-      "titulo": "CNBB lança edital do FNS para apoio financeiro a projetos relativos à Campanha da Fraternidade 2026 — Brasil",
-      "uf": null,
-      "area": null,
-      "fonte": "motor ",
-      "situacao": "em_verificacao",
-      "sem_prazo": false,
-      "faltam": [
-        "Modalidade"
-      ],
-      "link_oficial": "https://www.cnbb.org.br/cnbb-lanca-edital-do-fns-para-apoio-financeiro-a-projetos-relativos-a-campanha-da-fraternidade-2026/",
-      "link_anuncio": "https://captadores.org.br/editais/cnbb-lanca-edital-do-fns-para-apoio-financeiro-a-projetos-relativos-a-campanha-da-fraternidade-2026",
-      "anuncio_e_vetor": false,
-      "motivo": "informações incompletas",
-      "prioridade": 1,
-      "ja_investigado": true,
-      "escopo": "nacional",
-      "cidade": null,
-      "geo_motivo": "sem restrição geográfica declarada — vale para todo o Brasil",
-      "modo": "completo",
-      "instrucao": "automação completa: 12 itens, requisitos, documentos, pontuação, parecer e selo",
-      "minimas": {
-        "exigidas": [
-          "Objeto",
-          "Prazo de inscrição",
-          "Página oficial do edital"
-        ],
-        "tem": [
-          "Objeto",
-          "Prazo de inscrição",
-          "Página oficial do edital"
-        ],
-        "faltam": [],
-        "completa": true
-      },
-      "selo_validacao": "validada"
     },
     {
       "id": "1b259c84aabf58826786",
