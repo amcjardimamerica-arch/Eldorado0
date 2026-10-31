@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T02:10:57+00:00",
+  "em": "2026-10-31T02:22:10+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T02:02:53+00:00",
+  "ultimo_voo": "2026-10-31T02:12:58+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,93 +39,63 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 9,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 7.5
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 8.5
   },
   "missoes": [
     {
-      "em": "2026-10-31T02:02:53+00:00",
+      "em": "2026-10-31T02:12:58+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 36 abordagens; busc",
-      "alvo": "Banco de Projetos",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 16 abordagens; busc",
+      "alvo": "Chamada pública seleciona jovens para produção audiovisual sobre justiça climática",
+      "qualidade": "insuficiente",
+      "comprovados": 0,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
         "Território",
-        "Anexos"
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://culturapresente.com.br/editais-culturais/",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O Banco de Projetos é uma fonte de financiamento da Funarte voltada para a sustentabilidade de ações artísticas continuadas, com valores que variam de R$ 100 mil a R$ 500 mil por projeto.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto de Eventos Artísticos Calendarizados que promova a sustentabilidade de ações artísticas, incluindo formação de público, intercâmbio entre criadores e gestores, sustentabilidade socioambiental, mapeamentos e diagnósticos, e articulação de redes relacionadas à gestão.",
-        "proximo_passo": "Elaborar um projeto alinhado aos requisitos do Banco de Projetos da Funarte, com foco em sustentabilidade e impacto cultural.",
-        "risco": "A falta de conformidade com os requisitos do edital, como a realização de ações de formação de público e sustentabilidade socioambiental, pode impedir o acesso ao financiamento."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações suficientes para confirmar a existência da chamada pública mencionada.",
+        "para_a_amc": null,
+        "proximo_passo": null,
+        "risco": null
       },
       "erro": null,
-      "segundos": 447,
+      "segundos": 511,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Território",
-      "id": "92825ff6a76bab0bc977",
-      "encontrou": {
-        "Objeto": {
-          "valor": "promover a sustentabilidade de ações artísticas de caráter continuado por meio do fomento a projetos de Eventos Artísticos Calendarizados",
-          "trecho": "Tem como objetivo promover a sustentabilidade de ações artísticas de caráter continuado por meio do fomento a projetos de Eventos Artísticos Calendarizados",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$ 10 milhões distribuídos em R$ 100 mil, R$ 300 mil ou R$ 500 mil por projeto, de acordo com o edital",
-          "trecho": "Valor total: R$ 10 milhões distribuídos em R$ 100 mil, R$ 300 mil ou R$ 500 mil por projeto, de acordo com o edital",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Funarte",
-          "trecho": "Programa Funarte de Apoio a Ações Continuadas 2023 – Eventos Artísticos Calendarizados",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "promover a sustentabilidade de ações artísticas de caráter continuado por meio do fomento a projetos de Eventos Artísticos Calendarizados",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "realização de ações de formação de público e reflexão crítica, realização de intercâmbio entre criadores, gestores e programadores, promoção de ações de sustentabilidade socioambiental no contexto de sua realização, realização de mapeamentos e diagnósticos, articulação de redes relacionadas à gestão",
-          "trecho": "Além das atividades de programação artística, os projetos poderão contemplar, entre outras ações: realização de ações de formação de público e reflexão crítica; realização de inter",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "Instituto Cactus",
-      "indicios": [
-        {
-          "url": "https://forms.gle/VQN8q4buLpwc8qNE6",
-          "tipo": "encurtador"
-        }
-      ],
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "agr-9239bd21e3b0",
+      "encontrou": {},
+      "financiador": "",
+      "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "programa_puro"
       ]
     }
   ],
