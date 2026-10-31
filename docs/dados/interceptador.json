@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T07:24:15+00:00",
+  "em": "2026-10-31T07:36:18+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T07:07:19+00:00",
+  "ultimo_voo": "2026-10-31T07:26:28+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,78 +48,79 @@
     },
     "estrelas_de_ouro": 9,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.2
+    "tempo_medio_min": 9.2
   },
   "missoes": [
     {
-      "em": "2026-10-31T07:07:19+00:00",
+      "em": "2026-10-31T07:26:28+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Senador Canedo — Edital nº 005/2024 – 2ª Convocação, referente à Lei Aldir Blanc — Goiás / Senador Canedo",
-      "qualidade": "parcial",
-      "comprovados": 7,
+      "alvo": "Goiás Turismo — Prêmio Nacional do Turismo: saiba quais são as categorias — Goiás — Goiás — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://senadorcanedo.go.gov.br/edital-no-005-2024-2a-convocacao-referente-a-lei-aldir-blanc/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre o objeto, órgão financiador, território, esfera, requisitos e área de atuação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se enquadrar na área de cultura, reunir as pessoas físicas que compõem a direção da entidade ou da equipe do projeto e se submeter aos regramentos estabelecidos no edital, além de anexar os documentos necessários conforme os anexos mencionados.",
-        "proximo_passo": "Verificar os requisitos e anexos do edital para se preparar a candidatura.",
-        "risco": "A falta de informações sobre o prazo de inscrição e outros detalhes pode impedir a participação no edital."
+        "por_que": "O texto comprovado menciona o objeto, prazo de inscrição, órgão financiador e território, o que é suficiente para identificar a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no prazo estabelecido, apresentando propostas relacionadas ao objeto do edital, que é 'Obras e Serviços de'.",
+        "proximo_passo": "Verificar os requisitos específicos do edital e se inscrever no prazo de 2025-03-28 a 2025-11-12.",
+        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir a associação de se qualificar adequadamente para o edital."
       },
       "erro": null,
-      "segundos": 973,
+      "segundos": 551,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-e65e3a0ff3cf",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-e86ab660774c",
       "encontrou": {
         "Objeto": {
-          "valor": "Fomento a projetos continuados de pontos de cultura",
-          "trecho": "FOMENTO A PROJETOS CONTINUADOS DE PONTOS DE CULTURA",
-          "oficial": true,
+          "valor": "Obras e Serviços de",
+          "trecho": "CONCORRÊNCIA N° 1/2025 Objeto: Obras e Serviços de",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2025-03-28 a 2025-11-12",
+          "trecho": "Concorrência 2025\nPublicado em \n28 março 2025\nÚltima Atualização em \n12 de novembro de 2025",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "REDE MUNICIPAL DE PONTOS DE CULTURA DE SENADOR CANEDO - GO",
-          "trecho": "REDE MUNICIPAL DE PONTOS DE CULTURA DE SENADOR CANEDO - GO",
-          "oficial": true,
+          "valor": "Goiás Turismo",
+          "trecho": "Publicações – Goiás Turismo",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "SENADOR CANEDO - GO",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "FOMENTO A PROJETOS CONTINUADOS DE PONTOS DE CULTURA",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "As entidades culturais que optarem por concorrer às cotas concorrerão concomitantemente às vagas destinadas à ampla conc, As pessoas físicas que compõem a direção da entidade proponente ou da equipe do projeto devem se submeter aos regramento",
-          "trecho": "As entidades culturais que optarem por concorrer às cotas concorrerão concomitantemente às vagas destinadas à ampla concorrência, ou seja, concorrerão ao mesmo tempo nas vagas da a",
-          "oficial": true,
+          "trecho": "Publicações – Goiás Turismo",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura Municipal de Senador Canedo",
+      "financiador": "Goiás Turismo",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
