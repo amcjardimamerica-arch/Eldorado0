@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T02:36:29+00:00",
+  "em": "2026-10-31T02:50:53+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T02:23:53+00:00",
+  "ultimo_voo": "2026-10-31T02:38:21+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,97 +38,70 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
+    "validadas": 0,
     "parciais": 0,
-    "insuficientes": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 9,
-    "fontes_novas_para_os_motores": 1,
+    "fontes_novas_para_os_motores": 0,
     "tempo_medio_min": 11.8
   },
   "missoes": [
     {
-      "em": "2026-10-31T02:23:53+00:00",
+      "em": "2026-10-31T02:38:21+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: completar 12 item(ns) a partir do site oficial certificado",
-      "alvo": "Juventude Solidária lança chamada para projetos sociais em todo o Brasil",
-      "qualidade": "validada",
-      "comprovados": 9,
-      "dispensados": 2,
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
+      "alvo": "Otimize o processo de seleção de projetos sociais da sua empresa.",
+      "qualidade": "insuficiente",
+      "comprovados": 2,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://cotidianosp.com/juventude-solidaria-lanca-chamada-para-projetos-sociais-em-todo-o-brasil/15177/2026/",
+      "pagina_oficial": "https://blog.prosas.com.br/caminhos-selecao-de-projetos-sociais/",
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado descreve um edital de fomento voltado para projetos sociais com foco em jovens, aberto a organizações da sociedade civil em todo o Brasil, com valores e prazos definidos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria ser uma organização da sociedade civil, ter projetos voltados para políticas sociais e estar aberta a acolher jovens voluntários, além de se inscrever por plataforma sem anexos.",
-        "proximo_passo": "A associação deve se inscrever na plataforma indicada no edital antes do prazo de inscrição, que é até 2026-06-09.",
-        "risco": "O prazo de inscrição pode ser encerrado antes do previsto, ou a associação pode não atender aos requisitos de atuação voltada para políticas sociais e acolhimento de jovens voluntários."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações suficientes para confirmar que o edital serve como fonte de financiamento para projetos sociais.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há editais específicos para a área de atuação e se atende aos requisitos não encontrados no texto.",
+        "proximo_passo": "Pesquisar editais específicos para a área de atuação da associação comunitária.",
+        "risco": "A falta de informações sobre requisitos, prazos e valor pode impedir o acesso ao financiamento."
       },
       "erro": null,
       "segundos": 705,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 7,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "cat-a64e0ffba4a2",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 2,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "rec-sascombrempresas",
       "encontrou": {
-        "Objeto": {
-          "valor": "fomentar a cidadania ativa, o voluntariado e a participação social entre jovens de 16 a 29 anos",
-          "trecho": "Destinada a fomentar a cidadania ativa, o voluntariado e a participação social entre jovens de 16 a 29 anos, a proposta articula ações em áreas vulneráveis que se relacionam com po",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "? a 2026-06-09",
-          "trecho": "As inscrições para organizações e entidades poderão ser feitas até 9 de junho de 2026 através da plataforma oficial",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "um limite de até R$ 12 mil, distribuídos em seis parcelas mensais de R$ 2 mil",
-          "trecho": "Os projetos selecionados terão direito a um financiamento para cobrir despesas necessárias à implementação das atividades, com um limite de até R$ 12 mil, distribuídos em seis parc",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Secretaria Nacional de Juventude da Secretaria-Geral da Presidência da República, em colaboração com o Ministério da Educação e o Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS)",
-          "trecho": "A Plataforma Juventude Solidária, uma iniciativa da Secretaria Nacional de Juventude da Secretaria-Geral da Presidência da República, em colaboração com o Ministério da Educação e ",
-          "oficial": true,
-          "dispensado": false
-        },
         "Território": {
-          "valor": "dispensado — O edital é aberto a todo o território nacional.",
-          "trecho": "A Plataforma Juventude Solidária... está com as inscrições abertas.",
-          "oficial": false,
-          "dispensado": true
-        },
-        "Área de atuação": {
-          "valor": "meio_ambiente",
-          "trecho": "Dentre os projetos inscritos encontra-se o Tambor dos Jerônimos: Juventude, Congada e Saberes Tradicionais. Essa iniciativa da produtora cultural Carol Jerônimo visa preservar a cu",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "organizações da sociedade civil, independentemente de possuírem ou não CNPJ, órgãos públicos que tenham projetos voltados para políticas sociais e estejam abertos a acolher jovens voluntários",
-          "trecho": "Podem participar organizações da sociedade civil, independentemente de possuírem ou não CNPJ, além de órgãos públicos que tenham projetos voltados para políticas sociais e estejam ",
+          "valor": "nacional",
+          "trecho": "Dentre as formas de apoio à projetos sociais existentes, a utilização de mecanismos de incentivo fiscal no Brasil não é utilizada em toda sua potencialidade.",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": null,
+      "financiador": "Prosas",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador"
+      ]
     }
   ],
   "contagem": {
