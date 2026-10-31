@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T04:02:10+00:00",
+  "em": "2026-10-31T04:15:14+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T03:45:00+00:00",
+  "ultimo_voo": "2026-10-31T04:03:48+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,93 +39,92 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 9,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.4
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 10.5
   },
   "missoes": [
     {
-      "em": "2026-10-31T03:45:00+00:00",
+      "em": "2026-10-31T04:03:48+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
-      "alvo": "Edital - Projetos Sociais 2026 Título I Definição E Objetivos",
-      "qualidade": "insuficiente",
+      "de": "repositório único: Interceptador: completar 12 item(ns) a partir do site oficial certificado",
+      "alvo": "Juventude Solidária abre inscrições para projetos sociais",
+      "qualidade": "parcial",
       "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Área de atuação"
+        "Território",
+        "Anexos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://jornalatual.com.br/juventude-solidaria-abre-inscricoes-para-projetos-sociais/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, valor, financiador, território, esfera e requisitos, o que permite a análise de sua relevância.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria alinhar seu projeto a um dos temas abordados no edital, como Educação, Esporte, Cultura, Lazer, Inclusão Digital, Responsabilidade Social ou Ambiental, e garantir que esteja convergente com uma das estratégias dos Objetivos do Desenvolvimento Sustentável (ODS). Além disso, deve reunir as documentações exigidas e anexar os materiais solicitados.",
-        "proximo_passo": "Verificar os requisitos específicos do edital e preparar os documentos necessários para submissão do projeto.",
-        "risco": "A falta de informações sobre prazo de inscrição e área de atuação pode dificultar o acesso ao edital, já que não é possível planejar a submissão dentro do prazo estabelecido."
+        "por_que": "O texto comprova a existência do edital com os dados necessários para a resposta.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa se inscrever no edital até 9 de junho de 2026, apresentando propostas de projetos sociais na área de saúde, com recursos de até R$ 12 mil.",
+        "proximo_passo": "Verificar os requisitos do edital e se inscrever no prazo estabelecido.",
+        "risco": "A falta de informações sobre o resultado e o prazo de recurso pode dificultar a tomada de decisão final."
       },
       "erro": null,
-      "segundos": 981,
+      "segundos": 631,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "rec-jetossociais2026",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Território, Anexos",
+      "id": "cat-a3b0194f392f",
       "encontrou": {
         "Objeto": {
-          "valor": "apoio de iniciativas que estejam direcionadas a Educação, Esporte, Cultura, Lazer, Inclusão Digital, Responsabilidade Social e a Ambiental convergentes com uma das estratégias dos Objetivos do Desenvolvimento Sustentável (ODS)",
-          "trecho": "Art. 3º Os recursos disponibilizados serão destinados ao apoio de iniciativas que estejam direcionadas a Educação, Esporte, Cultura, Lazer, Inclusão Digital, Responsabilidade Socia",
-          "oficial": false,
+          "valor": "apoio financeiro a projetos e aceita propostas até 9 de junho",
+          "trecho": "A iniciativa, coordenada pela Secretaria Nacional de Juventude oferece apoio financeiro a projetos e aceita propostas até 9 de junho",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "? a 2026-06-09",
+          "trecho": "As propostas podem ser enviadas até 9 de junho de 2026",
+          "oficial": true,
           "dispensado": false
         },
         "Valor": {
-          "valor": "R$ 2.800.000,00 (Dois milhões e oitocentos mil reais)",
-          "trecho": "Art. 2º O orçamento destinado aos projetos sociais em 2026 é de R$ 2.800.000,00 (Dois milhões e oitocentos mil reais).",
-          "oficial": false,
+          "valor": "recursos de até R$ 12 mil para custear as atividades previstas",
+          "trecho": "Os projetos aprovados recebem recursos de até R$ 12 mil para custear as atividades previstas",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Sicoob Credip",
-          "trecho": "Art. 1º Este Edital estabelece diretrizes para a análise de Projetos Sociais que estejam alinhados aos valores e a missão da Sicoob Credip, e determina parâmetros para a avaliação,",
-          "oficial": false,
+          "valor": "Secretaria Nacional de Juventude",
+          "trecho": "A iniciativa, coordenada pela Secretaria Nacional de Juventude",
+          "oficial": true,
           "dispensado": false
         },
-        "Território": {
-          "valor": "RO",
-          "trecho": "Sicoob Credip Av. Presidente Kennedy, 775 - Pioneiros 76.970-000",
-          "oficial": false,
+        "Área de atuação": {
+          "valor": "saude",
+          "trecho": "Os projetos inscritos devem se enquadrar em um dos oito eixos definidos pela plataforma: saúde, segurança alimentar, educação, participação social e democracia, comunicação e tecno",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "documentações enviadas pelas instituções",
-          "trecho": "Art. 7º São responsáveis pela avaliação dos projetos sociais: I. Unidade de Desenvolvimento Cooperativo: a) Avaliar tecnicamente os projetos com base nos critérios estabelecidos no",
-          "oficial": false,
+          "valor": "organizações da sociedade civil, coletivos comunitários e órgãos públicos — com ou sem CNPJ",
+          "trecho": "Podem se inscrever organizações da sociedade civil, coletivos comunitários e órgãos públicos — com ou sem CNPJ",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Sicoob Credip",
+      "financiador": null,
       "indicios": [],
-      "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
-      ]
+      "rotas": []
     }
   ],
   "contagem": {
