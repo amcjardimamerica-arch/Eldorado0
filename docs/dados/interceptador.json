@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T04:31:40+00:00",
+  "em": "2026-10-31T04:45:49+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T04:17:06+00:00",
+  "ultimo_voo": "2026-10-31T04:33:36+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,19 +44,19 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 9,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.8
+    "tempo_medio_min": 11.6
   },
   "missoes": [
     {
-      "em": "2026-10-31T04:17:06+00:00",
+      "em": "2026-10-31T04:33:36+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
-      "alvo": "Premio mol reconhece reportagens que inspiram solidariedade e a cultura de doacao",
+      "alvo": "Goiânia — Diário Oficial de Goiânia — edição 8874 (2026-09-30) — chamamento público — Goiás / Goiânia",
       "qualidade": "insuficiente",
       "comprovados": 5,
       "dispensados": 0,
@@ -67,65 +67,55 @@
         "Prazo de recurso",
         "Valor",
         "Requisitos",
-        "Anexos"
+        "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.goiania.go.gov.br/wp-content/uploads/2024/04/CENTRALIZA-COMPLETO.key.pdf",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O texto comprovado não fornece informações suficientes para considerar o edital como fonte confiável para a associação comunitária de Goiânia.",
-        "para_a_amc": "Para acessar o edital, a associação comunitária de Goiânia precisaria verificar se há requisitos não mencionados, como prazo de inscrição, valor, anexos e outros detalhes necessários para a participação.",
-        "proximo_passo": "Consultar o Instituto MOL diretamente ou buscar fontes adicionais para obter informações completas sobre o edital.",
-        "risco": "A falta de informações essenciais, como prazo de inscrição, valor e requisitos, pode impedir a associação de se candidatar ao edital."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital menciona o objeto e o financiador, o que é suficiente para identificar a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no chamamento público mencionado, apresentando propostas alinhadas ao objeto do edital, que é a requalificação do Setor Central com foco em segurança, mobilidade, lazer, cultura e desenvolvimento econômico.",
+        "proximo_passo": "Consultar os anexos mencionados para obter mais detalhes sobre o processo e os requisitos necessários.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se preparar adequadamente para o processo."
       },
       "erro": null,
-      "segundos": 825,
+      "segundos": 693,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 4,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "rec-aculturadedoacao",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-op-f2026a409e7c",
       "encontrou": {
         "Objeto": {
-          "valor": "reconhecer reportagens que inspiram solidariedade e a cultura de doação",
-          "trecho": "Prêmio MOL reconhece reportagens que inspiram solidariedade e a cultura de doação",
-          "oficial": false,
+          "valor": "Requalificação do Setor Central de Goiânia com foco em segurança, mobilidade, lazer, cultura e desenvolvimento econômico.",
+          "trecho": "O Centraliza é um amplo programa de requalificação do Setor Central, dividido em sete eixos temáticos, com o objetivo de levar o goianiense de volta à emblemática região da cidade ",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Instituto MOL",
-          "trecho": "a premiação é uma iniciativa do Instituto MOL",
-          "oficial": false,
+          "valor": "Prefeitura de Goiânia",
+          "trecho": "A Prefeitura de Goiânia, através do GT Fomento Econômico, formado pela SEFIN, SEPLANH e SEDEC, iniciou um trabalho amplo de diagnóstico e elaboração de propostas em busca de soluçõ",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "SP",
-          "trecho": "Realizada na última terça-feira (07/04) no Teatro FECAP, em São Paulo, a premiação é uma iniciativa do Instituto MOL",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "direitos",
-          "trecho": "O evento, realizado no Dia do Jornalista, contemplou reportagens que ampliam o olhar sobre as diferentes formas de solidariedade, evidenciando narrativas que conectam territórios, ",
-          "oficial": false,
+          "valor": "GO",
+          "trecho": "O Centraliza é um amplo programa de requalificação do Setor Central, dividido em sete eixos temáticos, com o objetivo de levar o goianiense de volta à emblemática região da cidade ",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Instituto MOL",
+      "financiador": "Prefeitura de Goiânia",
       "indicios": [
         {
-          "url": "https://observatorio3setor.org.br/premio-mol-reconhece-reportagens-que-inspiram-solidariedade-e-a-cultura-de-doacao/",
-          "tipo": "noticia"
+          "url": "https://data.queridodiario.ok.org.br/5208707/2026-09-30/eae53a46f7108198ed438c9c4bc4996767a5a08a.pdf",
+          "tipo": "agregador"
         }
       ],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
