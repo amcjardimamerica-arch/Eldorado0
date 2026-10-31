@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T03:13:50+00:00",
+  "em": "2026-10-31T03:30:04+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T03:06:11+00:00",
+  "ultimo_voo": "2026-10-31T03:15:39+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,88 +48,99 @@
     },
     "estrelas_de_ouro": 9,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.1
+    "tempo_medio_min": 13.6
   },
   "missoes": [
     {
-      "em": "2026-10-31T03:06:11+00:00",
+      "em": "2026-10-31T03:15:39+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 16 abordagens; busc",
-      "alvo": "EDP abre inscrições para seleção de projetos incentivados e prevê ...",
-      "qualidade": "parcial",
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 3 abordagens; busca",
+      "alvo": "Aviso de Chamamento Público Nº 3/2026 - SVS/AP SUPERINTENDÊNCIA DE VIGILÂNCIA EM SAÚDE DO ESTADO DO AMAPÁ - SVS R$ 3,0 mi Aceita:   organiza",
+      "qualidade": "insuficiente",
       "comprovados": 8,
-      "dispensados": 1,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Resultado",
         "Prazo de recurso",
-        "Área de atuação"
+        "Anexos"
       ],
-      "pagina_oficial": "https://prosas.com.br/editais/15802-sim-para-cuidar-do-futuro-2026-chamada-projetos-incentivados-edp",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova a abertura de inscrições para projetos incentivados pela EDP, especificando o objeto, prazo, valor e requisitos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ser uma organização socioambiental, cultural ou esportiva, e deve se inscrever no período de 01 de julho a 04 de agosto de 2025.",
-        "proximo_passo": "Verificar os anexos exigidos e preparar os documentos necessários para a inscrição no prazo estabelecido.",
-        "risco": "A falta de documentos necessários ou a não conformidade com os requisitos pode impedir a participação."
+        "por_que": "O aviso de chamamento público foi comprovado com dados sobre objeto, valor, prazo de inscrição, órgão financiador, território, esfera, requisitos e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ter natureza jurídica de OSC, CNPJ ativo e regularidade fiscal em dia, além de se alinhar ao objeto do edital, que é ações de saúde pública, e atuar no território do Estado do Amapá.",
+        "proximo_passo": "Verificar se a associação comunitária atende aos requisitos do edital e se inscrever no prazo estabelecido.",
+        "risco": "A associação pode não atender aos requisitos do edital ou não estar localizada no território do Estado do Amapá, o que impediria o acesso ao financiamento."
       },
       "erro": null,
-      "segundos": 428,
+      "segundos": 815,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Área de atuação",
-      "id": "cat-e311d40d4596",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "00df21633ea2380c78fd",
       "encontrou": {
         "Objeto": {
-          "valor": "apoiar projetos que melhorem as condições de vida e o desenvolvimento das comunidades, com foco em geração de renda, empoderamento cultural, democratização do acesso à cultura e ao esporte, preservação ambiental, economia circular e transição energética justa",
-          "trecho": "O objetivo é apoiar projetos que melhorem as condições de vida e o desenvolvimento das comunidades, com foco em geração de renda, empoderamento cultural, democratização do acesso à",
-          "oficial": true,
+          "valor": "ações de saúde pública",
+          "trecho": "O que esse edital realmente financia",
+          "oficial": false,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "dispensado — O texto menciona o período de inscrições entre 01 de julho e 04 de agosto de 2025.",
-          "trecho": "durante o período de inscrições entre 01 de julho e 04 de agosto de 2025 [rejeitado: data implausível para edital aberto]",
+          "valor": "? a 2026-11-16",
+          "trecho": "Inscrições até 16 de novembro de 2026",
           "oficial": false,
-          "dispensado": true
+          "dispensado": false
         },
         "Valor": {
-          "valor": "até R$ 8,4 milhões",
-          "trecho": "O valor total projetado para esta Chamada de Projetos é de até R$ 8,4 milhões por meio das Leis Federais de Incentivo ao Esporte, Lei do Idoso, Fundo da Criança e do Adolescente, P",
-          "oficial": true,
+          "valor": "R$ 3 milhões",
+          "trecho": "Valor disponível R$ 3 milhões",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Instituto EDP",
-          "trecho": "O Instituto EDP, em consonância à Política de Responsabilidade Social da EDP, convida organizações socioambientais, culturais e esportivas a apresentarem propostas para o processo ",
-          "oficial": true,
+          "valor": "SUPERINTENDÊNCIA DE VIGILÂNCIA EM SAÚDE DO ESTADO DO AMAPÁ - SVS",
+          "trecho": "Edital SVS AP 3/2026: Capte R$ 30 mil para Saúde",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "Abadia de Goiás - GO",
-          "oficial": true,
+          "valor": "AP",
+          "trecho": "OSCs podem captar R$ 30 mil no edital da SVS do Amapá para ações de saúde pública",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "saude",
+          "trecho": "ações de saúde pública",
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "organizações socioambientais, culturais e esportivas",
-          "trecho": "convida organizações socioambientais, culturais e esportivas a apresentarem propostas para o processo da chamada de projetos incentivados",
-          "oficial": true,
+          "valor": "natureza jurídica de OSC, CNPJ ativo, regularidade fiscal em dia",
+          "trecho": "Perfis aceitos pelo edital",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "EDP",
+      "financiador": "SUPERINTENDÊNCIA DE VIGILÂNCIA EM SAÚDE DO ESTADO DO AMAPÁ - SVS",
       "indicios": [
         {
-          "url": "https://esginside.com.br/2026/07/24/edp-abre-inscricoes-para-selecao-de-projetos-incentivados-e-preve-destinar-ate-r-12-milhoes-a-iniciativas-sociais-esportivas-e-de-saude/",
-          "tipo": "noticia"
+          "url": "https://capitaai.com.br/captacao/aviso-chamamento-publico-32026-svsap-superintendencia-vigilancia-saude-e49uh8",
+          "tipo": "agregador"
         }
       ],
       "rotas": [
-        "site_do_financiador"
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
