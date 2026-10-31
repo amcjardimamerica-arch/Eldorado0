@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T14:31:06+00:00",
+  "em": "2026-10-31T14:47:08+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T14:17:55+00:00",
+  "ultimo_voo": "2026-10-31T14:32:57+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,15 +48,15 @@
     },
     "estrelas_de_ouro": 9,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.4
+    "tempo_medio_min": 13.5
   },
   "missoes": [
     {
-      "em": "2026-10-31T14:17:55+00:00",
+      "em": "2026-10-31T14:32:57+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Secretaria de Estado da Cultura (Secult) — Chamamentos Públicos 2025 (Lei 13.019/14) — Goiás — Goiás — Goiás",
+      "alvo": "Secretaria de Estado da Cultura (Secult) — Chamamento público de seleção de OSC para execução do projeto CineL… — Goiás",
       "qualidade": "insuficiente",
       "comprovados": 5,
       "dispensados": 0,
@@ -69,47 +69,52 @@
         "Requisitos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona a Secretaria de Estado da Cultura (Secult) como órgão financiador e o objeto do chamamento público, o que é suficiente para identificar a fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há chamamentos públicos específicos para sua área de atuação (assistência social, cultura, educação, esporte) e se qualifica para participar, conforme os anexos mencionados.",
-        "proximo_passo": "Consultar os anexos do chamamento público para entender os requisitos e a área de atuação permitida.",
-        "risco": "A falta de informações sobre prazos, valor e requisitos específicos pode impedir a associação de se inscrever adequadamente."
+        "por_que": "O texto comprovado menciona a Secretaria de Estado de Indústria, Comércio e Serviços como financiador e o Objeto da seleção, que é a gestão do 'Mercado Goiano de Águas Lindas de Goiás', o que é relevante para a identificação do chamamento público.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o objeto do edital se alinha com suas atividades e, caso sim, se inscrever no processo de seleção, seguindo as instruções do edital e anexos disponibilizados.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre o processo de inscrição e os requisitos necessários.",
+        "risco": "O prazo de inscrição e outros detalhes essenciais, como requisitos e área de atuação, não foram encontrados no texto comprovado, o que pode impedir a participação eficaz da associação."
       },
       "erro": null,
-      "segundos": 742,
+      "segundos": 809,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 4,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-932536910919",
+      "id": "op-76409b46b2bc",
       "encontrou": {
         "Objeto": {
-          "valor": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na cidade de Pirenópolis, desde o ano 2000.",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
-          "oficial": true,
+          "valor": "seleção de Organização da Sociedade Civil (OSC) para celebração de Termo de Colaboração para a gestão do 'Mercado Goiano de Águas Lindas de Goiás'",
+          "trecho": "O presente edital tem por objeto o Chamamento Público, na forma da SELEÇÃO DE ORGANIZAÇÃO DA SOCIEDADE CIVIL (OSC) PARA CELEBRAÇÃO DE TERMO DE COLABORAÇÃO PARA A GESTÃO DO \"MERCADO",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura (Secult)",
-          "trecho": "Secretaria de Estado da Cultura (Secult)",
-          "oficial": true,
+          "valor": "Secretaria de Estado de Indústria, Comércio e Serviços",
+          "trecho": "O Governo do Estado de Goiás, por intermédio da Secretaria de Estado de Indústria, Comércio e Serviços (SIC), pessoa jurídica de direito público interno,",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Secretaria de Estado da Cultura (Secult)",
-          "oficial": true,
+          "trecho": "ESTADO DE GOIÁS",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura (Secult)",
+      "financiador": "SECRETARIA DE ESTADO DE INDÚSTRIA, COMÉRCIO E SERVIÇOS",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
