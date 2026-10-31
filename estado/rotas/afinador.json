@@ -1073,7 +1073,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-10-31T06:40:08+00:00",
+  "em": "2026-10-31T08:10:49+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -3217,8 +3217,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-235": {
-  "em": "2026-10-30T18:36:36+00:00",
-  "testes": 16,
+  "em": "2026-10-31T08:10:08+00:00",
+  "testes": 17,
   "melhor": null,
   "detalhe": [
    {
@@ -3226,7 +3226,7 @@
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 0,
-    "links": 20,
+    "links": 19,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -3234,10 +3234,10 @@
    },
    {
     "url": "https://www.institutolojasrenner.org.br/edital-encantando-comunidades/",
-    "origem": "rota original",
+    "origem": "biblioteca",
     "via": "direto",
     "pontos": 1,
-    "links": 23,
+    "links": 22,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -3248,7 +3248,7 @@
     "origem": "rota original",
     "via": "direto",
     "pontos": 1,
-    "links": 26,
+    "links": 25,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -3259,7 +3259,7 @@
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 0,
-    "links": 19,
+    "links": 18,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -3276,6 +3276,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutolojasrenner.org.br/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutolojasrenner.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -3287,6 +3297,17 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutolojasrenner.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 25,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutolojasrenner.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -3294,17 +3315,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutolojasrenner.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 26,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -3379,23 +3389,13 @@
     "sinais": 0,
     "erro": "HTTPError",
     "funcionou": false
-   },
-   {
-    "url": "https://www.institutolojasrenner.org.br/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
    }
   ],
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-acessoainformacao-cavalcante-go-gov-br": {
-  "em": "2026-10-30T20:07:59+00:00",
-  "testes": 24,
+  "em": "2026-10-31T08:10:12+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -3409,17 +3409,6 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/",
-    "origem": "rota original",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/feed",
     "origem": "padrão",
     "via": "direto",
@@ -3427,17 +3416,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -3451,14 +3429,13 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/sitemap.xml",
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/transparencia/editais",
     "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -3472,38 +3449,6 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/edital",
     "origem": "padrão",
     "via": "direto",
@@ -3511,17 +3456,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/edital",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -3535,17 +3469,6 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://acessoainformacao.cavalcante.go.gov.br/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -3556,14 +3479,43 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/noticias",
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/chamamento-publico",
     "origem": "padrão",
-    "via": "ponte",
-    "pontos": 1,
-    "links": 474,
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/chamadas-publicas",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/chamamentos",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
@@ -3710,8 +3662,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-224": {
-  "em": "2026-10-30T20:08:23+00:00",
-  "testes": 13,
+  "em": "2026-10-31T08:10:33+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -3748,17 +3700,6 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaotelefonicavivo.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "json",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://fundacaotelefonicavivo.org.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -3769,13 +3710,14 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaotelefonicavivo.org.br/transparencia/editais",
+    "url": "https://fundacaotelefonicavivo.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "formato": "json",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -4752,7 +4694,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-228": {
-  "em": "2026-10-30T20:08:25+00:00",
+  "em": "2026-10-31T08:10:34+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -4787,7 +4729,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://institutolocaliza.com.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4797,7 +4739,7 @@
     "funcionou": false
    },
    {
-    "url": "https://institutolocaliza.com.br/transparencia/editais",
+    "url": "https://institutolocaliza.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4880,7 +4822,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-242": {
-  "em": "2026-10-30T20:08:37+00:00",
+  "em": "2026-10-31T08:10:48+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.undp.org/pt/brazil",
@@ -4923,7 +4865,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.undp.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4933,7 +4875,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.undp.org/transparencia/editais",
+    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5016,7 +4958,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-espalhado-rouanet-cultura-gov-br": {
-  "em": "2026-10-30T20:08:43+00:00",
+  "em": "2026-10-31T08:10:49+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -5051,7 +4993,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://rouanet.cultura.gov.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5061,7 +5003,7 @@
     "funcionou": false
    },
    {
-    "url": "https://rouanet.cultura.gov.br/transparencia/editais",
+    "url": "https://rouanet.cultura.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
