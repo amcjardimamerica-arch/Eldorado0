@@ -1,9 +1,9 @@
 {
-  "em": "2026-10-31T02:50:53+00:00",
+  "em": "2026-10-31T03:04:00+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-10-31T02:38:21+00:00",
+  "ultimo_voo": "2026-10-31T02:52:48+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,21 +44,21 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 9,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.8
+    "tempo_medio_min": 10.5
   },
   "missoes": [
     {
-      "em": "2026-10-31T02:38:21+00:00",
+      "em": "2026-10-31T02:52:48+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
-      "alvo": "Otimize o processo de seleção de projetos sociais da sua empresa.",
+      "alvo": "Ministério da Cultura — editais de fomento cultural",
       "qualidade": "insuficiente",
-      "comprovados": 2,
+      "comprovados": 4,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -67,37 +67,47 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
         "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Anexos"
       ],
-      "pagina_oficial": "https://blog.prosas.com.br/caminhos-selecao-de-projetos-sociais/",
+      "pagina_oficial": "https://www.gov.br/cultura/pt-br",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações suficientes para confirmar que o edital serve como fonte de financiamento para projetos sociais.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há editais específicos para a área de atuação e se atende aos requisitos não encontrados no texto.",
-        "proximo_passo": "Pesquisar editais específicos para a área de atuação da associação comunitária.",
-        "risco": "A falta de informações sobre requisitos, prazos e valor pode impedir o acesso ao financiamento."
+        "serve_como_fonte": "sim",
+        "por_que": "O Ministério da Cultura é um órgão federal comprovado, atuando no território BR na área de cultura, o que o torna uma fonte válida para editais de fomento cultural.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há editais específicos para a área de atuação (assistência social, cultura, educação, esporte), preencher os documentos exigidos e submeter a proposta conforme as normas do edital.",
+        "proximo_passo": "Consultar o site oficial do Ministério da Cultura para verificar a existência de editais disponíveis e seus requisitos.",
+        "risco": "A falta de informações sobre prazos, requisitos e objetos dos editais pode impedir a associação de se candidatar adequadamente."
       },
       "erro": null,
-      "segundos": 705,
+      "segundos": 632,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 2,
+      "fontes_oficiais": 3,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "rec-sascombrempresas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-9c2617472614",
       "encontrou": {
+        "Órgão / financiador": {
+          "valor": "Ministério da Cultura",
+          "trecho": "Ministério da Cultura",
+          "oficial": true,
+          "dispensado": false
+        },
         "Território": {
-          "valor": "nacional",
-          "trecho": "Dentre as formas de apoio à projetos sociais existentes, a utilização de mecanismos de incentivo fiscal no Brasil não é utilizada em toda sua potencialidade.",
+          "valor": "BR",
+          "trecho": "abrangência nacional",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "cultura",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prosas",
+      "financiador": "Ministério da Cultura",
       "indicios": [],
       "rotas": [
         "site_do_financiador"
