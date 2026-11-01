@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-01T07:50:59+00:00",
+  "em": "2026-11-01T08:03:41+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-01T07:40:16+00:00",
+  "ultimo_voo": "2026-11-01T07:53:10+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,9 +38,9 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
+    "validadas": 1,
     "parciais": 0,
-    "insuficientes": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,71 +48,85 @@
     },
     "estrelas_de_ouro": 10,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.1
+    "tempo_medio_min": 9.8
   },
   "missoes": [
     {
-      "em": "2026-11-01T07:40:16+00:00",
+      "em": "2026-11-01T07:53:10+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Pnab 2026: Divulgado resultado preliminar de habilitados e não habilitados do edital nº 04/2026 — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 5,
-      "dispensados": 0,
+      "alvo": "Prefeitura de Goiatuba — Aviso de Chamamento Público nº 4/2026 — do Edital é a seleção de projetos culturais p… — Goiás / Goiatuba",
+      "qualidade": "validada",
+      "comprovados": 9,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
+      "pagina_oficial": "https://goiatuba.go.gov.br/wp-content/uploads/2026/09/Publicacao-Diario-Municipal-de-Goias.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital é relacionado à cultura e artes no estado de Goiás, sendo relevante para associações comunitárias que atuam nesse setor.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa atuar na área de cultura, artes ou expressão cultural, e estar registrada legalmente para participar do edital.",
-        "proximo_passo": "Verificar os requisitos e anexos do edital para se inscrever no processo seletivo.",
-        "risco": "A falta de informações sobre prazos, requisitos e anexos pode impedir a participação no edital."
+        "por_que": "O edital foi comprovado com informações sobre o objeto, prazo de inscrição, valor, órgão financiador, território, esfera, requisitos, anexos e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no prazo de 2026-10-01 a 2026-10-13, apresentando a documentação exigida e anexos, com projeto cultural relacionado à área de atuação da AMC.",
+        "proximo_passo": "Verificar os requisitos e anexos do edital e se inscrever no prazo estabelecido.",
+        "risco": "A falta de documentação exigida ou atraso na inscrição pode impedir o acesso ao apoio financeiro."
       },
       "erro": null,
-      "segundos": 603,
+      "segundos": 589,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-7af887c528ec",
+      "fontes_oficiais": 8,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-f0a331588d82",
       "encontrou": {
         "Objeto": {
-          "valor": "O edital financia ações culturais e artísticas no âmbito do Canto da Primavera.",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "valor": "seleção de projetos culturais para recebimento de apoio financeiro, com o objetivo de incentivar as diversas formas de manifestações culturais no Município de Goiatuba-GO",
+          "trecho": "O objeto do Edital é a seleção de projetos culturais para recebimento de apoio financeiro, com o objetivo de incentivar as diversas formas de manifestações culturais no Município d",
           "oficial": true,
           "dispensado": false
         },
+        "Prazo de inscrição": {
+          "valor": "2026-10-01 a 2026-10-13",
+          "trecho": "As inscrições poderão ser realizadas presencialmente, no período de 01 de outubro de 2026 a 13 de outubro de 2026",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "dispensado — O apoio é em espécie, sem valor em dinheiro.",
+          "trecho": "não especificado",
+          "oficial": false,
+          "dispensado": true
+        },
         "Órgão / financiador": {
-          "valor": "Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult)",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "valor": "Prefeitura de Goiatuba",
+          "trecho": "Município de Goiatuba-GO, por meio da Secretaria Municipal de Educação e Cultura",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "trecho": "no Município de Goiatuba-GO",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "trecho": "seleção de projetos culturais",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "documentação exigida",
+          "trecho": "mediante envio da documentação exigida",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura",
+      "financiador": "Prefeitura Municipal de Goiatuba",
       "indicios": [],
       "rotas": [
         "site_do_financiador"
