@@ -1,5 +1,5 @@
 {
- "em": "2026-11-01T13:07:05+00:00",
+ "em": "2026-11-01T14:39:33+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 58,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 46823
+  "exemplos_da_rede": 46900
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.7777
+    4.0119
    ],
    [
     "origem:rota original",
-    3.3403
+    3.5607
    ],
    [
     "tok:inscricoes",
@@ -37,11 +37,11 @@
    ],
    [
     "tok:sitemap",
-    2.149
+    2.1379
    ],
    [
     "tok:xml",
-    2.149
+    2.1379
    ],
    [
     "tok:aldirblanc",
@@ -49,7 +49,7 @@
    ],
    [
     "tok:edital",
-    1.9629
+    1.952
    ],
    [
     "tok:leipaulogustavo",
@@ -63,7 +63,7 @@
   "piores_sinais": [
    [
     "tipo:site_oficial",
-    -2.4819
+    -2.2815
    ],
    [
     "tok:pgt",
@@ -79,7 +79,7 @@
    ],
    [
     "origem:padrão",
-    -3.1306
+    -3.1636
    ],
    [
     "tok:content",
@@ -676,7 +676,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T03:53:22+00:00",
+    "em": "2026-11-01T14:39:33+00:00",
     "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -827,7 +827,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T03:53:19+00:00",
+    "em": "2026-11-01T14:39:30+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1007,7 +1007,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T02:21:53+00:00",
+    "em": "2026-11-01T14:38:43+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1034,8 +1034,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T02:22:18+00:00",
-    "testes": 12,
+    "em": "2026-11-01T14:39:13+00:00",
+    "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1061,8 +1061,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T03:53:01+00:00",
-    "testes": 13,
+    "em": "2026-11-01T14:39:15+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1741,10 +1741,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 3,
-    "aprendido_em": "2026-11-01T02:22:10+00:00"
+    "aprendido_em": "2026-11-01T14:39:00+00:00"
    },
    "afinado": {
-    "em": "2026-11-01T02:22:10+00:00",
+    "em": "2026-11-01T14:39:00+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://skoll.org/feed",
