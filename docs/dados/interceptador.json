@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-01T23:07:37+00:00",
+  "em": "2026-11-01T23:17:16+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-01T22:53:46+00:00",
+  "ultimo_voo": "2026-11-01T23:09:49+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,68 +39,83 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 11,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.1
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 6.9
   },
   "missoes": [
     {
-      "em": "2026-11-01T22:53:46+00:00",
+      "em": "2026-11-01T23:09:49+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Fundo Ecos oferece até R$ 150 mil para projetos socioambientais na Amazônia Legal — Brasil",
-      "qualidade": "insuficiente",
-      "comprovados": 2,
+      "alvo": "Instituto Sociedade População e Natureza — Fundo Ecos — Brasil",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://fundoecos.org.br/edital/edital-47-ticcas/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O Ministério do Meio Ambiente e Mudança do Clima é o órgão responsável pelo Fundo Ecos, que oferece recursos para projetos socioambientais na Amazônia Legal.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é a promoção de projetos socioambientais na Amazônia Legal, e demonstrar como sua atuação na área de assistência social, cultura, educação ou esporte se encaixa nesse escopo.",
-        "proximo_passo": "Verificar os requisitos e anexos do edital, que não foram encontrados, e se alinhar ao objeto do financiamento.",
-        "risco": "A falta de informações sobre requisitos, prazos e área de atuação pode impedir a associação de se candidatar adequadamente ao edital."
+        "por_que": "O Instituto Sociedade, População e Natureza – ISPN é um financiador comprovado que realiza editais de fomento para organizações da sociedade civil, com foco em meio ambiente.",
+        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é fortalecer a segurança alimentar e governança de territórios de comunidades do Cerrado e da Caatinga, e demonstrar como sua atuação se encaixa nesse escopo.",
+        "proximo_passo": "Consultar os anexos do edital para entender os requisitos específicos e preparar a proposta de acordo com o objeto e a área de atuação definidos.",
+        "risco": "A falta de alinhamento com o objeto do edital e a não apresentação de documentos necessários podem impedir o acesso ao financiamento."
       },
       "erro": null,
-      "segundos": 785,
+      "segundos": 413,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-4b98f4845091",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-a916ebb8dd67",
       "encontrou": {
+        "Objeto": {
+          "valor": "Fortalecimento de Segurança Alimentar e Governança de Territórios de Comunidades do Cerrado e da Caatinga",
+          "trecho": "Fortalecimento de Segurança Alimentar e Governança de Territórios de Comunidades do Cerrado e da Caatinga",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Ministério do Meio Ambiente e Mudança do Clima",
-          "trecho": "Ministério do Meio Ambiente — Ministério do Meio Ambiente e Mudança do Clima",
-          "oficial": false,
+          "valor": "Instituto Sociedade, População e Natureza – ISPN",
+          "trecho": "Instituto Sociedade, População e Natureza – ISPN",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "nacional",
+          "trecho": "Territórios Conservados por Povos Indígenas e Comunidades Tradicionais e Locais - TICCAS: Fortalecimento de Segurança Alimentar e Governança de Territórios de Comunidades do Cerrad",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "meio_ambiente",
+          "trecho": "Fortalecimento de Segurança Alimentar e Governança de Territórios de Comunidades do Cerrado e da Caatinga",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Ministério do Meio Ambiente e Mudança do Clima",
+      "financiador": "Fundo Ecos",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
