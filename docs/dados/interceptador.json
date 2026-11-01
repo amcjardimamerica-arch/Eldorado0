@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-01T07:20:42+00:00",
+  "em": "2026-11-01T07:38:22+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-01T07:08:43+00:00",
+  "ultimo_voo": "2026-11-01T07:22:49+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,84 +39,80 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 10,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.3
+    "tempo_medio_min": 14.8
   },
   "missoes": [
     {
-      "em": "2026-11-01T07:08:43+00:00",
+      "em": "2026-11-01T07:22:49+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "PNAB Goiânia 2024 - Edital 08 - Fomento Cultural I – Criação, Montagem, Circulação — Goiás / Goiânia",
-      "qualidade": "insuficiente",
-      "comprovados": 9,
+      "alvo": "PNAB Goiânia 2024 - Edital 09 - Fomento Cultural II – Ações Formativas — Goiás / Goiânia",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
-        "Prazo de recurso"
+        "Resultado",
+        "Prazo de recurso",
+        "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://culteditais.cultura.gov.br/files/opportunity/8278/edital-pnab-fomento.pdf",
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, resultado, valor, órgão financiador, território, esfera, requisitos e anexos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ser uma entidade cultural, ter representante, atender aos requisitos de valor, cotas, pontos e situação, e anexar os documentos solicitados.",
-        "proximo_passo": "Verificar os requisitos do edital e preparar os documentos necessários para a inscrição.",
-        "risco": "A falta de documentos ou não atendimento aos requisitos pode impedir o acesso ao edital."
+        "serve_como_fonte": "nao",
+        "por_que": "O edital mencionado refere-se a Peixoto de Azevedo (MT), não a Goiânia (GO). Portanto, não é uma fonte válida para organizações comunitárias de Goiânia.",
+        "para_a_amc": "Para acessar o edital, uma associação comunitária de Goiânia precisaria atuar e residir no Município de Peixoto de Azevedo há pelo menos seis (6) meses, o que não é possível, já que o edital é voltado para Peixoto de Azevedo (MT), não para Goiânia (GO).",
+        "proximo_passo": "Consultar editais específicos para Goiânia (GO) que sejam voltados para as áreas de atuação da associação comunitária.",
+        "risco": "A localização do edital (Peixoto de Azevedo - MT) não é compatível com a localização da associação comunitária em Goiânia (GO), o que impossibilita o acesso ao edital."
       },
       "erro": null,
-      "segundos": 677,
+      "segundos": 885,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-6f92b1128d4a",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Área de atuação",
+      "id": "op-697bd59d47f8",
       "encontrou": {
         "Objeto": {
-          "valor": "Fomento a Projetos Continuados de Pontos de Cultura da Cidade de Goiânia",
-          "trecho": "Edital de Fomento a Projetos Continuados de Pontos de Cultura da Cidade de Goiânia",
-          "oficial": false,
+          "valor": "seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I",
+          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de mani",
+          "oficial": true,
           "dispensado": false
         },
         "Valor": {
-          "valor": "R$ 150.000,00",
-          "trecho": "Associação Companhia Corpo na Contramão Taina Luiza Barreto Marques R$ 150.000,00 AC 82 Aprovado pela Ampla",
-          "oficial": false,
+          "valor": "R$ 241.393,00 (duzentos e quarenta e um mil trezentos e noventa e três reais)",
+          "trecho": "O valor total deste edital é de R$ 241.393,00 (duzentos e quarenta e um mil trezentos e noventa e três reais).",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia - Secretaria Municipal de Cultura",
-          "trecho": "Prefeitura de Goiânia Secretaria Municipal de Cultura",
-          "oficial": false,
+          "valor": "Secretaria Municipal de educação e cultura",
+          "trecho": "Deste modo, a Secretaria Municipal de educação e cultura torna público o presente edital elaborado com base na Lei nº 14.399/2022 (Lei PNAB), na Lei nº 14.903/2024 (Marco regulatór",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "Edital de Fomento a Projetos Continuados de Pontos de Cultura da Cidade de Goiânia",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "Edital de Fomento a Projetos Continuados de Pontos de Cultura da Cidade de Goiânia",
-          "oficial": false,
+          "valor": "MT",
+          "trecho": "O agente cultural pode ser: I - Pessoa física II- Microempreendedor Individual (MEI) III- Pessoa jurídica com fins lucrativos (Ex.: empresa de pequeno porte, empresa de grande port",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "Entidade Cultural, Representante, Valor, Cotas, Pontos, Situação",
-          "trecho": "Entidade Cultural Representante Valor Cotas Pontos Situação",
-          "oficial": false,
+          "valor": "atuar e residir no Município de Peixoto de Azevedo há pelo menos seis (6) meses",
+          "trecho": "Pode se inscrever no Edital qualquer agente cultural que atua e reside no Município de Peixoto de Azevedo há pelo menos seis (6) meses.",
+          "oficial": true,
           "dispensado": false
         }
       },
@@ -124,11 +120,7 @@
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
