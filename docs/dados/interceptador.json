@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-01T15:25:52+00:00",
+  "em": "2026-11-01T15:53:06+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-01T15:12:48+00:00",
+  "ultimo_voo": "2026-11-01T15:28:07+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,88 +39,68 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 10,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.4
+    "tempo_medio_min": 24.3
   },
   "missoes": [
     {
-      "em": "2026-11-01T15:12:48+00:00",
+      "em": "2026-11-01T15:28:07+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anexo 6 – Declaração de Representação de Grupo ou Coletivo – Edital 12 (Docx) — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 7,
+      "alvo": "Anexo 6 – Declaração de Representação de Grupo ou Coletivo – Edital 12 (Docx) — Goiás / Goiânia",
+      "qualidade": "insuficiente",
+      "comprovados": 0,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Requisitos"
+        "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://www10.goiania.go.gov.br/DadosINTER/PUBLIC/arq_8325470.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O documento menciona o Objeto, Valor, Órgão / financiador, Território, Esfera e Anexos, o que é suficiente para identificar a fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar um projeto cultural relacionado ao evento MotoGP Goiânia, com foco em atividades de cultura, educação, esporte ou assistência social, conforme o Objeto do edital.",
-        "proximo_passo": "Consultar os anexos para obter informações detalhadas sobre os requisitos e ações necessárias para participar do edital.",
-        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se preparar adequadamente para o processo seletivo."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações comprovadas sobre o edital mencionado para servir como fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria fazer o que for necessário para atender aos requisitos do edital, que não foram especificados.",
+        "proximo_passo": "Consultar o edital completo para obter detalhes sobre os requisitos e procedimentos.",
+        "risco": "A falta de informações específicas pode impedir a elaboração de uma proposta adequada."
       },
       "erro": null,
-      "segundos": 744,
+      "segundos": 1459,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Requisitos",
-      "id": "op-835f2a0f2965",
-      "encontrou": {
-        "Objeto": {
-          "valor": "seleção de projetos culturais para fomento, com vistas à composição da programação cultural vinculada ao evento MotoGP Goiânia",
-          "trecho": "1.1.Constuiobjetodesteeditalaseleçãodeprojetosars�co-culturaisparafomento,comvistasàcomposição daprogramaçãoculturalvinculadaaoeventoMotoGPGoiânia.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$90.000,00 (noventamilreais)",
-          "trecho": "4.2.OvalorglobaldesnadoaoeditalserádeR$90.000,00(noventamilreais).",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia/Secretaria Municipal da Casa Civil",
-          "trecho": "PrefeituradeGoiânia/SecretariaMunicipaldaCasaCivil AssinadoDigitalmente:www.goiania.go.gov.br",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "GOIÂNIA",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "1.1.Constuiobjetodesteeditalaseleçãodeprojetosars�co-culturaisparafomento,comvistasàcomposição daprogramaçãoculturalvinculadaaoeventoMotoGPGoiânia.",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "GOIÂNIA/GO",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-b89cb42bf389",
+      "encontrou": {},
+      "financiador": "GOIÂNIA/GOIÁS",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
