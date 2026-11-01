@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-01T05:52:11+00:00",
+  "em": "2026-11-01T06:06:31+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-01T05:43:02+00:00",
+  "ultimo_voo": "2026-11-01T05:53:40+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,68 +39,88 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 10,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.6
+    "tempo_medio_min": 12.0
   },
   "missoes": [
     {
-      "em": "2026-11-01T05:43:02+00:00",
+      "em": "2026-11-01T05:53:40+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Chamamento Público Nº 8/2026 — Política Nacional Aldir Blanc (Silvânia-GO) — Goiás — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 2,
+      "alvo": "Cidade ocidental — chamada pública para a lei 14.399/2022 – política nacional aldir blanc pnab — Goiás / Cidade Ocidental",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Território",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://cidadeocidental.go.gov.br/prefeitura-de-cidade-ocidental-divulga-edital-de-pre-matricula-para-o-ensino-em-tempo-integral/",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O órgão financiador não é o Governo Federal, e o chamamento público não fornece informações sobre objeto, prazo, valor ou requisitos necessários para acesso.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange sua área de atuação e se há requisitos não mencionados, como registro em cartório ou comprovação de atuação na área social.",
-        "proximo_passo": "Consultar o órgão financiador diretamente para obter informações detalhadas sobre o edital.",
-        "risco": "A falta de informações essenciais como objeto, prazo e requisitos pode impedir a associação de se candidatar ao edital."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital comprovado menciona o objeto, órgão financiador, território, esfera, requisitos, anexos e área de atuação, o que é suficiente para servir como fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria consultar os editais para verificar as regras específicas de cada modalidade, além das datas e horários de abertura, e garantir que sua área de atuação (assistência social, cultura, educação, esporte) esteja alinhada com o objeto do edital.",
+        "proximo_passo": "Consultar os editais disponíveis para verificar as regras específicas e datas de abertura das modalidades.",
+        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a participação efetiva da associação."
       },
       "erro": null,
-      "segundos": 515,
+      "segundos": 721,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-501c2c79ca1c",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-5a0af4d053dc",
       "encontrou": {
+        "Objeto": {
+          "valor": "processos de pré-matrícula e transferências de estudantes da rede municipal de ensino",
+          "trecho": "A Secretaria Municipal de Educação e Cultura de Cidade Ocidental divulgou os editais referentes aos processos de pré-matrícula e às transferências de estudantes da rede municipal d",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Governo Municipal de Silvânia",
-          "trecho": "Governo Municipal de Silvânia",
-          "oficial": false,
+          "valor": "Prefeitura Municipal de Cidade Ocidental",
+          "trecho": "Secretaria Municipal de Educação e Cultura de Cidade Ocidental",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Cidade Ocidental-GO",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "educacao",
+          "trecho": "Secretaria Municipal de Educação e Cultura de Cidade Ocidental",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "consultar os editais para verificar as regras específicas de cada modalidade, além das datas e dos horários de abertura ",
+          "trecho": "A Secretaria orienta os interessados a consultar os editais para verificar as regras específicas de cada modalidade, além das datas e dos horários de abertura dos links para realiz",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Governo Municipal de Silvânia",
+      "financiador": "Prefeitura de Cidade Ocidental",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_municipal",
+        "financiador_programa_edital"
       ]
     }
   ],
