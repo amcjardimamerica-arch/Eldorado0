@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-01T10:17:33+00:00",
+  "em": "2026-11-01T10:37:20+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-01T10:06:29+00:00",
+  "ultimo_voo": "2026-11-01T10:19:18+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,63 +44,92 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 10,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.4
+    "tempo_medio_min": 17.1
   },
   "missoes": [
     {
-      "em": "2026-11-01T10:06:29+00:00",
+      "em": "2026-11-01T10:19:18+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Secretaria de Estado da Cultura (Secult) — Secult abre chamamento público para OSC atuar na operacionalização … — Goiás",
+      "alvo": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável (Semad) — Edital para credenciamento — Goi… — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": 0,
+      "comprovados": 9,
+      "dispensados": 2,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações suficientes para confirmar a existência do edital ou seus detalhes.",
-        "para_a_amc": null,
-        "proximo_passo": null,
-        "risco": "A falta de informações pode impedir a identificação correta do edital e sua participação."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital comprova a existência de uma oportunidade de credenciamento para organizações da sociedade civil no Estado de Goiás, com foco na sociobiodiversidade do Cerrado Goiano.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria estar legalmente constituída há pelo menos 1 ano, ter atividades diretamente relacionadas à sociobiodiversidade do Cerrado Goiano, possuir representante legal, não ter fins lucrativos, ser constituída por pessoas físicas de baixa renda e possuir infraestrutura mínima para desenvolver projetos ambientais.",
+        "proximo_passo": "Verificar os requisitos do edital e preparar os documentos necessários para o credenciamento.",
+        "risco": "A associação pode não atender aos requisitos legais ou não possuir a infraestrutura mínima necessária para o credenciamento."
       },
       "erro": null,
-      "segundos": 623,
+      "segundos": 1029,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-258a0859666a",
-      "encontrou": {},
-      "financiador": "Secretaria de Estado da Cultura (Secult)",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-d323464c4331",
+      "encontrou": {
+        "Objeto": {
+          "valor": "CREDENCIAMENTO DE ORGANIZAÇÕES DA SOCIEDADE CIVIL (ASSOCIAÇÕES/COOPERATIVAS RELACIONADAS À SOCIOBIODIVERSIDADE DO CERRADO GOIANO) COM SEDE NO ESTADO DE GOIÁS, INTERESSADAS EM SUBMETER PROPOSTAS PARA O BANCO DE PROJETOS DA AUTOCOMPOSIÇÃO AMBIENTAL DA SEMAD",
+          "trecho": "1.1. O presente edital tem por objeto o CREDENCIAMENTO DE ORGANIZAÇÕES DA SOCIEDADE CIVIL (ASSOCIAÇÕES/COOPERATIVAS RELACIONADAS À SOCIOBIODIVERSIDADE DO CERRADO GOIANO) COM SEDE N",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O prazo de inscrição é de 45 dias a contar da publicação do edital.",
+          "trecho": "Prazo – 45 (quarenta e cinco) dias a contar da publicação deste edital. [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Valor": {
+          "valor": "dispensado — O apoio é em espécie, sem valor em dinheiro.",
+          "trecho": "O credenciamento não garante a contemplação imediata do projeto, mas habilita sua inclusão no banco de projetos da SEMAD para posterior execução, de acordo com a oportunidade e dis",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Órgão / financiador": {
+          "valor": "SECRETARIA DE ESTADO DE MEIO AMBIENTE E DESENVOLVIMENTO SUSTENTÁVEL - SEMAD",
+          "trecho": "O ESTADO DE GOIÁS, pessoa jurídica de direito público interno, por intermédio da SECRETARIA DE ESTADO DE MEIO AMBIENTE E DESENVOLVIMENTO SUSTENTÁVEL - SEMAD",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "ORGANIZAÇÕES DA SOCIEDADE CIVIL (ASSOCIAÇÕES/COOPERATIVAS RELACIONADAS À SOCIOBIODIVERSIDADE DO CERRADO GOIANO) COM SEDE NO ESTADO DE GOIÁS",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "meio_ambiente",
+          "trecho": "ORGANIZAÇÕES DA SOCIEDADE CIVIL (ASSOCIAÇÕES/COOPERATIVAS RELACIONADAS À SOCIOBIODIVERSIDADE DO CERRADO GOIANO) COM SEDE NO ESTADO DE GOIÁS",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Estejam legalmente constituídas há pelo menos 1 (um) ano;, Suas atividades estejam diretamente relacionadas à produtos e serviços da sociobiodiversidade do Cerrado goiano;, Possuam representante legal;, Não possua fins lucrativos;, Sejam constituídas por pessoas físicas de baixa renda;, Possuam infr",
+          "trecho": "4.1. Podem se credenciar todas as associações e cooperativas que atendam aos seguintes critérios mínimos: I - Estejam legalmente constituídas há pelo menos 1 (um) ano; II - Suas at",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável (Semad)",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
