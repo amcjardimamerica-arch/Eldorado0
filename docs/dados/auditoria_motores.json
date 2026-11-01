@@ -1,13 +1,13 @@
 {
-  "em": "2026-10-31T15:02:47+00:00",
+  "em": "2026-11-01T15:45:44+00:00",
   "cadencia_dias": 7,
   "total": 33,
   "por_estado": {
     "BLOQUEADO": 4,
-    "PARADO": 6,
+    "PARADO": 7,
     "NUNCA RODOU": 0,
     "LENDO SEM ACHAR": 3,
-    "FUNCIONANDO": 20
+    "FUNCIONANDO": 19
   },
   "correcoes_de_hoje": [
     "regulares nunca mais são cortados pelo limite de 40 por execução (as 4 plataformas ficaram 14 dias sem rodar por isso)",
@@ -71,9 +71,21 @@
       "nome": "MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)",
       "tipo": "ministerio_publico",
       "estado": "PARADO",
-      "base": "13 dias sem leitura (cadência de 7)",
+      "base": "14 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-18T04:27",
       "achados_total": 1,
+      "conselho": {
+        "neutro_decide": "sem parecer registrado — avaliar na próxima auditoria"
+      }
+    },
+    {
+      "id": "mptgo-destinacao",
+      "nome": "MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)",
+      "tipo": "ministerio_publico",
+      "estado": "PARADO",
+      "base": "8 dias sem leitura (cadência de 7)",
+      "ultima": "2026-10-24T11:16",
+      "achados_total": 2,
       "conselho": {
         "neutro_decide": "sem parecer registrado — avaliar na próxima auditoria"
       }
@@ -83,7 +95,7 @@
       "nome": "MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)",
       "tipo": "ministerio_publico",
       "estado": "PARADO",
-      "base": "13 dias sem leitura (cadência de 7)",
+      "base": "14 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-18T04:29",
       "achados_total": 0,
       "conselho": {
@@ -95,7 +107,7 @@
       "nome": "Oportunidade Estaduais Governamentais de Goiás",
       "tipo": "plataforma",
       "estado": "PARADO",
-      "base": "8 dias sem leitura (cadência de 7)",
+      "base": "9 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-23T11:58",
       "achados_total": 1,
       "conselho": {
@@ -107,7 +119,7 @@
       "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
       "tipo": "plataforma",
       "estado": "PARADO",
-      "base": "13 dias sem leitura (cadência de 7)",
+      "base": "14 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-18T06:49",
       "achados_total": 13,
       "conselho": {
@@ -121,7 +133,7 @@
       "nome": "PNCP — API de contratações (chamamentos e credenciamentos)",
       "tipo": "api",
       "estado": "PARADO",
-      "base": "13 dias sem leitura (cadência de 7)",
+      "base": "14 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-18T03:25",
       "achados_total": 261,
       "conselho": {
@@ -135,7 +147,7 @@
       "nome": "Motor de Recorrência — revisita as oportunidades identificadas",
       "tipo": "recorrencia",
       "estado": "PARADO",
-      "base": "13 dias sem leitura (cadência de 7)",
+      "base": "14 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-18T03:25",
       "achados_total": 30,
       "conselho": {
@@ -245,9 +257,9 @@
       "nome": "Editais incentivados — sites das maiores contribuintes do ICMS de Goiás (destinação tributária)",
       "tipo": "empresas_incentivo",
       "estado": "FUNCIONANDO",
-      "base": "leu em 2026-10-31; 49 achado(s) acumulado(s)",
-      "ultima": "2026-10-31T03:03",
-      "achados_total": 49,
+      "base": "leu em 2026-11-01; 50 achado(s) acumulado(s)",
+      "ultima": "2026-11-01T03:04",
+      "achados_total": 50,
       "conselho": {
         "pessimista": "1 achado em 20 dias procurando o SITE da empresa.",
         "otimista": "o radar mostrou o Porto Itapoá publicando EDITAL próprio de renúncia fiscal — modelo replicável.",
@@ -278,18 +290,6 @@
         "pessimista": "motor novo (02/10): reúne dje-tjgo e cnj-destinacoes, que somaram 80 leituras e 0 achado — liam páginas 404 do TJGO, o Jusbrasil e a página de compras do CNJ; o TJGO recusa IP estrangeiro, então o essencial depende do computador do titular.",
         "otimista": "cada comarca abre o seu edital de prestações pecuniárias e o TJGO anuncia com o PDF (Goiânia 01/2026, Rio Verde 01/2026, Piracanjuba, Cocalzinho, Itaberaí); o RSS do TJGO pagina e traz tudo, e a regra exige só o cadastro no Banco de Projetos Sociais.",
         "neutro_decide": "criado em 02/10: RSS do TJGO + notícia + PDF (local), busca do CNJ (nuvem), PNCP cruzado e habilitação prévia; Goiânia primeiro; edital de outro estado é ruído; DJEN desligado (só intimações com nomes de réus)."
-      }
-    },
-    {
-      "id": "mptgo-destinacao",
-      "nome": "MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)",
-      "tipo": "ministerio_publico",
-      "estado": "FUNCIONANDO",
-      "base": "leu em 2026-10-24; 2 achado(s) acumulado(s)",
-      "ultima": "2026-10-24T11:16",
-      "achados_total": 2,
-      "conselho": {
-        "neutro_decide": "sem parecer registrado — avaliar na próxima auditoria"
       }
     },
     {
