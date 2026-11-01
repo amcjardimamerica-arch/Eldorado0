@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-01T11:16:11+00:00",
+  "em": "2026-11-01T11:20:43+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-01T11:06:07+00:00",
+  "ultimo_voo": "2026-11-01T11:18:12+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,75 +43,44 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 10,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.4
+    "tempo_medio_min": 2.0
   },
   "missoes": [
     {
-      "em": "2026-11-01T11:06:07+00:00",
+      "em": "2026-11-01T11:18:12+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "A prefeitura municipal de novo gama - go torna público que realizará chamamento público, por credenciamento, p… — Goiás / Novo Gama",
+      "alvo": "A presidente do CONSELHO REGIONAL DE CONTABILIDADE DO ESTADO DE GOIAS torna público, aos interessados, que rea… — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 4,
-      "dispensados": 0,
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
-      ],
-      "pagina_oficial": "https://acessoainformacao.novogama.go.gov.br/informacao/licitacao/id=4101",
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a realização de um chamamento público para seleção de empresa do ramo da construção civil, com foco em construção de unidades habitacionais em áreas do município de Novo Gama, GO.",
-        "para_a_amc": "Uma associação comunitária de Goiânia (assistência social, cultura, educação, esporte) precisaria se associar a uma empresa do ramo da construção civil credenciada para participar do chamamento público, já que o edital não contempla organizações da sociedade civil como beneficiárias diretas.",
-        "proximo_passo": "Pesquisar e se associar a uma empresa do ramo da construção civil que esteja interessada em participar do chamamento público mencionado no edital.",
-        "risco": "O edital não menciona a participação de organizações da sociedade civil, o que pode impedir o acesso direto da AMC ao chamamento público."
-      },
-      "erro": null,
-      "segundos": 565,
+      "nao_resolvidos": null,
+      "pagina_oficial": null,
+      "parecer_fonte": {},
+      "erro": "nenhuma fonte legível",
+      "segundos": 118,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 4,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-aa8ca0952ad1",
-      "encontrou": {
-        "Objeto": {
-          "valor": "A PREFEITURA MUNICIPAL DE NOVO GAMA - GO TORNA PÚBLICO QUE REALIZARÁ CHAMAMENTO PÚBLICO, POR CREDENCIAMENTO, PARA SELECIONAR EMPRESA DO RAMO DA CONSTRUÇÃO CIVIL, COM COMPROVADA CAPACIDADE TÉCNICA, INTERESSADA EM APRESENTAR PROJETOS E CONSTRUIR UNIDADES HABITACIONAIS EM LOTES E ÁREA DE PROPRIEDADE DO MUNICÍPIO DE NOVO GAMA - GO.",
-          "trecho": "A PREFEITURA MUNICIPAL DE NOVO GAMA - GO TORNA PÚBLICO QUE REALIZARÁ CHAMAMENTO PÚBLICO, POR CREDENCIAMENTO, PARA SELECIONAR EMPRESA DO RAMO DA CONSTRUÇÃO CIVIL, COM COMPROVADA CAP",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "PREFEITURA MUNICIPAL DE NOVO GAMA",
-          "trecho": "Órgão: PREFEITURA MUNICIPAL DE NOVO GAMA",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "NOVO GAMA - GO",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "Prefeitura Municipal de Novo Gama - GO",
+      "avaliacao": "falhou: nenhuma fonte legível",
+      "id": "op-b459228761c4",
+      "encontrou": {},
+      "financiador": "CONSELHO REGIONAL DE CONTABILIDADE DO ESTADO DE GOIAS",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
