@@ -584,8 +584,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-218": {
-  "em": "2026-10-31T18:48:01+00:00",
-  "testes": 11,
+  "em": "2026-11-01T06:57:51+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -610,7 +610,17 @@
     "funcionou": false
    },
    {
-    "url": "https://prosas.com.br/feed",
+    "url": "https://prosas.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://prosas.com.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -620,7 +630,7 @@
     "funcionou": false
    },
    {
-    "url": "https://prosas.com.br/sitemap.xml",
+    "url": "https://prosas.com.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1072,7 +1082,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-01T05:27:17+00:00",
+  "em": "2026-11-01T06:59:26+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1205,7 +1215,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-223": {
-  "em": "2026-10-31T18:48:45+00:00",
+  "em": "2026-11-01T06:58:33+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -1232,7 +1242,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacao.bradesco/feed",
+    "url": "https://fundacao.bradesco/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
@@ -1243,7 +1253,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacao.bradesco/sitemap.xml",
+    "url": "https://fundacao.bradesco/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
@@ -1654,20 +1664,10 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "judiciario-tjgo": {
-  "em": "2026-10-31T18:48:47+00:00",
+  "em": "2026-11-01T06:58:36+00:00",
   "testes": 16,
   "melhor": null,
   "detalhe": [
-   {
-    "url": "https://www.tjgo.jus.br",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
    {
     "url": "https://www.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
@@ -1680,6 +1680,26 @@
    },
    {
     "url": "https://corregedoria.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://corregedoria.tjgo.jus.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1709,18 +1729,8 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://corregedoria.tjgo.jus.br/sitemap.xml",
-    "origem": "padrão",
+    "url": "https://www.tjgo.jus.br",
+    "origem": "biblioteca",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -1800,8 +1810,8 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs",
-    "origem": "rota original",
+    "url": "https://www.tjgo.jus.br/noticias",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -1810,8 +1820,8 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs?format=feed&type=rss",
-    "origem": "rota original",
+    "url": "https://corregedoria.tjgo.jus.br/noticias",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -3228,27 +3238,27 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-235": {
-  "em": "2026-10-31T20:19:35+00:00",
-  "testes": 17,
+  "em": "2026-11-01T06:59:23+00:00",
+  "testes": 16,
   "melhor": null,
   "detalhe": [
-   {
-    "url": "https://www.institutolojasrenner.org.br/edital/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 19,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
    {
     "url": "https://www.institutolojasrenner.org.br/edital-encantando-comunidades/",
     "origem": "rota original",
     "via": "direto",
     "pontos": 1,
     "links": 22,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutolojasrenner.org.br/edital/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 19,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -3287,13 +3297,14 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutolojasrenner.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.institutolojasrenner.org.br/sitemap.xml",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
-    "links": 0,
+    "links": 4,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "formato": "sitemap/feed",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -3304,17 +3315,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutolojasrenner.org.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 4,
-    "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -3361,17 +3361,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutolojasrenner.org.br/wp-content/uploads/2026/03/EDITAL-NACIONAL-DE-SELECAO-DE-PROJETOS-DE-INCLUSAO-SOCIOPRODUTIVA-DE-MULHERES-INSTITUTO-LOJAS-RENNER.pdf",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutolojasrenner.org.br/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
@@ -3392,7 +3381,28 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutolojasrenner.org.br/wp-content/uploads/2026/03/EDITAL-NACIONAL-DE-SELECAO-DE-PROJETOS-DE-INCLUSAO-SOCIOPRODUTIVA-DE-MULHERES-INSTITUTO-LOJAS-RENNER.pdf",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutolojasrenner.org.br/chamamentos",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutolojasrenner.org.br/licitacoes",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3405,7 +3415,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-acessoainformacao-cavalcante-go-gov-br": {
-  "em": "2026-10-31T20:19:37+00:00",
+  "em": "2026-11-01T06:59:26+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -3430,7 +3440,7 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/feed",
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3440,7 +3450,7 @@
     "funcionou": false
    },
    {
-    "url": "https://acessoainformacao.cavalcante.go.gov.br/sitemap.xml",
+    "url": "https://acessoainformacao.cavalcante.go.gov.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8706,7 +8716,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-249": {
-  "em": "2026-10-31T18:48:14+00:00",
+  "em": "2026-11-01T06:57:56+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
@@ -8716,17 +8726,6 @@
     "via": "direto",
     "pontos": 1,
     "links": 105,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.fordfoundation.org/work/our-grants/grant-opportunities/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 1,
-    "links": 87,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -8743,22 +8742,33 @@
     "funcionou": false
    },
    {
-    "url": "https://www.fordfoundation.org/feed",
+    "url": "https://www.fordfoundation.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 10,
+    "pontos": 2,
+    "links": 20,
     "sinais": 0,
     "formato": "sitemap/feed",
     "erro": null,
     "funcionou": false
    },
    {
-    "url": "https://www.fordfoundation.org/sitemap.xml",
+    "url": "https://www.fordfoundation.org/work/our-grants/grant-opportunities/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 1,
+    "links": 87,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.fordfoundation.org/feed",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 2,
-    "links": 20,
+    "pontos": 1,
+    "links": 10,
     "sinais": 0,
     "formato": "sitemap/feed",
     "erro": null,
