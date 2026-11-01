@@ -1,5 +1,5 @@
 {
- "em": "2026-11-01T02:22:18+00:00",
+ "em": "2026-11-01T03:53:46+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 58,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 46280
+  "exemplos_da_rede": 46358
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.9703
+    3.9618
    ],
    [
     "origem:rota original",
-    3.4248
+    3.5457
    ],
    [
     "tok:inscricoes",
@@ -37,19 +37,19 @@
    ],
    [
     "tok:edital",
-    2.2245
+    2.2109
+   ],
+   [
+    "tok:sitemap",
+    2.0541
+   ],
+   [
+    "tok:xml",
+    2.0541
    ],
    [
     "tok:aldirblanc",
     2.0389
-   ],
-   [
-    "tok:sitemap",
-    1.913
-   ],
-   [
-    "tok:xml",
-    1.913
    ],
    [
     "tok:leipaulogustavo",
@@ -79,7 +79,7 @@
    ],
    [
     "origem:padrão",
-    -3.2519
+    -3.2846
    ],
    [
     "tok:content",
@@ -676,7 +676,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-31T15:47:57+00:00",
+    "em": "2026-11-01T03:53:22+00:00",
     "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -827,7 +827,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-31T15:47:54+00:00",
+    "em": "2026-11-01T03:53:19+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1061,8 +1061,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-31T15:47:38+00:00",
-    "testes": 12,
+    "em": "2026-11-01T03:53:01+00:00",
+    "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1169,8 +1169,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-31T17:15:01+00:00",
-    "testes": 13,
+    "em": "2026-11-01T03:53:26+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1250,7 +1250,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-10-31T15:47:57+00:00",
+    "em": "2026-11-01T03:53:23+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1700,10 +1700,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 18,
-    "aprendido_em": "2026-10-31T17:15:19+00:00"
+    "aprendido_em": "2026-11-01T03:53:46+00:00"
    },
    "afinado": {
-    "em": "2026-10-31T17:15:19+00:00",
+    "em": "2026-11-01T03:53:46+00:00",
     "testes": 13,
     "melhor": {
      "url": "https://oakfnd.org/sitemap.xml",
@@ -3498,10 +3498,10 @@
    "nome": "Editais incentivados — sites das maiores contribuintes do ICMS de Goiás (destinação tributária)",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 45,
-   "ok": 37,
+   "leituras": 46,
+   "ok": 38,
    "ultima": {
-    "em": "2026-10-31T03:03:49+00:00",
+    "em": "2026-11-01T03:04:12+00:00",
     "classe": "ok",
     "motivo": ""
    },

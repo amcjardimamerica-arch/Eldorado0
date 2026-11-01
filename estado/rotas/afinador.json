@@ -1072,7 +1072,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-01T02:22:18+00:00",
+  "em": "2026-11-01T03:53:46+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -4392,7 +4392,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-229": {
-  "em": "2026-10-31T15:47:54+00:00",
+  "em": "2026-11-01T03:53:19+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -7975,8 +7975,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-243": {
-  "em": "2026-10-31T15:47:38+00:00",
-  "testes": 12,
+  "em": "2026-11-01T03:53:01+00:00",
+  "testes": 13,
   "melhor": null,
   "detalhe": [
    {
@@ -7998,6 +7998,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.worldbank.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
     "funcionou": false
    },
    {
@@ -9162,8 +9172,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-253": {
-  "em": "2026-10-31T17:15:01+00:00",
-  "testes": 13,
+  "em": "2026-11-01T03:53:26+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -9196,16 +9206,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.microsoft.com/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
     "funcionou": false
    },
    {
@@ -9857,7 +9857,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-245": {
-  "em": "2026-10-31T15:47:57+00:00",
+  "em": "2026-11-01T03:53:23+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -10761,7 +10761,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-260": {
-  "em": "2026-10-31T17:15:19+00:00",
+  "em": "2026-11-01T03:53:46+00:00",
   "testes": 13,
   "melhor": {
    "url": "https://oakfnd.org/sitemap.xml",
@@ -10816,6 +10816,16 @@
     "funcionou": false
    },
    {
+    "url": "https://oakfnd.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://oakfnd.org/submit-enquiry/",
     "origem": "biblioteca",
     "via": "direto",
@@ -10824,16 +10834,6 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://oakfnd.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -12899,20 +12899,10 @@
   "resultado": "rota nova em teste"
  },
  "judiciario-cnj-tjgo": {
-  "em": "2026-10-31T15:47:57+00:00",
+  "em": "2026-11-01T03:53:22+00:00",
   "testes": 16,
   "melhor": null,
   "detalhe": [
-   {
-    "url": "https://www.tjgo.jus.br",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
    {
     "url": "https://www.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
@@ -12946,6 +12936,16 @@
    {
     "url": "https://corregedoria.tjgo.jus.br/feed",
     "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br",
+    "origem": "biblioteca",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -13045,8 +13045,8 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs",
-    "origem": "rota original",
+    "url": "https://www.tjgo.jus.br/noticias",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -13055,8 +13055,8 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs?format=feed&type=rss",
-    "origem": "rota original",
+    "url": "https://corregedoria.tjgo.jus.br/noticias",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
