@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-01T22:06:53+00:00",
+  "em": "2026-11-01T21:49:02+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-01T21:50:54+00:00",
+  "ultimo_voo": "2026-11-01T21:34:44+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -46,68 +46,64 @@
     "serve_como_fonte": {
       "sim": 1
     },
-    "estrelas_de_ouro": 11,
+    "estrelas_de_ouro": 10,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.2
+    "tempo_medio_min": 13.5
   },
   "missoes": [
     {
-      "em": "2026-11-01T21:50:54+00:00",
+      "em": "2026-11-01T21:34:44+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "BNDES Periferias em Rede – Chamada Permanente do Fundo Socioambiental (6º ciclo) — Brasil — Brasil",
+      "alvo": "BNDES Periferias em Rede – Chamada Permanente do Fundo Socioambiental (6º ciclo) — Brasil",
       "qualidade": "insuficiente",
-      "comprovados": 6,
+      "comprovados": 4,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
+        "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://conexoes.bndes.gov.br/chamadas-e-editais",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado fornece informações essenciais sobre o edital, como objeto, prazo de inscrição, órgão financiador, esfera e requisitos, permitindo a análise do edital para a associação comunitária.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria ser uma pessoa jurídica de direito privado sem fins lucrativos, alinhar seu projeto ao objeto do edital (inclusão produtiva urbana em favelas e periferias) e seguir as instruções dos anexos para inscrição.",
-        "proximo_passo": "Verificar os anexos do edital e preparar o projeto conforme os requisitos apresentados.",
-        "risco": "A associação pode não atender aos requisitos do edital, como ser uma pessoa jurídica sem fins lucrativos ou não alinhar seu projeto ao objeto do edital."
+        "por_que": "O edital foi comprovado com informações sobre seu objeto, financiador e território, o que permite identificar sua relevância para a AMC.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria alinhar seu projeto à inclusão produtiva urbana em favelas e periferias, demonstrando como sua atuação em assistência social, cultura, educação e esporte contribui para esse objetivo.",
+        "proximo_passo": "Consultar o edital completo para verificar os requisitos e prazos de inscrição, mesmo que não estejam disponíveis no texto comprovado.",
+        "risco": "A falta de informações sobre prazos, requisitos e área de atuação pode dificultar o acesso ao edital e a elaboração de um projeto adequado."
       },
       "erro": null,
-      "segundos": 912,
+      "segundos": 809,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 4,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-b71c74957a10",
+      "id": "op-2fe4d5ad7972",
       "encontrou": {
         "Objeto": {
-          "valor": "Inclusão produtiva urbana em favelas e periferias em uma única frente",
-          "trecho": "Serão elegíveis propostas relacionadas à inclusão produtiva urbana em favelas e periferias em uma única frente, a saber:",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-08-18 a 2026-12-04",
-          "trecho": "Ciclo para recebimento de propostas: de 18.08.2026 até às 17h de 04.12.2026.",
-          "oficial": false,
+          "valor": "inclusão produtiva urbana em favelas e periferias",
+          "trecho": "Serão elegíveis propostas relacionadas à inclusão produtiva urbana em favelas e periferias na frente BNDES Periferias em Rede",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
           "valor": "BNDES",
-          "trecho": "BNDES Periferias",
-          "oficial": false,
+          "trecho": "BNDES Conexões | Editais e chamadas abertos",
+          "oficial": true,
           "dispensado": false
         },
-        "Requisitos": {
-          "valor": "Pessoas jurídicas de direito privado sem fins lucrativos.",
-          "trecho": "Quem pode solicitar Pessoas jurídicas de direito privado sem fins lucrativos.",
-          "oficial": false,
+        "Território": {
+          "valor": "nacional",
+          "trecho": "Periferias e coletivos urbanos",
+          "oficial": true,
           "dispensado": false
         }
       },
@@ -115,11 +111,7 @@
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
