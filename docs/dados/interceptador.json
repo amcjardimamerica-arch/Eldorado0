@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T19:20:15+00:00",
+  "em": "2026-11-02T19:35:10+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T19:11:15+00:00",
+  "ultimo_voo": "2026-11-02T19:22:25+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,95 +38,79 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
-    "parciais": 0,
+    "validadas": 0,
+    "parciais": 1,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.4
+    "tempo_medio_min": 12.1
   },
   "missoes": [
     {
-      "em": "2026-11-02T19:11:15+00:00",
+      "em": "2026-11-02T19:22:25+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital 003/2023 Áreas - Inciso II - Goiânia-GO — Goiás / Goiânia — Goiás / Goiânia",
-      "qualidade": "validada",
-      "comprovados": 9,
-      "dispensados": 0,
+      "alvo": "Edital 003/26 Direitos Funcionais — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 7,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor"
       ],
-      "pagina_oficial": "https://culteditais.cultura.gov.br/files/opportunity/8212/003-2026-edital-de-subsidio-docx-3.pdf",
+      "pagina_oficial": "https://www.goiania.go.gov.br/wp-content/uploads/2026/10/Edital-resolve.pdf",
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com dados específicos como objeto, prazo de inscrição, valor e requisitos.",
-        "para_a_amc": "A associação comunitária precisaria ser organizada e mantida por pessoas ou organizações da sociedade civil, ter pelo menos 2 anos de funcionamento regular comprovado e se dedicar a realizar atividades artísticas para acessar o subsídio.",
-        "proximo_passo": "Verificar os anexos e preparar os documentos necessários para a inscrição no prazo de 2026-06-17 a 2026-07-20.",
-        "risco": "A falta de documentos comprovativos de funcionamento regular ou atividades artísticas pode impedir o acesso ao subsídio."
+        "serve_como_fonte": "nao",
+        "por_que": "O edital menciona direitos funcionais para a folha de pagamento, mas não aborda financiamento ou apoio a organizações da sociedade civil.",
+        "para_a_amc": "A associação comunitária precisaria verificar se há alinhamento com os direitos funcionais mencionados, mas não há informações sobre como acessar recursos ou apoio institucional.",
+        "proximo_passo": "Consultar diretamente a Prefeitura de Goiânia para esclarecer se há programas de apoio ou financiamento para organizações da sociedade civil.",
+        "risco": "Não há informações sobre como a AME pode se beneficiar deste edital, o que pode impedir o acesso a recursos ou apoio institucional."
       },
       "erro": null,
-      "segundos": 506,
+      "segundos": 726,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 9,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "op-308a1ac67676",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-nova-2a156b780d10",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de espaços, ambientes e iniciativas artístico-culturais para receberem subsídio para manutenção",
-          "trecho": "O objeto deste Edital é a seleção de espaços, ambientes e iniciativas artístico-culturais para receberem subsídio para manutenção nas categorias descritas no Anexo I, com o objetiv",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-06-17 a 2026-07-20",
-          "trecho": "De 09 horas do dia 17 de junho de 2026 até 17 horas do dia 20 de julho de 2026.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$60.000,00 (sessenta mil reais)",
-          "trecho": "O valor total deste edital é de R$60.000,00 (sessenta mil reais).",
+          "valor": "estabelecer condições para a implementação, na folha de pagamento, dos seguintes direitos funcionais",
+          "trecho": "O presente Edital tem por objeto estabelecer condições para a implementação, na folha de pagamento, dos seguintes direitos funcionais:",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Secretaria Municipal de Cultura e Turismo de Ibiúna",
-          "trecho": "A Secretaria Municipal de Cultura e Turismo de Ibiúna torna público o presente edital elaborado com base na Lei nº 14.399/2022 (Lei PNAB), na Lei nº 14.903/2024 (Marco regulatório ",
+          "valor": "Prefeitura de Goiânia",
+          "trecho": "PREFEITURA DE GOIÂNIA",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "SP",
-          "trecho": "As condições para a execução da PNAB foram criadas por meio do engajamento da sociedade e o presente edital destina-se a apoiar a manutenção de espaços, ambientes e iniciativas art",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "A PNAB objetiva também estruturar o sistema federativo de financiamento à cultura mediante repasses da União aos Estados, Distrito Federal e Municípios de forma continuada.",
+          "valor": "GO",
+          "trecho": "Secretaria Municipal de Saúde – SMS; Secretaria Municipal de Políticas para as Mulheres, Assistência Social e Direitos Humanos - SEMASDH; Agência Municipal do Meio Ambiente - AMMA;",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "seja organizado e mantido por pessoas, organizações da sociedade civil, microempresas culturais, organizações culturais , tenha pelo menos 2 (dois) anos de funcionamento regular comprovado e que se dediquem a realizar atividades artísticas",
-          "trecho": "Pode se inscrever no Edital agentes culturais que constituem espaços, ambientes e iniciativas artístico-culturais localizados no Município de Ibiúna e que tenham as seguintes carac",
+          "valor": "preenchido os requisitos previstos na legislação aplicável à respectiva carreira, direito tenha sido reconhecido em parecer técnico emitido pelo órgão municipal competente",
+          "trecho": "O Edital é destinado, exclusivamente, para os servidores da Secretaria Municipal de Saúde – SMS; Secretaria Municipal de Políticas para as Mulheres, Assistência Social e Direitos H",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria Municipal de Cultura",
+      "financiador": "Prefeitura de Goiânia",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
