@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T13:34:34+00:00",
+  "em": "2026-11-02T13:51:33+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T13:28:01+00:00",
+  "ultimo_voo": "2026-11-02T13:36:57+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,71 +48,65 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 6.0
+    "tempo_medio_min": 13.9
   },
   "missoes": [
     {
-      "em": "2026-11-02T13:28:01+00:00",
+      "em": "2026-11-02T13:36:57+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Cidade ocidental — editais da pnab públicados — Goiás / Cidade Ocidental — Goiás / Cidade Ocidental",
-      "qualidade": "insuficiente",
+      "alvo": "Cidade ocidental — edital de chamamento público nº 006/2023 – promoção das expressões culturais em cidade ocid… — Goiás / Cidade Ocidental",
+      "qualidade": "parcial",
       "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Esfera",
         "Requisitos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://acessoainformacao.cidadeocidental.go.gov.br/cidadao/concursos_selecoes/selecao/id=24",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição, órgão financiador, território e anexos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital de fomento à cultura da Prefeitura Municipal de Cidade Ocidental, apresentando os anexos exigidos e demonstrando sua atuação na área de cultura.",
-        "proximo_passo": "Consultar os anexos do edital para entender melhor os requisitos e o processo de inscrição.",
-        "risco": "O prazo de inscrição não foi especificado, o que pode dificultar a definição do momento adequado para se candidatar."
+        "por_que": "O edital foi comprovado com informações sobre o objeto, órgão financiador, território, esfera e área de atuação, o que permite identificar sua relevância para a AMC.",
+        "para_a_amc": "A associação comunitária precisaria se inscrever no edital, apresentando propostas relacionadas à promoção das expressões culturais em Cidade Ocidental, Goiás, conforme o objeto do edital.",
+        "proximo_passo": "Consultar os anexos do edital para obter detalhes sobre a inscrição e os critérios de seleção.",
+        "risco": "O prazo de inscrição não foi encontrado, o que pode impedir a participação da AMC no edital."
       },
       "erro": null,
-      "segundos": 359,
+      "segundos": 833,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-32c6572387b5",
+      "fontes_oficiais": 3,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-53bc38247d14",
       "encontrou": {
         "Objeto": {
-          "valor": "fomento à cultura",
-          "trecho": "Os editais da Política Nacional Aldir Blanc de Fomento à Cultura (PNAB) já foram publicados!",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "? a 2026-07-31",
-          "trecho": "As inscrições seguem abertas até 31 de julho de 2026.",
+          "valor": "Promoção das expressões culturais em Cidade Ocidental GO",
+          "trecho": "EDITAL DE CHAMAMENTO PÚBLICO Nº 006/2023 - PROMOÇÃO DAS EXPRESSÕES CULTURAIS EM CIDADE OCIDENTAL GO",
           "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Cidade Ocidental",
-          "trecho": "EDITAIS DA PNAB PÚBLICADOS - Prefeitura Municipal de Cidade",
-          "oficial": false,
+          "valor": "Prefeitura de Cidade Ocidental - GO",
+          "trecho": "Portal do Cidadão da Prefeitura de Cidade Ocidental - GO",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Cidade Ocidental-GO",
-          "oficial": false,
+          "trecho": "Cidade Ocidental - GO",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "Os editais da Política Nacional Aldir Blanc de Fomento à Cultura (PNAB) já foram publicados!",
+          "trecho": "PROMOÇÃO DAS EXPRESSÕES CULTURAIS EM CIDADE OCIDENTAL GO",
           "oficial": false,
           "dispensado": false
         }
