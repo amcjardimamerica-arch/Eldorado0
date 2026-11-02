@@ -1,5 +1,5 @@
 {
- "em": "2026-11-02T15:14:40+00:00",
+ "em": "2026-11-02T16:46:41+00:00",
  "conselho": [
   {
    "id": "falso_verde",
@@ -52,12 +52,12 @@
    "ESTRANGULADO": 1,
    "CEGO": 59,
    "SILÊNCIO LONGO": 42,
-   "CUSTO SEM RETORNO": 2,
    "PÁGINA VAZIA": 9,
    "INTERMITENTE": 4,
    "VAZAMENTO": 33,
    "CADÊNCIA FORA DO RITMO": 1,
-   "CONGELADO": 27
+   "CONGELADO": 27,
+   "CUSTO SEM RETORNO": 1
   }
  },
  "cobertura": {
@@ -375,7 +375,7 @@
    ],
    "achados_total": 29,
    "valor": "ruído",
-   "achados_30d": 16,
+   "achados_30d": 14,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -403,12 +403,12 @@
     {
      "url": "https://portal.al.go.leg.br/",
      "http": 200,
-     "bytes": 133728
+     "bytes": 133729
     },
     {
      "url": "https://portal.al.go.leg.br/credenciamento-imprensa",
      "http": 200,
-     "bytes": 102775
+     "bytes": 102776
     }
    ],
    "achados_total": 3,
@@ -417,7 +417,7 @@
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "quarta"
+    "dia_forte": "sexta"
    },
    "falhas": [
     {
@@ -429,7 +429,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "98 leituras vazias seguidas",
+     "prova": "99 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -441,8 +441,8 @@
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
-     "bytes": 148133,
-     "itens": 0
+     "bytes": 283527,
+     "itens": 25
     },
     {
      "url": "https://www.goiania.go.leg.br",
@@ -469,14 +469,8 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "146 leituras vazias seguidas",
+     "prova": "147 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
-    },
-    {
-     "conselheiro": "redundancia",
-     "falha": "CUSTO SEM RETORNO",
-     "prova": "188 s na última leitura sem achado",
-     "melhoria": "reduzir páginas por leitura ou a cadência; transferir o tempo para motores que rendem"
     }
    ]
   },
@@ -540,7 +534,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "91 leituras vazias seguidas",
+     "prova": "92 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -2549,7 +2543,7 @@
     {
      "url": "https://www.congressonacional.leg.br",
      "http": 200,
-     "bytes": 146217,
+     "bytes": 146225,
      "itens": 11
     },
     {
@@ -2571,13 +2565,13 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CEGO",
-     "prova": "respondeu 200 em 28 de 28 dias e não achou nada em 30 dias",
+     "prova": "respondeu 200 em 29 de 29 dias e não achou nada em 30 dias",
      "melhoria": "conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)"
     },
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "99 leituras vazias seguidas",
+     "prova": "100 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
