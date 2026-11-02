@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T11:41:18+00:00",
+  "em": "2026-11-02T11:56:30+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T11:26:40+00:00",
+  "ultimo_voo": "2026-11-02T11:43:40+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,63 +48,65 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.0
+    "tempo_medio_min": 12.2
   },
   "missoes": [
     {
-      "em": "2026-11-02T11:26:40+00:00",
+      "em": "2026-11-02T11:43:40+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Chamamento público para fins de credenciamento de pessoas físicas e jurídicas, com atuação artística de nível…… — Goiás",
+      "alvo": "Chamamento público para qualificação de pessoas jurídicas dedireito privado, sem fins lucrativos, como organiz… — Goiás / Porangatu",
       "qualidade": "insuficiente",
-      "comprovados": 5,
+      "comprovados": 3,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Objeto",
-        "Prazo de inscrição",
+        "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Território",
         "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://goias.gov.br/governo/editais/edital-n-02-2025-sgg/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O chamamento público foi comprovado com data de resultado e informações sobre o órgão financiador e território, indicando que é uma fonte válida para credenciamento.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se credenciar conforme o chamamento público, apresentando os documentos necessários e atendendo aos critérios de atuação artística, mesmo que os requisitos específicos não estejam disponíveis.",
-        "proximo_passo": "Consultar os anexos do chamamento público para obter detalhes sobre os requisitos e procedimentos de credenciamento.",
-        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir a associação de se qualificar adequadamente para o credenciamento."
+        "por_que": "O texto comprovado menciona o prazo de inscrição, órgão financiador e esfera da chamada, o que é suficiente para identificar a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende aos requisitos da chamada, mesmo que não estejam explicitados, e se alinha ao objeto da chamada, que não foi encontrado no texto.",
+        "proximo_passo": "Consultar o edital completo para verificar os requisitos e o objeto da chamada.",
+        "risco": "A falta de informações sobre requisitos e objeto pode impedir a associação de se qualificar para o edital."
       },
       "erro": null,
-      "segundos": 839,
+      "segundos": 729,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 4,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-457280912c7f",
+      "id": "op-6f9819b24392",
       "encontrou": {
-        "Órgão / financiador": {
-          "valor": "SECRETARIA-GERAL DE GOVERNO",
-          "trecho": "SECRETARIA-GERAL DE GOVERNO",
-          "oficial": true,
+        "Prazo de inscrição": {
+          "valor": "2026-09-08 a 2026-09-16",
+          "trecho": "Inscrições são gratuitas e podem ser feitas de 8 a 16 de setembro",
+          "oficial": false,
           "dispensado": false
         },
-        "Território": {
-          "valor": "GO",
-          "trecho": "ESTADO DE GOIÁS",
-          "oficial": true,
+        "Órgão / financiador": {
+          "valor": "Prefeitura de Porangatu",
+          "trecho": "Prefeitura de Porangatu",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura e Economia Criativa de Goiás",
+      "financiador": "Prefeitura de Porangatu",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_municipal",
+        "financiador_programa_edital"
       ]
     }
   ],
