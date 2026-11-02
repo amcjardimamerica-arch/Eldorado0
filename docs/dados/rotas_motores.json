@@ -1,5 +1,5 @@
 {
- "em": "2026-11-02T02:55:49+00:00",
+ "em": "2026-11-02T04:25:10+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 58,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 47543
+  "exemplos_da_rede": 47620
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    4.0365
+    4.026
    ],
    [
     "origem:rota original",
-    3.5547
+    3.8364
    ],
    [
     "tok:inscricoes",
@@ -37,11 +37,11 @@
    ],
    [
     "tok:sitemap",
-    2.117
+    2.146
    ],
    [
     "tok:xml",
-    2.117
+    2.146
    ],
    [
     "tok:aldirblanc",
@@ -52,18 +52,18 @@
     1.8789
    ],
    [
-    "tok:editais",
-    1.8353
-   ],
-   [
     "tok:abre",
     1.7846
+   ],
+   [
+    "tok:editais",
+    1.7709
    ]
   ],
   "piores_sinais": [
    [
-    "tipo:site_oficial",
-    -2.2979
+    "tipo:internacional",
+    -2.275
    ],
    [
     "tok:pgt",
@@ -79,7 +79,7 @@
    ],
    [
     "origem:padrão",
-    -3.099
+    -3.1375
    ],
    [
     "tok:content",
@@ -478,8 +478,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T17:46:25+00:00",
-    "testes": 15,
+    "em": "2026-11-02T04:24:55+00:00",
+    "testes": 14,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -800,7 +800,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T16:12:17+00:00",
+    "em": "2026-11-02T04:24:37+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1088,7 +1088,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T17:46:53+00:00",
+    "em": "2026-11-02T04:25:10+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1250,7 +1250,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T16:11:52+00:00",
+    "em": "2026-11-02T04:24:17+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1700,10 +1700,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 18,
-    "aprendido_em": "2026-11-01T16:12:10+00:00"
+    "aprendido_em": "2026-11-02T04:24:32+00:00"
    },
    "afinado": {
-    "em": "2026-11-01T16:12:10+00:00",
+    "em": "2026-11-02T04:24:32+00:00",
     "testes": 13,
     "melhor": {
      "url": "https://oakfnd.org/sitemap.xml",
@@ -1947,10 +1947,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 11,
-    "aprendido_em": "2026-11-01T16:11:51+00:00"
+    "aprendido_em": "2026-11-02T04:24:16+00:00"
    },
    "afinado": {
-    "em": "2026-11-01T16:11:51+00:00",
+    "em": "2026-11-02T04:24:16+00:00",
     "testes": 13,
     "melhor": {
      "url": "https://www.ipora.pr.gov.br/",
@@ -3498,10 +3498,10 @@
    "nome": "Editais incentivados — sites das maiores contribuintes do ICMS de Goiás (destinação tributária)",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 46,
-   "ok": 38,
+   "leituras": 47,
+   "ok": 39,
    "ultima": {
-    "em": "2026-11-01T03:04:12+00:00",
+    "em": "2026-11-02T03:04:12+00:00",
     "classe": "ok",
     "motivo": ""
    },
