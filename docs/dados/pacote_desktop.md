@@ -1,4 +1,4 @@
-# Pacote para o Claude Desktop — 2026-11-01
+# Pacote para o Claude Desktop — 2026-11-02
 
 Você está no computador do titular, com IP brasileiro, navegador e o repositório Eldorado clonado. Use o modelo mais forte disponível (Opus 5) para validar. Trabalhe nesta ordem, sem pular etapa, e devolva os arquivos no formato indicado. Nunca estime datas; quando não houver base, escreva o motivo.
 
@@ -16,41 +16,97 @@ Nenhum motor aguardando coleta local hoje.
 
 ## Etapa 2 — motores em alerta (não leram, falharam ou passaram da cadência)
 
-- **MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)** — 14 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)** — 15 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)** — 8 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)** — 9 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)** — 14 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)** — 15 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **Oportunidade Estaduais Governamentais de Goiás** — 9 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Oportunidade Estaduais Governamentais de Goiás** — 10 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://goias.gov.br/ e procurar: 
     - abrir https://goias.gov.br/cultura/editais/ e procurar: 
     - abrir https://goias.gov.br/social/editais/ e procurar: 
-- **Prefeituras das 25 maiores cidades de Goiás — portais de editais** — 14 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Prefeituras das 25 maiores cidades de Goiás — portais de editais** — 15 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://queridodiario.ok.org.br/ e procurar: chamamento público, termo de fomento, termo de colaboração, edital de seleção, organizações da sociedade civil, fundo municipal
     - abrir https://pncp.gov.br/ e procurar: chamamento público, termo de fomento, termo de colaboração, edital de seleção, organizações da sociedade civil, fundo municipal
-- **Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)** — 6 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)** — 7 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/lei-rouanet e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
     - abrir https://salic.cultura.gov.br/ e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
     - abrir https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/lei-rouanet/legislacao e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
-- **Adaptador Mapas Culturais — oportunidades com inscrição aberta** — 14 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Adaptador Mapas Culturais — oportunidades com inscrição aberta** — 15 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://mapa.cultura.gov.br/api/opportunity/find?@select=id,name,registrationTo e procurar: 
     - abrir https://mapa.cultura.gov.br/oportunidades/ e procurar: 
-- **Adaptador WordPress — sites oficiais pela API pública** — 14 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Adaptador WordPress — sites oficiais pela API pública** — 15 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://goias.gov.br/cultura/wp-json/wp/v2/posts?search=edital e procurar: 
     - abrir https://goias.gov.br/cultura/editais/ e procurar: 
-- **PNCP — API de contratações (chamamentos e credenciamentos)** — 14 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **PNCP — API de contratações (chamamentos e credenciamentos)** — 15 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://pncp.gov.br/api/consulta/v1/contratacoes/proposta e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
     - abrir https://pncp.gov.br/api/search/ e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
     - abrir https://pncp.gov.br/pncp-api/v1/orgaos/ e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
-- **Motor de Recorrência — revisita as oportunidades identificadas** — 14 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Motor de Recorrência — revisita as oportunidades identificadas** — 15 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://observatorio3setor.org.br/editais/ e procurar: retificação, prorrogação, errata, resultado, homologação, classificados
+- **Diário Oficial do Município de Goiânia** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://www.goiania.go.gov.br/shtml//portal/casacivil/lista_diarios.asp?ano=2026 e procurar: Aldir Blanc, aviso de chamamento, chamada pública, chamamento público, CMAS, CMDCA
+    - abrir https://api.queridodiario.ok.org.br/gazettes?territory_ids=5208707 e procurar: Aldir Blanc, aviso de chamamento, chamada pública, chamamento público, CMAS, CMDCA
+    - abrir https://www.goiania.go.gov.br/secretaria/secretaria-municipal-de-cultura/ e procurar: Aldir Blanc, aviso de chamamento, chamada pública, chamamento público, CMAS, CMDCA
+- **Diário Oficial do Estado de Goiás** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://diariooficial.abc.go.gov.br/busca/busca/buscar/query/0/ e procurar: chamamento público, termo de fomento, termo de colaboração, PNAB, Goyazes, Fundo de Arte e Cultura
+    - abrir https://diariooficial.abc.go.gov.br/apifront/portal/edicoes/edicoes_from_data/ e procurar: chamamento público, termo de fomento, termo de colaboração, PNAB, Goyazes, Fundo de Arte e Cultura
+    - abrir https://goias.gov.br/cultura/chamamentos-publicos-2026-lei-13-019-14/ e procurar: chamamento público, termo de fomento, termo de colaboração, PNAB, Goyazes, Fundo de Arte e Cultura
+- **Diário Oficial da União** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://www.in.gov.br/leiturajornal?secao=do1 e procurar: chamamento público, edital de chamamento, seleção pública, FNCA, CONANDA, Fundo Nacional do Idoso
+    - abrir https://www.in.gov.br/leiturajornal?secao=do3 e procurar: chamamento público, edital de chamamento, seleção pública, FNCA, CONANDA, Fundo Nacional do Idoso
+    - abrir https://www.in.gov.br/leiturajornal?secao=do1e e procurar: chamamento público, edital de chamamento, seleção pública, FNCA, CONANDA, Fundo Nacional do Idoso
+- **CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024)** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs?format=feed&type=rss e procurar: prestação pecuniária, penas pecuniárias, penas alternativas, transação penal, projetos sociais, finalidade social
+    - abrir https://www.tjgo.jus.br/files/ e procurar: prestação pecuniária, penas pecuniárias, penas alternativas, transação penal, projetos sociais, finalidade social
+    - abrir https://corregedoria.tjgo.jus.br/basesocial e procurar: prestação pecuniária, penas pecuniárias, penas alternativas, transação penal, projetos sociais, finalidade social
+- **Outras Oportunidades 1/8** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://www.boavista.rr.gov.br/ e procurar: 
+    - abrir https://conexoes.bndes.gov.br/chamadas-e-editais e procurar: 
+    - abrir https://www.institutococacolabrasil.com.br/ e procurar: 
+- **Outras Oportunidades 2/8** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://www.cnbb.org.br/cnbb-lanca-edital-do-fns-para-apoio-financeiro-a-projetos-relativos-a-campanha-da-fraternidade-2026 e procurar: 
+    - abrir https://institutogenesio.org.br/wp-content/uploads/2026/10/Edital-Nao-Incentivado-Instituto-Genesio-A-Mendes-2026.pdf?utm_source=Link+da+Bio+do+RD+Station&utm_medium=social&utm_campaign=CTA+no+Link+da+Bio e procurar: 
+    - abrir https://fns.cnbb.org.br/fundo/informativo/index e procurar: 
+- **Outras Oportunidades 3/8** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://luppa.comidadoamanha.org/wp-content/uploads/2026/09/Edital-Chamada-Cidades-LUPPA-6a-Edicao.pdf e procurar: 
+    - abrir https://itamarandibahoje.com.br/business2/edital-de-projetos-fundacao-aperam-acesita-social-2026.html e procurar: 
+    - abrir https://iracemapolis.siscam.com.br/arquivo?Id=41354 e procurar: 
+- **Outras Oportunidades 4/8** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://mapacultural.secult.ce.gov.br/oportunidade/8356/ e procurar: 
+    - abrir https://transparencia.agilicloud.com.br/novaubirata/licitacoes/licitacao?id=12891 e procurar: 
+    - abrir https://cultura.rs.gov.br/edital-para-projetos-culturais-em-escolas-de-tempo-integral-esta-com-inscricoes-abertas e procurar: 
+- **Outras Oportunidades 5/8** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://notasocial.com.br/edital-de-selecao-de-projetos-incentivados-2025-abre-inscricoes/ e procurar: 
+    - abrir https://www.energiaesaneamento.org.br/sonhar-o-mundo-2026-abre-inscricoes-para-instituicoes-de-todo-o-estado-de-sao-paulo/ e procurar: 
+    - abrir https://www.agenciadobem.org.br/inscricoes-abertas-para-o-vi-edital-de-microprojetos-da-rede-do-bem/ e procurar: 
+- **Outras Oportunidades 6/8** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://www.crars.org.br/arquivos/chamamentos/Edital_de_Chamamento_Publico_004-2026.pdf e procurar: 
+    - abrir https://www.microsoft.com/pt-br/corporate-responsibility/philanthropies e procurar: 
+    - abrir http://www.itauvivermais.com.br/pilares/editais/edital-ivm-2026 e procurar: 
+- **Outras Oportunidades 7/8** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://fundopositivo.org.br/editais/ e procurar: 
+    - abrir https://editaisdobrasil.com/calendario e procurar: 
+    - abrir https://potengi.ce.gov.br/publicacoes.php?pagina=1 e procurar: 
+- **Outras Oportunidades 8/8** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://aceleradora.glocal.org.br/ e procurar: 
+    - abrir https://voluntariadoempresarial.org.br/voluntariado-de-alto-impacto-para-as-osc-atraindo-e-mantendo-parcerias-de-valor e procurar: 
+    - abrir https://traineeunileverexecutivo.com.br/ e procurar: 
+- **Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://captadores.org.br/editais/ e procurar: edital, projetos incentivados, seleção de projetos, FIA, Fundo do Idoso, Lei de Incentivo ao Esporte
+- **GIFE — Grupo de Institutos, Fundações e Empresas** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://gife.org.br/wp-json/wp/v2/posts e procurar: edital, chamada, seleção de projetos, inscrições, instituto, fundação
+    - abrir https://capta.org.br/wp-json/wp/v2/posts e procurar: edital, chamada, seleção de projetos, inscrições, instituto, fundação
+- **Piloto - Espião — busca aberta no terceiro setor** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://html.duckduckgo.com/html/?q= e procurar: edital, chamada pública, chamamento, seleção de projetos, seleção pública, inscrições abertas
+    - abrir https://html.duckduckgo.com/html/?q=plataforma+editais+terceiro+setor+brasil e procurar: edital, chamada pública, chamamento, seleção de projetos, seleção pública, inscrições abertas
 
 Para cada rota aberta, liste os editais publicados nos últimos 30 dias que casem com o léxico e que ainda não estejam em `biblioteca_alexandria/livros/_acervo/editais/`. Devolva em `biblioteca_alexandria/livros/_acervo/editais/coleta_navegador/<data>-motores.json` no formato `{"<id ou novo>": {"objeto":..., "inicio":..., "fim":..., "pagina_oficial":..., "observacao":...}}`.
 
