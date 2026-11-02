@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T09:06:41+00:00",
+  "em": "2026-11-02T09:24:59+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T08:52:41+00:00",
+  "ultimo_voo": "2026-11-02T09:08:56+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,79 +39,87 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 0,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 13.2
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 15.2
   },
   "missoes": [
     {
-      "em": "2026-11-02T08:52:41+00:00",
+      "em": "2026-11-02T09:08:56+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Banco para ONG (1) — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "CHAMADA PÚBLICA FAPEG Nº 08/2026 - 2º CICLO – Programa Goiás pelo Mundo – Mobilidade Internacional – Participa… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://aprovai.brada.social/",
+      "pagina_oficial": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2026/04/CHAMADA_nbsp_FAPEG_nbsp_N__nbsp_08.2026.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona requisitos como documento ou exigência, o que é relevante para a avaliação de elegibilidade de uma associação comunitária.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar documentos ou cumprir exigências específicas estabelecidas no edital para acessar o fomento.",
-        "proximo_passo": "Verificar os requisitos específicos mencionados no edital e garantir que a associação comunitária esteja em conformidade com eles.",
-        "risco": "A falta de documentos ou a não conformidade com as exigências pode impedir a associação comunitária de acessar o fomento."
+        "por_que": "O texto fornece informações sobre o objeto, valor, financiador, território, esfera e requisitos da chamada pública, o que é suficiente para compreender a base da oportunidade.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ter pesquisadores ou pesquisadoras com experiência na área de pesquisa do trabalho a ser apresentado, estar adimplente com todas as responsabilidades relacionadas à FAPEG, não ter sido beneficiada com auxílio da mesma natureza nos 6 meses anteriores à nova solicitação e anexar os documentos exigidos.",
+        "proximo_passo": "Verificar se os requisitos são atendidos e preparar os documentos necessários para a inscrição.",
+        "risco": "Não estar adimplente com as responsabilidades da FAPEG ou já ter recebido auxílio da mesma natureza nos 6 meses anteriores pode impedir o acesso."
       },
       "erro": null,
-      "segundos": 794,
+      "segundos": 915,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 3,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-nova-f5c9f4eb4a7b",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Área de atuação",
+      "id": "op-b64986a41193",
       "encontrou": {
+        "Objeto": {
+          "valor": "apoiar a participação de pesquisadores e pesquisadoras em eventos acadêmicos no exterior, em todas as áreas do conhecimento",
+          "trecho": "O Programa de Mobilidade Internacional – Participação em Eventos no Exterior (2026- 2027) tem por objeto apoiar a participação de pesquisadores e pesquisadoras em eventos acadêmico",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 10.000,00 (dez mil reais)",
+          "trecho": "Serão ofertadas 120 auxílios na forma de ajuda de custo individual no valor de R$ 10.000,00 (dez mil reais).",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
+          "trecho": "A Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) torna público o lançamento da presente Chamada Pública,",
+          "oficial": true,
+          "dispensado": false
+        },
         "Território": {
-          "valor": "nacional",
-          "trecho": "E todas as outras leis de incentivo fiscal vigentes!",
+          "valor": "GO",
+          "trecho": "Instituição de Ensino Superior (IES) sediada no Estado de Goiás, pública ou privada, sem fins lucrativos ou comunitária.",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "documento ou exigência",
-          "trecho": "Diga o nome do seu projeto de impacto;",
+          "valor": "possuir experiência na área de pesquisa do trabalho a ser apresentado, estar adimplente com todas as responsabilidades relacionadas à FAPEG (emissão de pareceres, entrega de relatórios e pres, não ter sido beneficiado com auxílio da mesma natureza nos 6 meses anteriores à nova solicitação",
+          "trecho": "O proponente dev:e :possuir experiência na área de pesquisa do trabalho a ser apresentado e estar adimplente com todas as responsabilidades relacionadas à FAPEG (emissão de parecer",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Instituto Social Crescer",
-      "indicios": [
-        {
-          "url": "https://institutosocialcrescervida.blogspot.com/search/label/banco%20para%20ONG",
-          "tipo": "noticia"
-        }
-      ],
+      "financiador": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
+      "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador"
       ]
     }
   ],
