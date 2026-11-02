@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T06:21:40+00:00",
+  "em": "2026-11-02T06:34:54+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T06:06:51+00:00",
+  "ultimo_voo": "2026-11-02T06:23:43+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,94 +43,38 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.1
+    "tempo_medio_min": 10.6
   },
   "missoes": [
     {
-      "em": "2026-11-02T06:06:51+00:00",
+      "em": "2026-11-02T06:23:43+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Aviso de Chamamento Público nº 1/2026 — Goiás — Goiás",
+      "alvo": "Aviso de Chamamento Público – Complexo Serra Dourada — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 9,
-      "dispensados": 0,
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Resultado",
-        "Prazo de recurso"
-      ],
+      "nao_resolvidos": null,
       "pagina_oficial": null,
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O aviso de chamamento público descreve claramente o objeto, prazo de inscrição, valor, requisitos e área de atuação, sendo suficiente para orientar a associação comunitária.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ter sua sede ou atividade no Município de Nova América – Go, atuar ou residir lá há pelo menos 06 (seis) meses, e apresentar um projeto cultural dentro das categorias descritas no Anexo I.",
-        "proximo_passo": "Verificar os anexos do edital e preparar o projeto cultural de acordo com as categorias descritas, garantindo que todos os requisitos sejam atendidos.",
-        "risco": "A associação pode não atender aos requisitos de residência ou atuação no Município de Nova América – Go, o que impediria o acesso ao edital."
-      },
-      "erro": null,
-      "segundos": 843,
+      "parecer_fonte": {},
+      "erro": "o modelo não devolveu JSON",
+      "segundos": 638,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-274ea801164e",
-      "encontrou": {
-        "Objeto": {
-          "valor": "seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de manifestações culturais do município de Nova América Go",
-          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de mani",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-08-03 a 2026-08-14",
-          "trecho": "Das 07:00 horas do dia 03/08/2026 até às 17:00 horas do dia 14/08/2026.",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$40.266,87 (quarenta mil duzentos e sessenta e seis reais e oitenta e sete centavos)",
-          "trecho": "O valor total deste edital é de R$40.266,87 (quarenta mil duzentos e sessenta e seis reais e oitenta e sete centavos).",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de NOVA AMÉRICA",
-          "trecho": "ESTADO DE GOIAS Prefeitura Municipal de NOVA AMÉRICA EDITAL DE CHAMAMENTO PÚBLICO Nº 01/2026",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "MUNICIPIO DE NOVA AMÉRICA – GOIÁS",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de mani",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "atua ou reside no Município de Nova América – Go, há pelo menos 06 (seis) meses.",
-          "trecho": "Pode se inscrever no Edital qualquer agente cultural que atua ou reside no Município de Nova América – Go, há pelo menos 06 (seis) meses.",
-          "oficial": false,
-          "dispensado": false
-        }
-      },
-      "financiador": "Prefeitura Municipal de Nova América",
+      "avaliacao": "falhou: o modelo não devolveu JSON",
+      "id": "op-nova-036e39c1f345",
+      "encontrou": {},
+      "financiador": null,
       "indicios": [],
-      "rotas": [
-        "financiador_programa_edital"
-      ]
+      "rotas": []
     }
   ],
   "contagem": {
