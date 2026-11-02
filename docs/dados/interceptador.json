@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T02:33:03+00:00",
+  "em": "2026-11-02T02:49:53+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T02:18:40+00:00",
+  "ultimo_voo": "2026-11-02T02:34:50+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,84 +48,83 @@
     },
     "estrelas_de_ouro": 11,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.6
+    "tempo_medio_min": 14.3
   },
   "missoes": [
     {
-      "em": "2026-11-02T02:18:40+00:00",
+      "em": "2026-11-02T02:34:50+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anápolis — Projeto financiado pela Lei Paulo Gustavo em Anápolis abre inscrições para curso imersivo de cinema — Goiás / Anápolis",
-      "qualidade": "insuficiente",
+      "alvo": "Anápolis — Quarta Cultural abre junho com música e dança no Teatro Municipal — Goiás / Anápolis",
+      "qualidade": "parcial",
       "comprovados": 8,
-      "dispensados": 1,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://dom.anapolis.go.gov.br/materias/24065",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que o projeto é financiado pela Lei Paulo Gustavo e pela Secretaria Municipal de Integração, com inscrições até 7 de março, e que exige experiência em audiovisual e preenchimento de formulário no site da ACACC.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende aos requisitos de experiência em audiovisual e preencher o formulário disponível no site da ACACC para participar do curso.",
-        "proximo_passo": "Verificar os requisitos do edital e preencher o formulário no site da ACACC.",
-        "risco": "A falta de experiência em audiovisual ou a impossibilidade de acesso ao site da ACACC pode impedir a participação."
+        "por_que": "O edital comprova a existência de um programa de apoio a projetos culturais em Anápolis, Goiás, com recursos financeiros e requisitos claros.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar aos requisitos estabelecidos no regulamento do edital, preparar um projeto cultural/artístico conforme o objeto do edital e seguir o processo de inscrição, mesmo que o prazo não esteja disponível.",
+        "proximo_passo": "Consultar o regulamento e os anexos do edital para entender melhor os requisitos e preparar o projeto cultural.",
+        "risco": "A falta de informações sobre o prazo de inscrição pode impedir a associação de se candidatar a tempo."
       },
       "erro": null,
-      "segundos": 815,
+      "segundos": 857,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-54dd70a1537f",
+      "fontes_oficiais": 8,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
+      "id": "op-569e6b6dddc6",
       "encontrou": {
         "Objeto": {
-          "valor": "curso imersivo de cinema para 20 profissionais do cinema e estudantes em diferentes setores do audiovisual",
-          "trecho": "curso que acontece entre os dias 2 e 7 de abril e irá proporcionar a 20 profissionais do cinema e estudantes em diferentes setores do audiovisual uma experiência inédita em Anápoli",
-          "oficial": false,
+          "valor": "seleção e apoio a Projetos Culturais/Artísticos e Espaços e Coletivos Culturais",
+          "trecho": "É objeto do presente procedimento a seleção e o apoio a Projetos Culturais/Artísticos e Espaços e Coletivos Culturais, destinados a iniciativas da Sociedade Civil nas seguintes áre",
+          "oficial": true,
           "dispensado": false
         },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O texto menciona que as inscrições vão até o dia 7 de março.",
-          "trecho": "As inscrições vão até o dia 7 de março [rejeitado: data implausível para edital aberto]",
-          "oficial": false,
-          "dispensado": true
+        "Valor": {
+          "valor": "R$ 1.833.546,39",
+          "trecho": "será disponibilizado o montante de R$ 1.833.546,39 (Um milhão, oitocentos e trinta e três mil, quinhentos e quarenta e seis reais e trinta e nove centavos), destinado ao apoio dos ",
+          "oficial": true,
+          "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Lei Paulo Gustavo, do Governo Federal, e Secretaria Municipal de Integração",
-          "trecho": "O projeto é financiado pela Lei Paulo Gustavo, do Governo Federal, e operacionalizado em Anápolis pela gestão municipal através da Secretaria Municipal de Integração",
-          "oficial": false,
+          "valor": "Prefeitura de Anápolis",
+          "trecho": "A Prefeitura de Anápolis, por intermédio da Secretaria Municipal de Integração, no uso de suas atribuições legais conforme a Lei nº 14.399/2022, que institui a Política Nacional Al",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Anápolis",
-          "oficial": false,
+          "trecho": "destinados a iniciativas da Sociedade Civil nas seguintes áreas e modalidades:",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "Projeto financiado pela Lei Paulo Gustavo em Anápolis abre inscrições para curso imersivo de cinema",
-          "oficial": false,
+          "trecho": "É objeto do presente procedimento a seleção e o apoio a Projetos Culturais/Artísticos e Espaços e Coletivos Culturais, destinados a iniciativas da Sociedade Civil nas seguintes áre",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "ter experiência em audiovisual, preencher o formulário disponível no site da ACACC",
-          "trecho": "Os interessados precisam ter experiência em audiovisual e preencher o formulário disponível no site da ACACC",
-          "oficial": false,
+          "valor": "exigências estabelecidas neste Regulamento",
+          "trecho": "Os interessados podem acessar o Regulamento e demais documentos nos seguintes endereços eletrônicos: www.anapolis.go.gov.br e https://lei-aldir-blanc-anapolis.netlify.app/.",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Lei Paulo Gustavo",
+      "financiador": "Prefeitura de Anápolis",
       "indicios": [],
       "rotas": [
-        "site_municipal",
-        "financiador_programa_edital"
+        "site_do_financiador"
       ]
     }
   ],
