@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T12:46:00+00:00",
+  "em": "2026-11-02T12:56:22+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T12:32:49+00:00",
+  "ultimo_voo": "2026-11-02T12:48:13+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,66 +48,75 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.5
+    "tempo_medio_min": 7.6
   },
   "missoes": [
     {
-      "em": "2026-11-02T12:32:49+00:00",
+      "em": "2026-11-02T12:48:13+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Chamamentos Públicos — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 4,
+      "alvo": "Cidade Ocidental — ATENÇÃO para as alterações nos editais da Lei Paulo Gustavo — Goiás / Cidade Ocidental",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
+      "pagina_oficial": "https://acessoainformacao.cidadeocidental.go.gov.br/informacao/licitacao/id=1204",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O Chamamento Público está associado ao Objeto e ao financiador comprovados, que são relevantes para ações culturais em Goiás.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao Objeto do Chamamento Público, que é o evento musical O Canto da Primavera, e demonstrar como sua atuação pode contribuir para a cultura em Pirenópolis.",
-        "proximo_passo": "Verificar se há chamamentos públicos específicos para a área de atuação da associação, como cultura, educação ou esporte, e se inscrever conforme as normas vigentes.",
-        "risco": "A falta de informações sobre prazos, requisitos e áreas de atuação pode impedir a associação de se inscrever adequadamente no Chamamento Público."
+        "por_que": "O objeto do edital menciona apoio financeiro para cultura, conforme a Lei Paulo Gustavo, o que é compatível com a atuação de uma associação comunitária na área de cultura.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é o fomento cultural, e apresentar proposta de atividade cultural compatível com a Lei 14.399/2022 e a política nacional aldir blanc-pnab.",
+        "proximo_passo": "Consultar os anexos do edital para obter detalhes sobre as categorias de apoio e os critérios de seleção.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se inscrever oportunamente."
       },
       "erro": null,
-      "segundos": 748,
+      "segundos": 454,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 4,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-facc5c29b0dc",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Requisitos",
+      "id": "op-f13977a3f6ec",
       "encontrou": {
         "Objeto": {
-          "valor": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na cidade de Pirenópolis, desde o ano 2000.",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "valor": "apoio financeiro nas categorias descrita no item 3 - a lei 14.399/2022, política nacional aldir blanc-pnab - fomento cultural",
+          "trecho": "CHAMAMENTO PÚBLICO PARA RECEBEREM APOIO FINANCEIRO NAS CATEGORIAS DESCRITA NO ITEM 3 - A LEI 14.399/2022, POLÍTICA NACIONAL ALDIR BLANC-PNAB - FOMENTO CULTURAL.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 360.000,00",
+          "trecho": "Valor Estimado: R$ 360.000,00",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult)",
-          "trecho": "Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult)",
+          "valor": "GOVERNO MUNICIPAL DE CIDADE OCIDENTAL",
+          "trecho": "Órgão: GOVERNO MUNICIPAL DE CIDADE OCIDENTAL",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "na cidade de Pirenópolis",
+          "trecho": "Órgão: GOVERNO MUNICIPAL DE CIDADE OCIDENTAL",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "CHAMAMENTO PÚBLICO PARA RECEBEREM APOIO FINANCEIRO NAS CATEGORIAS DESCRITA NO ITEM 3 - A LEI 14.399/2022, POLÍTICA NACIONAL ALDIR BLANC-PNAB - FOMENTO CULTURAL.",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura",
+      "financiador": "Prefeitura Municipal de Cidade Ocidental",
       "indicios": [],
       "rotas": [
         "site_do_financiador"
