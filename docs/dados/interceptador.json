@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T16:30:52+00:00",
+  "em": "2026-11-02T16:57:26+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T16:16:14+00:00",
+  "ultimo_voo": "2026-11-02T16:33:13+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,78 +43,38 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.0
+    "tempo_medio_min": 23.6
   },
   "missoes": [
     {
-      "em": "2026-11-02T16:16:14+00:00",
+      "em": "2026-11-02T16:33:13+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Divulgado resultado de edital que levará 70 pesquisadores goianos a — Goiás",
+      "alvo": "Divulgado resultado final do Edital de Fomento à Rede Goiana — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 6,
-      "dispensados": 0,
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Área de atuação"
-      ],
+      "nao_resolvidos": null,
       "pagina_oficial": null,
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi divulgado com data de resultado e objeto definidos, indicando que é uma fonte válida para pesquisa.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é levar pesquisadores goianos a eventos internacionais, e verificar se sua área de atuação se enquadra no escopo da FAPEG.",
-        "proximo_passo": "Consultar os anexos do edital para obter mais detalhes sobre as regras e requisitos de participação.",
-        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se preparar adequadamente para o processo."
-      },
-      "erro": null,
-      "segundos": 838,
+      "parecer_fonte": {},
+      "erro": "o modelo não devolveu JSON",
+      "segundos": 1413,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-9badbb8bce24",
-      "encontrou": {
-        "Objeto": {
-          "valor": "Levar 70 pesquisadores goianos a eventos internacionais",
-          "trecho": "Divulgado resultado de edital que levará 70 pesquisadores goianos a — Goiás",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás – FAPEG",
-          "trecho": "Fundação de Amparo à Pesquisa do Estado de Goiás – FAPEG",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Divulgado resultado de edital que levará 70 pesquisadores goianos a — Goiás",
-          "oficial": false,
-          "dispensado": false
-        }
-      },
-      "financiador": "FAPEG",
+      "avaliacao": "falhou: o modelo não devolveu JSON",
+      "id": "op-c481a0f5c426",
+      "encontrou": {},
+      "financiador": null,
       "indicios": [],
-      "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
-      ]
+      "rotas": []
     }
   ],
   "contagem": {
