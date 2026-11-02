@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T20:38:27+00:00",
+  "em": "2026-11-02T20:54:08+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T20:13:24+00:00",
+  "ultimo_voo": "2026-11-02T20:40:32+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,66 +48,76 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 24.3
+    "tempo_medio_min": 13.0
   },
   "missoes": [
     {
-      "em": "2026-11-02T20:13:24+00:00",
+      "em": "2026-11-02T20:40:32+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital 08 – Fomento Cultural I – Criação, Montagem, Circulação (PDF) — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "Edital 09 – Fomento Cultural II – Ações Formativas (PDF) — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://www10.goiania.go.gov.br/DadosINTER/PUBLIC/arq_7521819.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a existência de um credenciamento para contratação de serviços culturais pela Prefeitura de Goiânia, o que é relevante para a AMC.",
-        "para_a_amc": "A associação comunitária precisaria se credenciar para eventual contratação de serviços de artistas e/ou grupos artísticos das linguagens de Teatro, Dança, Circo, Música, Audiovisual, Artes Visuais, Literatura e Expressões Culturais da Tradição, visando a realização da programação dos eventos, ações e culturais realizadas e/ou apoiadas pela Secretaria Municipal de Cultura de Goiânia.",
-        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre o processo de credenciamento e os requisitos específicos.",
-        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se preparar adequadamente para o processo."
+        "por_que": "O edital foi comprovado com informações sobre seu objeto, valor, financiador, território, esfera, requisitos e área de atuação.",
+        "para_a_amc": "A associação comunitária precisaria ser agente cultural que atua ou reside no Município de Goiânia há pelo menos 02 (dois) anos e apresentar projeto cultural para ações formativas, manifestações culturais e criações funcionais.",
+        "proximo_passo": "Verificar os anexos do edital e se a associação comunitária atende aos requisitos estabelecidos.",
+        "risco": "A associação comunitária pode não atender aos requisitos de atuação ou residência no Município de Goiânia por pelo menos 02 (dois) anos."
       },
       "erro": null,
-      "segundos": 1456,
+      "segundos": 782,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-7eabde50e7dc",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-09485563a576",
       "encontrou": {
         "Objeto": {
-          "valor": "Credenciamento para fins de eventual contratação de serviços de artistas e/ou grupos artísticos das linguagens de Teatro, Dança, Circo, Música, Audiovisual, Artes Visuais, Literatura e Expressões Culturais da Tradição, visando a realização da programação dos eventos, ações e culturais realizadas e/ou apoiadas pela Secretaria Municipal de Cultura de Goiânia",
-          "trecho": "ConstuiobjetodesteoCredenciamentoparansdeeventualcontrataçãodeserviçosdearstase/ougruposarscosdaslinguagensde Teatro,Dança,Circo,Música,Audiovisual,ArtesVisuais,LiteraturaeExp",
-          "oficial": true,
+          "valor": "seleção de projetos culturais para receberem apoio financeiro para ações formativas, manifestações culturais e criações funcionais",
+          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro para ações formativas, manifestações culturais e criações funcionais, nas categorias descrit",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 485.313,39",
+          "trecho": "O valor total deste edital é de R$ 485.313,39 (quatrocentos e oitenta e cinco mil, trezentos e treze reais e trinta e nove centavos).",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia, através da Secretaria Municipal de Cultura (SECULT)",
-          "trecho": "A Prefeitura de Goiânia, através da Secretaria Municipal de Cultura (SECULT), torna público torna público para conhecimento dos interessadosopresenteCHAMAMENTOPÚBLICO,paransdeCRED",
-          "oficial": true,
+          "valor": "Prefeitura Municipal de Goiânia",
+          "trecho": "A Prefeitura Municipal de Goiânia, por intermédio da Secretaria Municipal de Cultura torna público o presente edital.",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "ASecretariaMunicipaldeCulturaatuaemGoiâniadesenvolvendoprojetoseaçõesquefortalecemaproduçãoculturalemsuasdiferentes regiões.",
-          "oficial": true,
+          "trecho": "A Prefeitura Municipal de Goiânia, por intermédio da Secretaria Municipal de Cultura torna público o presente edital.",
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "ASecretariaMunicipaldeCulturaatuaemGoiâniadesenvolvendoprojetoseaçõesquefortalecemaproduçãoculturalemsuasdiferentes regiões.",
-          "oficial": true,
+          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro para ações formativas, manifestações culturais e criações funcionais, nas categorias descrit",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "agente cultural que atua ou reside no Município de Goiânia há pelo menos 02 (dois) anos",
+          "trecho": "Pode se inscrever no Edital qualquer agente cultural que atua ou reside no Município de Goiânia há pelo menos 02 (dois) anos.",
+          "oficial": false,
           "dispensado": false
         }
       },
@@ -115,7 +125,11 @@
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
