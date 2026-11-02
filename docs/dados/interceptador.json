@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T17:27:21+00:00",
+  "em": "2026-11-02T17:40:01+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T17:16:10+00:00",
+  "ultimo_voo": "2026-11-02T17:29:35+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,43 +43,74 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.6
+    "tempo_medio_min": 9.8
   },
   "missoes": [
     {
-      "em": "2026-11-02T17:16:10+00:00",
+      "em": "2026-11-02T17:29:35+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Editais Anteriores – PNAB — Goiás",
+      "alvo": "Editais de Chamamento — Goiás / Goiânia",
       "qualidade": "insuficiente",
-      "comprovados": 8,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "http://www.cultura.go.gov.br/files/LAB_2021_CLASSIFICADOS_POS_RECURSO/CLASSIFICADOS_E_NAO_CLASSIFICADOS_CIRCO.pdf",
-      "parecer_fonte": {},
+      "pagina_oficial": "https://saude.goiania.go.gov.br/editas-de-chamamento-publico/edital-de-chamamento-publico-no-001-2026/",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital comprova a existência de um chamamento para credenciamento de pessoas jurídicas no âmbito municipal de Goiânia, relacionado à Saúde.",
+        "para_a_amc": "A associação comunitária precisaria se credenciar no Sistema Único de Saúde do Município de Goiânia, demonstrando interesse em prestação de serviços ambulatoriais, de apoio diagnóstico e terapêutico e hospitalar.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre o processo de credenciamento e os requisitos necessários.",
+        "risco": "A falta de informações sobre prazos, requisitos e área de atuação pode impedir a associação de se candidatar adequadamente."
+      },
       "erro": null,
-      "segundos": 633,
+      "segundos": 588,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 5,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-nova-26b7bec51fe4",
-      "encontrou": {},
-      "financiador": "Secretaria de Estado da Cultura",
+      "id": "op-ea820a4ce757",
+      "encontrou": {
+        "Objeto": {
+          "valor": "credenciamento de pessoas jurídicas interessadas em participar, de forma complementar, do Sistema Único de Saúde do Município de Goiânia para prestação dos serviços ambulatoriais, de apoio diagnóstico e terapêutico e hospitalar",
+          "trecho": "Constitui objeto do presente edital de chamamento público o credenciamento de pessoas jurídicas, interessadas em participar, de forma complementar, do Sistema Único de Saúde do Mun",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria Municipal de Saúde",
+          "trecho": "Secretaria Municipal de Saúde",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Município de Goiânia",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Secretaria Municipal de Saúde",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
