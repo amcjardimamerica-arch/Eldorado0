@@ -1,5 +1,5 @@
 {
- "em": "2026-11-01T23:56:11+00:00",
+ "em": "2026-11-02T01:27:19+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 58,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 47391
+  "exemplos_da_rede": 47464
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    4.0875
+    3.7907
    ],
    [
     "origem:rota original",
-    3.6704
+    3.3171
    ],
    [
     "tok:inscricoes",
@@ -37,11 +37,11 @@
    ],
    [
     "tok:sitemap",
-    2.1598
+    2.1294
    ],
    [
     "tok:xml",
-    2.1598
+    2.1294
    ],
    [
     "tok:aldirblanc",
@@ -52,18 +52,18 @@
     1.8789
    ],
    [
-    "tld:br",
-    1.8787
+    "tok:editais",
+    1.8407
    ],
    [
-    "tok:editais",
-    1.852
+    "tok:abre",
+    1.7846
    ]
   ],
   "piores_sinais": [
    [
-    "tipo:internacional",
-    -2.275
+    "tipo:site_oficial",
+    -2.5118
    ],
    [
     "tok:pgt",
@@ -74,12 +74,12 @@
     -2.781
    ],
    [
-    "origem:padrão",
-    -2.973
-   ],
-   [
     "tok:2026",
     -3.0262
+   ],
+   [
+    "origem:padrão",
+    -3.0619
    ],
    [
     "tok:content",
@@ -240,7 +240,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T13:04:53+00:00",
+    "em": "2026-11-02T01:25:10+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -356,7 +356,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T13:04:58+00:00",
+    "em": "2026-11-02T01:25:15+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -772,7 +772,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T11:33:04+00:00",
+    "em": "2026-11-02T01:24:53+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1169,8 +1169,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T03:53:26+00:00",
-    "testes": 12,
+    "em": "2026-11-02T01:24:43+00:00",
+    "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1373,7 +1373,7 @@
     "aprendido_em": "2026-10-16T02:15:34+00:00"
    },
    "afinado": {
-    "em": "2026-11-01T13:07:05+00:00",
+    "em": "2026-11-02T01:27:19+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1451,7 +1451,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-01T11:33:16+00:00",
+    "em": "2026-11-02T01:25:09+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
