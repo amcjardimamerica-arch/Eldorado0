@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T18:36:19+00:00",
+  "em": "2026-11-02T18:50:10+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T18:17:21+00:00",
+  "ultimo_voo": "2026-11-02T18:38:46+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,43 +38,100 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
+    "validadas": 1,
     "parciais": 0,
-    "insuficientes": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "nao": 1
+    },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 18.2
+    "tempo_medio_min": 10.7
   },
   "missoes": [
     {
-      "em": "2026-11-02T18:17:21+00:00",
+      "em": "2026-11-02T18:38:46+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital 002/2023 Áreas - Inciso I - Goiânia-GO — Goiás / Goiânia",
-      "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "alvo": "Edital 002/2023 Áreas - Inciso I - Goiânia-GO — Goiás / Goiânia — Goiás / Goiânia",
+      "qualidade": "validada",
+      "comprovados": 9,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 1092,
+      "nao_resolvidos": [
+        "Resultado",
+        "Prazo de recurso"
+      ],
+      "pagina_oficial": "https://culteditais.cultura.gov.br/files/opportunity/8111/edital-002-2026-difusao-docx-1.pdf",
+      "parecer_fonte": {
+        "serve_como_fonte": "nao",
+        "por_que": "O edital mencionado é sobre Ibiúna-SP, enquanto a consulta é sobre Goiânia-GO. Não há correspondência entre os territórios.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar edital específico para o território de Goiânia-GO, já que o edital mencionado é para Ibiúna-SP.",
+        "proximo_passo": "Consultar edital específico para o território de Goiânia-GO.",
+        "risco": "A falta de correspondência entre o território do edital e o de interesse da associação pode impedir o acesso ao financiamento."
+      },
+      "erro": null,
+      "segundos": 643,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-b056deb0027a",
-      "encontrou": {},
-      "financiador": null,
+      "fontes_oficiais": 9,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-fbacb4dc6735",
+      "encontrou": {
+        "Objeto": {
+          "valor": "seleção e premiação de iniciativas culturais de difusão cultural realizadas por agentes culturais do Município da Estância Turística de Ibiúna",
+          "trecho": "O objeto deste Edital é a seleção e premiação de iniciativas culturais de difusão cultural realizadas por agentes culturais do Município da Estância Turística de Ibiúna, observadas",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-05-04 a 2026-05-04",
+          "trecho": "De 09 horas do dia 04 de maio de 2026 até às 17 horas",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$175.000,00",
+          "trecho": "O valor total deste edital é de R$175.000,00 (cento e setenta e cinco mil reais).",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria Municipal de Cultura e Turismo",
+          "trecho": "A Secretaria Municipal de Cultura e Turismo torna público o presente edital.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "SP",
+          "trecho": "agentes culturais do Município da Estância Turística de Ibiúna",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "seleção e premiação de iniciativas culturais de difusão cultural realizadas por agentes culturais do Município da Estância Turística de Ibiúna",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "apresentação de projetos conforme as categorias descritas no Anexo I deste Edital, realização de 01 (uma) atividade cultural gratuita no Município da Estância Turística de Ibiúna",
+          "trecho": "O objeto deste Edital é a seleção e premiação de iniciativas culturais de difusão cultural realizadas por agentes culturais do Município da Estância Turística de Ibiúna, observadas",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Secretaria Municipal de Cultura",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital"
+      ]
     }
   ],
   "contagem": {
