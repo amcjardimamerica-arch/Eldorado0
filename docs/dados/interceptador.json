@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T08:18:19+00:00",
+  "em": "2026-11-02T08:36:26+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T08:04:19+00:00",
+  "ultimo_voo": "2026-11-02T08:20:32+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,73 +48,78 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.2
+    "tempo_medio_min": 15.1
   },
   "missoes": [
     {
-      "em": "2026-11-02T08:04:19+00:00",
+      "em": "2026-11-02T08:20:32+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Aviso de chamamento público nº 1/2026 – seleção de projetos culturais — Goiás — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 6,
-      "dispensados": 0,
+      "alvo": "Aviso de chamamento público nº 1/2026 — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 7,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
+        "Prazo de inscrição",
+        "Resultado",
         "Prazo de recurso",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://mossamedes.go.gov.br/politica-nacional-aldir-blanc-ciclo-ii",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O aviso de chamamento público nº 1/2026 é uma fonte válida para a seleção de projetos culturais em Goiás, especificamente em Orizona.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no prazo de 2026-10-05 a 2026-10-30, apresentando um projeto cultural que atenda aos critérios do edital, mesmo que não estejam explicitados os requisitos.",
-        "proximo_passo": "Verificar os critérios de elegibilidade e se inscrever no prazo estabelecido.",
-        "risco": "O prazo de inscrição pode expirar sem que a associação tenha completado todos os requisitos necessários."
+        "por_que": "O aviso de chamamento público refere-se a projetos culturais financiados pela Prefeitura Municipal de Mossâmedes, Goiás, e menciona requisitos para a participação, sendo uma fonte válida para associações comunitárias interessadas.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar um projeto cultural, identificar-se como proponente, informar sobre deficiência, áreas de residência e cotas, além de anexar os documentos exigidos no edital.",
+        "proximo_passo": "Consultar os anexos do edital para obter detalhes sobre os documentos necessários e os critérios de avaliação.",
+        "risco": "A falta de informações sobre prazo de inscrição e valor pode impedir a associação de planejar adequadamente a candidatura."
       },
       "erro": null,
-      "segundos": 793,
+      "segundos": 905,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-e44213627c6d",
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-432079774a6c",
       "encontrou": {
-        "Prazo de inscrição": {
-          "valor": "2026-10-05 a 2026-10-30",
-          "trecho": "24º Edital de Convocação Condicional/Facultativa do Concurso Público nº 001/2023",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$ 350,00 por até 18 meses",
-          "trecho": "auxílio de R$ 350,00 por até 18 meses",
-          "oficial": false,
+        "Objeto": {
+          "valor": "Projetos culturais",
+          "trecho": "Formulário De Apresentação Do Projeto Cultural",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "PREFEITURA DE ORIZONA",
-          "trecho": "PREFEITURA DE ORIZONA",
-          "oficial": false,
+          "valor": "Prefeitura Municipal de Mossâmedes – Goiás",
+          "trecho": "PREFEITURA MUNICIPAL DE MOSSÂMEDES – GOIÁS",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Governo de Goiás",
-          "oficial": false,
+          "trecho": "Município: UF: CEP:",
+          "oficial": true,
           "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "Formulário De Apresentação Do Projeto Cultural",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "dispensado — O texto menciona requisitos como identificação do proponente, informações sobre deficiência, áreas de residência e cotas.",
+          "trecho": "Identificação de Pessoa Jurídica\nConforme Estatuto/Contrato Social ( )Sem Fins Lucrativos\nIdentificação de Pessoa Física\nVocê reside em quais dessas áreas?\nVocê Pertence A Alguma C",
+          "oficial": false,
+          "dispensado": true
         }
       },
-      "financiador": "Prefeitura de Orizona",
+      "financiador": "Ministério da Cultura (MinC)",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital"
+        "site_do_financiador"
       ]
     }
   ],
