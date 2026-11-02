@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T06:47:07+00:00",
+  "em": "2026-11-02T06:55:14+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T06:36:48+00:00",
+  "ultimo_voo": "2026-11-02T06:49:02+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,66 +44,75 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.7
+    "tempo_medio_min": 5.7
   },
   "missoes": [
     {
-      "em": "2026-11-02T06:36:48+00:00",
+      "em": "2026-11-02T06:49:02+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Aviso de Chamamento Público — Goiás / Goiânia",
+      "alvo": "Aviso de Chamamento Público — SMS Goiânia - parceria com entidade de saúde — Goiás / Goiânia",
       "qualidade": "insuficiente",
-      "comprovados": 4,
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": "https://saude.goiania.go.gov.br/editas-de-chamamento-publico/edital-de-chamamento-publico-no-001-2026/",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O aviso de chamamento público não está relacionado a editais de fomento para organizações da sociedade civil, mas sim a credenciamento de pessoas jurídicas para prestação de serviços no Sistema Único de Saúde.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se credenciar para participar do Sistema Único de Saúde, prestando serviços ambulatoriais, de apoio diagnóstico e terapêutico e hospitalar, conforme o objeto do edital.",
-        "proximo_passo": "Verificar os critérios de credenciamento e se inscrever no processo seletivo da Secretaria Municipal de Saúde.",
-        "risco": "A falta de qualificação técnica ou recursos financeiros pode impedir a participação na seleção."
+        "serve_como_fonte": "sim",
+        "por_que": "O aviso de chamamento público descreve o objeto e os requisitos para a seleção de organizações sociais na área da saúde, o que é relevante para associações comunitárias de Goiânia.",
+        "para_a_amc": "A associação comunitária precisaria se qualificar como Organização Social na área da Saúde, sendo uma pessoa jurídica de direito privado, sem fins lucrativos, constituída sob forma de fundação ou associação.",
+        "proximo_passo": "Verificar os anexos do edital para obter detalhes adicionais sobre o processo seletivo e os critérios de elegibilidade.",
+        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a participação efetiva da associação."
       },
       "erro": null,
-      "segundos": 582,
+      "segundos": 340,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 4,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-nova-137bf6a88373",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-26799d660665",
       "encontrou": {
         "Objeto": {
-          "valor": "credenciamento de pessoas jurídicas interessadas em participar, de forma complementar, do Sistema Único de Saúde do Município de Goiânia para prestação dos serviços ambulatoriais, de apoio diagnóstico e terapêutico e hospitalar",
-          "trecho": "Constitui objeto do presente edital de chamamento público o credenciamento de pessoas jurídicas, interessadas em participar, de forma complementar, do Sistema Único de Saúde do Mun",
-          "oficial": true,
+          "valor": "seleção de pessoas jurídicas de direito privado, sem fins lucrativos, constituídas sob forma de fundação ou associação, para se qualificarem como Organização Social na área da Saúde",
+          "trecho": "realizará a seleção de pessoas jurídicas de direito privado, sem fins lucrativos, constituídas sob forma de fundação ou associação, para se qualificarem como Organização Social na ",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Secretaria Municipal de Saúde",
-          "trecho": "Secretaria Municipal de Saúde",
-          "oficial": true,
+          "valor": "Secretaria Municipal de Saúde de Goiânia",
+          "trecho": "Secretaria Municipal de Saúde de Goiânia",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Município de Goiânia",
-          "oficial": true,
+          "trecho": "no âmbito da Secretaria Municipal de Saúde de Goiânia",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "saude",
+          "trecho": "na área da Saúde",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "pessoas jurídicas de direito privado, sem fins lucrativos, constituídas sob forma de fundação ou associação",
+          "trecho": "realizará a seleção de pessoas jurídicas de direito privado, sem fins lucrativos, constituídas sob forma de fundação ou associação",
+          "oficial": false,
           "dispensado": false
         }
       },
@@ -111,7 +120,11 @@
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
