@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T12:56:22+00:00",
+  "em": "2026-11-02T13:11:51+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T12:48:13+00:00",
+  "ultimo_voo": "2026-11-02T12:58:32+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,71 +48,72 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.6
+    "tempo_medio_min": 12.6
   },
   "missoes": [
     {
-      "em": "2026-11-02T12:48:13+00:00",
+      "em": "2026-11-02T12:58:32+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Cidade Ocidental — ATENÇÃO para as alterações nos editais da Lei Paulo Gustavo — Goiás / Cidade Ocidental",
-      "qualidade": "parcial",
-      "comprovados": 7,
+      "alvo": "Cidade Ocidental — Cidade Ocidental abre as inscrições para o edital da Lei Paulo Gustavo — Goiás / Cidade Ocidental",
+      "qualidade": "insuficiente",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Requisitos"
+        "Requisitos",
+        "Anexos"
       ],
-      "pagina_oficial": "https://acessoainformacao.cidadeocidental.go.gov.br/informacao/licitacao/id=1204",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O objeto do edital menciona apoio financeiro para cultura, conforme a Lei Paulo Gustavo, o que é compatível com a atuação de uma associação comunitária na área de cultura.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é o fomento cultural, e apresentar proposta de atividade cultural compatível com a Lei 14.399/2022 e a política nacional aldir blanc-pnab.",
-        "proximo_passo": "Consultar os anexos do edital para obter detalhes sobre as categorias de apoio e os critérios de seleção.",
-        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se inscrever oportunamente."
+        "por_que": "O edital foi comprovado com informações sobre objeto, valor, órgão financiador, território, esfera e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital da Lei Paulo Gustavo, comprovar sua atuação na área de cultura e alinhar suas propostas ao objeto do edital, que é a promoção cultural da cidade.",
+        "proximo_passo": "Consultar o edital completo para verificar os requisitos e prazos, mesmo que não estejam disponíveis no texto comprovado.",
+        "risco": "A falta de informações sobre prazos e requisitos pode impedir a associação de se inscrever no edital a tempo e de forma adequada."
       },
       "erro": null,
-      "segundos": 454,
+      "segundos": 758,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Requisitos",
-      "id": "op-f13977a3f6ec",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-6371bdc210b0",
       "encontrou": {
         "Objeto": {
-          "valor": "apoio financeiro nas categorias descrita no item 3 - a lei 14.399/2022, política nacional aldir blanc-pnab - fomento cultural",
-          "trecho": "CHAMAMENTO PÚBLICO PARA RECEBEREM APOIO FINANCEIRO NAS CATEGORIAS DESCRITA NO ITEM 3 - A LEI 14.399/2022, POLÍTICA NACIONAL ALDIR BLANC-PNAB - FOMENTO CULTURAL.",
-          "oficial": true,
+          "valor": "promoção cultural da cidade",
+          "trecho": "Mais de R$ 600 mil serão aportados na promoção cultural da cidade",
+          "oficial": false,
           "dispensado": false
         },
         "Valor": {
-          "valor": "R$ 360.000,00",
-          "trecho": "Valor Estimado: R$ 360.000,00",
-          "oficial": true,
+          "valor": "Mais de R$ 600 mil",
+          "trecho": "Mais de R$ 600 mil serão aportados na promoção cultural da cidade",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "GOVERNO MUNICIPAL DE CIDADE OCIDENTAL",
-          "trecho": "Órgão: GOVERNO MUNICIPAL DE CIDADE OCIDENTAL",
-          "oficial": true,
+          "valor": "Prefeitura Municipal de Cidade Ocidental",
+          "trecho": "Cidade Ocidental abre as inscrições para o edital da Lei Paulo Gustavo - Prefeitura Municipal de Cidade",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Órgão: GOVERNO MUNICIPAL DE CIDADE OCIDENTAL",
-          "oficial": true,
+          "trecho": "Cidade Ocidental abre as inscrições para o edital da Lei Paulo Gustavo - Prefeitura Municipal de Cidade",
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "CHAMAMENTO PÚBLICO PARA RECEBEREM APOIO FINANCEIRO NAS CATEGORIAS DESCRITA NO ITEM 3 - A LEI 14.399/2022, POLÍTICA NACIONAL ALDIR BLANC-PNAB - FOMENTO CULTURAL.",
-          "oficial": true,
+          "trecho": "Mais de R$ 600 mil serão aportados na promoção cultural da cidade",
+          "oficial": false,
           "dispensado": false
         }
       },
