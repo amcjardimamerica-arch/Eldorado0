@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T06:34:54+00:00",
+  "em": "2026-11-02T06:47:07+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T06:23:43+00:00",
+  "ultimo_voo": "2026-11-02T06:36:48+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,38 +43,76 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "nao": 1
+    },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.6
+    "tempo_medio_min": 9.7
   },
   "missoes": [
     {
-      "em": "2026-11-02T06:23:43+00:00",
+      "em": "2026-11-02T06:36:48+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Aviso de Chamamento Público – Complexo Serra Dourada — Goiás",
+      "alvo": "Aviso de Chamamento Público — Goiás / Goiânia",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 4,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 638,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
+      ],
+      "pagina_oficial": "https://saude.goiania.go.gov.br/editas-de-chamamento-publico/edital-de-chamamento-publico-no-001-2026/",
+      "parecer_fonte": {
+        "serve_como_fonte": "nao",
+        "por_que": "O aviso de chamamento público não está relacionado a editais de fomento para organizações da sociedade civil, mas sim a credenciamento de pessoas jurídicas para prestação de serviços no Sistema Único de Saúde.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se credenciar para participar do Sistema Único de Saúde, prestando serviços ambulatoriais, de apoio diagnóstico e terapêutico e hospitalar, conforme o objeto do edital.",
+        "proximo_passo": "Verificar os critérios de credenciamento e se inscrever no processo seletivo da Secretaria Municipal de Saúde.",
+        "risco": "A falta de qualificação técnica ou recursos financeiros pode impedir a participação na seleção."
+      },
+      "erro": null,
+      "segundos": 582,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 4,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-nova-036e39c1f345",
-      "encontrou": {},
-      "financiador": null,
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-nova-137bf6a88373",
+      "encontrou": {
+        "Objeto": {
+          "valor": "credenciamento de pessoas jurídicas interessadas em participar, de forma complementar, do Sistema Único de Saúde do Município de Goiânia para prestação dos serviços ambulatoriais, de apoio diagnóstico e terapêutico e hospitalar",
+          "trecho": "Constitui objeto do presente edital de chamamento público o credenciamento de pessoas jurídicas, interessadas em participar, de forma complementar, do Sistema Único de Saúde do Mun",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria Municipal de Saúde",
+          "trecho": "Secretaria Municipal de Saúde",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Município de Goiânia",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Secretaria Municipal de Saúde",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital"
+      ]
     }
   ],
   "contagem": {
