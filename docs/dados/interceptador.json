@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T19:09:23+00:00",
+  "em": "2026-11-02T19:20:15+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T18:51:58+00:00",
+  "ultimo_voo": "2026-11-02T19:11:15+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,9 +38,9 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
+    "validadas": 1,
     "parciais": 0,
-    "insuficientes": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,71 +48,81 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.6
+    "tempo_medio_min": 8.4
   },
   "missoes": [
     {
-      "em": "2026-11-02T18:51:58+00:00",
+      "em": "2026-11-02T19:11:15+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital 003/2023 Áreas - Inciso II - Goiânia-GO — Goiás / Goiânia",
-      "qualidade": "insuficiente",
-      "comprovados": 7,
+      "alvo": "Edital 003/2023 Áreas - Inciso II - Goiânia-GO — Goiás / Goiânia — Goiás / Goiânia",
+      "qualidade": "validada",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://culteditais.cultura.gov.br/files/opportunity/8212/003-2026-edital-de-subsidio-docx-3.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprovado menciona o objeto e a área de atuação, além do financiador e do território, o que é suficiente para identificar sua relevância para a AMC.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto cultural de audiovisual, alinhar-se aos requisitos do edital e apresentar os documentos exigidos, incluindo os anexos mencionados.",
-        "proximo_passo": "Consultar os anexos do edital para entender os requisitos específicos e preparar o projeto cultural de audiovisual.",
-        "risco": "A falta de informações sobre o prazo de inscrição e outros detalhes pode impedir a associação de se inscrever no prazo correto."
+        "por_que": "O edital foi comprovado com dados específicos como objeto, prazo de inscrição, valor e requisitos.",
+        "para_a_amc": "A associação comunitária precisaria ser organizada e mantida por pessoas ou organizações da sociedade civil, ter pelo menos 2 anos de funcionamento regular comprovado e se dedicar a realizar atividades artísticas para acessar o subsídio.",
+        "proximo_passo": "Verificar os anexos e preparar os documentos necessários para a inscrição no prazo de 2026-06-17 a 2026-07-20.",
+        "risco": "A falta de documentos comprovativos de funcionamento regular ou atividades artísticas pode impedir o acesso ao subsídio."
       },
       "erro": null,
-      "segundos": 998,
+      "segundos": 506,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-1813643fb65f",
+      "fontes_oficiais": 9,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-308a1ac67676",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de projetos culturais de audiovisual para receberem apoio financeiro",
-          "trecho": "O objeto deste edital é a seleção de projetos culturais de audiovisual para receberem apoio financeiro nas categorias descritas no anexo 1, por meio da celebração de termo de execu",
-          "oficial": false,
+          "valor": "seleção de espaços, ambientes e iniciativas artístico-culturais para receberem subsídio para manutenção",
+          "trecho": "O objeto deste Edital é a seleção de espaços, ambientes e iniciativas artístico-culturais para receberem subsídio para manutenção nas categorias descritas no Anexo I, com o objetiv",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-06-17 a 2026-07-20",
+          "trecho": "De 09 horas do dia 17 de junho de 2026 até 17 horas do dia 20 de julho de 2026.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$60.000,00 (sessenta mil reais)",
+          "trecho": "O valor total deste edital é de R$60.000,00 (sessenta mil reais).",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia - Secretaria Municipal de Cultura",
-          "trecho": "Prefeitura de Goiânia Secretaria Municipal de Cultura Diretora de Políticas, Ações e Patrimônio Cultural",
-          "oficial": false,
+          "valor": "Secretaria Municipal de Cultura e Turismo de Ibiúna",
+          "trecho": "A Secretaria Municipal de Cultura e Turismo de Ibiúna torna público o presente edital elaborado com base na Lei nº 14.399/2022 (Lei PNAB), na Lei nº 14.903/2024 (Marco regulatório ",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "O objeto deste edital é a seleção de projetos culturais de audiovisual para receberem apoio financeiro nas categorias descritas no anexo 1, por meio da celebração de termo de execu",
-          "oficial": false,
+          "valor": "SP",
+          "trecho": "As condições para a execução da PNAB foram criadas por meio do engajamento da sociedade e o presente edital destina-se a apoiar a manutenção de espaços, ambientes e iniciativas art",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "O objeto deste edital é a seleção de projetos culturais de audiovisual para receberem apoio financeiro nas categorias descritas no anexo 1, por meio da celebração de termo de execu",
-          "oficial": false,
+          "trecho": "A PNAB objetiva também estruturar o sistema federativo de financiamento à cultura mediante repasses da União aos Estados, Distrito Federal e Municípios de forma continuada.",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "documento ou exigência",
-          "trecho": "QUEM PODE SE INSCREVER 03",
-          "oficial": false,
+          "valor": "seja organizado e mantido por pessoas, organizações da sociedade civil, microempresas culturais, organizações culturais , tenha pelo menos 2 (dois) anos de funcionamento regular comprovado e que se dediquem a realizar atividades artísticas",
+          "trecho": "Pode se inscrever no Edital agentes culturais que constituem espaços, ambientes e iniciativas artístico-culturais localizados no Município de Ibiúna e que tenham as seguintes carac",
+          "oficial": true,
           "dispensado": false
         }
       },
@@ -120,11 +130,7 @@
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
