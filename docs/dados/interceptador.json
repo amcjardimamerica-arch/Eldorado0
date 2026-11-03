@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-03T06:06:04+00:00",
+  "em": "2026-11-03T06:25:45+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-03T05:58:29+00:00",
+  "ultimo_voo": "2026-11-03T06:07:46+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,46 +43,84 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.0
+    "tempo_medio_min": 17.2
   },
   "missoes": [
     {
-      "em": "2026-11-03T05:58:29+00:00",
+      "em": "2026-11-03T06:07:46+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
       "alvo": "Convênios - Repasse Concedido — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 6,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
+        "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://goias.gov.br/imb/wp-content/uploads/sites/29/2025/09/Boletim_033_2025_projecoes_macroeconomicas_3_tri.pdf",
-      "parecer_fonte": {},
+      "pagina_oficial": null,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O convênio menciona a concessão de auxílio e implementação de bolsas, o que pode ser relevante para organizações que atuam na área de educação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do convênio, demonstrando como sua atuação na educação pode se integrar à implementação de bolsas, e buscar contato com a Universidade Federal de Goiás para obter mais informações sobre o processo.",
+        "proximo_passo": "Contatar a Universidade Federal de Goiás para obter detalhes sobre o convênio e os requisitos necessários para participar.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se candidatar oportunamente ao convênio."
+      },
       "erro": null,
-      "segundos": 422,
+      "segundos": 1032,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-nova-7f7e1e240bfd",
-      "encontrou": {},
+      "id": "op-e04e5106ccbc",
+      "encontrou": {
+        "Objeto": {
+          "valor": "CONCESSÃO DE AUXILIO E IMPLEMENTAÇÃO DE BOLSAS P",
+          "trecho": "CONCESSÃO DE AUXILIO E IMPLEMENTAÇÃO DE BOLSAS P",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$534.600,00",
+          "trecho": "R$534.600,00",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "UNIVERSIDADE FEDERAL DE GOIÁS - ( UFG )",
+          "trecho": "CNPJ: 01.567.601/0001-43 - UNIVERSIDADE FEDERAL DE GOIÁS - ( UFG )",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "CNPJ: 01.567.601/0001-43 - UNIVERSIDADE FEDERAL DE GOIÁS - ( UFG )",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
       "financiador": "SECRETARIA DA ECONOMIA DO ESTADO DE GOIÁS",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
