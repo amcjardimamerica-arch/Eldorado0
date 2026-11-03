@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-02T23:52:40+00:00",
+  "em": "2026-11-03T00:05:36+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-02T23:38:56+00:00",
+  "ultimo_voo": "2026-11-02T23:54:39+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,74 +48,64 @@
     },
     "estrelas_de_ouro": 0,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.9
+    "tempo_medio_min": 10.3
   },
   "missoes": [
     {
-      "em": "2026-11-02T23:38:56+00:00",
+      "em": "2026-11-02T23:54:39+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital chamamento público nº 003/2025 — Goiás / Goiânia",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "Edital de Chamamento 001/2026 (PNAB Ciclo 2) de Cachoeira Alta-GO: 29 projetos culturais, R$ 101.385,68 no tot… — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 3,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://saude.goiania.go.gov.br/editas-de-chamamento-publico/edital-de-chamamento-publico-no-003-2025/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprovado refere-se ao credenciamento de prestadores de serviços médicos e de natureza comum, pessoa física, para prestação de serviço complementar junto ao Sistema Único de Saúde e à Rede Municipal de Saúde em Goiânia.",
-        "para_a_amc": "Para acessar o edital, uma associação comunitária de Goiânia (assistência social, cultura, educação, esporte) precisaria verificar se sua atividade se enquadra nos serviços médicos ou de natureza comum mencionados no edital e, caso sim, reunir os documentos exigidos para inscrição.",
-        "proximo_passo": "Consultar os documentos necessários para inscrição e os anexos mencionados no edital.",
-        "risco": "A falta de alinhamento da atividade da associação comunitária com os serviços médicos ou de natureza comum exigidos no edital pode impedir o acesso."
+        "por_que": "O edital foi comprovado como pertencente ao município de Cachoeira Alta-GO, o que o torna uma fonte válida para organizações da sociedade civil no território.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange sua área de atuação e se ela atende aos requisitos do edital, mesmo que não estejam explicitados no texto comprovado.",
+        "proximo_passo": "Consultar os anexos e requisitos do edital, que não foram encontrados no texto comprovado, para entender melhor as condições de participação.",
+        "risco": "A falta de informações sobre requisitos, prazo e área de atuação pode impedir a associação de se candidatar adequadamente ao edital."
       },
       "erro": null,
-      "segundos": 775,
+      "segundos": 617,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-b8e6198b74a6",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-8fc072d743a9",
       "encontrou": {
-        "Objeto": {
-          "valor": "Credenciamento de Prestadores de Serviços Médicos e de natureza comum, pessoa física, interessados para início imediato, de acordo com a necessidade da CREDENCIANTE, que atendam às condições estabelecidas neste instrumento, para prestação de serviço complementar junto ao Sistema Único de Saúde e à Rede Municipal de Saúde, de acordo com a necessidade e interesse dos serviços de saúde no Município de Goiânia.",
-          "trecho": "Constitui objeto do presente edital de chamamento público o Credenciamento de Prestadores de Serviços Médicos e de natureza comum, pessoa física, interessados para início imediato,",
-          "oficial": true,
-          "dispensado": false
-        },
         "Órgão / financiador": {
-          "valor": "Secretaria Municipal de Saúde",
-          "trecho": "Secretaria Municipal de Saúde",
-          "oficial": true,
+          "valor": "Prefeitura Municipal de Cachoeira Alta",
+          "trecho": "Prefeitura Municipal de Cachoeira Alta",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Município de Goiânia",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Documentos para inscrição",
-          "trecho": "Acesse os anexos e documentos disponibilizados para o processo de credenciamento.",
-          "oficial": true,
+          "trecho": "Cachoeira Alta-GO",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria Municipal de Saúde",
+      "financiador": "Prefeitura Municipal de Cachoeira Alta",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital"
       ]
     }
   ],
