@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-03T04:23:11+00:00",
+  "em": "2026-11-03T04:42:13+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-03T04:05:57+00:00",
+  "ultimo_voo": "2026-11-03T04:25:06+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,75 +39,78 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.4
+    "tempo_medio_min": 16.3
   },
   "missoes": [
     {
-      "em": "2026-11-03T04:05:57+00:00",
+      "em": "2026-11-03T04:25:06+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "10-21: Monitoramento e Avaliação designados por ato específico publicado no Diário Oficial do Município, nos t… — Goiás / Goiânia",
-      "qualidade": "parcial",
-      "comprovados": 7,
-      "dispensados": 1,
+      "alvo": "10-21: quanto aos equipamentos de limpeza que gerem ruído no seu funcionamento; d. Fornecer aos empregados os … — Goiás / Aparecida de Goiânia",
+      "qualidade": "insuficiente",
+      "comprovados": 4,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
         "Valor",
         "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://servicos.goiania.go.gov.br/DadosINTER/PUBLIC/arq_7318512.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a existência de um processo de aquisição de equipamentos de informática para os Centros de Especialidades Odontológicas de Goiânia, o que pode ser relevante para organizações que atuam na área de saúde.",
-        "para_a_amc": "A associação comunitária precisaria se alinhar ao objeto do edital, que é a aquisição de equipamentos de informática para centros odontológicos, e verificar se sua atuação está relacionada a esse objeto, além de seguir as normas e prazos estabelecidos no edital.",
-        "proximo_passo": "Verificar se a associação comunitária atende ao objeto do edital e se está alinhada às necessidades de aquisição de equipamentos de informática para centros odontológicos.",
-        "risco": "O prazo de recurso foi dispensado, o que pode limitar a possibilidade de contestação de decisões relacionadas ao edital, e a falta de informações sobre prazo de inscrição e requisitos pode dificultar o acesso."
+        "serve_como_fonte": "nao",
+        "por_que": "O texto comprovado menciona apenas o objeto do edital, que é 'Exonerar e nomear servidores públicos municipais', sem relação com os equipamentos de limpeza, ruído ou assistência social, cultura, educação e esporte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há outros editais relacionados a áreas de atuação como assistência social, cultura, educação e esporte, e se houver, seguir os requisitos e prazos definidos nesses editais.",
+        "proximo_passo": "Pesquisar outros editais públicos municipais de Aparecida de Goiânia que sejam relevantes para as áreas de atuação da associação comunitária.",
+        "risco": "A falta de informações sobre prazos, requisitos e áreas de atuação pode impedir a associação de se candidatar a editais disponíveis."
       },
       "erro": null,
-      "segundos": 987,
+      "segundos": 978,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Valor, Requisitos, Área de atuação",
-      "id": "op-19e4cc0b0832",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-edea1d980ff1",
       "encontrou": {
         "Objeto": {
-          "valor": "Aquisição de Equipamentos de informática para os Centros de Especialidades Odontológicas de Goiânia – CEO",
-          "trecho": "Objeto da compra: Aquisição de Equipamentos de informática para os Centros de Especialidades Odontológicas de Goiânia – CEO",
-          "oficial": true,
+          "valor": "Exonerar e nomear servidores públicos municipais",
+          "trecho": "EXONERAR, a pedido, EDILMA DIAS FERNANDES, CPF nº ***.364.371-**, do cargo em comissão de ASSESSORA ESPECIAL III, nível AED-1, lotada na SECRETARIA MUNICIPAL DE EDUCAÇÃO, com efeit",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "SECRETARIA MUNICIPAL DE SAÚDE DE GOIANIA - GO",
-          "trecho": "SECRETARIA MUNICIPAL DE SAÚDE DE GOIANIA - GO",
-          "oficial": true,
+          "valor": "Prefeitura Municipal de Aparecida de Goiânia",
+          "trecho": "O PREFEITO DE APARECIDA DE GOIÂNIA, no uso da atribuição que lhe con-",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "UF da UASG: GO",
-          "oficial": true,
+          "trecho": "Aparecida de Goiânia, 21 de outubro de 2026.",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Goiânia",
+      "financiador": "Prefeitura de Aparecida de Goiânia",
       "indicios": [
         {
-          "url": "https://data.queridodiario.ok.org.br/5208707/2026-10-21/bbc6080c9fbd9ea1d19ab95247260bc94dce1a95.txt",
+          "url": "https://data.queridodiario.ok.org.br/5201405/2026-10-21/623b4c9786b1059db03fcf761ec095a6e986e0ce.txt",
           "tipo": "agregador"
         }
       ],
