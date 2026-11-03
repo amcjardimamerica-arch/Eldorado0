@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-03T21:44:07+00:00",
+  "em": "2026-11-03T21:58:35+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-03T21:30:31+00:00",
+  "ultimo_voo": "2026-11-03T21:47:47+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,78 +39,91 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.8
+    "tempo_medio_min": 10.2
   },
   "missoes": [
     {
-      "em": "2026-11-03T21:30:31+00:00",
+      "em": "2026-11-03T21:47:47+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Fomento a Amazônia — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
-      "dispensados": 0,
+      "alvo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — CHAMADA PÚBLICA FAPEG Nº 16/2025 – Apoio a Projetos… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 9,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Resultado"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/fapeg/wp-content/uploads/sites/5/2025/04/CHAMADA_PUBLICA_FAPEG_N__16___Saude_digital__1_.pdf",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O financiamento mencionado é para o estado do Pará, enquanto a pergunta refere-se a Goiânia, que está no estado de Goiás. Não há informações sobre editais específicos para Goiânia ou organizações da sociedade civil nesse contexto.",
-        "para_a_amc": "Não há informações disponíveis sobre requisitos, área de atuação ou como acessar o fomento para organizações da sociedade civil em Goiânia.",
-        "proximo_passo": "Consultar editais específicos do Banco da Amazônia S.A. para o estado de Goiás ou buscar outras fontes de financiamento locais.",
-        "risco": "A falta de informações específicas sobre o edital e os requisitos pode impedir que a associação comunitária de Goiânia obtenha o fomento."
+        "serve_como_fonte": "sim",
+        "por_que": "O texto comprovado menciona diretamente o objeto, valor, órgão financiador, território, esfera, requisitos, anexos e área de atuação da chamada, sendo suficiente para a resposta.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria alinhar seu projeto à área de atuação da chamada (saúde), reunir os requisitos exigidos, preparar os anexos necessários e garantir que o projeto esteja dentro do objeto da chamada, que é apoio a projetos de pesquisa e inovação em saúde digital.",
+        "proximo_passo": "Verificar os requisitos e anexos da chamada e preparar o projeto de pesquisa em saúde digital para submissão.",
+        "risco": "O projeto não estar alinhado com a área de atuação da chamada (saúde) ou não atender aos requisitos exigidos pode impedir o acesso ao financiamento."
       },
       "erro": null,
-      "segundos": 768,
+      "segundos": 611,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-nova-6592147851cb",
+      "fontes_oficiais": 8,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado",
+      "id": "op-118285c06323",
       "encontrou": {
+        "Objeto": {
+          "valor": "apoio a projetos de pesquisa e inovação em saúde digital",
+          "trecho": "APOIO A PROJETOS DE PESQUISA E INOVAÇÃO EM SAÚDE DIGITAL",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$1.000.000,00 (um milhão de reais)",
+          "trecho": "O orçamento total do presente edital é de R$1.000.000,00 (um milhão de reais)",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Banco da Amazônia S.A",
-          "trecho": "Banco da Amazônia S.A",
-          "oficial": false,
+          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás",
+          "trecho": "Fundação de Amparo à Pesquisa do Estado de Goiás — FAPEG por meio do lançamento da presente Chamada Pública",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "PA",
-          "trecho": "Belém, PA – 66017-901.",
-          "oficial": false,
+          "valor": "GO",
+          "trecho": "Fundação de Amparo à Pesquisa do Estado de Goiás — FAPEG",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "saude",
+          "trecho": "Saúde Digital",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "documento ou exigência",
+          "trecho": "São definidos os seguintes eixo temáticos para os projetos propostos neste edital:",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Banco da Amazônia S.A",
+      "financiador": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
