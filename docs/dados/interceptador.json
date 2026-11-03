@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-03T07:50:25+00:00",
+  "em": "2026-11-03T08:06:47+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-03T07:38:27+00:00",
+  "ultimo_voo": "2026-11-03T07:52:24+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,15 +48,15 @@
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.2
+    "tempo_medio_min": 13.6
   },
   "missoes": [
     {
-      "em": "2026-11-03T07:38:27+00:00",
+      "em": "2026-11-03T07:52:24+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital de cadastramento de entidades no Sistema de Destinações (pré-requisito de todos os editais de indicação… — Goiás",
+      "alvo": "Edital de chamamento de ex-empregados celetistas da extinta Fundação de Promoção Social — Fundo Estadual dos D… — Goiás",
       "qualidade": "insuficiente",
       "comprovados": 3,
       "dispensados": 0,
@@ -67,40 +67,44 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
+        "Território",
         "Requisitos",
         "Área de atuação"
       ],
-      "pagina_oficial": "http://sei.goias.gov.br/legislacao/instrucao_normativa_008_SEI.pdf",
+      "pagina_oficial": "http://social.go.gov.br/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto menciona que o edital é um pré-requisito para todos os editais de indicação em Goiás, indicando que é uma fonte relevante para acesso a outros financiamentos.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria se cadastrar no Sistema de Destinações, que é o pré-requisito para participar de outros editais de indicação.",
-        "proximo_passo": "Consultar os anexos mencionados no edital para obter mais detalhes sobre o processo de cadastramento.",
-        "risco": "A falta de informações sobre os requisitos e o prazo de inscrição pode impedir a associação de se preparar adequadamente para o cadastramento."
+        "por_que": "O edital foi comprovado como sendo do órgão SEDs – Secretaria de Estado de Desenvolvimento Social, que é uma entidade estadual com competência para editar chamamentos para programas sociais.",
+        "para_a_amc": "Para acessar o edital, a associação comunitária de Goiânia precisaria verificar os anexos mencionados (2 anexo(s)) para obter informações detalhadas sobre os requisitos, objeto e prazos, bem como seguir o processo de inscrição conforme descrito nos documentos anexos.",
+        "proximo_passo": "Consultar os anexos do edital para obter detalhes sobre os requisitos, objeto e prazos, e iniciar o processo de inscrição conforme orientado.",
+        "risco": "A falta de informações específicas como objeto, prazo de inscrição, valor e requisitos pode impedir a associação de se qualificar adequadamente para o edital."
       },
       "erro": null,
-      "segundos": 671,
+      "segundos": 816,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 2,
+      "fontes_oficiais": 1,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-400bbbdbafa8",
+      "id": "op-e8d697a51200",
       "encontrou": {
-        "Território": {
-          "valor": "GO",
-          "trecho": "ESTADO DE GOIÁS",
-          "oficial": true,
+        "Órgão / financiador": {
+          "valor": "SEDs – Secretaria de Estado de Desenvolvimento Social",
+          "trecho": "SEDs – Secretaria de Estado de Desenvolvimento Social",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Ministério Público do Trabalho",
+      "financiador": "Fundação de Promoção Social – Desenvolvimento Social",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
