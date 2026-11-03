@@ -75,8 +75,8 @@
   },
   {
    "motor": "empresas-incentivadas",
-   "achados_total_1a": 50,
-   "achados_total_agora": 50,
+   "achados_total_1a": 52,
+   "achados_total_agora": 52,
    "no_fluxo": 0,
    "confirmadas": 0
   },
@@ -200,7 +200,7 @@
  "pontos_com_redundancia": 19,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 48803
+ "exemplos_da_rede_de_rotas": 48880
 }
 ```
 
@@ -243,13 +243,14 @@
 
 ```json
 {
- "dia_de_referencia": "2026-11-02",
+ "dia_de_referencia": "2026-11-03",
  "ativos": 172,
- "lidos_ontem": 1,
- "lidos_hoje": 4,
+ "lidos_ontem": 4,
+ "lidos_hoje": 0,
  "nao_lidos_ontem_nem_hoje": [
   "do-goiania",
   "do-goias",
+  "dou",
   "f260-captacao-001",
   "f260-captacao-018",
   "f260-captacao-025",
@@ -286,8 +287,7 @@
   "f260-captacao-190",
   "f260-captacao-193",
   "f260-captacao-196",
-  "f260-captacao-200",
-  "f260-captacao-206"
+  "f260-captacao-200"
  ],
  "ainda_sem_primeira_leitura": [
   "motor-gife",
