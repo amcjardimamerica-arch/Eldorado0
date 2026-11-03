@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-03T23:42:08+00:00",
+  "em": "2026-11-03T23:53:43+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-03T23:27:03+00:00",
+  "ultimo_voo": "2026-11-03T23:43:57+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,16 +48,16 @@
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.3
+    "tempo_medio_min": 9.2
   },
   "missoes": [
     {
-      "em": "2026-11-03T23:27:03+00:00",
+      "em": "2026-11-03T23:43:57+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — Fapeg lança chamada pública para seleção de projeto… — Goiás",
-      "qualidade": "parcial",
+      "alvo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — Governo de Goiás está com inscrições abertas para f… — Goiás",
+      "qualidade": "insuficiente",
       "comprovados": 7,
       "dispensados": 0,
       "total": 12,
@@ -65,55 +65,60 @@
         "Prazo de inscrição",
         "Prazo de recurso",
         "Valor",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": "https://goias.gov.br/fapeg/fapeg-lanca-chamada-publica-para-selecao-de-projetos-de-pesquisa-em-areas-de-graduacao-em-licenciaturas/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que a FAPEG oferece apoio a projetos de pesquisa desenvolvidos por pesquisadores vinculados a instituições de ensino superior ou de ciência, tecnologia e inovação no Estado de Goiás.",
-        "para_a_amc": "Uma associação comunitária de Goiânia precisaria identificar um pesquisador vinculado a uma IES ou ICTI no Estado de Goiás para desenvolver um projeto de pesquisa alinhado ao objeto da chamada pública.",
-        "proximo_passo": "Verificar os requisitos e anexos da chamada pública da FAPEG para elaborar um projeto de pesquisa com um pesquisador vinculado a uma instituição de ensino superior ou de ciência, tecnologia e inovação no Estado de Goiás.",
-        "risco": "A falta de um pesquisador vinculado a uma IES ou ICTI no Estado de Goiás pode impedir o acesso ao apoio da FAPEG."
+        "por_que": "O edital foi comprovado com informações sobre o objeto, resultado, órgão financiador, território, esfera e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é apoio à pesquisa e inovação em educação especial inclusiva, e verificar se sua atividade se enquadra na área de atuação educacional.",
+        "proximo_passo": "Verificar os anexos disponibilizados pelo FAPEG para entender melhor os requisitos e condições do edital.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se candidatar adequadamente ao edital."
       },
       "erro": null,
-      "segundos": 859,
+      "segundos": 551,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Prazo de recurso, Valor, Área de atuação",
-      "id": "op-fae0c03c7b89",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-0cd7b6ef62a7",
       "encontrou": {
         "Objeto": {
-          "valor": "apoiar projetos de pesquisa a serem desenvolvidos sob responsabilidade de um(a) pesquisador(a)-coordenador(a) que possua vínculo empregatício com Instituição de Ensino Superior (IES) ou Instituição de Ciência, Tecnologia e Inovação (ICTI) sediada no Estado de Goiás, pública ou privada sem fins lucrativos",
-          "trecho": "O Programa de Auxílio à Pesquisa Científica e Tecnológica – Pró-Licenciaturas tem por objeto apoiar projetos de pesquisa a serem desenvolvidos sob responsabilidade de um(a) pesquis",
-          "oficial": true,
+          "valor": "apoio à pesquisa e inovação em educação especial inclusiva",
+          "trecho": "EDITAL DE APOIO À PESQUISA E INOVAÇÃO EM EDUCAÇÃO ESPECIAL INCLUSIVA",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás – FAPEG",
-          "trecho": "A Fundação de Amparo à Pesquisa do Estado de Goiás – FAPEG torna público o lançamento da presente Chamada Pública",
-          "oficial": true,
+          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
+          "trecho": "CHAMADA PÚBLICA FAPEG Nº 13/2026",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Instituição de Ensino Superior (IES) ou Instituição de Ciência, Tecnologia e Inovação (ICTI) sediada no Estado de Goiás",
-          "oficial": true,
+          "trecho": "CHAMADA PÚBLICA FAPEG Nº 13/2026",
+          "oficial": false,
           "dispensado": false
         },
-        "Requisitos": {
-          "valor": "Doutores(as) e mestres(as) vinculados à IES e/ou ICTIs de Goiás",
-          "trecho": "Podem submeter: Doutores(as) e mestres(as) vinculados à IES e/ou ICTIs de Goiás",
-          "oficial": true,
+        "Área de atuação": {
+          "valor": "educacao",
+          "trecho": "EDITAL DE APOIO À PESQUISA E INOVAÇÃO EM EDUCAÇÃO ESPECIAL INCLUSIVA",
+          "oficial": false,
           "dispensado": false
         }
       },
       "financiador": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
