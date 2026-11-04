@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-04T12:58:29+00:00",
+  "em": "2026-11-04T13:14:34+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-04T12:37:33+00:00",
+  "ultimo_voo": "2026-11-04T13:00:22+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,60 +48,66 @@
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 20.3
+    "tempo_medio_min": 13.4
   },
   "missoes": [
     {
-      "em": "2026-11-04T12:37:33+00:00",
+      "em": "2026-11-04T13:00:22+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Jataí — Edital da Lei Paulo Gustavo é lançado — Goiás / Jataí",
+      "alvo": "Jataí — Edital da Lei Paulo Gustavo é lançado — Goiás / Jataí — Goiás / Jataí",
       "qualidade": "insuficiente",
       "comprovados": 4,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://jatai.go.gov.br",
+      "pagina_oficial": "https://www.jatai.go.gov.br/edital-da-lei-paulo-gustavo-e-lancado/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi lançado pela Prefeitura de Jataí, Goiás, e é uma fonte válida para obtenção de recursos por organizações da sociedade civil no âmbito municipal.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange sua área de atuação, se está localizada no território de Jataí, e se atende aos requisitos não especificados no texto, além de seguir o processo de inscrição e submissão de propostas conforme os anexos disponibilizados.",
-        "proximo_passo": "Verificar os anexos do edital para entender os requisitos e o processo de inscrição, e entrar em contato com a Prefeitura de Jataí para obter mais informações.",
-        "risco": "O edital não especifica os requisitos, prazos ou área de atuação, o que pode impedir que a associação comunitária identifique se é elegível para o fomento."
+        "por_que": "O edital foi comprovado com informações sobre o objeto e o financiador, o que permite identificar a possibilidade de acesso para uma associação comunitária.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende aos requisitos do edital, que não foram encontrados, e se sua área de atuação se enquadra no objeto do edital, que é a promoção de ações de desenvolvimento social e cidadania.",
+        "proximo_passo": "Consultar o edital completo para identificar os requisitos, prazos e outros detalhes necessários para a candidatura.",
+        "risco": "A falta de informações sobre requisitos, prazos e área de atuação pode impedir a associação de se qualificar adequadamente para o edital."
       },
       "erro": null,
-      "segundos": 1220,
+      "segundos": 805,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 4,
+      "fontes_oficiais": 3,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-1c294d4f0fdc",
+      "id": "op-4cf5be37fe9b",
       "encontrou": {
+        "Objeto": {
+          "valor": "Promoção de ações de desenvolvimento social e cidadania",
+          "trecho": "Edital da Lei Paulo Gustavo é lançado | Prefeitura de Jataí",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
           "valor": "Prefeitura de Jataí",
-          "trecho": "PREFEITURA DE JATAÍ",
+          "trecho": "Edital da Lei Paulo Gustavo é lançado | Prefeitura de Jataí",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Jataí",
-          "oficial": true,
+          "trecho": "Jataí - Goiás / Jataí - Goiás / Jataí",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Jataí",
+      "financiador": "Câmara Municipal de Jataí",
       "indicios": [],
       "rotas": [
         "site_do_financiador"
