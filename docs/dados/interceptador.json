@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-04T10:29:35+00:00",
+  "em": "2026-11-04T10:40:03+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-04T10:20:54+00:00",
+  "ultimo_voo": "2026-11-04T10:31:53+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,60 +44,50 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.1
+    "tempo_medio_min": 7.6
   },
   "missoes": [
     {
-      "em": "2026-11-04T10:20:54+00:00",
+      "em": "2026-11-04T10:31:53+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Jaraguá — Bombeiro Mirim 2025, Inscrições Disponíveis! — Goiás",
+      "alvo": "Jaraguá — Edital Aldir Blanc 2026 já disponível: artistas de Jaraguá, preparem-se para as inscrições! — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 6,
-      "dispensados": 1,
+      "comprovados": 4,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Anexos",
-        "Área de atuação"
+        "Requisitos",
+        "Anexos"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O texto comprova o objeto, prazo de inscrição, órgão financiador, território e requisitos do edital.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria identificar crianças de 9 a 11 anos, nascidas entre 13 de abril de 2013 e 24 de fevereiro de 2016, que residam na área de abrangência do município de Jaraguá, e garantir que elas estejam aptas para participar do Programa Educacional Bombeiro Mirim.",
-        "proximo_passo": "Verificar se as crianças elegíveis residem na área de abrangência do município de Jaraguá e se estão aptas para participar do programa.",
-        "risco": "A impossibilidade de identificar crianças que residam na área de abrangência do município de Jaraguá ou a falta de aptidão das crianças para participar do programa."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações suficientes sobre o edital para confirmar sua validade ou detalhes necessários para acesso.",
+        "para_a_amc": "A associação comunitária precisaria verificar se o edital se aplica à sua área de atuação e se atende aos requisitos não especificados, mas que normalmente são exigidos para editais de fomento.",
+        "proximo_passo": "Consultar o site oficial da Prefeitura Municipal de Jaraguá para obter mais detalhes sobre o edital.",
+        "risco": "A falta de informações específicas como prazo, objeto e requisitos pode impedir o acesso ao edital."
       },
       "erro": null,
-      "segundos": 483,
+      "segundos": 456,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-d21a76c4ebc2",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-6264b582cb43",
       "encontrou": {
-        "Objeto": {
-          "valor": "Programa Educacional Bombeiro Mirim",
-          "trecho": "O período de inscrições será de 24 de janeiro a 9 de fevereiro.",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O texto menciona o período de inscrições de 24 de janeiro a 9 de fevereiro.",
-          "trecho": "O período de inscrições será de 24 de janeiro a 9 de fevereiro. [rejeitado: data implausível para edital aberto]",
-          "oficial": false,
-          "dispensado": true
-        },
         "Órgão / financiador": {
           "valor": "Prefeitura Municipal de Jaraguá",
           "trecho": "Prefeitura Municipal de Jaraguá",
@@ -106,13 +96,13 @@
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Prefeitura Municipal de Jaraguá",
+          "trecho": "Jaraguá - GO",
           "oficial": false,
           "dispensado": false
         },
-        "Requisitos": {
-          "valor": "crianças de 9 a 11 anos, nascidas entre 13 de abril de 2013 e 24 de fevereiro de 2016",
-          "trecho": "Podem participar crianças de 9 a 11 anos, nascidas entre 13 de abril de 2013 e 24 de fevereiro de 2016.",
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "EM Cultura e Prefeitura",
           "oficial": false,
           "dispensado": false
         }
