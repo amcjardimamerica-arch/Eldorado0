@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-04T08:32:35+00:00",
+  "em": "2026-11-04T08:42:38+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-04T08:15:52+00:00",
+  "ultimo_voo": "2026-11-04T08:34:46+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,79 +48,78 @@
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.9
+    "tempo_medio_min": 7.4
   },
   "missoes": [
     {
-      "em": "2026-11-04T08:15:52+00:00",
+      "em": "2026-11-04T08:34:46+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Itaberaí — edital de chamamento público nº 002/2025 — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 7,
+      "alvo": "Itumbiara — edital chamada pública – lei paulo gustavo — Goiás / Itumbiara",
+      "qualidade": "insuficiente",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Requisitos"
       ],
-      "pagina_oficial": "https://itaberai.go.gov.br/edital-de-chamamento-publico-007-2025-retificado/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a existência de um chamamento público para credenciamento de pessoas jurídicas prestadoras de serviços de saúde especializados, o que é relevante para a AMC.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se enquadrar na área de atuação de saúde, estar legalmente constituída e demonstrar interesse na prestação de serviços de saúde especializados, conforme os requisitos do edital.",
-        "proximo_passo": "Consultar os anexos do edital para obter mais detalhes sobre os requisitos e processos de credenciamento.",
-        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a associação de se inscrever oportunamente."
+        "por_que": "O edital comprovado menciona o objeto da chamada pública e o financiador, o que permite identificar a fonte de financiamento para projetos culturais.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando um projeto cultural de audiovisual e multilinguagem, alinhado ao objeto do edital.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre o processo de inscrição e os critérios de avaliação.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se inscrever no edital a tempo."
       },
       "erro": null,
-      "segundos": 955,
+      "segundos": 442,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-555d13de7752",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-314382a6f300",
       "encontrou": {
         "Objeto": {
-          "valor": "credenciamento de pessoas jurídicas prestadoras de serviços de saúde especializados em áreas específicas",
-          "trecho": "O objeto do presente Edital é o credenciamento de pessoas jurídicas, legalmente constituídas, interessadas na prestação de serviços de saúde especializados em ANESTESIOLOGIA, CIRUR",
-          "oficial": true,
+          "valor": "PROJETOS CULTURAIS DE AUDIOVISUAL E MULTILINGUAGEM",
+          "trecho": "EDITAL CHAMADA PÚBLICA – LEI PAULO GUSTAVO – PROJETOS CULTURAIS DE AUDIOVISUAL E MULTILINGUAGEM",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Município de Itaberaí, Estado de Goiás",
-          "trecho": "O MUNICÍPIO DE ITABERAÍ, Estado de Goiás, pessoa jurídica de direito público interno, inscrito no CNPJ/MF sob n° 024.519.380/001-53, por meio do SECRETARIA MUNICIPAL DE SAÚDE",
-          "oficial": true,
+          "valor": "Prefeitura Municipal de Itumbiara",
+          "trecho": "EDITAL CHAMADA PÚBLICA – LEI PAULO GUSTAVO – PROJETOS CULTURAIS DE AUDIOVISUAL E MULTILINGUAGEM",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "no âmbito da Rede Municipal de Saúde do Município de Itaberaí-GO",
-          "oficial": true,
+          "trecho": "Itumbiara",
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "saude",
-          "trecho": "serviços de saúde especializados em ANESTESIOLOGIA, CIRURGIA GERAL, CIRURGIA PLASTICA, DERMATOLOGIA, GINECOLOGIA E OBSTETRÍCIA, MASTOLOGIA, MEDICINA GERAL, NEONATOLOGIA, ORTOPEDIA ",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "legalmente constituídas, interessadas na prestação de serviços de saúde especializados",
-          "trecho": "O objeto do presente Edital é o credenciamento de pessoas jurídicas, legalmente constituídas, interessadas na prestação de serviços de saúde especializados em ANESTESIOLOGIA, CIRUR",
-          "oficial": true,
+          "valor": "cultura",
+          "trecho": "PROJETOS CULTURAIS DE AUDIOVISUAL E MULTILINGUAGEM",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Itaberaí",
+      "financiador": "Prefeitura Municipal de Itumbiara",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
