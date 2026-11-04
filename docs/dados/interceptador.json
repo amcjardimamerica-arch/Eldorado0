@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-04T17:29:10+00:00",
+  "em": "2026-11-04T17:45:35+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-04T17:20:14+00:00",
+  "ultimo_voo": "2026-11-04T17:31:29+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,65 +48,79 @@
     },
     "estrelas_de_ouro": 4,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.1
+    "tempo_medio_min": 13.3
   },
   "missoes": [
     {
-      "em": "2026-11-04T17:20:14+00:00",
+      "em": "2026-11-04T17:31:29+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Obter o Certificado de Registro e Licenciamento de Veículo (CRLV-e) — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 1,
-      "dispensados": 0,
+      "alvo": "Este edital reconhece e premia músicos, cantores, instrumentistas, duplas e grupos musicais que, com sua… — mu… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 7,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/03/Edital-de-Musica-PNAB-2026.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o objeto 'Obter o Certificado de Registro e Licenciamento de Veículo (CRLV-e)', o que indica que é uma fonte relevante para o tema.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria obter o CRLV-e, que é um documento necessário para comprovar a regularidade do veículo, caso haja necessidade de utilização de veículos em suas atividades.",
-        "proximo_passo": "Consultar o órgão responsável pela emissão do CRLV-e no Estado de Goiás para obter mais informações sobre o processo.",
-        "risco": "A falta de informações detalhadas sobre o processo, prazos e requisitos pode impedir a associação de seguir corretamente os procedimentos."
+        "por_que": "O texto comprova que o edital é voltado para a área da música e é oferecido pela Secretaria de Estado da Cultura de Goiás, com informações sobre objeto e território.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever em projetos de música, contemplando produção, lançamento e circulação de obras musicais, e seguir as diretrizes do edital para ser contemplada.",
+        "proximo_passo": "Consultar os anexos do edital para obter mais detalhes sobre as condições de inscrição e os critérios de seleção.",
+        "risco": "O prazo de inscrição específico não foi encontrado, o que pode impedir a participação em tempo hábil."
       },
       "erro": null,
-      "segundos": 486,
+      "segundos": 798,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-nova-2bea695cea29",
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Requisitos",
+      "id": "op-23bbaecfbabf",
       "encontrou": {
         "Objeto": {
-          "valor": "Obter o Certificado de Registro e Licenciamento de Veículo (CRLV-e)",
-          "trecho": "Obter o Certificado de Registro e Licenciamento de Veículo (CRLV-e)",
+          "valor": "selecionar e apoiar projetos na área da música, contemplando iniciativas de produção, lançamento e circulação de obras musicais",
+          "trecho": "O presente edital tem por objeto selecionar e apoiar projetos na área da música, contemplando iniciativas de produção, lançamento e circulação de obras musicais.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O texto menciona o prazo de inscrição com data específica.",
+          "trecho": "As inscrições ficam abertas pelo período de 30 (trinta) dias corridos, contados do dia seguinte à publicação deste edital no Diário Oficial do Estado de Goiás: das 00h00 do dia 13/",
           "oficial": false,
+          "dispensado": true
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria de Estado da Cultura de Goiás (Secult Goiás)",
+          "trecho": "Secretaria de Estado da Cultura de Goiás (Secult Goiás), tendo em vista o que consta no processo nº 202517645004356, torna público o presente Edital de Música nº 11/2026",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "O presente Edital destina-se a apoiar projetos apresentados por proponentes do Estado de Goiás.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "O presente edital tem por objeto selecionar e apoiar projetos na área da música, contemplando iniciativas de produção, lançamento e circulação de obras musicais.",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "GOVERNADOR DO ESTADO DE GOIÁS",
+      "financiador": "Secretaria de Estado da Cultura de Goiás",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
