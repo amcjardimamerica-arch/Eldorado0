@@ -1,5 +1,5 @@
 {
- "em": "2026-11-04T14:55:20+00:00",
+ "em": "2026-11-04T17:10:07+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 50722
+  "exemplos_da_rede": 50796
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.805
+    3.7847
    ],
    [
     "origem:rota original",
-    3.4635
+    3.6998
    ],
    [
     "tok:inscricoes",
@@ -25,7 +25,7 @@
    ],
    [
     "origem:biblioteca",
-    2.6292
+    2.6276
    ],
    [
     "tok:secult",
@@ -40,24 +40,24 @@
     2.3615
    ],
    [
-    "tld:br",
-    2.2678
-   ],
-   [
     "tok:aldirblanc",
     2.1702
+   ],
+   [
+    "tld:br",
+    2.1327
    ],
    [
     "tok:abre",
     1.9565
    ],
    [
-    "tok:leipaulogustavo",
-    1.8789
+    "tok:sitemap",
+    1.8884
    ],
    [
-    "tok:sitemap",
-    1.8261
+    "tok:xml",
+    1.8884
    ]
   ],
   "piores_sinais": [
@@ -75,11 +75,7 @@
    ],
    [
     "tipo:site_oficial",
-    -3.561
-   ],
-   [
-    "origem:padrão",
-    -3.6317
+    -3.3886
    ],
    [
     "tok:content",
@@ -88,6 +84,10 @@
    [
     "tok:uploads",
     -3.6809
+   ],
+   [
+    "origem:padrão",
+    -3.694
    ],
    [
     "origem:câmara",
@@ -433,8 +433,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-04T03:36:42+00:00",
-    "testes": 13,
+    "em": "2026-11-04T17:09:54+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -631,7 +631,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-04T03:36:43+00:00",
+    "em": "2026-11-04T17:09:56+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -676,7 +676,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-04T03:36:44+00:00",
+    "em": "2026-11-04T17:09:57+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -723,10 +723,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 3,
-    "aprendido_em": "2026-11-04T03:36:57+00:00"
+    "aprendido_em": "2026-11-04T17:10:07+00:00"
    },
    "afinado": {
-    "em": "2026-11-04T03:36:57+00:00",
+    "em": "2026-11-04T17:10:07+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.undp.org/pt/brazil",
@@ -1196,7 +1196,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-04T00:37:08+00:00",
+    "em": "2026-11-04T17:09:35+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1618,11 +1618,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 4,
-    "aprendido_em": "2026-11-03T21:36:18+00:00"
+    "aprendido_em": "2026-11-04T17:09:29+00:00"
    },
    "afinado": {
-    "em": "2026-11-03T21:36:18+00:00",
-    "testes": 13,
+    "em": "2026-11-04T17:09:29+00:00",
+    "testes": 14,
     "melhor": {
      "url": "https://www.iadb.org/sitemap.xml",
      "via": "direto",
@@ -2150,6 +2150,71 @@
     "resultado": "rota nova em teste"
    }
   },
+  "alego-pl": {
+   "nome": "Assembleia Legislativa de Goiás — proposições",
+   "status": "rota nova em teste",
+   "vazias_seguidas": 4,
+   "leituras": 131,
+   "ok": 0,
+   "ultima": {
+    "em": "2026-11-04T14:26:00+00:00",
+    "classe": "vazia",
+    "motivo": "página institucional; seguiu 4 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje"
+   },
+   "historico": [
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v",
+    "v"
+   ],
+   "rota_aprendida": {
+    "urls": [
+     "https://portal.al.go.leg.br/"
+    ],
+    "via": "direto",
+    "origem": "rota original",
+    "pontos": 27,
+    "aprendido_em": "2026-10-31T02:06:11+00:00"
+   },
+   "afinado": {
+    "em": "2026-10-31T02:06:11+00:00",
+    "testes": 16,
+    "melhor": {
+     "url": "https://portal.al.go.leg.br/",
+     "via": "direto",
+     "origem": "rota original",
+     "pontos": 27,
+     "formato": "html"
+    },
+    "resultado": "rota nova em teste"
+   }
+  },
   "plat-captamos": {
    "nome": "Captamos — oportunidades de captação",
    "status": "ok",
@@ -2331,16 +2396,16 @@
    },
    "afinado": null
   },
-  "alego-pl": {
-   "nome": "Assembleia Legislativa de Goiás — proposições",
+  "dj-trf1-go": {
+   "nome": "Diário da Justiça Federal — Seção Judiciária de Goiás",
    "status": "rota nova em teste",
    "vazias_seguidas": 3,
-   "leituras": 130,
+   "leituras": 94,
    "ok": 0,
    "ultima": {
-    "em": "2026-11-03T14:15:39+00:00",
+    "em": "2026-11-04T14:26:47+00:00",
     "classe": "vazia",
-    "motivo": "página institucional; seguiu 4 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje"
+    "motivo": "o robots.txt do site proíbe leitura automática (3 página(s)) — conferência manual pelo titular; republicações chegam pelo motor do CNJ"
    },
    "historico": [
     "v",
@@ -2376,21 +2441,21 @@
    ],
    "rota_aprendida": {
     "urls": [
-     "https://portal.al.go.leg.br/"
+     "https://www.trf1.jus.br/sjgo/imprensa/noticias"
     ],
     "via": "direto",
     "origem": "rota original",
-    "pontos": 27,
-    "aprendido_em": "2026-10-31T02:06:11+00:00"
+    "pontos": 29,
+    "aprendido_em": "2026-10-31T12:44:38+00:00"
    },
    "afinado": {
-    "em": "2026-10-31T02:06:11+00:00",
-    "testes": 16,
+    "em": "2026-10-31T12:44:38+00:00",
+    "testes": 14,
     "melhor": {
-     "url": "https://portal.al.go.leg.br/",
+     "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
      "via": "direto",
      "origem": "rota original",
-     "pontos": 27,
+     "pontos": 29,
      "formato": "html"
     },
     "resultado": "rota nova em teste"
@@ -2548,71 +2613,6 @@
    ],
    "rota_aprendida": null,
    "afinado": null
-  },
-  "dj-trf1-go": {
-   "nome": "Diário da Justiça Federal — Seção Judiciária de Goiás",
-   "status": "rota nova em teste",
-   "vazias_seguidas": 2,
-   "leituras": 93,
-   "ok": 0,
-   "ultima": {
-    "em": "2026-11-03T14:16:59+00:00",
-    "classe": "vazia",
-    "motivo": "o robots.txt do site proíbe leitura automática (3 página(s)) — conferência manual pelo titular; republicações chegam pelo motor do CNJ"
-   },
-   "historico": [
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v",
-    "v"
-   ],
-   "rota_aprendida": {
-    "urls": [
-     "https://www.trf1.jus.br/sjgo/imprensa/noticias"
-    ],
-    "via": "direto",
-    "origem": "rota original",
-    "pontos": 29,
-    "aprendido_em": "2026-10-31T12:44:38+00:00"
-   },
-   "afinado": {
-    "em": "2026-10-31T12:44:38+00:00",
-    "testes": 14,
-    "melhor": {
-     "url": "https://www.trf1.jus.br/sjgo/imprensa/noticias",
-     "via": "direto",
-     "origem": "rota original",
-     "pontos": 29,
-     "formato": "html"
-    },
-    "resultado": "rota nova em teste"
-   }
   },
   "mpu-destinacao": {
    "nome": "MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)",
@@ -2852,6 +2852,57 @@
    ],
    "rota_aprendida": null,
    "afinado": null
+  },
+  "camara-goiania-pl": {
+   "nome": "Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos",
+   "status": "ok",
+   "vazias_seguidas": 1,
+   "leituras": 149,
+   "ok": 56,
+   "ultima": {
+    "em": "2026-11-04T14:26:10+00:00",
+    "classe": "vazia",
+    "motivo": "0 itens lidos (pautas D 0 projetos em 0 pauta(s) · processos A 0 · própria B 0 · notícias C 0): nenhum chamamento aberto para OSC · 0 a acompanhar · 0 utilidade"
+   },
+   "historico": [
+    "o",
+    "v",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "o",
+    "v",
+    "v",
+    "v",
+    "o",
+    "v",
+    "o",
+    "v",
+    "v",
+    "o",
+    "v",
+    "o",
+    "o",
+    "v",
+    "v",
+    "o",
+    "v",
+    "v",
+    "o",
+    "o",
+    "v"
+   ],
+   "rota_aprendida": null,
+   "afinado": {
+    "em": "2026-10-10T10:20:34+00:00",
+    "testes": 11,
+    "melhor": null,
+    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
+   }
   },
   "plat-prefeituras-50-go": {
    "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
@@ -3337,57 +3388,6 @@
    ],
    "rota_aprendida": null,
    "afinado": null
-  },
-  "camara-goiania-pl": {
-   "nome": "Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos",
-   "status": "ok",
-   "vazias_seguidas": 0,
-   "leituras": 148,
-   "ok": 56,
-   "ultima": {
-    "em": "2026-11-03T14:16:22+00:00",
-    "classe": "ok",
-    "motivo": "26 itens lidos (pautas D 0 projetos em 0 pauta(s) · processos A 0 · própria B 0 · notícias C 26): nenhum chamamento aberto para OSC · 8 a acompanhar · 0 utilida"
-   },
-   "historico": [
-    "o",
-    "o",
-    "v",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "o",
-    "v",
-    "v",
-    "v",
-    "o",
-    "v",
-    "o",
-    "v",
-    "v",
-    "o",
-    "v",
-    "o",
-    "o",
-    "v",
-    "v",
-    "o",
-    "v",
-    "v",
-    "o",
-    "o"
-   ],
-   "rota_aprendida": null,
-   "afinado": {
-    "em": "2026-10-10T10:20:34+00:00",
-    "testes": 11,
-    "melhor": null,
-    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
-   }
   },
   "pncp-api": {
    "nome": "PNCP — API de contratações (chamamentos e credenciamentos)",
@@ -4437,12 +4437,12 @@
    "nome": "Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos)",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 101,
-   "ok": 76,
+   "leituras": 102,
+   "ok": 77,
    "ultima": {
-    "em": "2026-11-03T14:16:59+00:00",
+    "em": "2026-11-04T14:26:46+00:00",
     "classe": "ok",
-    "motivo": "53 itens lidos (CMO A 11 · Câmara B 0 · Senado C 3 · notícias D 35 · convocações E 4): nenhuma janela de emendas aberta nem chamamento para OSC · 11 a acompanha"
+    "motivo": "53 itens lidos (CMO A 11 · Câmara B 0 · Senado C 3 · notícias D 35 · convocações E 4): nenhuma janela de emendas aberta nem chamamento para OSC · 13 a acompanha"
    },
    "historico": [
     "o",

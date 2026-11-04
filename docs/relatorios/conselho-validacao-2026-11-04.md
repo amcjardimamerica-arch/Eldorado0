@@ -200,7 +200,7 @@
  "pontos_com_redundancia": 19,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 50722
+ "exemplos_da_rede_de_rotas": 50796
 }
 ```
 
@@ -246,7 +246,7 @@
  "dia_de_referencia": "2026-11-04",
  "ativos": 172,
  "lidos_ontem": 22,
- "lidos_hoje": 0,
+ "lidos_hoje": 4,
  "nao_lidos_ontem_nem_hoje": [
   "f260-captacao-025",
   "f260-captacao-034",
