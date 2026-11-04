@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-04T10:18:38+00:00",
+  "em": "2026-11-04T10:29:35+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-04T10:03:01+00:00",
+  "ultimo_voo": "2026-11-04T10:20:54+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,83 +48,79 @@
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.8
+    "tempo_medio_min": 8.1
   },
   "missoes": [
     {
-      "em": "2026-11-04T10:03:01+00:00",
+      "em": "2026-11-04T10:20:54+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Itumbiara — termina nesta sexta prazo para inscrição em chamada pública de agentes culturais em itumbiara — Goiás / Itumbiara",
-      "qualidade": "parcial",
-      "comprovados": 8,
+      "alvo": "Jaraguá — Bombeiro Mirim 2025, Inscrições Disponíveis! — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 6,
       "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://itumbiara.go.gov.br/inscricoes-em-chamada-publica-de-agentes-culturais-de-itumbiara-irao-ate-o-dia-8-de-novembro/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova a existência de uma chamada pública para agentes culturais em Itumbiara, Goiás, com prazo de inscrição terminado em 25 de outubro.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever na chamada pública, apresentando os requisitos necessários, como ser pessoa física ou jurídica, e anexar os documentos solicitados.",
-        "proximo_passo": "Verificar os requisitos e anexos da chamada pública e se inscrever antes do prazo final.",
-        "risco": "O prazo de inscrição terminou, o que pode impedir a participação da associação."
+        "por_que": "O texto comprova o objeto, prazo de inscrição, órgão financiador, território e requisitos do edital.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria identificar crianças de 9 a 11 anos, nascidas entre 13 de abril de 2013 e 24 de fevereiro de 2016, que residam na área de abrangência do município de Jaraguá, e garantir que elas estejam aptas para participar do Programa Educacional Bombeiro Mirim.",
+        "proximo_passo": "Verificar se as crianças elegíveis residem na área de abrangência do município de Jaraguá e se estão aptas para participar do programa.",
+        "risco": "A impossibilidade de identificar crianças que residam na área de abrangência do município de Jaraguá ou a falta de aptidão das crianças para participar do programa."
       },
       "erro": null,
-      "segundos": 891,
+      "segundos": 483,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor",
-      "id": "op-71e6ba1793f0",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-d21a76c4ebc2",
       "encontrou": {
         "Objeto": {
-          "valor": "destinação de recursos remanescentes da Lei Paulo Gustavo para agentes culturais na área de audiovisual, na produção de curtas-metragens",
-          "trecho": "O prazo para artistas e agentes culturais de Itumbiara se inscreverem no processo de chamada pública para destinação de recursos remanescentes da Lei Paulo Gustavo, que começou no ",
-          "oficial": true,
+          "valor": "Programa Educacional Bombeiro Mirim",
+          "trecho": "O período de inscrições será de 24 de janeiro a 9 de fevereiro.",
+          "oficial": false,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "dispensado — O prazo para inscrição termina nesta sexta-feira, dia 25 de outubro.",
-          "trecho": "O prazo para artistas e agentes culturais de Itumbiara se inscreverem no processo de chamada pública para destinação de recursos remanescentes da Lei Paulo Gustavo, que começou no ",
+          "valor": "dispensado — O texto menciona o período de inscrições de 24 de janeiro a 9 de fevereiro.",
+          "trecho": "O período de inscrições será de 24 de janeiro a 9 de fevereiro. [rejeitado: data implausível para edital aberto]",
           "oficial": false,
           "dispensado": true
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Itumbiara",
-          "trecho": "INSCRIÇÕES EM CHAMADA PÚBLICA DE AGENTES CULTURAIS DE ITUMBIARA IRÃO ATÉ O DIA 8 DE NOVEMBRO - Prefeitura Municipal de Itumbiara",
-          "oficial": true,
+          "valor": "Prefeitura Municipal de Jaraguá",
+          "trecho": "Prefeitura Municipal de Jaraguá",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "INSCRIÇÕES EM CHAMADA PÚBLICA DE AGENTES CULTURAIS DE ITUMBIARA IRÃO ATÉ O DIA 8 DE NOVEMBRO - Prefeitura Municipal de Itumbiara",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "INSCRIÇÕES EM CHAMADA PÚBLICA DE AGENTES CULTURAIS DE ITUMBIARA IRÃO ATÉ O DIA 8 DE NOVEMBRO - Prefeitura Municipal de Itumbiara",
-          "oficial": true,
+          "trecho": "Prefeitura Municipal de Jaraguá",
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "pessoa física ou pessoa jurídica",
-          "trecho": "As inscrições são na área de audiovisual, na produção de curtas-metragens. Pode se inscrever como pessoa física ou pessoa jurídica.",
-          "oficial": true,
+          "valor": "crianças de 9 a 11 anos, nascidas entre 13 de abril de 2013 e 24 de fevereiro de 2016",
+          "trecho": "Podem participar crianças de 9 a 11 anos, nascidas entre 13 de abril de 2013 e 24 de fevereiro de 2016.",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura Municipal de Itumbiara",
+      "financiador": "Prefeitura Municipal de Jaraguá",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "financiador_programa_edital"
       ]
     }
   ],
