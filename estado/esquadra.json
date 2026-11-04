@@ -266,10 +266,10 @@
     "alego-pl": {
       "nome": "Assembleia Legislativa de Goiás — proposições",
       "tipo": "legislativo",
-      "leituras": 130,
+      "leituras": 131,
       "achados_total": 3,
-      "vazias_seguidas": 100,
-      "ultima": "2026-11-03T14:15:39+00:00",
+      "vazias_seguidas": 101,
+      "ultima": "2026-11-04T14:26:00+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 0,
       "falhas_ultima": 0,
@@ -277,7 +277,7 @@
         {
           "url": "https://portal.al.go.leg.br/",
           "http": 200,
-          "bytes": 133398
+          "bytes": 134128
         },
         {
           "url": "https://portal.al.go.leg.br/credenciamento-imprensa",
@@ -288,7 +288,7 @@
       "alerta": "trocar URL: 3 leituras sem achados com página respondendo",
       "diagnostico": {
         "paginas_lidas": 2,
-        "links_total": 438,
+        "links_total": 441,
         "links_candidatos": 306,
         "descobertas": [
           {
@@ -314,8 +314,8 @@
         ],
         "pdf_links": 7,
         "motivo_zero": "página institucional; seguiu 4 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje",
-        "camada1_vetados": 20,
-        "camada1_direcionados": 11,
+        "camada1_vetados": 19,
+        "camada1_direcionados": 10,
         "paginas_alem_do_limite": 4,
         "robots_proibe": [
           "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
@@ -336,35 +336,29 @@
     "camara-goiania-pl": {
       "nome": "Câmara Municipal de Goiânia — projetos de lei",
       "tipo": "legislativo",
-      "leituras": 148,
+      "leituras": 149,
       "achados_total": 0,
-      "vazias_seguidas": 148,
-      "ultima": "2026-11-03T14:16:22+00:00",
+      "vazias_seguidas": 149,
+      "ultima": "2026-11-04T14:26:10+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 0,
-      "falhas_ultima": 0,
+      "falhas_ultima": 1,
       "saude": [
         {
           "url": "https://www.goiania.go.leg.br",
           "http": 200,
-          "bytes": 283280,
-          "itens": 26
-        },
-        {
-          "url": "https://www.goiania.go.leg.br",
-          "http": 200,
-          "bytes": 13165,
+          "bytes": 13191,
           "itens": 0
         }
       ],
-      "alerta": "trocar URL: 3 leituras sem achados com página respondendo",
+      "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 13,
-        "links_total": 26,
-        "links_candidatos": 8,
+        "paginas_lidas": 1,
+        "links_total": 0,
+        "links_candidatos": 0,
         "descobertas": [],
         "pdf_links": 0,
-        "motivo_zero": "26 itens lidos (pautas D 0 projetos em 0 pauta(s) · processos A 0 · própria B 0 · notícias C 26): nenhum chamamento aberto para OSC · 8 a acompanhar · 0 utilidade(s) pública(s) para a lista de habilitação",
+        "motivo_zero": "0 itens lidos (pautas D 0 projetos em 0 pauta(s) · processos A 0 · própria B 0 · notícias C 0): nenhum chamamento aberto para OSC · 0 a acompanhar · 0 utilidade(s) pública(s) para a lista de habilitação",
         "versao": "motor-05 v2 (01/10/2026)",
         "fontes": {
           "A": {
@@ -380,16 +374,17 @@
             "proibido_robots": true
           },
           "C": {
-            "falhas": [],
-            "consultas": 12,
-            "itens": 26,
-            "bytes": 283280
+            "falhas": [
+              "direto: HTTP Error 504: Gateway Time-out · pela ponte Brasil: HTTP 502 pela ponte"
+            ],
+            "consultas": 0,
+            "itens": 0
           },
           "D": {
             "falhas": [],
             "consultas": 1,
             "itens": 0,
-            "bytes": 13165,
+            "bytes": 13191,
             "publicadas": 0,
             "lidas": 0,
             "nao_lidas": []
@@ -397,8 +392,8 @@
         },
         "vereditos": {
           "OPORTUNIDADE": 0,
-          "ACOMPANHAR": 8,
-          "RUIDO": 18,
+          "ACOMPANHAR": 0,
+          "RUIDO": 0,
           "quarentena": 0,
           "erros": 0
         },
@@ -406,7 +401,7 @@
         "leitura_do_dia": {
           "pautas_publicadas": 0,
           "pautas_lidas": 0,
-          "noticias": 26,
+          "noticias": 0,
           "nao_lidas": []
         },
         "proibido_robots": {
@@ -417,7 +412,7 @@
           "motivo": "o robots.txt do SUAP (suap.camaragyn.go.gov.br) proíbe robôs (Disallow: /) — os processos e a tramitação vêm das pautas do Plenário no portal; a ficha do processo da associação no SUAP é conferida pelo titular (consulta humana)"
         }
       },
-      "duracao_s": 42,
+      "duracao_s": 10,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 0,
@@ -482,10 +477,10 @@
     "dj-trf1-go": {
       "nome": "Diário da Justiça Federal — Seção Judiciária de Goiás",
       "tipo": "diario_justica",
-      "leituras": 93,
+      "leituras": 94,
       "achados_total": 0,
-      "vazias_seguidas": 93,
-      "ultima": "2026-11-03T14:16:59+00:00",
+      "vazias_seguidas": 94,
+      "ultima": "2026-11-04T14:26:47+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 0,
       "falhas_ultima": 0,
@@ -4480,11 +4475,11 @@
     "congresso-nacional": {
       "nome": "Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos)",
       "tipo": "legislativo",
-      "leituras": 101,
+      "leituras": 102,
       "achados_total": 0,
-      "vazias_seguidas": 101,
+      "vazias_seguidas": 102,
       "duracao_s": 37,
-      "ultima": "2026-11-03T14:16:59+00:00",
+      "ultima": "2026-11-04T14:26:46+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 0,
       "falhas_ultima": 0,
@@ -4492,7 +4487,7 @@
         {
           "url": "https://www.congressonacional.leg.br",
           "http": 200,
-          "bytes": 146217,
+          "bytes": 151677,
           "itens": 11
         },
         {
@@ -4506,17 +4501,17 @@
       "diagnostico": {
         "paginas_lidas": 17,
         "links_total": 53,
-        "links_candidatos": 11,
+        "links_candidatos": 13,
         "descobertas": [],
         "pdf_links": 0,
-        "motivo_zero": "53 itens lidos (CMO A 11 · Câmara B 0 · Senado C 3 · notícias D 35 · convocações E 4): nenhuma janela de emendas aberta nem chamamento para OSC · 11 a acompanhar · emendas ao PLOA 2027: nao_iniciada",
+        "motivo_zero": "53 itens lidos (CMO A 11 · Câmara B 0 · Senado C 3 · notícias D 35 · convocações E 4): nenhuma janela de emendas aberta nem chamamento para OSC · 13 a acompanhar · emendas ao PLOA 2027: nao_iniciada",
         "versao": "motor Congresso Nacional v1.1 (03/10/2026)",
         "fontes": {
           "A": {
             "falhas": [],
             "consultas": 2,
             "itens": 11,
-            "bytes": 146217,
+            "bytes": 151677,
             "comunicados_na_pagina": 10,
             "cortados": [
               "comunicados da CMO: a 1ª página não alcança o início da janela"
@@ -4538,9 +4533,9 @@
             "falhas": [],
             "consultas": 2,
             "itens": 35,
-            "bytes": 108679,
+            "bytes": 98480,
             "lidas_ate": {
-              "Câmara dos Deputados": "2026-11-03"
+              "Câmara dos Deputados": "2026-11-04"
             }
           },
           "E": {
@@ -4563,8 +4558,8 @@
         },
         "vereditos": {
           "OPORTUNIDADE": 0,
-          "ACOMPANHAR": 11,
-          "RUIDO": 42,
+          "ACOMPANHAR": 13,
+          "RUIDO": 40,
           "quarentena": 0,
           "erros": 0
         }

@@ -2,7 +2,7 @@
 
 **Associação:** Associação dos Moradores e Comerciantes do Jardim América — A.M.C. Jardim América  
 **Janela de captação:** 2026-10-01 a 2026-11-30  
-**Parlamentares com mandato levantados:** 594  
+**Parlamentares com mandato levantados:** 81  
 **Ofícios gerados nesta execução:** 40
 
 ## Documentos prontos
