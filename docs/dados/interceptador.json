@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-04T18:03:16+00:00",
+  "em": "2026-11-04T18:22:49+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-04T17:47:57+00:00",
+  "ultimo_voo": "2026-11-04T18:05:40+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,69 +48,73 @@
     },
     "estrelas_de_ouro": 4,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.7
+    "tempo_medio_min": 16.3
   },
   "missoes": [
     {
-      "em": "2026-11-04T17:47:57+00:00",
+      "em": "2026-11-04T18:05:40+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Obter o Certificado de Registro e Licenciamento de Veículo (CRLV-e) — Goiás — Goiás",
+      "alvo": "Organizações sociais - Casa Civil — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 5,
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://goias.gov.br/detran/wp-content/uploads/sites/8/2023/08/08-01-2021-23-2021-237093318.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o DETRAN/GO como órgão responsável por emitir o CRLV-e, o que é relevante para a obtenção do certificado.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria garantir que o veículo esteja regularizado, com quitação de débitos relativos a tributos, encargos e multas de trânsito e ambientais, além de anexar os documentos exigidos.",
-        "proximo_passo": "Verificar os requisitos específicos do DETRAN/GO e garantir a regularidade do veículo antes de solicitar o CRLV-e.",
-        "risco": "A falta de quitação de débitos ou a ausência dos anexos necessários pode impedir a obtenção do CRLV-e."
+        "por_que": "O texto comprovado descreve o Objeto e os Requisitos para a qualificação de Organizações Sociais pela Casa Civil em Goiás, o que é suficiente para identificar a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar Cópia autenticada da Ata de eleição dos membros atuais do Conselho de Administração e da Diretoria, Cópia autenticada do Balanço patrimonial e da demonstração do resultado do exercício anterior, Inscrição no Cadastro Nacional da Pessoa Jurídica e Declaração de que a Entidade não está qualificada como.",
+        "proximo_passo": "Verificar os anexos necessários e garantir que todos os requisitos listados no texto comprovado sejam cumpridos.",
+        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a associação de se inscrever no prazo correto ou completar a documentação necessária."
       },
       "erro": null,
-      "segundos": 881,
+      "segundos": 979,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-69847ac393c1",
+      "id": "op-0a781236293c",
       "encontrou": {
+        "Objeto": {
+          "valor": "Qualificação de Organizações Sociais",
+          "trecho": "DOCUMENTOS QUE DEVEM INSTRUIR O REQUERIMENTO DE QUALIFICAÇÃO DE ORGANIZAÇÃO SOCIAL.",
+          "oficial": false,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "DETRAN/GO",
-          "trecho": "DEPARTAMENTO ESTADUAL DE TRANSITO",
-          "oficial": true,
+          "valor": "Casa Civil",
+          "trecho": "Secretaria de Estado da Casa Civil",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "ESTADO DE GOIÁS",
-          "oficial": true,
+          "trecho": "Organizações sociais - Casa Civil — Goiás",
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "quitação dos débitos relativos a tributos, encargos e multas de trânsito e ambientais, vinculados ao veículo, bem como o",
-          "trecho": "Art. 4º O CRLVe somente será expedido após a quitação dos débitos relativos a tributos, encargos e multas de trânsito e ambientais, vinculados ao veículo, bem como o pagamento do S",
-          "oficial": true,
+          "valor": "Cópia autenticada da Ata de eleição dos membros atuais do Conselho de Administração e da Diretoria, Cópia autenticada do Balanço patrimonial e da demonstração do resultado do exercício anterior, Inscrição no Cadastro Nacional da Pessoa Jurídica, Declaração de que a Entidade não está qualificada como",
+          "trecho": "DOCUMENTOS QUE DEVEM INSTRUIR O REQUERIMENTO DE QUALIFICAÇÃO COMO ORGANIZAÇÃO SOCIAL.",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "DETRAN/GO",
+      "financiador": "Casa Civil",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital"
       ]
     }
   ],
