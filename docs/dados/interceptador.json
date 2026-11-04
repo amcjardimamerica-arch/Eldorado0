@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-04T01:15:11+00:00",
+  "em": "2026-11-04T01:32:02+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-04T00:58:29+00:00",
+  "ultimo_voo": "2026-11-04T01:17:07+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,89 +48,58 @@
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.9
+    "tempo_medio_min": 14.1
   },
   "missoes": [
     {
-      "em": "2026-11-04T00:58:29+00:00",
+      "em": "2026-11-04T01:17:07+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "GOIAS TRIBUNAL DE JUSTICA DO ESTADO DE GOIAS — Credenciamento de entidades sem fins lucrativos aptas à coleta,… — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 9,
-      "dispensados": 2,
+      "alvo": "Goianésia — Editais e Publicações — Goiás / Goianésia",
+      "qualidade": "insuficiente",
+      "comprovados": 1,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2024/07/Edital-Credenciamento-01-2024-Cooperativas.pdf",
+      "pagina_oficial": "http://acessoainformacao.goianesia.go.gov.br/ouvidoria/inicio",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a existência de um processo de credenciamento para organizações da sociedade civil no Estado de Goiás, especificamente para coleta de materiais recicláveis e reutilizáveis.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria ser uma associação ou cooperativa de catadores de materiais recicláveis e reutilizáveis com sede no Estado de Goiás e submeter propostas de projetos ao Banco de Projetos da Autocomposição Ambiental da SEMAD.",
-        "proximo_passo": "Verificar os requisitos detalhados no edital e preparar os documentos necessários para o credenciamento.",
-        "risco": "A associação não atender aos requisitos específicos, como ser uma organização da sociedade civil de catadores de materiais recicláveis e reutilizáveis, pode impedir o acesso ao processo."
+        "por_que": "O texto menciona 'Anexos: 3 anexo(s)' indicando que há documentos relacionados ao edital, o que pode ser uma fonte para obter mais informações.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar os anexos para entender os requisitos, prazos e outros detalhes do edital, e garantir que atenda aos critérios estabelecidos.",
+        "proximo_passo": "Consultar os anexos mencionados para obter informações detalhadas sobre o edital e os requisitos necessários para participação.",
+        "risco": "A falta de informações detalhadas sobre o edital, como prazos, valor e requisitos, pode impedir que a associação comunitária se candidate adequadamente."
       },
       "erro": null,
-      "segundos": 957,
+      "segundos": 846,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso",
-      "id": "op-ef064d6345a6",
-      "encontrou": {
-        "Objeto": {
-          "valor": "CREDENCIAMENTO DE ORGANIZAÇÕES DA SOCIEDADE CIVIL (ASSOCIAÇÕES E COOPERATIVAS DE CATADORES DE MATERIAIS RECICLÁVEIS E REUTILIZÁVEIS) COM SEDE NO ESTADO DE GOIÁS INTERESSADAS EM SUBMETER PROPOSTAS DE PROJETOS AO BANCO DE PROJETOS DA AUTOCOMPOSIÇÃO AMBIENTAL DA SEMAD",
-          "trecho": "O presente edital tem por objeto o CREDENCIAMENTO DE ORGANIZAÇÕES DA SOCIEDADE CIVIL (ASSOCIAÇÕES E COOPERATIVAS DE CATADORES DE MATERIAIS RECICLÁVEIS E REUTILIZÁVEIS) COM SEDE NO ",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O prazo de inscrição é explicitado no texto.",
-          "trecho": "Data: Da publicação do Edital até dia 27/08/2024 [rejeitado: data implausível para edital aberto]",
-          "oficial": false,
-          "dispensado": true
-        },
-        "Valor": {
-          "valor": "dispensado — O edital menciona apoio em espécie, sem valor em dinheiro.",
-          "trecho": "O Credenciamento não garante a contemplação imediata do projeto, mas habilita sua inclusão no banco de projetos da SEMAD para posterior execução",
-          "oficial": false,
-          "dispensado": true
-        },
-        "Órgão / financiador": {
-          "valor": "SECRETARIA DE ESTADO DE MEIO AMBIENTE E DESENVOLVIMENTO SUSTENTÁVEL - SEMAD",
-          "trecho": "O ESTADO DE GOIÁS, pessoa jurídica de direito público interno, por intermédio da SECRETARIA DE ESTADO DE MEIO AMBIENTE E DESENVOLVIMENTO SUSTENTÁVEL - SEMAD",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "COM SEDE NO ESTADO DE GOIÁS",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "meio_ambiente",
-          "trecho": "AUTOCOMPOSIÇÃO AMBIENTAL",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "ORGANIZAÇÕES DA SOCIEDADE CIVIL (ASSOCIAÇÕES E COOPERATIVAS DE CATADORES DE MATERIAIS RECICLÁVEIS E REUTILIZÁVEIS) COM S",
-          "trecho": "Poderão habilitar-se para o credenciamento, exclusivamente, ORGANIZAÇÕES DA SOCIEDADE CIVIL (ASSOCIAÇÕES E COOPERATIVAS DE CATADORES DE MATERIAIS RECICLÁVEIS E REUTILIZÁVEIS) COM S",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "GOIAS TRIBUNAL DE JUSTICA DO ESTADO DE GOIAS",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-2d42901fdcb7",
+      "encontrou": {},
+      "financiador": "Prefeitura de Goianésia",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
