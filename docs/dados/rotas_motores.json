@@ -1,5 +1,5 @@
 {
- "em": "2026-11-03T23:06:30+00:00",
+ "em": "2026-11-04T00:39:22+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 49925
+  "exemplos_da_rede": 49998
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    4.1341
+    3.8129
    ],
    [
     "origem:rota original",
-    3.4779
+    3.3777
    ],
    [
     "tok:inscricoes",
@@ -53,11 +53,11 @@
    ],
    [
     "tok:sitemap",
-    1.8593
+    1.8407
    ],
    [
     "tok:xml",
-    1.8593
+    1.8407
    ]
   ],
   "piores_sinais": [
@@ -71,15 +71,11 @@
    ],
    [
     "tipo:site_oficial",
-    -2.8419
+    -3.0145
    ],
    [
     "tok:2026",
     -3.0473
-   ],
-   [
-    "origem:padrão",
-    -3.6259
    ],
    [
     "tok:content",
@@ -88,6 +84,10 @@
    [
     "tok:uploads",
     -3.6793
+   ],
+   [
+    "origem:padrão",
+    -3.6983
    ],
    [
     "origem:câmara",
@@ -240,7 +240,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-03T12:21:32+00:00",
+    "em": "2026-11-04T00:37:12+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -356,7 +356,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-03T12:21:37+00:00",
+    "em": "2026-11-04T00:37:18+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1169,7 +1169,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-03T10:52:32+00:00",
+    "em": "2026-11-04T00:37:11+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1196,7 +1196,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-03T09:23:27+00:00",
+    "em": "2026-11-04T00:37:08+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1373,7 +1373,7 @@
     "aprendido_em": "2026-10-16T02:15:34+00:00"
    },
    "afinado": {
-    "em": "2026-11-03T12:23:41+00:00",
+    "em": "2026-11-04T00:39:22+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1947,10 +1947,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 11,
-    "aprendido_em": "2026-11-03T09:23:20+00:00"
+    "aprendido_em": "2026-11-04T00:37:05+00:00"
    },
    "afinado": {
-    "em": "2026-11-03T09:23:20+00:00",
+    "em": "2026-11-04T00:37:05+00:00",
     "testes": 13,
     "melhor": {
      "url": "https://www.ipora.pr.gov.br/",
