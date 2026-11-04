@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-04T21:22:38+00:00",
+  "em": "2026-11-04T21:31:46+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-04T21:05:45+00:00",
+  "ultimo_voo": "2026-11-04T21:24:58+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,55 +48,58 @@
     },
     "estrelas_de_ouro": 4,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.1
+    "tempo_medio_min": 6.3
   },
   "missoes": [
     {
-      "em": "2026-11-04T21:05:45+00:00",
+      "em": "2026-11-04T21:24:58+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "PNAB Goiânia - Circo — Goiás / Goiânia",
-      "qualidade": "insuficiente",
-      "comprovados": 4,
+      "alvo": "PNAB Goiânia - Teatro — Goiás / Goiânia",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
         "Valor",
+        "Território",
         "Requisitos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2026/07/edital-002-2026-circo_resultado-preliminar.pdf",
+      "pagina_oficial": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2026/07/pnab-edital-2026-cronograma-atualizado.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre o órgão financiador, território e esfera de atuação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando propostas alinhadas às áreas de atuação da Secretaria Municipal de Cultura de Goiânia, mesmo que os requisitos específicos não tenham sido encontrados.",
-        "proximo_passo": "Consultar os anexos disponibilizados pelo edital para obter mais detalhes sobre os requisitos e processos de inscrição.",
-        "risco": "A falta de informações sobre os requisitos e prazos pode impedir a associação de se preparar adequadamente para o edital."
+        "por_que": "O edital foi comprovado com dados de objeto, prazo de inscrição, resultado e órgāo financiador, o que permite sua utilização como fonte para a associação comunitária.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no prazo de 2026-03-05 a 2026-04-30, apresentar um projeto alinhado ao objeto do edital e seguir as instruções dos anexos para garantir a plena efetividade da política pública de fomento à cultura.",
+        "proximo_passo": "Verificar os anexos do edital e se inscrever no prazo estabelecido.",
+        "risco": "O não cumprimento dos prazos de inscrição ou a falta de alinhamento do projeto com o objeto do edital pode impedir o acesso ao fomento."
       },
       "erro": null,
-      "segundos": 963,
+      "segundos": 376,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 3,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-captacao-005",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Valor, Território, Requisitos, Área de atuação",
+      "id": "op-captacao-003",
       "encontrou": {
-        "Órgão / financiador": {
-          "valor": "Secretaria Municipal de Cultura de Goiânia (Secult)",
-          "trecho": "Secretaria Municipal de Cultura de Goiânia (Secult)",
+        "Objeto": {
+          "valor": "assegurar a plena efetividade da política pública de fomento à cultura",
+          "trecho": "A prorrogação do cronograma revela-se medida administrativa necessária para assegurar a plena efetividade da política pública de fomento à cultura",
           "oficial": true,
           "dispensado": false
         },
-        "Território": {
-          "valor": "GO",
-          "trecho": "município de Goiânia",
+        "Prazo de inscrição": {
+          "valor": "2026-03-05 a 2026-04-30",
+          "trecho": "Início das inscrições 05 de março 2026 a 06 de abril",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "SECRETARIA MUNCIPAL DE CULTURA DE GOIÂNIA",
+          "trecho": "SECRETARIA MUNCIPAL DE CULTURA DE GOIÂNIA",
           "oficial": true,
           "dispensado": false
         }
