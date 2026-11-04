@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-04T00:40:51+00:00",
+  "em": "2026-11-04T00:56:34+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-04T00:30:39+00:00",
+  "ultimo_voo": "2026-11-04T00:42:59+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,23 +39,25 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.5
+    "tempo_medio_min": 12.8
   },
   "missoes": [
     {
-      "em": "2026-11-04T00:30:39+00:00",
+      "em": "2026-11-04T00:42:59+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Fundo Estadual dos Direitos da Pessoa Idosa Goiás — Goiás",
-      "qualidade": "insuficiente",
+      "alvo": "Fundo Municipal do Idoso de Goiânia — Goiás / Goiânia",
+      "qualidade": "parcial",
       "comprovados": 6,
       "dispensados": 0,
       "total": 12,
@@ -64,25 +66,55 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos"
+        "Território"
       ],
-      "pagina_oficial": "https://goias.gov.br/social/wp-content/uploads/sites/24/2025/04/Res.-44-Plano-de-Aplicacao-2025-do-CEDPI-GO-1.pdf",
-      "parecer_fonte": {},
+      "pagina_oficial": "https://www.gov.br/mdh/pt-br/navegue-por-temas/pessoa-idosa/cartilhaFundoAtualizada.pdf",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "Porque o Fundo Municipal do Idoso de Goiânia está vinculado ao Ministério da Mulher, da Família e dos Direitos Humanos, com foco em ações voltadas ao atendimento da pessoa idosa.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa ter um Conselho Municipal dos Direitos do Idoso constituído e ativo para se qualificar como beneficiária do Fundo.",
+        "proximo_passo": "Verificar se o Conselho Municipal dos Direitos do Idoso está constituído e ativo em Goiânia.",
+        "risco": "A falta de um Conselho Municipal dos Direitos do Idoso ativo pode impedir o acesso ao Fundo."
+      },
       "erro": null,
-      "segundos": 572,
+      "segundos": 768,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-captacao-126",
-      "encontrou": {},
-      "financiador": "Governo do Estado de Goiás",
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-captacao-125",
+      "encontrou": {
+        "Objeto": {
+          "valor": "ações, programas, projetos e atividades voltados ao atendimento da pessoa idosa",
+          "trecho": "recursos captados devem ser aplicados, exclusivamente, nas ações, programas, projetos e atividades voltados ao atendimento da pessoa idosa",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "SECRETARIA NACIONAL DE PROMOÇÃO E DEFESA DOS DIREITOS DA PESSOA IDOSA / MINISTÉRIO DA MULHER, DA FAMÍLIA E DOS DIREITOS HUMANOS",
+          "trecho": "SECRETARIA NACIONAL DE PROMOÇÃO E DEFESA DOS DIREITOS DA PESSOA IDOSA MINISTÉRIO DA MULHER, DA FAMÍLIA E DOS DIREITOS HUMANOS",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "direitos",
+          "trecho": "política voltada para a promoção, proteção, defesa dos direitos e melhoria da qualidade de vida da pessoa idosa",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "O município precisa ter um Conselho Municipal dos Direitos do Idoso constituído e ativo",
+          "trecho": "i. O município precisa ter um Conselho Municipal dos Direitos do Idoso constituído e ativo, que é o ente competente para deliberar sobre a aplicação e fiscalização dos recursos.",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Ministério dos Direitos Humanos e da Cidadania",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador"
       ]
     }
   ],
