@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-04T06:17:41+00:00",
+  "em": "2026-11-04T06:33:08+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-04T06:03:12+00:00",
+  "ultimo_voo": "2026-11-04T06:19:42+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,73 +39,83 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 2,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.7
+    "tempo_medio_min": 12.6
   },
   "missoes": [
     {
-      "em": "2026-11-04T06:03:12+00:00",
+      "em": "2026-11-04T06:19:42+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Governo de Silvânia publica edital municipal do Ciclo 2 da Política Nacional Aldir Blanc — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "Governo de goiás — aviso de chamamento público nº 004 — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/agricultura/wp-content/uploads/sites/50/2024/11/EDITAL-DE-CHAMAMENTO-PUBLICO-004-2024.pdf",
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O Governo Municipal de Silvânia é o órgão responsável pelo edital do Ciclo 2 da Política Nacional Aldir Blanc — Goiás, o que o torna uma fonte válida para informações sobre o processo de fomento.",
-        "para_a_amc": "Para acessar o edital, uma associação comunitária de Goiânia precisaria verificar as condições gerais do edital, mesmo que não estejam explicitamente listadas, e se alinhar às diretrizes da Política Nacional Aldir Blanc, que abrange áreas como assistência social, cultura, educação e esporte.",
-        "proximo_passo": "Consultar o edital completo publicado pelo Governo Municipal de Silvânia para obter detalhes sobre requisitos, prazos e áreas de atuação.",
-        "risco": "A falta de informações específicas, como prazos, valor e requisitos, pode impedir a associação de se preparar adequadamente para participar do edital."
+        "serve_como_fonte": "nao",
+        "por_que": "O edital não fornece informações sobre como uma associação comunitária de Goiânia poderia se beneficiar ou participar do processo, já que o objeto do edital é voltado para agroindústrias de pequeno porte, não para organizações da sociedade civil.",
+        "para_a_amc": "Não há informações sobre como uma associação comunitária de Goiânia poderia acessar o edital, já que o objeto do edital é voltado para agroindústrias de pequeno porte.",
+        "proximo_passo": "Consultar editais específicos para organizações da sociedade civil que sejam alinhados com as áreas de atuação da associação comunitária.",
+        "risco": "A falta de alinhamento entre o objeto do edital e as atividades de uma associação comunitária pode impedir o acesso ao financiamento."
       },
       "erro": null,
-      "segundos": 820,
+      "segundos": 756,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-c33a0bea5994",
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-6b654ba6cba2",
       "encontrou": {
+        "Objeto": {
+          "valor": "selecionar 30 (trinta) agroindústrias de pequeno porte com registro em um Serviço de Inspeção Oficial no Projeto de Promoção da Melhoria da Qualidade das Agroindústrias do Estado de Goiás",
+          "trecho": "1.1 O presente edital de Chamamento Público tem como objeto, selecionar 30 (trinta) agroindústrias de pequeno porte com registro em um Serviço de Inspeção Oficial no Projeto de Pro",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Governo Municipal de Silvânia",
-          "trecho": "Governo Municipal de Silvânia publica edital municipal do Ciclo 2 da Política Nacional Aldir Blanc – Governo Municipal de Silvânia",
-          "oficial": false,
+          "valor": "SECRETARIA DE ESTADO DE AGRICULTURA, PECUÁRIA E ABASTECIMENTO - SEAPA",
+          "trecho": "O ESTADO DE GOIÁS, pessoa jurídica de direito público interno, por intermédio da SECRETARIA DE ESTADO DA AGRICULTURA, PECUÁRIA E ABASTECIMENTO - SEAPA",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Edital municipal do Ciclo 2 da Política Nacional Aldir Blanc.",
-          "oficial": false,
+          "trecho": "ESTADO DE GOIÁS",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "registro em um Serviço de Inspeção Oficial",
+          "trecho": "1.1 O presente edital de Chamamento Público tem como objeto, selecionar 30 (trinta) agroindústrias de pequeno porte com registro em um Serviço de Inspeção Oficial no Projeto de Pro",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Governo Municipal de Silvânia",
+      "financiador": "Governo de Goiás",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
