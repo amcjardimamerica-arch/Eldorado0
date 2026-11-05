@@ -1,5 +1,5 @@
 {
- "em": "2026-11-05T11:46:04+00:00",
+ "em": "2026-11-05T13:17:56+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 51890
+  "exemplos_da_rede": 51976
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    4.0547
+    3.7377
    ],
    [
     "origem:rota original",
-    3.5381
+    3.1654
    ],
    [
     "tok:inscricoes",
@@ -25,7 +25,7 @@
    ],
    [
     "origem:biblioteca",
-    2.8147
+    2.7961
    ],
    [
     "tok:secult",
@@ -44,10 +44,6 @@
     2.1788
    ],
    [
-    "tld:br",
-    2.1588
-   ],
-   [
     "tipo:diario_justica",
     1.9779
    ],
@@ -58,6 +54,10 @@
    [
     "tok:leipaulogustavo",
     1.8789
+   ],
+   [
+    "tok:sitemap",
+    1.8171
    ]
   ],
   "piores_sinais": [
@@ -83,15 +83,15 @@
    ],
    [
     "origem:padrão",
-    -3.784
-   ],
-   [
-    "tipo:site_oficial",
-    -3.8329
+    -3.8495
    ],
    [
     "origem:câmara",
     -3.9403
+   ],
+   [
+    "tipo:site_oficial",
+    -4.2897
    ]
   ]
  },
@@ -240,8 +240,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T01:10:46+00:00",
-    "testes": 12,
+    "em": "2026-11-05T13:15:26+00:00",
+    "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -356,8 +356,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T01:10:49+00:00",
-    "testes": 12,
+    "em": "2026-11-05T13:15:33+00:00",
+    "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -433,7 +433,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T02:39:45+00:00",
+    "em": "2026-11-05T13:17:56+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -535,7 +535,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T01:10:40+00:00",
+    "em": "2026-11-05T13:15:17+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -896,7 +896,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T01:11:28+00:00",
+    "em": "2026-11-05T13:17:37+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1373,7 +1373,7 @@
     "aprendido_em": "2026-10-16T02:15:34+00:00"
    },
    "afinado": {
-    "em": "2026-11-05T01:11:27+00:00",
+    "em": "2026-11-05T13:17:34+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
