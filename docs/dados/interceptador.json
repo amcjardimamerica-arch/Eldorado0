@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T13:39:03+00:00",
+  "em": "2026-11-05T13:50:11+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T13:31:25+00:00",
+  "ultimo_voo": "2026-11-05T13:41:00+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -47,74 +47,85 @@
       "sim": 1
     },
     "estrelas_de_ouro": 7,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 7.0
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 8.6
   },
   "missoes": [
     {
-      "em": "2026-11-05T13:31:25+00:00",
+      "em": "2026-11-05T13:41:00+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prêmio Pretas Potências seleciona 25 artistas negros com premiação de até R$ 15 mil — Goiás",
+      "alvo": "Prêmio Pretas Potências seleciona 25 artistas negros com premiação de até R$ 15 mil — Goiás — Goiás",
       "qualidade": "parcial",
-      "comprovados": 6,
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Território"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://pretaspotencias.com/",
+      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2024/08/Edital-02-Formacao-Cultural.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a existência do Prêmio Pretas Potências, que premia iniciativas artísticas realizadas por artistas individuais ou grupos/coletivos artísticos, com apoio de órgãos federais e parceiros.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever com um trabalho artístico realizado por artistas individuais ou grupos/coletivos artísticos, atendendo aos requisitos do edital e apresentando os anexos necessários.",
-        "proximo_passo": "Verificar os requisitos do edital e preparar a documentação necessária para inscrição.",
-        "risco": "A falta de informações sobre o prazo de inscrição pode impedir a participação a tempo."
+        "por_que": "O edital comprova a existência de um programa de fomento à cultura em Goiás, com recursos financeiros e requisitos claros para proponentes.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando projetos de capacitação e transmissão de saberes em artes e manifestações culturais, com proponentes residentes e estabelecidos no Estado de Goiás por no mínimo dois anos.",
+        "proximo_passo": "Verificar os requisitos do edital e preparar os documentos necessários para a inscrição.",
+        "risco": "A falta de informações sobre o prazo de inscrição pode impedir a participação no edital."
       },
       "erro": null,
-      "segundos": 422,
+      "segundos": 517,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 6,
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 8,
       "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-99a1a6f8d263",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
+      "id": "op-62c4c978e633",
       "encontrou": {
         "Objeto": {
-          "valor": "premiar 150 iniciativas: 100 (cem) trabalhos artísticos realizados por artistas individuais. 50 (cinquenta) por grupos ou coletivos artísticos.",
-          "trecho": "Vai premiar 150 iniciativas: 100 (cem) trabalhos artísticos realizados por artistas individuais. 50 (cinquenta) por grupos ou coletivos artísticos.",
+          "valor": "selecionar projetos para capacitação e transmissão de saberes e técnicas em artes e manifestações culturais",
+          "trecho": "Este edital visa selecionar projetos para capacitação e transmissão de saberes e técnicas em artes e manifestações culturais, incluindo oficinas, cursos, palestras e seminários.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 2.500.000,00",
+          "trecho": "O valor total disponibilizado para este Edital é de R$ 2.500.000,00 (dois milhões e quinhentos mil reais), dividido entre as categorias de apoio descritas no ANEXO I.",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Ministério da Cultura, Banco BV, BASF, Ernst & Young e Mercado Livre",
-          "trecho": "Ministério da Cultura, Banco BV, BASF, Ernst & Young e Mercado Livre apresentam",
+          "valor": "Secretaria de Estado da Cultura",
+          "trecho": "O Estado de Goiás, representado pela Secretaria de Estado da Cultura, torna pública a realização do processo seletivo de projetos culturais...",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "projetos culturais que pleiteiem recursos da Lei Federal nº 14.399, de 08 de julho de 2022, Política Nacional Aldir Blanc de Fomento à Cultura, por meio do EDITAL DE SELEÇÃO DE PRO",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "Áreas: Música Instrumental, Artes Cênicas, Artes visuais, Literatura, Audiovisual e Patrimônio imaterial.",
+          "trecho": "projetos culturais que pleiteiem recursos da Lei Federal nº 14.399, de 08 de julho de 2022, Política Nacional Aldir Blanc de Fomento à Cultura, por meio do EDITAL DE SELEÇÃO DE PRO",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "trabalhos artísticos realizados por artistas individuais ou grupos/coletivos artísticos",
-          "trecho": "Vai premiar 150 iniciativas: 100 (cem) trabalhos artísticos realizados por artistas individuais. 50 (cinquenta) por grupos ou coletivos artísticos.",
+          "valor": "proponentes residentes e estabelecidos no Estado de Goiás por no mínimo dois anos, documentação e os requisitos necessários para a inscrição e participação do proponente conforme a categoria escolhida",
+          "trecho": "Serão selecionados o total de 20 projetos de proponentes residentes e estabelecidos no Estado de Goiás por no mínimo dois anos, considerando as categorias conforme descritas no ANE",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Feira Preta®",
+      "financiador": "Secretaria de Estado da Cultura de Goiás",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
