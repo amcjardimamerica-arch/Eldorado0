@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T21:49:37+00:00",
+  "em": "2026-11-05T21:57:53+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T21:38:38+00:00",
+  "ultimo_voo": "2026-11-05T21:51:43+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,81 +38,101 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
-    "parciais": 1,
+    "validadas": 1,
+    "parciais": 0,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 7,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 10.4
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 5.6
   },
   "missoes": [
     {
-      "em": "2026-11-05T21:38:38+00:00",
+      "em": "2026-11-05T21:51:43+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "SECTI-GO (ciência e tecnologia) — Edital nº 002/2026 — Goiás — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "SECULT (cultura) — Edital nº 002/2026 — Goiás",
+      "qualidade": "validada",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://goiaspelainovacao.org.br/chamadas-publicas/179-edital-continuo-de-captacao-de-doacoes-pacto-goias-pela-inovacao",
+      "pagina_oficial": "https://publicacoes.goias.go.gov.br/p/edital-pss-sms-002-2026",
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital comprovado menciona o objeto, órgão financiador, território e requisitos necessários para a captação de doações, o que é suficiente para orientar uma associação comunitária.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa contribuir com uma doação espontânea e contínua, conforme o requisito do edital, e seguir as instruções dos anexos fornecidos.",
-        "proximo_passo": "Verificar os anexos do edital e preparar a doação espontânea e contínua conforme solicitado.",
-        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a associação de se alinhar corretamente ao edital."
+        "serve_como_fonte": "nao",
+        "por_que": "O edital mencionado é referente à área de saúde, enquanto a SECULT (cultura) — Edital nº 002/2026 — Goiás não foi encontrado comprovado no texto fornecido.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há editais específicos para a área de cultura, assistência social, educação ou esporte, e se alinhar seus projetos aos objetivos e requisitos desses editais.",
+        "proximo_passo": "Consultar o site da Prefeitura Municipal de Goiás ou outros órgãos responsáveis por editais na área de cultura para verificar disponibilidade de chamadas públicas.",
+        "risco": "A ausência de informações sobre o edital específico da SECULT (cultura) pode impedir a associação de acessar recursos disponíveis para sua área de atuação."
       },
       "erro": null,
-      "segundos": 622,
+      "segundos": 336,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-2dd4f0cd11c8",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 9,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-75895ee0fb82",
       "encontrou": {
         "Objeto": {
-          "valor": "Captação de doações para fortalecer o ecossistema de ciência, tecnologia e empreendedorismo inovador em Goiás",
-          "trecho": "Ao contribuir com uma doação espontânea e contínua, você investe diretamente na sustentabilidade das ações do Pacto, um movimento coletivo que une Governo, Academia, Empresas e Soc",
+          "valor": "realização de Processo Seletivo Simplificado para contratação temporária de profissionais da saúde",
+          "trecho": "Edital nº 002/2026, que dispõe sobre a realização de Processo Seletivo Simplificado para contratação temporária de profissionais da saúde",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-03-02 a 2026-03-03",
+          "trecho": "Inscrições: 02 e 03 de março de 2026",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "de R$ 1.621,00 a R$ 4.000,00",
+          "trecho": "💰 Remuneração: de R$ 1.621,00 a R$ 4.000,00",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "FUNTEC – Fundação de Desenvolvimento de Tecnópolis",
-          "trecho": "Pacto Goiás pela Inovação, sob a gestão da FUNTEC – Fundação de Desenvolvimento de Tecnópolis",
+          "valor": "Prefeitura Municipal de Goiás",
+          "trecho": "A Prefeitura Municipal de Goiás, por meio da Secretaria Municipal de Saúde",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Pacto Goiás pela Inovação, sob a gestão da FUNTEC – Fundação de Desenvolvimento de Tecnópolis",
+          "trecho": "Prefeitura Municipal de Goiás",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "saude",
+          "trecho": "Processo Seletivo Simplificado para a área da saúde",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "Contribuir com uma doação espontânea e contínua",
-          "trecho": "Ao contribuir com uma doação espontânea e contínua, você investe diretamente na sustentabilidade das ações do Pacto",
+          "valor": "Análise curricular, títulos e experiência profissional.",
+          "trecho": "Forma de seleção: Análise curricular, títulos e experiência profissional.",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado de Ciência, Tecnologia e Inovação",
-      "indicios": [],
+      "financiador": "SECULT (cultura) — Goiás",
+      "indicios": [
+        {
+          "url": "https://data.queridodiario.ok.org.br/5208707/2026-10-20/f581476b13f3e4eb97b51447054906a2ec5f6e10.pdf",
+          "tipo": "agregador"
+        }
+      ],
       "rotas": [
         "site_do_financiador",
         "site_do_financiador_edital"
