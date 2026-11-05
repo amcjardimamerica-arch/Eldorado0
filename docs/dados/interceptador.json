@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T10:27:43+00:00",
+  "em": "2026-11-05T10:43:56+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T10:17:47+00:00",
+  "ultimo_voo": "2026-11-05T10:29:53+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,68 +39,88 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.2
+    "tempo_medio_min": 13.3
   },
   "missoes": [
     {
-      "em": "2026-11-05T10:17:47+00:00",
+      "em": "2026-11-05T10:29:53+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prefeitura de Quirinópolis — 05 - AVISO CHAMAMENTO PÚBLICO — Goiás / Quirinópolis",
-      "qualidade": "insuficiente",
-      "comprovados": 0,
+      "alvo": "Prefeitura de Quirinópolis — AVISO DE CHAMAMENTO PUBLICO — Goiás / Quirinópolis",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://quirinopolis.go.gov.br/wp-content/uploads/2025/10/Edital-de-Chamamento-Publico-Eleicoes-Teatro-Publicado-no-Diario-Oficial.pdf",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações comprovadas sobre o edital para ser utilizado como fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria fazer uma busca específica no site da Prefeitura de Quirinópolis para verificar se há editais disponíveis e se elegível para o chamamento público.",
-        "proximo_passo": "Consultar diretamente o site oficial da Prefeitura de Quirinópolis para obter informações atualizadas sobre editais disponíveis.",
-        "risco": "A falta de informações comprovadas pode impedir a associação de se qualificar adequadamente para o edital."
+        "serve_como_fonte": "sim",
+        "por_que": "O aviso de chamamento público da Prefeitura de Quirinópolis está relacionado à escolha de representantes da sociedade civil para o Conselho Municipal de Política Cultural, o que é relevante para organizações da sociedade civil interessadas em participar desse processo.",
+        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria se alinhar aos requisitos de atuação comprovada em Quirinópolis, possuir representantes com domicílio no município há pelo menos dois anos e apresentar anexos necessários, mesmo que não estejam disponíveis no texto.",
+        "proximo_passo": "Verificar se há disponibilidade de anexos ou contatos para obter mais informações sobre o processo de inscrição e os requisitos específicos.",
+        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a participação da associação, já que não há como se alinhar ao cronograma ou requisitos completos."
       },
       "erro": null,
-      "segundos": 549,
+      "segundos": 796,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-489e000304ff",
-      "encontrou": {},
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-08c54874a868",
+      "encontrou": {
+        "Objeto": {
+          "valor": "escolha dos representantes da sociedade civil no Conselho Municipal de Política Cultural",
+          "trecho": "EDITAL DE CHAMAMENTO PÚBLICO PARA ELEIÇÃO DOS REPRESENTANTES DA SOCIEDADE CIVIL NO CONSELHO MUNICIPAL DE POLÍTICA CULTURAL DE QUIRINÓPOLIS-GO",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Prefeitura Municipal de Quirinópolis",
+          "trecho": "PREFEITURA MUNICIPAL DE QUIRINÓPOLIS",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "ESTADO DE GOIÁS",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "Conselho Municipal de Política Cultural",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Agentes culturais, artistas, produtores culturais e representantes de coletivos culturais com atuação comprovada em Quir, Pessoas físicas maiores de 18 (dezoito) anos, com domicílio no município de Quirinópolis há pelo menos 02 (dois) anos, c",
+          "trecho": "Poderão se inscrever como candidatos ao processo eleitoral: • Agentes culturais, artistas, produtores culturais e representantes de coletivos culturais com atuação comprovada em Qu",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
       "financiador": "Prefeitura de Quirinópolis",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
