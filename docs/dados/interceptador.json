@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T17:38:17+00:00",
+  "em": "2026-11-05T17:54:42+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T17:27:16+00:00",
+  "ultimo_voo": "2026-11-05T17:40:27+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,56 +48,65 @@
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.4
+    "tempo_medio_min": 13.6
   },
   "missoes": [
     {
-      "em": "2026-11-05T17:27:16+00:00",
+      "em": "2026-11-05T17:40:27+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Resultado Mérito Cultural – Edital 11 — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 4,
+      "alvo": "Resultado Mérito Cultural – Edital 12 — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Prazo de recurso",
         "Valor",
-        "Território",
-        "Esfera",
         "Requisitos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2026/08/edital_03-2026-resultado-final-analise-merito.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi publicado com data de resultado 2024-11-12 e financiado pela Prefeitura de Goiânia, com área de atuação em cultura.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentar proposta alinhada à área de cultura e atender aos requisitos não especificados no texto.",
-        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre requisitos, prazos e critérios de avaliação.",
-        "risco": "A falta de informações sobre prazos, requisitos e objeto do edital pode impedir a elaboração de uma proposta adequada."
+        "por_que": "O edital foi comprovado com informações sobre o objeto, resultado, órgão financiador, território, esfera e área de atuação.",
+        "para_a_amc": "A associação comunitária precisaria se inscrever no edital, apresentar proposta cultural alinhada ao objeto do edital e seguir as diretrizes dos anexos.",
+        "proximo_passo": "Consultar os anexos do edital para entender as diretrizes e requisitos detalhados.",
+        "risco": "A falta de prazo de inscrição e requisitos específicos pode dificultar o acesso ao edital."
       },
       "erro": null,
-      "segundos": 624,
+      "segundos": 816,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-2ab074ba9e8f",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Prazo de recurso, Valor, Requisitos",
+      "id": "op-4831233ec245",
       "encontrou": {
+        "Objeto": {
+          "valor": "fomento à cultura",
+          "trecho": "fomento no município de Goiânia.",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia",
-          "trecho": "Prefeitura de Goiânia",
-          "oficial": false,
+          "valor": "Secretaria Municipal de Cultura de Goiânia (Secult)",
+          "trecho": "Secretaria Municipal de Cultura de Goiânia (Secult)",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "município de Goiânia.",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "cultura",
-          "oficial": false,
+          "trecho": "fomento no município de Goiânia.",
+          "oficial": true,
           "dispensado": false
         }
       },
@@ -105,11 +114,7 @@
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
