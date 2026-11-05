@@ -1,17 +1,22 @@
 {
-  "executado_em": "2026-10-30T12:41:12+00:00",
-  "novas": 34,
-  "itens": 72,
+  "executado_em": "2026-11-05T14:26:46+00:00",
+  "novas": 0,
+  "itens": 0,
   "falhas": [
     {
       "api": "querido_diario",
-      "eliminadas_no_motor_M14": 762,
-      "por_motivo": {
-        "o trecho não mostra ato de abertura (edital, chamamento, seleção, inscrições)": 405,
-        "ato posterior (resultado, homologação, extrato, aditivo)": 238,
-        "o trecho não mostra destinatário do terceiro setor": 119
-      },
-      "nota": "edições cujo trecho não mostra ato de abertura para o terceiro setor (não entram como oportunidade)"
+      "base": "https://api.queridodiario.org.br",
+      "erro": "TimeoutError"
+    },
+    {
+      "api": "querido_diario",
+      "base": "https://queridodiario.ok.org.br/api",
+      "erro": "TimeoutError"
+    },
+    {
+      "api": "querido_diario",
+      "base": "https://api.queridodiario.ok.org.br",
+      "erro": "URLError"
     }
   ]
 }
