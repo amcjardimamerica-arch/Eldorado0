@@ -1070,7 +1070,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-05T14:50:59+00:00",
+  "em": "2026-11-05T17:21:26+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1932,13 +1932,13 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "alego-pl": {
-  "em": "2026-10-31T02:06:11+00:00",
-  "testes": 16,
+  "em": "2026-11-05T17:20:42+00:00",
+  "testes": 17,
   "melhor": {
    "url": "https://portal.al.go.leg.br/",
    "via": "direto",
    "origem": "rota original",
-   "pontos": 27,
+   "pontos": 35,
    "formato": "html"
   },
   "detalhe": [
@@ -1957,12 +1957,42 @@
     "url": "https://portal.al.go.leg.br/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 27,
-    "links": 260,
-    "sinais": 13,
+    "pontos": 35,
+    "links": 261,
+    "sinais": 17,
     "formato": "html",
     "erro": null,
     "funcionou": true
+   },
+   {
+    "url": "https://portal.al.go.leg.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
    },
    {
     "url": "https://portal.al.go.leg.br/feed",
@@ -1977,46 +2007,6 @@
    {
     "url": "https://alegodigital.al.go.leg.br/feed",
     "origem": "câmara",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://portal.al.go.leg.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://portal.al.go.leg.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/sitemap.xml",
-    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2045,7 +2035,7 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/edital",
+    "url": "https://portal.al.go.leg.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2055,7 +2045,7 @@
     "funcionou": false
    },
    {
-    "url": "https://alegodigital.al.go.leg.br/edital",
+    "url": "https://alegodigital.al.go.leg.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2081,7 +2071,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -2095,8 +2085,18 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/noticias",
-    "origem": "câmara",
+    "url": "https://portal.al.go.leg.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/edital",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -7076,8 +7076,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-www-ipora-pr-gov-br": {
-  "em": "2026-11-05T01:10:46+00:00",
-  "testes": 13,
+  "em": "2026-11-05T17:20:52+00:00",
+  "testes": 12,
   "melhor": {
    "url": "https://www.ipora.pr.gov.br/",
    "via": "direto",
@@ -7091,7 +7091,7 @@
     "origem": "rota original",
     "via": "direto",
     "pontos": 11,
-    "links": 234,
+    "links": 235,
     "sinais": 5,
     "formato": "html",
     "erro": null,
@@ -7099,26 +7099,6 @@
    },
    {
     "url": "https://www.ipora.pr.gov.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.ipora.pr.gov.br/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.ipora.pr.gov.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7148,6 +7128,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.ipora.pr.gov.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.ipora.pr.gov.br/editais",
     "origem": "padrão",
     "via": "direto",
@@ -7168,7 +7158,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.ipora.pr.gov.br/noticias",
+    "url": "https://www.ipora.pr.gov.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7178,7 +7168,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.ipora.pr.gov.br/chamadas-publicas",
+    "url": "https://www.ipora.pr.gov.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8325,8 +8315,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-259": {
-  "em": "2026-11-05T04:13:58+00:00",
-  "testes": 13,
+  "em": "2026-11-05T17:21:12+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -8337,17 +8327,6 @@
     "links": 48,
     "sinais": 0,
     "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://echoinggreen.org/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 8,
-    "sinais": 0,
-    "formato": "sitemap/feed",
     "erro": null,
     "funcionou": false
    },
@@ -8363,6 +8342,17 @@
     "funcionou": false
    },
    {
+    "url": "https://echoinggreen.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://echoinggreen.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -8373,23 +8363,13 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
-    "url": "https://echoinggreen.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://echoinggreen.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
-    "links": 0,
+    "links": 8,
     "sinais": 0,
-    "formato": "json",
+    "formato": "sitemap/feed",
     "erro": null,
     "funcionou": false
    },
@@ -8414,7 +8394,7 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/noticias",
+    "url": "https://echoinggreen.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8424,7 +8404,7 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/chamadas-publicas",
+    "url": "https://echoinggreen.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8467,8 +8447,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-244": {
-  "em": "2026-11-05T02:39:22+00:00",
-  "testes": 14,
+  "em": "2026-11-05T17:21:02+00:00",
+  "testes": 13,
   "melhor": {
    "url": "https://www.iadb.org/sitemap.xml",
    "via": "direto",
@@ -8521,17 +8501,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/feed",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.iadb.org/transparencia/editais",
+    "url": "https://www.iadb.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8541,7 +8511,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.iadb.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8571,7 +8541,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/noticias",
+    "url": "https://www.iadb.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8581,7 +8551,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/chamadas-publicas",
+    "url": "https://www.iadb.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9362,7 +9332,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-248": {
-  "em": "2026-11-05T02:39:26+00:00",
+  "em": "2026-11-05T17:21:05+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -9378,7 +9348,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/sitemap.xml",
+    "url": "https://www.opensocietyfoundations.org/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9388,7 +9358,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/feed",
+    "url": "https://www.opensocietyfoundations.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9408,7 +9378,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.opensocietyfoundations.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9438,7 +9408,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/noticias",
+    "url": "https://www.opensocietyfoundations.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9448,7 +9418,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.opensocietyfoundations.org/chamadas-publicas",
+    "url": "https://www.opensocietyfoundations.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -13862,7 +13832,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-232": {
-  "em": "2026-11-05T04:14:06+00:00",
+  "em": "2026-11-05T17:21:26+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -13878,7 +13848,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutoneoenergia.org.br/sitemap.xml",
+    "url": "https://www.institutoneoenergia.org.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -13888,7 +13858,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutoneoenergia.org.br/feed",
+    "url": "https://www.institutoneoenergia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -13908,7 +13878,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutoneoenergia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.institutoneoenergia.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -13938,7 +13908,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutoneoenergia.org.br/noticias",
+    "url": "https://www.institutoneoenergia.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -13948,7 +13918,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutoneoenergia.org.br/chamadas-publicas",
+    "url": "https://www.institutoneoenergia.org.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
