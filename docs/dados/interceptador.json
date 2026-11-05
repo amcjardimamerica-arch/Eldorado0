@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T12:24:49+00:00",
+  "em": "2026-11-05T12:49:58+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T12:17:20+00:00",
+  "ultimo_voo": "2026-11-05T12:27:11+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,79 +48,60 @@
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.0
+    "tempo_medio_min": 22.1
   },
   "missoes": [
     {
-      "em": "2026-11-05T12:17:20+00:00",
+      "em": "2026-11-05T12:27:11+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Projeto de segurança alimentar comunitária — Goiás — Goiás",
+      "alvo": "Projeto de segurança alimentar comunitária — Goiás — Goiás — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 5,
+      "comprovados": 2,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
+        "Valor",
+        "Território",
         "Requisitos",
         "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/casacivil/governo-de-goias-lanca-novo-edital-do-programa-de-aquisicao-de-alimentos-estadual/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o objeto do edital como programas sociais para os mais vulneráveis, o que se alinha com a atuação de uma associação comunitária de Goiânia.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é programas sociais para os mais vulneráveis, e demonstrar como sua atuação se encaixa nesse âmbito.",
-        "proximo_passo": "Verificar os requisitos e anexos do edital, que não foram encontrados no texto comprovado, para garantir a conformidade com as normas do edital.",
-        "risco": "A falta de informações sobre prazo de inscrição, requisitos e anexos pode impedir a associação de se inscrever adequadamente no edital."
+        "por_que": "O Governo de Goiás é o órgão financiador do projeto, o que torna o edital uma fonte válida para ações de segurança alimentar comunitária.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando um projeto alinhado ao objeto do edital, que não foi especificado, mas provavelmente envolve ações de segurança alimentar comunitária.",
+        "proximo_passo": "Consultar o edital completo para obter informações sobre os requisitos, prazos e área de atuação, que não foram encontrados no texto fornecido.",
+        "risco": "A falta de informações detalhadas sobre o objeto, prazos e requisitos pode impedir a associação de se preparar adequadamente para o processo de inscrição."
       },
       "erro": null,
-      "segundos": 417,
+      "segundos": 1326,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 2,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-4580a844386f",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-7a832a21dc7e",
       "encontrou": {
-        "Objeto": {
-          "valor": "programas sociais para os mais vulneráveis",
-          "trecho": "Governo investe R$ 1,1 bilhão em programas sociais para os mais vulneráveis",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$ 1,1 bilhão",
-          "trecho": "Governo investe R$ 1,1 bilhão em programas sociais para os mais vulneráveis",
-          "oficial": false,
-          "dispensado": false
-        },
         "Órgão / financiador": {
           "valor": "Governo de Goiás",
-          "trecho": "Governo investe R$ 1,1 bilhão em programas sociais para os mais vulneráveis",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Governo investe R$ 1,1 bilhão em programas sociais para os mais vulneráveis",
-          "oficial": false,
+          "trecho": "Governo de Goiás lança novo edital do Programa de Aquisição de Alimentos Estadual",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Governo de Goiás",
+      "financiador": "GOIÁS.GOV.BR",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
