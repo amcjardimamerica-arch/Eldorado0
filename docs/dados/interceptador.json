@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T10:43:56+00:00",
+  "em": "2026-11-05T10:57:32+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T10:29:53+00:00",
+  "ultimo_voo": "2026-11-05T10:45:52+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,75 +48,80 @@
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.3
+    "tempo_medio_min": 10.9
   },
   "missoes": [
     {
-      "em": "2026-11-05T10:29:53+00:00",
+      "em": "2026-11-05T10:45:52+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prefeitura de Quirinópolis — AVISO DE CHAMAMENTO PUBLICO — Goiás / Quirinópolis",
-      "qualidade": "parcial",
-      "comprovados": 7,
+      "alvo": "Prefeitura de Santa Rita do Araguaia — EDITAL — Goiás / Santa Rita do Araguaia — Goiás / Santa Rita do Araguaia",
+      "qualidade": "insuficiente",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor"
       ],
-      "pagina_oficial": "https://quirinopolis.go.gov.br/wp-content/uploads/2025/10/Edital-de-Chamamento-Publico-Eleicoes-Teatro-Publicado-no-Diario-Oficial.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O aviso de chamamento público da Prefeitura de Quirinópolis está relacionado à escolha de representantes da sociedade civil para o Conselho Municipal de Política Cultural, o que é relevante para organizações da sociedade civil interessadas em participar desse processo.",
-        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria se alinhar aos requisitos de atuação comprovada em Quirinópolis, possuir representantes com domicílio no município há pelo menos dois anos e apresentar anexos necessários, mesmo que não estejam disponíveis no texto.",
-        "proximo_passo": "Verificar se há disponibilidade de anexos ou contatos para obter mais informações sobre o processo de inscrição e os requisitos específicos.",
-        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a participação da associação, já que não há como se alinhar ao cronograma ou requisitos completos."
+        "por_que": "O texto comprovado menciona o objeto, prazo de inscrição, órgão financiador, território, esfera, requisitos, anexos e área de atuação do edital.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, cumprir os requisitos de ampliação da faixa etária mínima para 15 anos e as exigências específicas para participantes menores de 18 anos, além de anexar os documentos solicitados.",
+        "proximo_passo": "Verificar os requisitos do edital e se inscrever no prazo estabelecido.",
+        "risco": "O prazo de inscrição não está claro e pode haver restrições para participantes menores de 18 anos, o que pode impedir o acesso."
       },
       "erro": null,
-      "segundos": 796,
+      "segundos": 654,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-08c54874a868",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-edd500193100",
       "encontrou": {
         "Objeto": {
-          "valor": "escolha dos representantes da sociedade civil no Conselho Municipal de Política Cultural",
-          "trecho": "EDITAL DE CHAMAMENTO PÚBLICO PARA ELEIÇÃO DOS REPRESENTANTES DA SOCIEDADE CIVIL NO CONSELHO MUNICIPAL DE POLÍTICA CULTURAL DE QUIRINÓPOLIS-GO",
-          "oficial": true,
+          "valor": "seleção de participantes e premiação do Festival de Música de Santa Rita do Araguaia",
+          "trecho": "Edital de Chamamento Público destinado à seleção de participantes e premiação do Festival de Música de Santa Rita do Araguaia 002/2026",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "? a 2026-10-09",
+          "trecho": "As inscrições ficam prorrogadas até o dia 09 de outubro de 2026, às 17h30",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Quirinópolis",
-          "trecho": "PREFEITURA MUNICIPAL DE QUIRINÓPOLIS",
-          "oficial": true,
+          "valor": "Prefeitura Municipal de Santa Rita do Araguaia",
+          "trecho": "MUNICÍPIO DE SANTA RITA DO ARAGUAIA/GO, por intermédio da Secretaria Municipal de Turismo e Cultura",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "ESTADO DE GOIÁS",
-          "oficial": true,
+          "trecho": "abrangência territorial e aos requisitos para participação no Festival",
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "Conselho Municipal de Política Cultural",
-          "oficial": true,
+          "trecho": "Festival de Música de Santa Rita do Araguaia",
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "Agentes culturais, artistas, produtores culturais e representantes de coletivos culturais com atuação comprovada em Quir, Pessoas físicas maiores de 18 (dezoito) anos, com domicílio no município de Quirinópolis há pelo menos 02 (dois) anos, c",
-          "trecho": "Poderão se inscrever como candidatos ao processo eleitoral: • Agentes culturais, artistas, produtores culturais e representantes de coletivos culturais com atuação comprovada em Qu",
-          "oficial": true,
+          "valor": "ampliação da faixa etária mínima para 15 (quinze) anos, exigências específicas para participantes menores de 18 anos",
+          "trecho": "alterações nas condições de participação, incluindo a ampliação da faixa etária mínima para 15 (quinze) anos, observadas as exigências específicas para participantes menores de 18 ",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Quirinópolis",
+      "financiador": "Prefeitura de Santa Rita do Araguaia",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
