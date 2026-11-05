@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T20:04:48+00:00",
+  "em": "2026-11-05T20:24:18+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T19:55:55+00:00",
+  "ultimo_voo": "2026-11-05T20:06:47+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,8 +38,8 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
-    "parciais": 1,
+    "validadas": 1,
+    "parciais": 0,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
@@ -48,75 +48,80 @@
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.3
+    "tempo_medio_min": 16.8
   },
   "missoes": [
     {
-      "em": "2026-11-05T19:55:55+00:00",
+      "em": "2026-11-05T20:06:47+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Rio Verde — Inscrições para artistas interessados na Lei Paulo Gustavo começam nesta quarta em Rio Verde. Recu… — Goiás / Rio Verde",
-      "qualidade": "parcial",
-      "comprovados": 8,
+      "alvo": "Rio Verde — Lançamento Oficial dos Editais da PNBA – Política Nacional Aldir Blanc — Goiás / Rio Verde",
+      "qualidade": "validada",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso"
       ],
-      "pagina_oficial": "https://www.rioverde.go.gov.br/secult/lei-paulo-gustavo/",
+      "pagina_oficial": "https://www.rioverde.go.gov.br/secult/wp-content/uploads/sites/15/2026/07/005-EDITAL_Fomento_PNAB-_Rio-Verde.docx.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado fornece informações sobre o objeto, valor, órgão financiador, território, esfera, requisitos, anexos e área de atuação do edital, o que é suficiente para identificar a fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar aos requisitos do edital, como ser um agente cultural residente em Rio Verde/GO há pelo menos 06 (seis) meses, e garantir que sua atuação esteja relacionada à cultura, além de preparar os anexos necessários.",
-        "proximo_passo": "Verificar se os requisitos do edital são atendidos e preparar os documentos necessários para inscrição.",
-        "risco": "O agente cultural não reside em Rio Verde/GO ou não atende aos requisitos de tempo de residência, o que pode impedir o acesso ao edital."
+        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, prazo de inscrição, valor, órgão financiador, requisitos e área de atuação, o que permite a análise e compreensão do processo de acesso ao apoio financeiro.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria atuar e residir no Município de Rio Verde/GO há pelo menos 2 anos, ser pessoa física ou MEI com data de abertura anterior à publicação do edital, ou ser pessoa jurídica com fins lucrativos e CNAE compatível com atividades culturais ou correlatas.",
+        "proximo_passo": "Verificar se os requisitos do edital são atendidos e se o prazo de inscrição está dentro do período estabelecido (2026-07-23 a 2026-08-09).",
+        "risco": "A associação comunitária pode não atender aos requisitos de residência ou de CNAE, ou pode não se inscrever dentro do prazo estabelecido."
       },
       "erro": null,
-      "segundos": 498,
+      "segundos": 1010,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
-      "id": "op-d666d1df2a42",
+      "fontes_oficiais": 9,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-744192c9afcb",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de agentes culturais das demais áreas culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do município de Rio Verde, Goiás",
-          "trecho": "O objeto deste Edital é a seleção de agentes culturais das demais áreas culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do município d",
+          "valor": "seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I",
+          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de mani",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-07-23 a 2026-08-09",
+          "trecho": "De 00:01 horas do dia 23/07/2026 até às 23:59 horas do dia 09/08/2026.",
           "oficial": true,
           "dispensado": false
         },
         "Valor": {
-          "valor": "R$ 572.314,60",
-          "trecho": "O valor total disponibilizado para este Edital é de R$ 572.314,60 (quinhentos e setenta e dois mil, trezentos e quatorze reais e sessenta centavos), dividido entre as categorias el",
+          "valor": "R$ 885.000,00 (Oitocentos e oitenta e cinco mil reais)",
+          "trecho": "O valor total deste edital é de R$ 885.000,00 (Oitocentos e oitenta e cinco mil reais)",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Rio Verde",
-          "trecho": "A Prefeitura Municipal de Rio Verde, estado de Goiás torna público o presente edital.",
+          "valor": "SECRETARIA MUNICIPAL DE CULTURA",
+          "trecho": "a SECRETARIA MUNICIPAL DE CULTURA torna público o presente edital",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "O presente edital destina-se à premiação de agentes culturais do município de Rio Verde, Goiás.",
+          "trecho": "Município de Rio Verde",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "O presente edital destina-se à premiação de agentes culturais do município de Rio Verde, Goiás.",
+          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio financeiro nas categorias descritas no Anexo I, com o objetivo de incentivar as diversas formas de mani",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "agente cultural residente no Município de Rio Verde/GO, há pelo menos 06 (seis) meses",
-          "trecho": "Pode se inscrever no Edital qualquer agente cultural residente no Município de Rio Verde/GO, há pelo menos 06 (seis) meses.",
+          "valor": "atuar e residir no Município de Rio Verde/GO há pelo menos 2 anos, ser pessoa física ou Microempreendedor Individual (MEI) com data de abertura anterior à publicação deste edital, ser pessoa jurídica com fins lucrativos com CNAE compatível com atividades culturais ou correlatas, ser pessoa jurídica ",
+          "trecho": "Pode se inscrever no Edital qualquer agente cultural que atua e reside no Município de Rio Verde/GO há pelo menos 2 anos. O agente cultural pode ser: I – Pessoa física ou Microempr",
           "oficial": true,
           "dispensado": false
         }
@@ -124,12 +129,7 @@
       "financiador": "Prefeitura Municipal de Rio Verde",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
