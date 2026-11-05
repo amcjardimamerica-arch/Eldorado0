@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T10:57:32+00:00",
+  "em": "2026-11-05T11:07:02+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T10:45:52+00:00",
+  "ultimo_voo": "2026-11-05T10:59:31+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,94 +38,100 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
+    "validadas": 1,
     "parciais": 0,
-    "insuficientes": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 7,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.9
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 6.9
   },
   "missoes": [
     {
-      "em": "2026-11-05T10:45:52+00:00",
+      "em": "2026-11-05T10:59:31+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prefeitura de Santa Rita do Araguaia — EDITAL — Goiás / Santa Rita do Araguaia — Goiás / Santa Rita do Araguaia",
-      "qualidade": "insuficiente",
-      "comprovados": 8,
+      "alvo": "Prefeitura de Senador Canedo lança Edital Aldir Blanc 2026 — Goiás / Senador Canedo",
+      "qualidade": "validada",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Resultado",
-        "Prazo de recurso",
-        "Valor"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://alfacanedo.com/senador-canedo-lanca-edital-aldir-blanc-2026-com-r-380-mil-destinado-a-projetos-culturais/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o objeto, prazo de inscrição, órgão financiador, território, esfera, requisitos, anexos e área de atuação do edital.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, cumprir os requisitos de ampliação da faixa etária mínima para 15 anos e as exigências específicas para participantes menores de 18 anos, além de anexar os documentos solicitados.",
-        "proximo_passo": "Verificar os requisitos do edital e se inscrever no prazo estabelecido.",
-        "risco": "O prazo de inscrição não está claro e pode haver restrições para participantes menores de 18 anos, o que pode impedir o acesso."
+        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, valor, prazo de inscrição, requisitos e área de atuação, o que permite uma análise completa do processo.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar às iniciativas culturais de Senador Canedo, verificar os requisitos do edital, realizar a inscrição no site oficial da Prefeitura e anexar os documentos necessários.",
+        "proximo_passo": "Consultar o edital completo e se inscrever no site oficial da Prefeitura de Senador Canedo.",
+        "risco": "A falta de acesso ao edital completo ou a não conformidade com os requisitos pode impedir o acesso ao financiamento."
       },
       "erro": null,
-      "segundos": 654,
+      "segundos": 415,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-edd500193100",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 9,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-916f8a8772b7",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de participantes e premiação do Festival de Música de Santa Rita do Araguaia",
-          "trecho": "Edital de Chamamento Público destinado à seleção de participantes e premiação do Festival de Música de Santa Rita do Araguaia 002/2026",
-          "oficial": false,
+          "valor": "iniciativas que contribuam para o fortalecimento e a valorização das diferentes manifestações culturais de Senador Canedo",
+          "trecho": "Os recursos serão destinados a iniciativas que contribuam para o fortalecimento e a valorização das diferentes manifestações culturais de Senador Canedo.",
+          "oficial": true,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "? a 2026-10-09",
-          "trecho": "As inscrições ficam prorrogadas até o dia 09 de outubro de 2026, às 17h30",
-          "oficial": false,
+          "valor": "? a 2026-09-25",
+          "trecho": "As inscrições já estão abertas e podem ser realizadas até as 23h59 do dia 25 de setembro de 2026.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 383,5 mil",
+          "trecho": "prevê a seleção de 29 projetos culturais, com investimento total de R$ 383,5 mil.",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Santa Rita do Araguaia",
-          "trecho": "MUNICÍPIO DE SANTA RITA DO ARAGUAIA/GO, por intermédio da Secretaria Municipal de Turismo e Cultura",
-          "oficial": false,
+          "valor": "Prefeitura de Senador Canedo",
+          "trecho": "A Prefeitura de Senador Canedo, por meio da Secretaria Municipal de Esportes, Cultura e Turismo (SECULT), realizou nesta quarta-feira (9) o lançamento do Edital Aldir Blanc 2026.",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "abrangência territorial e aos requisitos para participação no Festival",
-          "oficial": false,
+          "trecho": "Senador Canedo lança Edital Aldir Blanc 2026 com R$ 380 mil destinado a projetos culturais",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "Festival de Música de Santa Rita do Araguaia",
-          "oficial": false,
+          "trecho": "prevê a seleção de 29 projetos culturais, com investimento total de R$ 383,5 mil.",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "ampliação da faixa etária mínima para 15 (quinze) anos, exigências específicas para participantes menores de 18 anos",
-          "trecho": "alterações nas condições de participação, incluindo a ampliação da faixa etária mínima para 15 (quinze) anos, observadas as exigências específicas para participantes menores de 18 ",
-          "oficial": false,
+          "valor": "consultar o edital e realizar a inscrição por meio do site oficial da Prefeitura",
+          "trecho": "Os interessados devem consultar o edital e realizar a inscrição por meio do site oficial da Prefeitura.",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Santa Rita do Araguaia",
+      "financiador": "Prefeitura de Senador Canedo",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_municipal",
+        "financiador_programa_edital",
+        "financiador_regulamento"
       ]
     }
   ],
