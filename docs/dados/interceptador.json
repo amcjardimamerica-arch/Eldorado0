@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T22:13:36+00:00",
+  "em": "2026-11-05T22:24:59+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T21:59:50+00:00",
+  "ultimo_voo": "2026-11-05T22:15:58+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,82 +39,93 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.0
+    "tempo_medio_min": 8.5
   },
   "missoes": [
     {
-      "em": "2026-11-05T21:59:50+00:00",
+      "em": "2026-11-05T22:15:58+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "SECULT Goiás — chamamentos públicos da Lei 13.019/2014 — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 6,
+      "alvo": "SECULT-GO (cultura) — Edital nº 10/2026 — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 8,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
+      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2026/08/Edital-de-Literatura-no-10-2026.pdf",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O texto comprovado menciona o Objeto, Órgão / financiador, Território, Esfera e Área de atuação, mas não fornece informações sobre editais de fomento para organizações da sociedade civil.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria se inscrever em editais específicos da Secult, que podem ser divulgados em seus canais oficiais, e apresentar um projeto alinhado à área de cultura.",
-        "proximo_passo": "Consultar os editais da Secult para verificar oportunidades de fomento e se inscrever conforme as normas estabelecidas.",
-        "risco": "A falta de divulgação de editais ou a não conformidade com os critérios estabelecidos pode impedir o acesso ao fomento."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações detalhadas sobre o objeto, valor, órgão financiador, território, requisitos e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa apresentar um projeto voltado ao estímulo à criação ou pesquisa literária, à produção de obras de literatura infantil e de histórias em quadrinhos, à publicação de obras literárias e à realização de box de literatura de ficção, compostos por no mínimo três volumes.",
+        "proximo_passo": "Verificar os anexos do edital e preparar o projeto conforme os requisitos estabelecidos.",
+        "risco": "A falta de informações sobre o prazo de inscrição pode impedir a associação de se inscrever no prazo correto."
       },
       "erro": null,
-      "segundos": 778,
+      "segundos": 508,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-curadoria-009",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
+      "id": "op-aea0b9751f97",
       "encontrou": {
         "Objeto": {
-          "valor": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na cidade de Pirenópolis, desde o ano 2000.",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "valor": "selecionar e apoiar projetos na área da literatura, contemplando iniciativas de criação, pesquisa e publicação de obras literárias",
+          "trecho": "O presente edital tem por objeto selecionar e apoiar projetos na área da literatura, contemplando iniciativas de criação, pesquisa e publicação de obras literárias.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 1.500.000,00",
+          "trecho": "O valor total disponibilizado para este Edital é de R$ 1.500.000,00 (um milhão e",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura (Secult)",
-          "trecho": "por meio da Secretaria de Estado da Cultura (Secult)",
+          "valor": "SECRETARIA DE ESTADO DA CULTURA",
+          "trecho": "A Secretaria de Estado da Cultura de Goiás, tendo em vista o que consta no processo nº 202517645004363, torna público o presente Edital de Literatura nº 10/2026,",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "na cidade de Pirenópolis",
+          "trecho": "O presente Edital destina-se a apoiar projetos apresentados por agentes culturais do Estado de Goiás.",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "trecho": "O presente Edital destina-se a apoiar projetos apresentados por agentes culturais do Estado de Goiás.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Será necessário apresentar projeto com proposta voltada ao estímulo à criação ou pesquisa literária;, à produção de obras de literatura infantil e de histórias em quadrinhos;, à publicação de obras literárias;, e à realização de box de literatura de ficção, compostos por no mínimo três volumes.",
+          "trecho": "As propostas deverão contribuir para o fortalecimento da produção literária, a ampliação da circulação de obras e o estímulo ao acesso à leitura e à diversidade de expressões liter",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura",
+      "financiador": "SECULT-GO",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
