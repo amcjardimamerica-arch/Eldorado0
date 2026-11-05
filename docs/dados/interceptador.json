@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T07:46:26+00:00",
+  "em": "2026-11-05T08:04:54+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T07:38:17+00:00",
+  "ultimo_voo": "2026-11-05T07:48:23+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,56 +43,74 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "nao": 1
+    },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.4
+    "tempo_medio_min": 15.7
   },
   "missoes": [
     {
-      "em": "2026-11-05T07:38:17+00:00",
+      "em": "2026-11-05T07:48:23+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
       "alvo": "Prefeitura de Mossâmedes — DOE - MOSSAMEDES - CHAMAMENTO 01 — Goiás / Mossâmedes",
       "qualidade": "insuficiente",
-      "comprovados": 0,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
-        "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
         "Território",
         "Esfera",
-        "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
-      "parecer_fonte": {},
+      "pagina_oficial": "https://www.mossamedes.go.gov.br/wp-content/uploads/2024/11/CONVOCACOES-1.pdf",
+      "parecer_fonte": {
+        "serve_como_fonte": "nao",
+        "por_que": "O edital mencionado não fornece informações sobre prazo de inscrição, valor, território, esfera ou área de atuação, o que limita sua utilidade para a associação comunitária de Goiânia.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar se há editais específicos para organizações da sociedade civil, que possam oferecer recursos para atividades em assistência social, cultura, educação ou esporte, e se alinhar aos requisitos e prazos estabelecidos.",
+        "proximo_passo": "Consultar editais específicos para organizações da sociedade civil em Goiás, com foco nas áreas de atuação da associação.",
+        "risco": "A falta de informações sobre prazos, valor e área de atuação pode impedir a associação de se candidatar a oportunidades disponíveis."
+      },
       "erro": null,
-      "segundos": 444,
+      "segundos": 944,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 4,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-nova-e9f7c125b605",
-      "encontrou": {},
+      "id": "op-6971d7e7517c",
+      "encontrou": {
+        "Objeto": {
+          "valor": "o edital convoca o(a) candidato(a) aprovado(a) para o cargo de VIGIA",
+          "trecho": "O Município de Mossâmedes, CONVOCA, após homologação do concurso público por meio do Decreto n. 013/2023, o (a) Sr. (a) ALESSANDRO DE CASTRO VALADAO, inscrito (a) no CPF n. 6243982",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Prefeitura de Mossâmedes",
+          "trecho": "O Município de Mossâmedes, CONVOCA",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "fotocópia da certidão de nascimento ou de casamento com as devidas averbações se houver, fotocópia da cédula de identidade (RG), fotocópia do CPF, fotocópia do título de eleitor e comprovante de votação na última eleição, fotocópia do certificado de reservista se candidato do sexo masculino, fotocóp",
+          "trecho": "Os exames médicos exigidos, serão custeados pelo candidato, quando for convocado. O candidato que, por qualquer motivo, não apresentar a documentação e os exames exigidos neste Edi",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
       "financiador": "Prefeitura de Mossâmedes",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
