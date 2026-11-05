@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T21:57:53+00:00",
+  "em": "2026-11-05T22:13:36+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T21:51:43+00:00",
+  "ultimo_voo": "2026-11-05T21:59:50+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,9 +38,9 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
+    "validadas": 0,
     "parciais": 0,
-    "insuficientes": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,94 +48,73 @@
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 5.6
+    "tempo_medio_min": 13.0
   },
   "missoes": [
     {
-      "em": "2026-11-05T21:51:43+00:00",
+      "em": "2026-11-05T21:59:50+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "SECULT (cultura) — Edital nº 002/2026 — Goiás",
-      "qualidade": "validada",
-      "comprovados": 9,
+      "alvo": "SECULT Goiás — chamamentos públicos da Lei 13.019/2014 — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos"
       ],
-      "pagina_oficial": "https://publicacoes.goias.go.gov.br/p/edital-pss-sms-002-2026",
+      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
       "parecer_fonte": {
         "serve_como_fonte": "nao",
-        "por_que": "O edital mencionado é referente à área de saúde, enquanto a SECULT (cultura) — Edital nº 002/2026 — Goiás não foi encontrado comprovado no texto fornecido.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há editais específicos para a área de cultura, assistência social, educação ou esporte, e se alinhar seus projetos aos objetivos e requisitos desses editais.",
-        "proximo_passo": "Consultar o site da Prefeitura Municipal de Goiás ou outros órgãos responsáveis por editais na área de cultura para verificar disponibilidade de chamadas públicas.",
-        "risco": "A ausência de informações sobre o edital específico da SECULT (cultura) pode impedir a associação de acessar recursos disponíveis para sua área de atuação."
+        "por_que": "O texto comprovado menciona o Objeto, Órgão / financiador, Território, Esfera e Área de atuação, mas não fornece informações sobre editais de fomento para organizações da sociedade civil.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria se inscrever em editais específicos da Secult, que podem ser divulgados em seus canais oficiais, e apresentar um projeto alinhado à área de cultura.",
+        "proximo_passo": "Consultar os editais da Secult para verificar oportunidades de fomento e se inscrever conforme as normas estabelecidas.",
+        "risco": "A falta de divulgação de editais ou a não conformidade com os critérios estabelecidos pode impedir o acesso ao fomento."
       },
       "erro": null,
-      "segundos": 336,
+      "segundos": 778,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 9,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "op-75895ee0fb82",
+      "fontes_oficiais": 5,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-curadoria-009",
       "encontrou": {
         "Objeto": {
-          "valor": "realização de Processo Seletivo Simplificado para contratação temporária de profissionais da saúde",
-          "trecho": "Edital nº 002/2026, que dispõe sobre a realização de Processo Seletivo Simplificado para contratação temporária de profissionais da saúde",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-03-02 a 2026-03-03",
-          "trecho": "Inscrições: 02 e 03 de março de 2026",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "de R$ 1.621,00 a R$ 4.000,00",
-          "trecho": "💰 Remuneração: de R$ 1.621,00 a R$ 4.000,00",
+          "valor": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na cidade de Pirenópolis, desde o ano 2000.",
+          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Goiás",
-          "trecho": "A Prefeitura Municipal de Goiás, por meio da Secretaria Municipal de Saúde",
+          "valor": "Secretaria de Estado da Cultura (Secult)",
+          "trecho": "por meio da Secretaria de Estado da Cultura (Secult)",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Prefeitura Municipal de Goiás",
+          "trecho": "na cidade de Pirenópolis",
           "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "saude",
-          "trecho": "Processo Seletivo Simplificado para a área da saúde",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Análise curricular, títulos e experiência profissional.",
-          "trecho": "Forma de seleção: Análise curricular, títulos e experiência profissional.",
+          "valor": "cultura",
+          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "SECULT (cultura) — Goiás",
-      "indicios": [
-        {
-          "url": "https://data.queridodiario.ok.org.br/5208707/2026-10-20/f581476b13f3e4eb97b51447054906a2ec5f6e10.pdf",
-          "tipo": "agregador"
-        }
-      ],
+      "financiador": "Secretaria de Estado da Cultura",
+      "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador"
       ]
     }
   ],
