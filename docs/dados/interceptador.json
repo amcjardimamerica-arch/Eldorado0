@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T11:57:53+00:00",
+  "em": "2026-11-05T12:14:59+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T11:47:02+00:00",
+  "ultimo_voo": "2026-11-05T12:00:13+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,60 +48,80 @@
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.2
+    "tempo_medio_min": 14.0
   },
   "missoes": [
     {
-      "em": "2026-11-05T11:47:02+00:00",
+      "em": "2026-11-05T12:00:13+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Projeto \"Mais Um Sem Dor\" recebe R$ 103 mil para custear suas atividades em Palmeiras de Goiás — Goiás / Goiânia",
-      "qualidade": "insuficiente",
-      "comprovados": 4,
-      "dispensados": 0,
+      "alvo": "Projeto de segurança alimentar comunitária — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 8,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Requisitos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://goias.gov.br/saude/wp-content/uploads/sites/34/2024/01/cartilhaorientadoraeducacaopermanente.pdf",
+      "pagina_oficial": "https://agencia.go.gov.br/seapa-publica-novo-edital-do-programa-de-aquisicao-de-alimentos-estadual/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O projeto foi financiado pela Secretaria de Estado da Saúde de Goiás, indicando que é uma fonte de recursos válida para organizações da sociedade civil no estado de Goiás.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital da Secretaria de Estado da Saúde de Goiás, demonstrando sua capacidade de execução do projeto e alinhamento com as metas do órgão.",
-        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre requisitos, prazos e critérios de seleção.",
-        "risco": "A falta de informações sobre requisitos, prazos e área de atuação pode dificultar o acesso ao edital e a elaboração de uma proposta adequada."
+        "por_que": "O edital menciona explicitamente que os interessados têm 30 dias para apresentar documentação e cadastrar suas propostas, indicando que o prazo de inscrição é dispensado.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar a Declaração de Aptidão ao Pronaf (DAP) e/ou do Cadastro Nacional da Agricultura Familiar (CAF), além de seguir as instruções dos anexos mencionados no edital.",
+        "proximo_passo": "A associação deve se cadastrar e apresentar a documentação exigida dentro do prazo de 30 dias mencionado no edital.",
+        "risco": "A falta de documentação adequada, como a DAP ou CAF, pode impedir o acesso ao edital."
       },
       "erro": null,
-      "segundos": 614,
+      "segundos": 840,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 3,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-2aa02b1def27",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Área de atuação",
+      "id": "op-captacao-111",
       "encontrou": {
+        "Objeto": {
+          "valor": "fornecer gêneros alimentícios para o Estado",
+          "trecho": "Aqueles que se enquadrarem nas regras poderão fornecer gêneros alimentícios para o Estado",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O edital dispensa o prazo de inscrição, pois o texto menciona que os interessados têm 30 dias para apresentar documentação e cadastrar suas propostas.",
+          "trecho": "Os interessados têm 30 dias para apresentar documentação e cadastrar suas propostas [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Valor": {
+          "valor": "R$ 8.400",
+          "trecho": "Cada agricultor(a) cadastrado(a) terá um limite de R$ 8.400 para fornecimento de gêneros alimentícios ao Estado",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Saúde de Goiás",
-          "trecho": "Secretaria de Estado da Saúde de Goiás – Goiânia, 2021.",
+          "valor": "Secretaria de Estado da Agricultura, Pecuária e Abastecimento (Seapa)",
+          "trecho": "O Governo de Goiás, por meio da Secretaria de Estado da Agricultura, Pecuária e Abastecimento (Seapa), divulgou nesta terça-feira (29/12) o Edital de Chamamento Público nº 01/2021",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Goiás (Estado). Secretaria de Estado da Saúde.",
+          "trecho": "O Governo de Goiás, por meio da Secretaria de Estado da Agricultura, Pecuária e Abastecimento (Seapa), divulgou nesta terça-feira (29/12) o Edital de Chamamento Público nº 01/2021",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Declaração de Aptidão ao Pronaf (DAP) e/ou do Cadastro Nacional da Agricultura Familiar (CAF)",
+          "trecho": "Um dos requisitos para participação no programa é a apresentação da Declaração de Aptidão ao Pronaf (DAP) e/ou do Cadastro Nacional da Agricultura Familiar (CAF)",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "SECRETARIA DE ESTADO DA SAÚDE",
+      "financiador": "Ministério dos Direitos Humanos e da Cidadania",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
