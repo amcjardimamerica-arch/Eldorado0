@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-05T11:44:30+00:00",
+  "em": "2026-11-05T11:57:53+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-05T11:42:00+00:00",
+  "ultimo_voo": "2026-11-05T11:47:02+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,44 +43,69 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 1.8
+    "tempo_medio_min": 10.2
   },
   "missoes": [
     {
-      "em": "2026-11-05T11:42:00+00:00",
+      "em": "2026-11-05T11:47:02+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Processo de Seleção de Gestor Escolar — Goiás — Goiás",
+      "alvo": "Projeto \"Mais Um Sem Dor\" recebe R$ 103 mil para custear suas atividades em Palmeiras de Goiás — Goiás / Goiânia",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 4,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "nenhuma fonte legível",
-      "segundos": 110,
+      "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos",
+        "Área de atuação"
+      ],
+      "pagina_oficial": "https://goias.gov.br/saude/wp-content/uploads/sites/34/2024/01/cartilhaorientadoraeducacaopermanente.pdf",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O projeto foi financiado pela Secretaria de Estado da Saúde de Goiás, indicando que é uma fonte de recursos válida para organizações da sociedade civil no estado de Goiás.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital da Secretaria de Estado da Saúde de Goiás, demonstrando sua capacidade de execução do projeto e alinhamento com as metas do órgão.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre requisitos, prazos e critérios de seleção.",
+        "risco": "A falta de informações sobre requisitos, prazos e área de atuação pode dificultar o acesso ao edital e a elaboração de uma proposta adequada."
+      },
+      "erro": null,
+      "segundos": 614,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 3,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: nenhuma fonte legível",
-      "id": "op-84172a098af2",
-      "encontrou": {},
-      "financiador": "Secretaria de Estado da Educação de Goiás",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-2aa02b1def27",
+      "encontrou": {
+        "Órgão / financiador": {
+          "valor": "Secretaria de Estado da Saúde de Goiás",
+          "trecho": "Secretaria de Estado da Saúde de Goiás – Goiânia, 2021.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Goiás (Estado). Secretaria de Estado da Saúde.",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "SECRETARIA DE ESTADO DA SAÚDE",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
