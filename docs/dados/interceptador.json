@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-06T16:37:15+00:00",
+  "em": "2026-11-06T16:52:38+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-06T16:22:47+00:00",
+  "ultimo_voo": "2026-11-06T16:39:14+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,8 +38,8 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
-    "parciais": 0,
+    "validadas": 0,
+    "parciais": 1,
     "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
@@ -48,93 +48,74 @@
     },
     "estrelas_de_ouro": 12,
     "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 13.7
+    "tempo_medio_min": 12.6
   },
   "missoes": [
     {
-      "em": "2026-11-06T16:22:47+00:00",
+      "em": "2026-11-06T16:39:14+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "ITAJAÍ EM TRAÇOS: concurso cultural livre — Brasil — Brasil",
-      "qualidade": "validada",
-      "comprovados": 9,
+      "alvo": "Instituto Impactarte abre edital para projetos de impacto social com apoio de até R$ 150 mil — Observatório do… — Brasil",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://corrivus.com.br/santa-catarina/itajai/concurso-itajai-em-tracos-inscricoes-gratuitas",
+      "pagina_oficial": "https://conjunta.org/recurso-financeiro/edital-continuo-de-apoio-a-projetos-sociais-ciclo-2026-instituto-impactarte/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, prazo de inscrição, valor, financiador, requisitos e área de atuação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever como artista participante, apresentar uma obra que represente Itajaí, respeitando os requisitos de idade e tipo de produção, e garantir que a inscrição seja realizada por responsável legal em caso de menores de idade.",
-        "proximo_passo": "Verificar os requisitos do edital e se inscrever no prazo estabelecido, apresentando uma obra que represente Itajaí conforme descrito.",
-        "risco": "O risco de não atender aos requisitos do edital, como a representação de Itajaí e a proibição de obras exclusivamente fotográficas ou produzidas com inteligência artificial."
+        "por_que": "O texto comprovado menciona o Instituto Impactarte como financiador e o objeto do edital como apoio financeiro a iniciativas de impacto social, o que é relevante para a associação comunitária.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa demonstrar clareza de propósito, boa governança e potencial de impacto social consistente, além de anexar os documentos exigidos no edital.",
+        "proximo_passo": "Consultar o edital completo para entender os requisitos específicos e anexar os documentos necessários.",
+        "risco": "A falta de clareza sobre os requisitos específicos e o prazo de inscrição pode impedir a associação de se candidatar adequadamente."
       },
       "erro": null,
-      "segundos": 821,
+      "segundos": 756,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 9,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "op-8ebc3e17deb6",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-c5e5bb5bcaf8",
       "encontrou": {
         "Objeto": {
-          "valor": "valorizar o patrimônio cultural de Itajaí por meio do olhar de artistas sobre belezas, pontos turísticos, personagens e diferentes elementos da cidade",
-          "trecho": "O concurso Itajaí em Traços busca valorizar o patrimônio cultural de Itajaí por meio do olhar de artistas sobre belezas, pontos turísticos, personagens e diferentes elementos da ci",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-10-01 a 2026-11-15",
-          "trecho": "As inscrições serão gratuitas de 1º de outubro a 15 de novembro, por meio de formulário no perfil @itajaiemtracos no Instagram.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$ 500, R$ 300 e R$ 200",
-          "trecho": "O primeiro lugar receberá R$ 500, o segundo receberá R$ 300 e o terceiro, R$ 200.",
+          "valor": "apoio financeiro a iniciativas de impacto social",
+          "trecho": "O Instituto Impactarte mantém inscrições abertas, em regime contínuo, para apoiar financeiramente iniciativas de impacto social ao longo de 2026.",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Lei de Incentivo à Cultura de 2026, com patrocínio da Fundação Cultural de Itajaí e da Prefeitura de Itajaí",
-          "trecho": "O projeto é realizado com recursos da Lei de Incentivo à Cultura de 2026, com patrocínio da Fundação Cultural de Itajaí e da Prefeitura de Itajaí, por meio de renúncia fiscal da ES",
+          "valor": "Instituto Impactarte",
+          "trecho": "Organizações\n\nInstituto Impactarte",
           "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "SC",
-          "trecho": "Itajaí em Traços: inscrições começam em 1º de outubro",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "O concurso Itajaí em Traços busca valorizar o patrimônio cultural de Itajaí por meio do olhar de artistas sobre belezas, pontos turísticos, personagens e diferentes elementos da ci",
+          "valor": "nacional",
+          "trecho": "Nacional",
           "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "artistas profissionais ou amadores a partir de 12 anos, obras devem representar Itajaí, não podem ser exclusivamente fotográficas ou produzidas com inteligência artificial, menores de idade devem ter a inscrição realizada por responsável legal",
-          "trecho": "Podem participar artistas profissionais ou amadores a partir de 12 anos. Menores de idade devem ter a inscrição realizada por responsável legal. Cada participante poderá enviar até",
+          "valor": "clareza de propósito, boa governança, potencial de impacto social consistente",
+          "trecho": "Direcionado para organizações da sociedade civil (associações e fundações), produtores culturais e outras iniciativas socioculturais formalmente constituídas que desenvolvam projet",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Corrivus.com.br",
+      "financiador": "Instituto Impactarte",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
