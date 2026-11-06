@@ -981,30 +981,30 @@
     "empresas-incentivadas": {
       "nome": "Editais incentivados de empresas — destinação tributária (Rouanet, LIE, FIA, PRONON)",
       "tipo": "empresas_incentivo",
-      "leituras": 50,
+      "leituras": 51,
       "achados_total": 53,
       "vazias_seguidas": 0,
-      "ultima": "2026-11-05T03:05:27+00:00",
+      "ultima": "2026-11-06T00:44:02+00:00",
       "motivo": "ativação manual pelo titular",
-      "achados_ultima": 4,
+      "achados_ultima": 3,
       "falhas_ultima": 2,
       "saude": [
         {
           "url": "https://www.saneago.com.br/",
           "http": 200,
-          "bytes": 51109
+          "bytes": 59726
         },
         {
           "url": "https://paraquemdoar.org",
           "http": 200,
-          "bytes": 296397
+          "bytes": 298708
         }
       ],
       "alerta": null,
       "diagnostico": {
         "paginas_lidas": 22,
-        "links_total": 2622,
-        "links_candidatos": 1433,
+        "links_total": 2558,
+        "links_candidatos": 1384,
         "descobertas": [
           {
             "de": "https://www.saneago.com.br/",
@@ -1029,8 +1029,8 @@
         ],
         "pdf_links": 55,
         "motivo_zero": null,
-        "camada1_vetados": 33,
-        "camada1_direcionados": 85,
+        "camada1_vetados": 30,
+        "camada1_direcionados": 79,
         "paginas_alem_do_limite": 13,
         "fora_da_fila": [
           "https://go.equatorialenergia.com.br/",
@@ -1039,12 +1039,12 @@
           "https://cajec.org.br"
         ]
       },
-      "duracao_s": 96,
-      "relidas_total": 165,
+      "duracao_s": 105,
+      "relidas_total": 168,
       "totais_por_distintas": true,
       "novas_ultima": 0,
-      "relidas_ultima": 4,
-      "fora_do_portao": 28
+      "relidas_ultima": 3,
+      "fora_do_portao": 29
     },
     "f260-captacao-051": {
       "nome": "Programa estadual de eventos esportivos",
@@ -10157,65 +10157,24 @@
   },
   "ultima_execucao": {
     "data": "2026-11-05",
-    "em": "2026-11-05T15:00:04+00:00",
-    "manual": null,
-    "bloco": "completo",
-    "sensores_executados": 17,
-    "adiados_por_tempo": [
-      "outras-oportunidades-8",
-      "plat-cnpq-extensao",
-      "plat-empresas-editais-incentivados",
-      "plat-estaduais-go-gov",
-      "plat-piloto-aberto",
-      "plat-prefeituras-50-go",
-      "plat-salic",
-      "plataforma-mapas-culturais",
-      "plataforma-wordpress",
-      "pncp-api",
-      "f260-captacao-001",
-      "f260-captacao-018",
-      "f260-captacao-034",
-      "f260-captacao-051",
-      "f260-captacao-081",
-      "f260-captacao-095",
-      "f260-captacao-113",
-      "f260-captacao-118",
-      "f260-captacao-196",
-      "f260-captacao-238",
-      "mpgo-destinacao",
-      "recorrencia"
+    "em": "2026-11-06T00:44:02+00:00",
+    "manual": [
+      "empresas-incentivadas"
     ],
-    "duracao_s": 1382,
-    "em_espera": 85,
-    "total_esquadra": 124,
+    "bloco": "manual",
+    "sensores_executados": 1,
+    "adiados_por_tempo": [],
+    "duracao_s": 105,
+    "em_espera": 125,
+    "total_esquadra": 126,
     "previsoes_ativas": 0,
-    "achados": 83,
-    "novos_na_base": 8,
+    "achados": 3,
+    "novos_na_base": 0,
     "por_tipo": {
-      "legislativo": {
-        "sensores": 3,
-        "achados": 0,
-        "falhas": 7
-      },
-      "diario_justica": {
-        "sensores": 3,
-        "achados": 0,
-        "falhas": 2
-      },
-      "diario_oficial": {
-        "sensores": 3,
-        "achados": 11,
-        "falhas": 0
-      },
-      "site_oficial": {
-        "sensores": 7,
-        "achados": 70,
-        "falhas": 4
-      },
-      "plataforma": {
+      "empresas_incentivo": {
         "sensores": 1,
-        "achados": 2,
-        "falhas": 0
+        "achados": 3,
+        "falhas": 2
       }
     }
   }
