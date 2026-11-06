@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-06T14:40:11+00:00",
+  "em": "2026-11-06T14:54:00+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-06T14:28:10+00:00",
+  "ultimo_voo": "2026-11-06T14:42:15+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,92 +39,75 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 9,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.4
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 11.1
   },
   "missoes": [
     {
-      "em": "2026-11-06T14:28:10+00:00",
+      "em": "2026-11-06T14:42:15+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Edital de Intercâmbio Cultural - Circulação e Participação Audiovisual no Exterior — Brasil",
-      "qualidade": "parcial",
-      "comprovados": 8,
+      "alvo": "Emenda Parlamentar — Câmara e Senado — captação 2026 — Brasil",
+      "qualidade": "insuficiente",
+      "comprovados": 2,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://www.fundacaodecultura.ms.gov.br/ministerio-da-cultura-lanca-edital-de-r-1-milhao-para-formacao-audiovisual-de-brasileiros-no-exterior/",
+      "pagina_oficial": "https://www.congressonacional.leg.br/web/orcamento/acompanhe/orcamento-anual/-/loa/2027",
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre seu objeto, valor, financiador, território, esfera, requisitos e área de atuação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria ter profissionais ou estudantes brasileiros envolvidos no audiovisual e seguir os requisitos do edital, incluindo anexos necessários para a candidatura.",
-        "proximo_passo": "Verificar os anexos do edital e preparar a documentação necessária para inscrição.",
-        "risco": "A falta de profissionais ou estudantes brasileiros no audiovisual pode impedir o acesso ao edital."
+        "serve_como_fonte": "nao",
+        "por_que": "A informação fornecida não menciona especificamente sobre emendas parlamentares ou mecanismos de captação de recursos para organizações da sociedade civil, tampouco fornece dados sobre prazos, valores ou requisitos.",
+        "para_a_amc": "Para acessar recursos, a associação comunitária de Goiânia precisaria identificar se há emendas parlamentares destinadas à sua área de atuação e entrar em contato com o órgão responsável para obter informações sobre processos de captação.",
+        "proximo_passo": "Pesquisar emendas parlamentares relacionadas à assistência social, cultura, educação e esporte no Congresso Nacional.",
+        "risco": "A falta de informações específicas sobre emendas parlamentares e os processos de captação pode impedir a associação de identificar oportunidades de financiamento."
       },
       "erro": null,
-      "segundos": 687,
+      "segundos": 665,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
-      "id": "op-ebedc19f5258",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 2,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-4dab41ad3bb8",
       "encontrou": {
         "Objeto": {
-          "valor": "qualificação de agentes do audiovisual brasileiro, ampliando o acesso ao conhecimento e fomentando o intercâmbio cultural",
-          "trecho": "O edital concederá apoio, em regime de fluxo contínuo, para profissionais e estudantes brasileiros, com valor de R$40.000,00 por pessoa. O apoio é destinado à realização de ações f",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$1.000.000,00",
-          "trecho": "O Ministério da Cultura (MinC), por meio da Secretaria do Audiovisual (SAV), anuncia o lançamento do Edital de Intercâmbio Cultural MinC – Formação Audiovisual no Exterior. Com um ",
+          "valor": "Estima a receita e fixa a despesa da União para o exercício financeiro de 2027",
+          "trecho": "Ementa: Estima a receita e fixa a despesa da União para o exercício financeiro de 2027.",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Ministério da Cultura",
-          "trecho": "O Ministério da Cultura (MinC), por meio da Secretaria do Audiovisual (SAV), anuncia o lançamento do Edital de Intercâmbio Cultural MinC – Formação Audiovisual no Exterior.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "internacional",
-          "trecho": "O edital concederá apoio, em regime de fluxo contínuo, para profissionais e estudantes brasileiros, com valor de R$40.000,00 por pessoa. O apoio é destinado à realização de ações f",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "O Ministério da Cultura (MinC), por meio da Secretaria do Audiovisual (SAV), anuncia o lançamento do Edital de Intercâmbio Cultural MinC – Formação Audiovisual no Exterior.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "profissionais e estudantes brasileiros",
-          "trecho": "O edital concederá apoio, em regime de fluxo contínuo, para profissionais e estudantes brasileiros, com valor de R$40.000,00 por pessoa. O apoio é destinado à realização de ações f",
+          "valor": "Presidência da República",
+          "trecho": "Autoria: Presidência da República",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Ministério da Cultura",
+      "financiador": "Congresso Nacional",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital"
       ]
     }
   ],
