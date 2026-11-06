@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-06T17:55:41+00:00",
+  "em": "2026-11-06T18:10:31+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-06T17:42:13+00:00",
+  "ultimo_voo": "2026-11-06T17:57:45+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,98 +38,88 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
+    "validadas": 0,
     "parciais": 0,
-    "insuficientes": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 13,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 12.8
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 12.1
   },
   "missoes": [
     {
-      "em": "2026-11-06T17:42:13+00:00",
+      "em": "2026-11-06T17:57:45+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Programa Funarte Aberta — Brasil — Brasil",
-      "qualidade": "validada",
-      "comprovados": 9,
-      "dispensados": 0,
+      "alvo": "Programa permanente de Patrocínios do BNDES (modalidade Escolha Direta) para projetos culturais, técnicos e es… — Brasil",
+      "qualidade": "insuficiente",
+      "comprovados": 6,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://www.brblaw.com.br/editais-culturais-com-inscricoes-abertas-confira-10/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado descreve o Programa Funarte Aberta — Brasil, incluindo seu objeto, prazo, valor e requisitos, o que é suficiente para identificar a fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ser uma pessoa jurídica de direito privado, de natureza cultural, com ou sem fins lucrativos, e oferecer projetos artístico-culturais nos espaços Funarte de São Paulo e Minas Gerais.",
-        "proximo_passo": "Verificar os anexos necessários e se a associação comunitária atende aos requisitos de elegibilidade do programa.",
-        "risco": "A associação comunitária pode não atender aos requisitos de elegibilidade ou não conseguir reunir os documentos necessários para a inscrição."
+        "por_que": "O texto comprova que o BNDES oferece patrocínios para projetos culturais, técnicos e esportivos, alinhados ao desenvolvimento econômico, social e ambiental do país.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria alinhar seu projeto às estratégias institucionais do BNDES, garantindo fortalecimento da marca do Banco, observância da legislação, respeito à diversidade e promoção do desenvolvimento social e ambiental.",
+        "proximo_passo": "Consultar o anexo mencionado no edital para obter detalhes sobre os requisitos específicos e a forma de inscrição.",
+        "risco": "A falta de alinhamento com as estratégias do BNDES ou a não observância da legislação pode impedir o acesso ao patrocínio."
       },
       "erro": null,
-      "segundos": 768,
+      "segundos": 728,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 9,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "op-ca88be462fac",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-819a3a56e365",
       "encontrou": {
         "Objeto": {
-          "valor": "cessão de pauta para projetos artístico-culturais nos espaços Funarte de São Paulo e Minas Gerais",
-          "trecho": "O programa destina-se à cessão de pauta para projetos artístico-culturais nos espaços Funarte de São Paulo e Minas Gerais.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "? a 2025-12-01",
-          "trecho": "As inscrições estão abertas até o dia 01 de dezembro de 2025,",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "valor máximo de R$ 100 reais e a obrigatoriedade da oferta de meia-entrada",
-          "trecho": "No projeto inscrito, poderá estar prevista a cobrança de ingressos a preços populares para as apresentações, com um valor máximo de R$ 100 reais e a obrigatoriedade da oferta de me",
-          "oficial": true,
+          "valor": "apoiar iniciativas alinhadas ao desenvolvimento econômico, social e ambiental do país",
+          "trecho": "apoiar iniciativas alinhadas ao desenvolvimento econômico, social e ambiental do país.",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Funarte, vinculada ao Ministério da Cultura",
-          "trecho": "A Funarte, vinculada ao Ministério da Cultura, lançou o edital do Programa Funarte Aberta 2025 – Ocupação dos espaços culturais da Funarte em Minas Gerais e São Paulo.",
-          "oficial": true,
-          "dispensado": false
+          "valor": "dispensado — O texto menciona que o patrocínio é realizado pelo BNDES.",
+          "trecho": "BNDES",
+          "oficial": false,
+          "dispensado": true
         },
         "Território": {
           "valor": "nacional",
-          "trecho": "A abrangência da chamada é nacional.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "O programa destina-se à cessão de pauta para projetos artístico-culturais nos espaços Funarte de São Paulo e Minas Gerais.",
-          "oficial": true,
+          "trecho": "destinado a fortalecer sua marca, ampliar o diálogo com a sociedade e apoiar iniciativas alinhadas ao desenvolvimento econômico, social e ambiental do país.",
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "Pessoas físicas, maiores de 18 anos;, Pessoas jurídicas de direito privado, de natureza cultural, com ou sem fins lucrativos;, Microempreendedores Individuais (MEI);, Empreendedores Individuais (EI), com experiência no campo da cultura e artes;",
-          "trecho": "Poderão participar do programa: Pessoas físicas, maiores de 18 anos; Pessoas jurídicas de direito privado, de natureza cultural, com ou sem fins lucrativos; Microempreendedores Ind",
-          "oficial": true,
+          "valor": "alinhamento às estratégias institucionais do Sistema BNDES, fortalecimento da marca e da presença institucional do Banco, observância da legislação e das normas aplicáveis, respeito à diversidade, à inclusão e aos direitos fundamentais, promoção do desenvolvimento econômico, social e ambiental",
+          "trecho": "Os patrocínios do BNDES são orientados por princípios como: alinhamento às estratégias institucionais do Sistema BNDES; fortalecimento da marca e da presença institucional do Banco",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Funarte",
+      "financiador": "BNDES",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
