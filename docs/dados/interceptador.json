@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-06T12:15:59+00:00",
+  "em": "2026-11-06T12:34:17+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-06T12:07:35+00:00",
+  "ultimo_voo": "2026-11-06T12:17:47+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,93 +39,83 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 8,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.8
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 15.7
   },
   "missoes": [
     {
-      "em": "2026-11-06T12:07:35+00:00",
+      "em": "2026-11-06T12:17:47+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "BNDES Periferias em Rede — 6º ciclo BNDES R$ 2,0 mi Aceita: organizações da sociedade civil Prazo: 04/12/2026 … — Brasil",
-      "qualidade": "insuficiente",
+      "alvo": "Chamada CNPq/CAPES Nº 30/2026 Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI — Brasil",
+      "qualidade": "parcial",
       "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Anexos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://rit.org.br/edital-no-165-proppei-2026-editais-univali-2/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o BNDES Periferias em Rede — 6º ciclo, que aceita organizações da sociedade civil e tem prazo até 04/12/2026, alinhando-se ao edital solicitado.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa elaborar uma proposta relacionada à inclusão produtiva urbana em favelas e periferias, atendendo aos requisitos de ser uma pessoa jurídica de direito privado sem fins lucrativos.",
-        "proximo_passo": "Verificar os requisitos específicos do edital e iniciar a elaboração da proposta dentro do prazo de inscrição.",
-        "risco": "A falta de clareza sobre os critérios de avaliação ou a não conformidade com os requisitos pode impedir o acesso ao financiamento."
+        "por_que": "O texto comprovado menciona o objeto do edital como 'Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI', que é uma iniciativa federal do CNPq, aberta ao território nacional, incluindo organizações da sociedade civil.",
+        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é educação, e verificar se há alinhamento com as áreas de atuação do MAI/DAI, além de seguir as normas e procedimentos estabelecidos nos anexos.",
+        "proximo_passo": "Consultar os anexos do edital para entender os requisitos e normas detalhadas, e verificar se há possibilidade de alinhamento com as atividades da associação.",
+        "risco": "O prazo de inscrição, valor e outros requisitos não foram encontrados no texto comprovado, o que pode impedir a associação de se preparar adequadamente para o processo seletivo."
       },
       "erro": null,
-      "segundos": 470,
+      "segundos": 941,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-60f45864add1",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-e87411db3e80",
       "encontrou": {
         "Objeto": {
-          "valor": "propostas relacionadas à inclusão produtiva urbana em favelas e periferias em uma única frente",
-          "trecho": "Serão elegíveis propostas relacionadas à inclusão produtiva urbana em favelas e periferias em uma única frente, a saber:",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-08-18 a 2026-12-04",
-          "trecho": "Ciclo para recebimento de propostas: de 18.08.2026 até às 17h de 04.12.2026",
-          "oficial": false,
+          "valor": "Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "trecho": "Edital Nº 165/PROPPEI/2026 | Editais – Univali",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "BNDES",
-          "trecho": "BNDES Periferias",
-          "oficial": false,
+          "valor": "CNPq",
+          "trecho": "Organização Ofertante: CNPq",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "nacional",
-          "trecho": "BNDES Periferias reúne diversas formas de atuação do BNDES vinculadas ao apoio a periferias urbanas e sua população",
-          "oficial": false,
+          "trecho": "Áreas de Interesse: Educação, Inovação, Inteligência Artificial, Pesquisa",
+          "oficial": true,
           "dispensado": false
         },
-        "Requisitos": {
-          "valor": "Pessoas jurídicas de direito privado sem fins lucrativos.",
-          "trecho": "Quem pode solicitar Pessoas jurídicas de direito privado sem fins lucrativos.",
-          "oficial": false,
+        "Área de atuação": {
+          "valor": "educacao",
+          "trecho": "Áreas de Interesse: Educação, Inovação, Inteligência Artificial, Pesquisa",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "BNDES",
+      "financiador": "Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Coordenação de Aperfeiçoamento de Pessoal de Nível Superior – CAPES",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
