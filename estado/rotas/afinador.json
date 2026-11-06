@@ -1081,7 +1081,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-06T16:13:27+00:00",
+  "em": "2026-11-06T17:43:42+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -2677,7 +2677,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-234": {
-  "em": "2026-11-06T05:40:05+00:00",
+  "em": "2026-11-06T17:43:02+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
@@ -2688,7 +2688,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -2698,11 +2699,23 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
     "url": "https://www.institutounibanco.org.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2734,27 +2747,29 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutounibanco.org.br/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
     "url": "https://www.institutounibanco.org.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2771,16 +2786,6 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
     "formato": "html",
     "erro": null,
     "funcionou": false
@@ -2792,7 +2797,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -8125,7 +8131,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-255": {
-  "em": "2026-11-06T05:40:19+00:00",
+  "em": "2026-11-06T17:43:19+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8152,6 +8158,17 @@
     "funcionou": false
    },
    {
+    "url": "https://www.cjrfund.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://www.cjrfund.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -8173,14 +8190,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.cjrfund.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "json",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -8194,7 +8210,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/edital",
+    "url": "https://www.cjrfund.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8205,16 +8221,6 @@
    },
    {
     "url": "https://www.cjrfund.org/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8257,7 +8263,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-259": {
-  "em": "2026-11-06T05:39:47+00:00",
+  "em": "2026-11-06T17:42:58+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8284,6 +8290,17 @@
     "funcionou": false
    },
    {
+    "url": "https://echoinggreen.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://echoinggreen.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -8302,17 +8319,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://echoinggreen.org/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "json",
-    "erro": null,
     "funcionou": false
    },
    {
@@ -8336,7 +8342,7 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/chamadas-publicas",
+    "url": "https://echoinggreen.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8346,7 +8352,7 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/noticias",
+    "url": "https://echoinggreen.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8389,8 +8395,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-244": {
-  "em": "2026-11-06T05:39:40+00:00",
-  "testes": 13,
+  "em": "2026-11-06T17:42:49+00:00",
+  "testes": 14,
   "melhor": {
    "url": "https://www.iadb.org/sitemap.xml",
    "via": "direto",
@@ -8443,7 +8449,17 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/transparencia/editais",
+    "url": "https://www.iadb.org/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.iadb.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8453,7 +8469,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.iadb.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8483,7 +8499,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/chamadas-publicas",
+    "url": "https://www.iadb.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8493,7 +8509,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/noticias",
+    "url": "https://www.iadb.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8858,7 +8874,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-250": {
-  "em": "2026-11-06T07:09:08+00:00",
+  "em": "2026-11-06T17:43:42+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.gatesfoundation.org/sitemap.xml",
@@ -8901,16 +8917,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.gatesfoundation.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.gatesfoundation.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -8921,7 +8927,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.gatesfoundation.org/editais",
+    "url": "https://www.gatesfoundation.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8941,7 +8947,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.gatesfoundation.org/chamadas-publicas",
+    "url": "https://www.gatesfoundation.org/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8952,6 +8958,16 @@
    },
    {
     "url": "https://www.gatesfoundation.org/noticias",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.gatesfoundation.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9393,8 +9409,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-257": {
-  "em": "2026-11-06T07:09:01+00:00",
-  "testes": 13,
+  "em": "2026-11-06T17:43:37+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -9420,6 +9436,17 @@
     "funcionou": false
    },
    {
+    "url": "https://www.rockefellerfoundation.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
+    "funcionou": false
+   },
+   {
     "url": "https://www.rockefellerfoundation.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -9441,24 +9468,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.rockefellerfoundation.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.rockefellerfoundation.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.rockefellerfoundation.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "json",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -9472,7 +9488,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.rockefellerfoundation.org/edital",
+    "url": "https://www.rockefellerfoundation.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9483,16 +9499,6 @@
    },
    {
     "url": "https://www.rockefellerfoundation.org/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.rockefellerfoundation.org/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
