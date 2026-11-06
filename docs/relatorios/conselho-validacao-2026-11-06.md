@@ -8,7 +8,7 @@
 
 ```json
 {
- "cegos_da_1a_rodada": 68,
+ "cegos_da_1a_rodada": 67,
  "testados": 58,
  "com_rota_nova": 27,
  "via_ponte": 0,
@@ -46,7 +46,7 @@
   "f260-espalhado-www-ribeiraodasneves-mg-gov-br",
   "f260-espalhado-transparencia-nobres-mt-gov-br"
  ],
- "aguardando_afinador": 10
+ "aguardando_afinador": 9
 }
 ```
 
@@ -68,8 +68,8 @@
   },
   {
    "motor": "dou",
-   "achados_total_1a": 34,
-   "achados_total_agora": 34,
+   "achados_total_1a": 35,
+   "achados_total_agora": 35,
    "no_fluxo": 3,
    "confirmadas": 0
   },
@@ -152,8 +152,8 @@
   },
   {
    "motor": "outras-oportunidades-4",
-   "achados_total_1a": 80,
-   "achados_total_agora": 80,
+   "achados_total_1a": 81,
+   "achados_total_agora": 81,
    "no_fluxo": 0,
    "confirmadas": 0
   },
@@ -173,8 +173,8 @@
   },
   {
    "motor": "outras-oportunidades-8",
-   "achados_total_1a": 37,
-   "achados_total_agora": 37,
+   "achados_total_1a": 39,
+   "achados_total_agora": 39,
    "no_fluxo": 0,
    "confirmadas": 0
   },
@@ -200,7 +200,7 @@
  "pontos_com_redundancia": 19,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 53290
+ "exemplos_da_rede_de_rotas": 53373
 }
 ```
 
@@ -246,9 +246,8 @@
  "dia_de_referencia": "2026-11-06",
  "ativos": 172,
  "lidos_ontem": 16,
- "lidos_hoje": 0,
+ "lidos_hoje": 19,
  "nao_lidos_ontem_nem_hoje": [
-  "f260-captacao-001",
   "f260-captacao-018",
   "f260-captacao-025",
   "f260-captacao-034",
@@ -287,7 +286,8 @@
   "f260-captacao-200",
   "f260-captacao-206",
   "f260-captacao-207",
-  "f260-captacao-208"
+  "f260-captacao-208",
+  "f260-captacao-212"
  ],
  "ainda_sem_primeira_leitura": [
   "motor-gife",
@@ -329,7 +329,7 @@
   "Cartório (site oficial certificado)": 190,
   "Espião (privado/internacional)": 48
  },
- "lidas_nas_ultimas_24h": 120,
+ "lidas_nas_ultimas_24h": 121,
  "dimensionamento": {
   "fontes": 404,
   "sites_por_execucao": 17,
@@ -345,28 +345,28 @@
  },
  "clones_que_ja_leram": {
   "outras-oportunidades-1": {
-   "ultima": "2026-11-05T14:50:10+00:00",
-   "duracao_s": 55,
-   "achados": 36
+   "ultima": "2026-11-06T14:33:56+00:00",
+   "duracao_s": 65,
+   "achados": 35
   },
   "outras-oportunidades-3": {
-   "ultima": "2026-11-05T14:52:47+00:00",
-   "duracao_s": 91,
-   "achados": 3
+   "ultima": "2026-11-06T14:36:29+00:00",
+   "duracao_s": 63,
+   "achados": 0
   },
   "outras-oportunidades-4": {
-   "ultima": "2026-11-05T14:53:51+00:00",
-   "duracao_s": 64,
-   "achados": 4
+   "ultima": "2026-11-06T14:37:48+00:00",
+   "duracao_s": 79,
+   "achados": 5
   },
   "outras-oportunidades-5": {
-   "ultima": "2026-11-05T14:55:12+00:00",
-   "duracao_s": 81,
+   "ultima": "2026-11-06T14:40:08+00:00",
+   "duracao_s": 139,
    "achados": 2
   },
   "outras-oportunidades-6": {
-   "ultima": "2026-11-05T14:56:37+00:00",
-   "duracao_s": 85,
+   "ultima": "2026-11-06T14:41:51+00:00",
+   "duracao_s": 103,
    "achados": 15
   },
   "outras-oportunidades-7": {
@@ -375,14 +375,14 @@
    "achados": 8
   },
   "outras-oportunidades-8": {
-   "ultima": "2026-11-03T14:36:22+00:00",
-   "duracao_s": 71,
-   "achados": 6
+   "ultima": "2026-11-06T14:43:04+00:00",
+   "duracao_s": 73,
+   "achados": 9
   },
   "outras-oportunidades-2": {
-   "ultima": "2026-11-05T14:51:16+00:00",
-   "duracao_s": 65,
-   "achados": 2
+   "ultima": "2026-11-06T14:35:26+00:00",
+   "duracao_s": 89,
+   "achados": 3
   }
  },
  "com_achado": 73
