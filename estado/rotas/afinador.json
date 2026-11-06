@@ -592,7 +592,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-218": {
-  "em": "2026-11-06T13:12:00+00:00",
+  "em": "2026-11-06T23:44:02+00:00",
   "testes": 11,
   "melhor": null,
   "detalhe": [
@@ -658,7 +658,7 @@
     "funcionou": false
    },
    {
-    "url": "https://prosas.com.br/chamadas-publicas",
+    "url": "https://prosas.com.br/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -668,7 +668,7 @@
     "funcionou": false
    },
    {
-    "url": "https://prosas.com.br/noticias",
+    "url": "https://prosas.com.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1080,7 +1080,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-06T22:17:36+00:00",
+  "em": "2026-11-06T23:44:41+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1213,7 +1213,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-223": {
-  "em": "2026-11-06T13:12:40+00:00",
+  "em": "2026-11-06T23:44:38+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -1251,7 +1251,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacao.bradesco/transparencia/editais",
+    "url": "https://fundacao.bradesco/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
@@ -1262,7 +1262,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacao.bradesco/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://fundacao.bradesco/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
@@ -1295,7 +1295,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacao.bradesco/chamadas-publicas",
+    "url": "https://fundacao.bradesco/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
@@ -1306,7 +1306,7 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacao.bradesco/noticias",
+    "url": "https://fundacao.bradesco/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 1,
@@ -1632,7 +1632,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "judiciario-tjgo": {
-  "em": "2026-11-06T13:12:43+00:00",
+  "em": "2026-11-06T23:44:41+00:00",
   "testes": 16,
   "melhor": null,
   "detalhe": [
@@ -1687,26 +1687,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://corregedoria.tjgo.jus.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.tjgo.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -1727,14 +1707,23 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tjgo.jus.br/images/docs/CCS/editalitaberai.pdf",
-    "origem": "biblioteca",
+    "url": "https://www.tjgo.jus.br/transparencia/editais",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://corregedoria.tjgo.jus.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -1755,6 +1744,17 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tjgo.jus.br/images/docs/CCS/editalitaberai.pdf",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -9147,8 +9147,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-253": {
-  "em": "2026-11-06T11:43:35+00:00",
-  "testes": 12,
+  "em": "2026-11-06T23:43:29+00:00",
+  "testes": 13,
   "melhor": null,
   "detalhe": [
    {
@@ -9170,6 +9170,16 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.microsoft.com/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
     "funcionou": false
    },
    {
@@ -9225,16 +9235,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.microsoft.com/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.microsoft.com/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -9243,6 +9243,16 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.microsoft.com/chamadas-publicas",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -9822,7 +9832,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-245": {
-  "em": "2026-11-06T11:43:36+00:00",
+  "em": "2026-11-06T23:43:30+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -9897,7 +9907,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.usaid.gov/chamadas-publicas",
+    "url": "https://www.usaid.gov/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9907,7 +9917,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.usaid.gov/noticias",
+    "url": "https://www.usaid.gov/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9950,7 +9960,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-246": {
-  "em": "2026-11-06T13:11:56+00:00",
+  "em": "2026-11-06T23:43:55+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -10026,7 +10036,7 @@
     "funcionou": false
    },
    {
-    "url": "https://erasmus-plus.ec.europa.eu/chamadas-publicas",
+    "url": "https://erasmus-plus.ec.europa.eu/noticias",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10036,7 +10046,7 @@
     "funcionou": false
    },
    {
-    "url": "https://erasmus-plus.ec.europa.eu/noticias",
+    "url": "https://erasmus-plus.ec.europa.eu/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
