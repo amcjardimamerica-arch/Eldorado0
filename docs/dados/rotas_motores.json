@@ -1,5 +1,5 @@
 {
- "em": "2026-11-05T23:36:46+00:00",
+ "em": "2026-11-06T01:05:45+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 52466
+  "exemplos_da_rede": 52547
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.763
+    3.7454
    ],
    [
     "origem:rota original",
-    3.5904
+    3.4164
    ],
    [
     "tok:inscricoes",
@@ -25,7 +25,7 @@
    ],
    [
     "origem:biblioteca",
-    2.6095
+    2.5715
    ],
    [
     "tok:secult",
@@ -67,7 +67,7 @@
    ],
    [
     "tok:ccs",
-    -2.7926
+    -2.7934
    ],
    [
     "tok:2026",
@@ -75,7 +75,7 @@
    ],
    [
     "tipo:site_oficial",
-    -3.3163
+    -3.5119
    ],
    [
     "tok:content",
@@ -87,7 +87,7 @@
    ],
    [
     "origem:padrão",
-    -4.0231
+    -4.0688
    ],
    [
     "origem:câmara",
@@ -141,7 +141,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T11:44:54+00:00",
+    "em": "2026-11-06T01:04:53+00:00",
     "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -282,7 +282,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T11:44:16+00:00",
+    "em": "2026-11-06T01:04:14+00:00",
     "testes": 11,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -319,7 +319,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T11:44:52+00:00",
+    "em": "2026-11-06T01:04:51+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -387,8 +387,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T08:40:57+00:00",
-    "testes": 13,
+    "em": "2026-11-06T01:03:50+00:00",
+    "testes": 14,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -854,7 +854,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T11:45:44+00:00",
+    "em": "2026-11-06T01:05:45+00:00",
     "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1277,8 +1277,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T11:44:11+00:00",
-    "testes": 13,
+    "em": "2026-11-06T01:04:07+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -3498,10 +3498,10 @@
    "nome": "Editais incentivados — sites das maiores contribuintes do ICMS de Goiás (destinação tributária)",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 50,
-   "ok": 42,
+   "leituras": 51,
+   "ok": 43,
    "ultima": {
-    "em": "2026-11-05T03:05:27+00:00",
+    "em": "2026-11-06T00:44:02+00:00",
     "classe": "ok",
     "motivo": ""
    },
