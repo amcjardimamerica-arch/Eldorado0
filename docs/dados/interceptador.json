@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-06T10:25:52+00:00",
+  "em": "2026-11-06T10:45:16+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-06T10:09:54+00:00",
+  "ultimo_voo": "2026-11-06T10:27:54+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,17 +48,17 @@
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.2
+    "tempo_medio_min": 16.6
   },
   "missoes": [
     {
-      "em": "2026-11-06T10:09:54+00:00",
+      "em": "2026-11-06T10:27:54+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Torcedor de Pernambuco — Juizado do Torcedor de Pernambuco financia projetos sociais com recursos de prestaçõe… — Goiás",
+      "alvo": "Tutóia — Tutóia divulga resultado de seleção para projetos sociais — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 4,
+      "comprovados": 3,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -67,55 +67,56 @@
         "Prazo de recurso",
         "Valor",
         "Território",
+        "Esfera",
         "Requisitos",
         "Anexos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "http://www.cnj.jus.br",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o objeto da iniciativa como 'financia projetos sociais com recursos de prestações pecuniárias' e o financiador como 'Juizado do Torcedor de Pernambuco', indicando uma fonte válida para projetos sociais.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é financiar projetos sociais com recursos de prestações pecuniárias, e verificar se o financiador pode atuar em territórios fora de Pernambuco, já que o texto não especifica.",
-        "proximo_passo": "Verificar se o Juizado do Torcedor de Pernambuco pode financiar projetos em Goiânia e se há possibilidade de alinhamento com o objeto do edital.",
-        "risco": "O território de atuação não foi especificado no texto, o que pode impedir o acesso ao financiamento se o edital for restrito a Pernambuco."
+        "por_que": "O texto comprovado menciona que a Tutóia divulga resultado de seleção para projetos sociais, o que indica que ela atua como uma fonte de fomento para organizações da sociedade civil.",
+        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria se inscrever em uma seleção de projetos sociais promovida pela Tutóia, apresentando um projeto alinhado à área de assistência social.",
+        "proximo_passo": "Consultar o edital da Tutóia para obter informações detalhadas sobre o processo seletivo e os requisitos necessários para inscrição.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se candidatar adequadamente."
       },
       "erro": null,
-      "segundos": 912,
+      "segundos": 993,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 3,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-af85ca3d9e40",
+      "id": "op-ac30ecfe738a",
       "encontrou": {
         "Objeto": {
-          "valor": "financia projetos sociais com recursos de prestações pecuniárias",
-          "trecho": "Juizado do Torcedor de Pernambuco financia projetos sociais com recursos de prestações pecuniárias",
-          "oficial": false,
+          "valor": "projetos sociais",
+          "trecho": "seleção para projetos sociais",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Juizado do Torcedor de Pernambuco",
-          "trecho": "Juizado do Torcedor de Pernambuco",
-          "oficial": false,
+          "valor": "Tutóia",
+          "trecho": "Tutóia divulga resultado de seleção para projetos sociais",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "assistencia_social",
-          "trecho": "Projetos sociais",
-          "oficial": false,
+          "trecho": "projetos sociais",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Juizado do Torcedor de Pernambuco",
+      "financiador": "Tutóia",
       "indicios": [],
       "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "financiador_ano"
       ]
     }
   ],
