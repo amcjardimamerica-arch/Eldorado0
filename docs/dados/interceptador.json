@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-06T17:06:30+00:00",
+  "em": "2026-11-06T17:16:55+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-06T16:54:37+00:00",
+  "ultimo_voo": "2026-11-06T17:08:34+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,89 +39,68 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 12,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 11.1
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 7.7
   },
   "missoes": [
     {
-      "em": "2026-11-06T16:54:37+00:00",
+      "em": "2026-11-06T17:08:34+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Instituto Porto abre edital de R$ 400 mil para OSCs da Grande São Paulo e Grande Belo Horizonte — Brasil",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "MINISTERIO PUBLICO DO ESTADO DO PARANA — Selecionar associação e/ou cooperativa de catadores de materiais reci… — Brasil",
+      "qualidade": "insuficiente",
+      "comprovados": 0,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
         "Requisitos",
         "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://alteditais.com.br/oportunidades/edital-01-fundo-osc-2026--2c762915-16f8-46b0-9f13-f4c683cf023d",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição, valor e território, o que permite identificar as condições gerais do chamamento público.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital até 2026-05-31, apresentar um projeto de desenvolvimento comunitário dentro do valor máximo de R$ 60.000,00 e atender aos critérios de elegibilidade não especificados no texto.",
-        "proximo_passo": "Verificar os requisitos e anexos do edital para garantir a conformidade do projeto e iniciar a preparação da proposta.",
-        "risco": "A falta de informações sobre requisitos e anexos pode impedir a associação de se qualificar adequadamente para o edital."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações comprovadas sobre o edital mencionado.",
+        "para_a_amc": null,
+        "proximo_passo": null,
+        "risco": null
       },
       "erro": null,
-      "segundos": 665,
+      "segundos": 462,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Requisitos, Anexos",
-      "id": "op-c2b74135bee5",
-      "encontrou": {
-        "Objeto": {
-          "valor": "desenvolvimento comunitário",
-          "trecho": "ÁreasDesenvolvimento Comunitário",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-04-03 a 2026-05-31",
-          "trecho": "Abertura03/04/2026 | PrazoEncerrado em 31/05/2026",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "Até R$ 60.000,00",
-          "trecho": "Faixa identificadaAté R$ 60.000,00",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Plataforma para Defesa e Fortalecimento das OSC (com execução da Cáritas Brasileira e cofinanciamento da União Europeia)",
-          "trecho": "FinanciadorPlataforma para Defesa e Fortalecimento das OSC (com execução da Cáritas Brasileira e cofinanciamento da União Europeia)",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "nacional",
-          "trecho": "Território elegívelNacional",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "Instituto Porto",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-f1ca705ce530",
+      "encontrou": {},
+      "financiador": "MINISTERIO PUBLICO DO ESTADO DO PARANA",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital"
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
