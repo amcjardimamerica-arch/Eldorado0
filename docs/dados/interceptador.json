@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-06T07:55:46+00:00",
+  "em": "2026-11-06T08:11:20+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-06T07:46:44+00:00",
+  "ultimo_voo": "2026-11-06T07:58:01+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,81 +48,66 @@
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.5
+    "tempo_medio_min": 12.5
   },
   "missoes": [
     {
-      "em": "2026-11-06T07:46:44+00:00",
+      "em": "2026-11-06T07:58:01+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Senador Canedo — Senador Canedo abre inscrições para o Projeto Guardiões Ambientais 2026 — Goiás / Senador Can… — Goiás / Senador Canedo",
-      "qualidade": "insuficiente",
-      "comprovados": 9,
-      "dispensados": 1,
+      "alvo": "Senador Canedo — Senador Canedo abre prazo para recursos da Lei Aldir Blanc — Goiás / Senador Canedo",
+      "qualidade": "parcial",
+      "comprovados": 6,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://senadorcanedo.go.gov.br/wp-content/uploads/2024/05/3o-Oitiva-Regiao-Central.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o Projeto Guardiões Ambientais 2026, que visa educação ambiental e cidadania para crianças e adolescentes, com inscrições até 2026-02-22, e requer matrícula na rede de ensino.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no projeto, comprovar matrícula na rede de ensino e apresentar os anexos exigidos.",
-        "proximo_passo": "Verificar os requisitos e anexos do edital e se inscrever no prazo estabelecido.",
-        "risco": "A falta de matrícula na rede de ensino ou a não apresentação dos anexos pode impedir o acesso ao edital."
+        "por_que": "O texto comprovado menciona o objeto da ação como fomentar a cultura em todos os estados, municípios e Distrito Federal, incluindo Goiás, o que é relevante para a associação comunitária de Goiânia.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando propostas relacionadas à cultura, como projetos de assistência social, cultura, educação ou esporte, conforme o objeto do edital.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre os requisitos e o processo de inscrição.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se inscrever no edital a tempo."
       },
       "erro": null,
-      "segundos": 508,
+      "segundos": 749,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-038d338df133",
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-5649ec4d88bb",
       "encontrou": {
         "Objeto": {
-          "valor": "educação ambiental e cidadania para crianças e adolescentes de 10 a 14 anos",
-          "trecho": "A iniciativa é voltada a crianças e adolescentes de 10 a 14 anos, matriculados na rede de ensino.",
-          "oficial": false,
+          "valor": "fomentar a cultura em todos os estados, municípios e Distrito Federal",
+          "trecho": "tem por objetivo fomentar a cultura em todos estados, municípios e Distrito Federal",
+          "oficial": true,
           "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "? a 2026-02-22",
-          "trecho": "As inscrições poderão ser feitas de até 22 de fevereiro",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "dispensado — O edital menciona apoio em espécie, sem valor em dinheiro.",
-          "trecho": "Estão sendo ofertadas 50 vagas",
-          "oficial": false,
-          "dispensado": true
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Senador Canedo",
-          "trecho": "A Prefeitura de Senador Canedo, por meio da Agência Municipal do Meio Ambiente (AMMA), da Secretaria Municipal de Assistência Social e Cidadania (SEMASC) e da Secretaria Municipal ",
-          "oficial": false,
+          "valor": "Comissão de Implementação da Política Nacional Aldir Blanc de Fomento à Cultura",
+          "trecho": "A Comissão de Implementação da Política Nacional Aldir Blanc de Fomento à Cultura",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Senador Canedo abre inscrições para o Projeto Guardiões Ambientais 2026 - Prefeitura Municipal de Senador Canedo",
-          "oficial": false,
+          "trecho": "tem por objetivo fomentar a cultura em todos estados, municípios e Distrito Federal",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "meio_ambiente",
-          "trecho": "educação ambiental e cidadania",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "matrícula na rede de ensino",
-          "trecho": "A iniciativa é voltada a crianças e adolescentes de 10 a 14 anos, matriculados na rede de ensino.",
-          "oficial": false,
+          "valor": "cultura",
+          "trecho": "tem por objetivo fomentar a cultura em todos estados, municípios e Distrito Federal",
+          "oficial": true,
           "dispensado": false
         }
       },
