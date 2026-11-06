@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-06T18:36:11+00:00",
+  "em": "2026-11-06T18:43:19+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-06T18:28:25+00:00",
+  "ultimo_voo": "2026-11-06T18:38:13+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,83 +44,63 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 13,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 7.2
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 4.5
   },
   "missoes": [
     {
-      "em": "2026-11-06T18:28:25+00:00",
+      "em": "2026-11-06T18:38:13+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Prêmio Açorianos de Dança 2026: 18 categorias abertas à cena de Porto Alegre, inscrições até 29 de novembro — Brasil",
+      "alvo": "TRIBUNAL REGIONAL ELEITORAL DO AMAZONAS — O presente procedimento tem por objeto selecionar as associações e/o… — Brasil",
       "qualidade": "insuficiente",
-      "comprovados": 4,
+      "comprovados": 0,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
         "Requisitos",
         "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://prefeitura.poa.br/taxonomy/term/10896",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital comprova que a Prefeitura de Porto Alegre oferece premiação para grupos e artistas da dança, o que pode ser relevante para a AMC se houver alinhamento com suas atividades culturais.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se suas atividades culturais se alinham com o objeto do edital e se há possibilidade de envolvimento com grupos de dança em Porto Alegre.",
-        "proximo_passo": "Consultar diretamente a Prefeitura de Porto Alegre para obter informações adicionais sobre o edital e verificar possíveis oportunidades de parceria ou envolvimento.",
-        "risco": "A falta de informações sobre prazo de inscrição, valor e requisitos pode impedir a participação efetiva da AMC no processo."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações suficientes para confirmar a existência do edital ou seus detalhes.",
+        "para_a_amc": null,
+        "proximo_passo": null,
+        "risco": null
       },
       "erro": null,
-      "segundos": 433,
+      "segundos": 273,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 4,
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-f777affcba4b",
-      "encontrou": {
-        "Objeto": {
-          "valor": "Premiação para grupos e artistas da dança",
-          "trecho": "Prêmio Açorianos de Dança | Prefeitura de Porto Alegre",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Prefeitura de Porto Alegre",
-          "trecho": "Prêmio Açorianos de Dança | Prefeitura de Porto Alegre",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "RS",
-          "trecho": "Prefeitura de Porto Alegre",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "Prefeitura de Porto Alegre",
-      "indicios": [
-        {
-          "url": "https://prefeitura.poa.br/smc/noticias/abertas-inscricoes-para-o-premio-acorianos-de-danca-2026",
-          "tipo": "noticia"
-        }
-      ],
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-4c282607bda1",
+      "encontrou": {},
+      "financiador": "TRIBUNAL REGIONAL ELEITORAL DO AMAZONAS",
+      "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano"
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
