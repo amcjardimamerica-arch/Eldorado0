@@ -1,5 +1,5 @@
 {
- "em": "2026-11-06T04:07:33+00:00",
+ "em": "2026-11-06T05:40:19+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,25 +7,21 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 52740
+  "exemplos_da_rede": 52820
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
-    "origem:rota original",
-    3.9648
+    "tok:feed",
+    3.7772
    ],
    [
-    "tok:feed",
-    3.8432
+    "origem:rota original",
+    3.6972
    ],
    [
     "tok:inscricoes",
     2.837
-   ],
-   [
-    "origem:biblioteca",
-    2.6277
    ],
    [
     "tok:secult",
@@ -33,7 +29,11 @@
    ],
    [
     "tok:deputados",
-    2.4031
+    2.4057
+   ],
+   [
+    "origem:biblioteca",
+    2.4006
    ],
    [
     "tok:imprensa",
@@ -42,10 +42,6 @@
    [
     "tok:aldirblanc",
     2.2331
-   ],
-   [
-    "tld:br",
-    2.0679
    ],
    [
     "tok:abre",
@@ -58,13 +54,13 @@
    [
     "tok:goias",
     1.7964
+   ],
+   [
+    "tok:projetos",
+    1.7558
    ]
   ],
   "piores_sinais": [
-   [
-    "tipo:site_oficial",
-    -2.3639
-   ],
    [
     "tok:pgt",
     -2.6437
@@ -74,12 +70,12 @@
     -2.7934
    ],
    [
-    "tok:2026",
-    -3.0767
+    "tipo:site_oficial",
+    -2.9476
    ],
    [
-    "origem:padrão",
-    -3.5254
+    "tok:2026",
+    -3.0767
    ],
    [
     "tok:content",
@@ -90,8 +86,12 @@
     -3.687
    ],
    [
+    "origem:padrão",
+    -3.8824
+   ],
+   [
     "origem:câmara",
-    -4.1274
+    -4.1794
    ]
   ]
  },
@@ -800,7 +800,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T18:56:25+00:00",
+    "em": "2026-11-06T05:40:05+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1088,7 +1088,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T18:56:40+00:00",
+    "em": "2026-11-06T05:40:19+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1115,7 +1115,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T17:21:12+00:00",
+    "em": "2026-11-06T05:39:47+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1618,10 +1618,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 4,
-    "aprendido_em": "2026-11-05T17:21:02+00:00"
+    "aprendido_em": "2026-11-06T05:39:40+00:00"
    },
    "afinado": {
-    "em": "2026-11-05T17:21:02+00:00",
+    "em": "2026-11-06T05:39:40+00:00",
     "testes": 13,
     "melhor": {
      "url": "https://www.iadb.org/sitemap.xml",
@@ -1700,11 +1700,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 18,
-    "aprendido_em": "2026-11-05T18:56:23+00:00"
+    "aprendido_em": "2026-11-06T05:40:02+00:00"
    },
    "afinado": {
-    "em": "2026-11-05T18:56:23+00:00",
-    "testes": 14,
+    "em": "2026-11-06T05:40:02+00:00",
+    "testes": 13,
     "melhor": {
      "url": "https://oakfnd.org/sitemap.xml",
      "via": "direto",
@@ -2011,17 +2011,17 @@
     ],
     "via": "direto",
     "origem": "rota original",
-    "pontos": 35,
-    "aprendido_em": "2026-11-05T17:20:42+00:00"
+    "pontos": 33,
+    "aprendido_em": "2026-11-06T05:39:31+00:00"
    },
    "afinado": {
-    "em": "2026-11-05T17:20:42+00:00",
+    "em": "2026-11-06T05:39:31+00:00",
     "testes": 17,
     "melhor": {
      "url": "https://portal.al.go.leg.br/",
      "via": "direto",
      "origem": "rota original",
-     "pontos": 35,
+     "pontos": 33,
      "formato": "html"
     },
     "resultado": "rota nova em teste"

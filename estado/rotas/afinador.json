@@ -1070,7 +1070,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-06T04:07:32+00:00",
+  "em": "2026-11-06T05:40:19+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1942,13 +1942,13 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "alego-pl": {
-  "em": "2026-11-05T17:20:42+00:00",
+  "em": "2026-11-06T05:39:31+00:00",
   "testes": 17,
   "melhor": {
    "url": "https://portal.al.go.leg.br/",
    "via": "direto",
    "origem": "rota original",
-   "pontos": 35,
+   "pontos": 33,
    "formato": "html"
   },
   "detalhe": [
@@ -1967,15 +1967,15 @@
     "url": "https://portal.al.go.leg.br/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 35,
+    "pontos": 33,
     "links": 261,
-    "sinais": 17,
+    "sinais": 16,
     "formato": "html",
     "erro": null,
     "funcionou": true
    },
    {
-    "url": "https://portal.al.go.leg.br/sitemap.xml",
+    "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -1985,13 +1985,33 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/sitemap.xml",
+    "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
     "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
     "funcionou": false
    },
    {
@@ -2011,32 +2031,12 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "URLError",
     "funcionou": false
    },
    {
     "url": "https://alegodigital.al.go.leg.br/feed",
     "origem": "câmara",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2081,7 +2081,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "URLError",
     "funcionou": false
    },
    {
@@ -2666,7 +2666,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-234": {
-  "em": "2026-11-05T18:56:25+00:00",
+  "em": "2026-11-06T05:40:05+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
@@ -2697,17 +2697,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -2722,6 +2713,17 @@
    },
    {
     "url": "https://www.institutounibanco.org.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -2747,7 +2749,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -2767,7 +2770,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -2787,7 +2791,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -2797,7 +2802,8 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    }
   ],
@@ -8191,7 +8197,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-255": {
-  "em": "2026-11-05T18:56:40+00:00",
+  "em": "2026-11-06T05:40:19+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8200,7 +8206,7 @@
     "origem": "rota original",
     "via": "direto",
     "pontos": 1,
-    "links": 103,
+    "links": 104,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -8214,17 +8220,6 @@
     "links": 10,
     "sinais": 0,
     "formato": "sitemap/feed",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "json",
     "erro": null,
     "funcionou": false
    },
@@ -8247,6 +8242,17 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -8323,7 +8329,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-259": {
-  "em": "2026-11-05T17:21:12+00:00",
+  "em": "2026-11-06T05:39:47+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8350,13 +8356,13 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://echoinggreen.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
-    "links": 0,
+    "links": 8,
     "sinais": 0,
-    "formato": "json",
+    "formato": "sitemap/feed",
     "erro": null,
     "funcionou": false
    },
@@ -8371,13 +8377,13 @@
     "funcionou": false
    },
    {
-    "url": "https://echoinggreen.org/sitemap.xml",
+    "url": "https://echoinggreen.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
-    "links": 8,
+    "links": 0,
     "sinais": 0,
-    "formato": "sitemap/feed",
+    "formato": "json",
     "erro": null,
     "funcionou": false
    },
@@ -8455,7 +8461,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-244": {
-  "em": "2026-11-05T17:21:02+00:00",
+  "em": "2026-11-06T05:39:40+00:00",
   "testes": 13,
   "melhor": {
    "url": "https://www.iadb.org/sitemap.xml",
@@ -8509,7 +8515,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.iadb.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8519,7 +8525,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/transparencia/editais",
+    "url": "https://www.iadb.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10777,8 +10783,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-260": {
-  "em": "2026-11-05T18:56:23+00:00",
-  "testes": 14,
+  "em": "2026-11-06T05:40:02+00:00",
+  "testes": 13,
   "melhor": {
    "url": "https://oakfnd.org/sitemap.xml",
    "via": "direto",
@@ -10832,17 +10838,6 @@
     "funcionou": false
    },
    {
-    "url": "https://oakfnd.org/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "json",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://oakfnd.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -10853,13 +10848,14 @@
     "funcionou": false
    },
    {
-    "url": "https://oakfnd.org/transparencia/editais",
+    "url": "https://oakfnd.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "formato": "json",
+    "erro": null,
     "funcionou": false
    },
    {
