@@ -1,5 +1,5 @@
 {
- "em": "2026-11-06T02:37:49+00:00",
+ "em": "2026-11-06T04:07:33+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,25 +7,25 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 52633
+  "exemplos_da_rede": 52740
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
-    "tok:feed",
-    3.5563
+    "origem:rota original",
+    3.9648
    ],
    [
-    "origem:rota original",
-    3.2221
+    "tok:feed",
+    3.8432
    ],
    [
     "tok:inscricoes",
-    2.8284
+    2.837
    ],
    [
     "origem:biblioteca",
-    2.5706
+    2.6277
    ],
    [
     "tok:secult",
@@ -41,11 +41,15 @@
    ],
    [
     "tok:aldirblanc",
-    2.1874
+    2.2331
+   ],
+   [
+    "tld:br",
+    2.0679
    ],
    [
     "tok:abre",
-    1.9622
+    1.9795
    ],
    [
     "tok:leipaulogustavo",
@@ -54,13 +58,13 @@
    [
     "tok:goias",
     1.7964
-   ],
-   [
-    "tok:projetos",
-    1.7498
    ]
   ],
   "piores_sinais": [
+   [
+    "tipo:site_oficial",
+    -2.3639
+   ],
    [
     "tok:pgt",
     -2.6437
@@ -71,7 +75,11 @@
    ],
    [
     "tok:2026",
-    -3.0742
+    -3.0767
+   ],
+   [
+    "origem:padrão",
+    -3.5254
    ],
    [
     "tok:content",
@@ -80,14 +88,6 @@
    [
     "tok:uploads",
     -3.687
-   ],
-   [
-    "tipo:site_oficial",
-    -3.7096
-   ],
-   [
-    "origem:padrão",
-    -4.0713
    ],
    [
     "origem:câmara",
@@ -529,7 +529,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T14:50:13+00:00",
+    "em": "2026-11-06T04:07:13+00:00",
     "testes": 14,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -631,7 +631,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T14:49:23+00:00",
+    "em": "2026-11-06T04:06:47+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -676,7 +676,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-05T14:49:32+00:00",
+    "em": "2026-11-06T04:06:51+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -723,10 +723,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 3,
-    "aprendido_em": "2026-11-05T14:49:56+00:00"
+    "aprendido_em": "2026-11-06T04:07:00+00:00"
    },
    "afinado": {
-    "em": "2026-11-05T14:49:56+00:00",
+    "em": "2026-11-06T04:07:00+00:00",
     "testes": 13,
     "melhor": {
      "url": "https://www.undp.org/pt/brazil",
@@ -1530,10 +1530,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 113,
-    "aprendido_em": "2026-11-05T14:50:59+00:00"
+    "aprendido_em": "2026-11-06T04:07:32+00:00"
    },
    "afinado": {
-    "em": "2026-11-05T14:50:59+00:00",
+    "em": "2026-11-06T04:07:32+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://senadorcanedo.go.gov.br/aldirblanc/",
@@ -1864,10 +1864,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 16,
-    "aprendido_em": "2026-11-05T14:50:26+00:00"
+    "aprendido_em": "2026-11-06T04:07:20+00:00"
    },
    "afinado": {
-    "em": "2026-11-05T14:50:26+00:00",
+    "em": "2026-11-06T04:07:20+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
@@ -3498,10 +3498,10 @@
    "nome": "Editais incentivados — sites das maiores contribuintes do ICMS de Goiás (destinação tributária)",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 51,
-   "ok": 43,
+   "leituras": 52,
+   "ok": 44,
    "ultima": {
-    "em": "2026-11-06T00:44:02+00:00",
+    "em": "2026-11-06T03:05:06+00:00",
     "classe": "ok",
     "motivo": ""
    },
