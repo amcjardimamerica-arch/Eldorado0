@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-06T10:45:16+00:00",
+  "em": "2026-11-06T11:00:02+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-06T10:27:54+00:00",
+  "ultimo_voo": "2026-11-06T10:47:21+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,17 +48,17 @@
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.6
+    "tempo_medio_min": 12.0
   },
   "missoes": [
     {
-      "em": "2026-11-06T10:27:54+00:00",
+      "em": "2026-11-06T10:47:21+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Tutóia — Tutóia divulga resultado de seleção para projetos sociais — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "[Portal de Compras Públicas] - Seleção de Propostas apresentadas pelas Organizações da Sociedade Civil de Plan… — Goiás / Planaltina",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -66,57 +66,56 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos"
+        "Área de atuação"
       ],
-      "pagina_oficial": "http://www.cnj.jus.br",
+      "pagina_oficial": "https://goias.gov.br/governo/wp-content/uploads/sites/11/2025/07/Edital-No-02-2025-SGG-CHAMAMENTO-PUBLICO-PARA-CREDENCIAMENTO.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona que a Tutóia divulga resultado de seleção para projetos sociais, o que indica que ela atua como uma fonte de fomento para organizações da sociedade civil.",
-        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria se inscrever em uma seleção de projetos sociais promovida pela Tutóia, apresentando um projeto alinhado à área de assistência social.",
-        "proximo_passo": "Consultar o edital da Tutóia para obter informações detalhadas sobre o processo seletivo e os requisitos necessários para inscrição.",
-        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se candidatar adequadamente."
+        "por_que": "O edital comprova a existência de um processo seletivo para credenciamento de empresas, o que pode ser uma fonte para associações comunitárias buscarem parcerias ou apoio.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria identificar empresas credenciadas ou se alinhar a projetos que envolvam conservação de energia ou engenharia qualificada, buscando parcerias ou financiamento.",
+        "proximo_passo": "Pesquisar os anexos mencionados para entender os requisitos detalhados e possíveis oportunidades de colaboração.",
+        "risco": "A falta de informações sobre prazos e resultados dificulta a previsão de oportunidades e ações específicas."
       },
       "erro": null,
-      "segundos": 993,
+      "segundos": 721,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 3,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-ac30ecfe738a",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-e2b154a00046",
       "encontrou": {
         "Objeto": {
-          "valor": "projetos sociais",
-          "trecho": "seleção para projetos sociais",
+          "valor": "credenciamento de Empresas de Serviços de Conservação de Energia (ESCOs) e empresas de engenharia qualificadas",
+          "trecho": "O presente Chamamento Público (202518037003161) tem por objeto o credenciamento de Empresas de Serviços de Conservação de Energia (ESCOs) e empresas de engenharia qualificadas",
           "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Tutóia",
-          "trecho": "Tutóia divulga resultado de seleção para projetos sociais",
+          "valor": "SECRETARIA-GERAL DE GOVERNO",
+          "trecho": "O Estado de Goiás, por meio da Secretaria-Geral de Governo – SGG",
           "oficial": true,
           "dispensado": false
         },
-        "Área de atuação": {
-          "valor": "assistencia_social",
-          "trecho": "projetos sociais",
+        "Território": {
+          "valor": "GO",
+          "trecho": "Os serviços das empresas credenciadas poderão ser requisitados para atender qualquer um dos órgãos públicos estaduais par(cid:415)cipantes",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "credenciamento de Empresas de Serviços de Conservação de Energia (ESCOs) e empresas de engenharia qualificadas",
+          "trecho": "O presente Chamamento Público (202518037003161) tem por objeto o credenciamento de Empresas de Serviços de Conservação de Energia (ESCOs) e empresas de engenharia qualificadas",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Tutóia",
+      "financiador": "Município de Planaltina - Estado de Goiás",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
