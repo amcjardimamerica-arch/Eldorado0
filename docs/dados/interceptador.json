@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-06T23:26:59+00:00",
+  "em": "2026-11-06T23:44:17+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-06T23:04:18+00:00",
+  "ultimo_voo": "2026-11-06T23:29:02+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,38 +43,99 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 14,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 22.0
+    "tempo_medio_min": 14.4
   },
   "missoes": [
     {
-      "em": "2026-11-06T23:04:18+00:00",
+      "em": "2026-11-06T23:29:02+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Edital PAPS – Fundação Salvador Arena — Brasil",
+      "alvo": "Edital Raízes: Fortalecendo Direitos, Autonomia e Sustentabilidade na Amazônia e no Cerrado — Brasil",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 9,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Resultado",
+        "Prazo de recurso"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 1320,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações detalhadas sobre objeto, prazo de inscrição, valor e requisitos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar uma proposta eletrônica voltada para o enfrentamento da crise climática e preservação da natureza, dentro do prazo de inscrição de 2026-07-15 a 2026-08-21, e anexar os documentos exigidos pelo Fundo Brasil de Direitos Humanos.",
+        "proximo_passo": "A associação deve acessar o formulário eletrônico do Fundo Brasil de Direitos Humanos e preencher a proposta conforme os requisitos do edital.",
+        "risco": "A falta de conhecimento sobre o edital ou a não apresentação da proposta dentro do prazo pode impedir o acesso ao financiamento."
+      },
+      "erro": null,
+      "segundos": 867,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-a5d9015eb79b",
-      "encontrou": {},
-      "financiador": null,
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-4d0ff23bb619",
+      "encontrou": {
+        "Objeto": {
+          "valor": "apoio na construção de soluções voltadas ao enfrentamento da crise climática e à preservação da vida, dos territórios e da natureza para as presentes e futuras gerações",
+          "trecho": "convidando grupos, coletivos e organizações de povos indígenas, quilombolas e comunidades tradicionais que atuam na defesa dos direitos territoriais, da justiça socioambiental e cl",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-07-15 a 2026-08-21",
+          "trecho": "O período de submissão de propostas vai de 15 de julho a 21 de agosto de 2026, até às 18h (horário de Brasília).",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "até R$ 2.580.000,00 em doações",
+          "trecho": "No total, serão apoiadas pelo menos 43 propostas, totalizando um investimento de até R$ 2.580.000,00 em doações, distribuídas em dois eixos de atuação detalhados ao longo deste edi",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Fundo Brasil de Direitos Humanos",
+          "trecho": "O Fundo Brasil compreende que fortalecer organizações de base significa reconhecer sua capacidade de definir prioridades, construir estratégias próprias e responder aos desafios vi",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "nacional",
+          "trecho": "É a partir desse reconhecimento que o Fundo Brasil de Direitos Humanos lança o Edital Raízes: Fortalecendo Direitos, Autonomia e Sustentabilidade na Amazônia e no Cerrado, convidan",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "direitos",
+          "trecho": "convidando grupos, coletivos e organizações de povos indígenas, quilombolas e comunidades tradicionais que atuam na defesa dos direitos territoriais, da justiça socioambiental e cl",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "apresentação de propostas por meio do formulário eletrônico disponibilizado pelo Fundo Brasil de Direitos Humanos",
+          "trecho": "As propostas poderão ser inscritas no período estabelecido no cronograma deste edital, exclusivamente por meio do formulário eletrônico disponibilizado pelo Fundo Brasil de Direito",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Fundo Brasil",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
+      ]
     }
   ],
   "contagem": {
