@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-06T12:51:14+00:00",
+  "em": "2026-11-06T13:10:25+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-06T12:35:58+00:00",
+  "ultimo_voo": "2026-11-06T12:53:00+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,84 +48,83 @@
     },
     "estrelas_de_ouro": 8,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.5
+    "tempo_medio_min": 16.5
   },
   "missoes": [
     {
-      "em": "2026-11-06T12:35:58+00:00",
+      "em": "2026-11-06T12:53:00+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Chamada Rio Doce Participativo — Projetos Estruturantes para o Desenvolvimento Territorial — Brasil",
-      "qualidade": "parcial",
-      "comprovados": 8,
-      "dispensados": 1,
+      "alvo": "Chamamento público publicado no Diário Oficial em 29/09/2026 — Brasil",
+      "qualidade": "insuficiente",
+      "comprovados": 6,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Requisitos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://www.bndes.gov.br/wps/portal/site/home/transparencia/fundos-governamentais/fundo-rio-doce/chamada-rio-doce-participativo",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, valor, financiadores, requisitos e área de atuação, permitindo uma análise completa do chamado.",
-        "para_a_amc": "Uma associação comunitária de Goiânia precisaria estar localizada em Minas Gerais ou Espírito Santo, ter pelo menos 2 anos de atuação no Eixo I ou 5 anos nos eixos I e II, e possuir experiência relevante na execução de projetos relacionados aos eixos contemplados.",
-        "proximo_passo": "Verificar se a associação comunitária atende aos requisitos de localização e experiência, e se inscrever no edital assim que o prazo de inscrição for divulgado.",
-        "risco": "A associação comunitária de Goiânia não está localizada em Minas Gerais ou Espírito Santo, o que a impede de participar do edital."
+        "por_que": "O chamamento público foi publicado no Diário Oficial em 29/09/2026 e tem objeto de fortalecer a arrecadação, na ampliação da conformidade fiscal e no uso estratégico de informações, com valor de R$ 59,1 milhões, financiado pela Prefeitura de Vitória, por meio da Secretaria Municipal da Fazenda, no Estado do Espírito Santo.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange sua área de atuação, que não está especificada, e se atende aos requisitos não encontrados no texto, além de se inscrever conforme o prazo não informado.",
+        "proximo_passo": "Consultar os anexos para obter detalhes sobre os requisitos e área de atuação, e se inscrever no prazo estabelecido.",
+        "risco": "O prazo de inscrição e os requisitos não foram encontrados, o que pode impedir a participação da associação."
       },
       "erro": null,
-      "segundos": 869,
+      "segundos": 992,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
-      "id": "op-4eb68fb92c1c",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-0fe6f0020400",
       "encontrou": {
         "Objeto": {
-          "valor": "Projetos estruturantes para o desenvolvimento territorial",
-          "trecho": "Projetos estruturantes para o desenvolvimento territorial",
-          "oficial": true,
+          "valor": "fortalecer a arrecadação, na ampliação da conformidade fiscal e no uso estratégico de informações",
+          "trecho": "com foco no fortalecimento da arrecadação, na ampliação da conformidade fiscal e no uso estratégico de informações",
+          "oficial": false,
           "dispensado": false
         },
         "Valor": {
-          "valor": "R$ 5 milhões e, no máximo, R$ 10 milhões",
-          "trecho": "A proposta deverá ser de, no mínimo, R$ 5 milhões e, no máximo, R$ 10 milhões",
-          "oficial": true,
+          "valor": "R$ 59,1 milhões",
+          "trecho": "envolvendo aproximadamente R$ 59,1 milhões",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "BNDES e a Secretaria-Geral da Presidência da República",
-          "trecho": "O BNDES e a Secretaria-Geral da Presidência da República tornam pública a chamada",
-          "oficial": true,
+          "valor": "Prefeitura de Vitória, por meio da Secretaria Municipal da Fazenda",
+          "trecho": "A Prefeitura de Vitória, por meio da Secretaria Municipal da Fazenda, avança em mais uma etapa do processo de modernização da gestão tributária",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "MG",
-          "trecho": "Estar localizada em Minas Gerais e Espírito Santo",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "dispensado — O edital é aberto apenas para entidades localizadas em Minas Gerais e Espírito Santo.",
-          "trecho": "Projetos estruturantes para o desenvolvimento territorial",
+          "valor": "ES",
+          "trecho": "Diário Oficial do Município de Vitória - ES 29 de setembro de 2026 - Edição nº 2976",
           "oficial": false,
-          "dispensado": true
-        },
-        "Requisitos": {
-          "valor": "Estar constituída há, pelo menos: 2 anos, para atuação no Eixo I; 5 anos, para atuação no Eixo II ou em ambos os eixos., Estar localizada em Minas Gerais e Espírito Santo., Ter experiência relevante na execução de projetos relacionados ao(s) eixo(s) contemplado(s) na proposta, e na temática d",
-          "trecho": "Estar constituída há, pelo menos: 2 anos, para atuação no Eixo I; 5 anos, para atuação no Eixo II ou em ambos os eixos. Estar localizada em Minas Gerais e Espírito Santo. Ter exper",
-          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "BNDES e Secretaria-Geral da Presidência da República",
-      "indicios": [],
+      "financiador": "Prefeitura de Vitória",
+      "indicios": [
+        {
+          "url": "https://data.queridodiario.ok.org.br/3205309/2026-09-29/e4e6dddf43137203fa04d96f0d35d05e72269004.pdf",
+          "tipo": "agregador"
+        }
+      ],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
