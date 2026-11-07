@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-11-07 13:17 UTC
+# Diagnóstico do sistema · 2026-11-07 13:19 UTC
 
 ## Cumprimento da finalidade · índice geral 57%
 - Motores: 77% (atencao) — todo motor ativo lê dentro da sua cadência
@@ -92,7 +92,7 @@
 
 ## Integração
 - contagens: {'repositorio_abertas': 197, 'diagnostico_abertas': 197, 'tela_cartoes': 224, 'fichas': 199, 'sala_controle_abertas': 197}
-- idade (h): {'repositorio': 0.0, 'fluxo': 489.4, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 6.1, 'rede_neural': 489.4, 'saude': 20.6}
+- idade (h): {'repositorio': 0.0, 'fluxo': 489.5, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 6.1, 'rede_neural': 489.5, 'saude': 20.6}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (31)
@@ -110,9 +110,9 @@
 - [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 15 dia(s) (361 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 197 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 489.4 h (limite 3 h) → refazer a tela
+- [media] fluxo sem atualização há 489.5 h (limite 3 h) → refazer a tela
 - [media] maestro sem atualização há 6.1 h (limite 3 h) → ver o fluxo que gera este dado
-- [media] rede_neural sem atualização há 489.4 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] rede_neural sem atualização há 489.5 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 129 de 130 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
 - [media] avaliação do Cartório com gabarito tem 545.4 h (semanal) → disparar o fluxo 39
 - [media] 55 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
