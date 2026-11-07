@@ -284,8 +284,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-196": {
-  "em": "2026-11-06T20:46:29+00:00",
-  "testes": 17,
+  "em": "2026-11-07T06:05:31+00:00",
+  "testes": 16,
   "melhor": {
    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
    "via": "direto",
@@ -338,13 +338,23 @@
     "funcionou": false
    },
    {
-    "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-se/destinacao-de-bens-e-valores/edital-prse-1-2025-chamamento-publico-destinacao-de-bens-e-valores-assinado.pdf/view",
-    "origem": "biblioteca",
-    "via": "ponte",
+    "url": "https://www.mpf.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "RuntimeError",
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mpt.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -370,7 +380,7 @@
     "funcionou": true
    },
    {
-    "url": "https://www.mpf.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.mpf.mp.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -380,7 +390,47 @@
     "funcionou": false
    },
    {
-    "url": "https://mpt.mp.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://mpt.mp.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.mpf.mp.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mpt.mp.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.mpf.mp.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://mpt.mp.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -408,56 +458,6 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.mpf.mp.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mpt.mp.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.mpf.mp.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mpt.mp.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.mpf.mp.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
     "funcionou": false
    }
   ],
@@ -1080,7 +1080,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-07T04:35:28+00:00",
+  "em": "2026-11-07T06:05:45+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -8997,7 +8997,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-254": {
-  "em": "2026-11-06T19:13:18+00:00",
+  "em": "2026-11-07T06:04:38+00:00",
   "testes": 13,
   "melhor": {
    "url": "https://www.globalfundforwomen.org/sitemap.xml",
@@ -9092,6 +9092,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.globalfundforwomen.org/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.globalfundforwomen.org/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -9103,16 +9113,6 @@
    },
    {
     "url": "https://www.globalfundforwomen.org/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.globalfundforwomen.org/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9694,7 +9694,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-241": {
-  "em": "2026-11-06T19:13:37+00:00",
+  "em": "2026-11-07T06:04:57+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.unicef.org/sitemap.xml",
@@ -9777,6 +9777,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.unicef.org/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.unicef.org/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -9788,16 +9798,6 @@
    },
    {
     "url": "https://www.unicef.org/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.unicef.org/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10087,7 +10087,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-247": {
-  "em": "2026-11-06T19:13:45+00:00",
+  "em": "2026-11-07T06:05:05+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
@@ -10170,6 +10170,16 @@
     "funcionou": false
    },
    {
+    "url": "https://international-partnerships.ec.europa.eu/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://international-partnerships.ec.europa.eu/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -10181,16 +10191,6 @@
    },
    {
     "url": "https://international-partnerships.ec.europa.eu/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://international-partnerships.ec.europa.eu/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11250,7 +11250,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-011": {
-  "em": "2026-11-06T19:14:29+00:00",
+  "em": "2026-11-07T06:05:20+00:00",
   "testes": 14,
   "melhor": {
    "url": "https://mariaemilia.org.br/feed",
@@ -11283,17 +11283,6 @@
     "funcionou": true
    },
    {
-    "url": "https://mariaemilia.org.br/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 9,
-    "links": 80,
-    "sinais": 4,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://mariaemilia.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -11303,6 +11292,17 @@
     "formato": "sitemap/feed",
     "erro": null,
     "funcionou": false
+   },
+   {
+    "url": "https://mariaemilia.org.br/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 9,
+    "links": 80,
+    "sinais": 4,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
    },
    {
     "url": "https://mariaemilia.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
@@ -11348,6 +11348,16 @@
     "funcionou": true
    },
    {
+    "url": "https://mariaemilia.org.br/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://mariaemilia.org.br/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -11359,16 +11369,6 @@
    },
    {
     "url": "https://mariaemilia.org.br/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://mariaemilia.org.br/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11530,7 +11530,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-www-detran-rj-gov-br": {
-  "em": "2026-11-06T20:46:38+00:00",
+  "em": "2026-11-07T06:05:45+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.detran.rj.gov.br/sitemap.xml",
@@ -11563,7 +11563,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.detran.rj.gov.br/feed",
+    "url": "https://www.detran.rj.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11573,7 +11573,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.detran.rj.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.detran.rj.gov.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -11613,6 +11613,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.detran.rj.gov.br/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.detran.rj.gov.br/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -11625,16 +11635,6 @@
    },
    {
     "url": "https://www.detran.rj.gov.br/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.detran.rj.gov.br/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
