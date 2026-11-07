@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T20:25:33+00:00",
+  "em": "2026-11-07T20:41:41+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T20:10:05+00:00",
+  "ultimo_voo": "2026-11-07T20:27:19+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,89 +38,102 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
+    "validadas": 1,
     "parciais": 0,
-    "insuficientes": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 14,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.8
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 13.6
   },
   "missoes": [
     {
-      "em": "2026-11-07T20:10:05+00:00",
+      "em": "2026-11-07T20:27:19+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "A AIPÊ – Aliança pela Inclusão Produtiva lança duas novas chamadas públicas. — Brasil",
-      "qualidade": "insuficiente",
-      "comprovados": 5,
-      "dispensados": 1,
+      "alvo": "A Agência do Bem abriu inscrições para o 6º Edital de Microprojetos - São Paulo da Rede do Bem. A oportunidade… — Brasil",
+      "qualidade": "validada",
+      "comprovados": 9,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Esfera",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://rededobem.org.br/editais/6-edital-de-microprojetos-sao-paulo/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que a AIPÊ lançou duas chamadas públicas para apoiar organizações sem fins lucrativos, especificando o objeto e o prazo de inscrição, que está encerrado.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ser uma organização sem fins lucrativos, atuando nas áreas de reciclagem, economia circular, agricultura e agroecologia urbanas ou energias renováveis, e seguir os requisitos mencionados no edital.",
-        "proximo_passo": "Verificar se a associação comunitária atende aos requisitos do edital e se há anexos a serem preenchidos para submissão.",
-        "risco": "O prazo de inscrição já encerrou, o que pode impedir a participação da associação comunitária nesse edital."
+        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, prazo de inscrição, resultado, valor, requisitos e anexos necessários para a participação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ser entidade legalmente constituída, dispor de CNPJ, ata de eleição de diretoria e estatuto atualizados, conta bancária institucional em operação, apresentar histórico consistente de atuação social, preencher correta e integralmente a ficha de inscrição e entregar a ficha de inscrição.",
+        "proximo_passo": "Verificar se a associação comunitária atende aos requisitos do edital e iniciar o processo de inscrição no prazo estabelecido.",
+        "risco": "A associação pode não atender aos requisitos legais ou não conseguir preencher corretamente a ficha de inscrição, o que impediria sua participação no edital."
       },
       "erro": null,
-      "segundos": 886,
+      "segundos": 813,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-91ac86f3457d",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 8,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-a96ccf0222d7",
       "encontrou": {
         "Objeto": {
-          "valor": "apoiar organizações sem fins lucrativos com o objetivo de aumentar a renda e postos de trabalho nas áreas de reciclagem, economia circular, agricultura e agroecologia urbanas e energias renováveis",
-          "trecho": "A chamada pública oferece apoio a organizações sem fins lucrativos com o objetivo de aumentar a renda e postos de trabalho nas áreas de reciclagem, economia circular, agricultura e",
-          "oficial": false,
+          "valor": "apoiar o trabalho social realizado pelas organizações da sociedade civil de São Paulo",
+          "trecho": "A Agência do Bem no intuito de apoiar o trabalho social realizado pelas organizações da sociedade civil de São Paulo,",
+          "oficial": true,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "dispensado — O texto menciona que as inscrições estão encerradas, indicando que o prazo de inscrição já terminou.",
-          "trecho": "INSCRIÇÕES ENCERRADAS",
-          "oficial": false,
-          "dispensado": true
+          "valor": "2026-07-22 a 2026-08-22",
+          "trecho": "Abertura das Inscrições 22/07/2026\nEncerramento das Inscrições 22/08/2026",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$3.000,00 (três mil reais) por microprojeto",
+          "trecho": "Serão selecionados dois microprojetos para receber o apoio financeiro de até R$3.000,00 (três mil reais) por microprojeto.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Agência do Bem",
+          "trecho": "A Agência do Bem no intuito de apoiar o trabalho social realizado pelas organizações da sociedade civil de São Paulo,",
+          "oficial": true,
+          "dispensado": false
         },
         "Território": {
-          "valor": "BR",
-          "trecho": "A chamada pública oferece apoio a organizações sem fins lucrativos com o objetivo de aumentar a renda e postos de trabalho nas áreas de reciclagem, economia circular, agricultura e",
-          "oficial": false,
+          "valor": "SP",
+          "trecho": "Atuar na Região Metropolitana do São Paulo, especificamente nos municípios: São Paulo, Guarulhos, Diadema,",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "organizações sem fins lucrativos",
-          "trecho": "A chamada pública oferece apoio a organizações sem fins lucrativos com o objetivo de aumentar a renda e postos de trabalho nas áreas de reciclagem, economia circular, agricultura e",
-          "oficial": false,
+          "valor": "Ser entidade legalmente constituída;, Dispor de CNPJ, Ata de Eleição de Diretoria e Estatuto atualizados;, Dispor de Conta Bancária institucional em operação;, Apresentar histórico consistente de atuação social;, Preencher correta e integralmente a Ficha de Inscrição;, Entregar a Ficha de Inscrição ",
+          "trecho": "- Ser entidade legalmente constituída;\n- Dispor de CNPJ, Ata de Eleição de Diretoria e Estatuto atualizados;\n- Dispor de Conta Bancária institucional em operação;\n- Apresentar hist",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "AIPÊ - Aliança pela Inclusão Produtiva",
-      "indicios": [],
+      "financiador": "Rede do Bem",
+      "indicios": [
+        {
+          "url": "https://duckduckgo.com/l?uddg=https%3A%2F%2Fcaptadores.org.br%2Fcategory%2Feditais%2F&rut=bff0d329b1fc035b9fae4019df7f64725b06759560072091961f3fad79655276",
+          "tipo": "buscador"
+        }
+      ],
       "rotas": [
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
         "financiador_ano",
         "governo",
-        "programa_puro"
+        "parceiro"
       ]
     }
   ],
