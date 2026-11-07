@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T19:23:06+00:00",
+  "em": "2026-11-07T19:37:53+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T19:11:57+00:00",
+  "ultimo_voo": "2026-11-07T19:25:09+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,59 +48,78 @@
     },
     "estrelas_de_ouro": 14,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.3
+    "tempo_medio_min": 12.1
   },
   "missoes": [
     {
-      "em": "2026-11-07T19:11:57+00:00",
+      "em": "2026-11-07T19:25:09+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "/05 - Edital Nº 07/2026 - Processo seletivo para a equipe de Robótica JaguaRS - RESULTADO FINAL (209 Downloads… — Brasil",
+      "alvo": "/09 - Edital Nº 12/2025 - Seleção de Projetos de Ensino com Fomento (467 Downloads) — Brasil",
       "qualidade": "insuficiente",
-      "comprovados": 5,
-      "dispensados": 0,
+      "comprovados": 10,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Prazo de recurso",
-        "Valor",
-        "Território",
-        "Requisitos",
-        "Área de atuação"
+        "Valor"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "nao",
-        "por_que": "O edital não fornece informações sobre prazo de inscrição, valor, requisitos ou área de atuação, sendo insuficiente para a associação comunitária de Goiânia se candidatar.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há alinhamento entre o objeto do edital (seleção de estudantes para equipe de robótica) e suas atividades, além de buscar parcerias ou apoio para envolver estudantes em projetos de robótica.",
-        "proximo_passo": "Pesquisar se há outros editais alinhados com as atividades da associação comunitária de Goiânia ou buscar parcerias para desenvolver projetos de robótica.",
-        "risco": "A falta de informações sobre prazo, requisitos e área de atuação pode impedir a associação de se candidatar ou participar do edital."
+        "por_que": "O edital não fornece informações sobre o valor do fomento, o que é essencial para a associação comunitária de Goiânia planejar sua candidatura.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital se aplica a sua área de atuação (assistência social, cultura, educação, esporte) e se atende aos requisitos de envolvimento de discentes, embora o edital seja voltado para o Instituto Federal de Educação, Ciência e Tecnologia Sul-Rio-Grandense (IFSul)/Câmpus Gravataí.",
+        "proximo_passo": "Consultar diretamente o edital para confirmar se a área de atuação da associação comunitária de Goiânia está alinhada com o objeto do edital e se há possibilidade de participação.",
+        "risco": "O edital é voltado para projetos de ensino no Instituto Federal de Educação, Ciência e Tecnologia Sul-Rio-Grandense (IFSul)/Câmpus Gravataí, o que pode impedir que a associação comunitária de Goiânia participe."
       },
       "erro": null,
-      "segundos": 620,
+      "segundos": 725,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-526e88e61900",
+      "id": "op-41b266a2164b",
       "encontrou": {
         "Objeto": {
-          "valor": "Seleção de estudantes para participação em equipe de robótica de competição JaguaRS",
-          "trecho": "Edital nº 07/2026 - Seleção de estudantes para participação em equipe de robótica de competição JaguaRS - FTC 31200",
+          "valor": "selecionar projetos de ensino para fomento a serem executados no Laboratório de Prototipagem IFMaker Gravataí",
+          "trecho": "O presente edital tem por objetivo selecionar projetos de ensino com fomento a serem executados prioritariamente no Laboratório de Prototipagem IFMaker Gravataí",
           "oficial": false,
           "dispensado": false
         },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O edital dispensa o prazo de inscrição, pois o período de submissões dos Projetos de Ensino é explicitamente definido.",
+          "trecho": "Período de submissões dos Projetos de Ensino via SUAP 08/09 a 14/09/2025 [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
+        },
         "Órgão / financiador": {
-          "valor": "Instituto Federal Sul-rio-grandense – Câmpus Gravataí",
-          "trecho": "O Laboratório de Prototipagem IFMaker do Instituto Federal Sul-rio-grandense – Câmpus Gravataí torna público o resultado final do processo seletivo para a Equipe de Robótica JaguaR",
+          "valor": "Instituto Federal de Educação, Ciência e Tecnologia Sul-Rio-Grandense (IFSul)/Câmpus Gravataí",
+          "trecho": "O Instituto Federal de Educação, Ciência e Tecnologia Sul-rio-grandense (IFSul)/Câmpus Gravataí, torna pública a realização de processo de seleção de projetos de ensino para foment",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "RS",
+          "trecho": "Câmpus Gravataí",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "educacao",
+          "trecho": "selecionar projetos de ensino para fomento a serem executados no Laboratório de Prototipagem IFMaker Gravataí",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "O envolvimento de discentes do Câmpus nos projetos de ensino é OBRIGATÓRIO.",
+          "trecho": "O envolvimento de discentes do Câmpus nos projetos de ensino é OBRIGATÓRIO.",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Instituto Federal Sul-rio-grandense – Câmpus Gravataí",
+      "financiador": "INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA SUL-RIO-GRANDENSE",
       "indicios": [],
       "rotas": [
         "financiador_programa_edital",
