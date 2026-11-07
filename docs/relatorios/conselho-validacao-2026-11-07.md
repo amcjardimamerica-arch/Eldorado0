@@ -200,7 +200,7 @@
  "pontos_com_redundancia": 19,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 54566
+ "exemplos_da_rede_de_rotas": 54647
 }
 ```
 
@@ -246,7 +246,7 @@
  "dia_de_referencia": "2026-11-07",
  "ativos": 172,
  "lidos_ontem": 19,
- "lidos_hoje": 0,
+ "lidos_hoje": 22,
  "nao_lidos_ontem_nem_hoje": [
   "f260-captacao-018",
   "f260-captacao-025",
@@ -256,7 +256,6 @@
   "f260-captacao-039",
   "f260-captacao-041",
   "f260-captacao-044",
-  "f260-captacao-051",
   "f260-captacao-060",
   "f260-captacao-068",
   "f260-captacao-069",
@@ -266,7 +265,6 @@
   "f260-captacao-095",
   "f260-captacao-098",
   "f260-captacao-107",
-  "f260-captacao-113",
   "f260-captacao-118",
   "f260-captacao-119",
   "f260-captacao-134",
@@ -287,7 +285,9 @@
   "f260-captacao-206",
   "f260-captacao-207",
   "f260-captacao-208",
-  "f260-captacao-212"
+  "f260-captacao-212",
+  "f260-captacao-216",
+  "f260-captacao-217"
  ],
  "ainda_sem_primeira_leitura": [
   "motor-gife",
@@ -345,28 +345,28 @@
  },
  "clones_que_ja_leram": {
   "outras-oportunidades-1": {
-   "ultima": "2026-11-06T14:33:56+00:00",
-   "duracao_s": 65,
-   "achados": 35
+   "ultima": "2026-11-07T13:18:31+00:00",
+   "duracao_s": 54,
+   "achados": 47
   },
   "outras-oportunidades-3": {
-   "ultima": "2026-11-06T14:36:29+00:00",
-   "duracao_s": 63,
+   "ultima": "2026-11-07T13:21:06+00:00",
+   "duracao_s": 73,
    "achados": 0
   },
   "outras-oportunidades-4": {
-   "ultima": "2026-11-06T14:37:48+00:00",
-   "duracao_s": 79,
-   "achados": 5
+   "ultima": "2026-11-07T13:22:22+00:00",
+   "duracao_s": 76,
+   "achados": 6
   },
   "outras-oportunidades-5": {
-   "ultima": "2026-11-06T14:40:08+00:00",
-   "duracao_s": 139,
+   "ultima": "2026-11-07T13:24:15+00:00",
+   "duracao_s": 113,
    "achados": 2
   },
   "outras-oportunidades-6": {
-   "ultima": "2026-11-06T14:41:51+00:00",
-   "duracao_s": 103,
+   "ultima": "2026-11-07T13:26:25+00:00",
+   "duracao_s": 130,
    "achados": 15
   },
   "outras-oportunidades-7": {
@@ -375,14 +375,14 @@
    "achados": 8
   },
   "outras-oportunidades-8": {
-   "ultima": "2026-11-06T14:43:04+00:00",
-   "duracao_s": 73,
-   "achados": 9
+   "ultima": "2026-11-07T13:27:18+00:00",
+   "duracao_s": 53,
+   "achados": 2
   },
   "outras-oportunidades-2": {
-   "ultima": "2026-11-06T14:35:26+00:00",
-   "duracao_s": 89,
-   "achados": 3
+   "ultima": "2026-11-07T13:19:53+00:00",
+   "duracao_s": 82,
+   "achados": 1
   }
  },
  "com_achado": 73

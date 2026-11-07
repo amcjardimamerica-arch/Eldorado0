@@ -1080,7 +1080,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-07T13:46:23+00:00",
+  "em": "2026-11-07T15:20:37+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -4889,8 +4889,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-242": {
-  "em": "2026-11-07T03:07:52+00:00",
-  "testes": 12,
+  "em": "2026-11-07T15:19:49+00:00",
+  "testes": 13,
   "melhor": {
    "url": "https://www.undp.org/pt/brazil",
    "via": "direto",
@@ -4922,6 +4922,26 @@
     "funcionou": false
    },
    {
+    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.undp.org/feed",
     "origem": "padrão",
     "via": "direto",
@@ -4933,16 +4953,6 @@
    },
    {
     "url": "https://www.undp.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.undp.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4972,6 +4982,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.undp.org/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.undp.org/noticias",
     "origem": "padrão",
     "via": "direto",
@@ -4983,16 +5003,6 @@
    },
    {
     "url": "https://www.undp.org/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.undp.org/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -5579,7 +5589,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-espalhado-senadorcanedo-go-gov-br": {
-  "em": "2026-11-07T03:08:23+00:00",
+  "em": "2026-11-07T15:20:13+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://senadorcanedo.go.gov.br/aldirblanc/",
@@ -5615,11 +5625,12 @@
     "url": "https://senadorcanedo.go.gov.br/senador-canedo-abre-credenciamento-para-artistas-locais-do-canedo-fest-show-2026/",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
+    "pontos": 7,
+    "links": 62,
+    "sinais": 3,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
    },
    {
     "url": "https://senadorcanedo.go.gov.br/senador-canedo-abre-credenciamento-para-artistas-locais",
@@ -5644,24 +5655,37 @@
     "funcionou": true
    },
    {
-    "url": "https://senadorcanedo.go.gov.br/senador-canedo-divulga-edital-de-apoio-a-projetos-para-a-pessoa-idosa/",
+    "url": "https://senadorcanedo.go.gov.br/inscricoes-da-2a-chamada-da-lei-aldir-blanc-comecam-nesta-quinta-feira-em-senador-canedo/",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
+    "pontos": 5,
+    "links": 61,
+    "sinais": 2,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://senadorcanedo.go.gov.br/semasc-abre-chamamento-publico-para-selecao-de-projetos-voltados-a-protecao-de-criancas-e-adolescentes/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 11,
+    "links": 60,
+    "sinais": 5,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
    },
    {
     "url": "https://senadorcanedo.go.gov.br/prefeitura-de-senador-canedo-lanca-edital-aldir-blanc-2026",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
+    "pontos": 5,
+    "links": 60,
+    "sinais": 2,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
    },
    {
     "url": "https://senadorcanedo.go.gov.br/prefeitura-de-senador-canedo-lanca-edital-aldir-blanc-2026/",
@@ -5686,17 +5710,6 @@
     "funcionou": true
    },
    {
-    "url": "https://senadorcanedo.go.gov.br/inscricoes-da-2a-chamada-da-lei-aldir-blanc-comecam-nesta-quinta-feira-em-senador-canedo/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 5,
-    "links": 61,
-    "sinais": 2,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://senadorcanedo.go.gov.br/senador-canedo-pode-participar-do-edital-fundos-da-infancia-e-da-adolescencia-2025/",
     "origem": "biblioteca",
     "via": "direto",
@@ -5708,32 +5721,12 @@
     "funcionou": true
    },
    {
-    "url": "https://senadorcanedo.go.gov.br/prefeitura-promove-ii-seminario-criterios-para-inscricao-no-cmas-e-captacao-de-recursos/",
+    "url": "https://senadorcanedo.go.gov.br/senador-canedo-divulga-edital-de-apoio-a-projetos-para-a-pessoa-idosa/",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://senadorcanedo.go.gov.br/senador-canedo-lanca-projeto-embaixador-do-turismo/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://senadorcanedo.go.gov.br/semasc-abre-chamamento-publico-para-selecao-de-projetos-voltados-a-protecao-de-criancas-e-adolescentes/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 11,
-    "links": 60,
-    "sinais": 5,
+    "pontos": 5,
+    "links": 61,
+    "sinais": 2,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -5745,6 +5738,28 @@
     "pontos": 113,
     "links": 217,
     "sinais": 56,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://senadorcanedo.go.gov.br/prefeitura-promove-ii-seminario-criterios-para-inscricao-no-cmas-e-captacao-de-recursos/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 5,
+    "links": 60,
+    "sinais": 2,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://senadorcanedo.go.gov.br/senador-canedo-lanca-projeto-embaixador-do-turismo/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 7,
+    "links": 64,
+    "sinais": 3,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -8909,7 +8924,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-250": {
-  "em": "2026-11-07T04:35:28+00:00",
+  "em": "2026-11-07T15:20:18+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.gatesfoundation.org/sitemap.xml",
@@ -8942,7 +8957,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.gatesfoundation.org/feed",
+    "url": "https://www.gatesfoundation.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8952,7 +8967,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.gatesfoundation.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.gatesfoundation.org/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8972,7 +8987,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.gatesfoundation.org/edital",
+    "url": "https://www.gatesfoundation.org/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8982,7 +8997,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.gatesfoundation.org/editais",
+    "url": "https://www.gatesfoundation.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9045,8 +9060,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-254": {
-  "em": "2026-11-07T06:04:38+00:00",
-  "testes": 13,
+  "em": "2026-11-07T15:20:22+00:00",
+  "testes": 12,
   "melhor": {
    "url": "https://www.globalfundforwomen.org/sitemap.xml",
    "via": "direto",
@@ -9078,17 +9093,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.globalfundforwomen.org/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 1,
-    "links": 10,
-    "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.globalfundforwomen.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -9100,27 +9104,18 @@
     "funcionou": false
    },
    {
-    "url": "https://www.globalfundforwomen.org/transparencia/editais",
+    "url": "https://www.globalfundforwomen.org/feed",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
+    "pontos": 1,
+    "links": 10,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "sitemap/feed",
+    "erro": null,
     "funcionou": false
    },
    {
     "url": "https://www.globalfundforwomen.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.globalfundforwomen.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9131,6 +9126,16 @@
    },
    {
     "url": "https://www.globalfundforwomen.org/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.globalfundforwomen.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9742,7 +9747,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-241": {
-  "em": "2026-11-07T06:04:57+00:00",
+  "em": "2026-11-07T15:20:37+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.unicef.org/sitemap.xml",
@@ -9805,7 +9810,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/edital",
+    "url": "https://www.unicef.org/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9815,7 +9820,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unicef.org/editais",
+    "url": "https://www.unicef.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10455,7 +10460,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-003": {
-  "em": "2026-11-07T03:08:01+00:00",
+  "em": "2026-11-07T15:19:58+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
@@ -10509,6 +10514,16 @@
     "funcionou": false
    },
    {
+    "url": "https://editais.movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://movimentobemmaior.org.br/feed",
     "origem": "padrão",
     "via": "direto",
@@ -10541,16 +10556,6 @@
    },
    {
     "url": "https://editais.movimentobemmaior.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://editais.movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10601,27 +10606,27 @@
     "funcionou": false
    },
    {
+    "url": "https://movimentobemmaior.org.br/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://editais.movimentobemmaior.org.br/chamamento-publico",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://movimentobemmaior.org.br/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://editais.movimentobemmaior.org.br/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://movimentobemmaior.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,

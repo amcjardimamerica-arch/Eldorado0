@@ -1,5 +1,5 @@
 {
- "em": "2026-11-07T13:42:33+00:00",
+ "em": "2026-11-07T15:19:35+00:00",
  "conselho": [
   {
    "id": "falso_verde",
@@ -46,12 +46,13 @@
  ],
  "resumo": {
   "motores": 165,
-  "motores_com_falha": 128,
+  "motores_com_falha": 129,
   "falhas_por_tipo": {
    "CUSTO SEM RETORNO": 2,
    "RUÍDO": 23,
+   "ESTRANGULADO": 1,
    "CEGO": 58,
-   "SILÊNCIO LONGO": 41,
+   "SILÊNCIO LONGO": 42,
    "PÁGINA VAZIA": 9,
    "INTERMITENTE": 4,
    "VAZAMENTO": 33,
@@ -310,14 +311,14 @@
    "tipo": "diario_oficial",
    "saude": [
     {
-     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261105_000008897.pdf",
+     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261106_000008898.pdf",
      "http": 200,
-     "bytes": 337893
+     "bytes": 347295
     },
     {
-     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261105_000008897.pdf",
+     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261106_000008898.pdf",
      "http": 200,
-     "bytes": 324612
+     "bytes": 331658
     }
    ],
    "achados_total": 2,
@@ -332,7 +333,7 @@
     {
      "conselheiro": "redundancia",
      "falha": "CUSTO SEM RETORNO",
-     "prova": "227 s na última leitura sem achado",
+     "prova": "368 s na última leitura sem achado",
      "melhoria": "reduzir páginas por leitura ou a cadência; transferir o tempo para motores que rendem"
     }
    ]
@@ -344,12 +345,12 @@
     {
      "url": "https://diariooficial.abc.go.gov.br",
      "http": 200,
-     "bytes": 209
+     "bytes": 195
     }
    ],
    "achados_total": 33,
    "valor": "ruído",
-   "achados_30d": 70,
+   "achados_30d": 65,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -369,25 +370,31 @@
    "tipo": "diario_oficial",
    "saude": [
     {
-     "url": "https://www.in.gov.br/leiturajornal?data=06-11-2026&secao=do1",
+     "url": "https://www.in.gov.br/leiturajornal?data=07-11-2026&secao=do1",
      "http": 200,
      "bytes": 0
     },
     {
-     "url": "https://www.in.gov.br/leiturajornal?data=06-11-2026&secao=do3",
+     "url": "https://www.in.gov.br/leiturajornal?data=07-11-2026&secao=do3",
      "http": 200,
      "bytes": 0
     }
    ],
    "achados_total": 35,
    "valor": "ruído",
-   "achados_30d": 13,
+   "achados_30d": 12,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "terça"
+    "dia_forte": "quinta"
    },
    "falhas": [
+    {
+     "conselheiro": "falso_verde",
+     "falha": "ESTRANGULADO",
+     "prova": "viu 5700 links e nenhum virou candidato",
+     "melhoria": "o filtro de candidatos está estreito demais: incluir termos de chamamento/edital da fonte e seguir PDFs"
+    },
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
@@ -403,7 +410,7 @@
     {
      "url": "https://portal.al.go.leg.br/",
      "http": 200,
-     "bytes": 133854
+     "bytes": 133791
     },
     {
      "url": "https://portal.al.go.leg.br/credenciamento-imprensa",
@@ -429,7 +436,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "103 leituras vazias seguidas",
+     "prova": "104 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -438,12 +445,6 @@
    "nome": "Câmara Municipal de Goiânia — projetos de lei",
    "tipo": "legislativo",
    "saude": [
-    {
-     "url": "https://www.goiania.go.leg.br",
-     "http": 200,
-     "bytes": 218467,
-     "itens": 0
-    },
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
@@ -469,7 +470,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "151 leituras vazias seguidas",
+     "prova": "152 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -534,7 +535,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "96 leituras vazias seguidas",
+     "prova": "97 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -684,7 +685,7 @@
    ],
    "achados_total": 5,
    "valor": "ouro",
-   "achados_30d": 33,
+   "achados_30d": 32,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -827,21 +828,21 @@
     {
      "url": "https://goias.gov.br/esporte/",
      "http": 200,
-     "bytes": 175763
+     "bytes": 174218
     },
     {
      "url": "https://goias.gov.br/esporte/solicitacao-de-transporte",
      "http": 200,
-     "bytes": 132117
+     "bytes": 132071
     }
    ],
    "achados_total": 6,
    "valor": "baixo volume",
-   "achados_30d": 81,
+   "achados_30d": 69,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "segunda"
+    "dia_forte": "sábado"
    },
    "falhas": [
     {
@@ -1974,7 +1975,7 @@
     {
      "url": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
      "http": 200,
-     "bytes": 168710
+     "bytes": 166532
     }
    ],
    "achados_total": 134,
@@ -1989,7 +1990,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 20 dias",
+     "prova": "o mesmo achado repetido em 21 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     },
     {
@@ -2295,19 +2296,18 @@
    "saude": [
     {
      "url": "https://api.salic.cultura.gov.br/api/v1/projetos/?UF=GO&ano_projeto=26&limit=100&offset=0&format=json",
-     "erro": "salic_api",
-     "code": null,
-     "waf": null,
-     "causa": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+     "http": 200,
+     "bytes": 0,
+     "itens": 157
     }
    ],
    "achados_total": 5,
    "valor": "ouro",
-   "achados_30d": 91,
+   "achados_30d": 81,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "segunda"
+    "dia_forte": "sábado"
    },
    "falhas": [
     {
@@ -2456,19 +2456,19 @@
    "tipo": "plataforma",
    "saude": [
     {
-     "url": "https://html.duckduckgo.com/html/?q=edital+organiza%C3%A7%C3%B5es+da+sociedade+civil+2026",
+     "url": "https://institutosocialcrescervida.blogspot.com/2026/08/editais-abertos-para-instituicoes.html",
      "http": 200,
-     "bytes": 37409
+     "bytes": 279613
     },
     {
-     "url": "https://html.duckduckgo.com/html/?q=",
+     "url": "https://html.duckduckgo.com/html/?q=edital+organiza%C3%A7%C3%B5es+da+sociedade+civil+2026",
      "http": 200,
-     "bytes": 3108
+     "bytes": 37291
     }
    ],
-   "achados_total": 265,
+   "achados_total": 281,
    "valor": "ouro",
-   "achados_30d": 617,
+   "achados_30d": 589,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -2478,7 +2478,7 @@
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "265 achados e nenhuma oportunidade confirmada",
+     "prova": "281 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -2531,7 +2531,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "42 leituras vazias seguidas",
+     "prova": "43 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -2543,7 +2543,7 @@
     {
      "url": "https://www.congressonacional.leg.br",
      "http": 200,
-     "bytes": 160164,
+     "bytes": 160633,
      "itens": 11
     },
     {
@@ -4053,7 +4053,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "82 leituras vazias seguidas",
+     "prova": "83 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -4486,29 +4486,29 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://corrivus.com.br/santa-catarina/itajai/concurso-itajai-em-tracos-inscricoes-gratuitas",
+     "url": "https://unaids.org.br/desafiounaids",
      "http": 200,
-     "bytes": 36984
+     "bytes": 96639
     },
     {
-     "url": "https://bllcompras.com/Process/ProcessView (processo da Prefeitura de Olindina, link do lote)",
+     "url": "http://editalfomento.com.br/edital/programa-eleve-2026-mulheres-que-elevam-mulheres",
      "http": 200,
-     "bytes": 983
+     "bytes": 34680
     }
    ],
-   "achados_total": 189,
+   "achados_total": 195,
    "valor": "ouro",
-   "achados_30d": 11,
+   "achados_30d": 17,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "terça"
+    "dia_forte": "sábado"
    },
    "falhas": [
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "189 achados e nenhuma oportunidade confirmada",
+     "prova": "195 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -4518,14 +4518,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://toledocf.org/grant-opportunities/",
+     "url": "https://www.institutovotorantim.org.br/",
      "http": 200,
-     "bytes": 51265
+     "bytes": 31327
     },
     {
-     "url": "https://funding.nationalgeographic.org/s/fundingopportunity/119Hr000000byRrIAI/understanding-ecosystem-dynamics-ecology-of-the-okavango-river-basin",
+     "url": "https://facepevirtual.org.br/facepe/selecao-publica",
      "http": 200,
-     "bytes": 1832
+     "bytes": 155644
     }
    ],
    "achados_total": 25,
@@ -4550,14 +4550,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
+     "url": "https://blog.bondinho.com.br/parque-bondinho-pao-de-acucar-abre-inscricoes-para-o-edital-2026-de-selecao-de-projetos-culturais/",
+     "http": 200,
+     "bytes": 168290
+    },
+    {
      "url": "https://app2.ammlicita.org.br/pesquisa/35376",
      "http": 200,
      "bytes": 1960
-    },
-    {
-     "url": "https://resartis.org/open-call/2027-a4-residency-art-center-international-residency-program-launch/",
-     "http": 200,
-     "bytes": 324578
     }
    ],
    "achados_total": 81,
@@ -4588,14 +4588,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "http://www.editalcorredor2025.com.br",
-     "http": 200,
-     "bytes": 28456
-    },
-    {
      "url": "https://editalmulheresnegras.fbb.org.br/",
      "http": 200,
      "bytes": 75125
+    },
+    {
+     "url": "https://www.cjrfund.org/",
+     "http": 200,
+     "bytes": 212417
     }
    ],
    "achados_total": 73,
@@ -4625,9 +4625,9 @@
      "bytes": 218101
     },
     {
-     "url": "https://s3.glbimg.com/v1/AUTH_181ecc4c353545aaa3c24808d6e5977d/somos-globo/[Pr%C3%AAmio%20LED%202027]%20Regulamento_VF.2%20-prorroga%C3%A7%C3%A3o.docx.pdf",
+     "url": "https://oei.int/pt/escritorios/portugal/programa/laczos-artisticos-chamada-especial-cplp/",
      "http": 200,
-     "bytes": 360654
+     "bytes": 294451
     }
    ],
    "achados_total": 46,
@@ -4767,9 +4767,9 @@
      "bytes": 169715
     },
     {
-     "url": "https://doare.org/glossario/matching",
+     "url": "https://brazilfoundation.org/edital-2023-fundo-de-equidade-de-genero/",
      "http": 200,
-     "bytes": 90825
+     "bytes": 226631
     }
    ],
    "achados_total": 39,
@@ -4800,14 +4800,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.saude.mg.gov.br/transparencia/",
+     "url": "https://goiatuba.go.gov.br/prefeitura-de-goiatuba-publica-edital-para-selecao-de-projetos-culturais-com-recursos-da-pnab-ciclo-2/",
      "http": 200,
-     "bytes": 394759
+     "bytes": 257932
     },
     {
-     "url": "https://enap.gov.br/educacao-e-capacitacao/programa-de-aperfeicoamento-para-carreiras/premios/concurso-premio-mdhc/",
+     "url": "https://senadorcanedo.go.gov.br/senador-canedo-lanca-edital-aldir-blanc-2026-com-r-380-mil-destinado-a-projetos-culturais/",
      "http": 200,
-     "bytes": 289915
+     "bytes": 170022
     }
    ],
    "achados_total": 4,
@@ -4897,7 +4897,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 8 dias",
+     "prova": "o mesmo achado repetido em 9 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     },
     {
@@ -4994,14 +4994,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027",
+     "url": "https://www.goiania.go.leg.br/institucional",
      "http": 200,
-     "bytes": 66985
+     "bytes": 69984
     },
     {
-     "url": "https://www.goiania.go.leg.br/",
+     "url": "https://www.goiania.go.leg.br/sala-de-imprensa/agencia-camara-goiania/Agencia-Camara-Goiania_noticias/comeca-a-tramitar-a-lei-orcamentaria-anual-para-2027",
      "http": 200,
-     "bytes": 102283
+     "bytes": 66867
     }
    ],
    "achados_total": 0,
@@ -5012,7 +5012,14 @@
     "cadencia_recomendada": 1,
     "dia_forte": null
    },
-   "falhas": []
+   "falhas": [
+    {
+     "conselheiro": "falso_verde",
+     "falha": "SILÊNCIO LONGO",
+     "prova": "14 leituras vazias seguidas",
+     "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
+    }
+   ]
   },
   "f260-captacao-193": {
    "nome": "CNJ - política de destinação de penas pecuniárias",
