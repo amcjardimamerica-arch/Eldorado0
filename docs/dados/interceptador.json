@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T14:28:59+00:00",
+  "em": "2026-11-07T14:39:22+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T14:13:50+00:00",
+  "ultimo_voo": "2026-11-07T14:30:52+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,93 +38,83 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
+    "validadas": 0,
     "parciais": 0,
-    "insuficientes": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 14,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 14.5
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 8.0
   },
   "missoes": [
     {
-      "em": "2026-11-07T14:13:50+00:00",
+      "em": "2026-11-07T14:30:52+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Nanet – combate a discurso de ódio e desinformação — Brasil",
-      "qualidade": "validada",
-      "comprovados": 9,
+      "alvo": "Programa Funarte Aberta 2025 - Ocupação dos Espaços Culturais da Funarte MG e SP — Brasil",
+      "qualidade": "insuficiente",
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Órgão / financiador",
+        "Requisitos"
       ],
-      "pagina_oficial": "https://abong.org.br/nanet-democratizando-a-tecnologia/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital tem como objeto fomentar os direitos humanos, as liberdades essenciais, a democracia e o estado de direito no Brasil, o que se alinha com a missão da associação comunitária.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa se inscrever no edital, apresentando um projeto que esteja alinhado com o objeto do edital e que atenda aos requisitos estabelecidos, conforme o documento oficial.",
-        "proximo_passo": "A associação deve se inscrever no edital entre 2025-12-01 e 2025-12-20, prestando atenção aos requisitos e anexos exigidos.",
-        "risco": "O risco é que a associação não atenda aos critérios exigidos ou não se inscreva dentro do prazo estabelecido."
+        "por_que": "O texto comprovado menciona o objeto e a área de atuação do edital, o que permite identificar sua relevância para organizações da sociedade civil.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é a ocupação dos espaços culturais da Funarte SP, e demonstrar como sua atuação se relaciona com a cultura, mesmo que o território do edital seja SP.",
+        "proximo_passo": "Verificar se há possibilidade de aliança ou parceria com entidades sediadas em SP para participar do edital.",
+        "risco": "O território do edital é SP, o que pode impedir que uma associação comunitária de Goiânia participe diretamente, a menos que haja uma parceria ou aliança com entidades locais em SP."
       },
       "erro": null,
-      "segundos": 870,
+      "segundos": 480,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 9,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "op-f04465215edb",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-7802ad399405",
       "encontrou": {
         "Objeto": {
-          "valor": "fomentar os direitos humanos, as liberdades essenciais, a democracia e o estado de direito no Brasil",
-          "trecho": "O Projeto “Nanet: Democratizando a tecnologia” tem como objetivo principal fomentar os direitos humanos, as liberdades essenciais, a democracia e o estado de direito no Brasil.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2025-12-01 a 2025-12-20",
-          "trecho": "As inscrições estão abertas de 1 a 20 de dezembro de 2025.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Abong, Ação Educativa e Ibase",
-          "trecho": "O edital está em sua 2ª edição e irá selecionar propostas de atividades que promovam o cuidado e o bem-estar no ambiente digital, a serem realizadas nos territórios onde a Abong at",
-          "oficial": true,
+          "valor": "Ocupação dos espaços culturais da Funarte SP",
+          "trecho": "OCUPAÇÃO DOS ESPAÇOS CULTURAIS DA FUNARTE SP",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "null",
-          "trecho": "a serem realizadas nos territórios onde a Abong atua, incluindo Bahia, Ceará, Minas Gerais, Pará, Pernambuco, Paraná, Rio de Janeiro, São Paulo, Santa Catarina, Sergipe e Rio Grand",
-          "oficial": true,
+          "valor": "SP",
+          "trecho": "FUNARTE SP",
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "direitos",
-          "trecho": "O Projeto “Nanet: Democratizando a tecnologia” tem como objetivo principal fomentar os direitos humanos, as liberdades essenciais, a democracia e o estado de direito no Brasil.",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "estar dentro dos critérios exigidos, conforme o documento oficial",
-          "trecho": "Para submeter seu projeto, basta acessar o formulário de inscrição e estar dentro dos critérios exigidos, conforme o documento oficial.",
-          "oficial": true,
+          "valor": "cultura",
+          "trecho": "OCUPAÇÃO DOS ESPAÇOS CULTURAIS DA FUNARTE SP",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Abong",
+      "financiador": "Funarte",
       "indicios": [],
       "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
         "financiador_programa_edital",
-        "financiador_regulamento"
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
