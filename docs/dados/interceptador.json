@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T16:14:54+00:00",
+  "em": "2026-11-07T16:25:23+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T15:59:36+00:00",
+  "ultimo_voo": "2026-11-07T16:16:43+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,68 +39,83 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 14,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.5
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 8.1
   },
   "missoes": [
     {
-      "em": "2026-11-07T15:59:36+00:00",
+      "em": "2026-11-07T16:16:43+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Programa Ibermúsicas - Convocatórias 2025 — Brasil",
-      "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": 0,
+      "alvo": "Programa de Aceleração do Desenvolvimento de Lideranças Femininas Negras: Marielle Franco - 2ª Edição — Brasil — Brasil",
+      "qualidade": "parcial",
+      "comprovados": 6,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://baoba.org.br/home/programa-marielle-franco-apoio-individual/",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações comprovadas sobre o Programa Ibermúsicas - Convocatórias 2025 — Brasil para serem utilizadas.",
-        "para_a_amc": null,
-        "proximo_passo": null,
-        "risco": null
+        "serve_como_fonte": "sim",
+        "por_que": "O texto comprova que o Fundo Baobá oferece apoio individual a lideranças femininas negras para o desenvolvimento de projetos de impacto social e político, sendo uma fonte válida para ações de fomento.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria identificar uma liderança feminina negra que atue na área de assistência social, cultura, educação ou esporte e propor um projeto de impacto social e político alinhado ao objeto do edital.",
+        "proximo_passo": "Contatar o Fundo Baobá para obter informações detalhadas sobre o edital e os critérios de seleção.",
+        "risco": "A falta de informações sobre prazos e requisitos pode impedir a associação de se candidatar oportunamente."
       },
       "erro": null,
-      "segundos": 871,
+      "segundos": 484,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-75f65044d904",
-      "encontrou": {},
-      "financiador": "Funarte",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 4,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-9c9e2286fe15",
+      "encontrou": {
+        "Objeto": {
+          "valor": "Apoio individual a lideranças femininas negras para o desenvolvimento de projetos de impacto social e político.",
+          "trecho": "Programa de Aceleração do Desenvolvimento de Lideranças Femininas Negras: Marielle Franco - 2ª Edição",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "dispensado — O texto menciona que o apoio é realizado pelo Fundo Baobá.",
+          "trecho": "Fundo Baobá",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Território": {
+          "valor": "BR",
+          "trecho": "Brasil",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "direitos",
+          "trecho": "Programa de Aceleração do Desenvolvimento de Lideranças Femininas Negras: Marielle Franco - 2ª Edição",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Secretaria de Políticas Públicas para as Mulheres",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
         "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "financiador_regulamento"
       ]
     }
   ],
