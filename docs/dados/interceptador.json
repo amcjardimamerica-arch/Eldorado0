@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T20:41:41+00:00",
+  "em": "2026-11-07T20:51:05+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T20:27:19+00:00",
+  "ultimo_voo": "2026-11-07T20:43:51+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,102 +38,83 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
+    "validadas": 0,
     "parciais": 0,
-    "insuficientes": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 14,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 13.6
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 6.6
   },
   "missoes": [
     {
-      "em": "2026-11-07T20:27:19+00:00",
+      "em": "2026-11-07T20:43:51+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "A Agência do Bem abriu inscrições para o 6º Edital de Microprojetos - São Paulo da Rede do Bem. A oportunidade… — Brasil",
-      "qualidade": "validada",
-      "comprovados": 9,
+      "alvo": "A República das Concessões — Convite a autores — Brasil",
+      "qualidade": "insuficiente",
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
         "Prazo de recurso",
-        "Área de atuação"
+        "Valor",
+        "Território",
+        "Requisitos"
       ],
-      "pagina_oficial": "https://rededobem.org.br/editais/6-edital-de-microprojetos-sao-paulo/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, prazo de inscrição, resultado, valor, requisitos e anexos necessários para a participação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria ser entidade legalmente constituída, dispor de CNPJ, ata de eleição de diretoria e estatuto atualizados, conta bancária institucional em operação, apresentar histórico consistente de atuação social, preencher correta e integralmente a ficha de inscrição e entregar a ficha de inscrição.",
-        "proximo_passo": "Verificar se a associação comunitária atende aos requisitos do edital e iniciar o processo de inscrição no prazo estabelecido.",
-        "risco": "A associação pode não atender aos requisitos legais ou não conseguir preencher corretamente a ficha de inscrição, o que impediria sua participação no edital."
+        "por_que": "O edital refere-se à publicação de livros de autores brasileiros, financiado pelo Ministério da Cultura, com área de atuação em cultura, o que se alinha com a proposta de publicação de livros.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital contempla a publicação de livros e se há requisitos específicos para organizações da sociedade civil, mesmo que não tenham sido encontrados no texto.",
+        "proximo_passo": "Consultar o edital completo para verificar os requisitos e possíveis restrições para organizações da sociedade civil.",
+        "risco": "A falta de informações sobre prazo, requisitos e valor pode impedir a participação da associação."
       },
       "erro": null,
-      "segundos": 813,
+      "segundos": 396,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 8,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "op-a96ccf0222d7",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-46924632beae",
       "encontrou": {
         "Objeto": {
-          "valor": "apoiar o trabalho social realizado pelas organizações da sociedade civil de São Paulo",
-          "trecho": "A Agência do Bem no intuito de apoiar o trabalho social realizado pelas organizações da sociedade civil de São Paulo,",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-07-22 a 2026-08-22",
-          "trecho": "Abertura das Inscrições 22/07/2026\nEncerramento das Inscrições 22/08/2026",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$3.000,00 (três mil reais) por microprojeto",
-          "trecho": "Serão selecionados dois microprojetos para receber o apoio financeiro de até R$3.000,00 (três mil reais) por microprojeto.",
-          "oficial": true,
+          "valor": "publicação de livros de autores brasileiros",
+          "trecho": "Convite a autores - Mapa da Cultura",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Agência do Bem",
-          "trecho": "A Agência do Bem no intuito de apoiar o trabalho social realizado pelas organizações da sociedade civil de São Paulo,",
-          "oficial": true,
+          "valor": "Ministério da Cultura",
+          "trecho": "Mapa da Cultura",
+          "oficial": false,
           "dispensado": false
         },
-        "Território": {
-          "valor": "SP",
-          "trecho": "Atuar na Região Metropolitana do São Paulo, especificamente nos municípios: São Paulo, Guarulhos, Diadema,",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Ser entidade legalmente constituída;, Dispor de CNPJ, Ata de Eleição de Diretoria e Estatuto atualizados;, Dispor de Conta Bancária institucional em operação;, Apresentar histórico consistente de atuação social;, Preencher correta e integralmente a Ficha de Inscrição;, Entregar a Ficha de Inscrição ",
-          "trecho": "- Ser entidade legalmente constituída;\n- Dispor de CNPJ, Ata de Eleição de Diretoria e Estatuto atualizados;\n- Dispor de Conta Bancária institucional em operação;\n- Apresentar hist",
-          "oficial": true,
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "Convite a autores - Mapa da Cultura",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Rede do Bem",
-      "indicios": [
-        {
-          "url": "https://duckduckgo.com/l?uddg=https%3A%2F%2Fcaptadores.org.br%2Fcategory%2Feditais%2F&rut=bff0d329b1fc035b9fae4019df7f64725b06759560072091961f3fad79655276",
-          "tipo": "buscador"
-        }
-      ],
+      "financiador": "Mapa da Cultura",
+      "indicios": [],
       "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "parceiro"
+        "financiador_ano"
       ]
     }
   ],
