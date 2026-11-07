@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T14:11:54+00:00",
+  "em": "2026-11-07T14:28:59+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T14:01:07+00:00",
+  "ultimo_voo": "2026-11-07T14:13:50+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,89 +38,93 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
+    "validadas": 1,
     "parciais": 0,
-    "insuficientes": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 14,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.2
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 14.5
   },
   "missoes": [
     {
-      "em": "2026-11-07T14:01:07+00:00",
+      "em": "2026-11-07T14:13:50+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Goiás amplia em 43,3% as inscrições em atividades esportivas para pessoas com deficiência — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 5,
+      "de": "2 · Brasil · livro da Biblioteca",
+      "alvo": "Nanet – combate a discurso de ódio e desinformação — Brasil",
+      "qualidade": "validada",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos"
+        "Valor"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://abong.org.br/nanet-democratizando-a-tecnologia/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que a Secretaria de Estado de Esporte e Lazer de Goiás oferece atividades esportivas para pessoas com deficiência, o que pode ser uma fonte de apoio para a associação comunitária.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital da Secretaria de Estado de Esporte e Lazer, demonstrando sua capacidade de executar atividades esportivas para pessoas com deficiência.",
-        "proximo_passo": "Consultar o edital completo da Secretaria de Estado de Esporte e Lazer para obter informações detalhadas sobre o processo de inscrição e os critérios de seleção.",
-        "risco": "A falta de informações sobre prazo de inscrição, requisitos e anexos pode impedir a associação de se candidatar adequadamente ao edital."
+        "por_que": "O edital tem como objeto fomentar os direitos humanos, as liberdades essenciais, a democracia e o estado de direito no Brasil, o que se alinha com a missão da associação comunitária.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa se inscrever no edital, apresentando um projeto que esteja alinhado com o objeto do edital e que atenda aos requisitos estabelecidos, conforme o documento oficial.",
+        "proximo_passo": "A associação deve se inscrever no edital entre 2025-12-01 e 2025-12-20, prestando atenção aos requisitos e anexos exigidos.",
+        "risco": "O risco é que a associação não atenda aos critérios exigidos ou não se inscreva dentro do prazo estabelecido."
       },
       "erro": null,
-      "segundos": 609,
+      "segundos": 870,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-87553a419ef9",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 9,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-f04465215edb",
       "encontrou": {
         "Objeto": {
-          "valor": "atividades esportivas para pessoas com deficiência",
-          "trecho": "Oferta reúne oito modalidades em 2026, com a inclusão de paradança e basquete em cadeira de rodas; núcleos atendem sete municípios",
-          "oficial": false,
+          "valor": "fomentar os direitos humanos, as liberdades essenciais, a democracia e o estado de direito no Brasil",
+          "trecho": "O Projeto “Nanet: Democratizando a tecnologia” tem como objetivo principal fomentar os direitos humanos, as liberdades essenciais, a democracia e o estado de direito no Brasil.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2025-12-01 a 2025-12-20",
+          "trecho": "As inscrições estão abertas de 1 a 20 de dezembro de 2025.",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Secretaria de Estado de Esporte e Lazer",
-          "trecho": "Goiás amplia em 43,3% as inscrições em atividades esportivas para pessoas com deficiência – Secretaria de Estado de Esporte e Lazer",
-          "oficial": false,
+          "valor": "Abong, Ação Educativa e Ibase",
+          "trecho": "O edital está em sua 2ª edição e irá selecionar propostas de atividades que promovam o cuidado e o bem-estar no ambiente digital, a serem realizadas nos territórios onde a Abong at",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "Goiás amplia em 43,3% as inscrições em atividades esportivas para pessoas com deficiência – Secretaria de Estado de Esporte e Lazer",
-          "oficial": false,
+          "valor": "null",
+          "trecho": "a serem realizadas nos territórios onde a Abong atua, incluindo Bahia, Ceará, Minas Gerais, Pará, Pernambuco, Paraná, Rio de Janeiro, São Paulo, Santa Catarina, Sergipe e Rio Grand",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "esporte",
-          "trecho": "Oferta reúne oito modalidades em 2026, com a inclusão de paradança e basquete em cadeira de rodas; núcleos atendem sete municípios",
-          "oficial": false,
+          "valor": "direitos",
+          "trecho": "O Projeto “Nanet: Democratizando a tecnologia” tem como objetivo principal fomentar os direitos humanos, as liberdades essenciais, a democracia e o estado de direito no Brasil.",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "estar dentro dos critérios exigidos, conforme o documento oficial",
+          "trecho": "Para submeter seu projeto, basta acessar o formulário de inscrição e estar dentro dos critérios exigidos, conforme o documento oficial.",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado de Esporte e Lazer",
+      "financiador": "Abong",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
         "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "financiador_regulamento"
       ]
     }
   ],
