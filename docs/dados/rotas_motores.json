@@ -1,5 +1,5 @@
 {
- "em": "2026-11-07T06:05:45+00:00",
+ "em": "2026-11-07T07:37:18+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 54158
+  "exemplos_da_rede": 54235
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
-    "origem:rota original",
-    3.785
+    "tok:feed",
+    3.6092
    ],
    [
-    "tok:feed",
-    3.663
+    "origem:rota original",
+    3.4643
    ],
    [
     "tok:inscricoes",
@@ -41,37 +41,37 @@
    ],
    [
     "origem:biblioteca",
-    2.2621
-   ],
-   [
-    "tld:br",
-    2.2183
+    2.2266
    ],
    [
     "tok:transparencia",
-    2.096
+    2.052
    ],
    [
     "tok:abre",
     1.9512
    ],
    [
-    "tok:sitemap",
-    1.9499
+    "tok:selecao",
+    1.8972
+   ],
+   [
+    "tok:leipaulogustavo",
+    1.8789
    ]
   ],
   "piores_sinais": [
-   [
-    "gov:True",
-    -2.4279
-   ],
    [
     "tok:pgt",
     -2.6437
    ],
    [
+    "tipo:site_oficial",
+    -2.7739
+   ],
+   [
     "tok:ccs",
-    -2.7974
+    -2.7978
    ],
    [
     "tok:2026",
@@ -79,7 +79,7 @@
    ],
    [
     "origem:padrão",
-    -3.3288
+    -3.6199
    ],
    [
     "tok:content",
@@ -438,7 +438,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-06T22:16:31+00:00",
+    "em": "2026-11-07T07:37:18+00:00",
     "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -953,8 +953,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-06T20:46:40+00:00",
-    "testes": 12,
+    "em": "2026-11-07T07:36:46+00:00",
+    "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -980,7 +980,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-06T20:46:50+00:00",
+    "em": "2026-11-07T07:36:50+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1007,7 +1007,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-06T20:47:01+00:00",
+    "em": "2026-11-07T07:37:04+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1034,8 +1034,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-06T22:16:27+00:00",
-    "testes": 13,
+    "em": "2026-11-07T07:37:14+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1061,7 +1061,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-06T22:16:28+00:00",
+    "em": "2026-11-07T07:37:15+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
