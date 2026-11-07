@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T08:56:35+00:00",
+  "em": "2026-11-07T09:14:15+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T08:42:31+00:00",
+  "ultimo_voo": "2026-11-07T08:58:16+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,73 +48,89 @@
     },
     "estrelas_de_ouro": 14,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.4
+    "tempo_medio_min": 15.1
   },
   "missoes": [
     {
-      "em": "2026-11-07T08:42:31+00:00",
+      "em": "2026-11-07T08:58:16+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Projeto de convivência de crianças e adolescentes — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "de": "2 · Brasil · livro da Biblioteca",
+      "alvo": "Edital da Jornada TransformAção de 2026 é lançado — Brasil",
+      "qualidade": "insuficiente",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Requisitos"
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://goias.gov.br/administracao/wp-content/uploads/sites/27/2019/08/projeto-de-estruturacao-un-nm_processo-seletivo-interno-001_2017-185.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado descreve o objeto e o financiador do edital, indicando que é uma fonte válida para acesso a recursos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando um projeto alinhado ao objeto descrito, que é assegurar espaços de referência para o convívio social e o desenvolvimento de relações de afetividade, solidariedade e respeito mútuo.",
-        "proximo_passo": "Verificar os anexos do edital para obter informações detalhadas sobre o processo de inscrição e os critérios de avaliação.",
-        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se candidatar adequadamente ao edital."
+        "por_que": "O edital foi comprovado com informações detalhadas sobre seu objeto, prazo de inscrição, valor e requisitos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever entre 2026-06-17 e 2026-07-15, apresentando uma proposta clara de empreendimento com foco na resolução de problemas socioambientais, com atividade principal geradora de impacto, comprometimento com sustentabilidade financeira e residência no Brasil.",
+        "proximo_passo": "Verificar os requisitos do edital e preparar a proposta de empreendimento de impacto socioambiental para inscrição no prazo estabelecido.",
+        "risco": "A falta de clareza na proposta ou não atendimento aos requisitos pode impedir o acesso ao edital."
       },
       "erro": null,
-      "segundos": 805,
+      "segundos": 907,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-captacao-120",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-a0d31c3fcbea",
       "encontrou": {
         "Objeto": {
-          "valor": "assegurar espaços de referência para o convívio social e o desenvolvimento de relações de afetividade, solidariedade e respeito mútuo",
-          "trecho": "assegurar espaços de referência para o convívio social e o desenvolvimento de relações de afetividade, solidariedade e respeito mútuo.",
-          "oficial": true,
+          "valor": "apoiar e impulsionar pessoas interessadas em empreender com foco na resolução de problemas socioambientais",
+          "trecho": "Com o objetivo de apoiar e impulsionar pessoas interessadas em empreender com foco na resolução de problemas socioambientais",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-06-17 a 2026-07-15",
+          "trecho": "As inscrições estarão abertas de 17 de junho a 15 de julho de 2026",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 30 mil em capital semente para impulsionar empreendimentos de impacto em todo o Brasil",
+          "trecho": "A Jornada TransformAção 2026, do Instituto Sabin em parceria com a Civicus, expande seu alcance e oferece trilha de capacitação, aumento na oferta de mentorias especializadas e R$ ",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Governo do Estado de Goiás",
-          "trecho": "Os investimentos serão, a priori, oriundos do Contrato de Gestão firmado entre a OVG e o Governo do Estado de Goiás, e de parcerias estabelecidas com a iniciativa privada.",
-          "oficial": true,
+          "valor": "Instituto Sabin",
+          "trecho": "A Jornada  TransformAção 2026 é uma iniciativa do Instituto Sabin, realizada em parceria com a CIVICUS",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "GO",
-          "trecho": "Fundada em 30 de outubro de 1947, a Organização das Voluntárias de Goiás, surgiu da iniciativa de um grupo de mulheres ligadas à Igreja Católica.",
-          "oficial": true,
+          "valor": "BR",
+          "trecho": "Podem se inscrever pessoas maiores de 18 anos residentes no Brasil",
+          "oficial": false,
           "dispensado": false
         },
-        "Área de atuação": {
-          "valor": "assistencia_social",
-          "trecho": "A Organização das Voluntárias de Goiás, instituição que se tornou referência no cuidado às famílias goianas, é desenvolver programas de assistência social baseados nos princípios d",
-          "oficial": true,
+        "Requisitos": {
+          "valor": "idade mínima de 18 anos, residência no Brasil, atividade principal do negócio seja a geradora do impacto, clareza da proposta, busca por sustentabilidade financeira no mercado, comprometimento com a jornada",
+          "trecho": "Podem se inscrever pessoas maiores de 18 anos residentes no Brasil. O processo seletivo avaliará critérios de enquadramento de negócios de impacto, como a exigência que a atividade",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Ministério dos Direitos Humanos e da Cidadania",
+      "financiador": "Instituto Sabin",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
