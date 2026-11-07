@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T13:15:35+00:00",
+  "em": "2026-11-07T13:31:21+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T12:59:23+00:00",
+  "ultimo_voo": "2026-11-07T13:17:39+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,91 +39,97 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 14,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.4
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 12.9
   },
   "missoes": [
     {
-      "em": "2026-11-07T12:59:23+00:00",
+      "em": "2026-11-07T13:17:39+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Glocal Aceleradora – 12º edital — Brasil",
-      "qualidade": "insuficiente",
-      "comprovados": 8,
+      "alvo": "IA ponto 3 – capacitação de OSCs em inteligência artificial — Brasil",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
+        "Resultado",
         "Prazo de recurso",
+        "Valor",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://escolaaberta3setor.org.br/inscricoes-prorrogadas-para-o-programa-ia-3/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "Os dados fornecidos incluem prazo de inscrição, resultado, valor, órgão financiador, território, esfera e requisitos do edital, o que é suficiente para responder às perguntas formuladas.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital entre 2026-06-08 e 2026-07-22, apresentar um projeto alinhado com os objetivos de desenvolvimento sustentável, demonstrar impacto social e possibilidades de execução, além de anexar os documentos exigidos.",
-        "proximo_passo": "Verificar os requisitos detalhados do edital e preparar a documentação necessária para a inscrição no prazo estabelecido.",
-        "risco": "O prazo de inscrição pode ser ultrapassado, ou a falta de alinhamento com os objetivos de desenvolvimento sustentável pode impedir a seleção."
+        "por_que": "O texto comprovado descreve um edital específico de capacitação de OSCs em inteligência artificial, com prazos, requisitos e informações sobre o financiador, o que torna essa fonte confiável e direta para a resposta.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ter CNPJ ativo e, no mínimo, três colaboradores atuando por 20 horas semanais, incluindo uma liderança, para acessar o edital.",
+        "proximo_passo": "Verificar os requisitos do edital e preparar os documentos necessários para inscrição no prazo estabelecido.",
+        "risco": "A falta de colaboradores atuando por 20 horas semanais ou a inatividade do CNPJ pode impedir o acesso ao edital."
       },
       "erro": null,
-      "segundos": 925,
+      "segundos": 776,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-e89facdcd4e6",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Área de atuação",
+      "id": "op-c728cfc13d76",
       "encontrou": {
-        "Prazo de inscrição": {
-          "valor": "2026-06-08 a 2026-07-22",
-          "trecho": "22/07/2026Encerramento das Inscrições",
-          "oficial": false,
+        "Objeto": {
+          "valor": "capacitação de OSCs em inteligência artificial",
+          "trecho": "iniciativa realizada com apoio do Google.org e parceria técnica do Canal SabIAr. O edital é voltado a organizações da sociedade civil (OSCs) de todo o país interessadas em adotar t",
+          "oficial": true,
           "dispensado": false
         },
-        "Valor": {
-          "valor": "O programa é gratuito. Todas as organizações selecionadas receberão bolsas de 100% e são convidadas a participar voluntariamente na captação de 2% do valor do programa (4x R$125,00, por projeto).",
-          "trecho": "O programa é gratuito. Todas as organizações selecionadas receberão bolsas de 100% e são convidadas a participar voluntariamente na captação de 2% do valor do programa (4x R$125,00",
-          "oficial": false,
+        "Prazo de inscrição": {
+          "valor": "2025-01-01 a 2025-11-23",
+          "trecho": "O Instituto para o Desenvolvimento do Investimento Social (IDIS) prorrogou até 23 de novembro de 2025 as inscrições para o Programa IA.3",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Associação Glocal",
-          "trecho": "Associação Glocal (CNPJ) e PIX para doações: 28.923.436/0001-71",
-          "oficial": false,
+          "valor": "Instituto para o Desenvolvimento do Investimento Social (IDIS)",
+          "trecho": "O Instituto para o Desenvolvimento do Investimento Social (IDIS) prorrogou até 23 de novembro de 2025 as inscrições para o Programa IA.3",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "SP",
-          "trecho": "Rua Cardeal Arcoverde, 2760/2796 - Pinheiros - 05408-003 - São Paulo - SP",
-          "oficial": false,
+          "valor": "nacional",
+          "trecho": "O edital é voltado a organizações da sociedade civil (OSCs) de todo o país interessadas em adotar tecnologias de IA para fortalecer sua atuação.",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "Os projetos serão avaliados de acordo com o impacto social gerado, alinhamento com os objetivos de desenvolvimento suste, Os empreendedores serão avaliados de acordo com a sua motivação e paixão pelo projeto, perfil empreendedor, possibilidad",
-          "trecho": "Os critérios completos estão descritos no edital. Leia antes de se inscrever.",
-          "oficial": false,
+          "valor": "organizações com CNPJ ativo e, no mínimo, três colaboradores atuando por 20 horas semanais, incluindo uma liderança",
+          "trecho": "Podem se inscrever organizações com CNPJ ativo e, no mínimo, três colaboradores atuando por 20 horas semanais, incluindo uma liderança.",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Associação Glocal",
-      "indicios": [],
+      "financiador": "IDIS",
+      "indicios": [
+        {
+          "url": "https://www.idis.org.br/ia-ponto3",
+          "tipo": "noticia"
+        }
+      ],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano"
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
