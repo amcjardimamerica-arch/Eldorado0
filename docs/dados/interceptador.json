@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T05:16:32+00:00",
+  "em": "2026-11-07T05:35:08+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T05:07:29+00:00",
+  "ultimo_voo": "2026-11-07T05:18:24+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,82 +39,92 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 14,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 8.4
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 16.1
   },
   "missoes": [
     {
-      "em": "2026-11-07T05:07:29+00:00",
+      "em": "2026-11-07T05:18:24+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
-      "alvo": "Zurich abre edital nacional para apoiar projetos sociais via leis de ...",
-      "qualidade": "parcial",
-      "comprovados": 6,
-      "dispensados": 0,
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 20 abordagens; busc",
+      "alvo": "Dia de doar lanca edital para apoiar campanhas comunitarias",
+      "qualidade": "insuficiente",
+      "comprovados": 8,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://www.zurich.com.br/leis-de-incentivo-2026",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre o objeto, órgão financiador, território e requisitos, o que permite a análise do processo de acesso.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria alinhar seu projeto social a um dos três programas de Responsabilidade Social Corporativa da Zurich e apresentar os documentos exigidos no edital, incluindo o anexo mencionado.",
-        "proximo_passo": "Verificar os requisitos detalhados do edital e entrar em contato com a Zurich para obter mais informações sobre o processo de inscrição.",
-        "risco": "A falta de alinhamento do projeto com os programas de Responsabilidade Social Corporativa da Zurich pode impedir o acesso ao edital."
+        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, prazo de inscrição, valor, requisitos e outros dados relevantes.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa ter um link direto de captação de doações, não estar relacionada com organizações partidárias e não defender bandeiras políticas em suas mensagens de incentivo.",
+        "proximo_passo": "Verificar os anexos mencionados e preparar a documentação necessária para inscrição até o dia 7 de outubro.",
+        "risco": "A associação pode ser impedida se não atender aos requisitos estabelecidos, como não ter um link direto de captação de doações ou se estiver relacionada a organizações partidárias."
       },
       "erro": null,
-      "segundos": 507,
+      "segundos": 963,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
+      "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "rec-eincentivofiscal",
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "cat-a401d40f2a7f",
       "encontrou": {
         "Objeto": {
-          "valor": "selecionar e apoiar projetos sociais alinhados à estratégia de Responsabilidade Social Corporativa da compania",
-          "trecho": "O Edital de Seleção de Projetos via Incentivo Fiscal 2026 da Zurich Seguros tem como objetivo selecionar e apoiar projetos sociais alinhados à estratégia de Responsabilidade Social",
+          "valor": "apoio à filantropia comunitária para campanhas comunitárias e coalizões",
+          "trecho": "O Edital de Apoio à Filantropia Comunitária, do Dia de Doar, está com inscrições abertas para campanhas comunitárias e coalizões de todo o Brasil.",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O texto menciona que as inscrições vão até o dia 7 de outubro.",
+          "trecho": "As inscrições vão até o dia 7 de outubro. [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Valor": {
+          "valor": "R$ 500 por projeto e 5 mil dólares em crédito para anúncio no Facebook e Instagram",
+          "trecho": "cada projeto receberá R$ 500 para impulsionar suas ações; o edital é válido para campanhas comunitárias e coalizões",
           "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Zurich Seguros",
-          "trecho": "A Zurich Seguros torna público o presente Edital de Seleção de Projetos via Incentivo Fiscal 2026",
+          "valor": "Dia de Doar",
+          "trecho": "O Edital de Apoio à Filantropia Comunitária, do Dia de Doar, está com inscrições abertas para campanhas comunitárias e coalizões de todo o Brasil.",
           "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "BR",
-          "trecho": "Com apoio técnico do Instituto para o Desenvolvimento do Investimento Social (IDIS), este Edital integra o compromisso da Zurich Seguros com a geração de impacto social positivo e ",
+          "valor": "nacional",
+          "trecho": "O Edital de Apoio à Filantropia Comunitária, do Dia de Doar, está com inscrições abertas para campanhas comunitárias e coalizões de todo o Brasil.",
           "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "relação direta com um dos três programas de Responsabilidade Social Corporativa da Zurich",
-          "trecho": "Os projetos inscritos deverão apresentar relação direta com um dos três programas de Responsabilidade Social Corporativa da Zurich.",
+          "valor": "ter um link direto de captação de doações, não estar relacionada direta ou indiretamente com organizações partidárias, não defender bandeiras políticas em suas mensagens de incentivo",
+          "trecho": "As campanhas que tem um link direto de captação de doações e que não estão relacionadas direta ou indiretamente com organizações partidárias, ou que defendem bandeiras políticas em",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Zurich Seguros",
+      "financiador": "Dia de Doar",
       "indicios": [
         {
-          "url": "https://esginside.com.br/2026/09/28/zurich-abre-edital-nacional-para-apoiar-projetos-sociais-via-leis-de-incentivo-fiscal/",
+          "url": "https://observatorio3setor.org.br/dia-de-doar-lanca-edital-para-apoiar-campanhas-comunitarias/",
           "tipo": "noticia"
         }
       ],
