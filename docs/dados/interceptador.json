@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T23:11:12+00:00",
+  "em": "2026-11-07T23:27:58+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T22:56:27+00:00",
+  "ultimo_voo": "2026-11-07T23:13:07+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,9 +38,9 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
+    "validadas": 0,
     "parciais": 0,
-    "insuficientes": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,82 +48,53 @@
     },
     "estrelas_de_ouro": 15,
     "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 14.0
+    "tempo_medio_min": 14.1
   },
   "missoes": [
     {
-      "em": "2026-11-07T22:56:27+00:00",
+      "em": "2026-11-07T23:13:07+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Aberta Chamada de Projetos 2026 no Instituto Mahle — Brasil",
-      "qualidade": "validada",
-      "comprovados": 9,
-      "dispensados": 1,
+      "alvo": "Abertas as inscricoes para 2a edicao do edital braskem projetos que transformam — Brasil",
+      "qualidade": "insuficiente",
+      "comprovados": 1,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
+        "Resultado",
         "Prazo de recurso",
+        "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://institutomahle.org.br/projetos/envie-seu-projeto",
+      "pagina_oficial": "https://www.braskem.com/detalhe-noticia-es/braskem-anuncia-iniciativas-vencedoras-do-2-edital-projetos-que-transformam",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações claras sobre o edital, incluindo objeto, prazo de inscrição, resultado, valor, órgão financiador, território, esfera, requisitos e anexos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ser uma OSC, comprovar importância e relevância social e/ou ambiental, ter práticas baseadas na Antroposofia e seguir os requisitos do edital para acessar o financiamento.",
-        "proximo_passo": "Verificar os requisitos do edital e preparar os documentos necessários para inscrição.",
-        "risco": "A falta de comprovação da importância e relevância social e/ou ambiental pode impedir o acesso ao financiamento."
+        "por_que": "O texto menciona que as inscrições foram abertas para a 2ª edição do edital, indicando que é uma fonte válida para informações sobre oportunidades de fomento.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar os anexos disponibilizados e seguir as instruções para inscrição, mesmo que os requisitos específicos não estejam explicitados no texto.",
+        "proximo_passo": "Consultar os anexos disponibilizados para obter detalhes sobre os requisitos e o processo de inscrição.",
+        "risco": "A falta de informações detalhadas sobre requisitos, prazos e área de atuação pode dificultar o acesso ao edital."
       },
       "erro": null,
-      "segundos": 838,
+      "segundos": 845,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 8,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "op-04fbf5dd4264",
-      "encontrou": {
-        "Objeto": {
-          "valor": "projetos que desenvolvem práticas antroposóficas nas áreas de agricultura, arte&cultura, educação e saúde e que demonstrem impacto social/ambiental",
-          "trecho": "O Instituto Mahle direciona seu apoio exclusivamente a projetos que desenvolvem práticas antroposóficas nas áreas de agricultura, arte&cultura, educação e saúde e que demonstrem im",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "? a 2026-10-23",
-          "trecho": "5ª Chamada de Projetos: até 23/10/2026",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "dispensado — O texto menciona que não apoiamos 100% do valor do projeto.",
-          "trecho": "Não apoiamos 100% do valor do projeto",
-          "oficial": false,
-          "dispensado": true
-        },
-        "Órgão / financiador": {
-          "valor": "Instituto Mahle",
-          "trecho": "O Instituto Mahle direciona seu apoio exclusivamente a projetos que desenvolvem práticas antroposóficas nas áreas de agricultura, arte&cultura, educação e saúde e que demonstrem im",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "nacional",
-          "trecho": "O apoio é destinado exclusivamente a projetos que desenvolvem práticas antroposóficas nas áreas de: agricultura, arte&cultura, educação e saúde",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Ser uma Organização da Sociedade Civil (OSC), Comprovar importância e relevância social e/ou ambiental, Ser uma instituição cujas práticas se baseiam na Antroposofia",
-          "trecho": "Cumprir os critérios para submissão de projetos: Ser uma Organização da Sociedade Civil (OSC) Comprovar importância e relevância social e/ou ambiental Ser uma instituição cujas prá",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "Instituto Mahle",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-373ce19db275",
+      "encontrou": {},
+      "financiador": "Braskem",
       "indicios": [
         {
-          "url": "https://riodeimpacto.com.br/noticias/aberta-chamada-de-projetos-2026-no-instituto-mahle",
+          "url": "https://captadores.org.br/editais/abertas-as-inscricoes-para-2a-edicao-do-edital-braskem-projetos-que-transformam/",
           "tipo": "noticia"
         }
       ],
