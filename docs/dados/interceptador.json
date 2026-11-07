@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T05:35:08+00:00",
+  "em": "2026-11-07T05:52:31+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T05:18:24+00:00",
+  "ultimo_voo": "2026-11-07T05:36:51+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,102 +39,87 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 14,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.1
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 15.0
   },
   "missoes": [
     {
-      "em": "2026-11-07T05:18:24+00:00",
+      "em": "2026-11-07T05:36:51+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 20 abordagens; busc",
-      "alvo": "Dia de doar lanca edital para apoiar campanhas comunitarias",
-      "qualidade": "insuficiente",
-      "comprovados": 8,
-      "dispensados": 1,
+      "alvo": "Itau viver mais abre inscricoes para a 7a edicao do edital de projetos voltados a longevidade",
+      "qualidade": "parcial",
+      "comprovados": 7,
+      "dispensados": 2,
       "total": 12,
       "nao_resolvidos": [
-        "Resultado",
         "Prazo de recurso",
-        "Área de atuação"
+        "Valor",
+        "Território",
+        "Requisitos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.itauvivermais.com.br/pilares/editais/edital-ivm-2025/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações detalhadas sobre o edital, incluindo objeto, prazo de inscrição, valor, requisitos e outros dados relevantes.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ter um link direto de captação de doações, não estar relacionada com organizações partidárias e não defender bandeiras políticas em suas mensagens de incentivo.",
-        "proximo_passo": "Verificar os anexos mencionados e preparar a documentação necessária para inscrição até o dia 7 de outubro.",
-        "risco": "A associação pode ser impedida se não atender aos requisitos estabelecidos, como não ter um link direto de captação de doações ou se estiver relacionada a organizações partidárias."
+        "por_que": "O texto comprova que o edital é voltado para projetos que promovem e garantem os direitos da população 60+ e que o prazo de inscrição foi explicitado.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando um projeto voltado para a longevidade, respeitando as áreas de atuação definidas no edital.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre as áreas de atuação e os requisitos específicos para inscrição.",
+        "risco": "O prazo de inscrição não foi especificado no texto, o que pode impedir a associação de se inscrever no prazo correto."
       },
       "erro": null,
-      "segundos": 963,
+      "segundos": 899,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "cat-a401d40f2a7f",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de recurso, Valor, Território, Requisitos",
+      "id": "cat-af40956a098a",
       "encontrou": {
         "Objeto": {
-          "valor": "apoio à filantropia comunitária para campanhas comunitárias e coalizões",
-          "trecho": "O Edital de Apoio à Filantropia Comunitária, do Dia de Doar, está com inscrições abertas para campanhas comunitárias e coalizões de todo o Brasil.",
-          "oficial": false,
+          "valor": "projetos que promovem e garantem os direitos da população 60+",
+          "trecho": "O Edital Itaú Viver Mais, por meio do Fundo de Direitos da Pessoa Idosa, apoia projetos que promovem e garantem os direitos da população 60+",
+          "oficial": true,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "dispensado — O texto menciona que as inscrições vão até o dia 7 de outubro.",
-          "trecho": "As inscrições vão até o dia 7 de outubro. [rejeitado: data implausível para edital aberto]",
+          "valor": "dispensado — O prazo de inscrição foi explicitado no texto.",
+          "trecho": "Abertura do período de inscrições: 14/05/2025 Fim do período de inscrições: 12/06/2025 até às 18h00 (Horário de Brasília)",
           "oficial": false,
           "dispensado": true
         },
-        "Valor": {
-          "valor": "R$ 500 por projeto e 5 mil dólares em crédito para anúncio no Facebook e Instagram",
-          "trecho": "cada projeto receberá R$ 500 para impulsionar suas ações; o edital é válido para campanhas comunitárias e coalizões",
-          "oficial": false,
-          "dispensado": false
-        },
         "Órgão / financiador": {
-          "valor": "Dia de Doar",
-          "trecho": "O Edital de Apoio à Filantropia Comunitária, do Dia de Doar, está com inscrições abertas para campanhas comunitárias e coalizões de todo o Brasil.",
-          "oficial": false,
+          "valor": "Itaú Viver Mais",
+          "trecho": "Edital Itaú Viver Mais",
+          "oficial": true,
           "dispensado": false
         },
-        "Território": {
-          "valor": "nacional",
-          "trecho": "O Edital de Apoio à Filantropia Comunitária, do Dia de Doar, está com inscrições abertas para campanhas comunitárias e coalizões de todo o Brasil.",
+        "Área de atuação": {
+          "valor": "dispensado — As áreas foram explicitadas no texto.",
+          "trecho": "Promoção e garantia de direitos: produção de conhecimento socioterritorial por meio de diagnósticos, formação de conselheiros, planejamento e gestão da rede e dos atores locais/org",
           "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "ter um link direto de captação de doações, não estar relacionada direta ou indiretamente com organizações partidárias, não defender bandeiras políticas em suas mensagens de incentivo",
-          "trecho": "As campanhas que tem um link direto de captação de doações e que não estão relacionadas direta ou indiretamente com organizações partidárias, ou que defendem bandeiras políticas em",
-          "oficial": false,
-          "dispensado": false
+          "dispensado": true
         }
       },
-      "financiador": "Dia de Doar",
+      "financiador": "Itaú Viver Mais",
       "indicios": [
         {
-          "url": "https://observatorio3setor.org.br/dia-de-doar-lanca-edital-para-apoiar-campanhas-comunitarias/",
+          "url": "https://captadores.org.br/editais/itau-viver-mais-abre-inscricoes-para-a-7a-edicao-do-edital-de-projetos-voltados-a-longevidade/",
           "tipo": "noticia"
         }
       ],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
