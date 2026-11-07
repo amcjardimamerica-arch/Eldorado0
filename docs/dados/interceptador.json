@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T21:39:35+00:00",
+  "em": "2026-11-07T21:57:26+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T21:37:27+00:00",
+  "ultimo_voo": "2026-11-07T21:41:14+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,45 +43,103 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 14,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 1.4
+    "tempo_medio_min": 15.4
   },
   "missoes": [
     {
-      "em": "2026-11-07T21:37:27+00:00",
+      "em": "2026-11-07T21:41:14+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "APOIO FINANCEIRO O edital destinou apoio financeiro a propostas de organizações da sociedade civil , conforme … — Brasil",
+      "alvo": "AVISO DE CHAMAMENTO PÚBLICO Nº 3/2026 - SEJUS-PI Secretaria de Estado da Justiça R$ 803 mil Aceita: organizaçõ… — Brasil",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 9,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Resultado",
+        "Prazo de recurso"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "nenhuma fonte legível",
-      "segundos": 82,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O aviso de chamamento público descreve um edital de fomento para entidades qualificadas que atuam em áreas relacionadas à assistência social, o que se alinha com as atividades de uma associação comunitária de Goiânia.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria comprovar histórico em assistência social ou áreas relacionadas, capacidade operacional para gerir pessoal especializado e apresentar um projeto alinhado ao objeto do edital, que é compor uma equipe técnica multidisciplinar para a CIAP.",
+        "proximo_passo": "Verificar os requisitos do edital e preparar os documentos necessários para inscrição no prazo estabelecido.",
+        "risco": "A falta de experiência comprovada em assistência social ou ciência aplicada ao sistema penal pode impedir a aprovação da proposta."
+      },
+      "erro": null,
+      "segundos": 923,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: nenhuma fonte legível",
-      "id": "op-ff6d0df35e5a",
-      "encontrou": {},
-      "financiador": "",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-62dab1a4cfc0",
+      "encontrou": {
+        "Objeto": {
+          "valor": "selecionar uma entidade qualificada para compor uma equipe técnica multidisciplinar que atuará diretamente na Central Integrada de Alternativas Penais (CIAP) da Região Metropolitana de Teresina",
+          "trecho": "O objetivo central da chamada pública é selecionar uma entidade qualificada para compor uma equipe técnica multidisciplinar que atuará diretamente na Central Integrada de Alternati",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "? a 2026-10-20",
+          "trecho": "As inscrições deste edital foram encerradas em 20 de outubro de 2026.",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 803 mil",
+          "trecho": "Valor disponível R$ 803 mil",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria de Estado da Justiça",
+          "trecho": "Edital SEJUS-PI 2026: Guia de Captação para ONGs",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "nacional",
+          "trecho": "a chamada aceita propostas de todo o território brasileiro",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "assistencia_social",
+          "trecho": "histórico comprovado em assistência social ou ciência aplicada ao sistema penal, direitos humanos ou reabilitação social",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "entidade qualificada para compor uma equipe técnica multidisciplinar, histórico comprovado em assistência social ou ciência aplicada ao sistema penal, direitos humanos ou reabilitação social, capacidade operacional para gerir pessoal especializado, incluindo psicólogos, assistentes sociais e pesquis",
+          "trecho": "O edital da Secretaria de Estado da Justiça abre oportunidade exclusivamente para ONGs – seja uma OSC, OSCIP ou associação sem fins lucrativos que já esteja com o CNPJ ativo e regu",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Secretaria de Estado da Justiça",
       "indicios": [
         {
-          "url": "https://duckduckgo.com/l?uddg=https%3A%2F%2Fwww.gov.br%2Fmulheres%2Fpt%2Dbr%2Facesso%2Da%2Dinformacao%2Feditais%2F2026%2Fedital%2Dno%2D3%2D2026%2Dapoio%2Da%2Dorganizacao%2Destruturacao%2De%2Dformalizacao%2Dde%2Dcooperativas%2Dassociacoes%2Dempreendimentos%2Dde%2Deconomia%2Dsolidaria%2De%2Dcoletivos%2Dde%2Dmulheres%2F&rut=bdd48b431be96354a58ae01aeb8b90db9ed9b950c51741f1bf9391823044d8d5",
-          "tipo": "buscador"
+          "url": "https://capitaai.com.br/captacao/aviso-chamamento-publico-32026-sejuspi-secretaria-estado-justica-a0b64g",
+          "tipo": "agregador"
         }
       ],
       "rotas": [
-        "parceiro",
-        "programa_puro"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
