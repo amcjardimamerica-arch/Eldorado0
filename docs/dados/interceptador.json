@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T22:11:47+00:00",
+  "em": "2026-11-07T22:28:22+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T21:59:33+00:00",
+  "ultimo_voo": "2026-11-07T22:13:31+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,97 +39,107 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 15,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 11.6
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 14.0
   },
   "missoes": [
     {
-      "em": "2026-11-07T21:59:33+00:00",
+      "em": "2026-11-07T22:13:31+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "AVISO DE CHAMAMENTO PÚBLICO Nº 30/2026 Prefeitura Municipal de Fortaleza Aceita: organizações da sociedade civ… — Brasil",
-      "qualidade": "parcial",
-      "comprovados": 7,
+      "alvo": "AVISO DE SELEÇÃO PÚBLICA Nº 4/2026 Agência Nacional de Assistência Técnica e Extensão Rural R$ 11,3 mi Aceita:… — Brasil",
+      "qualidade": "insuficiente",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": "https://licitario.com.br/licitacao/ce/municipio-de-fortaleza-000160/FORTALEZA-972101407745637-2026",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O aviso de chamamento público está comprovado com informações sobre objeto, prazo de inscrição, órgão financiador, território e requisitos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se habilitar com 5 certidões + balanço e enviar um anexo, além de se inscrever no prazo de 2026-10-15 a 2026-11-16 para acessar o edital.",
-        "proximo_passo": "Verificar os requisitos e anexos do edital e se habilitar com os documentos necessários.",
-        "risco": "A falta de certidões ou balanço pode impedir a habilitação da associação."
+        "por_que": "O texto comprovado inclui informações sobre o edital, como objeto, valor, prazo de inscrição, requisitos e área de atuação, o que permite a análise do edital.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ter CNPJ ativo, estatuto social que delimita missão de interesse público, já desenvolver projetos na área de meio ambiente e ter experiência prévia com instrumentos congêneres para acessar o edital.",
+        "proximo_passo": "Verificar os requisitos do edital e preparar os documentos necessários para inscrição.",
+        "risco": "A falta de CNPJ ativo, estatuto social adequado, experiência em meio ambiente ou instrumentos congêneres pode impedir o acesso ao edital."
       },
       "erro": null,
-      "segundos": 695,
+      "segundos": 842,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Área de atuação",
-      "id": "op-bf2a618717c9",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-9d252ef8c942",
       "encontrou": {
         "Objeto": {
-          "valor": "Execucao de acoes tecnicas especializadas, de natureza multidisciplinar, compreendendo medidas administrativas, sociais, urbanisticas, juridicas, cartograficas e tecnicas necessarias a efetivacao das acoes que resultarao na regularizacao fundiaria do nucleo urbano informal com a titulacao final de propriedade em favor das familias ocupantes/beneficiarias",
-          "trecho": "Execucao de acoes tecnicas especializadas, de natureza multidisciplinar, compreendendo medidas administrativas, sociais, urbanisticas, juridicas, cartograficas e tecnicas necessari",
-          "oficial": true,
+          "valor": "O que o edital realmente financia",
+          "trecho": "O que esse edital realmente financia",
+          "oficial": false,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "2026-10-15 a 2026-11-16",
-          "trecho": "Propostas até 16/11/2026, 10:00 — em 9 dias",
-          "oficial": true,
+          "valor": "? a 2026-11-19",
+          "trecho": "Inscrições até 19 de novembro de 2026",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 11,3 milhões",
+          "trecho": "Valor disponível R$ 11,3 milhões",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Município de Fortaleza· SECRETARIA MUNICIPAL DO DESENVOLVIMENTO HABITACIONAL DE FORTALEZA",
-          "trecho": "Município de Fortaleza· SECRETARIA MUNICIPAL DO DESENVOLVIMENTO HABITACIONAL DE FORTALEZA",
-          "oficial": true,
+          "valor": "Agência Nacional de Assistência Técnica e Extensão Rural",
+          "trecho": "Edital ANATER 4/2026: quem pode concorrer e captar recursos · Capitaai",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "CE",
-          "trecho": "Fortaleza/CE",
-          "oficial": true,
+          "valor": "nacional",
+          "trecho": "ONGs de direito privado, sem fins lucrativos, que atuam no território brasileiro",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "meio_ambiente",
+          "trecho": "já desenvolve projetos na área de meio ambiente",
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "Habilitacao padrão: 5 certidões + balanço",
-          "trecho": "Habilitacao padrão: 5 certidões + balanço",
-          "oficial": true,
+          "valor": "CNPJ ativo, estatuto social que delimita missão de interesse público, já desenvolve projetos na área de meio ambiente, experiência prévia com instrumentos congêneres",
+          "trecho": "ONGs de direito privado, sem fins lucrativos, que atuam no território brasileiro. Se sua entidade tem CNPJ ativo, estatuto social que delimita missão de interesse público e já dese",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura Municipal de Fortaleza",
+      "financiador": "Agência Nacional de Assistência Técnica e Extensão Rural",
       "indicios": [
         {
-          "url": "https://capitaai.com.br/captacao/aviso-chamamento-publico-302026-prefeitura-municipal-fortaleza-0az8wf",
+          "url": "https://capitaai.com.br/captacao/aviso-selecao-publica-42026-agencia-nacional-assistencia-tecnica-r4rjyw",
           "tipo": "agregador"
         }
       ],
       "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "financiador_ano"
       ]
     }
   ],
