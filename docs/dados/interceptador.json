@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-07T17:23:43+00:00",
+  "em": "2026-11-07T17:38:55+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-07T17:11:42+00:00",
+  "ultimo_voo": "2026-11-07T17:25:29+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,21 +44,21 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 14,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.4
+    "tempo_medio_min": 12.7
   },
   "missoes": [
     {
-      "em": "2026-11-07T17:11:42+00:00",
+      "em": "2026-11-07T17:25:29+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Zurich abre edital nacional para apoiar projetos sociais via leis de incentivo fiscal — Brasil",
+      "alvo": "º Edital da Água – segurança alimentar para grupos minorizados — Brasil",
       "qualidade": "insuficiente",
-      "comprovados": 2,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -67,45 +67,54 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
-        "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O edital mencionado não foi encontrado com as informações necessárias, como objeto, prazo e outros detalhes essenciais para a análise.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital está disponível em outro canal ou órgão, já que as informações necessárias não foram encontradas.",
-        "proximo_passo": "Consultar diretamente o Ministério da Cultura ou outros canais oficiais para obter informações completas sobre o edital.",
-        "risco": "A falta de informações detalhadas pode impedir a associação de se candidatar ao edital ou compreender os requisitos necessários."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado como parte do processo de fomento da Mosaic, que atua em território internacional e na esfera privada.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar um documento ou exigência conforme os requisitos do edital, além de anexar os documentos solicitados.",
+        "proximo_passo": "Verificar os requisitos específicos do edital e preparar os documentos necessários para submissão.",
+        "risco": "A falta de clareza sobre os requisitos e anexos pode impedir a submissão adequada do projeto."
       },
       "erro": null,
-      "segundos": 682,
+      "segundos": 760,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-a0b8bbe0267f",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-63c98a1262a5",
       "encontrou": {
         "Órgão / financiador": {
-          "valor": "Ministério da Cultura",
-          "trecho": "Ministério da Cultura",
+          "valor": "Mosaic",
+          "trecho": "Empresa Mosaic",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "internacional",
+          "trecho": "regiões específicas do mundo",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "documento ou exigência",
+          "trecho": "O uso deste Site está sujeito a estes Termos e às licenças e permissões aqui contidas.",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Ministério da Cultura",
+      "financiador": "The Mosaic Company",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano"
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
