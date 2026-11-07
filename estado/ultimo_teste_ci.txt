@@ -1,5 +1,5 @@
-commit: 2214bb3953162089c2eaf14f077595efee49f647
-em: 2026-11-07T12:40:48Z
+commit: 364676ffaada8901464299c65ee9054380d2aa64
+em: 2026-11-07T15:22:18Z
 rc: 1
 ::error title=teste falhou::tests.test_livros_parametros.TestArquivo.test_dez_blocos_e_todos_decididos — AssertionError: 282 not greater than or equal to 300
 ::error title=teste falhou::tests.test_motor01_diario_goiania.TestCoberturaDoDia.test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida — AssertionError: True is not false
@@ -115,13 +115,13 @@ FAIL: test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo (tests.test_consiste
 Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_consistencia_transversal_2026_10_17.py", line 140, in test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo
     self.assertEqual(sorted(i for i in cat if not (L / f"{i}.json").exists()), [])
-AssertionError: Lists differ: ['nova-0af6cfce7cab', 'nova-11754f7f2ba8',[6123 chars]4f5'] != []
+AssertionError: Lists differ: ['nova-0af6cfce7cab', 'nova-11754f7f2ba8',[6294 chars]4f5'] != []
 
-First list contains 322 additional elements.
+First list contains 331 additional elements.
 First extra element 0:
 'nova-0af6cfce7cab'
 
-Diff is 7141 characters long. Set self.maxDiff to None to see it.
+Diff is 7339 characters long. Set self.maxDiff to None to see it.
 
 ======================================================================
 FAIL: test_relatorio_do_cartorio_das_certidoes_guardadas (tests.test_consistencia_transversal_2026_10_17.MesmoRetrato.test_relatorio_do_cartorio_das_certidoes_guardadas)
