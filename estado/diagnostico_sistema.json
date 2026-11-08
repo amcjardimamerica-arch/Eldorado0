@@ -1,12 +1,12 @@
 {
- "em": "2026-11-08T13:40:08+00:00",
+ "em": "2026-11-08T15:29:46+00:00",
  "finalidade": {
   "sistemas": [
    {
     "sistema": "Motores",
     "finalidade": "todo motor ativo lê dentro da sua cadência",
-    "atingido_pct": 79,
-    "estado": "atencao"
+    "atingido_pct": 60,
+    "estado": "falha"
    },
    {
     "sistema": "Maestro",
@@ -75,63 +75,103 @@
     "estado": "sem_dados"
    }
   ],
-  "indice_geral_pct": 57
+  "indice_geral_pct": 55
  },
  "sistemas": {
   "motores": {
    "total": 45,
-   "funcionando": 34,
-   "em_falha": 9,
+   "funcionando": 26,
+   "em_falha": 17,
    "inativos": 2,
    "em_falha_lista": [
     {
+     "id": "do-goiania",
+     "nome": "Diário Oficial do Município de Goiânia",
+     "resultado": "falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:13"
+    },
+    {
+     "id": "dou",
+     "nome": "Diário Oficial da União",
+     "resultado": "falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:16"
+    },
+    {
+     "id": "camara-goiania-pl",
+     "nome": "Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos",
+     "resultado": "falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:07"
+    },
+    {
+     "id": "congresso-nacional",
+     "nome": "Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos)",
+     "resultado": "falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:07"
+    },
+    {
      "id": "pncp-api",
      "nome": "PNCP — API de contratações (chamamentos e credenciamentos)",
-     "resultado": "falha — não lê há 21 dia(s) (514 h); última leitura 18/10 00:25"
+     "resultado": "falha — não lê há 21 dia(s) (516 h); última leitura 18/10 00:25"
+    },
+    {
+     "id": "judiciario-cnj",
+     "nome": "CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024)",
+     "resultado": "falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:16"
     },
     {
      "id": "mpgo-destinacao",
      "nome": "MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)",
-     "resultado": "falha — não lê há 21 dia(s) (513 h); última leitura 18/10 01:27"
+     "resultado": "falha — não lê há 21 dia(s) (515 h); última leitura 18/10 01:27"
     },
     {
      "id": "mptgo-destinacao",
      "nome": "MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)",
-     "resultado": "falha — não lê há 15 dia(s) (362 h); última leitura 24/10 08:16"
+     "resultado": "falha — não lê há 15 dia(s) (364 h); última leitura 24/10 08:16"
     },
     {
      "id": "mpu-destinacao",
      "nome": "MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)",
-     "resultado": "falha — não lê há 21 dia(s) (513 h); última leitura 18/10 01:29"
+     "resultado": "falha — não lê há 21 dia(s) (514 h); última leitura 18/10 01:29"
     },
     {
      "id": "plataforma-wordpress",
      "nome": "Adaptador WordPress — sites oficiais pela API pública",
-     "resultado": "falha — não lê há 21 dia(s) (510 h); última leitura 18/10 03:55"
+     "resultado": "falha — não lê há 21 dia(s) (512 h); última leitura 18/10 03:55"
     },
     {
      "id": "plataforma-mapas-culturais",
      "nome": "Adaptador Mapas Culturais — oportunidades com inscrição aberta",
-     "resultado": "falha — não lê há 21 dia(s) (510 h); última leitura 18/10 03:54"
+     "resultado": "falha — não lê há 21 dia(s) (512 h); última leitura 18/10 03:54"
+    },
+    {
+     "id": "gife",
+     "nome": "GIFE — Grupo de Institutos, Fundações e Empresas",
+     "resultado": "falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:27"
+    },
+    {
+     "id": "salic",
+     "nome": "Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)",
+     "resultado": "falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:28"
     },
     {
      "id": "prefeituras-50-go",
      "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
-     "resultado": "falha — não lê há 21 dia(s) (510 h); última leitura 18/10 03:49"
+     "resultado": "falha — não lê há 21 dia(s) (512 h); última leitura 18/10 03:49"
     },
     {
      "id": "empresas-editais-incentivados",
      "nome": "Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes",
-     "resultado": "falha — não lê há 8 dia(s) (192 h); última leitura 31/10 09:40"
+     "resultado": "falha — não lê há 8 dia(s) (194 h); última leitura 31/10 09:40"
+    },
+    {
+     "id": "cnpq-extensao",
+     "nome": "CNPq / MCTI / Setec-MEC — chamadas com componente de extensão e parceria com OSC",
+     "resultado": "falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:27"
     },
     {
      "id": "estaduais-go-gov",
      "nome": "Oportunidade Estaduais Governamentais de Goiás",
-     "resultado": "falha — não lê há 16 dia(s) (385 h); última leitura 23/10 08:58"
+     "resultado": "falha — não lê há 16 dia(s) (387 h); última leitura 23/10 08:58"
     }
    ],
    "leitura_parcial": [],
-   "status_em": "2026-11-08T10:39-03:00",
+   "status_em": "2026-11-08T12:29-03:00",
    "auditoria": {
     "em": "2026-11-07T15:29:04+00:00",
     "total": 33,
@@ -169,7 +209,7 @@
    "pendentes_provaveis_reais": 421
   },
   "cartorio": {
-   "em": "2026-11-08T12:52:22+00:00",
+   "em": "2026-11-08T14:21:30+00:00",
    "resumo": {
     "pontos_12_total": 4800,
     "pontos_certificados": 3019,
@@ -211,7 +251,7 @@
   "pilotos": {
    "interceptador": {
     "estado": "em atividade",
-    "ultimo_voo": "2026-11-08T13:23:28+00:00",
+    "ultimo_voo": "2026-11-08T14:55:06+00:00",
     "contagem": {
      "desde": "2026-11-02T03:00:00+00:00",
      "zerada_em": "2026-11-02T03:04:43+00:00",
@@ -220,9 +260,9 @@
     }
    },
    "espiao": {
-    "em": "2026-11-08T13:32:18+00:00",
-    "voos": 2755,
-    "empresas_novas": 365
+    "em": "2026-11-08T15:24:42+00:00",
+    "voos": 2763,
+    "empresas_novas": 366
    }
   },
   "saude": {
@@ -260,17 +300,15 @@
    "sem_nada_na_base": 25
   },
   "fluxos_github": {
-   "total": 7,
-   "com_falha": [
-    "03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)"
-   ]
+   "total": 6,
+   "com_falha": []
   },
   "sala_controle": {
-   "em": "2026-11-08T13:39:51+00:00",
-   "indice_saude": 49,
+   "em": "2026-11-08T15:29:30+00:00",
+   "indice_saude": 47,
    "contagem": {
-    "verde": 13,
-    "amarelo": 3,
+    "verde": 11,
+    "amarelo": 5,
     "vermelho": 20,
     "cinza": 0
    }
@@ -322,13 +360,13 @@
   },
   "idade_horas": {
    "repositorio": 0.0,
-   "fluxo": 513.8,
+   "fluxo": 515.6,
    "fichas": 0.0,
    "sala_controle": 0.0,
    "status_motores": 0.0,
-   "maestro": 6.3,
-   "rede_neural": 513.8,
-   "saude": 22.2
+   "maestro": 8.1,
+   "rede_neural": 515.6,
+   "saude": 24.0
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -1074,7 +1112,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 492.0 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 493.9 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1099,7 +1137,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 21 dia(s) (514 h); última leitura 18/10 00:25",
+   "texto": "motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:13",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1107,7 +1145,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 21 dia(s) (513 h); última leitura 18/10 01:27",
+   "texto": "motor em falha: Diário Oficial da União — falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:16",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1115,7 +1153,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 15 dia(s) (362 h); última leitura 24/10 08:16",
+   "texto": "motor em falha: Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos — falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:07",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1123,7 +1161,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 21 dia(s) (513 h); última leitura 18/10 01:29",
+   "texto": "motor em falha: Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos) — falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:07",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1131,7 +1169,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 21 dia(s) (510 h); última leitura 18/10 03:55",
+   "texto": "motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 21 dia(s) (516 h); última leitura 18/10 00:25",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1139,7 +1177,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 21 dia(s) (510 h); última leitura 18/10 03:54",
+   "texto": "motor em falha: CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024) — falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:16",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1147,7 +1185,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 21 dia(s) (510 h); última leitura 18/10 03:49",
+   "texto": "motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 21 dia(s) (515 h); última leitura 18/10 01:27",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1155,7 +1193,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 8 dia(s) (192 h); última leitura 31/10 09:40",
+   "texto": "motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 15 dia(s) (364 h); última leitura 24/10 08:16",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1163,7 +1201,71 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 16 dia(s) (385 h); última leitura 23/10 08:58",
+   "texto": "motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 21 dia(s) (514 h); última leitura 18/10 01:29",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 21 dia(s) (512 h); última leitura 18/10 03:55",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 21 dia(s) (512 h); última leitura 18/10 03:54",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: GIFE — Grupo de Institutos, Fundações e Empresas — falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:27",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:28",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 21 dia(s) (512 h); última leitura 18/10 03:49",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 8 dia(s) (194 h); última leitura 31/10 09:40",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: CNPq / MCTI / Setec-MEC — chamadas com componente de extensão e parceria com OSC — falha — não lê há 1 dia(s) (26 h); última leitura 07/11 10:27",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 16 dia(s) (387 h); última leitura 23/10 08:58",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1191,7 +1293,7 @@
   {
    "codigo": "atrasado_fluxo",
    "gravidade": "media",
-   "texto": "fluxo sem atualização há 513.8 h (limite 3 h)",
+   "texto": "fluxo sem atualização há 515.6 h (limite 3 h)",
    "correcao": "refazer a tela",
    "quantidade": null,
    "exemplos": []
@@ -1199,7 +1301,7 @@
   {
    "codigo": "atrasado_maestro",
    "gravidade": "media",
-   "texto": "maestro sem atualização há 6.3 h (limite 3 h)",
+   "texto": "maestro sem atualização há 8.1 h (limite 3 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1207,7 +1309,7 @@
   {
    "codigo": "atrasado_rede_neural",
    "gravidade": "media",
-   "texto": "rede_neural sem atualização há 513.8 h (limite 26 h)",
+   "texto": "rede_neural sem atualização há 515.6 h (limite 26 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1232,7 +1334,7 @@
   {
    "codigo": "gabarito_desatualizado",
    "gravidade": "media",
-   "texto": "avaliação do Cartório com gabarito tem 569.8 h (semanal)",
+   "texto": "avaliação do Cartório com gabarito tem 571.6 h (semanal)",
    "correcao": "disparar o fluxo 39",
    "quantidade": null,
    "exemplos": []
@@ -1380,7 +1482,7 @@
   }
  ],
  "contagem_problemas": {
-  "alta": 13,
+  "alta": 21,
   "media": 15,
   "baixa": 2
  },
