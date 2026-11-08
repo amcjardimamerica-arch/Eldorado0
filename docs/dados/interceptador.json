@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-08T21:34:00+00:00",
+  "em": "2026-11-08T21:46:05+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-08T21:26:24+00:00",
+  "ultimo_voo": "2026-11-08T21:35:46+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,74 +48,88 @@
     },
     "estrelas_de_ouro": 17,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.0
+    "tempo_medio_min": 9.7
   },
   "missoes": [
     {
-      "em": "2026-11-08T21:26:24+00:00",
+      "em": "2026-11-08T21:35:46+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Aesthetica Art Prize 2026 — £10 mil para artistas de qualquer disciplina (Reino Unido) — Brasil — Brasil",
+      "alvo": "Afroglobal leaders abre inscricoes para impulsionar liderancas negras — Brasil",
       "qualidade": "insuficiente",
-      "comprovados": 6,
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital menciona o Aesthetica Art Prize como financiador e o prazo de inscrição até 2026-10-18, indicando que é uma fonte válida para artistas no Brasil.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende aos requisitos do edital, como a possibilidade de enviar até duas obras por entrada, e preparar um anexo conforme solicitado.",
-        "proximo_passo": "Verificar os requisitos do edital e preparar os documentos necessários para a inscrição.",
-        "risco": "O prazo de inscrição não está claro e pode haver restrições para organizações brasileiras participarem de um edital internacional."
+        "por_que": "O edital comprova a existência de uma iniciativa voltada para o fortalecimento de lideranças negras, com recursos financeiros e parceria com uma instituição federal.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria ter profissionais negros(as) interessados em liderança e seguir o processo de inscrição conforme os anexos fornecidos.",
+        "proximo_passo": "Verificar os anexos do edital e iniciar o processo de inscrição dos profissionais negros(as) interessados em liderança.",
+        "risco": "A falta de profissionais negros(as) qualificados ou a não disponibilidade dos anexos pode impedir o acesso ao edital."
       },
       "erro": null,
-      "segundos": 422,
+      "segundos": 579,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-92a2d60e8ec7",
+      "id": "op-f50a182e57ce",
       "encontrou": {
-        "Prazo de inscrição": {
-          "valor": "? a 2026-10-18",
-          "trecho": "The late deadline for submitting your work is 18 October 2026.",
+        "Objeto": {
+          "valor": "impulsionar lideranças negras",
+          "trecho": "AfroGlobal Leaders abre inscrições para impulsionar lideranças negras",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 8.670",
+          "trecho": "Investimento: R$ 8.670",
           "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Aesthetica Art Prize",
-          "trecho": "The Aesthetica Art Prize recognises and celebrates contemporary art, offering £10,000 prize money, opportunities for exhibition at a major public gallery alongside publication in A",
+          "valor": "Fundação Dom Cabral",
+          "trecho": "programa da Fundação Dom Cabral",
           "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "internacional",
-          "trecho": "We celebrate creativity in all its forms – across multiple media including Painting and Drawing; Video, Sculpture, Installation, Performance; Photography, Digital Art, Artists’ Fil",
+          "valor": "SP",
+          "trecho": "FDC Campus São Paulo",
           "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "You can enter two works of art per entry.",
-          "trecho": "You can enter two works of art per entry.",
+          "valor": "Profissionais negros(as) que desejam fortalecer sua trajetória em posições de liderança",
+          "trecho": "Profissionais negros(as) que desejam fortalecer sua trajetória em posições de liderança",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Aesthetica Magazine",
-      "indicios": [],
+      "financiador": "Fundação Dom Cabral",
+      "indicios": [
+        {
+          "url": "https://gife.org.br/afroglobal-leaders-abre-inscricoes-para-impulsionar-liderancas-negras/",
+          "tipo": "noticia"
+        }
+      ],
       "rotas": [
         "financiador_programa_edital",
-        "financiador_regulamento"
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano",
+        "governo",
+        "parceiro"
       ]
     }
   ],
