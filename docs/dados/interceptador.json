@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-08T05:10:59+00:00",
+  "em": "2026-11-08T05:27:02+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-08T04:46:41+00:00",
+  "ultimo_voo": "2026-11-08T05:12:57+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,38 +43,80 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 15,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 23.6
+    "tempo_medio_min": 13.4
   },
   "missoes": [
     {
-      "em": "2026-11-08T04:46:41+00:00",
+      "em": "2026-11-08T05:12:57+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Goiás Turismo — Governo de Goiás lança edital de R$ 2 milhões para apoio a eventos turísticos — Goiás",
+      "alvo": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás lança edital para Pontos e Pontões de Cultura com … — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 4,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
-      "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "o modelo não devolveu JSON",
-      "segundos": 1417,
+      "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos",
+        "Anexos"
+      ],
+      "pagina_oficial": "https://mostratenpo.cultura.go.gov.br/",
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado como lançado pela Secretaria de Estado da Cultura (Secult) — Governo de Goiás, com atuação no estado de Goiás e na área de cultura.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando propostas relacionadas à cultura, embora os requisitos específicos não tenham sido encontrados.",
+        "proximo_passo": "Consultar o edital completo para obter informações detalhadas sobre os requisitos, prazos e processo de inscrição.",
+        "risco": "A falta de informações sobre requisitos, prazos e outros detalhes pode impedir a associação de se inscrever adequadamente no edital."
+      },
+      "erro": null,
+      "segundos": 803,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 4,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: o modelo não devolveu JSON",
-      "id": "op-5ddfdaa4d0c5",
-      "encontrou": {},
-      "financiador": null,
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-7c57da2412db",
+      "encontrou": {
+        "Órgão / financiador": {
+          "valor": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás",
+          "trecho": "A mostra é promovida pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), em correalização com a Universidade Federal de Goiás (UFG) e a Fundação Rádio e Te",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "A mostra é promovida pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), em correalização com a Universidade Federal de Goiás (UFG) e a Fundação Rádio e Te",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "A mostra é promovida pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), em correalização com a Universidade Federal de Goiás (UFG) e a Fundação Rádio e Te",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Secretaria de Estado da Cultura (Secult)",
       "indicios": [],
-      "rotas": []
+      "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
+      ]
     }
   ],
   "contagem": {
