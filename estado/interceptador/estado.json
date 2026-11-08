@@ -12702,12 +12702,19 @@
    "buscas": 3
   },
   "op-nova-3a2f1a2d8a1a": {
-   "em": "2026-10-31T13:00:03+00:00",
+   "em": "2026-11-08T13:00:26+00:00",
    "tipo": "edital",
    "qualidade": "insuficiente",
    "comprovados": 6,
    "de": "1 · Goiás · estante bronze · tentativa 1",
-   "buscas": 2
+   "buscas": 3,
+   "retentar": {
+    "causa": "busca_sem_resultado",
+    "tentativas": 0,
+    "desde": "2026-11-08",
+    "onde": "qualquer",
+    "ultima_rota": "nuvem"
+   }
   },
   "op-e9436e0c431a": {
    "em": "2026-10-31T13:19:43+00:00",
@@ -19125,63 +19132,6 @@
  },
  "rodadas": [
   {
-   "em": "2026-11-07T21:59:33+00:00",
-   "papel": "Piloto - Interceptador",
-   "modelo": "qwen3-8b",
-   "parametros": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
-   "inicio": "2026-11-07T21:59:33+00:00",
-   "fila_de_resgate": {
-    "total_incompletos": 197,
-    "na_fila": 60,
-    "total": 64,
-    "por_estado": {
-     "resgatado": 4,
-     "aguardando": 60
-    }
-   },
-   "fonte_nova_para_os_motores": true,
-   "id": "op-bf2a618717c9",
-   "modo": "validar",
-   "tipo": "edital",
-   "alvo": "AVISO DE CHAMAMENTO PÚBLICO Nº 30/2026 Prefeitura Municipal de Fortaleza Aceita: organizações da sociedade civ… — Brasil",
-   "de": "2 · Brasil · livro da Biblioteca",
-   "qualidade": "parcial",
-   "comprovados": 7,
-   "dispensados": 0,
-   "total": 12,
-   "nao_resolvidos": [
-    "Resultado",
-    "Prazo de recurso",
-    "Valor",
-    "Área de atuação"
-   ],
-   "pagina_oficial": "https://licitario.com.br/licitacao/ce/municipio-de-fortaleza-000160/FORTALEZA-972101407745637-2026",
-   "fontes_oficiais": [
-    "Objeto",
-    "Prazo de inscrição",
-    "Órgão / financiador",
-    "Território",
-    "Esfera",
-    "Requisitos",
-    "Anexos"
-   ],
-   "parecer_fonte": {
-    "serve_como_fonte": "sim",
-    "por_que": "O aviso de chamamento público está comprovado com informações sobre objeto, prazo de inscrição, órgão financiador, território e requisitos.",
-    "para_a_amc": "A associação comunitária de Goiânia precisaria se habilitar com 5 certidões + balanço e enviar um anexo, além de se inscrever no prazo de 2026-10-15 a 2026-11-16 para acessar o edital.",
-    "proximo_passo": "Verificar os requisitos e anexos do edital e se habilitar com os documentos necessários.",
-    "risco": "A falta de certidões ou balanço pode impedir a habilitação da associação."
-   },
-   "erro": null,
-   "fluxo": "falhou: KeyError",
-   "saude": 7,
-   "para_o_claude": {
-    "a_analisar": 240,
-    "proxima": "2026-11-07"
-   },
-   "segundos": 695
-  },
-  {
    "em": "2026-11-07T22:13:31+00:00",
    "papel": "Piloto - Interceptador",
    "modelo": "qwen3-8b",
@@ -22227,6 +22177,63 @@
     "proxima": "2026-11-08"
    },
    "segundos": 800
+  },
+  {
+   "em": "2026-11-08T12:49:30+00:00",
+   "papel": "Piloto - Interceptador",
+   "modelo": "qwen3-8b",
+   "parametros": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
+   "inicio": "2026-11-08T12:49:30+00:00",
+   "fila_de_resgate": {
+    "total_incompletos": 197,
+    "na_fila": 60,
+    "total": 64,
+    "por_estado": {
+     "resgatado": 4,
+     "aguardando": 60
+    }
+   },
+   "fonte_nova_para_os_motores": false,
+   "id": "op-nova-3a2f1a2d8a1a",
+   "modo": "validar",
+   "tipo": "edital",
+   "alvo": "Edital de premiação cultural nº 01/2026 – pnab — Goiás",
+   "de": "1 · Goiás · estante bronze · tentativa 1",
+   "qualidade": "insuficiente",
+   "comprovados": 6,
+   "dispensados": 0,
+   "total": 12,
+   "nao_resolvidos": [
+    "Prazo de inscrição",
+    "Resultado",
+    "Prazo de recurso",
+    "Valor",
+    "Requisitos"
+   ],
+   "pagina_oficial": null,
+   "fontes_oficiais": [],
+   "parecer_fonte": {
+    "serve_como_fonte": "sim",
+    "por_que": "O edital foi comprovado com informações sobre seu objeto, financiador, território e área de atuação.",
+    "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto cultural de interesse da comunidade e seguir as instruções dos anexos para se candidatar.",
+    "proximo_passo": "Consultar os anexos do edital para entender as exigências e preparar a proposta do projeto cultural.",
+    "risco": "A falta de clareza nos anexos ou a não conformidade com as exigências do edital pode impedir o acesso."
+   },
+   "erro": null,
+   "retentar": {
+    "causa": "busca_sem_resultado",
+    "tentativas": 0,
+    "desde": "2026-11-08",
+    "onde": "qualquer",
+    "ultima_rota": "nuvem"
+   },
+   "fluxo": "falhou: KeyError",
+   "saude": 7,
+   "para_o_claude": {
+    "a_analisar": 240,
+    "proxima": "2026-11-08"
+   },
+   "segundos": 683
   }
  ]
 }
