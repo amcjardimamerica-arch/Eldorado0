@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-08T22:25:22+00:00",
+  "em": "2026-11-08T22:35:43+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-08T22:22:43+00:00",
+  "ultimo_voo": "2026-11-08T22:27:14+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,44 +43,88 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 17,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 1.9
+    "tempo_medio_min": 7.9
   },
   "missoes": [
     {
-      "em": "2026-11-08T22:22:43+00:00",
+      "em": "2026-11-08T22:27:14+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Ambev abre edital de até R$ 67 milhões para projetos culturais e esportivos em todo o Brasil Observatório 3º S… — Brasil",
+      "alvo": "Anexo IX do Edital (Minuta do Termo de Colaboração) — Brasil",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 7,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "nenhuma fonte legível",
-      "segundos": 111,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O texto comprovado descreve o objeto e os requisitos para a realização de projetos em meio ambiente, que são relevantes para a associação comunitária de Goiânia.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria estar inscrita no CNPJ/MF, ter sede definida e apresentar procuração nos autos para acessar o edital.",
+        "proximo_passo": "Verificar os requisitos de inscrição e preparar os documentos necessários para submeter a proposta.",
+        "risco": "A falta de inscrição no CNPJ/MF ou a não apresentação da procuração pode impedir o acesso ao edital."
+      },
+      "erro": null,
+      "segundos": 475,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: nenhuma fonte legível",
-      "id": "op-2cd6c51a9d87",
-      "encontrou": {},
-      "financiador": "Ambev",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-5d7443ebc504",
+      "encontrou": {
+        "Objeto": {
+          "valor": "executar projetos ou atividades parametrizadas, cuja concepção seja da Administração Pública Federal",
+          "trecho": "executar projetos ou atividades parametrizadas, cuja concepção seja da Administração Pública Federal",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "MINISTÉRIO DO MEIO AMBIENTE E MUDANÇA DO CLIMA",
+          "trecho": "MINISTÉRIO DO MEIO AMBIENTE E MUDANÇA DO CLIMA",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "nacional",
+          "trecho": "nacional",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "meio_ambiente",
+          "trecho": "DEPARTAMENTO DE GESTÃO DE RESÍDUOS",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "inscrito(a) no CNPJ/MF sob o nº ........................., com sede ............................., procuração apresentada nos autos",
+          "trecho": "inscrito(a) no CNPJ/MF sob o nº ........................., com sede ............................., doravante denominado(a) OSC, representada pelo(a) seu (sua) Presidente, o Sr. (a)",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "UNIÃO, por intermédio do [órgão], [ou A ENTIDADE PÚBLICA FEDERAL]",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano"
+        "financiador_ano",
+        "governo",
+        "parceiro"
       ]
     }
   ],
