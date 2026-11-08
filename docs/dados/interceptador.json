@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-08T00:33:56+00:00",
+  "em": "2026-11-08T00:53:56+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-08T00:23:16+00:00",
+  "ultimo_voo": "2026-11-08T00:36:01+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,77 +48,91 @@
     },
     "estrelas_de_ouro": 15,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.0
+    "tempo_medio_min": 17.2
   },
   "missoes": [
     {
-      "em": "2026-11-08T00:23:16+00:00",
+      "em": "2026-11-08T00:36:01+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 16 abordagens; busc",
-      "alvo": "Instituto abre edital nacional para apoiar projetos educacionais",
-      "qualidade": "insuficiente",
-      "comprovados": 6,
+      "alvo": "SIM para Cuidar do Futuro 2026: inscrições abertas para projetos ...",
+      "qualidade": "parcial",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Anexos"
+        "Prazo de recurso"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://prosas.com.br/editais/18315-chamada-edp-de-projetos-incentivados-sim-para-cuidar-do-futuro-2026?linkId=100000431151321&linkId=100000431720502",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre prazo de inscrição, financiadores, território, esfera, requisitos e área de atuação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria ser uma organização da sociedade civil, atuar na área de educação e se inscrever no prazo de inscrição até 2026-04-03.",
-        "proximo_passo": "Verificar os requisitos detalhados e se inscrever no edital antes do prazo de inscrição.",
-        "risco": "O prazo de inscrição pode expirar antes que a associação se prepare e envie a proposta."
+        "por_que": "O texto comprovado menciona o objeto, prazo de inscrição, valor, órgão financiador, território, esfera, requisitos, anexos e área de atuação do edital, o que permite a construção de uma resposta baseada em informações reais.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa se inscrever no edital, apresentar um projeto que atenda aos requisitos estabelecidos, como estar aprovado em lei de incentivo federal nas categorias mencionadas, e anexar os documentos necessários.",
+        "proximo_passo": "Verificar os requisitos do edital e preparar o projeto para inscrição no prazo estabelecido (2026-07-15 a 2026-08-31).",
+        "risco": "O projeto não atender aos requisitos estabelecidos ou não ser aprovado em lei de incentivo federal, o que impediria o acesso ao edital."
       },
       "erro": null,
-      "segundos": 601,
+      "segundos": 1031,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "cat-255c1f6a826b",
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso",
+      "id": "cat-6cce0a52a07c",
       "encontrou": {
+        "Objeto": {
+          "valor": "apoiar projetos que melhorem a qualidade de vida e o desenvolvimento das comunidades, com foco em educação e capacitação, geração de renda, empoderamento cultural, democratização do acesso à cultura e ao esporte, preservação ambiental, economia circular e transição energética justa",
+          "trecho": "O objetivo é apoiar projetos que melhorem a qualidade de vida e o desenvolvimento das comunidades, com foco em educação e capacitação, geração de renda, empoderamento cultural, dem",
+          "oficial": false,
+          "dispensado": false
+        },
         "Prazo de inscrição": {
-          "valor": "? a 2026-04-03",
-          "trecho": "as inscrições seguem abertas até o dia 3 de abril de 2026",
+          "valor": "2026-07-15 a 2026-08-31",
+          "trecho": "durante o período de inscrições entre 15 de julho e 31 de agosto de 2026",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "até R$ 12 milhões",
+          "trecho": "O valor total projetado para esta Chamada EDP de Projetos Incentivados é de até R$ 12 milhões por meio das Leis Federais de Incentivo ao Esporte, à Reciclagem, Fundo do Idoso, Fund",
           "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Instituto Chamex e Instituto para o Desenvolvimento do Investimento Social",
-          "trecho": "Instituto Chamex, em parceria com o Instituto para o Desenvolvimento do Investimento Social",
+          "valor": "Instituto EDP",
+          "trecho": "O Instituto EDP, em consonância à Política de Responsabilidade Social da EDP, convida organizações socioambientais, culturais e esportivas a apresentarem propostas para o processo ",
           "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "nacional",
-          "trecho": "Podem participar organizações de qualquer região do Brasil",
+          "valor": "SP",
+          "trecho": "Seu negócio de Distribuição atende a cerca de 3,8 milhões de clientes no estado de São Paulo e no estado do Espírito Santo.",
           "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "educacao",
-          "trecho": "O edital busca incentivar propostas que contribuam para enfrentar desafios do sistema educacional brasileiro",
+          "valor": "esporte",
+          "trecho": "com foco em educação e capacitação, geração de renda, empoderamento cultural, democratização do acesso à cultura e ao esporte, preservação ambiental, economia circular e transição ",
           "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "organizações da sociedade civil",
-          "trecho": "Podem participar organizações de qualquer região do Brasil",
+          "valor": "projetos aprovados em lei de incentivo federal nas seguintes categorias",
+          "trecho": "De acordo com a Política de Investimentos Sociais da EDP no Brasil, para esta seleção pública serão aceitos projetos aprovados em lei de incentivo federal nas seguintes categorias:",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Instituto Chamex",
-      "indicios": [],
+      "financiador": "Instituto EDP",
+      "indicios": [
+        {
+          "url": "https://sindienergia.org.br/2026/07/31/sim-para-cuidar-do-futuro-2026-inscricoes-abertas-para-projetos-sociais-culturais-e-esportivos/",
+          "tipo": "noticia"
+        }
+      ],
       "rotas": [
         "site_do_financiador",
         "site_do_financiador_edital",
