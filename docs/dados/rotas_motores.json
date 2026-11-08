@@ -1,5 +1,5 @@
 {
- "em": "2026-11-08T12:42:42+00:00",
+ "em": "2026-11-08T14:11:38+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,29 +7,33 @@
   "alterar_rota": 58,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 55863
+  "exemplos_da_rede": 55939
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.4305
+    3.4275
    ],
    [
     "origem:rota original",
-    3.2719
+    3.0783
    ],
    [
     "tok:inscricoes",
     2.9195
    ],
    [
-    "tok:aldirblanc",
-    2.5506
+    "origem:biblioteca",
+    2.8132
    ],
    [
-    "origem:biblioteca",
-    2.5401
+    "tld:br",
+    2.7097
+   ],
+   [
+    "tok:aldirblanc",
+    2.5506
    ],
    [
     "tok:imprensa",
@@ -44,20 +48,16 @@
     2.4057
    ],
    [
+    "tok:transparencia",
+    2.1969
+   ],
+   [
     "tok:sitemap",
-    2.1062
+    2.1072
    ],
    [
     "tok:xml",
-    2.1062
-   ],
-   [
-    "tld:br",
-    2.096
-   ],
-   [
-    "tok:transparencia",
-    2.0856
+    2.1072
    ]
   ],
   "piores_sinais": [
@@ -74,20 +74,20 @@
     -2.7998
    ],
    [
-    "tok:2026",
-    -3.1144
+    "origem:padrão",
+    -3.0545
    ],
    [
-    "origem:padrão",
-    -3.327
+    "tok:2026",
+    -3.1203
    ],
    [
     "tok:content",
-    -3.7029
+    -3.7088
    ],
    [
     "tok:uploads",
-    -3.7029
+    -3.7088
    ],
    [
     "origem:câmara",
@@ -1115,7 +1115,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-08T05:00:15+00:00",
+    "em": "2026-11-08T14:10:56+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1223,8 +1223,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-08T06:27:09+00:00",
-    "testes": 13,
+    "em": "2026-11-08T14:11:12+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1618,10 +1618,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 4,
-    "aprendido_em": "2026-11-08T05:00:04+00:00"
+    "aprendido_em": "2026-11-08T14:10:49+00:00"
    },
    "afinado": {
-    "em": "2026-11-08T05:00:04+00:00",
+    "em": "2026-11-08T14:10:49+00:00",
     "testes": 13,
     "melhor": {
      "url": "https://www.iadb.org/sitemap.xml",
@@ -1782,11 +1782,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 15,
-    "aprendido_em": "2026-11-08T03:25:11+00:00"
+    "aprendido_em": "2026-11-08T14:10:39+00:00"
    },
    "afinado": {
-    "em": "2026-11-08T03:25:11+00:00",
-    "testes": 12,
+    "em": "2026-11-08T14:10:39+00:00",
+    "testes": 13,
     "melhor": {
      "url": "https://www.unicef.org/sitemap.xml",
      "via": "direto",
@@ -1823,10 +1823,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-11-08T06:27:15+00:00"
+    "aprendido_em": "2026-11-08T14:11:21+00:00"
    },
    "afinado": {
-    "em": "2026-11-08T06:27:15+00:00",
+    "em": "2026-11-08T14:11:21+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
@@ -1906,10 +1906,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-11-08T06:27:25+00:00"
+    "aprendido_em": "2026-11-08T14:11:38+00:00"
    },
    "afinado": {
-    "em": "2026-11-08T06:27:25+00:00",
+    "em": "2026-11-08T14:11:38+00:00",
     "testes": 14,
     "melhor": {
      "url": "https://mariaemilia.org.br/feed",
