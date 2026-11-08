@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-08T18:08:30+00:00",
+  "em": "2026-11-08T18:27:01+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-08T17:54:04+00:00",
+  "ultimo_voo": "2026-11-08T18:10:24+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,65 +48,82 @@
     },
     "estrelas_de_ouro": 17,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.7
+    "tempo_medio_min": 15.8
   },
   "missoes": [
     {
-      "em": "2026-11-08T17:54:04+00:00",
+      "em": "2026-11-08T18:10:24+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Aparecida de Goiânia — Diário Oficial de Aparecida de Goiânia — edição (2026-09-23) — chamamento público — Goiás / Aparecida de Goiânia",
-      "qualidade": "insuficiente",
-      "comprovados": 2,
-      "dispensados": 0,
+      "alvo": "Chamamento publico para credenciamento de agentes culturais pnab ciclo 2. — fundo municipal da cultura de coli… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 8,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://colinasdosul.go.gov.br/politica-nacional-aldir-blan/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o objeto da medida e o órgão financiador, o que é essencial para identificar a fonte de apoio.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o objeto da medida (redução da alíquota do ITBI) se aplica a suas atividades e se ela se enquadra nos critérios de elegibilidade definidos pela Prefeitura de Aparecida.",
-        "proximo_passo": "Consultar a Prefeitura de Aparecida para obter informações detalhadas sobre os requisitos e como se inscrever na medida.",
-        "risco": "A falta de informações sobre prazos, requisitos e área de atuação pode impedir a associação de se qualificar adequadamente para o benefício."
+        "por_que": "O texto comprovado fornece informações sobre o edital, incluindo objeto, requisitos, órgão financiador e área de atuação, o que é suficiente para responder às perguntas.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria comprovar uma relevante contribuição ao desenvolvimento artístico ou cultural do Município de Colinas do Sul e seguir o processo de credenciamento conforme os anexos mencionados.",
+        "proximo_passo": "Verificar os anexos do edital e preparar a documentação necessária para comprovar a contribuição cultural relevante.",
+        "risco": "A falta de informações sobre o prazo de inscrição pode impedir a associação de se inscrever no prazo correto."
       },
       "erro": null,
-      "segundos": 823,
+      "segundos": 949,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-d7fb4df63b1c",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor",
+      "id": "op-690f9928042c",
       "encontrou": {
         "Objeto": {
-          "valor": "Redução da alíquota do ITBI para 1,5% em Aparecida",
-          "trecho": "Prefeito Vilela sanciona lei que reduz alíquota do ITBI para 1,5% em Aparecida",
-          "oficial": false,
+          "valor": "premiação de agentes culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do Município de Colinas do Sul",
+          "trecho": "O objeto deste Edital é a premiação de agentes culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do Município de Colinas do Sul, Estado ",
+          "oficial": true,
           "dispensado": false
         },
-        "Órgão / financiador": {
-          "valor": "Prefeitura de Aparecida",
-          "trecho": "Prefeito Vilela sanciona lei que reduz alíquota do ITBI para 1,5% em Aparecida",
+        "Prazo de inscrição": {
+          "valor": "dispensado — O prazo de inscrição não foi mencionado com data completa no texto.",
+          "trecho": "De 08:00 horas do dia 07/10/2026 até às 23:59 horas do dia 01/ ",
           "oficial": false,
+          "dispensado": true
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria Municipal de Educação e Cultura",
+          "trecho": "A Secretaria Municipal de Educação e Cultura, torna público o presente edital elaborado com base na Lei nº 14.399/2022 (Lei PNAB), na Lei nº 14.903/2024 (Marco regulatório do fomen",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "O objeto deste Edital é a premiação de agentes culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do Município de Colinas do Sul, Estado ",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "O objeto deste Edital é a premiação de agentes culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do Município de Colinas do Sul, Estado ",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "relevante contribuição ao desenvolvimento artístico ou cultural do Município de Colinas do Sul",
+          "trecho": "O objeto deste Edital é a premiação de agentes culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do Município de Colinas do Sul, Estado ",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Aparecida",
+      "financiador": "Prefeitura de Colinas do Sul",
       "indicios": [],
       "rotas": [
-        "site_municipal",
         "financiador_programa_edital"
       ]
     }
