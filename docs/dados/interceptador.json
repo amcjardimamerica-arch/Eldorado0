@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-08T19:19:57+00:00",
+  "em": "2026-11-08T19:38:12+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-08T19:03:02+00:00",
+  "ultimo_voo": "2026-11-08T19:22:09+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,92 +39,87 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 17,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 16.1
+    "tempo_medio_min": 15.3
   },
   "missoes": [
     {
-      "em": "2026-11-08T19:03:02+00:00",
+      "em": "2026-11-08T19:22:09+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Fundo municipal da cultura de colinas do sul — chamamento publico para credenciamento de agentes culturais pna… — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 8,
-      "dispensados": 1,
+      "alvo": "Goiânia — Diário Oficial de Goiânia — edição 8870 (2026-09-24) — chamamento público — Goiás / Goiânia — Goiás / Goiânia",
+      "qualidade": "insuficiente",
+      "comprovados": 6,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://colinasdosul.go.gov.br/politica-nacional-aldir-blan/",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O texto fornece informações sobre o chamamento público para credenciamento de agentes culturais, incluindo objeto, prazo de inscrição, órgão financiador, território, esfera, requisitos, anexos e área de atuação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se credenciar como agente cultural, apresentar prestação de contas, contrapartida e assinar um instrumento jurídico, além de seguir as diretrizes dos anexos relacionados ao chamamento público.",
-        "proximo_passo": "Consultar os anexos do edital e se credenciar como agente cultural junto à Secretaria Municipal de Educação e Cultura de Colinas do Sul.",
-        "risco": "A falta de informações sobre o prazo de inscrição e valor pode impedir a elaboração de um plano de ação adequado para acessar o fundo."
+        "serve_como_fonte": "nao",
+        "por_que": "O texto fornecido não contém informações suficientes para servir como fonte para a AMC, pois não menciona prazo, valor, área de atuação ou outros detalhes essenciais para a participação de uma associação comunitária.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar se os requisitos mencionados no edital são compatíveis com suas atividades e, caso se enquadre, apresentar a documentação que comprove a não ocorrência das vedações do art. 20-A da Lei Orgânica do Município de Goiânia.",
+        "proximo_passo": "Consultar o edital completo para obter informações detalhadas sobre prazos, requisitos e processos de inscrição.",
+        "risco": "A falta de informações sobre prazos, valor e área de atuação pode impedir a associação comunitária de se inscrever adequadamente no processo."
       },
       "erro": null,
-      "segundos": 965,
+      "segundos": 920,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 7,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor",
-      "id": "op-ad96d46590cf",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-dffa3addf9ca",
       "encontrou": {
         "Objeto": {
-          "valor": "premiação de agentes culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do Município de Colinas do Sul",
-          "trecho": "O objeto deste Edital é a premiação de agentes culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do Município de Colinas do Sul, Estado ",
-          "oficial": true,
+          "valor": "Nomear os candidatos convocados pelo Edital de Convocação nº 035/2026, do Concurso Público regido pelo Edital nº 001/2020, para, em caráter efetivo, exercerem o cargo discriminado no Anexo a este Decreto, integrando o Quadro de Pessoal regido pelo Estatuto dos Servidores Públicos do Município de Goiânia, com lotação na Secretaria Municipal de Educação.",
+          "trecho": "Art. 1º Nomear os candidatos convocados pelo Edital de Convocação nº 035/2026, do Concurso Público regido pelo Edital nº 001/2020, para, em caráter efetivo, exercerem o cargo discr",
+          "oficial": false,
           "dispensado": false
         },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O prazo de inscrição é especificado no texto.",
-          "trecho": "De 08:00 horas do dia 07/10/2026 até às 23:59 horas do dia 01/ ",
-          "oficial": false,
-          "dispensado": true
-        },
         "Órgão / financiador": {
-          "valor": "Secretaria Municipal de Educação e Cultura",
-          "trecho": "A Secretaria Municipal de Educação e Cultura, torna público o presente edital elaborado com base na Lei nº 14.399/2022 (Lei PNAB), na Lei nº 14.903/2024 (Marco regulatório do fomen",
-          "oficial": true,
+          "valor": "Prefeitura de Goiânia",
+          "trecho": "PREFEITURA DE GOIÂNIA SECRETARIA MUNICIPAL DA CASA CIVIL",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "O objeto deste Edital é a premiação de agentes culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do Município de Colinas do Sul, Estado ",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "O objeto deste Edital é a premiação de agentes culturais que tenham prestado relevante contribuição ao desenvolvimento artístico ou cultural do Município de Colinas do Sul, Estado ",
-          "oficial": true,
+          "trecho": "Goiânia – GO, CEP: 74.805-010",
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "prestação de contas, contrapartida, assinatura de instrumento jurídico",
-          "trecho": "O prêmio possui natureza jurídica de doação sem encargo, ou seja, será realizado por meio de pagamento direto ao contemplado, sem estabelecimento de obrigações futuras, sem exigênc",
-          "oficial": true,
+          "valor": "apresentação da documentação que comprova a não ocorrência das vedações do art. 20-A, da Lei Orgânica do Município de Go",
+          "trecho": "O PREFEITO DE GOIÂNIA, no uso das atribuições que lhe confere o art. 115, incisos II, IV e XXIV, da Lei Orgânica do Município de Goiânia, tendo em vista o disposto na Lei Complemen",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Colinas do Sul",
+      "financiador": "Prefeitura de Goiânia",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
