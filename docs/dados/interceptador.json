@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-08T11:47:01+00:00",
+  "em": "2026-11-08T11:56:20+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-08T11:36:36+00:00",
+  "ultimo_voo": "2026-11-08T11:54:35+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,87 +39,44 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 15,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.8
+    "tempo_medio_min": 1.2
   },
   "missoes": [
     {
-      "em": "2026-11-08T11:36:36+00:00",
+      "em": "2026-11-08T11:54:35+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "SECULT-GO (cultura) — Pnab 2026: Divulgado resultado Final da Fase de Habilitação Infância e Juventude na Cult… — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 6,
-      "dispensados": 1,
+      "alvo": "Fundo municipal de assistencia social de inhumas - fmas — chamamento público o credenciamento de instituições … — Goiás / Inhumas",
+      "qualidade": "insuficiente",
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos"
-      ],
-      "pagina_oficial": "https://pnab.cultura.go.gov.br",
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre o objeto, resultado, órgão financiador, território e área de atuação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é apoiar projetos culturais voltados para a infância e juventude, e verificar se atende aos requisitos não explicitados, como capacidade técnica e legalidade.",
-        "proximo_passo": "Verificar os requisitos não divulgados e se a associação atende aos critérios para participar do edital.",
-        "risco": "A falta de informações sobre prazo de inscrição, valor e requisitos pode impedir a associação de se preparar adequadamente para o processo seletivo."
-      },
-      "erro": null,
-      "segundos": 588,
+      "nao_resolvidos": null,
+      "pagina_oficial": null,
+      "parecer_fonte": {},
+      "erro": "nenhuma fonte legível",
+      "segundos": 71,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 4,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Prazo de recurso, Valor, Requisitos",
-      "id": "op-949274b2d8e7",
-      "encontrou": {
-        "Objeto": {
-          "valor": "Apoio à execução de projetos culturais voltados para a infância e juventude",
-          "trecho": "Divulgado resultado Final da Fase de Habilitação Infância e Juventude na Cult…",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura",
-          "trecho": "PNAB Política Nacional Aldir Blanc – Secretaria de Estado da Cultura",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "GOIAS.GOV.BR",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "PNAB Política Nacional Aldir Blanc – Secretaria de Estado da Cultura",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "Secretaria de Estado da Cultura",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "falhou: nenhuma fonte legível",
+      "id": "op-662c854db2d6",
+      "encontrou": {},
+      "financiador": "Fundo Municipal de Assistência Social de Inhumas - FMAS",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_municipal",
+        "financiador_programa_edital"
       ]
     }
   ],
