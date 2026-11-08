@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-08T06:41:54+00:00",
+  "em": "2026-11-08T06:58:28+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-08T06:29:14+00:00",
+  "ultimo_voo": "2026-11-08T06:44:04+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,79 +39,60 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 15,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.9
+    "tempo_medio_min": 13.6
   },
   "missoes": [
     {
-      "em": "2026-11-08T06:29:14+00:00",
+      "em": "2026-11-08T06:44:04+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · estante bronze · tentativa 1",
-      "alvo": "Destinação de bens e valores - chamamento público — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "Secretaria de Estado da Cultura (Secult) — Secult Goiás publica novo Chamamento Público para apoio na execução… — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 0,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "https://www.mpf.mp.br/o-mpf/unidades/pr-ba/destinacao-de-bens-e-valores",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital menciona a destinação de bens e valores decorrentes da atuação finalística da instituição, o que pode ser uma fonte de recursos para a AMC.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no chamamento público, apresentando informações de contato, Formulário de Inscrição e Termo de Adesão assinado por representante legalmente habilitado, além dos documentos listados no item 2 do Edital de Chamamento Público.",
-        "proximo_passo": "Verificar os documentos exigidos no edital e se inscrever no chamamento público.",
-        "risco": "A falta de informações sobre o prazo de inscrição e outros detalhes pode impedir a participação efetiva da AMC no processo."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações suficientes para confirmar a existência do chamamento público mencionado.",
+        "para_a_amc": null,
+        "proximo_passo": null,
+        "risco": null
       },
       "erro": null,
-      "segundos": 713,
+      "segundos": 814,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 6,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-174c8139a367",
-      "encontrou": {
-        "Objeto": {
-          "valor": "destinação de bens e valores decorrentes da atuação finalística da instituição",
-          "trecho": "destinação de bens e valores decorrentes da atuação finalística da instituição",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Ministério Público Federal",
-          "trecho": "Ministério Público Federal",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "BA",
-          "trecho": "Procuradoria da República na Bahia",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "informações de contato, Formulário de Inscrição e Termo de Adesão assinado por representante legalmente habilitado, documentos listados no item 2 do Edital de Chamamento Público",
-          "trecho": "Os interessados, devidamente qualificados com as informações de contato, devem requerer sua inscrição por meio de preenchimento do Formulário de Inscrição e Termo de Adesão ao Edit",
-          "oficial": true,
-          "dispensado": false
-        }
-      },
-      "financiador": "Ministério Público Federal",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-246bfd02fd39",
+      "encontrou": {},
+      "financiador": "Secretaria de Estado da Cultura (Secult)",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
