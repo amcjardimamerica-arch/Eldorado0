@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-08T04:05:23+00:00",
+  "em": "2026-11-08T04:21:16+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-08T03:58:31+00:00",
+  "ultimo_voo": "2026-11-08T04:07:04+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,97 +38,95 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
+    "validadas": 0,
     "parciais": 0,
-    "insuficientes": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 15,
-    "fontes_novas_para_os_motores": 1,
-    "tempo_medio_min": 6.3
+    "fontes_novas_para_os_motores": 0,
+    "tempo_medio_min": 13.4
   },
   "missoes": [
     {
-      "em": "2026-11-08T03:58:31+00:00",
+      "em": "2026-11-08T04:07:04+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "repositório único: Interceptador: completar 12 item(ns) a partir do site oficial certificado",
-      "alvo": "Juventude Solidária abre inscrições para projetos sociais",
-      "qualidade": "validada",
-      "comprovados": 9,
-      "dispensados": 1,
+      "de": "repositório único: Interceptador: achar o site oficial (o Cartório não achou em 2 abordagens; busca",
+      "alvo": "Premio mol reconhece reportagens que inspiram solidariedade e a cultura de doacao",
+      "qualidade": "insuficiente",
+      "comprovados": 5,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos",
+        "Anexos"
       ],
-      "pagina_oficial": "https://jornalatual.com.br/juventude-solidaria-abre-inscricoes-para-projetos-sociais/",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado descreve o edital de apoio financeiro da Secretaria Nacional de Juventude, que oferece recursos até 9 de junho de 2026, com valor máximo de R$ 12 mil, e abrange organizações da sociedade civil, incluindo associações comunitárias.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentar uma proposta de projeto social relacionado à área de atuação (saúde), com registro das atividades e prestação de contas periódica, e garantir que o projeto esteja alinhado com os objetivos do edital.",
-        "proximo_passo": "A associação deve se inscrever no edital da Secretaria Nacional de Juventude, apresentando a proposta de projeto social e os documentos exigidos.",
-        "risco": "A falta de registro das atividades ou a não apresentação da prestação de contas periódica pode impedir a concessão do apoio financeiro."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações suficientes para confirmar que o prêmio é uma fonte de financiamento para organizações da sociedade civil.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o prêmio se enquadra em sua área de atuação e se há requisitos não mencionados para participação.",
+        "proximo_passo": "Consultar diretamente o Instituto MOL para obter informações sobre prazos, requisitos e como se inscrever.",
+        "risco": "A falta de informações sobre prazos, valor e requisitos pode impedir a participação da associação."
       },
       "erro": null,
-      "segundos": 381,
+      "segundos": 802,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": true,
-      "fontes_oficiais": 8,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "cat-a3b0194f392f",
+      "fonte_nova_para_os_motores": false,
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "rec-aculturadedoacao",
       "encontrou": {
         "Objeto": {
-          "valor": "apoio financeiro a projetos e aceita propostas até 9 de junho",
-          "trecho": "A iniciativa, coordenada pela Secretaria Nacional de Juventude oferece apoio financeiro a projetos e aceita propostas até 9 de junho",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "? a 2026-06-09",
-          "trecho": "As propostas podem ser enviadas até 9 de junho de 2026",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "recursos de até R$ 12 mil para custear as atividades previstas",
-          "trecho": "Os projetos aprovados recebem recursos de até R$ 12 mil para custear as atividades previstas",
-          "oficial": true,
+          "valor": "reconhecer reportagens que inspiram solidariedade e a cultura de doação",
+          "trecho": "Prêmio MOL reconhece reportagens que inspiram solidariedade e a cultura de doação",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Secretaria Nacional de Juventude",
-          "trecho": "A iniciativa, coordenada pela Secretaria Nacional de Juventude oferece apoio financeiro a projetos e aceita propostas até 9 de junho",
-          "oficial": true,
+          "valor": "Instituto MOL",
+          "trecho": "a premiação é uma iniciativa do Instituto MOL",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "nacional",
-          "trecho": "A iniciativa, coordenada pela Secretaria Nacional de Juventude oferece apoio financeiro a projetos e aceita propostas até 9 de junho",
-          "oficial": true,
+          "valor": "SP",
+          "trecho": "Realizada na última terça-feira (07/04) no Teatro FECAP, em São Paulo",
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "saude",
-          "trecho": "Os projetos inscritos devem se enquadrar em um dos oito eixos definidos pela plataforma: saúde, segurança alimentar, educação, participação social e democracia, comunicação e tecno",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "organizações da sociedade civil, coletivos comunitários e órgãos públicos — com ou sem CNPJ, registro das atividades e prestação de contas periódica",
-          "trecho": "Podem se inscrever organizações da sociedade civil, coletivos comunitários e órgãos públicos — com ou sem CNPJ. A plataforma não exige estrutura formal das organizações em todos os",
-          "oficial": true,
+          "valor": "direitos",
+          "trecho": "O evento, realizado no Dia do Jornalista, contemplou reportagens que ampliam o olhar sobre as diferentes formas de solidariedade, evidenciando narrativas que conectam territórios, ",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": null,
-      "indicios": [],
-      "rotas": []
+      "financiador": "Instituto MOL",
+      "indicios": [
+        {
+          "url": "https://observatorio3setor.org.br/premio-mol-reconhece-reportagens-que-inspiram-solidariedade-e-a-cultura-de-doacao/",
+          "tipo": "noticia"
+        }
+      ],
+      "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
+      ]
     }
   ],
   "contagem": {
