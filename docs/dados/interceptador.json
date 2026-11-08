@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-08T20:10:16+00:00",
+  "em": "2026-11-08T20:29:02+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-08T19:56:15+00:00",
+  "ultimo_voo": "2026-11-08T20:12:26+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,76 +39,79 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 17,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.2
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 15.8
   },
   "missoes": [
     {
-      "em": "2026-11-08T19:56:15+00:00",
+      "em": "2026-11-08T20:12:26+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Inscrições para os Jogos Interculturais 2026 seguem abertas até 23 de outubro — Goiás — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "SECTI-GO (ciência e tecnologia) — Edital nº 002/2026 — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.goiaspelainovacao.org.br/pacto-goias",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que as inscrições para os Jogos Interculturais 2026 seguem abertas até 23 de outubro, indicando que a SEDUC é o órgão responsável.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no processo de seleção para os Jogos Interculturais 2026, apresentando suas propostas e atendendo aos critérios estabelecidos pelo órgão responsável.",
-        "proximo_passo": "Verificar os requisitos e anexos necessários para a inscrição e se inscrever antes do prazo de 23 de outubro.",
-        "risco": "O prazo de inscrição pode expirar sem que a associação tenha se cadastrado, ou a falta de requisitos específicos pode impedir a participação."
+        "por_que": "O edital SECTI-GO (ciência e tecnologia) — Edital nº 002/2026 — Goiás foi comprovado com informações sobre seu objeto, financiadores, território, esfera e requisitos.",
+        "para_a_amc": "Uma associação comunitária de Goiânia precisa ser entidade pública ou privada, coletivo, ICTs, associações, empresas, hubs ou atores sociais e seguir os requisitos do edital, incluindo anexar os documentos necessários conforme os anexos mencionados.",
+        "proximo_passo": "Consultar os anexos do edital para entender os documentos necessários e os critérios de elegibilidade.",
+        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a associação de se inscrever no prazo correto."
       },
       "erro": null,
-      "segundos": 793,
+      "segundos": 950,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-96f8aa91e43d",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-4fc981efebe4",
       "encontrou": {
         "Objeto": {
-          "valor": "Inscrições para os Jogos Interculturais 2026",
-          "trecho": "Inscrições para os Jogos Interculturais 2026 seguem abertas até 23 de outubro – SEDUC",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "? a 2026-10-23",
-          "trecho": "Inscrições para os Jogos Interculturais 2026 seguem abertas até 23 de outubro – SEDUC",
-          "oficial": false,
+          "valor": "fomentar a inovação, pesquisa, desenvolvimento tecnológico e empreendedorismo no estado de Goiás",
+          "trecho": "O Pacto Goiás pela Inovação é um movimento voluntário de governança conjunta, reunindo entidades públicas e privadas, coletivos, ICTs, associações, empresas, hubs e atores sociais ",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "SEDUC",
-          "trecho": "Inscrições para os Jogos Interculturais 2026 seguem abertas até 23 de outubro – SEDUC",
-          "oficial": false,
+          "valor": "Secretaria de Estado de Ciência, Tecnologia e Inovação (Secti); Fundação de Amparo à Pesquisa do Estado de Goiás (Fapeg); universidades",
+          "trecho": "A Coordenação atual, par ao biênio 2025 - 2027 é composta por: Coordenador: Marco César Chaul - representando a FECOMÉRCIO Vice-Coordenador: Pedro Henrique Lemes Camilo - represent",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "O Pacto Goiás pela Inovação é um movimento voluntário de governança conjunta, reunindo entidades públicas e privadas, coletivos, ICTs, associações, empresas, hubs e atores sociais ",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "ser entidade pública ou privada, coletivo, ICTs, associações, empresas, hubs e atores sociais",
+          "trecho": "O Pacto Goiás pela Inovação é um movimento voluntário de governança conjunta, reunindo entidades públicas e privadas, coletivos, ICTs, associações, empresas, hubs e atores sociais ",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "SEDUC",
+      "financiador": "Secretaria de Estado de Ciência, Tecnologia e Inovação",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
