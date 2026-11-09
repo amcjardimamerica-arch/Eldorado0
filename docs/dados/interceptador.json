@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-09T03:35:06+00:00",
+  "em": "2026-11-09T03:52:05+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-09T03:32:25+00:00",
+  "ultimo_voo": "2026-11-09T03:37:10+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,44 +43,81 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
-    "estrelas_de_ouro": 0,
+    "serve_como_fonte": {
+      "sim": 1
+    },
+    "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 1.8
+    "tempo_medio_min": 14.2
   },
   "missoes": [
     {
-      "em": "2026-11-09T03:32:25+00:00",
+      "em": "2026-11-09T03:37:10+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "0 · PNCP · faltam Resultado, Prazo de recurso, Requisitos, Modalidade, Área de atuação",
-      "alvo": "SAO PAULO TRIBUNAL DE JUSTICA — Chamamento Público para seleção e cadastro de cooperativas e/ou associações de catadores de materiais recicláveis aptas a realiz",
+      "de": "1 · Goiás · livro da Biblioteca",
+      "alvo": "Secult Goiás divulga plano de ação final do edital Arranjos Regionais 2026 — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 8,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Valor",
+        "Requisitos",
+        "Área de atuação"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "nenhuma fonte legível",
-      "segundos": 107,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição, resultado, prazo de recurso, órgão financiador, território e esfera.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital até 2026-12-01, apresentar um plano de ação alinhado ao objeto do edital e garantir que seu projeto esteja relacionado à cultura, já que o órgão financiador é a Secretaria de Estado da Cultura (Secult/GO).",
+        "proximo_passo": "Verificar os anexos do edital e se alinhar o projeto com o objeto do edital, que é conceder investimentos aplicados na forma de investimentos retornáveis, com participação do FSA nos resultados da exploração comercial do projeto.",
+        "risco": "O projeto não estar alinhado ao objeto do edital ou não atender aos requisitos não explicitados, como área de atuação e outros critérios de elegibilidade."
+      },
+      "erro": null,
+      "segundos": 855,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: nenhuma fonte legível",
-      "id": "op-342a90a9c465",
-      "encontrou": {},
-      "financiador": "SAO PAULO TRIBUNAL DE JUSTICA",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-a4c620400de5",
+      "encontrou": {
+        "Objeto": {
+          "valor": "conceder investimentos aplicados na forma de investimentos retornáveis, com participação do FSA nos resultados da exploração comercial do projeto",
+          "trecho": "conceder investimentos aplicados na forma de investimentos retornáveis, com participação do FSA nos resultados da exploração comercial do projeto",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-10-08 a 2026-12-01",
+          "trecho": "período compreendido entre os dias 08/10/2026 e 01/12/2026",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria de Estado da Cultura (Secult/GO)",
+          "trecho": "O Estado de Goiás, por intermédio da Secretaria de Estado da Cultura (Secult/GO), torna pública a realização da seleção prevista neste edital.",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "O Estado de Goiás, por intermédio da Secretaria de Estado da Cultura (Secult/GO), torna pública a realização da seleção prevista neste edital.",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Secretaria de Estado da Cultura (Secult/GO)",
       "indicios": [],
       "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "financiador_ano"
       ]
     }
   ],
