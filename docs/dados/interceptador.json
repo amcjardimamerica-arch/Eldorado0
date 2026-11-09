@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-09T09:10:04+00:00",
+  "em": "2026-11-09T09:25:36+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-09T08:54:56+00:00",
+  "ultimo_voo": "2026-11-09T09:12:35+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,62 +48,71 @@
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.3
+    "tempo_medio_min": 12.3
   },
   "missoes": [
     {
-      "em": "2026-11-09T08:54:56+00:00",
+      "em": "2026-11-09T09:12:35+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Secretaria de Estado da Cultura (Secult) — Governo de Goiás abre inscrições para novo edital de Pontos de Cult… — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 4,
+      "alvo": "Secretaria de Estado da Cultura (Secult) — Inscrições prorrogadas para editais de Pontos e Pontões de Cultura … — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
         "Requisitos",
         "Anexos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição e resultado, o que permite identificar sua existência e principais características.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa se inscrever no edital entre 2026-09-01 e 2026-10-07, apresentando propostas que se encaixem no objeto do edital, que é fomentar a cultura com foco em música, formação de artistas e apresentações artísticas.",
-        "proximo_passo": "Verificar os requisitos e anexos do edital para elaborar a proposta de inscrição.",
-        "risco": "A falta de informações sobre requisitos e anexos pode impedir a associação de se inscrever corretamente no edital."
+        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição, resultado, órgão financiador, território e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa se inscrever no edital, apresentando propostas de ações culturais e formativas em música, com foco em oficinas e apresentações artísticas, dentro do prazo de inscrição.",
+        "proximo_passo": "Verificar os requisitos do edital e se inscrever no período de 2026-09-01 a 2026-10-07.",
+        "risco": "A falta de informações sobre requisitos e anexos pode impedir a elaboração de uma proposta adequada."
       },
       "erro": null,
-      "segundos": 861,
+      "segundos": 737,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-7e76cd1e7d84",
+      "fontes_oficiais": 7,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de recurso, Valor, Requisitos, Anexos",
+      "id": "op-621505f54048",
       "encontrou": {
         "Objeto": {
-          "valor": "O edital financia ações de fomento à cultura, com foco em música, formação de artistas e apresentações artísticas.",
-          "trecho": "O Canto da Primavera também investe em formação de músicos, paralelamente às apresentações e shows.",
-          "oficial": false,
+          "valor": "O edital financia ações culturais e formativas em música, com foco em oficinas e apresentações artísticas.",
+          "trecho": "O Canto da Primavera também investe em formação de músicos, paralelamente às apresentações e shows. São realizadas oficinas tais como de produção musical, canto e diferentes instru",
+          "oficial": true,
           "dispensado": false
         },
         "Prazo de inscrição": {
           "valor": "2026-09-01 a 2026-10-07",
           "trecho": "Canto da Primavera Kids encerra 5ª edição com música e formação artística",
-          "oficial": false,
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria de Estado da Cultura (Secult)",
+          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "O Canto da Primavera também investe em formação de músicos, paralelamente às apresentações e shows.",
-          "oficial": false,
+          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "oficial": true,
           "dispensado": false
         }
       },
