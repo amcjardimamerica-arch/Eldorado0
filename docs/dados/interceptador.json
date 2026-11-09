@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-09T22:33:19+00:00",
+  "em": "2026-11-09T22:52:46+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-09T22:22:45+00:00",
+  "ultimo_voo": "2026-11-09T22:35:07+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,21 +44,21 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.7
+    "tempo_medio_min": 16.9
   },
   "missoes": [
     {
-      "em": "2026-11-09T22:22:45+00:00",
+      "em": "2026-11-09T22:35:07+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "SECTI-GO (ciência e tecnologia) — Edital nº 593/2026 — Goiás",
+      "alvo": "SEGENP (gestão de negócios e parcerias) — Edital nº 001/2026 — Celebração de Termo de Colaboração com Organiza… — Goiás / Goiânia",
       "qualidade": "insuficiente",
-      "comprovados": 0,
+      "comprovados": 4,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -66,41 +66,50 @@
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
         "Território",
-        "Esfera",
         "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações comprovadas sobre o edital mencionado.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar as condições específicas do edital, que não foram fornecidas.",
-        "proximo_passo": "Consultar fontes oficiais ou contatos relevantes para obter detalhes sobre o edital.",
-        "risco": "A falta de informações específicas pode impedir a participação adequada no edital."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações sobre valor e financiador, o que permite identificar a fonte de recursos.",
+        "para_a_amc": "A associação comunitária precisaria verificar os requisitos não encontrados, como prazo de inscrição, área de atuação e outros anexos, e se enquadraria no edital.",
+        "proximo_passo": "Consultar os anexos disponíveis para obter mais detalhes sobre os requisitos e condições do edital.",
+        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir a associação de se qualificar adequadamente para o edital."
       },
       "erro": null,
-      "segundos": 583,
+      "segundos": 1013,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-1b2d7f8ae2f9",
-      "encontrou": {},
-      "financiador": "SECTI-GO",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-daffb076a595",
+      "encontrou": {
+        "Valor": {
+          "valor": "R$ 4.253.257,53",
+          "trecho": "Dispõe sobre a abertura de crédito suplementar, em favor da Secretaria Municipal de Infraestrutura Urbana, no valor de R$ 4.253.257,53",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Prefeitura de Goiânia",
+          "trecho": "PREFEITURA DE GOIÂNIA SECRETARIA MUNICIPAL DA CASA CIVIL",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Prefeitura de Goiânia",
       "indicios": [],
       "rotas": [
+        "site_do_financiador",
+        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "financiador_ano"
       ]
     }
   ],
