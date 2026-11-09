@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-09T09:40:01+00:00",
+  "em": "2026-11-09T09:50:13+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-09T09:27:32+00:00",
+  "ultimo_voo": "2026-11-09T09:42:10+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,88 +48,73 @@
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.7
+    "tempo_medio_min": 7.4
   },
   "missoes": [
     {
-      "em": "2026-11-09T09:27:32+00:00",
+      "em": "2026-11-09T09:42:10+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Secretaria de Estado da Cultura (Secult) — Secult Goiás abre chamamento público para Circuito das Cavalhadas 2… — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 8,
-      "dispensados": 1,
+      "alvo": "Secretaria de Estado da Cultura (Secult) — Secult abre chamamento público de OSC para apoio com a Política Nac… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 6,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Requisitos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://mostratenpo.cultura.go.gov.br/",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova a existência de um chamamento público para seleção de OSC que auxiliará a Secult Goiás na realização do Circuito das Cavalhadas 2025, com informações sobre objeto, prazo de inscrição e requisitos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa se inscrever como OSC, apresentar um projeto alinhado ao objeto do edital (auxiliar na realização do Circuito das Cavalhadas 2025) e anexar os documentos exigidos no edital.",
-        "proximo_passo": "Consultar o edital completo para verificar os requisitos específicos e anexos, e se inscrever no prazo estabelecido.",
-        "risco": "A falta de informações sobre o valor e prazo de recurso pode dificultar a avaliação da viabilidade do projeto."
+        "por_que": "O texto comprovado menciona a Secretaria de Estado da Cultura (Secult) em Goiás, que abre chamamento público para apoio com a Política Nacional de Cultura, indicando que é uma fonte válida para ações relacionadas a cultura.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria se inscrever no chamamento público da Secult, apresentando um projeto alinhado à Política Nacional de Cultura e atendendo aos critérios estabelecidos nos anexos.",
+        "proximo_passo": "Consultar os anexos do edital para entender os critérios de elegibilidade e submeter o projeto conforme o regulamento.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se preparar adequadamente para o processo seletivo."
       },
       "erro": null,
-      "segundos": 699,
+      "segundos": 446,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-637b26a919b7",
+      "fontes_oficiais": 4,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-140e4006da7d",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de Organização da Sociedade Civil (OSC) que auxiliará a pasta na realização do Circuito das Cavalhadas 2025",
-          "trecho": "seleção de Organização da Sociedade Civil (OSC) que auxiliará a pasta na realização do Circuito das Cavalhadas 2025",
+          "valor": "apoio com a Política Nacional de Cultura",
+          "trecho": "Secult abre chamamento público de OSC para apoio com a Política Nac…",
           "oficial": false,
           "dispensado": false
         },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O prazo de inscrição foi explicitado no texto.",
-          "trecho": "até 29 de março de 2025 [rejeitado: data implausível para edital aberto]",
-          "oficial": false,
-          "dispensado": true
-        },
         "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura (Secult Goiás)",
-          "trecho": "Secretaria de Estado da Cultura (Secult Goiás)",
-          "oficial": false,
+          "valor": "Secretaria de Estado da Cultura (Secult)",
+          "trecho": "A mostra é promovida pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), em correalização com a Universidade Federal de Goiás (UFG) e a Fundação Rádio e Te",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Secretaria de Estado da Cultura (Secult Goiás)",
-          "oficial": false,
+          "trecho": "A mostra é promovida pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), em correalização com a Universidade Federal de Goiás (UFG) e a Fundação Rádio e Te",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
           "valor": "cultura",
-          "trecho": "Circuito das Cavalhadas 2025",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Organização da Sociedade Civil (OSC) que auxiliará a pasta na realização do Circuito das Cavalhadas 2025",
-          "trecho": "seleção de Organização da Sociedade Civil (OSC) que auxiliará a pasta na realização do Circuito das Cavalhadas 2025",
-          "oficial": false,
+          "trecho": "A mostra é promovida pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), em correalização com a Universidade Federal de Goiás (UFG) e a Fundação Rádio e Te",
+          "oficial": true,
           "dispensado": false
         }
       },
       "financiador": "Secretaria de Estado da Cultura (Secult)",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
