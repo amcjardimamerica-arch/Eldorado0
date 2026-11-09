@@ -1,5 +1,5 @@
 {
- "em": "2026-11-09T21:17:41+00:00",
+ "em": "2026-11-09T22:45:46+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 57535
+  "exemplos_da_rede": 57624
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.3736
+    3.6539
    ],
    [
     "origem:rota original",
-    3.0969
+    3.2509
    ],
    [
     "tok:inscricoes",
@@ -45,7 +45,11 @@
    ],
    [
     "tok:transparencia",
-    2.1303
+    2.1112
+   ],
+   [
+    "tld:br",
+    2.0637
    ],
    [
     "tok:abre",
@@ -54,16 +58,12 @@
    [
     "tok:selecao",
     1.9233
-   ],
-   [
-    "tok:goias",
-    1.8978
    ]
   ],
   "piores_sinais": [
    [
     "gov:True",
-    -2.4628
+    -2.4636
    ],
    [
     "tok:pgt",
@@ -75,11 +75,11 @@
    ],
    [
     "tok:2026",
-    -3.1454
+    -3.1474
    ],
    [
     "origem:padrão",
-    -3.6965
+    -3.1755
    ],
    [
     "tok:content",
@@ -484,7 +484,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T10:02:53+00:00",
+    "em": "2026-11-09T22:45:16+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -631,7 +631,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T10:02:55+00:00",
+    "em": "2026-11-09T22:45:18+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -676,7 +676,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T10:02:57+00:00",
+    "em": "2026-11-09T22:45:20+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -726,16 +726,10 @@
     "aprendido_em": "2026-11-09T10:03:08+00:00"
    },
    "afinado": {
-    "em": "2026-11-09T10:03:08+00:00",
+    "em": "2026-11-09T22:45:34+00:00",
     "testes": 12,
-    "melhor": {
-     "url": "https://www.undp.org/pt/brazil",
-     "via": "direto",
-     "origem": "rota original",
-     "pontos": 3,
-     "formato": "html"
-    },
-    "resultado": "rota nova em teste"
+    "melhor": null,
+    "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
   },
   "f260-captacao-226": {
@@ -896,7 +890,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T10:02:31+00:00",
+    "em": "2026-11-09T22:44:56+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1864,10 +1858,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 16,
-    "aprendido_em": "2026-11-09T10:03:17+00:00"
+    "aprendido_em": "2026-11-09T22:45:46+00:00"
    },
    "afinado": {
-    "em": "2026-11-09T10:03:17+00:00",
+    "em": "2026-11-09T22:45:46+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
