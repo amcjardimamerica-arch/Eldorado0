@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-09T11:55:13+00:00",
+  "em": "2026-11-09T12:09:35+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-09T11:40:17+00:00",
+  "ultimo_voo": "2026-11-09T11:57:10+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,25 +39,25 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.3
+    "tempo_medio_min": 11.9
   },
   "missoes": [
     {
-      "em": "2026-11-09T11:40:17+00:00",
+      "em": "2026-11-09T11:57:10+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Agência Brasil Central — Governo lança programa para fomentar a confecção de roupas pelo interior — Goiás",
-      "qualidade": "parcial",
+      "alvo": "Agência Brasil Central — Seds abre edital de apoio financeiro a novas entidades filantrópicas — Goiás",
+      "qualidade": "insuficiente",
       "comprovados": 8,
       "dispensados": 0,
       "total": 12,
@@ -66,66 +66,70 @@
         "Resultado",
         "Prazo de recurso"
       ],
-      "pagina_oficial": "https://goias.gov.br/cultura/wp-content/uploads/sites/25/2025/10/SEI_81816803_Edital.pdf",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O texto comprovado menciona a Secretaria de Estado da Cultura de Goiás como financiador, mas não fornece informações sobre o edital específico, prazo de inscrição, resultado ou prazo de recurso, o que torna impossível confirmar se é a fonte correta para o programa mencionado.",
-        "para_a_amc": "Para acessar o edital, a associação comunitária de Goiânia precisaria se inscrever conforme os requisitos do Edital 81816803 SEI 202517645004297, apresentando a documentação necessária para avaliação do projeto, com foco na área de cultura.",
-        "proximo_passo": "Consultar o Edital 81816803 SEI 202517645004297 para obter detalhes sobre os requisitos, prazos e processo de inscrição.",
-        "risco": "A falta de informações sobre prazo de inscrição, resultado e prazo de recurso pode impedir a associação de se inscrever no edital a tempo."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações sobre o objeto, valor, órgão financiador, território, esfera, requisitos e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria executar atividades na área de assistência social de média complexidade e formar parceria para acessar o apoio financeiro.",
+        "proximo_passo": "Verificar os anexos do edital e se a associação comunitária atende aos requisitos de execução de atividades na área de assistência social de média complexidade.",
+        "risco": "A falta de informações sobre o prazo de inscrição pode impedir a associação de se inscrever no edital a tempo."
       },
       "erro": null,
-      "segundos": 856,
+      "segundos": 712,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 8,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso",
-      "id": "op-394f4d3f8a89",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-33253e809b5c",
       "encontrou": {
         "Objeto": {
-          "valor": "fomentar, valorizar e fortalecer as manifestações carnavalescas no Estado de Goiás",
-          "trecho": "O presente edital tem como objetivo fomentar, valorizar e fortalecer as manifestações carnavalescas no Estado de Goiás",
-          "oficial": true,
+          "valor": "formação de parceria com vistas ao fomento de ações, gerenciamento, operacionalização e a execução de atividades filantrópicas e de proteção e assistência a infância",
+          "trecho": "O presente Termo de Fomento tem por objetivo a formação de parceria com vistas ao fomento de ações, gerenciamento, operacionalização e a execução de atividades filantrópicas e de p",
+          "oficial": false,
           "dispensado": false
         },
         "Valor": {
-          "valor": "R$ 2.000.000,00",
-          "trecho": "aporte financeiro para este edital de R$ 2.000.000,00 (dois de reais).",
-          "oficial": true,
+          "valor": "R$ 35.728,80",
+          "trecho": "a importância mensal estimada em R$ 2.977,40 (Dois mil, novecentos e setenta e sete reais e quarenta centavos), somando o valor anual estimado em R$ 35.728,80 (Trinta e cinco mil, ",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura de Goiás",
-          "trecho": "O Estado de Goiás, por intermédio da Secretaria de Estado da Cultura de Goiás - Secult/GO",
-          "oficial": true,
+          "valor": "SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL",
+          "trecho": "O ESTADO DE GOIÁS, pessoa jurídica de direito público interno, neste ato representado por meio da SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL",
+          "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Estado de Goiás",
-          "oficial": true,
+          "trecho": "ESTADO DE GOIÁS",
+          "oficial": false,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "O presente edital tem como objetivo fomentar, valorizar e fortalecer as manifestações carnavalescas no Estado de Goiás",
-          "oficial": true,
+          "valor": "assistencia_social",
+          "trecho": "A COMUNIDADE TERAPÊUTICA CHÁCARA JESUS CURA, executa atividades na área de assistência social de média complexidade.",
+          "oficial": false,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "documentação necessária para a inscrição e avaliação do projeto, conforme Edital 81816803 SEI 202517645004297 / pg. 1",
-          "trecho": "No Anexo I, deste Edital, estão inseridas as categorias com os respectivos valores para cada proposta concorrente indicar em qual deseja concorrer e, a documentação necessária para",
-          "oficial": true,
+          "valor": "executar atividades na área de assistência social de média complexidade",
+          "trecho": "A COMUNIDADE TERAPÊUTICA CHÁCARA JESUS CURA, executa atividades na área de assistência social de média complexidade.",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Governo do Estado de Goiás",
+      "financiador": "SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital"
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
