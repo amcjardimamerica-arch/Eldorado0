@@ -75,8 +75,8 @@
   },
   {
    "motor": "empresas-incentivadas",
-   "achados_total_1a": 56,
-   "achados_total_agora": 56,
+   "achados_total_1a": 58,
+   "achados_total_agora": 58,
    "no_fluxo": 0,
    "confirmadas": 0
   },
@@ -200,7 +200,7 @@
  "pontos_com_redundancia": 19,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 56595
+ "exemplos_da_rede_de_rotas": 56668
 }
 ```
 
@@ -243,11 +243,19 @@
 
 ```json
 {
- "dia_de_referencia": "2026-11-08",
+ "dia_de_referencia": "2026-11-09",
  "ativos": 172,
- "lidos_ontem": 22,
+ "lidos_ontem": 0,
  "lidos_hoje": 0,
  "nao_lidos_ontem_nem_hoje": [
+  "alego-pl",
+  "camara-goiania-pl",
+  "congresso-nacional",
+  "dj-trf1-go",
+  "do-goiania",
+  "do-goias",
+  "dou",
+  "f260-captacao-001",
   "f260-captacao-018",
   "f260-captacao-025",
   "f260-captacao-034",
@@ -256,6 +264,7 @@
   "f260-captacao-039",
   "f260-captacao-041",
   "f260-captacao-044",
+  "f260-captacao-051",
   "f260-captacao-060",
   "f260-captacao-068",
   "f260-captacao-069",
@@ -265,6 +274,7 @@
   "f260-captacao-095",
   "f260-captacao-098",
   "f260-captacao-107",
+  "f260-captacao-113",
   "f260-captacao-118",
   "f260-captacao-119",
   "f260-captacao-134",
@@ -277,17 +287,7 @@
   "f260-captacao-175",
   "f260-captacao-176",
   "f260-captacao-177",
-  "f260-captacao-180",
-  "f260-captacao-190",
-  "f260-captacao-193",
-  "f260-captacao-196",
-  "f260-captacao-200",
-  "f260-captacao-206",
-  "f260-captacao-207",
-  "f260-captacao-208",
-  "f260-captacao-212",
-  "f260-captacao-216",
-  "f260-captacao-217"
+  "f260-captacao-180"
  ],
  "ainda_sem_primeira_leitura": [
   "motor-gife",
