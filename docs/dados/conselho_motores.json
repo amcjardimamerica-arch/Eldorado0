@@ -1,5 +1,5 @@
 {
- "em": "2026-11-09T16:05:02+00:00",
+ "em": "2026-11-09T17:34:13+00:00",
  "conselho": [
   {
    "id": "falso_verde",
@@ -382,7 +382,7 @@
    ],
    "achados_total": 35,
    "valor": "ruído",
-   "achados_30d": 12,
+   "achados_30d": 11,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -409,13 +409,11 @@
    "saude": [
     {
      "url": "https://portal.al.go.leg.br/",
-     "http": 200,
-     "bytes": 133791
-    },
-    {
-     "url": "https://portal.al.go.leg.br/credenciamento-imprensa",
-     "http": 200,
-     "bytes": 102776
+     "erro": "ErroPonte",
+     "code": null,
+     "waf": null,
+     "causa": "ErroPonte",
+     "retentativa": "aguardando"
     }
    ],
    "achados_total": 3,
@@ -430,13 +428,13 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CEGO",
-     "prova": "respondeu 200 em 30 de 30 dias e não achou nada em 30 dias",
+     "prova": "respondeu 200 em 29 de 30 dias e não achou nada em 30 dias",
      "melhoria": "conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)"
     },
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "104 leituras vazias seguidas",
+     "prova": "105 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -448,7 +446,13 @@
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
-     "bytes": 13217,
+     "bytes": 194650,
+     "itens": 0
+    },
+    {
+     "url": "https://www.goiania.go.leg.br",
+     "http": 200,
+     "bytes": 13200,
      "itens": 0
     }
    ],
@@ -470,7 +474,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "152 leituras vazias seguidas",
+     "prova": "153 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -535,7 +539,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "97 leituras vazias seguidas",
+     "prova": "98 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -2543,7 +2547,7 @@
     {
      "url": "https://www.congressonacional.leg.br",
      "http": 200,
-     "bytes": 160633,
+     "bytes": 160543,
      "itens": 11
     },
     {
