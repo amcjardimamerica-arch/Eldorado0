@@ -1,13 +1,13 @@
 {
-  "em": "2026-11-07T15:29:04+00:00",
+  "em": "2026-11-09T16:39:02+00:00",
   "cadencia_dias": 7,
   "total": 33,
   "por_estado": {
-    "BLOQUEADO": 3,
-    "PARADO": 7,
+    "BLOQUEADO": 4,
+    "PARADO": 8,
     "NUNCA RODOU": 0,
     "LENDO SEM ACHAR": 2,
-    "FUNCIONANDO": 21
+    "FUNCIONANDO": 19
   },
   "correcoes_de_hoje": [
     "regulares nunca mais são cortados pelo limite de 40 por execução (as 4 plataformas ficaram 14 dias sem rodar por isso)",
@@ -16,6 +16,20 @@
     "Mapa das OSC mantido desativado com motivo (base cadastral, não publica edital)"
   ],
   "itens": [
+    {
+      "id": "alego-pl",
+      "nome": "Assembleia Legislativa de Goiás — proposições",
+      "tipo": "legislativo",
+      "estado": "BLOQUEADO",
+      "base": "todas as páginas falharam em 2026-11-09",
+      "ultima": "2026-11-09T15:56",
+      "achados_total": 3,
+      "conselho": {
+        "pessimista": "14 achados, todos de projetos de lei — não de editais.",
+        "otimista": "as emendas impositivas estaduais (janela out-nov) nascem aqui.",
+        "neutro_decide": "manter; reclassificar os achados como 'insumo de emenda', não como oportunidade."
+      }
+    },
     {
       "id": "judiciario-tjgo",
       "nome": "TJ-GO — editais das comarcas (prestações pecuniárias) e Banco de Projetos Sociais da CGJ/GO",
@@ -57,7 +71,7 @@
       "nome": "MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)",
       "tipo": "ministerio_publico",
       "estado": "PARADO",
-      "base": "20 dias sem leitura (cadência de 7)",
+      "base": "22 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-18T04:27",
       "achados_total": 1,
       "conselho": {
@@ -69,7 +83,7 @@
       "nome": "MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)",
       "tipo": "ministerio_publico",
       "estado": "PARADO",
-      "base": "14 dias sem leitura (cadência de 7)",
+      "base": "16 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-24T11:16",
       "achados_total": 2,
       "conselho": {
@@ -81,7 +95,7 @@
       "nome": "MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)",
       "tipo": "ministerio_publico",
       "estado": "PARADO",
-      "base": "20 dias sem leitura (cadência de 7)",
+      "base": "22 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-18T04:29",
       "achados_total": 0,
       "conselho": {
@@ -89,11 +103,25 @@
       }
     },
     {
+      "id": "plat-empresas-editais-incentivados",
+      "nome": "Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes",
+      "tipo": "plataforma",
+      "estado": "PARADO",
+      "base": "9 dias sem leitura (cadência de 7)",
+      "ultima": "2026-10-31T12:40",
+      "achados_total": 67,
+      "conselho": {
+        "pessimista": "novo; poucas empresas publicam edital próprio.",
+        "otimista": "quem publica (Porto Itapoá, Renner, Maria Emília) distribui milhões sem disputa política.",
+        "neutro_decide": "INCLUÍDO hoje; cruzar com o ranking de 100 empresas de Goiás."
+      }
+    },
+    {
       "id": "plat-estaduais-go-gov",
       "nome": "Oportunidade Estaduais Governamentais de Goiás",
       "tipo": "plataforma",
       "estado": "PARADO",
-      "base": "15 dias sem leitura (cadência de 7)",
+      "base": "17 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-23T11:58",
       "achados_total": 1,
       "conselho": {
@@ -105,7 +133,7 @@
       "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
       "tipo": "plataforma",
       "estado": "PARADO",
-      "base": "20 dias sem leitura (cadência de 7)",
+      "base": "22 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-18T06:49",
       "achados_total": 13,
       "conselho": {
@@ -119,7 +147,7 @@
       "nome": "PNCP — API de contratações (chamamentos e credenciamentos)",
       "tipo": "api",
       "estado": "PARADO",
-      "base": "20 dias sem leitura (cadência de 7)",
+      "base": "22 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-18T03:25",
       "achados_total": 261,
       "conselho": {
@@ -133,7 +161,7 @@
       "nome": "Motor de Recorrência — revisita as oportunidades identificadas",
       "tipo": "recorrencia",
       "estado": "PARADO",
-      "base": "20 dias sem leitura (cadência de 7)",
+      "base": "22 dias sem leitura (cadência de 7)",
       "ultima": "2026-10-18T03:25",
       "achados_total": 30,
       "conselho": {
@@ -145,8 +173,8 @@
       "nome": "Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos",
       "tipo": "legislativo",
       "estado": "LENDO SEM ACHAR",
-      "base": "leu em 2026-11-07; nunca reconheceu edital",
-      "ultima": "2026-11-07T13:07",
+      "base": "leu em 2026-11-09; nunca reconheceu edital",
+      "ultima": "2026-11-09T15:57",
       "achados_total": 0,
       "conselho": {
         "pessimista": "40 leituras e 0 achado em setembro: lia a home do Plone, um SAPL com certificado inválido e páginas que dão 404; 3 a 5 falhas por dia.",
@@ -159,8 +187,8 @@
       "nome": "Diário da Justiça Federal — Seção Judiciária de Goiás",
       "tipo": "diario_justica",
       "estado": "LENDO SEM ACHAR",
-      "base": "leu em 2026-11-07; nunca reconheceu edital",
-      "ultima": "2026-11-07T13:07",
+      "base": "leu em 2026-11-09; nunca reconheceu edital",
+      "ultima": "2026-11-09T15:58",
       "achados_total": 0,
       "conselho": {
         "pessimista": "zero achados sempre; destinações de pena federais são raras em Goiás.",
@@ -169,26 +197,12 @@
       }
     },
     {
-      "id": "alego-pl",
-      "nome": "Assembleia Legislativa de Goiás — proposições",
-      "tipo": "legislativo",
-      "estado": "FUNCIONANDO",
-      "base": "leu em 2026-11-07; 3 achado(s) acumulado(s)",
-      "ultima": "2026-11-07T13:06",
-      "achados_total": 3,
-      "conselho": {
-        "pessimista": "14 achados, todos de projetos de lei — não de editais.",
-        "otimista": "as emendas impositivas estaduais (janela out-nov) nascem aqui.",
-        "neutro_decide": "manter; reclassificar os achados como 'insumo de emenda', não como oportunidade."
-      }
-    },
-    {
       "id": "congresso-nacional",
       "nome": "Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos)",
       "tipo": "legislativo",
       "estado": "FUNCIONANDO",
-      "base": "leu em 2026-11-07; 1 achado(s) acumulado(s)",
-      "ultima": "2026-11-07T13:07",
+      "base": "leu em 2026-11-09; 1 achado(s) acumulado(s)",
+      "ultima": "2026-11-09T15:58",
       "achados_total": 1,
       "conselho": {
         "pessimista": "motor novo (02/10): o Congresso quase não publica edital para OSC; as convocações do Senado desde 2017 não tiveram nenhuma para entidades; a área de emendas usava janela fixa, sem o prazo oficial da CMO.",
@@ -243,9 +257,9 @@
       "nome": "Editais incentivados — sites das maiores contribuintes do ICMS de Goiás (destinação tributária)",
       "tipo": "empresas_incentivo",
       "estado": "FUNCIONANDO",
-      "base": "leu em 2026-11-07; 56 achado(s) acumulado(s)",
-      "ultima": "2026-11-07T03:04",
-      "achados_total": 56,
+      "base": "leu em 2026-11-09; 58 achado(s) acumulado(s)",
+      "ultima": "2026-11-09T03:04",
+      "achados_total": 58,
       "conselho": {
         "pessimista": "1 achado em 20 dias procurando o SITE da empresa.",
         "otimista": "o radar mostrou o Porto Itapoá publicando EDITAL próprio de renúncia fiscal — modelo replicável.",
@@ -386,20 +400,6 @@
         "pessimista": "novo; chamadas exigem ICT proponente.",
         "otimista": "extensão e popularização da ciência aceitam OSC parceira; Setec/MEC idem.",
         "neutro_decide": "INCLUÍDO hoje em cadência semanal."
-      }
-    },
-    {
-      "id": "plat-empresas-editais-incentivados",
-      "nome": "Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes",
-      "tipo": "plataforma",
-      "estado": "FUNCIONANDO",
-      "base": "leu em 2026-10-31; 67 achado(s) acumulado(s)",
-      "ultima": "2026-10-31T12:40",
-      "achados_total": 67,
-      "conselho": {
-        "pessimista": "novo; poucas empresas publicam edital próprio.",
-        "otimista": "quem publica (Porto Itapoá, Renner, Maria Emília) distribui milhões sem disputa política.",
-        "neutro_decide": "INCLUÍDO hoje; cruzar com o ranking de 100 empresas de Goiás."
       }
     },
     {

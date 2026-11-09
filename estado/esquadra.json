@@ -273,68 +273,40 @@
     "alego-pl": {
       "nome": "Assembleia Legislativa de Goiás — proposições",
       "tipo": "legislativo",
-      "leituras": 134,
+      "leituras": 135,
       "achados_total": 3,
-      "vazias_seguidas": 104,
-      "ultima": "2026-11-07T13:06:30+00:00",
+      "vazias_seguidas": 105,
+      "ultima": "2026-11-09T15:56:40+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 0,
-      "falhas_ultima": 0,
+      "falhas_ultima": 1,
       "saude": [
         {
           "url": "https://portal.al.go.leg.br/",
-          "http": 200,
-          "bytes": 133791
-        },
-        {
-          "url": "https://portal.al.go.leg.br/credenciamento-imprensa",
-          "http": 200,
-          "bytes": 102776
+          "erro": "ErroPonte",
+          "code": null,
+          "waf": null,
+          "causa": "ErroPonte",
+          "retentativa": "aguardando"
         }
       ],
-      "alerta": "trocar URL: 3 leituras sem achados com página respondendo",
+      "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 2,
-        "links_total": 440,
-        "links_candidatos": 306,
-        "descobertas": [
-          {
-            "de": "https://portal.al.go.leg.br/",
-            "para": "https://transparencia.al.go.leg.br/legislacoes",
-            "rotulo": "Legislação e Regimento"
-          },
-          {
-            "de": "https://portal.al.go.leg.br/",
-            "para": "https://publicacoes.al.go.leg.br/memorial",
-            "rotulo": "Memorial Legislativo"
-          },
-          {
-            "de": "https://portal.al.go.leg.br/",
-            "para": "https://publicacoes.al.go.leg.br/",
-            "rotulo": "Publicações"
-          },
-          {
-            "de": "https://portal.al.go.leg.br/",
-            "para": "https://portal.al.go.leg.br/credenciamento-imprensa",
-            "rotulo": "Credenciamento para a Imprensa"
-          }
-        ],
-        "pdf_links": 7,
-        "motivo_zero": "página institucional; seguiu 4 listagem(ns) e nenhum rótulo casou com o léxico do terceiro setor hoje",
-        "camada1_vetados": 17,
-        "camada1_direcionados": 9,
+        "paginas_lidas": 0,
+        "links_total": 0,
+        "links_candidatos": 0,
+        "descobertas": [],
+        "pdf_links": 0,
+        "motivo_zero": "o robots.txt do site proíbe leitura automática (2 página(s)) — conferência manual pelo titular; republicações chegam pelo motor do CNJ",
+        "camada1_vetados": 0,
+        "camada1_direcionados": 0,
         "paginas_alem_do_limite": 4,
         "robots_proibe": [
           "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
           "https://alegodigital.al.go.leg.br/spl/consulta-tipo.aspx"
-        ],
-        "fora_da_fila": [
-          "https://transparencia.al.go.leg.br/legislacoes",
-          "https://publicacoes.al.go.leg.br/memorial",
-          "https://publicacoes.al.go.leg.br/"
         ]
       },
-      "duracao_s": 8,
+      "duracao_s": 56,
       "relidas_total": 14,
       "totais_por_distintas": true,
       "novas_ultima": 0,
@@ -343,10 +315,10 @@
     "camara-goiania-pl": {
       "nome": "Câmara Municipal de Goiânia — projetos de lei",
       "tipo": "legislativo",
-      "leituras": 152,
+      "leituras": 153,
       "achados_total": 0,
-      "vazias_seguidas": 152,
-      "ultima": "2026-11-07T13:07:01+00:00",
+      "vazias_seguidas": 153,
+      "ultima": "2026-11-09T15:57:53+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 0,
       "falhas_ultima": 1,
@@ -354,13 +326,19 @@
         {
           "url": "https://www.goiania.go.leg.br",
           "http": 200,
-          "bytes": 13217,
+          "bytes": 194650,
+          "itens": 0
+        },
+        {
+          "url": "https://www.goiania.go.leg.br",
+          "http": 200,
+          "bytes": 13200,
           "itens": 0
         }
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 1,
+        "paginas_lidas": 9,
         "links_total": 0,
         "links_candidatos": 0,
         "descobertas": [],
@@ -382,16 +360,17 @@
           },
           "C": {
             "falhas": [
-              "direto: The read operation timed out · pela ponte Brasil: HTTP 502 pela ponte"
+              "direto: The read operation timed out · pela ponte Brasil: HTTP 504 pela ponte"
             ],
-            "consultas": 0,
-            "itens": 0
+            "consultas": 8,
+            "itens": 0,
+            "bytes": 194650
           },
           "D": {
             "falhas": [],
             "consultas": 1,
             "itens": 0,
-            "bytes": 13217,
+            "bytes": 13200,
             "publicadas": 0,
             "lidas": 0,
             "nao_lidas": []
@@ -419,7 +398,7 @@
           "motivo": "o robots.txt do SUAP (suap.camaragyn.go.gov.br) proíbe robôs (Disallow: /) — os processos e a tramitação vêm das pautas do Plenário no portal; a ficha do processo da associação no SUAP é conferida pelo titular (consulta humana)"
         }
       },
-      "duracao_s": 31,
+      "duracao_s": 73,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 0,
@@ -484,10 +463,10 @@
     "dj-trf1-go": {
       "nome": "Diário da Justiça Federal — Seção Judiciária de Goiás",
       "tipo": "diario_justica",
-      "leituras": 97,
+      "leituras": 98,
       "achados_total": 0,
-      "vazias_seguidas": 97,
-      "ultima": "2026-11-07T13:07:41+00:00",
+      "vazias_seguidas": 98,
+      "ultima": "2026-11-09T15:58:30+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 0,
       "falhas_ultima": 0,
@@ -4494,11 +4473,11 @@
     "congresso-nacional": {
       "nome": "Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos)",
       "tipo": "legislativo",
-      "leituras": 105,
+      "leituras": 106,
       "achados_total": 1,
       "vazias_seguidas": 0,
-      "duracao_s": 40,
-      "ultima": "2026-11-07T13:07:41+00:00",
+      "duracao_s": 37,
+      "ultima": "2026-11-09T15:58:30+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 1,
       "falhas_ultima": 0,
@@ -4506,7 +4485,7 @@
         {
           "url": "https://www.congressonacional.leg.br",
           "http": 200,
-          "bytes": 160633,
+          "bytes": 160543,
           "itens": 11
         },
         {
@@ -4530,7 +4509,7 @@
             "falhas": [],
             "consultas": 2,
             "itens": 11,
-            "bytes": 160633,
+            "bytes": 160543,
             "comunicados_na_pagina": 10,
             "cortados": [
               "comunicados da CMO: a 1ª página não alcança o início da janela"
@@ -4552,9 +4531,9 @@
             "falhas": [],
             "consultas": 2,
             "itens": 35,
-            "bytes": 115025,
+            "bytes": 135074,
             "lidas_ate": {
-              "Câmara dos Deputados": "2026-11-06"
+              "Câmara dos Deputados": "2026-11-09"
             }
           },
           "E": {
@@ -4586,8 +4565,8 @@
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 1,
-      "relidas_total": 1,
-      "fora_do_portao": 2
+      "relidas_total": 2,
+      "fora_do_portao": 3
     },
     "f260-captacao-107": {
       "nome": "Emenda municipal para entidade assistencial",
