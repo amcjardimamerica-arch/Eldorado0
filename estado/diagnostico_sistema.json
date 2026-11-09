@@ -1,11 +1,11 @@
 {
- "em": "2026-11-09T16:40:30+00:00",
+ "em": "2026-11-09T16:41:32+00:00",
  "finalidade": {
   "sistemas": [
    {
     "sistema": "Motores",
     "finalidade": "todo motor ativo lê dentro da sua cadência",
-    "atingido_pct": 19,
+    "atingido_pct": 23,
     "estado": "falha"
    },
    {
@@ -59,7 +59,7 @@
    {
     "sistema": "Integração",
     "finalidade": "mesmas contagens e dados em dia em todos os sistemas",
-    "atingido_pct": 10,
+    "atingido_pct": 30,
     "estado": "falha"
    },
    {
@@ -75,13 +75,13 @@
     "estado": "sem_dados"
    }
   ],
-  "indice_geral_pct": 49
+  "indice_geral_pct": 51
  },
  "sistemas": {
   "motores": {
    "total": 45,
-   "funcionando": 8,
-   "em_falha": 35,
+   "funcionando": 10,
+   "em_falha": 33,
    "inativos": 2,
    "em_falha_lista": [
     {
@@ -90,19 +90,9 @@
      "resultado": "falha — não lê há 2 dia(s) (51 h); última leitura 07/11 10:13"
     },
     {
-     "id": "dou",
-     "nome": "Diário Oficial da União",
-     "resultado": "falha — não lê há 2 dia(s) (51 h); última leitura 07/11 10:16"
-    },
-    {
-     "id": "camara-goiania-pl",
-     "nome": "Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos",
-     "resultado": "falha — não lê há 2 dia(s) (51 h); última leitura 07/11 10:07"
-    },
-    {
-     "id": "congresso-nacional",
-     "nome": "Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos)",
-     "resultado": "falha — não lê há 2 dia(s) (51 h); última leitura 07/11 10:07"
+     "id": "alego-pl",
+     "nome": "Assembleia Legislativa de Goiás — proposições",
+     "resultado": "falha na leitura de 09/11 12:56 — nenhuma página leu"
     },
     {
      "id": "pncp-api",
@@ -157,7 +147,7 @@
     {
      "id": "empresas-editais-incentivados",
      "nome": "Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes",
-     "resultado": "falha — não lê há 9 dia(s) (219 h); última leitura 31/10 09:40"
+     "resultado": "falha — não lê há 9 dia(s) (220 h); última leitura 31/10 09:40"
     },
     {
      "id": "cnpq-extensao",
@@ -260,17 +250,23 @@
      "resultado": "falha — a rota indireta (capitaai) não lê há 42 h"
     }
    ],
-   "leitura_parcial": [],
-   "status_em": "2026-11-09T13:40-03:00",
+   "leitura_parcial": [
+    {
+     "id": "camara-goiania-pl",
+     "nome": "Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos",
+     "resultado": "funcionando — última leitura 09/11 12:57 · sem oportunidade nova (atenção: 1 falha(s) na leitura: direto: The read operation timed out · pela ponte Brasil: HTTP 504 pela ponte)"
+    }
+   ],
+   "status_em": "2026-11-09T13:41-03:00",
    "auditoria": {
-    "em": "2026-11-07T15:29:04+00:00",
+    "em": "2026-11-09T16:39:02+00:00",
     "total": 33,
     "por_estado": {
-     "BLOQUEADO": 3,
-     "PARADO": 7,
+     "BLOQUEADO": 4,
+     "PARADO": 8,
      "NUNCA RODOU": 0,
      "LENDO SEM ACHAR": 2,
-     "FUNCIONANDO": 21
+     "FUNCIONANDO": 19
     }
    }
   },
@@ -356,7 +352,7 @@
    }
   },
   "saude": {
-   "em": "2026-11-07T15:28:38+00:00",
+   "em": "2026-11-09T16:38:29+00:00",
    "alertas": [
     {
      "area": "coerência",
@@ -368,7 +364,11 @@
     },
     {
      "area": "claude",
-     "texto": "241 item(ns) esperando a análise do Claude (próxima: 2026-11-07)"
+     "texto": "240 item(ns) esperando a análise do Claude (próxima: 2026-11-09)"
+    },
+    {
+     "area": "livros_do_sistema",
+     "texto": "3 livro(es) duplicado(s) no catálogo"
     },
     {
      "area": "publicação",
@@ -385,23 +385,21 @@
    ]
   },
   "auditoria_cega": {
-   "em": "2026-11-07T15:29:02+00:00",
+   "em": "2026-11-09T16:38:59+00:00",
    "taxa_de_perda": null,
    "sem_nada_na_base": 25
   },
   "fluxos_github": {
-   "total": 8,
-   "com_falha": [
-    "03 · Eldorado — carga histórica de cinco anos (campanha única, mês a mês)"
-   ]
+   "total": 7,
+   "com_falha": []
   },
   "sala_controle": {
-   "em": "2026-11-09T16:40:09+00:00",
-   "indice_saude": 44,
+   "em": "2026-11-09T16:41:17+00:00",
+   "indice_saude": 49,
    "contagem": {
-    "verde": 10,
-    "amarelo": 5,
-    "vermelho": 21,
+    "verde": 13,
+    "amarelo": 3,
+    "vermelho": 20,
     "cinza": 0
    }
   }
@@ -458,7 +456,7 @@
    "status_motores": 0.0,
    "maestro": 8.7,
    "rede_neural": 540.8,
-   "saude": 49.2
+   "saude": 0.0
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -1036,7 +1034,7 @@
    "dia_fechado": false
   },
   "retentativa": {
-   "aguardando_retentativa": 1184,
+   "aguardando_retentativa": 1185,
    "fora_da_fila": 123,
    "fora_da_fila_por_escopo": {
     "outras-oportunidades-1": 8,
@@ -1194,7 +1192,7 @@
    "etapa": "biblioteca",
    "decisao": "livros da Biblioteca",
    "regra": "ato legislativo não gera livro",
-   "conferidos": 2886,
+   "conferidos": 2883,
    "incorretos": 0,
    "veredito": "correto",
    "exemplos": []
@@ -1204,7 +1202,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 519.0 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 519.1 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1237,23 +1235,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Diário Oficial da União — falha — não lê há 2 dia(s) (51 h); última leitura 07/11 10:16",
-   "correcao": "investigar o motor (sem correção automática)",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "motor_em_falha",
-   "gravidade": "alta",
-   "texto": "motor em falha: Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos — falha — não lê há 2 dia(s) (51 h); última leitura 07/11 10:07",
-   "correcao": "investigar o motor (sem correção automática)",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "motor_em_falha",
-   "gravidade": "alta",
-   "texto": "motor em falha: Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos) — falha — não lê há 2 dia(s) (51 h); última leitura 07/11 10:07",
+   "texto": "motor em falha: Assembleia Legislativa de Goiás — proposições — falha na leitura de 09/11 12:56 — nenhuma página leu",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1341,7 +1323,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 9 dia(s) (219 h); última leitura 31/10 09:40",
+   "texto": "motor em falha: Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes — falha — não lê há 9 dia(s) (220 h); última leitura 31/10 09:40",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1551,14 +1533,6 @@
    "exemplos": []
   },
   {
-   "codigo": "atrasado_saude",
-   "gravidade": "media",
-   "texto": "saude sem atualização há 49.2 h (limite 26 h)",
-   "correcao": "refazer a saúde",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
    "codigo": "decisao_decidir",
    "gravidade": "media",
    "texto": "[decidir] motores escolhidos para ler na passagem: 131 de 131 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
@@ -1620,7 +1594,7 @@
   {
    "codigo": "saude_claude",
    "gravidade": "media",
-   "texto": "saúde · claude: 241 item(ns) esperando a análise do Claude (próxima: 2026-11-07)",
+   "texto": "saúde · claude: 240 item(ns) esperando a análise do Claude (próxima: 2026-11-09)",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1637,6 +1611,14 @@
    "codigo": "saude_gerador",
    "gravidade": "media",
    "texto": "saúde · gerador: o gerador principal do painel falhou depois da última geração",
+   "correcao": "ver o fluxo/arquivo indicado",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "saude_livros_do_sistema",
+   "gravidade": "media",
+   "texto": "saúde · livros_do_sistema: 3 livro(es) duplicado(s) no catálogo",
    "correcao": "ver o fluxo/arquivo indicado",
    "quantidade": null,
    "exemplos": []
@@ -1726,14 +1708,13 @@
   }
  ],
  "contagem_problemas": {
-  "alta": 39,
+  "alta": 37,
   "media": 16,
   "baixa": 2
  },
  "corrigiveis": [
   "disparar o fluxo 39",
   "disparar o fluxo 40",
-  "refazer a saúde",
   "refazer a tela",
   "refazer tela e indicadores"
  ],
