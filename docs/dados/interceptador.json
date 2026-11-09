@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-09T15:46:52+00:00",
+  "em": "2026-11-09T16:11:55+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-09T15:22:46+00:00",
+  "ultimo_voo": "2026-11-09T15:48:37+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,69 +48,74 @@
     },
     "estrelas_de_ouro": 1,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 23.4
+    "tempo_medio_min": 22.6
   },
   "missoes": [
     {
-      "em": "2026-11-09T15:22:46+00:00",
+      "em": "2026-11-09T15:48:37+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anexo 6 – Declaração de Representação de Grupo ou Coletivo – Edital 09 (Docx) — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "Anexo 6 – Declaração de Representação de Grupo ou Coletivo – Edital 10 (Docx) — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www10.goiania.go.gov.br/DadosINTER/PUBLIC/arq_8210014.pdf",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O documento menciona o município de Goiânia e o estado de Goiás, confirmando que o edital é válido para a região.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital, apresentando a declaração de representação de grupo ou coletivo conforme o Anexo 6, mesmo que os prazos, valores e requisitos não sejam explicitados no texto fornecido.",
-        "proximo_passo": "Consultar o edital completo para obter informações detalhadas sobre prazos, requisitos e área de atuação.",
-        "risco": "A falta de informações específicas como prazos, valor e requisitos pode impedir a associação de se preparar adequadamente para o processo de inscrição."
+        "por_que": "O documento menciona o Objeto, Órgão / financiador, Território, Esfera e Anexos, o que é suficiente para identificar a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se credenciar para eventual contratação de serviços de artistas e/ou grupos artísticos das linguagens de Teatro, Dança, Circo, Música, Audiovisual, Artes Visuais, Literatura e Expressões Culturais da Tradição.",
+        "proximo_passo": "Consultar os anexos mencionados para obter mais detalhes sobre o processo de credenciamento.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se preparar adequadamente para o processo."
       },
       "erro": null,
-      "segundos": 1406,
+      "segundos": 1356,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-c93e6744a886",
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-fe0594291453",
       "encontrou": {
+        "Objeto": {
+          "valor": "Credenciamento para eventual contratação de serviços de artistas e/ou grupos artísticos das linguagens de Teatro, Dança, Circo, Música, Audiovisual, Artes Visuais, Literatura e Expressões Culturais da Tradição",
+          "trecho": "ConstuiobjetodesteoCredenciamentoparansdeeventualcontrataçãodeserviçosdearstase/ougruposarscosdaslinguagensdeTeatro,Dança,Circo,Música,Audiovisual,ArtesVisuais,LiteraturaeExpr",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Goiania",
-          "trecho": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-09-anexo-6.docx",
-          "oficial": false,
+          "valor": "Prefeitura de Goiânia, através da Secretaria Municipal de Cultura (SECULT)",
+          "trecho": "A Prefeitura de Goiânia, através da Secretaria Municipal de Cultura (SECULT), torna público torna público para conhecimento dos interessadosopresenteCHAMAMENTOPÚBLICO",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "https://www.goiania.go.gov.br/secult/wp-content/uploads/sites/5/2024/08/pnab-2024-09-anexo-6.docx",
-          "oficial": false,
+          "trecho": "A Prefeitura de Goiânia, através da Secretaria Municipal de Cultura (SECULT), torna público torna público para conhecimento dos interessadosopresenteCHAMAMENTOPÚBLICO",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "ASecretariaMunicipaldeCulturaatuaemGoiâniadesenvolvendoprojetoseaçõesquefortalecemaproduçãoculturalemsuasdiferentes",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "gov.br",
+      "financiador": "GOIÂNIA/GO",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
