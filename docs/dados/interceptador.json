@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-10T17:58:16+00:00",
+  "em": "2026-11-10T18:14:37+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-10T17:47:56+00:00",
+  "ultimo_voo": "2026-11-10T18:00:10+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,71 +48,66 @@
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.8
+    "tempo_medio_min": 13.7
   },
   "missoes": [
     {
-      "em": "2026-11-10T17:47:56+00:00",
+      "em": "2026-11-10T18:00:10+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital 002/2023 Áreas - Inciso I - Goiânia-GO — Goiás / Goiânia — Goiás / Goiânia",
-      "qualidade": "insuficiente",
-      "comprovados": 7,
+      "alvo": "Edital 003/2023 Áreas - Inciso II - Goiânia-GO — Goiás / Goiânia",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor"
+        "Valor",
+        "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://www.goiania.go.gov.br",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital comprova a existência de uma oportunidade de apoio financeiro para projetos culturais de audiovisual na área de atuação da associação comunitária de Goiânia.",
-        "para_a_amc": "A associação comunitária precisaria se inscrever no prazo estabelecido, ser agente cultural do Município de Goiânia e apresentar os documentos exigidos nos anexos.",
-        "proximo_passo": "Verificar o prazo de inscrição e os requisitos detalhados nos anexos do edital.",
-        "risco": "O prazo de inscrição pode expirar sem que a associação esteja preparada, impedindo o acesso ao apoio financeiro."
+        "por_que": "O edital comprova que a Prefeitura de Goiânia oferece recursos para a implementação de direitos funcionais na folha de pagamento, sendo relevante para organizações que atuam na área de assistência social, cultura, educação e esporte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se enquadrar na área de atuação do edital, preencher os requisitos legais previstos na legislação aplicável à respectiva carreira e ter o direito reconhecido em parecer técnico emitido pelo órgão municipal competente.",
+        "proximo_passo": "Consultar os anexos do edital para obter mais detalhes sobre os requisitos e procedimentos necessários para a candidatura.",
+        "risco": "A falta de informações sobre prazo de inscrição e outros detalhes pode impedir a organização da associação de se candidatar oportunamente."
       },
       "erro": null,
-      "segundos": 588,
+      "segundos": 820,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-fbacb4dc6735",
+      "fontes_oficiais": 5,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-1813643fb65f",
       "encontrou": {
         "Objeto": {
-          "valor": "seleção de projetos culturais de audiovisual para receberem apoio financeiro",
-          "trecho": "O objeto deste edital é a seleção de projetos culturais de audiovisual para receberem apoio financeiro nas categorias descritas no anexo 1, por meio da celebração de termo de execu",
-          "oficial": false,
+          "valor": "estabelecer condições para a implementação, na folha de pagamento, dos seguintes direitos funcionais",
+          "trecho": "2.1. O presente Edital tem por objeto estabelecer condições para a implementação, na folha de pagamento, dos seguintes direitos funcionais:",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Goiânia - Secretaria Municipal de Cultura",
-          "trecho": "Prefeitura de Goiânia Secretaria Municipal de Cultura Diretora de Políticas, Ações e Patrimônio Cultural",
-          "oficial": false,
+          "valor": "Prefeitura de Goiânia",
+          "trecho": "PREFEITURA DE GOIÂNIA",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "O MUNICÍPIO DE GOIÂNIA, representado pela Secretaria Municipal de Cultura",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "O objeto deste edital é a seleção de projetos culturais de audiovisual para receberem apoio financeiro nas categorias descritas no anexo 1, por meio da celebração de termo de execu",
-          "oficial": false,
+          "trecho": "2.2.1. O Edital é destinado, exclusivamente, para os servidores da Secretaria Municipal de Saúde – SMS;",
+          "oficial": true,
           "dispensado": false
         },
         "Requisitos": {
-          "valor": "que se inscreverem no prazo estabelecido, que sejam agentes culturais do Município de Goiânia",
-          "trecho": "O MUNICÍPIO DE GOIÂNIA, representado pela Secretaria Municipal de Cultura, neste denominada SeCult, torna público o presente Edital de Chamada Pública para seleção simplificada de ",
-          "oficial": false,
+          "valor": "preenchido os requisitos previstos na legislação aplicável à respectiva carreira, direito tenha sido reconhecido em parecer técnico emitido pelo órgão municipal competente",
+          "trecho": "2.2. A implementação será destinada aos servidores que adiram ao presente edital, desde que tenham preenchido os requisitos previstos na legislação aplicável à respectiva carreira ",
+          "oficial": true,
           "dispensado": false
         }
       },
