@@ -1,11 +1,11 @@
-commit: d80c09c4f95886d3bd6b4dd550052876d6577a16
-em: 2026-11-09T19:27:29Z
+commit: 3eb1a102a9293c14265337ec3e0ab1f00ed31b9f
+em: 2026-11-10T14:32:59Z
 rc: 1
 ::error title=teste falhou::tests.test_livros_parametros.TestArquivo.test_dez_blocos_e_todos_decididos — AssertionError: 282 not greater than or equal to 300
 ::error title=teste falhou::tests.test_motor01_diario_goiania.TestCoberturaDoDia.test_sem_lista_e_sem_catalogo_a_cobertura_fica_nao_medida — AssertionError: True is not false
-::error title=teste falhou::tests.test_motor01_diario_goiania.TestMotor.test_falha_da_api_vira_diagnostico_e_nao_silencio — AssertionError: 'TimeoutError' not found in '4 edição(ões) lida(s), 72 ato(s) do terceiro setor: nenhum chamamento aberto para OSC hoje · 53 a acompanhar · 19 ruído (credenciamento
-::error title=teste falhou::tests.test_motor01_diario_goiania.TestMotor.test_leitura_na_nuvem_pelo_querido_diario — + OPORTUNIDADE
-::error title=teste falhou::tests.test_motor_judiciario_go.Motor.test_computador_le_o_tjgo_e_a_nuvem_entrega_a_base — + nuvem
+::error title=teste falhou::tests.test_motor01_diario_goiania.TestMotor.test_falha_da_api_vira_diagnostico_e_nao_silencio — Diff is 3018 characters long. Set self.maxDiff to None to see it.
+::error title=teste falhou::tests.test_motor01_diario_goiania.TestMotor.test_leitura_na_nuvem_pelo_querido_diario — AssertionError: 2 != 1
+::error title=teste falhou::tests.test_motor01_diario_goiania.TestMotor.test_trecho_com_injecao_vai_para_quarentena — Diff is 3018 characters long. Set self.maxDiff to None to see it.
 ---- falhas ----
 ERROR: test_gerador_le_as_bases_externas (tests.test_incentivos_externos.TesteCatalogo.test_gerador_le_as_bases_externas)
 ----------------------------------------------------------------------
@@ -115,13 +115,13 @@ FAIL: test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo (tests.test_consiste
 Traceback (most recent call last):
   File "/tmp/eldorado_testes/tests/test_consistencia_transversal_2026_10_17.py", line 140, in test_dados_toda_capa_tem_arquivo_e_indice_do_catalogo
     self.assertEqual(sorted(i for i in cat if not (L / f"{i}.json").exists()), [])
-AssertionError: Lists differ: ['nova-0af6cfce7cab', 'nova-11754f7f2ba8',[6414 chars]4f5'] != []
+AssertionError: Lists differ: ['nova-0af6cfce7cab', 'nova-11754f7f2ba8',[6703 chars]4f5'] != []
 
-First list contains 337 additional elements.
+First list contains 352 additional elements.
 First extra element 0:
 'nova-0af6cfce7cab'
 
-Diff is 7477 characters long. Set self.maxDiff to None to see it.
+Diff is 7811 characters long. Set self.maxDiff to None to see it.
 
 ======================================================================
 FAIL: test_relatorio_do_cartorio_das_certidoes_guardadas (tests.test_consistencia_transversal_2026_10_17.MesmoRetrato.test_relatorio_do_cartorio_das_certidoes_guardadas)
@@ -217,20 +217,38 @@ AssertionError: True is not false
 FAIL: test_falha_da_api_vira_diagnostico_e_nao_silencio (tests.test_motor01_diario_goiania.TestMotor.test_falha_da_api_vira_diagnostico_e_nao_silencio)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_motor01_diario_goiania.py", line 182, in test_falha_da_api_vira_diagnostico_e_nao_silencio
-    self.assertIn("TimeoutError", r["diagnostico"]["motivo_zero"])
-AssertionError: 'TimeoutError' not found in '4 edição(ões) lida(s), 72 ato(s) do terceiro setor: nenhum chamamento aberto para OSC hoje · 53 a acompanhar · 19 ruído (credenciamento, OS da saúde, decretos)'
+  File "/tmp/eldorado_testes/tests/test_motor01_diario_goiania.py", line 181, in test_falha_da_api_vira_diagnostico_e_nao_silencio
+    self.assertEqual(r["achados"], [])
+AssertionError: Lists differ: [{'id': '4a8135a14cf7248177de', 'status': [2375 chars]: 3}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'id': '4a8135a14cf7248177de', 'status': 'capturada', 'titulo': 'CMDCA/FMDCA — Edital nº 002/2026 — Captação de patrocínios privados, exclusivamente por meio de aportes ﬁnanceiros, destinados ao custeio de atrações artísticasnão ﬁnanciadas ', 'url': 'https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261109_000008899.pdf', 'url_oficial_provavel': 'https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261109_000008899.pdf', 'url_querido_diario': 'https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261109_000008899.pdf', 'fonte_id': 'do-goiania', 'fonte_nome': 'Diário Oficial do Município de Goiânia', 'territorio': 'GO/Goiânia', 'municipio': 'GO/Goiânia', 'uf': 'GO', 'nivel': 'municipal', 'tipo_fonte': 'sensor_diario_oficial', 'confianca': 'primaria', 'forma_divulgacao': 'diario_oficial_municipio', 'coletado_em': '2026-11-10T14:30:27+00:00', 'data_publicacao': '2026-11-09', 'edicao_numero': 8899, 'prazo_texto': None, 'fim': None, 'valor_texto': 'R$ 100.000,00', 'objeto': 'Captação de patrocínios privados, exclusivamente por meio de aportes ﬁnanceiros, destinados ao custeio de atrações artísticasnão ﬁnanciadas pelo Termo de Colaboração da OSC e à execução de benfeitorias físicas no Parque Mutirama', 'orgao': 'CMDCA/FMDCA', 'regime': 'fundo_conselho', 'evidencia': 'Referência: Processo Nº 26.25.000001999-3 SEI Nº 11993038v1 Prefeitura de Goiânia Secretaria Municipal de Gestão de Negócios e Parcerias Diretoria Administrativa EDITAL DE CHAMAMENTO PÚBLICO Nº 002/2026 "NATAL NO PARQUE - A MAGIA DE BRINCAR" EDITAL DE CHAMAMENTO PÚBLICO MODALIDADE: Chamamento Público para Captação de Patrocínios Privados nº 002/2026 - Regido pela Lei Municipal nº 11.647/2026 e DecretoMunicipal nº 155/2026. PERÍODO DE PROTOCOLO: 15 (quinze) dias corridos, contados da data de publicação deste Edital no Diário Oﬁcial do Município (DOM). As propostas deverão ser protocoladas em formato digital e encaminhadas para o endereço eletrônico oﬁcial da Comissão de Seleção de Patrocínios', 'hash_evidencia': '83ce221f3d9106f076b1eab7cdb46541f74bc371bf3e80bb5237c698b532334e', 'classificacao_ato': {'veredito': 'OPORTUNIDADE', 'tipo': 'abertura', 'regime': 'fundo_conselho', 'publico': 'osc', 'motivos': ['abertura de seleção para OSC no regime fundo_conselho'], 'sinais': ['abertura', 'fundo', 'mrosc', 'resultado']}, 'sensor': 'do-goiania', 'forca_lexica': 3}
+
+Diff is 3018 characters long. Set self.maxDiff to None to see it.
 
 ======================================================================
 FAIL: test_leitura_na_nuvem_pelo_querido_diario (tests.test_motor01_diario_goiania.TestMotor.test_leitura_na_nuvem_pelo_querido_diario)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_motor01_diario_goiania.py", line 176, in test_leitura_na_nuvem_pelo_querido_diario
-    self.assertEqual(est["atos"][0]["veredito"], "OPORTUNIDADE")
-AssertionError: 'ACOMPANHAR' != 'OPORTUNIDADE'
-- ACOMPANHAR
-+ OPORTUNIDADE
+  File "/tmp/eldorado_testes/tests/test_motor01_diario_goiania.py", line 167, in test_leitura_na_nuvem_pelo_querido_diario
+    self.assertEqual(len(r["achados"]), 1)                      # Aparecida fica fora; credenciamento é ruído
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1
 
+======================================================================
+FAIL: test_trecho_com_injecao_vai_para_quarentena (tests.test_motor01_diario_goiania.TestMotor.test_trecho_com_injecao_vai_para_quarentena)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/eldorado_testes/tests/test_motor01_diario_goiania.py", line 191, in test_trecho_com_injecao_vai_para_quarentena
+    self.assertEqual(r["achados"], [])
+AssertionError: Lists differ: [{'id': '4a8135a14cf7248177de', 'status': [2375 chars]: 3}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'id': '4a8135a14cf7248177de', 'status': 'capturada', 'titulo': 'CMDCA/FMDCA — Edital nº 002/2026 — Captação de patrocínios privados, exclusivamente por meio de aportes ﬁnanceiros, destinados ao custeio de atrações artísticasnão ﬁnanciadas ', 'url': 'https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261109_000008899.pdf', 'url_oficial_provavel': 'https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261109_000008899.pdf', 'url_querido_diario': 'https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261109_000008899.pdf', 'fonte_id': 'do-goiania', 'fonte_nome': 'Diário Oficial do Município de Goiânia', 'territorio': 'GO/Goiânia', 'municipio': 'GO/Goiânia', 'uf': 'GO', 'nivel': 'municipal', 'tipo_fonte': 'sensor_diario_oficial', 'confianca': 'primaria', 'forma_divulgacao': 'diario_oficial_municipio', 'coletado_em': '2026-11-10T14:31:56+00:00', 'data_publicacao': '2026-11-09', 'edicao_numero': 8899, 'prazo_texto': None, 'fim': None, 'valor_texto': 'R$ 100.000,00', 'objeto': 'Captação de patrocínios privados, exclusivamente por meio de aportes ﬁnanceiros, destinados ao custeio de atrações artísticasnão ﬁnanciadas pelo Termo de Colaboração da OSC e à execução de benfeitorias físicas no Parque Mutirama', 'orgao': 'CMDCA/FMDCA', 'regime': 'fundo_conselho', 'evidencia': 'Referência: Processo Nº 26.25.000001999-3 SEI Nº 11993038v1 Prefeitura de Goiânia Secretaria Municipal de Gestão de Negócios e Parcerias Diretoria Administrativa EDITAL DE CHAMAMENTO PÚBLICO Nº 002/2026 "NATAL NO PARQUE - A MAGIA DE BRINCAR" EDITAL DE CHAMAMENTO PÚBLICO MODALIDADE: Chamamento Público para Captação de Patrocínios Privados nº 002/2026 - Regido pela Lei Municipal nº 11.647/2026 e DecretoMunicipal nº 155/2026. PERÍODO DE PROTOCOLO: 15 (quinze) dias corridos, contados da data de publicação deste Edital no Diário Oﬁcial do Município (DOM). As propostas deverão ser protocoladas em formato digital e encaminhadas para o endereço eletrônico oﬁcial da Comissão de Seleção de Patrocínios', 'hash_evidencia': '83ce221f3d9106f076b1eab7cdb46541f74bc371bf3e80bb5237c698b532334e', 'classificacao_ato': {'veredito': 'OPORTUNIDADE', 'tipo': 'abertura', 'regime': 'fundo_conselho', 'publico': 'osc', 'motivos': ['abertura de seleção para OSC no regime fundo_conselho'], 'sinais': ['abertura', 'fundo', 'mrosc', 'resultado']}, 'sensor': 'do-goiania', 'forca_lexica': 3}
+
+Diff is 3018 characters long. Set self.maxDiff to None to see it.
 
 ======================================================================
 FAIL: test_computador_le_o_tjgo_e_a_nuvem_entrega_a_base (tests.test_motor_judiciario_go.Motor.test_computador_le_o_tjgo_e_a_nuvem_entrega_a_base)
@@ -289,21 +307,3 @@ Traceback (most recent call last):
 AssertionError: registro do expurgo conta 0, faltam 9 no acervo
 
 ======================================================================
-FAIL: test_universo_inteiro_decidido (tests.test_validacao_mapa.TestArquivoDeValidacao.test_universo_inteiro_decidido)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_validacao_mapa.py", line 43, in test_universo_inteiro_decidido
-    self.assertEqual(sum(self.dados["contagem"].values()), len(self.itens))
-AssertionError: 1046 != 308
-
-======================================================================
-FAIL: test_universo_inteiro_decidido (tests.test_validacao_mapa.TestArquivoDeValidacao0929.test_universo_inteiro_decidido)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/tmp/eldorado_testes/tests/test_validacao_mapa.py", line 31, in test_universo_inteiro_decidido
-    self.assertGreaterEqual(len(self.itens) + len(saiu), self.MINIMO)
-AssertionError: 142 not greater than or equal to 150
-
-======================================================================
-FAIL: test_todo_ausente_saiu_pela_regra_territorial (tests.test_verificacao_63_2026_09_15.TesteBaseDaVerificacao.test_todo_ausente_saiu_pela_regra_territorial)
-Nenhum dos 63 some sem motivo: cada ausente é municipal de outro estado, fora das capitais.
