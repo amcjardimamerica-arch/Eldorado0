@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-10T01:49:36+00:00",
+  "em": "2026-11-10T01:58:47+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-10T01:33:55+00:00",
+  "ultimo_voo": "2026-11-10T01:52:06+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,65 +48,76 @@
     },
     "estrelas_de_ouro": 4,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.0
+    "tempo_medio_min": 6.2
   },
   "missoes": [
     {
-      "em": "2026-11-10T01:33:55+00:00",
+      "em": "2026-11-10T01:52:06+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anápolis — CRAS Leste 1 recebe inscrições para o Programa Bombeiro Mirim em Anápolis — Goiás / Anápolis — Goiás / Anápolis",
+      "alvo": "Anápolis — Fundo Municipal de Cultura recebe inscrições até domingo (19) — Goiás / Anápolis — Goiás / Anápolis",
       "qualidade": "insuficiente",
-      "comprovados": 5,
-      "dispensados": 0,
+      "comprovados": 6,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
+        "Território",
         "Requisitos",
-        "Área de atuação"
+        "Anexos"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona a implantação do Programa Educacional Bombeiro Mirim (PROEBOM) no âmbito municipal, financiado pela Secretaria de Estado da Segurança Pública, o que indica uma fonte válida para ações relacionadas ao programa.",
-        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é a implantação do PROEBOM, e demonstrar capacidade de atuação no âmbito da segurança pública e educação.",
-        "proximo_passo": "Verificar os anexos mencionados no edital para obter detalhes sobre os requisitos e ações necessárias para participar do programa.",
-        "risco": "A falta de informações sobre prazo de inscrição, requisitos e área de atuação pode impedir a associação de se preparar adequadamente para o processo de participação."
+        "por_que": "O texto comprova que o Fundo Municipal de Cultura de Anápolis oferece financiamento de projetos culturais, com prazo de inscrição até 19 de maio e valor total de mais de R$ 2 milhões.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no Fundo Municipal de Cultura de Anápolis, apresentando um projeto cultural que atenda aos objetivos do edital, mesmo que não esteja localizada em Anápolis.",
+        "proximo_passo": "Verificar os requisitos do edital e preparar o projeto cultural para inscrição até 19 de maio.",
+        "risco": "A associação comunitária de Goiânia pode ser impedida por estar localizada em Goiânia, enquanto o edital é voltado para Anápolis."
       },
       "erro": null,
-      "segundos": 900,
+      "segundos": 373,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-55221ed6acfc",
+      "id": "op-1aa878592994",
       "encontrou": {
         "Objeto": {
-          "valor": "implantação e implementação do Programa Educacional Bombeiro Mirim (PROEBOM) no âmbito do município convenente",
-          "trecho": "O presente Termo Aditivo ao Convênio nº 119/2021 tem por objetivo incluir obrigações referentes ao CORPO DE BOMBEIROS MILITAR DO ESTADO DE GOIÁS, visando implantação e implementaçã",
+          "valor": "financiamento de projetos culturais",
+          "trecho": "Serão mais de R$ 2 milhões para o financiamento de projetos culturais.",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O texto menciona que as inscrições foram prorrogadas e podem ser realizadas até o dia 19 de maio.",
+          "trecho": "As inscrições podem ser realizadas até o dia 19 de maio. [rejeitado: data implausível para edital aberto]",
+          "oficial": false,
+          "dispensado": true
+        },
+        "Valor": {
+          "valor": "mais de R$ 2 milhões",
+          "trecho": "Serão mais de R$ 2 milhões para o financiamento de projetos culturais.",
           "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Segurança Pública",
-          "trecho": "Estado de Goiás, por intermédio da Secretaria de Estado da Segurança Pública",
+          "valor": "Prefeitura de Anápolis",
+          "trecho": "A gestão municipal, por meio da Secretaria de Integração, acaba de lançar o regulamento...",
           "oficial": false,
           "dispensado": false
         },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Município de Ouro Verde - GO",
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "financiamento de projetos culturais",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Segurança Pública",
+      "financiador": "Prefeitura de Anápolis",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
