@@ -1,5 +1,5 @@
 {
- "em": "2026-11-10T01:52:44+00:00",
+ "em": "2026-11-10T03:22:38+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,21 +7,25 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 57778
+  "exemplos_da_rede": 57857
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.2914
+    3.3067
    ],
    [
     "origem:rota original",
-    3.0741
+    3.0971
    ],
    [
     "tok:inscricoes",
     2.9357
+   ],
+   [
+    "origem:biblioteca",
+    2.6902
    ],
    [
     "tok:aldirblanc",
@@ -36,34 +40,30 @@
     2.4057
    ],
    [
-    "origem:biblioteca",
-    2.3981
+    "tld:br",
+    2.3231
    ],
    [
     "tok:imprensa",
     2.2397
    ],
    [
-    "tok:sitemap",
-    2.2089
-   ],
-   [
-    "tok:xml",
-    2.2089
+    "tok:transparencia",
+    2.219
    ],
    [
     "tok:abre",
     2.0683
    ],
    [
-    "tok:transparencia",
-    2.068
+    "tok:sitemap",
+    2.0251
    ]
   ],
   "piores_sinais": [
    [
-    "via:ponte",
-    -2.2972
+    "gov:True",
+    -2.4277
    ],
    [
     "tok:pgt",
@@ -75,19 +75,19 @@
    ],
    [
     "tok:2026",
-    -3.1474
+    -3.1543
    ],
    [
     "origem:padrão",
-    -3.4942
+    -3.3889
    ],
    [
     "tok:content",
-    -3.7234
+    -3.7303
    ],
    [
     "tok:uploads",
-    -3.7234
+    -3.7303
    ],
    [
     "origem:câmara",
@@ -947,8 +947,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T16:05:10+00:00",
-    "testes": 13,
+    "em": "2026-11-10T03:22:38+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1109,8 +1109,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T14:34:13+00:00",
-    "testes": 12,
+    "em": "2026-11-10T03:21:38+00:00",
+    "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1217,7 +1217,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T14:34:30+00:00",
+    "em": "2026-11-10T03:21:55+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1483,10 +1483,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 11,
-    "aprendido_em": "2026-11-09T14:34:54+00:00"
+    "aprendido_em": "2026-11-10T03:22:19+00:00"
    },
    "afinado": {
-    "em": "2026-11-09T14:34:54+00:00",
+    "em": "2026-11-10T03:22:19+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
@@ -1900,10 +1900,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-11-09T14:34:43+00:00"
+    "aprendido_em": "2026-11-10T03:22:08+00:00"
    },
    "afinado": {
-    "em": "2026-11-09T14:34:43+00:00",
+    "em": "2026-11-10T03:22:08+00:00",
     "testes": 14,
     "melhor": {
      "url": "https://mariaemilia.org.br/feed",
@@ -2115,10 +2115,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-11-09T14:35:13+00:00"
+    "aprendido_em": "2026-11-10T03:22:35+00:00"
    },
    "afinado": {
-    "em": "2026-11-09T14:35:13+00:00",
+    "em": "2026-11-10T03:22:35+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.detran.rj.gov.br/sitemap.xml",
@@ -3539,10 +3539,10 @@
    "nome": "Editais incentivados — sites das maiores contribuintes do ICMS de Goiás (destinação tributária)",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 55,
-   "ok": 47,
+   "leituras": 56,
+   "ok": 48,
    "ultima": {
-    "em": "2026-11-09T03:04:16+00:00",
+    "em": "2026-11-10T03:04:59+00:00",
     "classe": "ok",
     "motivo": ""
    },
