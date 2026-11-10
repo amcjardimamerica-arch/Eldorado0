@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-10T08:05:07+00:00",
+  "em": "2026-11-10T08:23:49+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-10T08:01:52+00:00",
+  "ultimo_voo": "2026-11-10T08:07:06+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,37 +43,72 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 4,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 2.6
+    "tempo_medio_min": 16.0
   },
   "missoes": [
     {
-      "em": "2026-11-10T08:01:52+00:00",
+      "em": "2026-11-10T08:07:06+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Aviso de chamamento público nº 7/2026 — Goiás",
+      "alvo": "Banco para ONG (1) — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 3,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Objeto",
+        "Prazo de recurso",
+        "Valor",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "nenhuma fonte legível",
-      "segundos": 156,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O texto comprovado menciona o prazo de inscrição e o resultado, o que é suficiente para confirmar a existência do edital.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar os requisitos não encontrados no texto, como área de atuação e anexos, e se enquadrar dentro do escopo do edital.",
+        "proximo_passo": "Consultar os requisitos e anexos do edital para se preparar para a inscrição.",
+        "risco": "A falta de informações sobre requisitos e área de atuação pode impedir a associação de se qualificar adequadamente para o edital."
+      },
+      "erro": null,
+      "segundos": 958,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: nenhuma fonte legível",
-      "id": "op-dbc53ec0905a",
-      "encontrou": {},
-      "financiador": "Governo do Estado de Goiás",
-      "indicios": [],
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-nova-f5c9f4eb4a7b",
+      "encontrou": {
+        "Prazo de inscrição": {
+          "valor": "2026-08-09 a 2026-10-24",
+          "trecho": "Editais Abertos para Instituições Sociais em 2026: 7 Oportunidades com Inscrições Ativas [Guia Completo]",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Banco para ONG",
+          "trecho": "Banco para ONG",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Instituto Social Crescer",
+      "indicios": [
+        {
+          "url": "https://institutosocialcrescervida.blogspot.com/search/label/banco%20para%20ONG",
+          "tipo": "noticia"
+        }
+      ],
       "rotas": [
         "site_do_financiador",
         "site_do_financiador_edital",
