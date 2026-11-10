@@ -8,9 +8,9 @@
 
 ```json
 {
- "cegos_da_1a_rodada": 67,
- "testados": 58,
- "com_rota_nova": 27,
+ "cegos_da_1a_rodada": 68,
+ "testados": 59,
+ "com_rota_nova": 28,
  "via_ponte": 0,
  "continuam_cegos": [
   "camara-goiania-pl",
@@ -68,8 +68,8 @@
   },
   {
    "motor": "dou",
-   "achados_total_1a": 35,
-   "achados_total_agora": 35,
+   "achados_total_1a": 37,
+   "achados_total_agora": 37,
    "no_fluxo": 3,
    "confirmadas": 0
   },
@@ -200,7 +200,7 @@
  "pontos_com_redundancia": 19,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 58413
+ "exemplos_da_rede_de_rotas": 58492
 }
 ```
 
@@ -245,12 +245,9 @@
 {
  "dia_de_referencia": "2026-11-10",
  "ativos": 172,
- "lidos_ontem": 4,
- "lidos_hoje": 0,
+ "lidos_ontem": 5,
+ "lidos_hoje": 11,
  "nao_lidos_ontem_nem_hoje": [
-  "do-goiania",
-  "do-goias",
-  "dou",
   "f260-captacao-001",
   "f260-captacao-018",
   "f260-captacao-025",
@@ -287,7 +284,10 @@
   "f260-captacao-190",
   "f260-captacao-193",
   "f260-captacao-196",
-  "f260-captacao-200"
+  "f260-captacao-200",
+  "f260-captacao-206",
+  "f260-captacao-207",
+  "f260-captacao-208"
  ],
  "ainda_sem_primeira_leitura": [
   "motor-gife",

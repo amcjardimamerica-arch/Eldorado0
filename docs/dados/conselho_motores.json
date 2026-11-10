@@ -1,5 +1,5 @@
 {
- "em": "2026-11-10T13:59:39+00:00",
+ "em": "2026-11-10T15:32:28+00:00",
  "conselho": [
   {
    "id": "falso_verde",
@@ -46,18 +46,17 @@
  ],
  "resumo": {
   "motores": 165,
-  "motores_com_falha": 129,
+  "motores_com_falha": 128,
   "falhas_por_tipo": {
-   "CUSTO SEM RETORNO": 2,
    "RUÍDO": 23,
-   "ESTRANGULADO": 1,
-   "CEGO": 58,
+   "CEGO": 59,
    "SILÊNCIO LONGO": 42,
    "PÁGINA VAZIA": 9,
    "INTERMITENTE": 4,
    "VAZAMENTO": 33,
    "CADÊNCIA FORA DO RITMO": 1,
-   "CONGELADO": 27
+   "CONGELADO": 27,
+   "CUSTO SEM RETORNO": 1
   }
  },
  "cobertura": {
@@ -311,32 +310,25 @@
    "tipo": "diario_oficial",
    "saude": [
     {
-     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261106_000008898.pdf",
+     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261109_000008899.pdf",
      "http": 200,
-     "bytes": 347295
+     "bytes": 552968
     },
     {
      "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261106_000008898.pdf",
      "http": 200,
-     "bytes": 331658
+     "bytes": 15083
     }
    ],
-   "achados_total": 2,
+   "achados_total": 3,
    "valor": "confirma",
-   "achados_30d": 10,
+   "achados_30d": 11,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "quinta"
+    "dia_forte": "terça"
    },
-   "falhas": [
-    {
-     "conselheiro": "redundancia",
-     "falha": "CUSTO SEM RETORNO",
-     "prova": "368 s na última leitura sem achado",
-     "melhoria": "reduzir páginas por leitura ou a cadência; transferir o tempo para motores que rendem"
-    }
-   ]
+   "falhas": []
   },
   "do-goias": {
    "nome": "Diário Oficial do Estado de Goiás",
@@ -345,16 +337,16 @@
     {
      "url": "https://diariooficial.abc.go.gov.br",
      "http": 200,
-     "bytes": 195
+     "bytes": 312
     }
    ],
    "achados_total": 33,
    "valor": "ruído",
-   "achados_30d": 65,
+   "achados_30d": 60,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "sexta"
+    "dia_forte": "sábado"
    },
    "falhas": [
     {
@@ -370,35 +362,29 @@
    "tipo": "diario_oficial",
    "saude": [
     {
-     "url": "https://www.in.gov.br/leiturajornal?data=07-11-2026&secao=do1",
+     "url": "https://www.in.gov.br/leiturajornal?data=10-11-2026&secao=do1",
      "http": 200,
      "bytes": 0
     },
     {
-     "url": "https://www.in.gov.br/leiturajornal?data=07-11-2026&secao=do3",
+     "url": "https://www.in.gov.br/leiturajornal?data=10-11-2026&secao=do3",
      "http": 200,
      "bytes": 0
     }
    ],
-   "achados_total": 35,
+   "achados_total": 37,
    "valor": "ruído",
-   "achados_30d": 11,
+   "achados_30d": 13,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "quinta"
+    "dia_forte": "terça"
    },
    "falhas": [
     {
-     "conselheiro": "falso_verde",
-     "falha": "ESTRANGULADO",
-     "prova": "viu 5700 links e nenhum virou candidato",
-     "melhoria": "o filtro de candidatos está estreito demais: incluir termos de chamamento/edital da fonte e seguir PDFs"
-    },
-    {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "35 achados e nenhuma oportunidade confirmada",
+     "prova": "37 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -428,13 +414,13 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CEGO",
-     "prova": "respondeu 200 em 29 de 30 dias e não achou nada em 30 dias",
+     "prova": "respondeu 200 em 28 de 30 dias e não achou nada em 30 dias",
      "melhoria": "conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)"
     },
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "105 leituras vazias seguidas",
+     "prova": "106 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -446,13 +432,13 @@
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
-     "bytes": 194650,
+     "bytes": 261972,
      "itens": 0
     },
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
-     "bytes": 13200,
+     "bytes": 13270,
      "itens": 0
     }
    ],
@@ -474,7 +460,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "153 leituras vazias seguidas",
+     "prova": "154 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -539,7 +525,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "98 leituras vazias seguidas",
+     "prova": "99 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -677,8 +663,8 @@
     {
      "url": "https://gife.org.br/wp-json/wp/v2/posts",
      "http": 200,
-     "bytes": 172390,
-     "posts": 19
+     "bytes": 192921,
+     "posts": 21
     },
     {
      "url": "https://capta.org.br/wp-json/wp/v2/posts",
@@ -689,11 +675,11 @@
    ],
    "achados_total": 5,
    "valor": "ouro",
-   "achados_30d": 32,
+   "achados_30d": 31,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "sexta"
+    "dia_forte": "terça"
    },
    "falhas": [
     {
@@ -1974,12 +1960,12 @@
     {
      "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-encerradas/edital-premio-cultura-viva-construcao-nacional-do-hip-hop-2023-1",
      "http": 200,
-     "bytes": 158570
+     "bytes": 159334
     },
     {
      "url": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
      "http": 200,
-     "bytes": 166532
+     "bytes": 167227
     }
    ],
    "achados_total": 134,
@@ -1994,7 +1980,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 21 dias",
+     "prova": "o mesmo achado repetido em 22 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     },
     {
@@ -2460,29 +2446,29 @@
    "tipo": "plataforma",
    "saude": [
     {
-     "url": "https://institutosocialcrescervida.blogspot.com/2026/08/editais-abertos-para-instituicoes.html",
-     "http": 200,
-     "bytes": 279613
-    },
-    {
      "url": "https://html.duckduckgo.com/html/?q=edital+organiza%C3%A7%C3%B5es+da+sociedade+civil+2026",
      "http": 200,
-     "bytes": 37291
+     "bytes": 36460
+    },
+    {
+     "url": "https://html.duckduckgo.com/html/?q=",
+     "http": 200,
+     "bytes": 3108
     }
    ],
-   "achados_total": 281,
+   "achados_total": 283,
    "valor": "ouro",
-   "achados_30d": 589,
+   "achados_30d": 564,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "sexta"
+    "dia_forte": "terça"
    },
    "falhas": [
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "281 achados e nenhuma oportunidade confirmada",
+     "prova": "283 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -2547,7 +2533,7 @@
     {
      "url": "https://www.congressonacional.leg.br",
      "http": 200,
-     "bytes": 160543,
+     "bytes": 180189,
      "itens": 11
     },
     {
@@ -4047,7 +4033,7 @@
    ],
    "achados_total": 2,
    "valor": "baixo volume",
-   "achados_30d": 1,
+   "achados_30d": 0,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -4056,8 +4042,14 @@
    "falhas": [
     {
      "conselheiro": "falso_verde",
+     "falha": "CEGO",
+     "prova": "respondeu 200 em 24 de 30 dias e não achou nada em 30 dias",
+     "melhoria": "conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)"
+    },
+    {
+     "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "83 leituras vazias seguidas",
+     "prova": "84 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
