@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-10T13:47:35+00:00",
+  "em": "2026-11-10T13:51:58+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-10T13:35:19+00:00",
+  "ultimo_voo": "2026-11-10T13:49:34+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,69 +43,44 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 4,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.5
+    "tempo_medio_min": 1.8
   },
   "missoes": [
     {
-      "em": "2026-11-10T13:35:19+00:00",
+      "em": "2026-11-10T13:49:34+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Comissão da pnab inicia classificação dos projetos inscritos no ciclo 2 em goiatuba — Goiás / Goiatuba",
+      "alvo": "Comurg capacita servidores para trabalho em altura de manejo arbóreo — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 3,
-      "dispensados": 0,
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Território",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
-      ],
+      "nao_resolvidos": null,
       "pagina_oficial": null,
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que a Comissão da PNAB está classificando projetos inscritos no ciclo 2, o que indica uma atividade relevante para ações de fomento a organizações da sociedade civil.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria inscrever seu projeto no ciclo 2, conforme o edital divulgado pela Prefeitura Municipal de Goiatuba, e aguardar a classificação.",
-        "proximo_passo": "Verificar os editais divulgados pela Prefeitura Municipal de Goiatuba para inscrever o projeto no ciclo 2.",
-        "risco": "A falta de informações sobre prazos e requisitos pode impedir a inscrição a tempo."
-      },
-      "erro": null,
-      "segundos": 691,
+      "parecer_fonte": {},
+      "erro": "nenhuma fonte legível",
+      "segundos": 106,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-45e0da299f07",
-      "encontrou": {
-        "Objeto": {
-          "valor": "classificação dos projetos inscritos no ciclo 2",
-          "trecho": "COMISSÃO DA PNAB INICIA CLASSIFICAÇÃO DOS PROJETOS INSCRITOS NO CICLO 2 EM GOIATUBA",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Goiatuba",
-          "trecho": "Prefeitura Municipal de Goiatuba",
-          "oficial": false,
-          "dispensado": false
-        }
-      },
-      "financiador": "Prefeitura Municipal de Goiatuba",
+      "avaliacao": "falhou: nenhuma fonte legível",
+      "id": "op-nova-461ba2f95c51",
+      "encontrou": {},
+      "financiador": "Comurg",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
