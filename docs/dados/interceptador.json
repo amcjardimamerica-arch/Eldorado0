@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-10T21:36:05+00:00",
+  "em": "2026-11-10T21:52:09+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-10T21:22:39+00:00",
+  "ultimo_voo": "2026-11-10T21:37:51+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,63 +44,77 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 5,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 12.7
+    "tempo_medio_min": 13.5
   },
   "missoes": [
     {
-      "em": "2026-11-10T21:22:39+00:00",
+      "em": "2026-11-10T21:37:51+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital Cultura Goiatuba 2026: PNAB Ciclo 2 — Goiás / Goiatuba — Goiás / Goiatuba",
+      "alvo": "Edital Natal do Bem — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 2,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
         "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado como sendo do Órgão / financiador Prefeitura Municipal de Goiatuba, esfera municipal.",
-        "para_a_amc": "Para acessar o edital, uma associação comunitária de Goiânia precisaria verificar se o edital abrange sua área de atuação e seguir o processo de inscrição conforme definido no edital, mesmo que os prazos e requisitos não estejam disponíveis.",
-        "proximo_passo": "Consultar diretamente a Prefeitura Municipal de Goiatuba para obter informações detalhadas sobre o edital, como prazos, requisitos e área de atuação.",
-        "risco": "O risco é que o edital não aborde as áreas de atuação da associação comunitária ou que os prazos e requisitos não estejam disponíveis, impedindo o acesso ao fomento."
+        "serve_como_fonte": "nao",
+        "por_que": "O edital mencionado não fornece informações sobre prazo de inscrição, valor, requisitos ou área de atuação, sendo insuficiente para servir como fonte direta de acesso ao programa.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há edital específico para organizações da sociedade civil, pois o objeto descrito refere-se a um evento cultural realizado pelo Governo de Goiás, não a um edital de fomento.",
+        "proximo_passo": "Consultar o site da Secretaria de Estado da Cultura (Secult) ou outros editais disponíveis para organizações da sociedade civil no Estado de Goiás.",
+        "risco": "A falta de informações sobre prazo, valor e requisitos pode impedir que a associação realize a inscrição ou acesse recursos disponíveis."
       },
       "erro": null,
-      "segundos": 762,
+      "segundos": 812,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 4,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-2bcc013bdeac",
+      "id": "op-nova-44786ad1bb03",
       "encontrou": {
+        "Objeto": {
+          "valor": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na cidade de Pirenópolis, desde o ano 2000.",
+          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "oficial": true,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Goiatuba",
-          "trecho": "Prefeitura Municipal de Goiatuba",
-          "oficial": false,
+          "valor": "Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult)",
+          "trecho": "Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult)",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "na cidade de Pirenópolis",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura Municipal de Goiatuba",
+      "financiador": "Secretaria de Estado da Cultura",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
