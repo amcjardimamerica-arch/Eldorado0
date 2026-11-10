@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-10T00:57:35+00:00",
+  "em": "2026-11-10T01:18:18+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-10T00:43:16+00:00",
+  "ultimo_voo": "2026-11-10T00:59:52+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,55 +44,74 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 4,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.8
+    "tempo_medio_min": 17.6
   },
   "missoes": [
     {
-      "em": "2026-11-10T00:43:16+00:00",
+      "em": "2026-11-10T00:59:52+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Anexo 8 – Declaração Pessoa com Deficiência – Edital 12 (Docx) — Goiás / Goiânia",
+      "alvo": "Anexo ix – minuta do termo de colaboração — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações comprovadas sobre o edital mencionado para servir como fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria fazer nada, pois não há informações comprovadas sobre o edital para seguir.",
-        "proximo_passo": "Consultar fontes oficiais ou contatar o órgão responsável pelo edital para obter detalhes.",
-        "risco": "A falta de informações comprovadas pode impedir a associação de acessar os dados necessários para participar do edital."
+        "serve_como_fonte": "sim",
+        "por_que": "O texto menciona o Objeto, Órgão / financiador, Território, Esfera e Requisitos, o que é suficiente para identificar a fonte como relevante para a AMC.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria elaborar um Plano de Trabalho e documentação técnica que dele resulte, além de se alinhar ao Objeto da parceria, que envolve transferência de recursos financeiros.",
+        "proximo_passo": "Elaborar o Plano de Trabalho e a documentação técnica necessários para se qualificar como parceira no processo.",
+        "risco": "A falta de documentação técnica adequada ou não alinhamento ao Objeto da parceria pode impedir o acesso ao recurso."
       },
       "erro": null,
-      "segundos": 825,
+      "segundos": 1059,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-00d2a5044a17",
-      "encontrou": {},
-      "financiador": "Prefeitura Municipal de Goiânia",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-84574a6a5f96",
+      "encontrou": {
+        "Objeto": {
+          "valor": "parceria para realização de finalidade de interesse público e recíproco que envolve a transferência de recursos financeiros à Organizações da Sociedade Civil",
+          "trecho": "O presente Termo de Colaboração, decorrente do Chamamento Público nº 02/2026-SECULT, tem por objeto a parceria para realização de finalidade de interesse público e recíproco que en",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "SECRETARIA DE ESTADO DA CULTURA",
+          "trecho": "O ESTADO DE GOIÁS, pessoa jurídica de direito público, por intermédio da SECRETARIA DE ESTADO DA CULTURA",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "ESTADO DE GOIÁS",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Plano de Trabalho, documentação técnica que dele resulte",
+          "trecho": "Para o alcance do objeto pactuado, os partícipes obrigam-se a cumprir o Plano de Trabalho que, independentemente de transcrição, é parte integrante e indissociável do presente Term",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "ESTADO DE GOIÁS",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
