@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-10T23:27:47+00:00",
+  "em": "2026-11-10T23:37:36+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-10T23:13:12+00:00",
+  "ultimo_voo": "2026-11-10T23:30:04+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,79 +44,55 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.8
+    "tempo_medio_min": 6.9
   },
   "missoes": [
     {
-      "em": "2026-11-10T23:13:12+00:00",
+      "em": "2026-11-10T23:30:04+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Precisando renegociar dívidas? GoiásFomento oferece descontos de até 100% em multas e juros pelo Dívida Zero — Goiás",
+      "de": "2 · Brasil · livro da Biblioteca",
+      "alvo": "Chamamento público para o credenciamento de propostas de artistas e fazedores de cultura para compor a… — fund… — Brasil",
       "qualidade": "insuficiente",
-      "comprovados": 7,
+      "comprovados": 0,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona a regularização de débitos e recuperação das condições de acesso ao crédito, que é diretamente relacionado ao objeto do edital.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria estar com parcelas vencidas há mais de 30 dias e seguir o prazo de inscrição indicado para acessar o edital.",
-        "proximo_passo": "Verificar os requisitos e anexos do edital e se enquadrar nos critérios de elegibilidade para participar do processo.",
-        "risco": "O prazo de inscrição pode expirar antes que a associação comunitária realize a inscrição, impedindo o acesso ao benefício."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações suficientes para confirmar a existência do edital.",
+        "para_a_amc": null,
+        "proximo_passo": null,
+        "risco": null
       },
       "erro": null,
-      "segundos": 831,
+      "segundos": 415,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-98b4d95b9705",
-      "encontrou": {
-        "Objeto": {
-          "valor": "regularização de débitos e recuperação das condições de acesso ao crédito",
-          "trecho": "A Agência de Fomento de Goiás (GoiásFomento) lança nesta terça-feira (10/11), a campanha Dívida Zero, iniciativa voltada à regularização de débitos e à recuperação das condições de",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-11-10 a 2026-12-10",
-          "trecho": "Até 10 de dezembro, clientes com parcelas vencidas há mais de 30 dias poderão negociar pendências com descontos de até 100% sobre multas e juros, além de opções de parcelamento.",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "GoiásFomento",
-          "trecho": "A Agência de Fomento de Goiás (GoiásFomento) lança nesta terça-feira (10/11), a campanha Dívida Zero",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "GoiásFomento",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "clientes com parcelas vencidas há mais de 30 dias",
-          "trecho": "clientes com parcelas vencidas há mais de 30 dias poderão negociar pendências com descontos de até 100% sobre multas e juros, além de opções de parcelamento",
-          "oficial": false,
-          "dispensado": false
-        }
-      },
-      "financiador": "GoiásFomento",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-210868e52431",
+      "encontrou": {},
+      "financiador": "Ministério da Cultura",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
