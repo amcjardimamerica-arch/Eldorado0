@@ -1,5 +1,5 @@
 {
- "em": "2026-11-09T22:45:46+00:00",
+ "em": "2026-11-10T00:17:09+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,25 +7,25 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 57624
+  "exemplos_da_rede": 57701
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.6539
+    3.5976
    ],
    [
     "origem:rota original",
-    3.2509
+    3.1081
    ],
    [
     "tok:inscricoes",
-    2.9295
+    2.9357
    ],
    [
     "tok:aldirblanc",
-    2.6306
+    2.6708
    ],
    [
     "tok:secult",
@@ -37,7 +37,11 @@
    ],
    [
     "origem:biblioteca",
-    2.3219
+    2.4024
+   ],
+   [
+    "tld:br",
+    2.2907
    ],
    [
     "tok:imprensa",
@@ -45,25 +49,21 @@
    ],
    [
     "tok:transparencia",
-    2.1112
-   ],
-   [
-    "tld:br",
-    2.0637
+    2.0807
    ],
    [
     "tok:abre",
-    2.0483
+    2.0683
    ],
    [
     "tok:selecao",
-    1.9233
+    1.931
    ]
   ],
   "piores_sinais": [
    [
-    "gov:True",
-    -2.4636
+    "via:ponte",
+    -2.297
    ],
    [
     "tok:pgt",
@@ -79,7 +79,7 @@
    ],
    [
     "origem:padrão",
-    -3.1755
+    -3.3953
    ],
    [
     "tok:content",
@@ -1307,10 +1307,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 25,
-    "aprendido_em": "2026-11-09T11:29:33+00:00"
+    "aprendido_em": "2026-11-10T00:16:30+00:00"
    },
    "afinado": {
-    "em": "2026-11-09T11:29:33+00:00",
+    "em": "2026-11-10T00:16:30+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.globalfundforwomen.org/sitemap.xml",
@@ -1445,7 +1445,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T11:30:16+00:00",
+    "em": "2026-11-10T00:17:09+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1524,10 +1524,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 113,
-    "aprendido_em": "2026-11-09T11:29:16+00:00"
+    "aprendido_em": "2026-11-10T00:16:18+00:00"
    },
    "afinado": {
-    "em": "2026-11-09T11:29:16+00:00",
+    "em": "2026-11-10T00:16:18+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://senadorcanedo.go.gov.br/aldirblanc/",
@@ -1653,10 +1653,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-11-09T11:29:26+00:00"
+    "aprendido_em": "2026-11-10T00:16:25+00:00"
    },
    "afinado": {
-    "em": "2026-11-09T11:29:26+00:00",
+    "em": "2026-11-10T00:16:25+00:00",
     "testes": 13,
     "melhor": {
      "url": "https://www.gatesfoundation.org/sitemap.xml",
@@ -1776,10 +1776,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 15,
-    "aprendido_em": "2026-11-09T11:29:51+00:00"
+    "aprendido_em": "2026-11-10T00:16:47+00:00"
    },
    "afinado": {
-    "em": "2026-11-09T11:29:51+00:00",
+    "em": "2026-11-10T00:16:47+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.unicef.org/sitemap.xml",
@@ -1817,10 +1817,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-11-09T11:30:00+00:00"
+    "aprendido_em": "2026-11-10T00:16:54+00:00"
    },
    "afinado": {
-    "em": "2026-11-09T11:30:00+00:00",
+    "em": "2026-11-10T00:16:54+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
