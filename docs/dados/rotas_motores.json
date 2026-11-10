@@ -1,5 +1,5 @@
 {
- "em": "2026-11-10T04:54:05+00:00",
+ "em": "2026-11-10T06:28:54+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,21 +7,21 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 57937
+  "exemplos_da_rede": 58014
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.2863
+    3.452
+   ],
+   [
+    "origem:rota original",
+    3.0158
    ],
    [
     "tok:inscricoes",
     2.9357
-   ],
-   [
-    "origem:rota original",
-    2.8971
    ],
    [
     "tok:aldirblanc",
@@ -29,7 +29,7 @@
    ],
    [
     "origem:biblioteca",
-    2.5724
+    2.5634
    ],
    [
     "tok:secult",
@@ -41,7 +41,7 @@
    ],
    [
     "tok:transparencia",
-    2.1893
+    2.1723
    ],
    [
     "tok:imprensa",
@@ -53,17 +53,17 @@
    ],
    [
     "tok:sitemap",
-    1.9674
+    1.9401
    ],
    [
     "tok:xml",
-    1.9674
+    1.9401
    ]
   ],
   "piores_sinais": [
    [
     "gov:True",
-    -2.5627
+    -2.6039
    ],
    [
     "tok:pgt",
@@ -71,7 +71,7 @@
    ],
    [
     "tok:ccs",
-    -2.8008
+    -2.801
    ],
    [
     "tok:2026",
@@ -79,7 +79,7 @@
    ],
    [
     "origem:padrão",
-    -3.57
+    -3.6492
    ],
    [
     "tok:content",
@@ -438,7 +438,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T19:45:05+00:00",
+    "em": "2026-11-10T06:28:50+00:00",
     "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -821,8 +821,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T17:35:51+00:00",
-    "testes": 12,
+    "em": "2026-11-10T06:28:43+00:00",
+    "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1055,8 +1055,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T19:45:01+00:00",
-    "testes": 13,
+    "em": "2026-11-10T06:28:47+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1163,7 +1163,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T19:45:14+00:00",
+    "em": "2026-11-10T06:28:54+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1244,7 +1244,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-09T19:45:06+00:00",
+    "em": "2026-11-10T06:28:50+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1735,10 +1735,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 3,
-    "aprendido_em": "2026-11-09T17:35:26+00:00"
+    "aprendido_em": "2026-11-10T06:28:17+00:00"
    },
    "afinado": {
-    "em": "2026-11-09T17:35:26+00:00",
+    "em": "2026-11-10T06:28:17+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://skoll.org/feed",
