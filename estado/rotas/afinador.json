@@ -1,6 +1,6 @@
 {
  "camara-goiania-pl": {
-  "em": "2026-11-10T04:53:56+00:00",
+  "em": "2026-11-10T17:06:30+00:00",
   "testes": 16,
   "melhor": null,
   "detalhe": [
@@ -11,7 +11,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "TimeoutError",
     "funcionou": false
    },
    {
@@ -56,7 +56,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.goiania.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.goiania.go.leg.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -66,7 +66,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.goiania.go.leg.br/transparencia/editais",
+    "url": "https://www.goiania.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -156,7 +156,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.goiania.go.leg.br/sessoes",
+    "url": "https://www.goiania.go.leg.br/pauta",
     "origem": "câmara",
     "via": "direto",
     "pontos": 0,
@@ -1121,7 +1121,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-10T15:33:50+00:00",
+  "em": "2026-11-10T17:06:46+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1562,7 +1562,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-233": {
-  "em": "2026-11-10T04:53:18+00:00",
+  "em": "2026-11-10T17:05:40+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
@@ -1589,16 +1589,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutosicoob.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.institutosicoob.org.br/premio.html",
     "origem": "biblioteca",
     "via": "direto",
@@ -1621,6 +1611,16 @@
    },
    {
     "url": "https://www.institutosicoob.org.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutosicoob.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -6915,7 +6915,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-252": {
-  "em": "2026-11-10T04:52:41+00:00",
+  "em": "2026-11-10T17:05:10+00:00",
   "testes": 14,
   "melhor": null,
   "detalhe": [
@@ -6928,26 +6928,6 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.facebook.com/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.facebook.com/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -6990,6 +6970,26 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.facebook.com/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.facebook.com/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -7218,24 +7218,13 @@
   "resultado": "rota nova em teste"
  },
  "f260-espalhado-transparencia-agilicloud-com-br": {
-  "em": "2026-11-10T04:52:55+00:00",
+  "em": "2026-11-10T17:05:21+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
    {
     "url": "https://transparencia.agilicloud.com.br/",
     "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://transparencia.agilicloud.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -7268,6 +7257,17 @@
    },
    {
     "url": "https://transparencia.agilicloud.com.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://transparencia.agilicloud.com.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -7731,7 +7731,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-212": {
-  "em": "2026-11-10T04:53:07+00:00",
+  "em": "2026-11-10T17:05:31+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
@@ -7767,17 +7767,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.tcm.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
-   {
     "url": "https://www.tcm.go.gov.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -7790,6 +7779,17 @@
    },
    {
     "url": "https://www.tcm.go.gov.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.tcm.go.gov.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -9620,7 +9620,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-258": {
-  "em": "2026-11-10T06:28:17+00:00",
+  "em": "2026-11-10T17:06:46+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://skoll.org/feed",
@@ -9664,22 +9664,22 @@
     "funcionou": false
    },
    {
-    "url": "https://skoll.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://skoll.org/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
+    "pontos": 1,
+    "links": 105,
     "sinais": 0,
     "formato": "html",
     "erro": null,
     "funcionou": false
    },
    {
-    "url": "https://skoll.org/transparencia/editais",
+    "url": "https://skoll.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 105,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
     "formato": "html",
     "erro": null,
