@@ -1,5 +1,5 @@
 {
- "em": "2026-11-11T00:43:35+00:00",
+ "em": "2026-11-11T03:42:51+00:00",
  "regra": "10/10 (titular, motor 40 — Mapa das OSC): a marcação \"o site proíbe robôs\" não tinha verificação registrada. Este\nscript lê o robots.txt, testa se cada caminho é permitido para robôs (RFC 9309, via urllib.robotparser), e — só nos\ncaminhos PERMITIDOS — abre a página e procura endpoints de dados (API/JSON) citados no código dela. Nada é lido em\ncaminho proibido. Resultado: estado/indexadores/robots_verificacao.json.\n",
  "sites": {
   "mapa-osc": {
@@ -19,7 +19,7 @@
      "permitido_para_robos": true,
      "http": 200,
      "tipo": "text/html; charset=UTF-8",
-     "tamanho": 34865,
+     "tamanho": 34877,
      "links_edital": 1
     },
     {
@@ -104,10 +104,7 @@
       "/api/api/docs/api-docs.json",
       "/api/swagger.json"
      ],
-     "trecho": "",
-     "rotas_total": 63,
-     "rotas_edital": [],
-     "base_spec": "https://mapaosc.ipea.gov.br/api/docs?api-docs.json"
+     "trecho": ""
     }
    },
    "conclusao": "há caminho PERMITIDO com dados: o motor pode sair da coleta assistida — /editais"
