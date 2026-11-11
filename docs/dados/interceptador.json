@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-11T00:11:21+00:00",
+  "em": "2026-11-11T00:22:26+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-10T23:59:15+00:00",
+  "ultimo_voo": "2026-11-11T00:13:14+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,59 +48,73 @@
     },
     "estrelas_de_ouro": 6,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.5
+    "tempo_medio_min": 8.7
   },
   "missoes": [
     {
-      "em": "2026-11-10T23:59:15+00:00",
+      "em": "2026-11-11T00:13:14+00:00",
       "modo": "validar",
       "tipo": "edital",
-      "de": "2 · Brasil · livro da Biblioteca",
-      "alvo": "Fundo Ecos oferece até R$ 150 mil para projetos socioambientais na Amazônia Legal — Brasil",
+      "de": "0 · PNCP · faltam Resultado, Prazo de recurso, Requisitos, Modalidade, Área de atuação",
+      "alvo": "SUP. EST. DE LICITACAO — O presente Chamamento Público tem por objeto selecionar Organização da Sociedade Civil – OSC para celebração de Ter. Veredito: prata — Objeto, Prazo, Território, Valor e Requi",
       "qualidade": "insuficiente",
-      "comprovados": 2,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
         "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O Ministério do Meio Ambiente e Mudança do Clima é o órgão responsável pelo Fundo Ecos, que oferece recursos para projetos socioambientais na Amazônia Legal.",
-        "para_a_amc": "Para acessar o fundo, uma associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que não foi encontrado, mas provavelmente envolve projetos socioambientais na Amazônia Legal, e seguir os requisitos e processos de inscrição estabelecidos pelo Ministério do Meio Ambiente e Mudança do Clima.",
-        "proximo_passo": "Consultar o Ministério do Meio Ambiente e Mudança do Clima para obter informações detalhadas sobre o edital, incluindo requisitos, prazos e área de atuação.",
-        "risco": "A falta de informações sobre o objeto, prazos e requisitos do edital pode impedir que a associação comunitária se candidate adequadamente."
+        "por_que": "O edital comprova a existência de um chamamento público para seleção de OSCs visando à execução de ações para a Cerimônia de Premiação do ConCacau, o que pode ser uma fonte de financiamento para organizações comunitárias.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange a área de atuação da AMC, como educação, cultura ou assistência social, e se sua localização (Goiânia) está dentro do território de atuação do edital (RO).",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre requisitos, área de atuação e possíveis restrições geográficas.",
+        "risco": "O território de atuação do edital é Rondônia, o que pode impedir que uma associação de Goiânia participe, já que o edital não abrange outros estados."
       },
       "erro": null,
-      "segundos": 688,
+      "segundos": 520,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-4b98f4845091",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "3b0a8b47aa7165a5b8da",
       "encontrou": {
+        "Objeto": {
+          "valor": "selecionar Organização da Sociedade Civil – OSC para celebração de Termo de Colaboração visando à execução de ações destinadas à realização da Cerimônia de Premiação do 6º Concurso de Qualidade e Sustentabilidade do Cacau de Rondônia – ConCacau",
+          "trecho": "O presente Chamamento Público tem por objeto selecionar Organização da Sociedade Civil – OSC para celebração de Termo de Colaboração com o Estado de Rondônia, por meio da Secretari",
+          "oficial": false,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Ministério do Meio Ambiente e Mudança do Clima",
-          "trecho": "Ministério do Meio Ambiente — Ministério do Meio Ambiente e Mudança do Clima",
+          "valor": "GOVERNO DO ESTADO DE RONDÔNIA",
+          "trecho": "GOVERNO DO ESTADO DE RONDÔNIA",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "RO",
+          "trecho": "Secretaria de Estado da Agricultura – SEAGRI/RO",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Ministério do Meio Ambiente e Mudança do Clima",
+      "financiador": "GOVERNO DO ESTADO DE RONDÔNIA",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
