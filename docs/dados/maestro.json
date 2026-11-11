@@ -1,16 +1,17 @@
 {
- "dia": "2026-11-10",
- "em": "2026-11-11T00:15:28+00:00",
+ "dia": "2026-11-11",
+ "em": "2026-11-11T07:45:35+00:00",
  "regra": "MAESTRO — A MÃO DA REDE NEURAL DE COMANDO (titular, 02/10/2026; unificado em 15/10/2026).\n\n15/10/2026 (titular): maestro e rede neural são UMA coisa só. Quem decide o caminho do fluxo inteiro é src/comando.py\n(a rede neural de comando); este módulo é a parte que MEDE e EXECUTA para ela:\n  · planejar()   quais motores rodam hoje (agenda) com a prioridade de rendimento — matéria-prima da decisão do comando;\n  · cobertura()  completa · parcial · pendente · pendente_local de cada motor no dia;\n  · controlar()  pendentes e parciais a disparar (até 3 tentativas), dia fechado ou não;\n  · relatorio_etapas() o relatório do dia que o painel mostra.\nO comando chama planejar/controlar antes de acionar os motores (decidir) e depois deles (avaliar e reacionar).",
  "planejados": 127,
  "cobertura": {
-  "completa": 8,
-  "pendente": 115,
-  "parcial": 4
+  "pendente": 126,
+  "parcial": 1
  },
- "cobertura_percentual": 6.3,
+ "cobertura_percentual": 0.0,
  "a_disparar": [
+  "plat-piloto-aberto",
   "pncp-api",
+  "do-goiania",
   "plat-prefeituras-50-go",
   "plat-estaduais-go-gov",
   "outras-oportunidades-4",
@@ -31,10 +32,12 @@
   "f260-captacao-159",
   "f260-captacao-143",
   "f260-captacao-149",
+  "dou",
   "outras-oportunidades-2",
   "f260-captacao-034",
   "f260-captacao-018",
   "f260-captacao-081",
+  "do-goias",
   "plataforma-mapas-culturais",
   "outras-oportunidades-3",
   "outras-oportunidades-6",
@@ -51,6 +54,7 @@
   "judiciario-cnj-tjgo",
   "recorrencia",
   "f260-curadoria-010",
+  "plat-gife",
   "f260-curadoria-007",
   "f260-captacao-225",
   "f260-captacao-251",
@@ -62,9 +66,11 @@
   "f260-captacao-090",
   "f260-espalhado-carire-ce-gov-br",
   "f260-captacao-200",
+  "judiciario-cnj",
   "congresso-nacional",
   "empresas-incentivadas",
   "f260-captacao-236",
+  "dj-trf1-go",
   "judiciario-tjgo",
   "outras-oportunidades-8",
   "outras-oportunidades-1",
@@ -121,6 +127,7 @@
   "f260-captacao-222",
   "f260-captacao-223",
   "f260-captacao-044",
+  "plat-cnpq-extensao",
   "f260-captacao-196",
   "f260-captacao-218",
   "plat-salic",
@@ -259,7 +266,7 @@
    "horarios": "05:53,10:23",
    "coleta": "nuvem",
    "dia_anterior": "observado",
-   "cobertura": "completa",
+   "cobertura": "pendente",
    "tentativas_hoje": 0
   },
   {
@@ -281,7 +288,7 @@
    "horarios": "06:23,12:53,20:23",
    "coleta": "nuvem + local",
    "dia_anterior": "observado",
-   "cobertura": "completa",
+   "cobertura": "pendente",
    "tentativas_hoje": 0
   },
   {
@@ -512,7 +519,7 @@
    "horarios": "06:23,12:53,20:23",
    "coleta": "nuvem",
    "dia_anterior": "observado",
-   "cobertura": "completa",
+   "cobertura": "pendente",
    "tentativas_hoje": 0
   },
   {
@@ -567,7 +574,7 @@
    "horarios": "06:23,12:53,20:23",
    "coleta": "nuvem + local",
    "dia_anterior": "observado",
-   "cobertura": "completa",
+   "cobertura": "pendente",
    "tentativas_hoje": 0
   },
   {
@@ -754,7 +761,7 @@
    "horarios": "11:23,17:53",
    "coleta": "nuvem",
    "dia_anterior": "observado",
-   "cobertura": "completa",
+   "cobertura": "pendente",
    "tentativas_hoje": 0
   },
   {
@@ -886,7 +893,7 @@
    "horarios": "07:53",
    "coleta": "nuvem",
    "dia_anterior": "observado",
-   "cobertura": "completa",
+   "cobertura": "pendente",
    "tentativas_hoje": 0
   },
   {
@@ -897,12 +904,12 @@
    "horarios": "10:53,20:53",
    "coleta": "nuvem",
    "dia_anterior": "observado",
-   "cobertura": "parcial",
+   "cobertura": "pendente",
    "tentativas_hoje": 0
   },
   {
    "motor": "empresas-incentivadas",
-   "prioridade": 0.0241,
+   "prioridade": 0.024,
    "diagnostico": "falha_parcial",
    "livros_com_abertura_proxima": 1,
    "horarios": "10:23",
@@ -930,7 +937,7 @@
    "horarios": "07:53",
    "coleta": "nuvem",
    "dia_anterior": "observado",
-   "cobertura": "completa",
+   "cobertura": "pendente",
    "tentativas_hoje": 0
   },
   {
@@ -1557,7 +1564,7 @@
    "horarios": "09:23,15:23",
    "coleta": "nuvem",
    "dia_anterior": "observado",
-   "cobertura": "completa",
+   "cobertura": "pendente",
    "tentativas_hoje": 0
   },
   {
@@ -1623,7 +1630,7 @@
    "horarios": "10:53,20:53",
    "coleta": "nuvem + local",
    "dia_anterior": "nao_observado",
-   "cobertura": "parcial",
+   "cobertura": "pendente",
    "tentativas_hoje": 0
   },
   {
@@ -1645,7 +1652,7 @@
    "horarios": "12:53,20:23",
    "coleta": "nuvem",
    "dia_anterior": "observado",
-   "cobertura": "parcial",
+   "cobertura": "pendente",
    "tentativas_hoje": 0
   }
  ]
