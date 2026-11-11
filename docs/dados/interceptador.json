@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-11T23:35:56+00:00",
+  "em": "2026-11-11T23:50:20+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-11T23:24:59+00:00",
+  "ultimo_voo": "2026-11-11T23:37:56+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,61 +48,70 @@
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.3
+    "tempo_medio_min": 11.9
   },
   "missoes": [
     {
-      "em": "2026-11-11T23:24:59+00:00",
+      "em": "2026-11-11T23:37:56+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Fomento a Amazônia — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 3,
+      "alvo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — CHAMADA PÚBLICA FAPEG Nº 16/2025 – Apoio a Projetos… — Goiás",
+      "qualidade": "parcial",
+      "comprovados": 6,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Requisitos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://apex.fapeg.go.gov.br/ords/r/charles/mapa/macrofluxo-de-processos",
       "parecer_fonte": {
         "serve_como_fonte": "nao",
-        "por_que": "Não há informações suficientes para confirmar que o edital é válido para a região de Goiânia ou para as áreas de atuação citadas.",
+        "por_que": "O texto comprovado não fornece informações sobre prazo de inscrição, valor, requisitos ou outros detalhes necessários para a elaboração de uma resposta completa.",
         "para_a_amc": "null",
         "proximo_passo": "null",
         "risco": "null"
       },
       "erro": null,
-      "segundos": 620,
+      "segundos": 712,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-nova-6592147851cb",
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
+      "id": "op-118285c06323",
       "encontrou": {
+        "Objeto": {
+          "valor": "Apoio a Projetos de Pesquisa e Inovação em Saúde Digital",
+          "trecho": "CHAMADA PÚBLICA FAPEG Nº 16/2025 - APOIO A PROJETOS DE PESQUISA E INOVAÇÃO EM SAÚDE DIGITAL - 2ª RETIFICAÇÃO",
+          "oficial": false,
+          "dispensado": false
+        },
         "Órgão / financiador": {
-          "valor": "Banco da Amazônia S.A",
-          "trecho": "Banco da Amazônia S.A",
+          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás — FAPEG",
+          "trecho": "A Fundação de Amparo à Pesquisa do Estado de Goiás — FAPEG por meio do lançamento da presente Chamada Pública",
           "oficial": false,
           "dispensado": false
         },
         "Território": {
-          "valor": "PA",
-          "trecho": "Banco da Amazônia S.A - 04.902.979/0001‐44. Avenida Presidente Vargas, 800 – Belém, PA – 66017-901.",
+          "valor": "GO",
+          "trecho": "CHAMADA PÚBLICA FAPEG Nº 16/2025 - APOIO A PROJETOS DE PESQUISA E INOVAÇÃO EM SAÚDE DIGITAL - 2ª RETIFICAÇÃO",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "saude",
+          "trecho": "CHAMADA PÚBLICA FAPEG Nº 16/2025 - APOIO A PROJETOS DE PESQUISA E INOVAÇÃO EM SAÚDE DIGITAL - 2ª RETIFICAÇÃO",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Banco da Amazônia S.A",
+      "financiador": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
