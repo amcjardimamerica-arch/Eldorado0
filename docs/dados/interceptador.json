@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-11T07:09:13+00:00",
+  "em": "2026-11-11T07:30:34+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-11T06:51:14+00:00",
+  "ultimo_voo": "2026-11-11T07:11:06+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,64 +48,93 @@
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 17.4
+    "tempo_medio_min": 18.8
   },
   "missoes": [
     {
-      "em": "2026-11-11T06:51:14+00:00",
+      "em": "2026-11-11T07:11:06+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital de Chamamento 001/2026 (PNAB Ciclo 2) de Cachoeira Alta-GO: 29 projetos culturais, R$ 101.385,68 no tot… — Goiás",
+      "alvo": "Edital de Chamamento Público Nº 01/2026 — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 3,
-      "dispensados": 0,
+      "comprovados": 9,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Prazo de recurso"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado como pertencente ao município de Cachoeira Alta-GO, o que o torna uma fonte válida para organizações da sociedade civil no território.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange sua área de atuação e se ela atende aos requisitos do edital, mesmo que não estejam explicitados no texto comprovado.",
-        "proximo_passo": "Consultar o edital completo para obter informações sobre os requisitos, prazos e área de atuação.",
-        "risco": "A falta de informações detalhadas sobre requisitos, prazos e área de atuação pode impedir a participação adequada da associação."
+        "por_que": "O edital foi comprovado com informações detalhadas sobre seu objeto, prazo, valor, órgão financiador, território, esfera, requisitos e anexos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar aos requisitos do edital, como ter relevância social, viabilidade técnica e logística, além de comprovar a inexistência ou insuficiência de equipamentos culturais permanentes. Também deve aderir ao projeto CineLeitura do Bem – Cultura que Aproxima.",
+        "proximo_passo": "Verificar os requisitos do edital e preparar os documentos necessários para a adesão institucional voluntária.",
+        "risco": "A falta de recursos financeiros e a não conformidade com os requisitos do edital podem impedir a participação."
       },
       "erro": null,
-      "segundos": 1044,
+      "segundos": 1130,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-8fc072d743a9",
+      "id": "op-412b2f68aec3",
       "encontrou": {
+        "Objeto": {
+          "valor": "adesão institucional voluntária de até 120 (cento e vinte) municípios e distritos do Estado de Goiás ao projeto CineLeitura do Bem – Cultura que Aproxima",
+          "trecho": "A presente Chamada Pública tem por objeto a adesão institucional voluntária de até 120 (cento e vinte) municípios e distritos do Estado de Goiás ao projeto CineLeitura do Bem – Cul",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-01-01 a 2026-01-31",
+          "trecho": "Edital 85022756 SEI 202517645004175 / pg. 1",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "dispensado — O edital afirma que não há transferência de recursos financeiros ao município participante.",
+          "trecho": "A adesão ocorrerá mediante preenchimento de formulário eletrônico, sem transferência de recursos financeiros ao município participante",
+          "oficial": false,
+          "dispensado": true
+        },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Cachoeira Alta",
-          "trecho": "Prefeitura Municipal de Cachoeira Alta",
+          "valor": "SECRETARIA DE ESTADO DA CULTURA DE GOIÁS – SECULT",
+          "trecho": "A SECRETARIA DE ESTADO DA CULTURA DE GOIÁS – SECULT, no uso de suas atribuições legais",
           "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Cachoeira Alta-GO",
+          "trecho": "os municípios e distritos do Estado de Goiás",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "iniciativa de caráter cultural, social e educativo",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Índice Multidimensional de Carência das Famílias – IMCF, inexistência ou insuficiência de equipamentos culturais permanentes, relevância social das comunidades indicadas, viabilidade técnica, logística, territorial e operacional da execução das ações",
+          "trecho": "Serão considerados, prioritariamente, o Índice Multidimensional de Carência das Famílias – IMCF, adotado oficialmente pelo Programa Goiás Social e pelo Fundo PROTEGE Goiás, a inexi",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura Municipal de Cachoeira Alta",
+      "financiador": "SECRETARIA DE ESTADO DA CULTURA DE GOIÁS – SECULT",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
