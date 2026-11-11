@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-11T08:38:50+00:00",
+  "em": "2026-11-11T09:07:07+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-11T08:30:48+00:00",
+  "ultimo_voo": "2026-11-11T08:40:38+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,69 +38,93 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 0,
+    "validadas": 1,
     "parciais": 0,
-    "insuficientes": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.4
+    "tempo_medio_min": 25.8
   },
   "missoes": [
     {
-      "em": "2026-11-11T08:30:48+00:00",
+      "em": "2026-11-11T08:40:38+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Edital de chamamento publico n°011/2023 - lei paulo gustavo - multilinguagem. — Goiás",
-      "qualidade": "insuficiente",
-      "comprovados": 0,
+      "alvo": "Edital de chamamento público - 001/2026 - Socioeducativo — Goiás",
+      "qualidade": "validada",
+      "comprovados": 9,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
-        "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Valor"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://goias.gov.br/social/edital-de-chamamento-publico-001-2026-socioeducativo/",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações comprovadas sobre o edital mencionado para ser utilizada como fonte.",
-        "para_a_amc": null,
-        "proximo_passo": null,
-        "risco": null
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações detalhadas sobre objeto, prazo de inscrição, resultado e requisitos.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever como OSC, cumprir os requisitos do edital e apresentar os anexos necessários para a celebração do Termo de Colaboração.",
+        "proximo_passo": "Verificar os requisitos do edital e preparar os documentos necessários para inscrição no prazo de 2026-09-01 a 2026-09-30.",
+        "risco": "A falta de documentos ou não cumprimento dos requisitos pode impedir a participação no edital."
       },
       "erro": null,
-      "segundos": 445,
+      "segundos": 1549,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-953901b190e6",
-      "encontrou": {},
-      "financiador": "Estado de Goiás",
+      "fontes_oficiais": 8,
+      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
+      "avaliacao": "pronta para a decisão do Claude",
+      "id": "op-3c351d821e84",
+      "encontrou": {
+        "Objeto": {
+          "valor": "seleção de Organização da Sociedade Civil – OSC para celebração de Termo de Colaboração destinado à execução, em regime de mútua cooperação com o Estado de Goiás, de ações complementares necessárias ao funcionamento das unidades Centro de Atendimento Socioeducativo Regional de Rio Verde - CASER Rio Verde e Unidade Centralizada de Atendimento Socioeducativo Feminino - Anápolis",
+          "trecho": "O presente Chamamento Público tem por objeto a seleção de Organização da Sociedade Civil – OSC para celebração de Termo de Colaboração destinado à execução, em regime de mútua coop",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-09-01 a 2026-09-30",
+          "trecho": "O procedimento será regido pela Lei Federal nº 13.019, de 31 de julho de 2014, e suas alterações; pela Lei Federal nº 8.069, de 13 de julho de 1990 – Estatuto da Criança e do Adole",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL – SEDS",
+          "trecho": "A SECRETARIA DE ESTADO DE DESENVOLVIMENTO SOCIAL – SEDS, órgão da Administração Pública do Estado de Goiás, torna público o presente Edital de Chamamento Público",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "ESTADO DE GOIÁS",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "assistencia_social",
+          "trecho": "I – garantia da assistência material, incluindo alimentação, vestuário, materiais de higiene, limpeza e demais insumos necessários à execução do atendimento;",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Organização da Sociedade Civil – OSC para celebração de Termo de Colaboração",
+          "trecho": "O presente Chamamento Público tem por objeto a seleção de Organização da Sociedade Civil – OSC para celebração de Termo de Colaboração",
+          "oficial": true,
+          "dispensado": false
+        }
+      },
+      "financiador": "Governo do Estado de Goiás",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador_edital"
       ]
     }
   ],
