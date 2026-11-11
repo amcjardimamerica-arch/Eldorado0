@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-11T17:38:24+00:00",
+  "em": "2026-11-11T18:00:39+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-11T17:27:22+00:00",
+  "ultimo_voo": "2026-11-11T17:40:14+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,71 +43,38 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.2
+    "tempo_medio_min": 19.6
   },
   "missoes": [
     {
-      "em": "2026-11-11T17:27:22+00:00",
+      "em": "2026-11-11T17:40:14+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Autorização para a instauração de formalização de adesão para credenciamento/chamamento público para a… — muni… — Goiás",
+      "alvo": "Edital nº 8/2023 - formação e difusão audiovisual - lei paulo gustavo — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 1,
-      "dispensados": 0,
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Território",
-        "Esfera",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
-      ],
+      "nao_resolvidos": null,
       "pagina_oficial": null,
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O PNCP é a fonte oficial de informações sobre editais e processos de contratação pública, incluindo credenciamento e chamamentos públicos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar o edital no PNCP, preencher os documentos exigidos e se inscrever conforme as normas estabelecidas.",
-        "proximo_passo": "Consultar o PNCP para obter detalhes sobre o edital e iniciar o processo de inscrição.",
-        "risco": "A falta de informações específicas, como prazo e requisitos, pode impedir a associação de se inscrever adequadamente."
-      },
-      "erro": null,
-      "segundos": 615,
+      "parecer_fonte": {},
+      "erro": "o modelo não devolveu JSON",
+      "segundos": 1177,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-1f83a23d4c24",
-      "encontrou": {
-        "Órgão / financiador": {
-          "valor": "PNCP - Portal Nacional de Contratações Públicas",
-          "trecho": "PNCP - Portal Nacional de Contratações Públicas",
-          "oficial": false,
-          "dispensado": false
-        }
-      },
-      "financiador": "Prefeitura Municipal de Goiânia",
+      "avaliacao": "falhou: o modelo não devolveu JSON",
+      "id": "op-66f930b94f79",
+      "encontrou": {},
+      "financiador": null,
       "indicios": [],
-      "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
-      ]
+      "rotas": []
     }
   ],
   "contagem": {
