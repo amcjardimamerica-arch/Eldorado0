@@ -1,5 +1,5 @@
 {
- "em": "2026-11-11T14:06:00+00:00",
+ "em": "2026-11-11T15:32:37+00:00",
  "conselho": [
   {
    "id": "falso_verde",
@@ -46,7 +46,7 @@
  ],
  "resumo": {
   "motores": 165,
-  "motores_com_falha": 128,
+  "motores_com_falha": 129,
   "falhas_por_tipo": {
    "RUÍDO": 23,
    "CEGO": 59,
@@ -55,7 +55,7 @@
    "INTERMITENTE": 4,
    "VAZAMENTO": 33,
    "CADÊNCIA FORA DO RITMO": 1,
-   "CONGELADO": 27,
+   "CONGELADO": 28,
    "CUSTO SEM RETORNO": 1
   }
  },
@@ -310,19 +310,19 @@
    "tipo": "diario_oficial",
    "saude": [
     {
-     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261109_000008899.pdf",
+     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261110_000008900.pdf",
      "http": 200,
-     "bytes": 552968
+     "bytes": 278653
     },
     {
-     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261106_000008898.pdf",
+     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261110_000008900.pdf",
      "http": 200,
-     "bytes": 15083
+     "bytes": 264934
     }
    ],
-   "achados_total": 3,
+   "achados_total": 6,
    "valor": "confirma",
-   "achados_30d": 11,
+   "achados_30d": 14,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -337,44 +337,12 @@
     {
      "url": "https://diariooficial.abc.go.gov.br",
      "http": 200,
-     "bytes": 312
+     "bytes": 280
     }
    ],
-   "achados_total": 33,
+   "achados_total": 34,
    "valor": "ruído",
-   "achados_30d": 60,
-   "cadencia": {
-    "cadencia_atual": 1,
-    "cadencia_recomendada": 1,
-    "dia_forte": "sábado"
-   },
-   "falhas": [
-    {
-     "conselheiro": "funil",
-     "falha": "RUÍDO",
-     "prova": "33 achados e nenhuma oportunidade confirmada",
-     "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
-    }
-   ]
-  },
-  "dou": {
-   "nome": "Diário Oficial da União",
-   "tipo": "diario_oficial",
-   "saude": [
-    {
-     "url": "https://www.in.gov.br/leiturajornal?data=10-11-2026&secao=do1",
-     "http": 200,
-     "bytes": 0
-    },
-    {
-     "url": "https://www.in.gov.br/leiturajornal?data=10-11-2026&secao=do3",
-     "http": 200,
-     "bytes": 0
-    }
-   ],
-   "achados_total": 37,
-   "valor": "ruído",
-   "achados_30d": 13,
+   "achados_30d": 57,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -384,7 +352,39 @@
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "37 achados e nenhuma oportunidade confirmada",
+     "prova": "34 achados e nenhuma oportunidade confirmada",
+     "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
+    }
+   ]
+  },
+  "dou": {
+   "nome": "Diário Oficial da União",
+   "tipo": "diario_oficial",
+   "saude": [
+    {
+     "url": "https://www.in.gov.br/leiturajornal?data=11-11-2026&secao=do1",
+     "http": 200,
+     "bytes": 0
+    },
+    {
+     "url": "https://www.in.gov.br/leiturajornal?data=11-11-2026&secao=do3",
+     "http": 200,
+     "bytes": 0
+    }
+   ],
+   "achados_total": 39,
+   "valor": "ruído",
+   "achados_30d": 15,
+   "cadencia": {
+    "cadencia_atual": 1,
+    "cadencia_recomendada": 1,
+    "dia_forte": "terça"
+   },
+   "falhas": [
+    {
+     "conselheiro": "funil",
+     "falha": "RUÍDO",
+     "prova": "39 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -414,13 +414,13 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CEGO",
-     "prova": "respondeu 200 em 28 de 30 dias e não achou nada em 30 dias",
+     "prova": "respondeu 200 em 27 de 30 dias e não achou nada em 30 dias",
      "melhoria": "conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)"
     },
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "106 leituras vazias seguidas",
+     "prova": "107 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -432,13 +432,13 @@
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
-     "bytes": 261972,
+     "bytes": 96077,
      "itens": 0
     },
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
-     "bytes": 13270,
+     "bytes": 13257,
      "itens": 0
     }
    ],
@@ -460,7 +460,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "154 leituras vazias seguidas",
+     "prova": "155 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -525,7 +525,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "99 leituras vazias seguidas",
+     "prova": "100 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -675,7 +675,7 @@
    ],
    "achados_total": 5,
    "valor": "ouro",
-   "achados_30d": 31,
+   "achados_30d": 28,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -1960,12 +1960,12 @@
     {
      "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-encerradas/edital-premio-cultura-viva-construcao-nacional-do-hip-hop-2023-1",
      "http": 200,
-     "bytes": 159334
+     "bytes": 158408
     },
     {
      "url": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
      "http": 200,
-     "bytes": 167227
+     "bytes": 172111
     }
    ],
    "achados_total": 134,
@@ -1980,7 +1980,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 22 dias",
+     "prova": "o mesmo achado repetido em 23 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     },
     {
@@ -2505,7 +2505,7 @@
     {
      "url": "https://www.cnj.jus.br/",
      "http": 200,
-     "bytes": 1627113,
+     "bytes": 1627120,
      "itens": 48
     }
    ],
@@ -2521,7 +2521,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "43 leituras vazias seguidas",
+     "prova": "44 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -2533,7 +2533,7 @@
     {
      "url": "https://www.congressonacional.leg.br",
      "http": 200,
-     "bytes": 180189,
+     "bytes": 186523,
      "itens": 11
     },
     {
@@ -2551,7 +2551,14 @@
     "cadencia_recomendada": 1,
     "dia_forte": "sexta"
    },
-   "falhas": []
+   "falhas": [
+    {
+     "conselheiro": "falso_verde",
+     "falha": "CONGELADO",
+     "prova": "o mesmo achado repetido em 5 dias",
+     "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
+    }
+   ]
   },
   "f260-captacao-107": {
    "nome": "Emenda municipal para entidade assistencial",
@@ -4027,7 +4034,7 @@
     {
      "url": "https://www.cnj.jus.br/",
      "http": 200,
-     "bytes": 1627113,
+     "bytes": 1627120,
      "itens": 48
     }
    ],
@@ -4049,7 +4056,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "84 leituras vazias seguidas",
+     "prova": "85 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -4482,19 +4489,19 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://unaids.org.br/desafiounaids",
+     "url": "https://impulso.bndes.gov.br/",
      "http": 200,
-     "bytes": 96639
+     "bytes": 57876
     },
     {
-     "url": "http://editalfomento.com.br/edital/programa-eleve-2026-mulheres-que-elevam-mulheres",
+     "url": "http://www.administracao.go.gov.br/",
      "http": 200,
-     "bytes": 34680
+     "bytes": 206031
     }
    ],
-   "achados_total": 195,
+   "achados_total": 196,
    "valor": "ouro",
-   "achados_30d": 17,
+   "achados_30d": 18,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -4504,7 +4511,7 @@
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "195 achados e nenhuma oportunidade confirmada",
+     "prova": "196 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -4514,14 +4521,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.institutovotorantim.org.br/",
+     "url": "https://transforma.fbb.org.br/premio/17",
      "http": 200,
-     "bytes": 31327
+     "bytes": 60750
     },
     {
-     "url": "https://facepevirtual.org.br/facepe/selecao-publica",
+     "url": "https://www.fondationfrancoisschneider.org/concours-talents-contemporains/concours-talents-contemporains-leau-wattwiller/",
      "http": 200,
-     "bytes": 155644
+     "bytes": 56931
     }
    ],
    "achados_total": 25,
@@ -4546,14 +4553,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://blog.bondinho.com.br/parque-bondinho-pao-de-acucar-abre-inscricoes-para-o-edital-2026-de-selecao-de-projetos-culturais/",
+     "url": "https://www.academiaassai.com.br/",
      "http": 200,
-     "bytes": 168290
+     "bytes": 104059
     },
     {
-     "url": "https://app2.ammlicita.org.br/pesquisa/35376",
+     "url": "https://saude.goiania.go.gov.br/editas-de-chamamento-publico",
      "http": 200,
-     "bytes": 1960
+     "bytes": 58258
     }
    ],
    "achados_total": 81,
@@ -4562,7 +4569,7 @@
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "quinta"
+    "dia_forte": "quarta"
    },
    "falhas": [
     {
@@ -4584,14 +4591,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://editalmulheresnegras.fbb.org.br/",
+     "url": "https://www.vitalstrategies.org/wp-content/uploads/Edital_SaudeMental_VS.pdf",
      "http": 200,
-     "bytes": 75125
+     "bytes": 332750
     },
     {
-     "url": "https://www.cjrfund.org/",
+     "url": "https://globalfundforchildren.org/community-based-organizations/",
      "http": 200,
-     "bytes": 212417
+     "bytes": 114964
     }
    ],
    "achados_total": 73,
@@ -4616,29 +4623,29 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Mobilidade-Cultural",
+     "url": "https://www2.crcpr.org.br/desenprofi/portal/eventos/detalhe/1872",
      "http": 200,
-     "bytes": 218101
+     "bytes": 24541
     },
     {
-     "url": "https://oei.int/pt/escritorios/portugal/programa/laczos-artisticos-chamada-especial-cplp/",
+     "url": "https://www.institutounibanco.org.br/",
      "http": 200,
-     "bytes": 294451
+     "bytes": 12644
     }
    ],
-   "achados_total": 46,
+   "achados_total": 49,
    "valor": "ouro",
-   "achados_30d": 22,
+   "achados_30d": 25,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "quinta"
+    "dia_forte": "quarta"
    },
    "falhas": [
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "46 achados e nenhuma oportunidade confirmada",
+     "prova": "49 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     },
     {
@@ -4796,14 +4803,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://goiatuba.go.gov.br/prefeitura-de-goiatuba-publica-edital-para-selecao-de-projetos-culturais-com-recursos-da-pnab-ciclo-2/",
+     "url": "https://www.cnbb.org.br/cnbb-lanca-edital-do-fns-para-apoio-financeiro-a-projetos-relativos-a-campanha-da-fraternidade-2026",
      "http": 200,
-     "bytes": 257932
+     "bytes": 310382
     },
     {
-     "url": "https://senadorcanedo.go.gov.br/senador-canedo-lanca-edital-aldir-blanc-2026-com-r-380-mil-destinado-a-projetos-culturais/",
+     "url": "https://www.palmas.to.gov.br",
      "http": 200,
-     "bytes": 170022
+     "bytes": 149060
     }
    ],
    "achados_total": 4,

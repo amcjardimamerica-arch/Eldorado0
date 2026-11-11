@@ -1119,9 +1119,9 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-11T14:07:27+00:00",
-  "motores_testados": 6,
-  "ponte_respondeu": false
+  "em": "2026-11-11T15:38:10+00:00",
+  "motores_testados": 3,
+  "ponte_respondeu": true
  },
  "f260-captacao-238": {
   "em": "2026-11-11T08:11:19+00:00",
@@ -2021,66 +2021,48 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "alego-pl": {
-  "em": "2026-11-06T05:39:31+00:00",
-  "testes": 17,
-  "melhor": {
-   "url": "https://portal.al.go.leg.br/",
-   "via": "direto",
-   "origem": "rota original",
-   "pontos": 33,
-   "formato": "html"
-  },
+  "em": "2026-11-11T15:38:07+00:00",
+  "testes": 32,
+  "melhor": null,
   "detalhe": [
    {
     "url": "https://portal.al.go.leg.br/deputados",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 5,
-    "links": 440,
-    "sinais": 2,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/deputados",
+    "origem": "biblioteca",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
    },
    {
     "url": "https://portal.al.go.leg.br/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 33,
-    "links": 261,
-    "sinais": 16,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
-    "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://portal.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
     "erro": "URLError",
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/",
+    "origem": "rota original",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -2094,6 +2076,16 @@
     "funcionou": false
    },
    {
+    "url": "https://portal.al.go.leg.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://alegodigital.al.go.leg.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -2104,23 +2096,14 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/feed",
-    "origem": "câmara",
-    "via": "direto",
+    "url": "https://alegodigital.al.go.leg.br/sitemap.xml",
+    "origem": "padrão",
+    "via": "ponte",
     "pontos": 0,
-    "links": 0,
+    "links": 1,
     "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/feed",
-    "origem": "câmara",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
@@ -2134,6 +2117,16 @@
     "funcionou": false
    },
    {
+    "url": "https://portal.al.go.leg.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://alegodigital.al.go.leg.br/transparencia/editais",
     "origem": "padrão",
     "via": "direto",
@@ -2144,8 +2137,19 @@
     "funcionou": false
    },
    {
-    "url": "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
-    "origem": "rota original",
+    "url": "https://alegodigital.al.go.leg.br/transparencia/editais",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 1,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://portal.al.go.leg.br/feed",
+    "origem": "câmara",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2154,8 +2158,18 @@
     "funcionou": false
    },
    {
-    "url": "https://portal.al.go.leg.br/editais",
-    "origem": "padrão",
+    "url": "https://portal.al.go.leg.br/feed",
+    "origem": "câmara",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
+    "url": "https://alegodigital.al.go.leg.br/feed",
+    "origem": "câmara",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -2164,37 +2178,18 @@
     "funcionou": false
    },
    {
-    "url": "https://alegodigital.al.go.leg.br/editais",
-    "origem": "padrão",
-    "via": "direto",
+    "url": "https://alegodigital.al.go.leg.br/feed",
+    "origem": "câmara",
+    "via": "ponte",
     "pontos": 0,
-    "links": 0,
+    "links": 1,
     "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://portal.al.go.leg.br/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://alegodigital.al.go.leg.br/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    }
   ],
-  "resultado": "rota nova em teste"
+  "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-060": {
   "em": "2026-10-11T00:50:34+00:00",
@@ -3992,8 +3987,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-230": {
-  "em": "2026-11-11T02:14:59+00:00",
-  "testes": 12,
+  "em": "2026-11-11T15:38:10+00:00",
+  "testes": 6,
   "melhor": null,
   "detalhe": [
    {
@@ -4007,6 +4002,16 @@
     "funcionou": false
    },
    {
+    "url": "https://fundacaoarcelormittal.org.br/",
+    "origem": "rota original",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://fundacaoarcelormittal.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -4017,23 +4022,13 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaoarcelormittal.org.br/feed",
+    "url": "https://fundacaoarcelormittal.org.br/sitemap.xml",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaoarcelormittal.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
+    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -4047,73 +4042,13 @@
     "funcionou": false
    },
    {
-    "url": "https://fundacaoarcelormittal.org.br/editais",
+    "url": "https://fundacaoarcelormittal.org.br/transparencia/editais",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaoarcelormittal.org.br/edital",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaoarcelormittal.org.br/noticias",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaoarcelormittal.org.br/chamamento-publico",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaoarcelormittal.org.br/chamadas-publicas",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaoarcelormittal.org.br/chamamentos",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
-    "funcionou": false
-   },
-   {
-    "url": "https://fundacaoarcelormittal.org.br/licitacoes",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "URLError",
+    "erro": "ErroPonte",
     "funcionou": false
    }
   ],
@@ -6333,7 +6268,7 @@
   "resultado": "rota nova em teste"
  },
  "judiciario-cnj": {
-  "em": "2026-11-05T11:46:04+00:00",
+  "em": "2026-11-11T15:33:08+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://www.cnj.jus.br/editais",
@@ -6369,15 +6304,26 @@
     "url": "https://www.cnj.jus.br/norma-do-cnj-garante-verbas-para-projetos-sociais-em-cangucu-rs/",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 13,
+    "pontos": 15,
     "links": 445,
-    "sinais": 6,
+    "sinais": 7,
     "formato": "html",
     "erro": null,
     "funcionou": true
    },
    {
     "url": "https://www.cnj.jus.br/edital-seleciona-projetos-de-itaberai-go-para-receberem-recursos-de-prestacao-pecuniaria/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 15,
+    "links": 446,
+    "sinais": 7,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://www.cnj.jus.br/edital-seleciona-entidades-sociais-de-goias-para-receber-recursos-de-penas-pecuniarias/",
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 15,
@@ -6399,23 +6345,12 @@
     "funcionou": true
    },
    {
-    "url": "https://www.cnj.jus.br/edital-seleciona-entidades-sociais-de-goias-para-receber-recursos-de-penas-pecuniarias/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 15,
-    "links": 446,
-    "sinais": 7,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://www.cnj.jus.br/comarca-de-tutoia-divulga-resultado-de-selecao-para-projetos-sociais/",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 15,
+    "pontos": 13,
     "links": 438,
-    "sinais": 7,
+    "sinais": 6,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -6443,17 +6378,6 @@
     "funcionou": true
    },
    {
-    "url": "https://www.cnj.jus.br/editais",
-    "origem": "rota original",
-    "via": "direto",
-    "pontos": 91,
-    "links": 557,
-    "sinais": 45,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://www.cnj.jus.br/pena-pecuniaria-justica-goiana-cria-cadastro-digital-de-projetos-sociais/",
     "origem": "biblioteca",
     "via": "direto",
@@ -6465,23 +6389,23 @@
     "funcionou": true
    },
    {
-    "url": "https://www.cnj.jus.br/poder-judiciario/chamadas-publicas",
-    "origem": "biblioteca",
+    "url": "https://www.cnj.jus.br/editais",
+    "origem": "rota original",
     "via": "direto",
-    "pontos": 81,
-    "links": 479,
-    "sinais": 40,
+    "pontos": 91,
+    "links": 558,
+    "sinais": 45,
     "formato": "html",
     "erro": null,
     "funcionou": true
    },
    {
-    "url": "https://www.cnj.jus.br/",
-    "origem": "rota original",
+    "url": "https://www.cnj.jus.br/poder-judiciario/chamadas-publicas",
+    "origem": "biblioteca",
     "via": "direto",
-    "pontos": 21,
-    "links": 712,
-    "sinais": 10,
+    "pontos": 81,
+    "links": 480,
+    "sinais": 40,
     "formato": "html",
     "erro": null,
     "funcionou": true
@@ -6490,19 +6414,19 @@
     "url": "http://www.cnj.jus.br",
     "origem": "biblioteca",
     "via": "direto",
-    "pontos": 19,
+    "pontos": 21,
     "links": 713,
-    "sinais": 9,
+    "sinais": 10,
     "formato": "html",
     "erro": null,
     "funcionou": true
    },
    {
-    "url": "https://www.cnj.jus.br/feed",
-    "origem": "padrão",
+    "url": "https://www.cnj.jus.br/",
+    "origem": "rota original",
     "via": "direto",
     "pontos": 19,
-    "links": 713,
+    "links": 712,
     "sinais": 9,
     "formato": "html",
     "erro": null,
@@ -6518,6 +6442,17 @@
     "formato": "sitemap/feed",
     "erro": null,
     "funcionou": true
+   },
+   {
+    "url": "https://www.cnj.jus.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "json",
+    "erro": null,
+    "funcionou": false
    }
   ],
   "resultado": "rota nova em teste"

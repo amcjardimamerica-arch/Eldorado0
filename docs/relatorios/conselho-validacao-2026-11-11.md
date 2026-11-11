@@ -61,15 +61,15 @@
  "ruido_agora": [
   {
    "motor": "do-goias",
-   "achados_total_1a": 33,
-   "achados_total_agora": 33,
+   "achados_total_1a": 34,
+   "achados_total_agora": 34,
    "no_fluxo": 3,
    "confirmadas": 0
   },
   {
    "motor": "dou",
-   "achados_total_1a": 37,
-   "achados_total_agora": 37,
+   "achados_total_1a": 39,
+   "achados_total_agora": 39,
    "no_fluxo": 3,
    "confirmadas": 0
   },
@@ -200,7 +200,7 @@
  "pontos_com_redundancia": 19,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 59723
+ "exemplos_da_rede_de_rotas": 59777
 }
 ```
 
@@ -246,7 +246,7 @@
  "dia_de_referencia": "2026-11-11",
  "ativos": 172,
  "lidos_ontem": 11,
- "lidos_hoje": 0,
+ "lidos_hoje": 16,
  "nao_lidos_ontem_nem_hoje": [
   "f260-captacao-001",
   "f260-captacao-018",
@@ -329,7 +329,7 @@
   "Cartório (site oficial certificado)": 190,
   "Espião (privado/internacional)": 48
  },
- "lidas_nas_ultimas_24h": 0,
+ "lidas_nas_ultimas_24h": 103,
  "dimensionamento": {
   "fontes": 404,
   "sites_por_execucao": 17,
@@ -345,29 +345,29 @@
  },
  "clones_que_ja_leram": {
   "outras-oportunidades-1": {
-   "ultima": "2026-11-07T13:18:31+00:00",
-   "duracao_s": 54,
+   "ultima": "2026-11-11T14:02:50+00:00",
+   "duracao_s": 90,
    "achados": 47
   },
   "outras-oportunidades-3": {
-   "ultima": "2026-11-07T13:21:06+00:00",
-   "duracao_s": 73,
+   "ultima": "2026-11-11T14:05:12+00:00",
+   "duracao_s": 62,
    "achados": 0
   },
   "outras-oportunidades-4": {
-   "ultima": "2026-11-07T13:22:22+00:00",
-   "duracao_s": 76,
+   "ultima": "2026-11-11T14:06:24+00:00",
+   "duracao_s": 72,
    "achados": 6
   },
   "outras-oportunidades-5": {
-   "ultima": "2026-11-07T13:24:15+00:00",
-   "duracao_s": 113,
-   "achados": 2
+   "ultima": "2026-11-11T14:07:27+00:00",
+   "duracao_s": 63,
+   "achados": 0
   },
   "outras-oportunidades-6": {
-   "ultima": "2026-11-07T13:26:25+00:00",
-   "duracao_s": 130,
-   "achados": 15
+   "ultima": "2026-11-11T14:09:12+00:00",
+   "duracao_s": 105,
+   "achados": 17
   },
   "outras-oportunidades-7": {
    "ultima": "2026-11-05T14:59:48+00:00",
@@ -380,12 +380,12 @@
    "achados": 2
   },
   "outras-oportunidades-2": {
-   "ultima": "2026-11-07T13:19:53+00:00",
-   "duracao_s": 82,
-   "achados": 1
+   "ultima": "2026-11-11T14:04:10+00:00",
+   "duracao_s": 80,
+   "achados": 3
   }
  },
- "com_achado": 73
+ "com_achado": 74
 }
 ```
 
