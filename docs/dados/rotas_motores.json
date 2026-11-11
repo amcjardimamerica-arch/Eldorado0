@@ -1,5 +1,5 @@
 {
- "em": "2026-11-11T03:42:50+00:00",
+ "em": "2026-11-11T05:11:13+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,17 +7,17 @@
   "alterar_rota": 59,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 59139
+  "exemplos_da_rede": 59217
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.653
+    3.778
    ],
    [
     "origem:rota original",
-    3.0433
+    2.9652
    ],
    [
     "tok:inscricoes",
@@ -25,7 +25,7 @@
    ],
    [
     "origem:biblioteca",
-    2.8483
+    2.7908
    ],
    [
     "tok:aldirblanc",
@@ -36,34 +36,34 @@
     2.5203
    ],
    [
-    "tld:br",
-    2.4932
-   ],
-   [
     "tok:deputados",
     2.4057
    ],
    [
     "tok:transparencia",
-    2.2686
-   ],
-   [
-    "tok:sitemap",
-    2.0973
-   ],
-   [
-    "tok:xml",
-    2.0973
+    2.2365
    ],
    [
     "tok:abre",
     2.0883
+   ],
+   [
+    "tok:imprensa",
+    2.0407
+   ],
+   [
+    "tld:br",
+    2.0241
+   ],
+   [
+    "tok:sitemap",
+    2.0188
    ]
   ],
   "piores_sinais": [
    [
-    "via:ponte",
-    -2.3038
+    "gov:True",
+    -2.3569
    ],
    [
     "tok:pgt",
@@ -78,10 +78,6 @@
     -3.1708
    ],
    [
-    "origem:padrão",
-    -3.5898
-   ],
-   [
     "tok:content",
     -3.7423
    ],
@@ -90,8 +86,12 @@
     -3.7423
    ],
    [
+    "origem:padrão",
+    -3.7661
+   ],
+   [
     "origem:câmara",
-    -4.18
+    -4.1804
    ]
   ]
  },
@@ -387,7 +387,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-10T17:05:40+00:00",
+    "em": "2026-11-11T05:09:01+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -821,8 +821,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-10T18:39:27+00:00",
-    "testes": 13,
+    "em": "2026-11-11T05:11:13+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1001,7 +1001,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-10T17:05:21+00:00",
+    "em": "2026-11-11T05:08:36+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1028,7 +1028,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-10T17:05:31+00:00",
+    "em": "2026-11-11T05:08:49+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1496,7 +1496,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-10T17:06:30+00:00",
+    "em": "2026-11-11T05:10:34+00:00",
     "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1786,10 +1786,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 3,
-    "aprendido_em": "2026-11-10T17:06:46+00:00"
+    "aprendido_em": "2026-11-11T05:10:58+00:00"
    },
    "afinado": {
-    "em": "2026-11-10T17:06:46+00:00",
+    "em": "2026-11-11T05:10:58+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://skoll.org/feed",
