@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-12T10:31:56+00:00",
+  "em": "2026-11-12T10:50:13+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-12T10:21:54+00:00",
+  "ultimo_voo": "2026-11-12T10:33:57+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,61 +48,70 @@
     },
     "estrelas_de_ouro": 9,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.3
+    "tempo_medio_min": 15.7
   },
   "missoes": [
     {
-      "em": "2026-11-12T10:21:54+00:00",
+      "em": "2026-11-12T10:33:57+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Itaberaí — Edital Complementar 005-2024 LEI PAULO GUSTAVO — Goiás",
+      "alvo": "Itaberaí — Edital seleciona projetos de Itaberaí (GO) para receberem recursos de prestação pecuniária — Goiás — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 3,
-      "dispensados": 0,
+      "comprovados": 6,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
         "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado como sendo do município de Itaberaí, Goiás, o que é relevante para organizações da sociedade civil que atuam na região.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital se aplica à sua área de atuação e se ela atende aos requisitos não especificados, além de se inscrever no prazo não informado.",
-        "proximo_passo": "Verificar se o edital se aplica à área de atuação da associação e se ela atende aos requisitos não detalhados.",
-        "risco": "A falta de informações sobre requisitos, prazos e objeto pode impedir a associação de se inscrever adequadamente."
+        "por_que": "O edital menciona o prazo de inscrição como sendo de 20/07 a 18/08/2020, indicando que é uma fonte válida para ações de inscrição.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria subscir um projeto com finalidade social e seguir o prazo de inscrição indicado no edital.",
+        "proximo_passo": "Verificar os anexos mencionados no edital e preparar o projeto para inscrição no prazo estabelecido.",
+        "risco": "O prazo de inscrição pode expirar sem que a associação tenha completado os requisitos necessários para participação."
       },
       "erro": null,
-      "segundos": 557,
+      "segundos": 939,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-c61171b4dfd4",
+      "id": "op-df56a16858bd",
       "encontrou": {
+        "Objeto": {
+          "valor": "custeio de projetos subscritos por Instituições Públicas ou Privadas com finalidade social",
+          "trecho": "Edital de seleção para custeio de projetos subscritos por Instituições Públicas ou Privadas com finalidade social, previamente credenciada, e às atividades de caráter essencial à s",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O edital menciona o prazo de inscrição como sendo de 20/07 a 18/08/2020.",
+          "trecho": "no período de 20/07 a 18/08/2020.",
+          "oficial": false,
+          "dispensado": true
+        },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Itaberaí",
-          "trecho": "Prefeitura Municipal de Itaberaí",
+          "valor": "Gabinete da 1ª Vara Judicial",
+          "trecho": "Gabinete da 1ª Vara Judicial",
           "oficial": false,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "Itaberaí-GO",
+          "trecho": "Município de Itaberaí-GO",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura Municipal de Itaberaí",
+      "financiador": "Gabinete da 1ª Vara Judicial",
       "indicios": [],
       "rotas": [
         "financiador_programa_edital",
@@ -110,7 +119,7 @@
         "financiador_pdf",
         "financiador_ano",
         "governo",
-        "parceiro"
+        "programa_puro"
       ]
     }
   ],
