@@ -1120,7 +1120,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-12T13:23:32+00:00",
+  "em": "2026-11-12T14:51:59+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -4843,7 +4843,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-242": {
-  "em": "2026-11-12T02:55:48+00:00",
+  "em": "2026-11-12T14:51:12+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
@@ -4983,7 +4983,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-espalhado-rouanet-cultura-gov-br": {
-  "em": "2026-11-12T02:55:34+00:00",
+  "em": "2026-11-12T14:51:02+00:00",
   "testes": 24,
   "melhor": null,
   "detalhe": [
@@ -5577,13 +5577,13 @@
   "resultado": "rota nova em teste"
  },
  "f260-espalhado-senadorcanedo-go-gov-br": {
-  "em": "2026-11-12T02:56:17+00:00",
+  "em": "2026-11-12T14:51:43+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://senadorcanedo.go.gov.br/aldirblanc/",
    "via": "direto",
    "origem": "rota original",
-   "pontos": 113,
+   "pontos": 123,
    "formato": "html"
   },
   "detalhe": [
@@ -5643,17 +5643,6 @@
     "funcionou": true
    },
    {
-    "url": "https://senadorcanedo.go.gov.br/senador-canedo-abre-prazo-para-recursos-da-lei-aldir-blanc/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 5,
-    "links": 60,
-    "sinais": 2,
-    "formato": "html",
-    "erro": null,
-    "funcionou": true
-   },
-   {
     "url": "https://senadorcanedo.go.gov.br/prefeitura-de-senador-canedo-lanca-edital-aldir-blanc-2026",
     "origem": "biblioteca",
     "via": "direto",
@@ -5666,6 +5655,17 @@
    },
    {
     "url": "https://senadorcanedo.go.gov.br/prefeitura-de-senador-canedo-lanca-edital-aldir-blanc-2026/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 5,
+    "links": 60,
+    "sinais": 2,
+    "formato": "html",
+    "erro": null,
+    "funcionou": true
+   },
+   {
+    "url": "https://senadorcanedo.go.gov.br/senador-canedo-abre-prazo-para-recursos-da-lei-aldir-blanc/",
     "origem": "biblioteca",
     "via": "direto",
     "pontos": 5,
@@ -5745,23 +5745,23 @@
     "url": "https://senadorcanedo.go.gov.br/aldirblanc/",
     "origem": "rota original",
     "via": "direto",
-    "pontos": 113,
-    "links": 217,
-    "sinais": 56,
+    "pontos": 123,
+    "links": 222,
+    "sinais": 61,
     "formato": "html",
     "erro": null,
     "funcionou": true
    },
    {
-    "url": "https://senadorcanedo.go.gov.br/",
-    "origem": "rota original",
+    "url": "https://senadorcanedo.go.gov.br/sitemap.xml",
+    "origem": "padrão",
     "via": "direto",
-    "pontos": 5,
-    "links": 144,
-    "sinais": 2,
-    "formato": "html",
+    "pontos": 0,
+    "links": 7,
+    "sinais": 0,
+    "formato": "sitemap/feed",
     "erro": null,
-    "funcionou": true
+    "funcionou": false
    }
   ],
   "resultado": "rota nova em teste"
@@ -6642,10 +6642,21 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-226": {
-  "em": "2026-11-12T02:56:32+00:00",
+  "em": "2026-11-12T14:51:58+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
+   {
+    "url": "https://www.institutonatura.org/sitemap.xml",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 1,
+    "links": 12,
+    "sinais": 0,
+    "formato": "sitemap/feed",
+    "erro": null,
+    "funcionou": false
+   },
    {
     "url": "https://www.institutonatura.org/",
     "origem": "rota original",
@@ -6658,14 +6669,13 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutonatura.org/sitemap.xml",
+    "url": "https://www.institutonatura.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 1,
-    "links": 12,
+    "pontos": 0,
+    "links": 0,
     "sinais": 0,
-    "formato": "sitemap/feed",
-    "erro": null,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -6690,7 +6700,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.institutonatura.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.institutonatura.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -6701,16 +6711,6 @@
    },
    {
     "url": "https://www.institutonatura.org/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutonatura.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8932,7 +8932,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-250": {
-  "em": "2026-11-12T02:56:23+00:00",
+  "em": "2026-11-12T14:51:47+00:00",
   "testes": 12,
   "melhor": {
    "url": "https://www.gatesfoundation.org/sitemap.xml",
@@ -8952,6 +8952,16 @@
     "formato": "sitemap/feed",
     "erro": null,
     "funcionou": true
+   },
+   {
+    "url": "https://www.gatesfoundation.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
    },
    {
     "url": "https://www.gatesfoundation.org/",
@@ -8985,7 +8995,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.gatesfoundation.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.gatesfoundation.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8996,16 +9006,6 @@
    },
    {
     "url": "https://www.gatesfoundation.org/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.gatesfoundation.org/edital",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -10468,7 +10468,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-curadoria-003": {
-  "em": "2026-11-12T02:55:59+00:00",
+  "em": "2026-11-12T14:51:22+00:00",
   "testes": 16,
   "melhor": {
    "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
@@ -10552,6 +10552,16 @@
     "funcionou": false
    },
    {
+    "url": "https://editais.movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://editais.movimentobemmaior.org.br/2026/",
     "origem": "rota original",
     "via": "direto",
@@ -10560,16 +10570,6 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://editais.movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
     "funcionou": false
    },
    {
