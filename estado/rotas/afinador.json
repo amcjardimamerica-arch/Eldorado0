@@ -1,6 +1,6 @@
 {
  "camara-goiania-pl": {
-  "em": "2026-11-11T18:41:44+00:00",
+  "em": "2026-11-12T08:56:12+00:00",
   "testes": 16,
   "melhor": null,
   "detalhe": [
@@ -21,17 +21,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "TimeoutError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.goiania.go.leg.br/parlamentares",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "TimeoutError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -41,8 +31,17 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "formato": "html",
-    "erro": null,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.goiania.go.leg.br/parlamentares",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -66,18 +65,18 @@
     "funcionou": false
    },
    {
-    "url": "https://www.goiania.go.leg.br/feed",
-    "origem": "câmara",
+    "url": "https://www.goiania.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "TimeoutError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
-    "url": "https://www.goiania.go.leg.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
+    "url": "https://www.goiania.go.leg.br/feed",
+    "origem": "câmara",
     "via": "direto",
     "pontos": 0,
     "links": 0,
@@ -152,7 +151,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "TimeoutError",
+    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -162,7 +161,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "TimeoutError",
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
@@ -1121,7 +1120,7 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-12T07:26:38+00:00",
+  "em": "2026-11-12T08:56:16+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
@@ -1522,7 +1521,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-233": {
-  "em": "2026-11-11T18:40:07+00:00",
+  "em": "2026-11-12T08:55:14+00:00",
   "testes": 13,
   "melhor": null,
   "detalhe": [
@@ -1549,6 +1548,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutosicoob.org.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutosicoob.org.br/premio.html",
     "origem": "biblioteca",
     "via": "direto",
@@ -1561,16 +1570,6 @@
    },
    {
     "url": "https://www.institutosicoob.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutosicoob.org.br/feed",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3808,20 +3807,10 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-240": {
-  "em": "2026-11-11T12:36:15+00:00",
-  "testes": 14,
+  "em": "2026-11-12T08:54:48+00:00",
+  "testes": 16,
   "melhor": null,
   "detalhe": [
-   {
-    "url": "https://www.unesco.org/creativity/pt/ifcd",
-    "origem": "rota original",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
    {
     "url": "https://www.unesco.org/creativity/en/ifcd",
     "origem": "biblioteca",
@@ -3834,23 +3823,43 @@
     "funcionou": false
    },
    {
+    "url": "https://www.unesco.org/creativity/pt/ifcd",
+    "origem": "rota original",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "TimeoutError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.unesco.org/creativity/pt/ifcd",
+    "origem": "rota original",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "ErroPonte",
+    "funcionou": false
+   },
+   {
     "url": "https://www.unesco.org/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "TimeoutError",
     "funcionou": false
    },
    {
-    "url": "https://www.unesco.org/wp-json/wp/v2/posts?search=edital&per_page=20",
+    "url": "https://www.unesco.org/sitemap.xml",
     "origem": "padrão",
-    "via": "direto",
+    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "RuntimeError",
     "funcionou": false
    },
    {
@@ -3860,7 +3869,7 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "erro": "TimeoutError",
     "funcionou": false
    },
    {
@@ -3885,7 +3894,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.unesco.org/edital",
+    "url": "https://www.unesco.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3896,6 +3905,26 @@
    },
    {
     "url": "https://www.unesco.org/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.unesco.org/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.unesco.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -3916,16 +3945,6 @@
    },
    {
     "url": "https://www.unesco.org/chamamento-publico",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.unesco.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4252,8 +4271,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-222": {
-  "em": "2026-11-11T14:06:09+00:00",
-  "testes": 13,
+  "em": "2026-11-12T08:54:54+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -4279,26 +4298,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.fundacaoitau.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.fundacaoitau.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
-    "funcionou": false
-   },
-   {
     "url": "https://www.fundacaoitau.org.br/feed",
     "origem": "padrão",
     "via": "direto",
@@ -4319,7 +4318,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.fundacaoitau.org.br/edital",
+    "url": "https://www.fundacaoitau.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4330,6 +4329,26 @@
    },
    {
     "url": "https://www.fundacaoitau.org.br/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.fundacaoitau.org.br/edital",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.fundacaoitau.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -4351,16 +4370,6 @@
    },
    {
     "url": "https://www.fundacaoitau.org.br/chamamento-publico",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.fundacaoitau.org.br/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8020,7 +8029,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-243": {
-  "em": "2026-11-11T18:41:48+00:00",
+  "em": "2026-11-12T08:56:16+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8414,7 +8423,7 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-244": {
-  "em": "2026-11-11T14:06:18+00:00",
+  "em": "2026-11-12T08:55:05+00:00",
   "testes": 13,
   "melhor": {
    "url": "https://www.iadb.org/sitemap.xml",
@@ -8468,6 +8477,16 @@
     "funcionou": false
    },
    {
+    "url": "https://www.iadb.org/transparencia/editais",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.iadb.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -8478,7 +8497,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/transparencia/editais",
+    "url": "https://www.iadb.org/editais",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8498,7 +8517,7 @@
     "funcionou": false
    },
    {
-    "url": "https://www.iadb.org/editais",
+    "url": "https://www.iadb.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
@@ -8519,16 +8538,6 @@
    },
    {
     "url": "https://www.iadb.org/chamamento-publico",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.iadb.org/chamadas-publicas",
     "origem": "padrão",
     "via": "direto",
     "pontos": 0,
