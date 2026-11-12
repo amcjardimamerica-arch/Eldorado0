@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-12T14:47:48+00:00",
+  "em": "2026-11-12T15:01:07+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-12T14:33:05+00:00",
+  "ultimo_voo": "2026-11-12T14:50:10+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,75 +44,56 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 10,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.0
+    "tempo_medio_min": 10.3
   },
   "missoes": [
     {
-      "em": "2026-11-12T14:33:05+00:00",
+      "em": "2026-11-12T14:50:10+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Jataí recebe a 3ª edição do Aberto do Brasil de Xadrez entre 31 de outubro e 2 de novembro — Goiás / Jataí",
+      "alvo": "Jataí — A Prefeitura de Jataí lança edital para a construção de 120 casas — Goiás / Jataí — Goiás / Jataí — Goiás / Jataí",
       "qualidade": "insuficiente",
-      "comprovados": 6,
+      "comprovados": 1,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Órgão / financiador",
+        "Esfera",
         "Requisitos",
-        "Anexos"
+        "Anexos",
+        "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que a Prefeitura de Jataí organizará o evento e fornece informações sobre o objeto, prazo de inscrição e área de atuação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao edital municipal, demonstrar relevância para o esporte e apresentar proposta de participação ou parceria com a Prefeitura de Jataí.",
-        "proximo_passo": "Contatar a Prefeitura de Jataí para obter mais detalhes sobre o edital e a possibilidade de envolvimento na organização do evento.",
-        "risco": "A falta de informações sobre requisitos e anexos pode dificultar a elaboração de uma proposta adequada."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações suficientes para confirmar que o edital mencionado é válido ou disponível para acesso público.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há edital disponível para acesso e se atende aos requisitos específicos do edital, que não foram encontrados.",
+        "proximo_passo": "Consultar o site oficial da Prefeitura de Jataí para verificar a disponibilidade do edital e seus requisitos.",
+        "risco": "A falta de informações sobre o edital pode impedir que a associação comunitária tenha acesso às oportunidades de financiamento."
       },
       "erro": null,
-      "segundos": 842,
+      "segundos": 621,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-47d57eb6efdc",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-c0b226061961",
       "encontrou": {
-        "Objeto": {
-          "valor": "organizar a 3ª edição do Aberto do Brasil de Xadrez",
-          "trecho": "Jataí recebe a 3ª edição do Aberto do Brasil de Xadrez entre 31 de outubro e 2 de novembro",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-11-12 a 2026-11-12",
-          "trecho": "quinta-feira, 12 novembro, 2026",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Prefeitura de Jataí",
-          "trecho": "PREFEITURA DE JATAÍ",
-          "oficial": false,
-          "dispensado": false
-        },
         "Território": {
           "valor": "GO",
-          "trecho": "Jataí",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "esporte",
-          "trecho": "ESPORTE E LAZER",
+          "trecho": "Jataí — Goiás / Jataí — Goiás / Jataí — Goiás / Jataí",
           "oficial": false,
           "dispensado": false
         }
@@ -120,7 +101,12 @@
       "financiador": "Prefeitura de Jataí",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
