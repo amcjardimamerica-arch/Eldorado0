@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-12T16:10:35+00:00",
+  "em": "2026-11-12T16:28:55+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-12T16:02:33+00:00",
+  "ultimo_voo": "2026-11-12T16:12:44+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,87 +39,68 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
       "sim": 1
     },
     "estrelas_de_ouro": 11,
-    "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.5
+    "fontes_novas_para_os_motores": 1,
+    "tempo_medio_min": 15.4
   },
   "missoes": [
     {
-      "em": "2026-11-12T16:02:33+00:00",
+      "em": "2026-11-12T16:12:44+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Inscrições para o Minha Vaga 2027/1 da UEG terminam nesta sexta (13) — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "Jataí — Edital da Lei Paulo Gustavo é lançado — Goiás / Jataí",
+      "qualidade": "insuficiente",
+      "comprovados": 2,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Território",
         "Requisitos",
+        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": "http://goias.gov.br",
+      "pagina_oficial": "https://www.jatai.go.leg.br/norma/pesquisar",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que as inscrições para o Minha Vaga 2027/1 da UEG terminam em 2027-01-13, indicando que o prazo está definido e a instituição é estadual em Goiás.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no prazo estabelecido, seguir as instruções do edital e enviar os documentos exigidos no anexo.",
-        "proximo_passo": "Verificar os anexos do edital e preparar os documentos necessários para a inscrição até 2027-01-13.",
-        "risco": "O prazo de inscrição pode ser encerrado antes do esperado, ou a associação pode não atender aos requisitos não especificados."
+        "por_que": "O edital foi lançado pela Câmara Municipal de Jataí, que é um órgão municipal, e é relevante para organizações da sociedade civil no âmbito municipal.",
+        "para_a_amc": "Para acessar o edital, a associação comunitária de Goiânia precisaria verificar se o edital abrange a área de atuação da AME, como assistência social, cultura, educação ou esporte, e seguir o processo de inscrição conforme o prazo e requisitos definidos no edital.",
+        "proximo_passo": "Consultar o edital completo para verificar se a AME se enquadra nas áreas de atuação e requisitos estabelecidos.",
+        "risco": "O prazo de inscrição e os requisitos não foram encontrados, o que pode impedir a associação de se inscrever no prazo correto ou com os documentos necessários."
       },
       "erro": null,
-      "segundos": 448,
+      "segundos": 926,
       "site_oficial": null,
       "resultado": null,
-      "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Requisitos",
-      "id": "op-89ac5c2b663d",
+      "fonte_nova_para_os_motores": true,
+      "fontes_oficiais": 2,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-1c294d4f0fdc",
       "encontrou": {
-        "Objeto": {
-          "valor": "Inscrições para o Minha Vaga 2027/1 da UEG",
-          "trecho": "Inscrições para o Minha Vaga 2027/1 da UEG terminam nesta sexta (13)",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "? a 2027-01-13",
-          "trecho": "Inscrições para o Minha Vaga 2027/1 da UEG terminam nesta sexta (13)",
-          "oficial": true,
-          "dispensado": false
-        },
         "Órgão / financiador": {
-          "valor": "UEG",
-          "trecho": "Inscrições para o Minha Vaga 2027/1 da UEG terminam nesta sexta (13)",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Inscrições para o Minha Vaga 2027/1 da UEG terminam nesta sexta (13)",
+          "valor": "Câmara Municipal de Jataí",
+          "trecho": "Câmara Municipal de Jataí",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "UEG",
+      "financiador": "Prefeitura de Jataí",
       "indicios": [],
       "rotas": [
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo",
-        "programa_puro"
+        "site_do_financiador"
       ]
     }
   ],
