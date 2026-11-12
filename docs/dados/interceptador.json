@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-12T19:33:14+00:00",
+  "em": "2026-11-12T19:45:45+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-12T19:23:19+00:00",
+  "ultimo_voo": "2026-11-12T19:36:15+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,79 +48,68 @@
     },
     "estrelas_de_ouro": 12,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.3
+    "tempo_medio_min": 9.0
   },
   "missoes": [
     {
-      "em": "2026-11-12T19:23:19+00:00",
+      "em": "2026-11-12T19:36:15+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Jul 2026 editais da pnab públicados — Goiás",
+      "alvo": "MPF divulga lista de instituições selecionadas para receber bens doados — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 6,
+      "comprovados": 3,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Resultado",
+        "Objeto",
+        "Prazo de inscrição",
         "Prazo de recurso",
         "Valor",
-        "Esfera",
-        "Requisitos"
+        "Território",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona editais da PNAB publicados em Jul 2026 para Goiás, especificando o objeto como fomento à cultura e o prazo de inscrição até 2026-07-31.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no edital de fomento à cultura da Prefeitura Municipal de Cidade Ocidental, apresentando propostas alinhadas ao objeto do edital e seguindo as instruções dos anexos.",
-        "proximo_passo": "Verificar os anexos do edital para entender os requisitos e documentação necessários para a inscrição.",
-        "risco": "O prazo de inscrição pode estar encerrado, e a falta de informações detalhadas sobre o edital pode dificultar o acesso às oportunidades."
+        "por_que": "O texto comprovado menciona o Ministério Público Federal em Goiás como órgão financiador e o resultado da seleção até 2025-11-26, indicando que é uma fonte válida para informações sobre ações de doação de bens.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria estar inscrita no Cadastro Nacional de Entidades (CNE) e atender aos critérios de elegibilidade estabelecidos pelo Ministério Público Federal, mesmo que não sejam explicitados no texto.",
+        "proximo_passo": "Consultar o Ministério Público Federal em Goiás para obter informações detalhadas sobre os requisitos, prazos e processos de inscrição.",
+        "risco": "A falta de informações detalhadas sobre requisitos, prazos e área de atuação pode impedir a associação de se qualificar adequadamente para o processo."
       },
       "erro": null,
-      "segundos": 558,
+      "segundos": 540,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-nova-86bc5be97387",
+      "id": "op-6c0e3937043e",
       "encontrou": {
-        "Objeto": {
-          "valor": "fomento à cultura",
-          "trecho": "Os editais da Política Nacional Aldir Blanc de Fomento à Cultura (PNAB) já foram publicados!",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "? a 2026-07-31",
-          "trecho": "As inscrições seguem abertas até 31 de julho de 2026.",
-          "oficial": false,
-          "dispensado": false
-        },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Cidade Ocidental",
-          "trecho": "EDITAIS DA PNAB PÚBLICADOS - Prefeitura Municipal de Cidade",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Cidade Ocidental-GO",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "Os editais da Política Nacional Aldir Blanc de Fomento à Cultura (PNAB) já foram publicados!",
+          "valor": "Ministério Público Federal em Goiás",
+          "trecho": "O Ministério Público Federal em Goiás divulgou, no dia 26 de novembro, a lista de instituições selecionadas para receber bens diversos a serem doados pelo órgão",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura Municipal de Cidade Ocidental",
-      "indicios": [],
+      "financiador": "Ministério Público Federal em Goiás",
+      "indicios": [
+        {
+          "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/mpf-divulga-lista-de-instituicoes-selecionadas-para-receber-bens-doados",
+          "tipo": "noticia"
+        }
+      ],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
