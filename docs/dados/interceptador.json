@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-12T21:31:21+00:00",
+  "em": "2026-11-12T21:37:37+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-12T21:16:55+00:00",
+  "ultimo_voo": "2026-11-12T21:33:22+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,78 +43,44 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 12,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.9
+    "tempo_medio_min": 3.5
   },
   "missoes": [
     {
-      "em": "2026-11-12T21:16:55+00:00",
+      "em": "2026-11-12T21:33:22+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Organizações sociais - Casa Civil — Goiás",
+      "alvo": "Out. 11:00 Medidas administrativas e debate previdenciário agitam a semana A Secretaria da Ciência, Tecnologia… — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 6,
-      "dispensados": 0,
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Área de atuação"
-      ],
+      "nao_resolvidos": null,
       "pagina_oficial": null,
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O texto comprova a qualificação de organizações sociais como OSCIP pela Secretaria de Estado da Casa Civil em Goiás, com requisitos claros para a inscrição.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria apresentar cópia autenticada da Ata de eleição dos membros atuais do Conselho de Administração e da Diretoria, cópia autenticada do Balanço patrimonial e da demonstração do resultado do exercício anterior, inscrição no Cadastro Nacional da Pessoa Jurídica e declaração de que a Entidade não está qualificada como outra modalidade.",
-        "proximo_passo": "Verificar os requisitos listados e preparar os documentos necessários para a inscrição.",
-        "risco": "A falta de documentos necessários ou a não conformidade com os requisitos pode impedir a qualificação."
-      },
-      "erro": null,
-      "segundos": 835,
+      "parecer_fonte": {},
+      "erro": "nenhuma fonte legível",
+      "segundos": 210,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-0a781236293c",
-      "encontrou": {
-        "Objeto": {
-          "valor": "Qualificação de organizações sociais como Organizações da Sociedade Civil de Interesse Público (OSCIP)",
-          "trecho": "DOCUMENTOS QUE DEVEM INSTRUIR O REQUERIMENTO DE QUALIFICAÇÃO DE ORGANIZAÇÃO SOCIAL.",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Casa Civil",
-          "trecho": "Secretaria de Estado da Casa Civil",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Organizações sociais - Casa Civil — Goiás",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "Cópia autenticada da Ata de eleição dos membros atuais do Conselho de Administração e da Diretoria, Cópia autenticada do Balanço patrimonial e da demonstração do resultado do exercício anterior, Inscrição no Cadastro Nacional da Pessoa Jurídica, Declaração de que a Entidade não está qualificada como",
-          "trecho": "DOCUMENTOS QUE DEVEM INSTRUIR O REQUERIMENTO DE QUALIFICAÇÃO COMO ORGANIZAÇÃO SOCIAL.",
-          "oficial": false,
-          "dispensado": false
+      "avaliacao": "falhou: nenhuma fonte legível",
+      "id": "op-21c2a508a8aa",
+      "encontrou": {},
+      "financiador": "",
+      "indicios": [
+        {
+          "url": "https://portal.al.go.leg.br/noticias/167827/medidas-administrativas-e-debate-previdenciario-agitam-a-semana",
+          "tipo": "noticia"
         }
-      },
-      "financiador": "Casa Civil",
-      "indicios": [],
+      ],
       "rotas": [
-        "financiador_programa_edital"
+        "programa_puro"
       ]
     }
   ],
