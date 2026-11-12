@@ -1,5 +1,5 @@
 {
- "em": "2026-11-11T23:53:18+00:00",
+ "em": "2026-11-12T01:27:13+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,13 +7,13 @@
   "alterar_rota": 61,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 60087
+  "exemplos_da_rede": 60161
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.4678
+    3.7504
    ],
    [
     "tok:inscricoes",
@@ -21,7 +21,11 @@
    ],
    [
     "origem:biblioteca",
-    2.8796
+    2.8364
+   ],
+   [
+    "origem:rota original",
+    2.823
    ],
    [
     "tok:aldirblanc",
@@ -32,20 +36,16 @@
     2.5203
    ],
    [
-    "origem:rota original",
-    2.2944
-   ],
-   [
     "tok:transparencia",
-    2.2849
+    2.2759
    ],
    [
     "tok:sitemap",
-    2.1307
+    2.1111
    ],
    [
     "tok:xml",
-    2.1307
+    2.1111
    ],
    [
     "tok:deputados",
@@ -62,8 +62,8 @@
   ],
   "piores_sinais": [
    [
-    "sapl:False",
-    -2.4038
+    "via:ponte",
+    -2.355
    ],
    [
     "tok:pgt",
@@ -78,16 +78,16 @@
     -3.1959
    ],
    [
-    "origem:padrão",
-    -3.7448
-   ],
-   [
     "tok:content",
     -3.7558
    ],
    [
     "tok:uploads",
     -3.7558
+   ],
+   [
+    "origem:padrão",
+    -3.789
    ],
    [
     "origem:câmara",
@@ -484,7 +484,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-11T09:40:38+00:00",
+    "em": "2026-11-12T01:27:12+00:00",
     "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -586,7 +586,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-11T09:40:18+00:00",
+    "em": "2026-11-12T01:26:36+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -631,8 +631,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-11T11:07:49+00:00",
-    "testes": 24,
+    "em": "2026-11-12T01:27:13+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -821,8 +821,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-11T05:11:13+00:00",
-    "testes": 12,
+    "em": "2026-11-12T01:26:23+00:00",
+    "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1786,10 +1786,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 3,
-    "aprendido_em": "2026-11-11T05:10:58+00:00"
+    "aprendido_em": "2026-11-12T01:26:00+00:00"
    },
    "afinado": {
-    "em": "2026-11-11T05:10:58+00:00",
+    "em": "2026-11-12T01:26:00+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://skoll.org/feed",
@@ -1992,11 +1992,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 11,
-    "aprendido_em": "2026-11-11T09:39:47+00:00"
+    "aprendido_em": "2026-11-12T01:26:33+00:00"
    },
    "afinado": {
-    "em": "2026-11-11T09:39:47+00:00",
-    "testes": 13,
+    "em": "2026-11-12T01:26:33+00:00",
+    "testes": 12,
     "melhor": {
      "url": "https://www.ipora.pr.gov.br/",
      "via": "direto",
