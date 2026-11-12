@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-12T15:47:37+00:00",
+  "em": "2026-11-12T16:00:27+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-12T15:31:08+00:00",
+  "ultimo_voo": "2026-11-12T15:49:30+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,23 +48,25 @@
     },
     "estrelas_de_ouro": 10,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.8
+    "tempo_medio_min": 10.3
   },
   "missoes": [
     {
-      "em": "2026-11-12T15:31:08+00:00",
+      "em": "2026-11-12T15:49:30+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Jataí — Edital Lei Paulo Gustavo em Jataí registra um total de 81 inscrições. — Goiás / Jataí",
+      "alvo": "Certificado de Vacinação — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 4,
-      "dispensados": 1,
+      "comprovados": 2,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Órgão / financiador",
         "Território",
         "Requisitos",
         "Anexos",
@@ -73,44 +75,37 @@
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova que o edital foi publicado e que houve inscrições, o que indica que o edital está ativo e pode ser utilizado como fonte para acesso a recursos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital se aplica à sua área de atuação e se ela atende aos requisitos não explicitados, como ser uma organização da sociedade civil e ter regularidade legal.",
-        "proximo_passo": "Verificar os requisitos do edital e entrar em contato com a Prefeitura de Jataí para obter mais informações sobre o processo de acesso.",
-        "risco": "O prazo de inscrição já encerrou, e os requisitos não foram explicitados, o que pode impedir o acesso ao edital."
+        "por_que": "O texto comprovado menciona o Objeto como 'Certificado de Vacinação regularizado para matrícula' e a Esfera como 'estadual', o que indica que o certificado é uma exigência para matrícula em instituições estaduais.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria obter o Certificado de Vacinação regularizado para poder se matricular em instituições estaduais, como escolas ou centros de apoio à educação.",
+        "proximo_passo": "Consultar a secretaria de saúde do Estado de Goiás para obter informações sobre como regularizar o certificado de vacinação.",
+        "risco": "A falta de acesso a informações claras sobre como regularizar o certificado pode impedir a associação de se matricular em instituições estaduais."
       },
       "erro": null,
-      "segundos": 947,
+      "segundos": 621,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-a8cb072c73b8",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-nova-ba7c01a8eba2",
       "encontrou": {
         "Objeto": {
-          "valor": "Edital Lei Paulo Gustavo em Jataí registra um total de 81 inscrições",
-          "trecho": "Edital Lei Paulo Gustavo em Jataí registra um total de 81 inscrições.",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O prazo de inscrição foi mencionado como encerrado no último domingo (17/12), às 23h59.",
-          "trecho": "aberto em 17 de novembro e encerrado no último domingo (17/12), às 23h59",
-          "oficial": false,
-          "dispensado": true
-        },
-        "Órgão / financiador": {
-          "valor": "Prefeitura de Jataí",
-          "trecho": "Prefeitura de Jataí",
+          "valor": "Certificado de Vacinação regularizado para matrícula",
+          "trecho": "Estudantes goianos deverão apresentar Certificado de Vacinação regularizado para fazer matrícula",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Jataí",
+      "financiador": "GOIÁS.GOV.BR",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
