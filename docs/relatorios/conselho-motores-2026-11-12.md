@@ -40,7 +40,7 @@
 - CONGELADO: 28
 - RUÍDO: 23
 - PÁGINA VAZIA: 9
-- INTERMITENTE: 4
+- INTERMITENTE: 5
 - CADÊNCIA FORA DO RITMO: 1
 - CUSTO SEM RETORNO: 1
 
@@ -104,6 +104,11 @@
 - **RUÍDO** (funil): 31 achados e nenhuma oportunidade confirmada. → exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício
 - **VAZAMENTO** (funil): perde 100% na etapa 'achado → fluxo'. → achados não chegam ao fluxo: registrar com id/URL canônica e prazo quando houver
 
+### Assembleia Legislativa de Goiás — proposições (`alego-pl`) — baixo volume, 0 achados em 30 dias
+- **CEGO** (falso_verde): respondeu 200 em 26 de 30 dias e não achou nada em 30 dias. → conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)
+- **INTERMITENTE** (falso_verde): 4 dias vermelhos alternados com dias bons. → retentativa com espera e rota de reserva (ponte do titular)
+- **SILÊNCIO LONGO** (falso_verde): 108 leituras vazias seguidas. → reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço
+
 ### Diário da Justiça Eletrônico — TJGO (`dje-tjgo`) — baixo volume, 0 achados em 30 dias
 - **CEGO** (falso_verde): respondeu 200 em 21 de 26 dias e não achou nada em 30 dias. → conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)
 - **INTERMITENTE** (falso_verde): 5 dias vermelhos alternados com dias bons. → retentativa com espera e rota de reserva (ponte do titular)
@@ -124,13 +129,9 @@
 - **RUÍDO** (funil): 27 achados e nenhuma oportunidade confirmada. → exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício
 - **VAZAMENTO** (funil): perde 100% na etapa 'achado → fluxo'. → achados não chegam ao fluxo: registrar com id/URL canônica e prazo quando houver
 
-### Assembleia Legislativa de Goiás — proposições (`alego-pl`) — baixo volume, 0 achados em 30 dias
-- **CEGO** (falso_verde): respondeu 200 em 27 de 30 dias e não achou nada em 30 dias. → conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)
-- **SILÊNCIO LONGO** (falso_verde): 107 leituras vazias seguidas. → reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço
-
 ### Câmara Municipal de Goiânia — projetos de lei (`camara-goiania-pl`) — baixo volume, 0 achados em 30 dias
 - **CEGO** (falso_verde): respondeu 200 em 30 de 30 dias e não achou nada em 30 dias. → conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)
-- **SILÊNCIO LONGO** (falso_verde): 155 leituras vazias seguidas. → reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço
+- **SILÊNCIO LONGO** (falso_verde): 156 leituras vazias seguidas. → reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço
 
 ### CNJ — destinações de penas e prestações pecuniárias (`cnj-destinacoes`) — baixo volume, 0 achados em 30 dias
 - **CEGO** (falso_verde): respondeu 200 em 26 de 27 dias e não achou nada em 30 dias. → conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)
@@ -138,7 +139,7 @@
 
 ### Diário da Justiça Federal — Seção Judiciária de Goiás (`dj-trf1-go`) — baixo volume, 0 achados em 30 dias
 - **PÁGINA VAZIA** (falso_verde): leitura em 0 s com 0 página(s). → a fonte provavelmente monta o conteúdo por JavaScript ou bloqueia: usar a API/JSON da página ou a ponte
-- **SILÊNCIO LONGO** (falso_verde): 100 leituras vazias seguidas. → reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço
+- **SILÊNCIO LONGO** (falso_verde): 101 leituras vazias seguidas. → reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço
 
 ### PNCP — API de contratações (chamamentos e credenciamentos) (`pncp-api`) — ouro, 894 achados em 30 dias
 - **INTERMITENTE** (falso_verde): 7 dias vermelhos alternados com dias bons. → retentativa com espera e rota de reserva (ponte do titular)
@@ -416,7 +417,7 @@
 - **SILÊNCIO LONGO** (falso_verde): 44 leituras vazias seguidas. → reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço
 
 ### Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos) (`congresso-nacional`) — baixo volume, 1 achados em 30 dias
-- **CONGELADO** (falso_verde): o mesmo achado repetido em 5 dias. → detectar mudança por hash/lastmod e só contar o que é novo
+- **CONGELADO** (falso_verde): o mesmo achado repetido em 6 dias. → detectar mudança por hash/lastmod e só contar o que é novo
 
 ### TCM-GO - regularidade municipal e controle (`f260-captacao-212`) — baixo volume, 0 achados em 30 dias
 - **CEGO** (falso_verde): respondeu 200 em 11 de 11 dias e não achou nada em 30 dias. → conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)

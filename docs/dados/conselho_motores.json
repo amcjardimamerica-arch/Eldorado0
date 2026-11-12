@@ -1,5 +1,5 @@
 {
- "em": "2026-11-12T14:50:48+00:00",
+ "em": "2026-11-12T16:23:06+00:00",
  "conselho": [
   {
    "id": "falso_verde",
@@ -50,9 +50,9 @@
   "falhas_por_tipo": {
    "RUÍDO": 23,
    "CEGO": 59,
+   "INTERMITENTE": 5,
    "SILÊNCIO LONGO": 42,
    "PÁGINA VAZIA": 9,
-   "INTERMITENTE": 4,
    "VAZAMENTO": 33,
    "CADÊNCIA FORA DO RITMO": 1,
    "CONGELADO": 28,
@@ -414,13 +414,19 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CEGO",
-     "prova": "respondeu 200 em 27 de 30 dias e não achou nada em 30 dias",
+     "prova": "respondeu 200 em 26 de 30 dias e não achou nada em 30 dias",
      "melhoria": "conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)"
     },
     {
      "conselheiro": "falso_verde",
+     "falha": "INTERMITENTE",
+     "prova": "4 dias vermelhos alternados com dias bons",
+     "melhoria": "retentativa com espera e rota de reserva (ponte do titular)"
+    },
+    {
+     "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "107 leituras vazias seguidas",
+     "prova": "108 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -432,13 +438,13 @@
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
-     "bytes": 96077,
-     "itens": 0
+     "bytes": 282821,
+     "itens": 23
     },
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
-     "bytes": 13257,
+     "bytes": 13273,
      "itens": 0
     }
    ],
@@ -460,7 +466,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "155 leituras vazias seguidas",
+     "prova": "156 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -525,7 +531,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "100 leituras vazias seguidas",
+     "prova": "101 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -2533,7 +2539,7 @@
     {
      "url": "https://www.congressonacional.leg.br",
      "http": 200,
-     "bytes": 186523,
+     "bytes": 191083,
      "itens": 11
     },
     {
@@ -2555,7 +2561,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 5 dias",
+     "prova": "o mesmo achado repetido em 6 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     }
    ]
