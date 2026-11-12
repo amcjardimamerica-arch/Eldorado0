@@ -1,5 +1,5 @@
 {
- "em": "2026-11-12T01:27:13+00:00",
+ "em": "2026-11-12T02:56:33+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,29 +7,33 @@
   "alterar_rota": 61,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 60161
+  "exemplos_da_rede": 60254
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.7504
-   ],
-   [
-    "tok:inscricoes",
-    2.9445
-   ],
-   [
-    "origem:biblioteca",
-    2.8364
+    3.9631
    ],
    [
     "origem:rota original",
-    2.823
+    3.038
+   ],
+   [
+    "tok:inscricoes",
+    2.9456
+   ],
+   [
+    "origem:biblioteca",
+    2.8522
    ],
    [
     "tok:aldirblanc",
-    2.7697
+    2.7927
+   ],
+   [
+    "tld:br",
+    2.7897
    ],
    [
     "tok:secult",
@@ -37,15 +41,7 @@
    ],
    [
     "tok:transparencia",
-    2.2759
-   ],
-   [
-    "tok:sitemap",
-    2.1111
-   ],
-   [
-    "tok:xml",
-    2.1111
+    2.2188
    ],
    [
     "tok:deputados",
@@ -53,17 +49,21 @@
    ],
    [
     "tok:abre",
-    2.0936
+    2.0971
    ],
    [
-    "tok:imprensa",
-    2.0256
+    "tok:sitemap",
+    2.0842
+   ],
+   [
+    "tok:xml",
+    2.0842
    ]
   ],
   "piores_sinais": [
    [
     "via:ponte",
-    -2.355
+    -2.3554
    ],
    [
     "tok:pgt",
@@ -75,7 +75,11 @@
    ],
    [
     "tok:2026",
-    -3.1959
+    -3.2103
+   ],
+   [
+    "origem:padrão",
+    -3.4111
    ],
    [
     "tok:content",
@@ -84,10 +88,6 @@
    [
     "tok:uploads",
     -3.7558
-   ],
-   [
-    "origem:padrão",
-    -3.789
    ],
    [
     "origem:câmara",
@@ -676,7 +676,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-11T11:08:00+00:00",
+    "em": "2026-11-12T02:55:34+00:00",
     "testes": 24,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -726,7 +726,7 @@
     "aprendido_em": "2026-11-09T10:03:08+00:00"
    },
    "afinado": {
-    "em": "2026-11-11T11:08:14+00:00",
+    "em": "2026-11-12T02:55:48+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -766,8 +766,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-11T12:35:26+00:00",
-    "testes": 13,
+    "em": "2026-11-12T02:56:32+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1575,10 +1575,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 113,
-    "aprendido_em": "2026-11-11T11:08:51+00:00"
+    "aprendido_em": "2026-11-12T02:56:17+00:00"
    },
    "afinado": {
-    "em": "2026-11-11T11:08:51+00:00",
+    "em": "2026-11-12T02:56:17+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://senadorcanedo.go.gov.br/aldirblanc/",
@@ -1704,10 +1704,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-11-11T11:08:57+00:00"
+    "aprendido_em": "2026-11-12T02:56:23+00:00"
    },
    "afinado": {
-    "em": "2026-11-11T11:08:57+00:00",
+    "em": "2026-11-12T02:56:23+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.gatesfoundation.org/sitemap.xml",
@@ -1909,10 +1909,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 16,
-    "aprendido_em": "2026-11-11T11:08:26+00:00"
+    "aprendido_em": "2026-11-12T02:55:59+00:00"
    },
    "afinado": {
-    "em": "2026-11-11T11:08:26+00:00",
+    "em": "2026-11-12T02:55:59+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://movimentobemmaior.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
