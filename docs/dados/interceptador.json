@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-12T21:37:37+00:00",
+  "em": "2026-11-12T21:51:13+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-12T21:33:22+00:00",
+  "ultimo_voo": "2026-11-12T21:39:31+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,44 +43,84 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 12,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 3.5
+    "tempo_medio_min": 10.9
   },
   "missoes": [
     {
-      "em": "2026-11-12T21:33:22+00:00",
+      "em": "2026-11-12T21:39:31+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Out. 11:00 Medidas administrativas e debate previdenciário agitam a semana A Secretaria da Ciência, Tecnologia… — Goiás",
+      "alvo": "Ouvidoria da Secretaria de Saúde — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 5,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Resultado",
+        "Prazo de recurso",
+        "Valor",
+        "Requisitos",
+        "Anexos"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "nenhuma fonte legível",
-      "segundos": 210,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "Ouvidoria da Secretaria de Saúde — Goiás é um canal de comunicação para dúvidas, reclamações e elogios, o que a torna uma fonte válida para acesso a informações e serviços relacionados à saúde.",
+        "para_a_amc": "Para acessar, uma associação comunitária de Goiânia precisaria utilizar o canal de comunicação da Ouvidoria da Secretaria Municipal de Saúde para apresentar dúvidas, reclamações ou elogios relacionados à saúde.",
+        "proximo_passo": "Contatar a Ouvidoria da Secretaria Municipal de Saúde por meio do canal disponível para apresentar solicitações ou feedbacks.",
+        "risco": "A falta de informações sobre prazo de inscrição, resultado e outros processos pode impedir a associação de seguir corretamente o procedimento."
+      },
+      "erro": null,
+      "segundos": 656,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: nenhuma fonte legível",
-      "id": "op-21c2a508a8aa",
-      "encontrou": {},
-      "financiador": "",
-      "indicios": [
-        {
-          "url": "https://portal.al.go.leg.br/noticias/167827/medidas-administrativas-e-debate-previdenciario-agitam-a-semana",
-          "tipo": "noticia"
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-nova-594deb282940",
+      "encontrou": {
+        "Objeto": {
+          "valor": "canal de comunicação para dúvidas, reclamações e elogios",
+          "trecho": "A Ouvidoria da Secretaria Municipal de Saúde é o canal de comunicação à sua disposição.",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Secretaria Municipal de Saúde",
+          "trecho": "Ouvidoria da Secretaria Municipal de Saúde",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Secretaria Municipal de Saúde",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "saude",
+          "trecho": "Secretaria Municipal de Saúde",
+          "oficial": false,
+          "dispensado": false
         }
-      ],
+      },
+      "financiador": "Secretaria Municipal de Saúde",
+      "indicios": [],
       "rotas": [
-        "programa_puro"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
