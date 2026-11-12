@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-11T23:50:20+00:00",
+  "em": "2026-11-12T00:04:43+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-11T23:37:56+00:00",
+  "ultimo_voo": "2026-11-11T23:52:28+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,82 +44,76 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 7,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 11.9
+    "tempo_medio_min": 11.6
   },
   "missoes": [
     {
-      "em": "2026-11-11T23:37:56+00:00",
+      "em": "2026-11-11T23:52:28+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — CHAMADA PÚBLICA FAPEG Nº 16/2025 – Apoio a Projetos… — Goiás",
+      "alvo": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) — CHAMADA PÚBLICA Nº 24/2024 – Programa de Auxílio à … — Goiás",
       "qualidade": "parcial",
-      "comprovados": 6,
+      "comprovados": 7,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
         "Prazo de inscrição",
-        "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Requisitos"
+        "Requisitos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://apex.fapeg.go.gov.br/ords/r/charles/mapa/macrofluxo-de-processos",
+      "pagina_oficial": "https://goias.gov.br/fapeg/chamada-publica-no-24-2024-programa-de-auxilio-a-pesquisa-projetos-de-pesquisa-em-canabis-medicinal/",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O texto comprovado não fornece informações sobre prazo de inscrição, valor, requisitos ou outros detalhes necessários para a elaboração de uma resposta completa.",
-        "para_a_amc": "null",
-        "proximo_passo": "null",
-        "risco": "null"
+        "serve_como_fonte": "sim",
+        "por_que": "O texto comprovado menciona a chamada pública da FAPEG com objeto específico e valores, o que pode ser usado como fonte para entender oportunidades de financiamento.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria alinhar seu projeto a objeto da chamada pública, que é 'Apoio a projetos de pesquisa em cannabis medicinal', e seguir as diretrizes apresentadas nos anexos.",
+        "proximo_passo": "Verificar os anexos da chamada pública para entender as diretrizes e requisitos detalhados.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos específicos pode impedir a associação de se inscrever adequadamente."
       },
       "erro": null,
-      "segundos": 712,
+      "segundos": 697,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 6,
       "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-118285c06323",
+      "avaliacao": "aproveitável: falta Prazo de inscrição, Prazo de recurso, Requisitos, Área de atuação",
+      "id": "op-eb371ce0739c",
       "encontrou": {
         "Objeto": {
-          "valor": "Apoio a Projetos de Pesquisa e Inovação em Saúde Digital",
-          "trecho": "CHAMADA PÚBLICA FAPEG Nº 16/2025 - APOIO A PROJETOS DE PESQUISA E INOVAÇÃO EM SAÚDE DIGITAL - 2ª RETIFICAÇÃO",
-          "oficial": false,
+          "valor": "Apoio a projetos de pesquisa em cannabis medicinal",
+          "trecho": "Apoio aprovado",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 43.890,00",
+          "trecho": "Apoio aprovado",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás — FAPEG",
-          "trecho": "A Fundação de Amparo à Pesquisa do Estado de Goiás — FAPEG por meio do lançamento da presente Chamada Pública",
-          "oficial": false,
+          "valor": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
+          "trecho": "A Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) torna público o resultado final das propostas selecionadas no âmbito da Chamada Pública nº 24/2024 – Programa de Auxílio ",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
           "valor": "GO",
-          "trecho": "CHAMADA PÚBLICA FAPEG Nº 16/2025 - APOIO A PROJETOS DE PESQUISA E INOVAÇÃO EM SAÚDE DIGITAL - 2ª RETIFICAÇÃO",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "saude",
-          "trecho": "CHAMADA PÚBLICA FAPEG Nº 16/2025 - APOIO A PROJETOS DE PESQUISA E INOVAÇÃO EM SAÚDE DIGITAL - 2ª RETIFICAÇÃO",
-          "oficial": false,
+          "trecho": "A Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG) torna público o resultado final das propostas selecionadas no âmbito da Chamada Pública nº 24/2024 – Programa de Auxílio ",
+          "oficial": true,
           "dispensado": false
         }
       },
       "financiador": "Fundação de Amparo à Pesquisa do Estado de Goiás (FAPEG)",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
+        "site_do_financiador"
       ]
     }
   ],
