@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-12T19:45:45+00:00",
+  "em": "2026-11-12T20:02:57+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-12T19:36:15+00:00",
+  "ultimo_voo": "2026-11-12T19:47:49+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,58 +48,78 @@
     },
     "estrelas_de_ouro": 12,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.0
+    "tempo_medio_min": 14.5
   },
   "missoes": [
     {
-      "em": "2026-11-12T19:36:15+00:00",
+      "em": "2026-11-12T19:47:49+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "MPF divulga lista de instituições selecionadas para receber bens doados — Goiás",
+      "alvo": "MPF lança chamamento público para cadastro de entidades aptas a receber bens e valores de processos judiciais … — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 3,
-      "dispensados": 0,
+      "comprovados": 7,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
+        "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Território",
-        "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o Ministério Público Federal em Goiás como órgão financiador e o resultado da seleção até 2025-11-26, indicando que é uma fonte válida para informações sobre ações de doação de bens.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria estar inscrita no Cadastro Nacional de Entidades (CNE) e atender aos critérios de elegibilidade estabelecidos pelo Ministério Público Federal, mesmo que não sejam explicitados no texto.",
-        "proximo_passo": "Consultar o Ministério Público Federal em Goiás para obter informações detalhadas sobre os requisitos, prazos e processos de inscrição.",
-        "risco": "A falta de informações detalhadas sobre requisitos, prazos e área de atuação pode impedir a associação de se qualificar adequadamente para o processo."
+        "por_que": "O texto comprova a existência do chamamento público para cadastro de entidades aptas a receber bens e valores de processos judiciais pelo MPF em Goiás.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se inscrever no cadastro, apresentando atos constitutivos, documento de identificação do responsável legal, reconhecimento de utilidade pública (se houver), certidões de regularidade fiscal e previdenciária, e declaração de ausência de parentesco com membros ou servidores do MPF em funções de direção.",
+        "proximo_passo": "A associação deve se inscrever no cadastro, apresentando os documentos exigidos a partir de 15 de setembro de 2025.",
+        "risco": "A falta de documentos necessários ou a existência de parentesco com membros do MPF pode impedir a inscrição."
       },
       "erro": null,
-      "segundos": 540,
+      "segundos": 871,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-6c0e3937043e",
+      "id": "op-8ed697ccf60f",
       "encontrou": {
+        "Objeto": {
+          "valor": "formar um cadastro prévio de entidades aptas a receber bens e valores oriundos de processos judiciais e instrumentos de autocomposição conduzidos pelo MPF, voltados à reparação de lesões ou danos coletivos",
+          "trecho": "Edital cria banco de dados de instituições que poderão ser beneficiadas com recursos destinados à reparação de danos coletivos",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "dispensado — O texto menciona que as inscrições começam em 15 de setembro de 2025.",
+          "trecho": "As solicitações de cadastro serão recebidas a partir de 15 de setembro de 2025",
+          "oficial": false,
+          "dispensado": true
+        },
         "Órgão / financiador": {
-          "valor": "Ministério Público Federal em Goiás",
-          "trecho": "O Ministério Público Federal em Goiás divulgou, no dia 26 de novembro, a lista de instituições selecionadas para receber bens diversos a serem doados pelo órgão",
+          "valor": "Ministério Público Federal",
+          "trecho": "MPF lança chamamento público para cadastro de entidades aptas a receber bens e valores de processos judiciais e extrajudiciais na PB",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "PB",
+          "trecho": "MPF lança chamamento público para cadastro de entidades aptas a receber bens e valores de processos judiciais e extrajudiciais na PB",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "atos constitutivos, documento de identificação do responsável legal, reconhecimento de utilidade pública (se houver), certidões de regularidade fiscal e previdenciária, declaração de ausência de parentesco com membros ou servidores do MPF em funções de direção",
+          "trecho": "as entidades privadas sem fins lucrativos devem apresentar documentação específica, como atos constitutivos, documento de identificação do responsável legal, reconhecimento de util",
           "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Ministério Público Federal em Goiás",
+      "financiador": "Ministério Público Federal",
       "indicios": [
         {
-          "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/mpf-divulga-lista-de-instituicoes-selecionadas-para-receber-bens-doados",
+          "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
           "tipo": "noticia"
         }
       ],
