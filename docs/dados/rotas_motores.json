@@ -1,5 +1,5 @@
 {
- "em": "2026-11-12T04:24:43+00:00",
+ "em": "2026-11-12T05:57:13+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,33 +7,33 @@
   "alterar_rota": 61,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 60328
+  "exemplos_da_rede": 60415
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    3.9354
+    3.9357
    ],
    [
     "tok:inscricoes",
-    2.9456
-   ],
-   [
-    "origem:rota original",
-    2.9227
+    2.9457
    ],
    [
     "origem:biblioteca",
-    2.847
+    2.9131
    ],
    [
     "tok:aldirblanc",
     2.7927
    ],
    [
+    "origem:rota original",
+    2.6106
+   ],
+   [
     "tld:br",
-    2.7897
+    2.5428
    ],
    [
     "tok:secult",
@@ -41,29 +41,29 @@
    ],
    [
     "tok:transparencia",
-    2.2033
-   ],
-   [
-    "tok:sitemap",
-    2.1522
-   ],
-   [
-    "tok:xml",
-    2.1522
-   ],
-   [
-    "tok:deputados",
-    2.1111
+    2.3062
    ],
    [
     "tok:abre",
     2.0971
+   ],
+   [
+    "tok:imprensa",
+    2.0256
+   ],
+   [
+    "tok:sitemap",
+    2.0032
+   ],
+   [
+    "tok:xml",
+    2.0032
    ]
   ],
   "piores_sinais": [
    [
     "via:ponte",
-    -2.3556
+    -2.3594
    ],
    [
     "tok:pgt",
@@ -75,23 +75,23 @@
    ],
    [
     "tok:2026",
-    -3.2103
+    -3.2152
    ],
    [
     "origem:padrão",
-    -3.4785
+    -3.4781
    ],
    [
     "tok:content",
-    -3.7558
+    -3.7607
    ],
    [
     "tok:uploads",
-    -3.7558
+    -3.7607
    ],
    [
     "origem:câmara",
-    -4.1825
+    -4.1884
    ]
   ]
  },
@@ -240,8 +240,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-11T15:38:10+00:00",
-    "testes": 6,
+    "em": "2026-11-12T05:57:09+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1190,8 +1190,8 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-11T17:12:19+00:00",
-    "testes": 13,
+    "em": "2026-11-12T05:57:13+00:00",
+    "testes": 12,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -1529,21 +1529,21 @@
    ],
    "rota_aprendida": {
     "urls": [
-     "https://www.mpf.mp.br/o-mpf/unidades/pr-ba/destinacao-de-bens-e-valores"
+     "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb"
     ],
     "via": "direto",
     "origem": "biblioteca",
-    "pontos": 9,
-    "aprendido_em": "2026-11-11T14:07:27+00:00"
+    "pontos": 11,
+    "aprendido_em": "2026-11-12T05:54:09+00:00"
    },
    "afinado": {
-    "em": "2026-11-11T14:07:27+00:00",
+    "em": "2026-11-12T05:54:09+00:00",
     "testes": 16,
     "melhor": {
-     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-ba/destinacao-de-bens-e-valores",
+     "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-lanca-chamamento-publico-para-cadastro-de-entidades-aptas-a-receber-bens-e-valores-de-processos-judiciais-e-extrajudiciais-na-pb",
      "via": "direto",
      "origem": "biblioteca",
-     "pontos": 9,
+     "pontos": 11,
      "formato": "html"
     },
     "resultado": "rota nova em teste"
@@ -1951,11 +1951,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-11-11T14:06:51+00:00"
+    "aprendido_em": "2026-11-12T05:53:59+00:00"
    },
    "afinado": {
-    "em": "2026-11-11T14:06:51+00:00",
-    "testes": 14,
+    "em": "2026-11-12T05:53:59+00:00",
+    "testes": 15,
     "melhor": {
      "url": "https://mariaemilia.org.br/feed",
      "via": "direto",
@@ -2060,8 +2060,8 @@
     "aprendido_em": "2026-11-06T05:39:31+00:00"
    },
    "afinado": {
-    "em": "2026-11-11T15:38:07+00:00",
-    "testes": 32,
+    "em": "2026-11-12T05:57:08+00:00",
+    "testes": 16,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
    }
@@ -2198,10 +2198,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 91,
-    "aprendido_em": "2026-11-11T15:33:08+00:00"
+    "aprendido_em": "2026-11-12T05:54:39+00:00"
    },
    "afinado": {
-    "em": "2026-11-11T15:33:08+00:00",
+    "em": "2026-11-12T05:54:39+00:00",
     "testes": 16,
     "melhor": {
      "url": "https://www.cnj.jus.br/editais",
