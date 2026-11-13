@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-13T04:50:50+00:00",
+  "em": "2026-11-13T05:05:59+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-13T04:48:11+00:00",
+  "ultimo_voo": "2026-11-13T04:53:14+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,36 +43,84 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {},
+    "serve_como_fonte": {
+      "sim": 1
+    },
     "estrelas_de_ouro": 12,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 1.9
+    "tempo_medio_min": 12.1
   },
   "missoes": [
     {
-      "em": "2026-11-13T04:48:11+00:00",
+      "em": "2026-11-13T04:53:14+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "PNAB Goiânia - Teatro — Goiás / Goiânia",
+      "alvo": "PNAB Goiânia 2024 - Edital 12 - Subsídio para Manutenção de Espaços Culturais — Goiás / Goiânia",
       "qualidade": "insuficiente",
-      "comprovados": 0,
-      "dispensados": null,
+      "comprovados": 9,
+      "dispensados": 0,
       "total": 12,
-      "nao_resolvidos": null,
+      "nao_resolvidos": [
+        "Prazo de inscrição",
+        "Prazo de recurso"
+      ],
       "pagina_oficial": null,
-      "parecer_fonte": {},
-      "erro": "nenhuma fonte legível",
-      "segundos": 114,
+      "parecer_fonte": {
+        "serve_como_fonte": "sim",
+        "por_que": "O edital foi comprovado com informações sobre objeto, resultado, valor, órgão financiador, território, esfera, requisitos, anexos e área de atuação.",
+        "para_a_amc": "A associação comunitária de Goiânia precisa ser uma entidade cultural e apresentar os 3 anexos exigidos no edital para acessar o subsídio.",
+        "proximo_passo": "Verificar os requisitos e anexos do edital para se preparar a candidatura.",
+        "risco": "A falta de conformidade com os requisitos ou a não apresentação dos anexos pode impedir o acesso ao subsídio."
+      },
+      "erro": null,
+      "segundos": 723,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "falhou: nenhuma fonte legível",
-      "id": "op-captacao-003",
-      "encontrou": {},
-      "financiador": "PNAB Goiânia",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-3307ca10cc6a",
+      "encontrou": {
+        "Objeto": {
+          "valor": "Fomento a Projetos Continuados de Pontos de Cultura da Cidade de Goiânia",
+          "trecho": "Edital de Fomento a Projetos Continuados de Pontos de Cultura da Cidade de Goiânia",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Valor": {
+          "valor": "R$ 150.000,00",
+          "trecho": "Associação Companhia Corpo na Contramão Taina Luiza Barreto Marques R$ 150.000,00 AC 82 Aprovado pela Ampla",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Prefeitura de Goiânia",
+          "trecho": "Prefeitura de Goiânia",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Edital de Fomento a Projetos Continuados de Pontos de Cultura da Cidade de Goiânia",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "Edital de Fomento a Projetos Continuados de Pontos de Cultura da Cidade de Goiânia",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Entidade Cultural",
+          "trecho": "Entidade Cultural Representante Valor Cotas Pontos Situação",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Secretaria Municipal de Cultura",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
