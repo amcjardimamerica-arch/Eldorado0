@@ -1,4 +1,4 @@
-# Pacote para o Claude Desktop — 2026-11-12
+# Pacote para o Claude Desktop — 2026-11-13
 
 Você está no computador do titular, com IP brasileiro, navegador e o repositório Eldorado clonado. Use o modelo mais forte disponível (Opus 5) para validar. Trabalhe nesta ordem, sem pular etapa, e devolva os arquivos no formato indicado. Nunca estime datas; quando não houver base, escreva o motivo.
 
@@ -16,58 +16,48 @@ Nenhum motor aguardando coleta local hoje.
 
 ## Etapa 2 — motores em alerta (não leram, falharam ou passaram da cadência)
 
-- **Assembleia Legislativa de Goiás — proposições** — todas as páginas falharam em 2026-11-12. Ação: conferir bloqueio/mudança de formato; o Claude Desktop abre a rota no navegador.
+- **Assembleia Legislativa de Goiás — proposições** — todas as páginas falharam em 2026-11-13. Ação: conferir bloqueio/mudança de formato; o Claude Desktop abre a rota no navegador.
     - abrir https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx e procurar: emenda, emenda impositiva, emenda parlamentar, utilidade pública, LOA, orçamento
     - abrir https://alegodigital.al.go.leg.br/spl/consulta-tipo.aspx e procurar: emenda, emenda impositiva, emenda parlamentar, utilidade pública, LOA, orçamento
     - abrir https://alegodigital.al.go.leg.br/spl/sessoes.aspx e procurar: emenda, emenda impositiva, emenda parlamentar, utilidade pública, LOA, orçamento
-- **MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)** — 25 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)** — 26 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)** — 19 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)** — 20 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)** — 25 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)** — 26 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.prt18.mpt.mp.br/servicos/editais-de-destinacao-de-recursos-bens e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/servicos/entidades-assistenciais e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
     - abrir https://www.prt18.mpt.mp.br/informe-se/noticias-do-mpt-go e procurar: bens lesados, chamamento, chamamento público, destinação de recursos, edital de apoio, edital de destinação
-- **Outras Oportunidades 7/8** — 7 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
-    - abrir https://fundopositivo.org.br/editais/ e procurar: 
-    - abrir https://editaisdobrasil.com/calendario e procurar: 
-    - abrir https://potengi.ce.gov.br/publicacoes.php?pagina=1 e procurar: 
-- **Outras Oportunidades 8/8** — 5 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
-    - abrir https://aceleradora.glocal.org.br/ e procurar: 
-    - abrir https://voluntariadoempresarial.org.br/voluntariado-de-alto-impacto-para-as-osc-atraindo-e-mantendo-parcerias-de-valor e procurar: 
-    - abrir https://traineeunileverexecutivo.com.br/ e procurar: 
-- **Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes** — 12 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
-    - abrir https://captadores.org.br/editais/ e procurar: edital, projetos incentivados, seleção de projetos, FIA, Fundo do Idoso, Lei de Incentivo ao Esporte
-- **Oportunidade Estaduais Governamentais de Goiás** — 20 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Oportunidade Estaduais Governamentais de Goiás** — 21 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://goias.gov.br/ e procurar: 
     - abrir https://goias.gov.br/cultura/editais/ e procurar: 
     - abrir https://goias.gov.br/social/editais/ e procurar: 
-- **Prefeituras das 25 maiores cidades de Goiás — portais de editais** — 25 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Piloto - Espião — busca aberta no terceiro setor** — 3 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+    - abrir https://html.duckduckgo.com/html/?q= e procurar: edital, chamada pública, chamamento, seleção de projetos, seleção pública, inscrições abertas
+    - abrir https://html.duckduckgo.com/html/?q=plataforma+editais+terceiro+setor+brasil e procurar: edital, chamada pública, chamamento, seleção de projetos, seleção pública, inscrições abertas
+- **Prefeituras das 25 maiores cidades de Goiás — portais de editais** — 26 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://queridodiario.ok.org.br/ e procurar: chamamento público, termo de fomento, termo de colaboração, edital de seleção, organizações da sociedade civil, fundo municipal
     - abrir https://pncp.gov.br/ e procurar: chamamento público, termo de fomento, termo de colaboração, edital de seleção, organizações da sociedade civil, fundo municipal
-- **Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)** — 5 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)** — 6 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/lei-rouanet e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
     - abrir https://salic.cultura.gov.br/ e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
     - abrir https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/lei-rouanet/legislacao e procurar: Lei Rouanet, PRONAC, Salic, proposta cultural, incentivo fiscal, mecenato
-- **Adaptador Mapas Culturais — oportunidades com inscrição aberta** — 25 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Adaptador Mapas Culturais — oportunidades com inscrição aberta** — 26 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://mapa.cultura.gov.br/api/opportunity/find?@select=id,name,registrationTo e procurar: 
     - abrir https://mapa.cultura.gov.br/oportunidades/ e procurar: 
-- **Adaptador WordPress — sites oficiais pela API pública** — 25 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Adaptador WordPress — sites oficiais pela API pública** — 26 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://goias.gov.br/cultura/wp-json/wp/v2/posts?search=edital e procurar: 
     - abrir https://goias.gov.br/cultura/editais/ e procurar: 
-- **PNCP — API de contratações (chamamentos e credenciamentos)** — 25 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **PNCP — API de contratações (chamamentos e credenciamentos)** — 26 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://pncp.gov.br/api/consulta/v1/contratacoes/proposta e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
     - abrir https://pncp.gov.br/api/search/ e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
     - abrir https://pncp.gov.br/pncp-api/v1/orgaos/ e procurar: chamamento público, termo de fomento, termo de colaboração, organização da sociedade civil, Lei 13.019, seleção de OSC
-- **Motor de Recorrência — revisita as oportunidades identificadas** — 25 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
+- **Motor de Recorrência — revisita as oportunidades identificadas** — 26 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
     - abrir https://observatorio3setor.org.br/editais/ e procurar: retificação, prorrogação, errata, resultado, homologação, classificados
-- **Piloto - Espião — busca aberta no terceiro setor** — 2 dia(s) sem leitura (cadência 1). Ação: conferir escala e limite por execução.
-    - abrir https://html.duckduckgo.com/html/?q= e procurar: edital, chamada pública, chamamento, seleção de projetos, seleção pública, inscrições abertas
-    - abrir https://html.duckduckgo.com/html/?q=plataforma+editais+terceiro+setor+brasil e procurar: edital, chamada pública, chamamento, seleção de projetos, seleção pública, inscrições abertas
 
 Para cada rota aberta, liste os editais publicados nos últimos 30 dias que casem com o léxico e que ainda não estejam em `biblioteca_alexandria/livros/_acervo/editais/`. Devolva em `biblioteca_alexandria/livros/_acervo/editais/coleta_navegador/<data>-motores.json` no formato `{"<id ou novo>": {"objeto":..., "inicio":..., "fim":..., "pagina_oficial":..., "observacao":...}}`.
 
