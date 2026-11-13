@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-13T12:40:32+00:00",
+  "em": "2026-11-13T12:56:20+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-13T12:32:02+00:00",
+  "ultimo_voo": "2026-11-13T12:42:26+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,93 +39,94 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 0,
-    "insuficientes": 1,
+    "parciais": 1,
+    "insuficientes": 0,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 14,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.0
+    "tempo_medio_min": 13.1
   },
   "missoes": [
     {
-      "em": "2026-11-13T12:32:02+00:00",
+      "em": "2026-11-13T12:42:26+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prefeitura de Palmas prorroga prazo para comprovação de auxílio-saúde — Goiás / Palmas",
-      "qualidade": "insuficiente",
-      "comprovados": 6,
-      "dispensados": 0,
+      "alvo": "Prefeitura de Palminópolis — AVISO DE Chamamento Público nº 5/2026 — a seleção de projetos culturais para rece… — Goiás / Palminópolis",
+      "qualidade": "parcial",
+      "comprovados": 7,
+      "dispensados": 1,
       "total": 12,
       "nao_resolvidos": [
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos",
         "Anexos"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://palminopolis.go.gov.br/premio-reconhece-projetos-de-combate-a-seca/",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "O edital não fornece informações suficientes sobre os requisitos, valor, prazo de recurso, resultado e anexos necessários para a associação comunitária acessar o auxílio-saúde.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende aos requisitos não especificados, buscar informações adicionais sobre o valor e prazo de recurso, e garantir que sua área de atuação esteja alinhada com a área de saúde mencionada.",
-        "proximo_passo": "Contatar a Prefeitura de Palmas para obter detalhes adicionais sobre os requisitos, valor, prazo de recurso e anexos necessários para o auxílio-saúde.",
-        "risco": "A falta de informações claras sobre os requisitos, valor e prazo de recurso pode impedir que a associação comunitária realize a comprovação necessária para acessar o auxílio-saúde."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital refere-se ao manejo sustentável de solos nas áreas suscetíveis à desertificação no Brasil, o que está alinhado com a área de atuação de meio ambiente.",
+        "para_a_amc": "Uma associação comunitária de Goiânia precisaria se alinhar ao tema do edital, preencher o formulário de inscrição e garantir que seu projeto esteja relacionado ao manejo sustentável de solos nas áreas suscetíveis à desertificação no Brasil.",
+        "proximo_passo": "Verificar se o projeto da associação comunitária se enquadra no objeto do edital e preencher o formulário de inscrição.",
+        "risco": "O projeto não estar alinhado ao objeto do edital ou a falta de preenchimento do formulário de inscrição pode impedir o acesso ao fomento."
       },
       "erro": null,
-      "segundos": 477,
+      "segundos": 788,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
-      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-de84c8ac4b50",
+      "fontes_oficiais": 6,
+      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
+      "avaliacao": "aproveitável: falta Resultado, Prazo de recurso, Valor, Anexos",
+      "id": "op-f9a8a2291381",
       "encontrou": {
         "Objeto": {
-          "valor": "prorroga prazo para comprovação de auxílio-saúde",
-          "trecho": "Prefeitura de Palmas prorroga prazo para comprovação de auxílio-saúde",
-          "oficial": false,
+          "valor": "o manejo sustentável de solos nas áreas suscetíveis à desertificação no Brasil",
+          "trecho": "programa Dryland Champions, promovido pela Convenção das Nações Unidas de Combate à Desertificação (UNCCD, sigla em inglês), em parceria com o Ministério do Meio Ambiente (MMA), re",
+          "oficial": true,
           "dispensado": false
         },
         "Prazo de inscrição": {
-          "valor": "? a 2026-11-30",
-          "trecho": "prorroga para 30 de novembro o prazo para os servidores beneficiários do Programa Auxílio-Saúde Suplementar enviarem a documentação comprobatória das despesas com planos de saúde r",
+          "valor": "dispensado — O prazo de inscrição foi mencionado como até 31 de maio.",
+          "trecho": "até 31 de maio [rejeitado: data implausível para edital aberto]",
           "oficial": false,
-          "dispensado": false
+          "dispensado": true
         },
         "Órgão / financiador": {
-          "valor": "Prefeitura de Palmas",
-          "trecho": "Prefeitura de Palmas, por meio da Secretaria Municipal de Planejamento e Gestão (Seplan), prorrogou para 30 de novembro o prazo para os servidores beneficiários do Programa Auxílio",
-          "oficial": false,
+          "valor": "Convenção das Nações Unidas de Combate à Desertificação (UNCCD, sigla em inglês), em parceria com o Ministério do Meio Ambiente (MMA)",
+          "trecho": "programa Dryland Champions, promovido pela Convenção das Nações Unidas de Combate à Desertificação (UNCCD, sigla em inglês), em parceria com o Ministério do Meio Ambiente (MMA), re",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "TO",
-          "trecho": "Prefeitura de Palmas",
-          "oficial": false,
+          "valor": "nacional",
+          "trecho": "nas áreas suscetíveis à desertificação no Brasil",
+          "oficial": true,
           "dispensado": false
         },
         "Área de atuação": {
-          "valor": "saude",
-          "trecho": "Programa Auxílio-Saúde Suplementar",
-          "oficial": false,
+          "valor": "meio_ambiente",
+          "trecho": "manejo sustentável de solos nas áreas suscetíveis à desertificação no Brasil",
+          "oficial": true,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "formulário de inscrição",
+          "trecho": "Os interessados devem enviar o formulário de inscrição para o endereço para o e-mail do programa. Outras instruções podem ser encontradas no edital de abertura do programa.",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de Palmas",
+      "financiador": "Prefeitura de Palminópolis",
       "indicios": [],
       "rotas": [
         "site_municipal",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano",
-        "governo"
+        "financiador_programa_edital"
       ]
     }
   ],
