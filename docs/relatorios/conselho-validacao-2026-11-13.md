@@ -75,8 +75,8 @@
   },
   {
    "motor": "empresas-incentivadas",
-   "achados_total_1a": 63,
-   "achados_total_agora": 63,
+   "achados_total_1a": 65,
+   "achados_total_agora": 65,
    "no_fluxo": 0,
    "confirmadas": 0
   },
@@ -200,7 +200,7 @@
  "pontos_com_redundancia": 19,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 62065
+ "exemplos_da_rede_de_rotas": 62139
 }
 ```
 
