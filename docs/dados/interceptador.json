@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-13T11:38:34+00:00",
+  "em": "2026-11-13T11:57:03+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-13T11:29:03+00:00",
+  "ultimo_voo": "2026-11-13T11:40:33+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,55 +44,75 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 13,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 8.8
+    "tempo_medio_min": 15.8
   },
   "missoes": [
     {
-      "em": "2026-11-13T11:29:03+00:00",
+      "em": "2026-11-13T11:40:33+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prefeitura de Mossâmedes — DOE - MOSSAMEDES - CHAMAMENTO 01 — Goiás / Mossâmedes",
+      "alvo": "Prefeitura de Nova Iguaçu de Goiás — Edital nº 001/2026 — Goiás / Nova Iguaçu de Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 0,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Órgão / financiador",
-        "Território",
-        "Esfera",
         "Requisitos",
         "Anexos",
         "Área de atuação"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "Não há informações comprovadas sobre o edital para que se possa utilizar como fonte.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar se há requisitos específicos para organizações da sociedade civil e se atende aos critérios de elegibilidade.",
-        "proximo_passo": "Consultar o edital completo para obter detalhes sobre requisitos, prazos e processos de inscrição.",
-        "risco": "A falta de informações comprovadas pode impedir a participação no edital."
+        "serve_como_fonte": "sim",
+        "por_que": "O edital comprovado refere-se à Prefeitura de Goiânia, que está contratando profissionais temporários para atuar na Educação, o que é relevante para uma associação comunitária de Goiânia que atue na área de educação.",
+        "para_a_amc": "A associação comunitária precisaria se inscrever no edital durante o prazo de inscrição (2026-03-16 a 2026-03-30), apresentando proposta de atuação na Educação, conforme o objeto do edital.",
+        "proximo_passo": "Verificar os requisitos do edital e se inscrever no prazo estabelecido, apresentando a proposta de atuação na Educação.",
+        "risco": "O prazo de inscrição pode expirar sem que a associação tenha se inscrito, e a falta de informações sobre requisitos e anexos pode dificultar a preparação da proposta."
       },
       "erro": null,
-      "segundos": 525,
+      "segundos": 945,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-6971d7e7517c",
-      "encontrou": {},
-      "financiador": "Prefeitura de Mossâmedes",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-7855b66dd587",
+      "encontrou": {
+        "Objeto": {
+          "valor": "contratação de profissionais temporários para atuar na Educação",
+          "trecho": "Prefeitura de Goiânia abre processo seletivo simplificado com vagas temporárias para a Educação",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Prazo de inscrição": {
+          "valor": "2026-03-16 a 2026-03-30",
+          "trecho": "Criado: Segunda, 16 de Março de 2026, 07h58",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Órgão / financiador": {
+          "valor": "Prefeitura de Goiânia",
+          "trecho": "Prefeitura de Goiânia abre processo seletivo simplificado com vagas temporárias para a Educação",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Território": {
+          "valor": "GO",
+          "trecho": "Prefeitura de Goiânia",
+          "oficial": false,
+          "dispensado": false
+        }
+      },
+      "financiador": "Prefeitura de Goiânia",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
