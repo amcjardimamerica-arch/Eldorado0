@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-13T13:28:10+00:00",
+  "em": "2026-11-13T13:44:36+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-13T13:13:36+00:00",
+  "ultimo_voo": "2026-11-13T13:30:40+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,56 +48,66 @@
     },
     "estrelas_de_ouro": 14,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 13.9
+    "tempo_medio_min": 13.4
   },
   "missoes": [
     {
-      "em": "2026-11-13T13:13:36+00:00",
+      "em": "2026-11-13T13:30:40+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prefeitura de Piracanjuba — AVISO DE CHAMAMENTO PÚBLICO Nº 1/2026 — Goiás / Piracanjuba",
+      "alvo": "Prefeitura de Piracanjuba — AVISO DE CHAMAMENTO PÚBLICO Nº 1/2026 — Goiás / Piracanjuba — Goiás / Piracanjuba",
       "qualidade": "insuficiente",
-      "comprovados": 3,
+      "comprovados": 5,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
-        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
-        "Valor",
-        "Requisitos",
-        "Anexos",
-        "Área de atuação"
+        "Órgão / financiador",
+        "Território",
+        "Esfera"
       ],
       "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O aviso de chamamento público é emitido pela Prefeitura Municipal de Piracanjuba, que é um órgão público municipal com competência para realizar editais de fomento.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se o edital abrange sua área de atuação e se ela atende aos requisitos estabelecidos, mesmo que não sejam explicitados no texto disponível.",
-        "proximo_passo": "Consultar o edital completo para verificar os requisitos, área de atuação e prazos de inscrição e recursos.",
-        "risco": "A falta de informações específicas como objeto, prazo e requisitos pode impedir a associação de se qualificar adequadamente para o edital."
+        "por_que": "O edital comprovado aborda o fomento à cultura, incluindo áreas como artesanato, teatro, cinema e cultura digital, com valor total de R$ 203.000,00, e exige laudo médico para pessoa com deficiência.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria comprovar sua condição de pessoa com deficiência com um laudo médico, além de alinhar seu projeto à área de cultura e ao objeto do edital.",
+        "proximo_passo": "Verificar os anexos exigidos e preparar os documentos necessários para a inscrição, caso o prazo seja divulgado posteriormente.",
+        "risco": "A falta de informações sobre o prazo de inscrição e outros requisitos pode impedir a participação da associação no edital."
       },
       "erro": null,
-      "segundos": 835,
+      "segundos": 805,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-373e6e03906f",
+      "id": "op-7152e227622a",
       "encontrou": {
-        "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de Piracanjuba",
-          "trecho": "Prefeitura Municipal de Piracanjuba",
+        "Objeto": {
+          "valor": "Fomento à diversidade de expressões culturais, abrangendo, entre outras, as áreas de artesanato, artes visuais, literatura, teatro, cinema, performance, cultura digital, patrimônio imaterial, cultura urbana e produção cultural.",
+          "trecho": "Apoio a Projetos Fomento à diversidade de expressões culturais, abrangendo, entre outras, as áreas de artesanato, artes visuais, literatura, teatro, cinema, performance, cultura di",
           "oficial": false,
           "dispensado": false
         },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Prefeitura Municipal de Piracanjuba",
+        "Valor": {
+          "valor": "R$ 203.000,00",
+          "trecho": "O presente edital possui valor total de R$ 203.000,00 (duzentos e três mil reais) distribuídos da seguinte forma:",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Área de atuação": {
+          "valor": "cultura",
+          "trecho": "Apoio a Projetos Fomento à diversidade de expressões culturais, abrangendo, entre outras, as áreas de artesanato, artes visuais, literatura, teatro, cinema, performance, cultura di",
+          "oficial": false,
+          "dispensado": false
+        },
+        "Requisitos": {
+          "valor": "Laudo médico que ateste a condição de pessoa com deficiência (PCD), emitido por profissional habilitado, contendo a iden",
+          "trecho": "Atenção! É obrigatório apresentar laudo médico que ateste a condição de pessoa com deficiência (PCD), emitido por profissional habilitado, contendo a identificação da deficiência e",
           "oficial": false,
           "dispensado": false
         }
@@ -105,7 +115,12 @@
       "financiador": "Prefeitura Municipal de Piracanjuba",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
