@@ -1,5 +1,5 @@
 {
- "em": "2026-11-13T14:49:44+00:00",
+ "em": "2026-11-13T16:01:06+00:00",
  "conselho": [
   {
    "id": "falso_verde",
@@ -80,7 +80,7 @@
   }
  },
  "fontes_irmas": {
-  "total": 236,
+  "total": 235,
   "top": [
    {
     "dominio": "baoba.org.br",
@@ -111,11 +111,6 @@
     "dominio": "mariaemilia.org.br",
     "peso": 15,
     "url": "https://mariaemilia.org.br/wp-content/uploads/2026/08/Edital-FME-Transforma-2026.pdf"
-   },
-   {
-    "dominio": "impactarte.org.br",
-    "peso": 14,
-    "url": "https://www.impactarte.org.br/"
    },
    {
     "dominio": "institutoinad.org.br",
@@ -206,6 +201,11 @@
     "dominio": "pesquisavoluntariado.org.br",
     "peso": 8,
     "url": "http://www.pesquisavoluntariado.org.br"
+   },
+   {
+    "dominio": "impactarte.com.br",
+    "peso": 8,
+    "url": "https://impactarte.com.br/"
    }
   ]
  },
@@ -310,23 +310,23 @@
    "tipo": "diario_oficial",
    "saude": [
     {
-     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261110_000008900.pdf",
+     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261112_000008902.pdf",
      "http": 200,
-     "bytes": 278653
+     "bytes": 236240
     },
     {
-     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261110_000008900.pdf",
+     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261111_000008901.pdf",
      "http": 200,
-     "bytes": 264934
+     "bytes": 319433
     }
    ],
    "achados_total": 6,
    "valor": "confirma",
-   "achados_30d": 14,
+   "achados_30d": 13,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "terça"
+    "dia_forte": "sexta"
    },
    "falhas": []
   },
@@ -337,22 +337,22 @@
     {
      "url": "https://diariooficial.abc.go.gov.br",
      "http": 200,
-     "bytes": 280
+     "bytes": 273
     }
    ],
-   "achados_total": 34,
+   "achados_total": 35,
    "valor": "ruído",
-   "achados_30d": 57,
+   "achados_30d": 53,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "terça"
+    "dia_forte": "sexta"
    },
    "falhas": [
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "34 achados e nenhuma oportunidade confirmada",
+     "prova": "35 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -362,29 +362,29 @@
    "tipo": "diario_oficial",
    "saude": [
     {
-     "url": "https://www.in.gov.br/leiturajornal?data=11-11-2026&secao=do1",
+     "url": "https://www.in.gov.br/leiturajornal?data=13-11-2026&secao=do1",
      "http": 200,
      "bytes": 0
     },
     {
-     "url": "https://www.in.gov.br/leiturajornal?data=11-11-2026&secao=do3",
+     "url": "https://www.in.gov.br/leiturajornal?data=13-11-2026&secao=do3",
      "http": 200,
      "bytes": 0
     }
    ],
-   "achados_total": 39,
+   "achados_total": 41,
    "valor": "ruído",
    "achados_30d": 15,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "terça"
+    "dia_forte": "sexta"
    },
    "falhas": [
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "39 achados e nenhuma oportunidade confirmada",
+     "prova": "41 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     }
    ]
@@ -399,7 +399,7 @@
      "code": null,
      "waf": null,
      "causa": "ErroPonte",
-     "retentativa": "aguardando"
+     "retentativa": "fora_da_fila"
     }
    ],
    "achados_total": 3,
@@ -414,19 +414,19 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CEGO",
-     "prova": "respondeu 200 em 26 de 30 dias e não achou nada em 30 dias",
+     "prova": "respondeu 200 em 25 de 30 dias e não achou nada em 30 dias",
      "melhoria": "conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)"
     },
     {
      "conselheiro": "falso_verde",
      "falha": "INTERMITENTE",
-     "prova": "4 dias vermelhos alternados com dias bons",
+     "prova": "5 dias vermelhos alternados com dias bons",
      "melhoria": "retentativa com espera e rota de reserva (ponte do titular)"
     },
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "108 leituras vazias seguidas",
+     "prova": "109 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -435,12 +435,6 @@
    "nome": "Câmara Municipal de Goiânia — projetos de lei",
    "tipo": "legislativo",
    "saude": [
-    {
-     "url": "https://www.goiania.go.leg.br",
-     "http": 200,
-     "bytes": 282821,
-     "itens": 23
-    },
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
@@ -466,7 +460,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "156 leituras vazias seguidas",
+     "prova": "157 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -531,7 +525,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "101 leituras vazias seguidas",
+     "prova": "102 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -675,17 +669,17 @@
     {
      "url": "https://capta.org.br/wp-json/wp/v2/posts",
      "http": 200,
-     "bytes": 12446,
-     "posts": 5
+     "bytes": 9813,
+     "posts": 4
     }
    ],
    "achados_total": 5,
    "valor": "ouro",
-   "achados_30d": 28,
+   "achados_30d": 25,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "terça"
+    "dia_forte": "sexta"
    },
    "falhas": [
     {
@@ -1966,7 +1960,7 @@
     {
      "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-encerradas/edital-premio-cultura-viva-construcao-nacional-do-hip-hop-2023-1",
      "http": 200,
-     "bytes": 158408
+     "bytes": 155892
     },
     {
      "url": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
@@ -1974,9 +1968,9 @@
      "bytes": 172111
     }
    ],
-   "achados_total": 134,
+   "achados_total": 136,
    "valor": "ruído",
-   "achados_30d": 18,
+   "achados_30d": 20,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -1986,13 +1980,13 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 23 dias",
+     "prova": "o mesmo achado repetido em 24 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     },
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "134 achados e nenhuma oportunidade confirmada",
+     "prova": "136 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     },
     {
@@ -2008,19 +2002,19 @@
    "tipo": "plataforma",
    "saude": [
     {
-     "url": "https://captadores.org.br/transparencia",
-     "http": 200,
-     "bytes": 120416
-    },
-    {
      "url": "https://captadores.org.br/editais/",
      "http": 200,
-     "bytes": 138719
+     "bytes": 138418
+    },
+    {
+     "url": "https://www.alcoa.com/brasil/pt/institute/local-project-support-program",
+     "http": 200,
+     "bytes": 48553
     }
    ],
-   "achados_total": 67,
+   "achados_total": 75,
    "valor": "ruído",
-   "achados_30d": 263,
+   "achados_30d": 271,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -2030,7 +2024,7 @@
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "67 achados e nenhuma oportunidade confirmada",
+     "prova": "75 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     },
     {
@@ -2527,7 +2521,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "44 leituras vazias seguidas",
+     "prova": "45 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -2539,7 +2533,7 @@
     {
      "url": "https://www.congressonacional.leg.br",
      "http": 200,
-     "bytes": 191083,
+     "bytes": 221661,
      "itens": 11
     },
     {
@@ -2561,7 +2555,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 6 dias",
+     "prova": "o mesmo achado repetido em 7 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     }
    ]
@@ -4062,7 +4056,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "85 leituras vazias seguidas",
+     "prova": "86 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -4495,14 +4489,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://impulso.bndes.gov.br/",
+     "url": "https://tribunaonline.com.br/economia/edp-vai-destinar-ate-r-12-milhoes-para-incentivar-projetos-sociais-316995?home=espirito_santo",
      "http": 200,
-     "bytes": 57876
+     "bytes": 319359
     },
     {
-     "url": "http://www.administracao.go.gov.br/",
+     "url": "https://www.sesc.com.br/assistencia/sesc-mesa-brasil/",
      "http": 200,
-     "bytes": 206031
+     "bytes": 308018
     }
    ],
    "achados_total": 196,
@@ -4527,14 +4521,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://transforma.fbb.org.br/premio/17",
+     "url": "https://notasocial.com.br/edital-de-selecao-de-projetos-incentivados-2025-abre-inscricoes/",
      "http": 200,
-     "bytes": 60750
+     "bytes": 116700
     },
     {
-     "url": "https://www.fondationfrancoisschneider.org/concours-talents-contemporains/concours-talents-contemporains-leau-wattwiller/",
+     "url": "https://colinasdosul.go.gov.br/",
      "http": 200,
-     "bytes": 56931
+     "bytes": 208676
     }
    ],
    "achados_total": 25,
@@ -4559,29 +4553,29 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.academiaassai.com.br/",
+     "url": "https://editorialox.com",
      "http": 200,
-     "bytes": 104059
+     "bytes": 86743
     },
     {
-     "url": "https://saude.goiania.go.gov.br/editas-de-chamamento-publico",
+     "url": "https://itaberai.go.gov.br/edital-de-chamamento-publico-n-001-cmdca-2026/",
      "http": 200,
-     "bytes": 58258
+     "bytes": 150842
     }
    ],
-   "achados_total": 81,
+   "achados_total": 82,
    "valor": "ruído",
-   "achados_30d": 57,
+   "achados_30d": 58,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "quarta"
+    "dia_forte": "sexta"
    },
    "falhas": [
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "81 achados e nenhuma oportunidade confirmada",
+     "prova": "82 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     },
     {
@@ -4597,14 +4591,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.vitalstrategies.org/wp-content/uploads/Edital_SaudeMental_VS.pdf",
+     "url": "https://atos.cnj.jus.br/jurisprudencia",
      "http": 200,
-     "bytes": 332750
+     "bytes": 24811
     },
     {
-     "url": "https://globalfundforchildren.org/community-based-organizations/",
+     "url": "https://alvoradadonorte.go.gov.br/edital-de-convocacao-no-004-2025-concurso-publico-001-2024/",
      "http": 200,
-     "bytes": 114964
+     "bytes": 224698
     }
    ],
    "achados_total": 73,
@@ -4613,7 +4607,7 @@
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "quinta"
+    "dia_forte": "sexta"
    },
    "falhas": [
     {
@@ -4629,14 +4623,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www2.crcpr.org.br/desenprofi/portal/eventos/detalhe/1872",
+     "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Mobilidade-Cultural",
      "http": 200,
-     "bytes": 24541
+     "bytes": 218623
     },
     {
-     "url": "https://www.institutounibanco.org.br/",
+     "url": "https://www.bondinho.com.br",
      "http": 200,
-     "bytes": 12644
+     "bytes": 218459
     }
    ],
    "achados_total": 49,
@@ -4645,7 +4639,7 @@
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
-    "dia_forte": "quarta"
+    "dia_forte": "sexta"
    },
    "falhas": [
     {
@@ -4667,14 +4661,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "http://www.sic.sp.gov.br/",
+     "url": "https://portal-api.sinir.gov.br/wp-content/uploads/2025/01/AnexoIXEditalFNMA_SQA1de2024MINUTATermodeColaboracao-1.pdf",
      "http": 200,
-     "bytes": 30409
+     "bytes": 789776
     },
     {
-     "url": "https://www.brasilcap.com/produtos/edital",
+     "url": "https://jornadasocial.com.br/edital-transformacao/",
      "http": 200,
-     "bytes": 4593
+     "bytes": 203785
     }
    ],
    "achados_total": 110,
@@ -4689,7 +4683,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 13 dias",
+     "prova": "o mesmo achado repetido em 14 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     },
     {
@@ -4773,17 +4767,17 @@
     {
      "url": "https://comitedeculturasc.org/editais",
      "http": 200,
-     "bytes": 169715
+     "bytes": 169588
     },
     {
-     "url": "https://brazilfoundation.org/edital-2023-fundo-de-equidade-de-genero/",
+     "url": "https://rubiataba.go.gov.br/",
      "http": 200,
-     "bytes": 226631
+     "bytes": 258900
     }
    ],
-   "achados_total": 39,
+   "achados_total": 42,
    "valor": "ruído",
-   "achados_30d": 15,
+   "achados_30d": 18,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -4793,7 +4787,7 @@
     {
      "conselheiro": "funil",
      "falha": "RUÍDO",
-     "prova": "39 achados e nenhuma oportunidade confirmada",
+     "prova": "42 achados e nenhuma oportunidade confirmada",
      "melhoria": "exigir no motor o sinal mínimo (prazo ou chamamento + OSC) antes de registrar; o resto vira indício"
     },
     {
@@ -4809,14 +4803,14 @@
    "tipo": "site_oficial",
    "saude": [
     {
-     "url": "https://www.cnbb.org.br/cnbb-lanca-edital-do-fns-para-apoio-financeiro-a-projetos-relativos-a-campanha-da-fraternidade-2026",
+     "url": "https://www.ipora.pr.gov.br/",
      "http": 200,
-     "bytes": 310382
+     "bytes": 104080
     },
     {
-     "url": "https://www.palmas.to.gov.br",
+     "url": "http://www4.goiania.go.gov.br/portal/Dados/uploads/arquivos/775/424584747337963.pdf",
      "http": 200,
-     "bytes": 149060
+     "bytes": 139862
     }
    ],
    "achados_total": 4,
