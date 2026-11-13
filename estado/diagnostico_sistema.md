@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-11-13 02:15 UTC
+# Diagnóstico do sistema · 2026-11-13 02:24 UTC
 
 ## Cumprimento da finalidade · índice geral 56%
 - Motores: 63% (falha) — todo motor ativo lê dentro da sua cadência
@@ -81,7 +81,7 @@
   - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 25 dia(s) (622 h); última leitura 18/10 00:25
   - em falha: CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024) — falha — não lê há 1 dia(s) (36 h); última leitura 11/11 11:00
   - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 25 dia(s) (621 h); última leitura 18/10 01:27
-  - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 19 dia(s) (470 h); última leitura 24/10 08:16
+  - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 19 dia(s) (471 h); última leitura 24/10 08:16
   - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 25 dia(s) (621 h); última leitura 18/10 01:29
   - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 25 dia(s) (619 h); última leitura 18/10 03:55
   - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 25 dia(s) (619 h); última leitura 18/10 03:54
@@ -98,11 +98,11 @@
 
 ## Integração
 - contagens: {'repositorio_abertas': 193, 'diagnostico_abertas': 193, 'tela_cartoes': 224, 'fichas': 195, 'sala_controle_abertas': 193}
-- idade (h): {'repositorio': 0.0, 'fluxo': 622.4, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 1.5, 'rede_neural': 622.4, 'saude': 8.8}
+- idade (h): {'repositorio': 0.0, 'fluxo': 622.6, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 1.7, 'rede_neural': 622.6, 'saude': 9.0}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (37)
-- [alta] o comando único não fecha um ciclo há 600.6 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+- [alta] o comando único não fecha um ciclo há 600.8 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
 - [alta] motor em falha: Diário Oficial do Município de Goiânia — falha — não lê há 1 dia(s) (36 h); última leitura 11/11 10:55 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Diário Oficial da União — falha — não lê há 1 dia(s) (36 h); última leitura 11/11 10:59 → investigar o motor (sem correção automática)
@@ -110,7 +110,7 @@
 - [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 25 dia(s) (622 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
 - [alta] motor em falha: CNJ — destinação de prestações pecuniárias: busca no Portal do CNJ e regra nacional (Res. 558/2024) — falha — não lê há 1 dia(s) (36 h); última leitura 11/11 11:00 → investigar o motor (sem correção automática)
 - [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 25 dia(s) (621 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 19 dia(s) (470 h); última leitura 24/10 08:16 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 19 dia(s) (471 h); última leitura 24/10 08:16 → investigar o motor (sem correção automática)
 - [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 25 dia(s) (621 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 25 dia(s) (619 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
 - [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 25 dia(s) (619 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
@@ -122,10 +122,10 @@
 - [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 20 dia(s) (494 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 193 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 622.4 h (limite 3 h) → refazer a tela
-- [media] rede_neural sem atualização há 622.4 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 622.6 h (limite 3 h) → refazer a tela
+- [media] rede_neural sem atualização há 622.6 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 122 de 125 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
-- [media] avaliação do Cartório com gabarito tem 678.4 h (semanal) → disparar o fluxo 39
+- [media] avaliação do Cartório com gabarito tem 678.5 h (semanal) → disparar o fluxo 39
 - [media] 55 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 124 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 240 item(ns) esperando a análise do Claude (próxima: 2026-11-12) → ver o fluxo/arquivo indicado
