@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-13T16:07:09+00:00",
+  "em": "2026-11-13T16:26:42+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-13T15:52:10+00:00",
+  "ultimo_voo": "2026-11-13T16:09:14+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -38,9 +38,9 @@
   },
   "acumulado": {
     "missoes": 1,
-    "validadas": 1,
+    "validadas": 0,
     "parciais": 0,
-    "insuficientes": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,85 +48,56 @@
     },
     "estrelas_de_ouro": 15,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 14.3
+    "tempo_medio_min": 16.8
   },
   "missoes": [
     {
-      "em": "2026-11-13T15:52:10+00:00",
+      "em": "2026-11-13T16:09:14+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Prefeitura de São Miguel do Araguaia — DOE - SÃO MIGUEL DO ARAGUAIA - CHAMAMENTO PNAB — Goiás / São Miguel do Araguaia",
-      "qualidade": "validada",
-      "comprovados": 9,
+      "alvo": "Prefeitura de padre bernardo — doe - padre bernardo - aviso 002 - chamada pública- aldir blanc — Goiás / Padre Bernardo",
+      "qualidade": "insuficiente",
+      "comprovados": 2,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
+        "Prazo de inscrição",
         "Resultado",
-        "Prazo de recurso"
+        "Prazo de recurso",
+        "Valor",
+        "Território",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://saomigueldoaraguaia.go.gov.br/politica-nacional-aldir-blanc-ciclo-2/",
+      "pagina_oficial": "https://www.padrebernardo.go.gov.br",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado descreve claramente o objeto, prazo de inscrição, valor, órgão financiador, território, esfera, requisitos, anexos e área de atuação do edital, o que permite a validação da fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria desenvolver um projeto cultural dentro das categorias descritas no item 3, preencher o formulário próprio disponibilizado em anexo e encaminhá-lo durante o prazo de inscrição (2026-10-22 a 2026-10-30).",
-        "proximo_passo": "Verificar os anexos disponibilizados pelo edital e preparar a proposta de projeto cultural conforme os requisitos estabelecidos.",
-        "risco": "O prazo de inscrição é curto (8 dias), o que pode impedir que a associação comunitária envie a proposta a tempo."
+        "por_que": "O órgão financiador é a Prefeitura Municipal de Padre Bernardo, que é uma entidade pública municipal com capacidade de realizar chamadas públicas de editais.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se está elegível para receber recursos públicos municipais, verificar os requisitos de elegibilidade (que não foram encontrados), e se inscrever na chamada pública conforme as normas estabelecidas pela Prefeitura.",
+        "proximo_passo": "Consultar a Prefeitura Municipal de Padre Bernardo para obter informações detalhadas sobre a chamada pública, incluindo os requisitos, prazos e processo de inscrição.",
+        "risco": "A falta de informações sobre os requisitos, prazos e área de atuação pode impedir a associação de se inscrever adequadamente na chamada pública."
       },
       "erro": null,
-      "segundos": 860,
+      "segundos": 1008,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 8,
-      "justificativa": "prazo de inscrição comprovado na fonte oficial, página oficial mapeada e 9 ou mais das 12 condições comprovadas ou dispensadas",
-      "avaliacao": "pronta para a decisão do Claude",
-      "id": "op-0f9bf965b7d9",
+      "fontes_oficiais": 2,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-5d520a9ce2c5",
       "encontrou": {
-        "Objeto": {
-          "valor": "seleção de projetos culturais para receberem apoio Termo de Fomento e execução de projetos culturais nas categorias descritas abaixo no item 3",
-          "trecho": "O objeto deste Edital é a seleção de projetos culturais para receberem apoio Termo de Fomento e execução de projetos culturais nas categorias descritas abaixo no item 3",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-10-22 a 2026-10-30",
-          "trecho": "entre os dias 22 de outubro de 2026 das 08hs da manhã até 13hs (horário de funcionamento) até o dia 30 de outubro de 2026",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "R$ 182.000,00 (cento e oitenta e dois mil reais)",
-          "trecho": "O valor total deste edital é de R$ 182.000,00 (cento e oitenta e dois mil reais)",
-          "oficial": true,
-          "dispensado": false
-        },
         "Órgão / financiador": {
-          "valor": "Prefeitura Municipal de São Miguel do Araguaia – Goiás",
-          "trecho": "Prefeitura Municipal de São Miguel do Araguaia – Goiás",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "município de São Miguel do Araguaia - Goiás",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "seleção de projetos culturais para receberem apoio Termo de Fomento e execução de projetos culturais nas categorias descritas abaixo no item 3",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "encaminhar sua proposta de projeto em formulário próprio disposto em anexo",
-          "trecho": "o proponente deve encaminhar sua proposta de projeto em formulário próprio disposto em anexo",
+          "valor": "Prefeitura Municipal de Padre Bernardo",
+          "trecho": "Prefeitura Municipal de Padre Bernardo",
           "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Prefeitura de São Miguel do Araguaia",
+      "financiador": "Prefeitura de Padre Bernardo",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
