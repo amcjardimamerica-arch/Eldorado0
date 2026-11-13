@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-13T05:29:09+00:00",
+  "em": "2026-11-13T05:44:17+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-13T05:21:13+00:00",
+  "ultimo_voo": "2026-11-13T05:31:15+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,94 +43,38 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 12,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 7.4
+    "tempo_medio_min": 12.5
   },
   "missoes": [
     {
-      "em": "2026-11-13T05:21:13+00:00",
+      "em": "2026-11-13T05:31:15+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Parque Bondinho Pão de Açúcar® abre inscrições para o Edital 2026 de Seleção de Projetos Culturais — Goiás",
+      "alvo": "Pdf edital de credenciamento de no001/2026 - organizações da sociedade civil — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 8,
-      "dispensados": 0,
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Prazo de recurso",
-        "Valor",
-        "Anexos"
-      ],
+      "nao_resolvidos": null,
       "pagina_oficial": null,
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre objeto, prazo de inscrição, resultado e requisitos, o que permite a validação da fonte.",
-        "para_a_amc": "A associação comunitária de Goiânia precisa ler o Regulamento, preencher os modelos de documentos obrigatórios e inscrever-se no prazo de 2026-09-16 a 2026-10-09.",
-        "proximo_passo": "Consultar o Regulamento do edital para entender os requisitos detalhados e iniciar a preparação dos documentos obrigatórios.",
-        "risco": "O prazo de inscrição é curto e a falta de conhecimento sobre os requisitos pode impedir a participação."
-      },
-      "erro": null,
-      "segundos": 446,
+      "parecer_fonte": {},
+      "erro": "o modelo não devolveu JSON",
+      "segundos": 751,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-24fc507a0a4f",
-      "encontrou": {
-        "Objeto": {
-          "valor": "apoio financeiro para projetos culturais",
-          "trecho": "apoio financeiro para projetos culturais, através de recurso incentivado pela Lei Municipal de Incentivo à Cultura da cidade do Rio de Janeiro (Lei do ISS)",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "2026-09-16 a 2026-10-09",
-          "trecho": "Período de inscrições: 16/09 a 09/10/2026",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Parque Bondinho Pão de Açúcar®",
-          "trecho": "Parque Bondinho Pão de Açúcar®",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "RJ",
-          "trecho": "Lei Municipal de Incentivo à Cultura da cidade do Rio de Janeiro",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "apoio financeiro para projetos culturais",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "ler o Regulamento, preencher os modelos de documentos obrigatórios",
-          "trecho": "Antes de se inscrever, leia o Regulamento e preencha os modelos de documentos obrigatórios.",
-          "oficial": false,
-          "dispensado": false
-        }
-      },
-      "financiador": "Parque Bondinho Pão de Açúcar®",
+      "avaliacao": "falhou: o modelo não devolveu JSON",
+      "id": "op-60ed2e219908",
+      "encontrou": {},
+      "financiador": null,
       "indicios": [],
-      "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
-      ]
+      "rotas": []
     }
   ],
   "contagem": {
