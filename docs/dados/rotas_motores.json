@@ -1,5 +1,5 @@
 {
- "em": "2026-11-14T02:45:32+00:00",
+ "em": "2026-11-14T04:14:19+00:00",
  "regra": "Toda leitura de motor é registrada. Leitura VAZIA = página sem conteúdo útil: não respondeu, sem links (JavaScript),\nrecusou a nuvem, endereço errado, ou só página institucional sem rótulo de edital. Ao chegar a 5 VAZIAS SEGUIDAS numa\nrota, o motor entra no relatório como \"ALTERAR ROTA\" e o afinador testa rotas alternativas:\n  · caminhos de edital no mesmo domínio (/editais, /chamamentos, /chamadas-publicas, /transparencia/editais, /noticias)\n  · a API e o mapa do site (/wp-json/wp/v2/posts?search=edital, /feed, /sitemap.xml)\n  · sites oficiais já conhecidos do mesmo órgão (biblioteca do Cartório)\n  · CÂMARAS MUNICIPAIS: sessões e matérias do SAPL (Interlegis), pauta / ordem do dia, diário oficial da câmara, notícias —\n    qualquer uma prova a atividade do dia, mesmo sem oportunidade\n  · cada rota é tentada DIRETO e, se o site recusar a nuvem, pela PONTE do titular (IP do Brasil)\nA melhor rota entra no motor (as originais ficam, pela redundância) e, se só funcionou pela ponte, o domínio passa a\natravessar a ponte. Uma rede neural pequena (regressão logística online sobre o padrão da rota, o tipo do motor e o\ncaminho de acesso) aprende com cada teste ONDE costuma estar o lugar certo de busca e ordena as próximas tentativas.\nRelatório: docs/dados/rotas_motores.json.\n",
  "limiar_vazias": 5,
  "resumo": {
@@ -7,21 +7,21 @@
   "alterar_rota": 60,
   "rota_nova": 54,
   "via_ponte": 5,
-  "exemplos_da_rede": 62911
+  "exemplos_da_rede": 62987
  },
  "a_rede_aprendeu": {
   "melhores_sinais": [
    [
     "tok:feed",
-    4.3531
+    4.4739
    ],
    [
     "origem:biblioteca",
-    3.1154
+    3.3081
    ],
    [
     "origem:rota original",
-    3.0838
+    2.9912
    ],
    [
     "tok:inscricoes",
@@ -37,7 +37,7 @@
    ],
    [
     "tok:transparencia",
-    2.269
+    2.4287
    ],
    [
     "tok:abre",
@@ -48,16 +48,16 @@
     2.0125
    ],
    [
-    "tok:sitemap",
-    2.0044
-   ],
-   [
-    "tok:xml",
-    2.0044
-   ],
-   [
     "tok:goias",
     1.9769
+   ],
+   [
+    "tok:selecao",
+    1.9663
+   ],
+   [
+    "tok:leipaulogustavo",
+    1.8789
    ]
   ],
   "piores_sinais": [
@@ -75,19 +75,19 @@
    ],
    [
     "tok:2026",
-    -3.2703
-   ],
-   [
-    "tok:content",
-    -3.7759
-   ],
-   [
-    "tok:uploads",
-    -3.7759
+    -3.281
    ],
    [
     "origem:padrão",
-    -3.8984
+    -3.6123
+   ],
+   [
+    "tok:content",
+    -3.7866
+   ],
+   [
+    "tok:uploads",
+    -3.7866
    ],
    [
     "origem:câmara",
@@ -586,7 +586,7 @@
    ],
    "rota_aprendida": null,
    "afinado": {
-    "em": "2026-11-13T16:01:37+00:00",
+    "em": "2026-11-14T04:13:42+00:00",
     "testes": 13,
     "melhor": null,
     "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
@@ -1307,10 +1307,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 25,
-    "aprendido_em": "2026-11-13T16:01:43+00:00"
+    "aprendido_em": "2026-11-14T04:13:48+00:00"
    },
    "afinado": {
-    "em": "2026-11-13T16:01:43+00:00",
+    "em": "2026-11-14T04:13:48+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.globalfundforwomen.org/sitemap.xml",
@@ -1718,11 +1718,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 5,
-    "aprendido_em": "2026-11-13T16:01:20+00:00"
+    "aprendido_em": "2026-11-14T04:13:37+00:00"
    },
    "afinado": {
-    "em": "2026-11-13T16:01:20+00:00",
-    "testes": 12,
+    "em": "2026-11-14T04:13:37+00:00",
+    "testes": 13,
     "melhor": {
      "url": "https://www.gatesfoundation.org/sitemap.xml",
      "via": "direto",
@@ -1841,10 +1841,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 15,
-    "aprendido_em": "2026-11-13T16:01:59+00:00"
+    "aprendido_em": "2026-11-14T04:14:02+00:00"
    },
    "afinado": {
-    "em": "2026-11-13T16:01:59+00:00",
+    "em": "2026-11-14T04:14:02+00:00",
     "testes": 12,
     "melhor": {
      "url": "https://www.unicef.org/sitemap.xml",
@@ -1882,11 +1882,11 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-11-13T17:31:43+00:00"
+    "aprendido_em": "2026-11-14T04:14:08+00:00"
    },
    "afinado": {
-    "em": "2026-11-13T17:31:43+00:00",
-    "testes": 13,
+    "em": "2026-11-14T04:14:08+00:00",
+    "testes": 12,
     "melhor": {
      "url": "https://international-partnerships.ec.europa.eu/sitemap.xml",
      "via": "direto",
@@ -1965,10 +1965,10 @@
     "via": "direto",
     "origem": "rota original",
     "pontos": 30,
-    "aprendido_em": "2026-11-13T17:31:58+00:00"
+    "aprendido_em": "2026-11-14T04:14:19+00:00"
    },
    "afinado": {
-    "em": "2026-11-13T17:31:58+00:00",
+    "em": "2026-11-14T04:14:19+00:00",
     "testes": 14,
     "melhor": {
      "url": "https://mariaemilia.org.br/feed",
@@ -3493,10 +3493,10 @@
    "nome": "Editais incentivados — sites das maiores contribuintes do ICMS de Goiás (destinação tributária)",
    "status": "ok",
    "vazias_seguidas": 0,
-   "leituras": 60,
-   "ok": 52,
+   "leituras": 61,
+   "ok": 53,
    "ultima": {
-    "em": "2026-11-13T12:45:51+00:00",
+    "em": "2026-11-14T03:04:39+00:00",
     "classe": "ok",
     "motivo": ""
    },
