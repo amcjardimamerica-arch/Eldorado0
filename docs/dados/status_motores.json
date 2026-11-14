@@ -1,11 +1,11 @@
 {
- "gerado_em": "2026-11-13T23:51-03:00",
- "proxima_atualizacao": "2026-11-14T05:51-03:00",
+ "gerado_em": "2026-11-14T03:29-03:00",
+ "proxima_atualizacao": "2026-11-14T09:29-03:00",
  "a_cada_horas": 6,
  "regra": "STATUS DOS MOTORES A CADA 6 HORAS (titular, 01/10/2026) — monitoramento e tomada de decisão.\n\nPara cada motor regular: a data e a hora da ÚLTIMA LEITURA, o resultado e UMA de três luzes:\n  VERDE     coletou hoje (horário de Brasília), com dados ou sem dados novos\n  VERMELHO  a coleta de hoje teve erro ou falha\n  CINZA     o motor não rodou hoje (fora da agenda, aguardando coleta local, parado)",
  "contagem": {
-  "verde": 25,
-  "vermelho": 18,
+  "verde": 23,
+  "vermelho": 20,
   "cinza": 2,
   "legenda": {
    "verde": "funcionando (leu dentro da cadência do motor: 26 h para os diários, a semana para os semanais)",
@@ -18,13 +18,13 @@
    "id": "do-goiania",
    "nome": "Diário Oficial do Município de Goiânia",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 13/11 11:10 · 1 achado(s)",
+   "resultado": "funcionando — última leitura 13/11 11:10 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "completa",
-    "texto": "dia lido por completo"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — 1 achado(s)",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T11:10-03:00",
    "agenda": "todos 06:23,12:53,20:23"
@@ -33,13 +33,13 @@
    "id": "do-goias",
    "nome": "Diário Oficial do Estado de Goiás",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 13/11 11:13 · 3 achado(s)",
+   "resultado": "funcionando — última leitura 13/11 11:13 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "completa",
-    "texto": "dia lido por completo"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — 3 achado(s)",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T11:13-03:00",
    "agenda": "seg,ter,qua,qui,sex,sab 06:23,12:53,20:23"
@@ -50,11 +50,11 @@
    "luz": "verde",
    "resultado": "funcionando — última leitura 13/11 11:48 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "completa",
-    "texto": "dia lido por completo"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — sem dados novos",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T11:48-03:00",
    "agenda": "todos 06:23,12:53,20:23"
@@ -65,11 +65,11 @@
    "luz": "verde",
    "resultado": "funcionando — última leitura 13/11 11:08 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "completa",
-    "texto": "dia lido por completo"
+    "estado": "fora_da_agenda",
+    "texto": "hoje não é dia deste motor"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — sem dados novos",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — fora da agenda hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T11:08-03:00",
    "agenda": "seg,ter,qua,qui,sex 07:53"
@@ -78,13 +78,13 @@
    "id": "camara-goiania-pl",
    "nome": "Câmara Municipal de Goiânia — processos legislativos, utilidade pública e chamamentos",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 13/11 11:07 · sem oportunidade nova (atenção: 1 falha(s) na leitura: direto: HTTP Error 504: Gateway Time-out · pela ponte Brasil: HTTP 502 pela ponte)",
+   "resultado": "funcionando — última leitura 13/11 11:07 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "parcial",
-    "texto": "dia lido em parte — 1 falha(s) na leitura: direto: HTTP Error 504: Gateway Time-out · pela ponte Brasil: HTTP 502 pela ponte"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — sem dados novos (atenção: 1 falha(s) na leitura: direto: HTTP Error 504: Gateway Time-out · pela ponte Brasil: HTTP 502 pela ponte)",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [
     "Leitura pela ponte da Hostgator (IP brasileiro) quando os segredos ELDORADO_PONTE_URL e ELDORADO_PONTE_CHAVE estiverem gravados; até lá, só no computador do titular.",
     "Acompanhar o Projeto de Lei nº 288/2026 (utilidade pública da A.M.C. Jardim América)."
@@ -95,14 +95,14 @@
   {
    "id": "alego-pl",
    "nome": "Assembleia Legislativa de Goiás — proposições",
-   "luz": "vermelho",
-   "resultado": "falha na leitura de 13/11 11:07 — nenhuma página leu",
+   "luz": "verde",
+   "resultado": "funcionando — última leitura 13/11 11:07 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "parcial",
-    "texto": "dia lido em parte — nenhuma página leu"
+    "estado": "fora_da_agenda",
+    "texto": "hoje não é dia deste motor"
    },
-   "luz_do_dia": "vermelho",
-   "resultado_do_dia": "falha na coleta de hoje — nenhuma página leu",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — fora da agenda hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T11:07-03:00",
    "agenda": "seg,ter,qua,qui,sex 10:53,20:53"
@@ -111,13 +111,13 @@
    "id": "congresso-nacional",
    "nome": "Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos)",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 13/11 11:08 · 1 achado(s)",
+   "resultado": "funcionando — última leitura 13/11 11:08 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "parcial",
-    "texto": "dia lido em parte — a leitura foi cortada pelo tempo — o restante volta na próxima passagem"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — 1 achado(s)",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T11:08-03:00",
    "agenda": "todos 10:53,20:53"
@@ -126,7 +126,7 @@
    "id": "pncp-api",
    "nome": "PNCP — API de contratações (chamamentos e credenciamentos)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 26 dia(s) (647 h); última leitura 18/10 00:25",
+   "resultado": "falha — não lê há 27 dia(s) (651 h); última leitura 18/10 00:25",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -160,11 +160,11 @@
    "luz": "verde",
    "resultado": "funcionando — última leitura 13/11 11:15 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "completa",
-    "texto": "dia lido por completo"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — sem dados novos",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T11:15-03:00",
    "agenda": "todos 07:53"
@@ -173,7 +173,7 @@
    "id": "mpgo-destinacao",
    "nome": "MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 26 dia(s) (646 h); última leitura 18/10 01:27",
+   "resultado": "falha — não lê há 27 dia(s) (650 h); última leitura 18/10 01:27",
    "leitura_do_dia": {
     "estado": "regra_fixa",
     "texto": "sem leitura automática: o site do MP-GO proíbe robôs. Leitura indireta pelo Diário do Estado: feita. Conferência manual mensal: ainda não registrada."
@@ -193,7 +193,7 @@
    "id": "mptgo-destinacao",
    "nome": "MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 20 dia(s) (495 h); última leitura 24/10 08:16",
+   "resultado": "falha — não lê há 20 dia(s) (499 h); última leitura 24/10 08:16",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -208,7 +208,7 @@
    "id": "mpu-destinacao",
    "nome": "MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 26 dia(s) (646 h); última leitura 18/10 01:29",
+   "resultado": "falha — não lê há 27 dia(s) (649 h); última leitura 18/10 01:29",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -228,7 +228,7 @@
    "id": "plataforma-wordpress",
    "nome": "Adaptador WordPress — sites oficiais pela API pública",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 26 dia(s) (643 h); última leitura 18/10 03:55",
+   "resultado": "falha — não lê há 26 dia(s) (647 h); última leitura 18/10 03:55",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -243,7 +243,7 @@
    "id": "plataforma-mapas-culturais",
    "nome": "Adaptador Mapas Culturais — oportunidades com inscrição aberta",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 26 dia(s) (643 h); última leitura 18/10 03:54",
+   "resultado": "falha — não lê há 26 dia(s) (647 h); última leitura 18/10 03:54",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -273,13 +273,13 @@
    "id": "motor-gife",
    "nome": "Motor Incentivos Fiscais — empresas da base ICMS/RFB/SALIC (Goiás)",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 13/11 09:40 · 5 achado(s)",
+   "resultado": "funcionando — última leitura 13/11 09:40 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "completa",
-    "texto": "dia lido por completo"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — 5 achado(s)",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T09:40-03:00",
    "agenda": "todos 03:23"
@@ -290,11 +290,11 @@
    "luz": "verde",
    "resultado": "funcionando — última leitura 13/11 09:44 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "completa",
-    "texto": "dia lido por completo"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — sem dados novos",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T09:44-03:00",
    "agenda": "todos 03:23"
@@ -303,13 +303,13 @@
    "id": "gife",
    "nome": "GIFE — Grupo de Institutos, Fundações e Empresas",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 13/11 11:29 · 1 achado(s)",
+   "resultado": "funcionando — última leitura 13/11 11:29 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "completa",
-    "texto": "dia lido por completo"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — 1 achado(s)",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T11:29-03:00",
    "agenda": "todos 11:23,17:53"
@@ -318,7 +318,7 @@
    "id": "salic",
    "nome": "Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 6 dia(s) (157 h); última leitura 07/11 10:28",
+   "resultado": "falha — não lê há 6 dia(s) (161 h); última leitura 07/11 10:28",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -333,7 +333,7 @@
    "id": "prefeituras-50-go",
    "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 26 dia(s) (644 h); última leitura 18/10 03:49",
+   "resultado": "falha — não lê há 26 dia(s) (647 h); última leitura 18/10 03:49",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -350,13 +350,13 @@
    "id": "empresas-editais-incentivados",
    "nome": "Busca de empresas para FIA, Idoso, Lei de Incentivo ao Esporte, Pronas, Pronon e Goyazes",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 13/11 11:29 · 23 achado(s) (atenção: 2 página(s) com falha; as demais foram lidas)",
+   "resultado": "funcionando — última leitura 13/11 11:29 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "parcial",
-    "texto": "dia lido em parte — 2 página(s) com falha; as demais foram lidas"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — 23 achado(s) (atenção: 2 página(s) com falha; as demais foram lidas)",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T11:29-03:00",
    "agenda": "todos 10:23"
@@ -365,13 +365,13 @@
    "id": "cnpq-extensao",
    "nome": "CNPq / MCTI / Setec-MEC — chamadas com componente de extensão e parceria com OSC",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 13/11 11:27 · 3 achado(s)",
+   "resultado": "funcionando — última leitura 13/11 11:27 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "completa",
-    "texto": "dia lido por completo"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — 3 achado(s)",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — ainda não rodou hoje",
    "observacoes": [],
    "ultima_leitura": "2026-11-13T11:27-03:00",
    "agenda": "todos 09:23,15:23"
@@ -380,7 +380,7 @@
    "id": "piloto-aberto",
    "nome": "Piloto - Espião — busca aberta no terceiro setor",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 13/11 23:48 · sem oportunidade nova",
+   "resultado": "funcionando — última leitura 14/11 03:28 · sem oportunidade nova",
    "leitura_do_dia": {
     "estado": "fora_da_agenda",
     "texto": "hoje não é dia deste motor"
@@ -388,14 +388,14 @@
    "luz_do_dia": "cinza",
    "resultado_do_dia": "não rodou hoje — fora da agenda hoje",
    "observacoes": [],
-   "ultima_leitura": "2026-11-13T23:48-03:00",
+   "ultima_leitura": "2026-11-14T03:28-03:00",
    "agenda": "com o Piloto contínuo"
   },
   {
    "id": "estaduais-go-gov",
    "nome": "Oportunidade Estaduais Governamentais de Goiás",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 21 dia(s) (518 h); última leitura 23/10 08:58",
+   "resultado": "falha — não lê há 21 dia(s) (522 h); última leitura 23/10 08:58",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -424,8 +424,8 @@
   {
    "id": "site-capitaai",
    "nome": "CapitaAI — editais e oportunidades de captação, incluindo a lista pública dos editais do Prosas",
-   "luz": "verde",
-   "resultado": "funcionando — última leitura 12/11 20:37 · sem oportunidade nova",
+   "luz": "vermelho",
+   "resultado": "falha — não lê há 1 dia(s) (30 h); última leitura 12/11 20:37",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -439,8 +439,8 @@
   {
    "id": "site-observatorio-terceiro-setor",
    "nome": "Observatório do Terceiro Setor — editais publicados na seção temática do portal",
-   "luz": "verde",
-   "resultado": "funcionando — última leitura 12/11 20:37 · sem oportunidade nova",
+   "luz": "vermelho",
+   "resultado": "falha — não lê há 1 dia(s) (30 h); última leitura 12/11 20:37",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -469,8 +469,8 @@
   {
    "id": "site-abcr",
    "nome": "ABCR — Associação Brasileira de Captadores de Recursos — editais divulgados pela associação dos captadores",
-   "luz": "verde",
-   "resultado": "funcionando — última leitura 12/11 20:37 · sem oportunidade nova",
+   "luz": "vermelho",
+   "resultado": "falha — não lê há 1 dia(s) (30 h); última leitura 12/11 20:37",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -485,7 +485,7 @@
    "id": "site-funarte",
    "nome": "Funarte — editais da Fundação Nacional de Artes",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 2 dia(s) (50 h); última leitura 11/11 21:41",
+   "resultado": "falha — não lê há 2 dia(s) (53 h); última leitura 11/11 21:41",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -500,7 +500,7 @@
    "id": "site-transferegov",
    "nome": "Transferegov — programas e parcerias com OSC abertos na plataforma federal (dados abertos)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 2 dia(s) (50 h); última leitura 11/11 21:41",
+   "resultado": "falha — não lê há 2 dia(s) (53 h); última leitura 11/11 21:41",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -545,7 +545,7 @@
    "id": "site-editais-culturais",
    "nome": "Editais Culturais — editais de cultura reunidos no portal",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 2 dia(s) (50 h); última leitura 11/11 21:41",
+   "resultado": "falha — não lê há 2 dia(s) (53 h); última leitura 11/11 21:41",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -620,7 +620,7 @@
    "id": "site-cese",
    "nome": "CESE — Coordenadoria Ecumênica de Serviço — editais de apoio a projetos populares",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 2 dia(s) (50 h); última leitura 11/11 21:41",
+   "resultado": "falha — não lê há 2 dia(s) (53 h); última leitura 11/11 21:41",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -635,7 +635,7 @@
    "id": "site-brazilfoundation",
    "nome": "BrazilFoundation — editais de apoio a organizações brasileiras",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 2 dia(s) (50 h); última leitura 11/11 21:41",
+   "resultado": "falha — não lê há 2 dia(s) (53 h); última leitura 11/11 21:41",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -650,7 +650,7 @@
    "id": "site-rede-filantropia",
    "nome": "Rede Filantropia — editais divulgados pela rede (lida pelo computador do titular: recusa IP estrangeiro)",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 2 dia(s) (50 h); última leitura 11/11 21:41",
+   "resultado": "falha — não lê há 2 dia(s) (53 h); última leitura 11/11 21:41",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido — exige acesso pelo Brasil"
@@ -665,7 +665,7 @@
    "id": "site-mapa-osc",
    "nome": "Mapa das OSC (Ipea) — editais reunidos no portal",
    "luz": "vermelho",
-   "resultado": "falha — não lê há 2 dia(s) (50 h); última leitura 11/11 21:41",
+   "resultado": "falha — não lê há 2 dia(s) (53 h); última leitura 11/11 21:41",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -680,7 +680,7 @@
    "id": "site-prosas",
    "nome": "Prosas — editais e prêmios para OSCs (três caminhos indiretos: listagem da CapitaAI, ângulo do Piloto e coleta assistida)",
    "luz": "vermelho",
-   "resultado": "falha — a rota indireta (capitaai) não lê há 27 h",
+   "resultado": "falha — a rota indireta (capitaai) não lê há 30 h",
    "leitura_do_dia": {
     "estado": "pendente",
     "texto": "o dia ainda não foi lido"
@@ -695,15 +695,15 @@
    "id": "piloto-interceptador",
    "nome": "Piloto - Interceptador — comprova na fonte oficial",
    "luz": "verde",
-   "resultado": "funcionando — última leitura 13/11 23:50 · 8 achado(s)",
+   "resultado": "funcionando — última leitura 14/11 03:16 · sem oportunidade nova",
    "leitura_do_dia": {
-    "estado": "completa",
-    "texto": "dia lido por completo"
+    "estado": "pendente",
+    "texto": "o dia ainda não foi lido"
    },
-   "luz_do_dia": "verde",
-   "resultado_do_dia": "coletou hoje — 8 achado(s)",
+   "luz_do_dia": "cinza",
+   "resultado_do_dia": "não rodou hoje — última leitura em 13/11 20:59",
    "observacoes": [],
-   "ultima_leitura": "2026-11-13T23:50-03:00",
+   "ultima_leitura": "2026-11-14T03:16-03:00",
    "agenda": null
   }
  ]
