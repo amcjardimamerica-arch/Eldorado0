@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-14T07:11:38+00:00",
+  "em": "2026-11-14T07:25:05+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-14T06:55:51+00:00",
+  "ultimo_voo": "2026-11-14T07:13:40+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,19 +44,19 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "nao": 1
+      "sim": 1
     },
     "estrelas_de_ouro": 16,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 15.0
+    "tempo_medio_min": 10.8
   },
   "missoes": [
     {
-      "em": "2026-11-14T06:55:51+00:00",
+      "em": "2026-11-14T07:13:40+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Santana — Justiça do Amapá destina mais de R$ 450 mil em verbas pecuniárias a projetos sociais — Goiás",
+      "alvo": "Secretaria de Estado da Cultura (Secult) — Chamamentos Públicos Outros – 2021 — Goiás",
       "qualidade": "insuficiente",
       "comprovados": 5,
       "dispensados": 0,
@@ -65,54 +65,48 @@
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
+        "Valor",
         "Requisitos",
-        "Anexos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
       "parecer_fonte": {
-        "serve_como_fonte": "nao",
-        "por_que": "A informação fornecida menciona a Justiça do Amapá e não relaciona-se diretamente com Goiás ou com associações comunitárias dessa região.",
-        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar se há programas ou editais específicos da Justiça do Amapá ou de outros órgãos estaduais de Goiás que ofereçam verbas para projetos sociais.",
-        "proximo_passo": "Pesquisar editais e programas de fomento disponíveis para organizações da sociedade civil em Goiás.",
-        "risco": "A falta de informações específicas sobre editais, prazos e requisitos pode impedir o acesso às verbas."
+        "serve_como_fonte": "sim",
+        "por_que": "O Objeto e o Órgão / financiador são comprovados no texto, indicando que a Secretaria de Estado da Cultura (Secult) é responsável pelo evento O Canto da Primavera, o que pode ser uma fonte para acesso a editais relacionados.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se há editais específicos para o evento O Canto da Primavera ou outros chamamentos públicos da Secult, e se enquadrar na área de atuação da cultura, educação ou esporte, conforme o Objeto do edital.",
+        "proximo_passo": "Consultar os anexos mencionados no edital para obter informações detalhadas sobre requisitos, prazos e áreas de atuação.",
+        "risco": "A falta de informações sobre prazos, requisitos e áreas de atuação pode impedir a associação de se candidatar adequadamente ao edital."
       },
       "erro": null,
-      "segundos": 902,
+      "segundos": 647,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 4,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
-      "id": "op-58234d11f0b6",
+      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
+      "id": "op-3b4f859a9b9b",
       "encontrou": {
         "Objeto": {
-          "valor": "projetos sociais",
-          "trecho": "Justiça do Amapá destina mais de R$ 450 mil em verbas pecuniárias a projetos sociais",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Valor": {
-          "valor": "mais de R$ 450 mil",
-          "trecho": "Justiça do Amapá destina mais de R$ 450 mil em verbas pecuniárias a projetos sociais",
-          "oficial": false,
+          "valor": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na cidade de Pirenópolis, desde o ano 2000.",
+          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Justiça do Amapá",
-          "trecho": "Justiça do Amapá destina mais de R$ 450 mil em verbas pecuniárias a projetos sociais",
-          "oficial": false,
+          "valor": "Secretaria de Estado da Cultura (Secult)",
+          "trecho": "Secretaria de Estado da Cultura (Secult)",
+          "oficial": true,
           "dispensado": false
         },
         "Território": {
-          "valor": "AP",
-          "trecho": "Justiça do Amapá destina mais de R$ 450 mil em verbas pecuniárias a projetos sociais",
-          "oficial": false,
+          "valor": "GO",
+          "trecho": "Secretaria de Estado da Cultura (Secult)",
+          "oficial": true,
           "dispensado": false
         }
       },
-      "financiador": "Justiça do Amapá",
+      "financiador": "Secretaria de Estado da Cultura (Secult)",
       "indicios": [],
       "rotas": [
         "site_do_financiador",
