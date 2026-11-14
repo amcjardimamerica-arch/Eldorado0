@@ -1,4 +1,4 @@
-# Diagnóstico do sistema · 2026-11-14 16:09 UTC
+# Diagnóstico do sistema · 2026-11-14 16:13 UTC
 
 ## Cumprimento da finalidade · índice geral 53%
 - Motores: 37% (falha) — todo motor ativo lê dentro da sua cadência
@@ -109,11 +109,11 @@
 
 ## Integração
 - contagens: {'repositorio_abertas': 192, 'diagnostico_abertas': 192, 'tela_cartoes': 224, 'fichas': 194, 'sala_controle_abertas': 192}
-- idade (h): {'repositorio': 0.0, 'fluxo': 660.3, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 8.5, 'rede_neural': 660.3, 'saude': 0.5}
+- idade (h): {'repositorio': 0.0, 'fluxo': 660.4, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 8.6, 'rede_neural': 660.4, 'saude': 0.6}
 - decisões da titular: 0 · não aplicadas: 0
 
 ## Problemas (49)
-- [alta] o comando único não fecha um ciclo há 638.5 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+- [alta] o comando único não fecha um ciclo há 638.6 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
 - [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 27 dia(s) (660 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
 - [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 27 dia(s) (659 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
@@ -144,9 +144,9 @@
 - [alta] motor em falha: Prosas — editais e prêmios para OSCs (três caminhos indiretos: listagem da CapitaAI, ângulo do Piloto e coleta assistida) — falha — a rota indireta (capitaai) não lê há 40 h → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 192 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 660.3 h (limite 3 h) → refazer a tela
-- [media] maestro sem atualização há 8.5 h (limite 3 h) → ver o fluxo que gera este dado
-- [media] rede_neural sem atualização há 660.3 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] fluxo sem atualização há 660.4 h (limite 3 h) → refazer a tela
+- [media] maestro sem atualização há 8.6 h (limite 3 h) → ver o fluxo que gera este dado
+- [media] rede_neural sem atualização há 660.4 h (limite 26 h) → ver o fluxo que gera este dado
 - [media] [decidir] motores escolhidos para ler na passagem: 124 de 124 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
 - [media] avaliação do Cartório com gabarito tem 716.3 h (semanal) → disparar o fluxo 39
 - [media] 55 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
