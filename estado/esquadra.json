@@ -3,48 +3,51 @@
     "do-goiania": {
       "nome": "Diário Oficial do Município de Goiânia",
       "tipo": "diario_oficial",
-      "leituras": 167,
+      "leituras": 168,
       "achados_total": 6,
       "vazias_seguidas": 0,
-      "ultima": "2026-11-13T14:10:07+00:00",
+      "ultima": "2026-11-14T13:32:27+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 1,
       "falhas_ultima": 0,
       "saude": [
         {
-          "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261112_000008902.pdf",
+          "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261113_000008903.pdf",
           "http": 200,
-          "bytes": 236240
+          "bytes": 559477
         },
         {
-          "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261111_000008901.pdf",
+          "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261110_000008900.pdf",
           "http": 200,
-          "bytes": 319433
+          "bytes": 22614
         }
       ],
       "alerta": null,
       "diagnostico": {
-        "paginas_lidas": 9,
+        "paginas_lidas": 7,
         "links_total": 0,
         "links_candidatos": 0,
         "descobertas": [],
-        "pdf_links": 9,
+        "pdf_links": 7,
         "motivo_zero": null,
         "versao": "motor-01 v2 (01/10/2026)",
         "qd_consultas": 10,
-        "qd_edicoes": 7,
-        "qd_falhas": [],
+        "qd_edicoes": 6,
+        "qd_falhas": [
+          "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1011)>",
+          "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1011)>"
+        ],
         "txt_lidos": 0,
         "txt_falhas": [],
         "portal_listas": 1,
-        "portal_pdfs": 2,
+        "portal_pdfs": 1,
         "portal_falhas": [],
-        "atos_lidos": 123,
-        "qd_catalogo": 8,
+        "atos_lidos": 99,
+        "qd_catalogo": 7,
         "vereditos": {
           "OPORTUNIDADE": 1,
-          "ACOMPANHAR": 77,
-          "RUIDO": 45
+          "ACOMPANHAR": 62,
+          "RUIDO": 36
         },
         "portal": "nuvem: direto no portal (ponte Brasil de reserva)",
         "cobertura_edicoes": {
@@ -70,8 +73,8 @@
         "pdfs_lidos": 1,
         "sem_texto": 0
       },
-      "duracao_s": 103,
-      "relidas_total": 60,
+      "duracao_s": 1261,
+      "relidas_total": 61,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 1
@@ -278,23 +281,14 @@
     "alego-pl": {
       "nome": "Assembleia Legislativa de Goiás — proposições",
       "tipo": "legislativo",
-      "leituras": 139,
+      "leituras": 140,
       "achados_total": 3,
-      "vazias_seguidas": 109,
-      "ultima": "2026-11-13T14:07:38+00:00",
+      "vazias_seguidas": 110,
+      "ultima": "2026-11-14T13:09:53+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 0,
-      "falhas_ultima": 1,
-      "saude": [
-        {
-          "url": "https://portal.al.go.leg.br/",
-          "erro": "ErroPonte",
-          "code": null,
-          "waf": null,
-          "causa": "ErroPonte",
-          "retentativa": "fora_da_fila"
-        }
-      ],
+      "falhas_ultima": 0,
+      "saude": [],
       "alerta": null,
       "diagnostico": {
         "paginas_lidas": 0,
@@ -306,12 +300,15 @@
         "camada1_vetados": 0,
         "camada1_direcionados": 0,
         "paginas_alem_do_limite": 4,
+        "fora_da_fila": [
+          "https://portal.al.go.leg.br/"
+        ],
         "robots_proibe": [
           "https://alegodigital.al.go.leg.br/spl/consulta-cronologico.aspx",
           "https://alegodigital.al.go.leg.br/spl/consulta-tipo.aspx"
         ]
       },
-      "duracao_s": 40,
+      "duracao_s": 1,
       "relidas_total": 14,
       "totais_por_distintas": true,
       "novas_ultima": 0,
@@ -320,14 +317,20 @@
     "camara-goiania-pl": {
       "nome": "Câmara Municipal de Goiânia — projetos de lei",
       "tipo": "legislativo",
-      "leituras": 157,
+      "leituras": 158,
       "achados_total": 0,
-      "vazias_seguidas": 157,
-      "ultima": "2026-11-13T14:07:44+00:00",
+      "vazias_seguidas": 158,
+      "ultima": "2026-11-14T13:10:39+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 0,
-      "falhas_ultima": 1,
+      "falhas_ultima": 0,
       "saude": [
+        {
+          "url": "https://www.goiania.go.leg.br",
+          "http": 200,
+          "bytes": 283532,
+          "itens": 22
+        },
         {
           "url": "https://www.goiania.go.leg.br",
           "http": 200,
@@ -335,14 +338,14 @@
           "itens": 0
         }
       ],
-      "alerta": null,
+      "alerta": "trocar URL: 3 leituras sem achados com página respondendo",
       "diagnostico": {
-        "paginas_lidas": 1,
-        "links_total": 0,
-        "links_candidatos": 0,
+        "paginas_lidas": 13,
+        "links_total": 22,
+        "links_candidatos": 6,
         "descobertas": [],
         "pdf_links": 0,
-        "motivo_zero": "0 itens lidos (pautas D 0 projetos em 0 pauta(s) · processos A 0 · própria B 0 · notícias C 0): nenhum chamamento aberto para OSC · 0 a acompanhar · 0 utilidade(s) pública(s) para a lista de habilitação",
+        "motivo_zero": "22 itens lidos (pautas D 0 projetos em 0 pauta(s) · processos A 0 · própria B 0 · notícias C 22): nenhum chamamento aberto para OSC · 6 a acompanhar · 0 utilidade(s) pública(s) para a lista de habilitação",
         "versao": "motor-05 v2 (01/10/2026)",
         "fontes": {
           "A": {
@@ -358,11 +361,10 @@
             "proibido_robots": true
           },
           "C": {
-            "falhas": [
-              "direto: HTTP Error 504: Gateway Time-out · pela ponte Brasil: HTTP 502 pela ponte"
-            ],
-            "consultas": 0,
-            "itens": 0
+            "falhas": [],
+            "consultas": 12,
+            "itens": 22,
+            "bytes": 283532
           },
           "D": {
             "falhas": [],
@@ -376,8 +378,8 @@
         },
         "vereditos": {
           "OPORTUNIDADE": 0,
-          "ACOMPANHAR": 0,
-          "RUIDO": 0,
+          "ACOMPANHAR": 6,
+          "RUIDO": 16,
           "quarentena": 0,
           "erros": 0
         },
@@ -385,7 +387,7 @@
         "leitura_do_dia": {
           "pautas_publicadas": 0,
           "pautas_lidas": 0,
-          "noticias": 0,
+          "noticias": 22,
           "nao_lidas": []
         },
         "proibido_robots": {
@@ -396,7 +398,7 @@
           "motivo": "o robots.txt do SUAP (suap.camaragyn.go.gov.br) proíbe robôs (Disallow: /) — os processos e a tramitação vêm das pautas do Plenário no portal; a ficha do processo da associação no SUAP é conferida pelo titular (consulta humana)"
         }
       },
-      "duracao_s": 7,
+      "duracao_s": 45,
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 0,
@@ -461,10 +463,10 @@
     "dj-trf1-go": {
       "nome": "Diário da Justiça Federal — Seção Judiciária de Goiás",
       "tipo": "diario_justica",
-      "leituras": 102,
+      "leituras": 103,
       "achados_total": 0,
-      "vazias_seguidas": 102,
-      "ultima": "2026-11-13T14:08:24+00:00",
+      "vazias_seguidas": 103,
+      "ultima": "2026-11-14T13:11:27+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 0,
       "falhas_ultima": 0,
@@ -2973,10 +2975,10 @@
     "plat-cnpq-extensao": {
       "nome": "CNPq / MCTI / Setec-MEC — chamadas com componente de extensão e parceria com OSC",
       "tipo": "plataforma",
-      "leituras": 112,
+      "leituras": 113,
       "achados_total": 136,
       "vazias_seguidas": 0,
-      "ultima": "2026-11-13T14:27:25+00:00",
+      "ultima": "2026-11-14T13:32:43+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 3,
       "falhas_ultima": 0,
@@ -2984,7 +2986,7 @@
         {
           "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-encerradas/edital-premio-cultura-viva-construcao-nacional-do-hip-hop-2023-1",
           "http": 200,
-          "bytes": 155892
+          "bytes": 155898
         },
         {
           "url": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
@@ -3025,11 +3027,11 @@
         "camada1_direcionados": 43,
         "paginas_alem_do_limite": 2
       },
-      "duracao_s": 15,
+      "duracao_s": 16,
       "totais_por_distintas": true,
-      "novas_ultima": 2,
-      "relidas_ultima": 1,
-      "relidas_total": 37
+      "novas_ultima": 0,
+      "relidas_ultima": 3,
+      "relidas_total": 40
     },
     "plat-empresas-editais-incentivados": {
       "nome": "Editais de empresas incentivadoras (modelo Porto Itapoá) — FIA, Idoso, Esporte, Rouanet, PRONAS",
@@ -4415,11 +4417,11 @@
     "congresso-nacional": {
       "nome": "Congresso Nacional — Câmara, Senado e Comissão Mista de Orçamento (emendas, regras e chamamentos)",
       "tipo": "legislativo",
-      "leituras": 110,
+      "leituras": 111,
       "achados_total": 1,
       "vazias_seguidas": 0,
-      "duracao_s": 39,
-      "ultima": "2026-11-13T14:08:24+00:00",
+      "duracao_s": 48,
+      "ultima": "2026-11-14T13:11:26+00:00",
       "motivo": "motor regular e geral — todo dia",
       "achados_ultima": 1,
       "falhas_ultima": 0,
@@ -4427,7 +4429,7 @@
         {
           "url": "https://www.congressonacional.leg.br",
           "http": 200,
-          "bytes": 221661,
+          "bytes": 221652,
           "itens": 11
         },
         {
@@ -4451,7 +4453,7 @@
             "falhas": [],
             "consultas": 2,
             "itens": 11,
-            "bytes": 221661,
+            "bytes": 221652,
             "comunicados_na_pagina": 10,
             "cortados": [
               "comunicados da CMO: a 1ª página não alcança o início da janela"
@@ -4473,7 +4475,7 @@
             "falhas": [],
             "consultas": 2,
             "itens": 35,
-            "bytes": 117237,
+            "bytes": 142088,
             "lidas_ate": {
               "Câmara dos Deputados": "2026-11-13"
             }
@@ -4507,8 +4509,8 @@
       "totais_por_distintas": true,
       "novas_ultima": 0,
       "relidas_ultima": 1,
-      "relidas_total": 6,
-      "fora_do_portao": 7
+      "relidas_total": 7,
+      "fora_do_portao": 8
     },
     "f260-captacao-107": {
       "nome": "Emenda municipal para entidade assistencial",
@@ -10071,24 +10073,71 @@
   },
   "ultima_execucao": {
     "data": "2026-11-14",
-    "em": "2026-11-14T03:04:39+00:00",
-    "manual": [
-      "empresas-incentivadas"
+    "em": "2026-11-14T13:32:45+00:00",
+    "manual": null,
+    "bloco": "completo",
+    "sensores_executados": 6,
+    "adiados_por_tempo": [
+      "do-goias",
+      "dou",
+      "judiciario-cnj",
+      "judiciario-cnj-tjgo",
+      "outras-oportunidades-1",
+      "outras-oportunidades-2",
+      "outras-oportunidades-3",
+      "outras-oportunidades-4",
+      "outras-oportunidades-5",
+      "outras-oportunidades-6",
+      "outras-oportunidades-7",
+      "outras-oportunidades-8",
+      "plat-empresas-editais-incentivados",
+      "plat-estaduais-go-gov",
+      "plat-gife",
+      "plat-piloto-aberto",
+      "plat-prefeituras-50-go",
+      "plat-salic",
+      "plataforma-mapas-culturais",
+      "plataforma-wordpress",
+      "pncp-api",
+      "f260-captacao-001",
+      "f260-captacao-018",
+      "f260-captacao-034",
+      "f260-captacao-051",
+      "f260-captacao-081",
+      "f260-captacao-095",
+      "f260-captacao-113",
+      "f260-captacao-118",
+      "f260-captacao-196",
+      "f260-captacao-238",
+      "mptgo-destinacao",
+      "recorrencia"
     ],
-    "bloco": "manual",
-    "sensores_executados": 1,
-    "adiados_por_tempo": [],
-    "duracao_s": 92,
-    "em_espera": 123,
-    "total_esquadra": 124,
+    "duracao_s": 1372,
+    "em_espera": 91,
+    "total_esquadra": 130,
     "previsoes_ativas": 0,
-    "achados": 4,
-    "novos_na_base": 0,
+    "achados": 5,
+    "novos_na_base": 1,
     "por_tipo": {
-      "empresas_incentivo": {
+      "legislativo": {
+        "sensores": 3,
+        "achados": 1,
+        "falhas": 0
+      },
+      "diario_justica": {
         "sensores": 1,
-        "achados": 4,
-        "falhas": 3
+        "achados": 0,
+        "falhas": 0
+      },
+      "diario_oficial": {
+        "sensores": 1,
+        "achados": 1,
+        "falhas": 0
+      },
+      "plataforma": {
+        "sensores": 1,
+        "achados": 3,
+        "falhas": 0
       }
     }
   }
