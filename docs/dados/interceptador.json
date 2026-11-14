@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-14T15:11:55+00:00",
+  "em": "2026-11-14T15:27:14+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-14T15:01:10+00:00",
+  "ultimo_voo": "2026-11-14T15:14:02+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -39,8 +39,8 @@
   "acumulado": {
     "missoes": 1,
     "validadas": 0,
-    "parciais": 1,
-    "insuficientes": 0,
+    "parciais": 0,
+    "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
@@ -48,17 +48,17 @@
     },
     "estrelas_de_ouro": 16,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.2
+    "tempo_medio_min": 12.6
   },
   "missoes": [
     {
-      "em": "2026-11-14T15:01:10+00:00",
+      "em": "2026-11-14T15:14:02+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Termos de Fomento — Goiás",
-      "qualidade": "parcial",
-      "comprovados": 6,
+      "alvo": "Torcedor de Pernambuco — Juizado do Torcedor de Pernambuco financia projetos sociais com recursos de prestaçõe… — Goiás",
+      "qualidade": "insuficiente",
+      "comprovados": 2,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
@@ -66,60 +66,52 @@
         "Resultado",
         "Prazo de recurso",
         "Valor",
-        "Requisitos"
+        "Território",
+        "Esfera",
+        "Requisitos",
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
+      "pagina_oficial": null,
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprovado menciona o objeto do edital como fomento à cultura e à música, realizado pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), o que confirma sua relevância para a área de cultura.",
-        "para_a_amc": "Para acessar o edital, uma associação comunitária de Goiânia precisaria se inscrever no edital, apresentando propostas relacionadas ao fomento à cultura e à música, conforme o objeto definido.",
-        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre o processo de inscrição e os critérios de avaliação.",
-        "risco": "O prazo de inscrição não foi encontrado no texto comprovado, o que pode impedir a associação de se inscrever no prazo correto."
+        "por_que": "O texto comprovado menciona que o Juizado do Torcedor de Pernambuco financia projetos sociais com recursos de prestações pecuniárias, o que indica uma fonte de financiamento potencial para associações comunitárias.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto de financiamento do Juizado do Torcedor de Pernambuco, ou seja, apresentar projetos sociais que envolvam prestações pecuniárias, e buscar contato direto com o órgão para obter mais informações sobre o processo de acesso.",
+        "proximo_passo": "Contatar o Juizado do Torcedor de Pernambuco para obter detalhes sobre como se inscrever e quais projetos são elegíveis para financiamento.",
+        "risco": "O fato de não haver informações sobre prazo de inscrição, requisitos ou área de atuação pode impedir que a associação compreenda o processo completo e se candidate de forma adequada."
       },
       "erro": null,
-      "segundos": 615,
+      "segundos": 753,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 5,
-      "justificativa": "página oficial mapeada e 6 ou mais condições; falta o que está em 'faltou'",
-      "avaliacao": "aproveitável: falta Prazo de inscrição, Resultado, Prazo de recurso, Valor",
-      "id": "op-nova-86a89ba66dfd",
+      "fontes_oficiais": 0,
+      "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-af85ca3d9e40",
       "encontrou": {
         "Objeto": {
-          "valor": "fomento à cultura e à música",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
-          "oficial": true,
+          "valor": "financia projetos sociais com recursos de prestações pecuniárias",
+          "trecho": "Juizado do Torcedor de Pernambuco financia projetos sociais com recursos de prestações pecuniárias",
+          "oficial": false,
           "dispensado": false
         },
         "Órgão / financiador": {
-          "valor": "Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult)",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
-          "oficial": true,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "O Canto da Primavera é um evento musical em formato de festival idealizado e realizado anualmente pelo Governo de Goiás, por meio da Secretaria de Estado da Cultura (Secult), na ci",
-          "oficial": true,
+          "valor": "Juizado do Torcedor de Pernambuco",
+          "trecho": "Juizado do Torcedor de Pernambuco",
+          "oficial": false,
           "dispensado": false
         }
       },
-      "financiador": "Secretaria de Estado da Cultura",
+      "financiador": "Juizado do Torcedor de Pernambuco",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano"
+        "financiador_ano",
+        "governo",
+        "programa_puro"
       ]
     }
   ],
