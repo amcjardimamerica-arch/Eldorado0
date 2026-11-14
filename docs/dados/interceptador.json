@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-14T02:04:01+00:00",
+  "em": "2026-11-14T02:16:58+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-14T01:53:46+00:00",
+  "ultimo_voo": "2026-11-14T02:06:04+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -48,83 +48,68 @@
     },
     "estrelas_de_ouro": 16,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 9.7
+    "tempo_medio_min": 10.3
   },
   "missoes": [
     {
-      "em": "2026-11-14T01:53:46+00:00",
+      "em": "2026-11-14T02:06:04+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "Rio Verde — Prefeitura divulga novos editais da Lei Paulo Gustavo — Goiás / Rio Verde",
+      "alvo": "Rio verde — edital de chamamento público nº 001/2026 – programa orgulho rio-verdense (bolsa atleta) — Goiás / Rio Verde",
       "qualidade": "insuficiente",
-      "comprovados": 8,
-      "dispensados": 1,
+      "comprovados": 4,
+      "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
+        "Valor",
+        "Território",
+        "Requisitos",
         "Área de atuação"
       ],
-      "pagina_oficial": null,
+      "pagina_oficial": "https://rioverde.go.gov.br",
       "parecer_fonte": {
         "serve_como_fonte": "sim",
-        "por_que": "O texto comprova a existência de editais da Lei Paulo Gustavo com valores, prazos e requisitos claros, o que permite a análise de como uma associação comunitária pode acessar os recursos.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria preencher o formulário disponível no endereço eletrônico fornecido, demonstrando sua qualificação e alinhamento com as áreas de atuação previstas nos editais, como assistência social, cultura, educação e esporte.",
-        "proximo_passo": "Verificar o endereço eletrônico fornecido no edital para preencher o formulário de inscrição e enviar os anexos necessários.",
-        "risco": "A falta de qualificação ou alinhamento com as áreas de atuação previstas nos editais pode impedir o acesso aos recursos."
+        "por_que": "O edital comprovado menciona o objeto e o financiador, o que é suficiente para validar a fonte.",
+        "para_a_amc": "A associação comunitária de Goiânia precisaria verificar se atende ao objeto do edital, que é apoiar atletas da cidade de Rio Verde, e seguir as instruções dos anexos para inscrição.",
+        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre a inscrição e os requisitos específicos.",
+        "risco": "A falta de informações sobre prazo de inscrição e requisitos pode impedir a associação de se inscrever adequadamente."
       },
       "erro": null,
-      "segundos": 584,
+      "segundos": 617,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
-      "fontes_oficiais": 0,
+      "fontes_oficiais": 3,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
       "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-b5ab25c75864",
+      "id": "op-d80284a7922b",
       "encontrou": {
         "Objeto": {
-          "valor": "editais destinam recursos significativos no valor total de R$ 1.694.735,90, divididos em premiações em diversas áreas e no segmento audiovisual",
-          "trecho": "editais destinam recursos significativos no valor total de R$ 1.694.735,90, divididos em premiações em diversas áreas e no segmento audiovisual",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Prazo de inscrição": {
-          "valor": "dispensado — O texto menciona que as inscrições serão abertas a partir de 25 de abril e poderão ser realizadas até 14 de maio.",
-          "trecho": "as inscrições serão abertas a partir de amanhã, 25 de abril e poderão ser realizadas até o dia 14 de maio [rejeitado: data implausível para edital aberto]",
-          "oficial": false,
-          "dispensado": true
-        },
-        "Valor": {
-          "valor": "R$ 1.694.735,90",
-          "trecho": "editais destinam recursos significativos no valor total de R$ 1.694.735,90, divididos em premiações em diversas áreas e no segmento audiovisual",
-          "oficial": false,
+          "valor": "apoiar atletas da cidade de Rio Verde",
+          "trecho": "programa orgulho rio-verdense (bolsa atleta)",
+          "oficial": true,
           "dispensado": false
         },
         "Órgão / financiador": {
           "valor": "Prefeitura Municipal de Rio Verde",
-          "trecho": "Prefeitura de Rio Verde, por meio da Secretaria Municipal de Cultura",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
           "trecho": "Prefeitura Municipal de Rio Verde",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Requisitos": {
-          "valor": "preencher o formulário disponível no seguinte endereço eletrônico",
-          "trecho": "os artistas interessados deverão preencher o formulário disponível no seguinte endereço eletrônico",
-          "oficial": false,
+          "oficial": true,
           "dispensado": false
         }
       },
       "financiador": "Prefeitura Municipal de Rio Verde",
       "indicios": [],
       "rotas": [
-        "site_do_financiador"
+        "site_do_financiador",
+        "site_do_financiador_edital",
+        "financiador_programa_edital",
+        "financiador_regulamento",
+        "financiador_pdf",
+        "financiador_ano"
       ]
     }
   ],
