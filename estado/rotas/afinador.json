@@ -1120,12 +1120,12 @@
   "resultado": "rota nova em teste"
  },
  "_execucao": {
-  "em": "2026-11-14T09:10:10+00:00",
+  "em": "2026-11-14T10:43:32+00:00",
   "motores_testados": 6,
   "ponte_respondeu": false
  },
  "f260-captacao-238": {
-  "em": "2026-11-13T22:09:26+00:00",
+  "em": "2026-11-14T10:42:43+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -1561,8 +1561,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-233": {
-  "em": "2026-11-13T20:37:17+00:00",
-  "testes": 13,
+  "em": "2026-11-14T10:40:38+00:00",
+  "testes": 14,
   "melhor": null,
   "detalhe": [
    {
@@ -1588,6 +1588,26 @@
     "funcionou": false
    },
    {
+    "url": "https://www.institutosicoob.org.br/feed",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutosicoob.org.br/feed",
+    "origem": "padrão",
+    "via": "ponte",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "RuntimeError",
+    "funcionou": false
+   },
+   {
     "url": "https://www.institutosicoob.org.br/sitemap.xml",
     "origem": "padrão",
     "via": "direto",
@@ -1596,16 +1616,6 @@
     "sinais": 0,
     "formato": "html",
     "erro": null,
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutosicoob.org.br/feed",
-    "origem": "padrão",
-    "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
     "funcionou": false
    },
    {
@@ -2738,8 +2748,8 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-234": {
-  "em": "2026-11-13T23:43:06+00:00",
-  "testes": 24,
+  "em": "2026-11-14T10:42:46+00:00",
+  "testes": 13,
   "melhor": null,
   "detalhe": [
    {
@@ -2771,16 +2781,6 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/sitemap.xml",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
     "formato": "html",
     "erro": null,
     "funcionou": false
@@ -2789,16 +2789,6 @@
     "url": "https://www.institutounibanco.org.br/feed",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/feed",
-    "origem": "padrão",
-    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
@@ -2813,16 +2803,6 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
     "formato": "html",
     "erro": null,
     "funcionou": false
@@ -2831,16 +2811,6 @@
     "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/wp-json/wp/v2/posts?search=edital&per_page=20",
-    "origem": "padrão",
-    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
@@ -2855,16 +2825,6 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
     "formato": "html",
     "erro": null,
     "funcionou": false
@@ -2873,16 +2833,6 @@
     "url": "https://www.institutounibanco.org.br/edital",
     "origem": "padrão",
     "via": "direto",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.institutounibanco.org.br/edital",
-    "origem": "padrão",
-    "via": "ponte",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
@@ -2897,13 +2847,47 @@
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "HTTPError",
+    "formato": "html",
+    "erro": null,
     "funcionou": false
    },
    {
-    "url": "https://www.institutounibanco.org.br/noticias",
+    "url": "https://www.institutounibanco.org.br/chamamento-publico",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/chamadas-publicas",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/chamamentos",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.institutounibanco.org.br/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
@@ -3740,7 +3724,7 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-224": {
-  "em": "2026-11-13T23:44:04+00:00",
+  "em": "2026-11-14T10:43:32+00:00",
   "testes": 12,
   "melhor": null,
   "detalhe": [
@@ -8275,8 +8259,8 @@
   "resultado": "nenhuma alternativa funcionou — segue ao Interceptador/Chrome"
  },
  "f260-captacao-255": {
-  "em": "2026-11-13T23:43:28+00:00",
-  "testes": 20,
+  "em": "2026-11-14T10:42:59+00:00",
+  "testes": 12,
   "melhor": null,
   "detalhe": [
    {
@@ -8323,16 +8307,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.cjrfund.org/wp-json/wp/v2/posts?search=edital&per_page=20",
     "origem": "padrão",
     "via": "direto",
@@ -8354,16 +8328,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.cjrfund.org/edital",
     "origem": "padrão",
     "via": "direto",
@@ -8371,16 +8335,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/edital",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -8394,16 +8348,6 @@
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/noticias",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
-    "funcionou": false
-   },
-   {
     "url": "https://www.cjrfund.org/chamamento-publico",
     "origem": "padrão",
     "via": "direto",
@@ -8411,16 +8355,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.cjrfund.org/chamamento-publico",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "ErroPonte",
     "funcionou": false
    },
    {
@@ -8434,13 +8368,23 @@
     "funcionou": false
    },
    {
-    "url": "https://www.cjrfund.org/chamadas-publicas",
+    "url": "https://www.cjrfund.org/chamamentos",
     "origem": "padrão",
-    "via": "ponte",
+    "via": "direto",
     "pontos": 0,
     "links": 0,
     "sinais": 0,
-    "erro": "ErroPonte",
+    "erro": "HTTPError",
+    "funcionou": false
+   },
+   {
+    "url": "https://www.cjrfund.org/licitacoes",
+    "origem": "padrão",
+    "via": "direto",
+    "pontos": 0,
+    "links": 0,
+    "sinais": 0,
+    "erro": "HTTPError",
     "funcionou": false
    }
   ],
@@ -8906,27 +8850,27 @@
   "resultado": "rota nova em teste"
  },
  "f260-captacao-249": {
-  "em": "2026-11-13T23:43:36+00:00",
-  "testes": 14,
+  "em": "2026-11-14T10:43:04+00:00",
+  "testes": 13,
   "melhor": null,
   "detalhe": [
-   {
-    "url": "https://www.fordfoundation.org/work/our-grants/grant-opportunities/",
-    "origem": "biblioteca",
-    "via": "direto",
-    "pontos": 1,
-    "links": 87,
-    "sinais": 0,
-    "formato": "html",
-    "erro": null,
-    "funcionou": false
-   },
    {
     "url": "https://www.fordfoundation.org/",
     "origem": "rota original",
     "via": "direto",
     "pontos": 1,
     "links": 105,
+    "sinais": 0,
+    "formato": "html",
+    "erro": null,
+    "funcionou": false
+   },
+   {
+    "url": "https://www.fordfoundation.org/work/our-grants/grant-opportunities/",
+    "origem": "biblioteca",
+    "via": "direto",
+    "pontos": 1,
+    "links": 87,
     "sinais": 0,
     "formato": "html",
     "erro": null,
@@ -8962,16 +8906,6 @@
     "links": 0,
     "sinais": 0,
     "erro": "HTTPError",
-    "funcionou": false
-   },
-   {
-    "url": "https://www.fordfoundation.org/transparencia/editais",
-    "origem": "padrão",
-    "via": "ponte",
-    "pontos": 0,
-    "links": 0,
-    "sinais": 0,
-    "erro": "RuntimeError",
     "funcionou": false
    },
    {
