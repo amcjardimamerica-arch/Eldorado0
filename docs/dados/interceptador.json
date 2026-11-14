@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-14T04:46:00+00:00",
+  "em": "2026-11-14T05:08:47+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-14T04:34:36+00:00",
+  "ultimo_voo": "2026-11-14T04:47:41+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -43,74 +43,38 @@
     "insuficientes": 1,
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
-    "serve_como_fonte": {
-      "sim": 1
-    },
+    "serve_como_fonte": {},
     "estrelas_de_ouro": 16,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.9
+    "tempo_medio_min": 20.3
   },
   "missoes": [
     {
-      "em": "2026-11-14T04:34:36+00:00",
+      "em": "2026-11-14T04:47:41+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "SEGENP (gestão de negócios e parcerias) — Edital nº 002/2026 — Captação de patrocínios privados, exclusivament… — Goiás",
+      "alvo": "SES-GO (saúde) — Edital nº 01/2026 — Goiás — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 3,
-      "dispensados": 0,
+      "comprovados": 0,
+      "dispensados": null,
       "total": 12,
-      "nao_resolvidos": [
-        "Objeto",
-        "Prazo de inscrição",
-        "Resultado",
-        "Prazo de recurso",
-        "Valor",
-        "Órgão / financiador",
-        "Requisitos",
-        "Área de atuação"
-      ],
+      "nao_resolvidos": null,
       "pagina_oficial": null,
-      "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital menciona a SEGENP (gestão de negócios e parcerias) — Edital nº 002/2026 — Captação de patrocínios privados, exclusivament… — Goiás, indicando que é uma fonte de financiamento para organizações da sociedade civil no estado de Goiás.",
-        "para_a_amc": "Para acessar o edital, a associação comunitária de Goiânia precisaria verificar os anexos mencionados, que provavelmente contêm informações sobre requisitos, área de atuação e outros detalhes necessários para a inscrição, mesmo que não tenham sido encontrados explicitamente.",
-        "proximo_passo": "Consultar os anexos do edital para obter informações detalhadas sobre requisitos, área de atuação e outros critérios de elegibilidade.",
-        "risco": "A falta de informações específicas como prazo de inscrição, valor e requisitos pode impedir a associação de se preparar adequadamente para participar do edital."
-      },
-      "erro": null,
-      "segundos": 653,
+      "parecer_fonte": {},
+      "erro": "o modelo não devolveu JSON",
+      "segundos": 1217,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-5567cd224405",
-      "encontrou": {
-        "Território": {
-          "valor": "GO",
-          "trecho": "município de Goiânia",
-          "oficial": false,
-          "dispensado": false
-        }
-      },
-      "financiador": "Prefeitura de Goiânia",
-      "indicios": [
-        {
-          "url": "https://data.queridodiario.ok.org.br/5208707/2026-11-09/bf2355b4878512faf55992583d2a38a66bb1fe5a.pdf",
-          "tipo": "agregador"
-        }
-      ],
-      "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
-        "financiador_programa_edital",
-        "financiador_regulamento",
-        "financiador_pdf",
-        "financiador_ano"
-      ]
+      "avaliacao": "falhou: o modelo não devolveu JSON",
+      "id": "op-5006993dfd1f",
+      "encontrou": {},
+      "financiador": null,
+      "indicios": [],
+      "rotas": []
     }
   ],
   "contagem": {
