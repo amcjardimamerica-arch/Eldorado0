@@ -1,9 +1,9 @@
 {
-  "em": "2026-11-14T04:05:31+00:00",
+  "em": "2026-11-14T04:15:24+00:00",
   "papel": "Piloto - Interceptador",
   "modelo": "qwen3-8b",
   "estado": "em atividade",
-  "ultimo_voo": "2026-11-14T03:54:30+00:00",
+  "ultimo_voo": "2026-11-14T04:07:29+00:00",
   "parametros": {
     "regra": "um alvo por voo, a cada 3 segundos; nada entra sem trecho literal na fonte; dispensa só se o edital a disser; estuda o que os motores de busca e o Espião trouxerem — informação nova a partir de 2026-09-26 — e nunca refaz o que já fez",
     "finalidade": "levantar os dados mínimos de cada possibilidade (link original, fonte oficial, condições comprovadas, parecer 'como serve como fonte') para a decisão externa do Claude, que analisa, valida ou descarta a cada 3 dias",
@@ -44,83 +44,63 @@
     "fontes_confirmadas": 0,
     "fontes_possiveis": 0,
     "serve_como_fonte": {
-      "sim": 1
+      "nao": 1
     },
     "estrelas_de_ouro": 16,
     "fontes_novas_para_os_motores": 0,
-    "tempo_medio_min": 10.4
+    "tempo_medio_min": 7.3
   },
   "missoes": [
     {
-      "em": "2026-11-14T03:54:30+00:00",
+      "em": "2026-11-14T04:07:29+00:00",
       "modo": "validar",
       "tipo": "edital",
       "de": "1 · Goiás · livro da Biblioteca",
-      "alvo": "SECULT-GO (cultura) — Secult Goiás lança edital para levar produção artística goiana ao Rio de Janeiro — Goiás",
+      "alvo": "SEDS-GO / Goiás Social — RESOLUÇÃO Nº 71 de 01 DE outubro de 2026-CEDCA — Goiás",
       "qualidade": "insuficiente",
-      "comprovados": 5,
+      "comprovados": 0,
       "dispensados": 0,
       "total": 12,
       "nao_resolvidos": [
+        "Objeto",
         "Prazo de inscrição",
         "Resultado",
         "Prazo de recurso",
         "Valor",
+        "Órgão / financiador",
+        "Território",
+        "Esfera",
         "Requisitos",
-        "Anexos"
+        "Anexos",
+        "Área de atuação"
       ],
-      "pagina_oficial": "https://cantodaprimavera.cultura.go.gov.br/",
+      "pagina_oficial": null,
       "parecer_fonte": {
-        "serve_como_fonte": "sim",
-        "por_que": "O edital foi comprovado com informações sobre o objeto, órgão financiador, território e área de atuação.",
-        "para_a_amc": "A associação comunitária de Goiânia precisaria se alinhar ao objeto do edital, que é levar produção artística goiana ao Rio de Janeiro, e demonstrar como sua atuação se enquadra nessa área de cultura.",
-        "proximo_passo": "Consultar o edital completo para obter informações sobre prazos, requisitos e processos de inscrição.",
-        "risco": "A falta de informações sobre prazos, requisitos e anexos pode impedir a participação da associação."
+        "serve_como_fonte": "nao",
+        "por_que": "Não há informações comprovadas sobre o edital para ser usado como fonte.",
+        "para_a_amc": "Para acessar, a associação comunitária de Goiânia precisaria verificar as condições específicas do edital, que não foram fornecidas.",
+        "proximo_passo": "Consultar o edital oficial para obter detalhes sobre requisitos, prazos e outros critérios.",
+        "risco": "A falta de informações específicas pode impedir a participação adequada no processo seletivo."
       },
       "erro": null,
-      "segundos": 623,
+      "segundos": 439,
       "site_oficial": null,
       "resultado": null,
       "fonte_nova_para_os_motores": false,
       "fontes_oficiais": 0,
       "justificativa": "sem página oficial mapeada ou menos de 6 condições comprovadas",
-      "avaliacao": "a completar: sem página oficial ou poucas condições comprovadas",
-      "id": "op-8ccafa83e596",
-      "encontrou": {
-        "Objeto": {
-          "valor": "Levar produção artística goiana ao Rio de Janeiro",
-          "trecho": "Secult Goiás lança edital para levar produção artística goiana ao Rio de Janeiro",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Órgão / financiador": {
-          "valor": "Secretaria de Estado da Cultura (Secult)",
-          "trecho": "Secult Goiás lança edital para levar produção artística goiana ao Rio de Janeiro",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Território": {
-          "valor": "GO",
-          "trecho": "Secult Goiás lança edital para levar produção artística goiana ao Rio de Janeiro",
-          "oficial": false,
-          "dispensado": false
-        },
-        "Área de atuação": {
-          "valor": "cultura",
-          "trecho": "Secult Goiás lança edital para levar produção artística goiana ao Rio de Janeiro",
-          "oficial": false,
-          "dispensado": false
-        }
-      },
-      "financiador": "Secretaria de Estado da Cultura",
+      "avaliacao": "descartável: não se mostrou oportunidade de recurso",
+      "id": "op-318d0e5e388a",
+      "encontrou": {},
+      "financiador": "SED SEDS-GO",
       "indicios": [],
       "rotas": [
-        "site_do_financiador",
-        "site_do_financiador_edital",
         "financiador_programa_edital",
         "financiador_regulamento",
         "financiador_pdf",
-        "financiador_ano"
+        "financiador_ano",
+        "governo",
+        "parceiro"
       ]
     }
   ],
