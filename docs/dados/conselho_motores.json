@@ -1,5 +1,5 @@
 {
- "em": "2026-11-14T13:36:52+00:00",
+ "em": "2026-11-14T15:07:39+00:00",
  "conselho": [
   {
    "id": "falso_verde",
@@ -310,19 +310,19 @@
    "tipo": "diario_oficial",
    "saude": [
     {
-     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261112_000008902.pdf",
+     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261113_000008903.pdf",
      "http": 200,
-     "bytes": 236240
+     "bytes": 559477
     },
     {
-     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261111_000008901.pdf",
+     "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261110_000008900.pdf",
      "http": 200,
-     "bytes": 319433
+     "bytes": 22614
     }
    ],
    "achados_total": 6,
    "valor": "confirma",
-   "achados_30d": 13,
+   "achados_30d": 12,
    "cadencia": {
     "cadencia_atual": 1,
     "cadencia_recomendada": 1,
@@ -392,16 +392,7 @@
   "alego-pl": {
    "nome": "Assembleia Legislativa de Goiás — proposições",
    "tipo": "legislativo",
-   "saude": [
-    {
-     "url": "https://portal.al.go.leg.br/",
-     "erro": "ErroPonte",
-     "code": null,
-     "waf": null,
-     "causa": "ErroPonte",
-     "retentativa": "fora_da_fila"
-    }
-   ],
+   "saude": [],
    "achados_total": 3,
    "valor": "baixo volume",
    "achados_30d": 0,
@@ -414,7 +405,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CEGO",
-     "prova": "respondeu 200 em 25 de 30 dias e não achou nada em 30 dias",
+     "prova": "respondeu 200 em 24 de 30 dias e não achou nada em 30 dias",
      "melhoria": "conferir se o léxico do motor casa com o vocabulário da fonte e se a página lida é a de editais (não a inicial)"
     },
     {
@@ -426,7 +417,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "109 leituras vazias seguidas",
+     "prova": "110 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -435,6 +426,12 @@
    "nome": "Câmara Municipal de Goiânia — projetos de lei",
    "tipo": "legislativo",
    "saude": [
+    {
+     "url": "https://www.goiania.go.leg.br",
+     "http": 200,
+     "bytes": 283532,
+     "itens": 22
+    },
     {
      "url": "https://www.goiania.go.leg.br",
      "http": 200,
@@ -460,7 +457,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "157 leituras vazias seguidas",
+     "prova": "158 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -525,7 +522,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "SILÊNCIO LONGO",
-     "prova": "102 leituras vazias seguidas",
+     "prova": "103 leituras vazias seguidas",
      "melhoria": "reavaliar a URL de entrada: a seção de editais pode ter mudado de endereço"
     }
    ]
@@ -1960,7 +1957,7 @@
     {
      "url": "https://www.gov.br/cultura/pt-br/assuntos/editais/inscricoes-encerradas/edital-premio-cultura-viva-construcao-nacional-do-hip-hop-2023-1",
      "http": 200,
-     "bytes": 155892
+     "bytes": 155898
     },
     {
      "url": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
@@ -1980,7 +1977,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 24 dias",
+     "prova": "o mesmo achado repetido em 25 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     },
     {
@@ -2533,7 +2530,7 @@
     {
      "url": "https://www.congressonacional.leg.br",
      "http": 200,
-     "bytes": 221661,
+     "bytes": 221652,
      "itens": 11
     },
     {
@@ -2555,7 +2552,7 @@
     {
      "conselheiro": "falso_verde",
      "falha": "CONGELADO",
-     "prova": "o mesmo achado repetido em 7 dias",
+     "prova": "o mesmo achado repetido em 8 dias",
      "melhoria": "detectar mudança por hash/lastmod e só contar o que é novo"
     }
    ]

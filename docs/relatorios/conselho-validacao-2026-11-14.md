@@ -200,7 +200,7 @@
  "pontos_com_redundancia": 19,
  "redundancia_vazia": [],
  "dominios_via_ponte": 5,
- "exemplos_da_rede_de_rotas": 63560
+ "exemplos_da_rede_de_rotas": 63639
 }
 ```
 
@@ -246,7 +246,7 @@
  "dia_de_referencia": "2026-11-14",
  "ativos": 172,
  "lidos_ontem": 19,
- "lidos_hoje": 0,
+ "lidos_hoje": 6,
  "nao_lidos_ontem_nem_hoje": [
   "f260-captacao-001",
   "f260-captacao-018",
@@ -329,7 +329,7 @@
   "Cartório (site oficial certificado)": 190,
   "Espião (privado/internacional)": 48
  },
- "lidas_nas_ultimas_24h": 137,
+ "lidas_nas_ultimas_24h": 0,
  "dimensionamento": {
   "fontes": 404,
   "sites_por_execucao": 17,
