@@ -1,17 +1,17 @@
 {
- "em": "2026-11-14T06:55:01+00:00",
+ "em": "2026-11-14T08:16:37+00:00",
  "finalidade": {
   "sistemas": [
    {
     "sistema": "Motores",
     "finalidade": "todo motor ativo lê dentro da sua cadência",
-    "atingido_pct": 53,
+    "atingido_pct": 37,
     "estado": "falha"
    },
    {
     "sistema": "Maestro",
     "finalidade": "cobertura completa do dia planejado",
-    "atingido_pct": 8,
+    "atingido_pct": 0,
     "estado": "falha"
    },
    {
@@ -75,118 +75,153 @@
     "estado": "sem_dados"
    }
   ],
-  "indice_geral_pct": 55
+  "indice_geral_pct": 53
  },
  "sistemas": {
   "motores": {
    "total": 45,
-   "funcionando": 23,
-   "em_falha": 20,
+   "funcionando": 16,
+   "em_falha": 27,
    "inativos": 2,
    "em_falha_lista": [
     {
      "id": "pncp-api",
      "nome": "PNCP — API de contratações (chamamentos e credenciamentos)",
-     "resultado": "falha — não lê há 27 dia(s) (651 h); última leitura 18/10 00:25"
+     "resultado": "falha — não lê há 27 dia(s) (652 h); última leitura 18/10 00:25"
     },
     {
      "id": "mpgo-destinacao",
      "nome": "MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos)",
-     "resultado": "falha — não lê há 27 dia(s) (650 h); última leitura 18/10 01:27"
+     "resultado": "falha — não lê há 27 dia(s) (651 h); última leitura 18/10 01:27"
     },
     {
      "id": "mptgo-destinacao",
      "nome": "MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região)",
-     "resultado": "falha — não lê há 20 dia(s) (499 h); última leitura 24/10 08:16"
+     "resultado": "falha — não lê há 20 dia(s) (500 h); última leitura 24/10 08:16"
     },
     {
      "id": "mpu-destinacao",
      "nome": "MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD)",
-     "resultado": "falha — não lê há 27 dia(s) (650 h); última leitura 18/10 01:29"
+     "resultado": "falha — não lê há 27 dia(s) (651 h); última leitura 18/10 01:29"
     },
     {
      "id": "plataforma-wordpress",
      "nome": "Adaptador WordPress — sites oficiais pela API pública",
-     "resultado": "falha — não lê há 26 dia(s) (647 h); última leitura 18/10 03:55"
+     "resultado": "falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:55"
     },
     {
      "id": "plataforma-mapas-culturais",
      "nome": "Adaptador Mapas Culturais — oportunidades com inscrição aberta",
-     "resultado": "falha — não lê há 27 dia(s) (648 h); última leitura 18/10 03:54"
+     "resultado": "falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:54"
     },
     {
      "id": "salic",
      "nome": "Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura)",
-     "resultado": "falha — não lê há 6 dia(s) (161 h); última leitura 07/11 10:28"
+     "resultado": "falha — não lê há 6 dia(s) (162 h); última leitura 07/11 10:28"
     },
     {
      "id": "prefeituras-50-go",
      "nome": "Prefeituras das 25 maiores cidades de Goiás — portais de editais",
-     "resultado": "falha — não lê há 27 dia(s) (648 h); última leitura 18/10 03:49"
+     "resultado": "falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:49"
     },
     {
      "id": "estaduais-go-gov",
      "nome": "Oportunidade Estaduais Governamentais de Goiás",
-     "resultado": "falha — não lê há 21 dia(s) (522 h); última leitura 23/10 08:58"
+     "resultado": "falha — não lê há 21 dia(s) (524 h); última leitura 23/10 08:58"
+    },
+    {
+     "id": "site-farol-cultural",
+     "nome": "Farol Cultural — editais de cultura de todo o Brasil, pela API pública do portal",
+     "resultado": "falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37"
     },
     {
      "id": "site-capitaai",
      "nome": "CapitaAI — editais e oportunidades de captação, incluindo a lista pública dos editais do Prosas",
-     "resultado": "falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37"
+     "resultado": "falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37"
     },
     {
      "id": "site-observatorio-terceiro-setor",
      "nome": "Observatório do Terceiro Setor — editais publicados na seção temática do portal",
-     "resultado": "falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37"
+     "resultado": "falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37"
+    },
+    {
+     "id": "site-mapas-culturais",
+     "nome": "Mapas Culturais — editais das redes estaduais e municipais de cultura que usam a plataforma",
+     "resultado": "falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37"
     },
     {
      "id": "site-abcr",
      "nome": "ABCR — Associação Brasileira de Captadores de Recursos — editais divulgados pela associação dos captadores",
-     "resultado": "falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37"
+     "resultado": "falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37"
     },
     {
      "id": "site-funarte",
      "nome": "Funarte — editais da Fundação Nacional de Artes",
-     "resultado": "falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41"
+     "resultado": "falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41"
     },
     {
      "id": "site-transferegov",
      "nome": "Transferegov — programas e parcerias com OSC abertos na plataforma federal (dados abertos)",
-     "resultado": "falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41"
+     "resultado": "falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41"
+    },
+    {
+     "id": "site-rede-comua",
+     "nome": "Rede Comuá — editais dos fundos independentes de filantropia",
+     "resultado": "falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35"
+    },
+    {
+     "id": "site-fundo-baoba",
+     "nome": "Fundo Baobá — editais para equidade racial",
+     "resultado": "falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35"
     },
     {
      "id": "site-editais-culturais",
      "nome": "Editais Culturais — editais de cultura reunidos no portal",
-     "resultado": "falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41"
+     "resultado": "falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41"
+    },
+    {
+     "id": "site-fundo-brasil",
+     "nome": "Fundo Brasil de Direitos Humanos — editais de direitos humanos",
+     "resultado": "falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35"
+    },
+    {
+     "id": "site-idis",
+     "nome": "IDIS — Instituto para o Desenvolvimento do Investimento Social — chamadas e editais de investimento social",
+     "resultado": "falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37"
+    },
+    {
+     "id": "site-fundo-casa",
+     "nome": "Fundo Casa Socioambiental — chamadas socioambientais",
+     "resultado": "falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35"
     },
     {
      "id": "site-cese",
      "nome": "CESE — Coordenadoria Ecumênica de Serviço — editais de apoio a projetos populares",
-     "resultado": "falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41"
+     "resultado": "falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41"
     },
     {
      "id": "site-brazilfoundation",
      "nome": "BrazilFoundation — editais de apoio a organizações brasileiras",
-     "resultado": "falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41"
+     "resultado": "falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41"
     },
     {
      "id": "site-rede-filantropia",
      "nome": "Rede Filantropia — editais divulgados pela rede (lida pelo computador do titular: recusa IP estrangeiro)",
-     "resultado": "falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41"
+     "resultado": "falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41"
     },
     {
      "id": "site-mapa-osc",
      "nome": "Mapa das OSC (Ipea) — editais reunidos no portal",
-     "resultado": "falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41"
+     "resultado": "falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41"
     },
     {
      "id": "site-prosas",
      "nome": "Prosas — editais e prêmios para OSCs (três caminhos indiretos: listagem da CapitaAI, ângulo do Piloto e coleta assistida)",
-     "resultado": "falha — a rota indireta (capitaai) não lê há 31 h"
+     "resultado": "falha — a rota indireta (capitaai) não lê há 32 h"
     }
    ],
    "leitura_parcial": [],
-   "status_em": "2026-11-14T03:54-03:00",
+   "status_em": "2026-11-14T05:16-03:00",
    "auditoria": {
     "em": "2026-11-13T17:04:26+00:00",
     "total": 33,
@@ -200,17 +235,16 @@
    }
   },
   "maestro": {
-   "em": "2026-11-14T00:29:54+00:00",
+   "em": "2026-11-14T07:37:24+00:00",
    "planejados": 124,
-   "cobertura_percentual": 8.1,
+   "cobertura_percentual": 0.0,
    "cobertura": {
-    "pendente": 103,
-    "completa": 10,
-    "parcial": 11
+    "pendente": 123,
+    "parcial": 1
    },
    "dia_fechado": false,
    "esgotaram_tentativas": 0,
-   "a_disparar": 114
+   "a_disparar": 124
   },
   "rede_neural": {
    "em": "2026-10-18T03:51:17+00:00",
@@ -225,7 +259,7 @@
    "pendentes_provaveis_reais": 421
   },
   "cartorio": {
-   "em": "2026-11-14T06:19:15+00:00",
+   "em": "2026-11-14T07:48:00+00:00",
    "resumo": {
     "pontos_12_total": 4800,
     "pontos_certificados": 3019,
@@ -267,7 +301,7 @@
   "pilotos": {
    "interceptador": {
     "estado": "em atividade",
-    "ultimo_voo": "2026-11-14T06:36:52+00:00",
+    "ultimo_voo": "2026-11-14T07:53:27+00:00",
     "contagem": {
      "desde": "2026-11-09T03:00:00+00:00",
      "zerada_em": "2026-11-09T03:16:18+00:00",
@@ -276,8 +310,8 @@
     }
    },
    "espiao": {
-    "em": "2026-11-14T06:48:24+00:00",
-    "voos": 3353,
+    "em": "2026-11-14T08:07:36+00:00",
+    "voos": 3360,
     "empresas_novas": 395
    }
   },
@@ -320,16 +354,16 @@
    "sem_nada_na_base": 25
   },
   "fluxos_github": {
-   "total": 6,
+   "total": 7,
    "com_falha": []
   },
   "sala_controle": {
-   "em": "2026-11-14T06:54:41+00:00",
-   "indice_saude": 46,
+   "em": "2026-11-14T08:16:17+00:00",
+   "indice_saude": 49,
    "contagem": {
-    "verde": 12,
+    "verde": 13,
     "amarelo": 3,
-    "vermelho": 21,
+    "vermelho": 20,
     "cinza": 0
    }
   }
@@ -380,13 +414,13 @@
   },
   "idade_horas": {
    "repositorio": 0.0,
-   "fluxo": 651.1,
+   "fluxo": 652.4,
    "fichas": 0.0,
    "sala_controle": 0.0,
    "status_motores": 0.0,
-   "maestro": 6.4,
-   "rede_neural": 651.1,
-   "saude": 13.8
+   "maestro": 0.7,
+   "rede_neural": 652.4,
+   "saude": 15.2
   },
   "decisoes_da_titular": 0,
   "decisoes_nao_aplicadas": 0
@@ -956,11 +990,10 @@
   },
   "maestro": {
    "planejados": 124,
-   "cobertura_percentual": 8.1,
+   "cobertura_percentual": 0.0,
    "cobertura": {
-    "pendente": 103,
-    "completa": 10,
-    "parcial": 11
+    "pendente": 123,
+    "parcial": 1
    },
    "dia_fechado": false
   },
@@ -1046,15 +1079,15 @@
    "decisao": "motores escolhidos para ler na passagem",
    "regra": "todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
    "conferidos": 124,
-   "incorretos": 114,
+   "incorretos": 124,
    "veredito": "incorreto",
    "exemplos": [
     "plat-piloto-aberto",
     "pncp-api",
+    "do-goiania",
     "plat-prefeituras-50-go",
     "plat-estaduais-go-gov",
-    "plat-empresas-editais-incentivados",
-    "outras-oportunidades-7"
+    "outras-oportunidades-4"
    ]
   },
   {
@@ -1134,7 +1167,7 @@
   {
    "codigo": "comando_parado",
    "gravidade": "alta",
-   "texto": "o comando único não fecha um ciclo há 629.3 h (passa a cada 30 min)",
+   "texto": "o comando único não fecha um ciclo há 630.7 h (passa a cada 30 min)",
    "correcao": "investigar o fluxo 22 (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1159,7 +1192,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 27 dia(s) (651 h); última leitura 18/10 00:25",
+   "texto": "motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 27 dia(s) (652 h); última leitura 18/10 00:25",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1167,7 +1200,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 27 dia(s) (650 h); última leitura 18/10 01:27",
+   "texto": "motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 27 dia(s) (651 h); última leitura 18/10 01:27",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1175,7 +1208,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 20 dia(s) (499 h); última leitura 24/10 08:16",
+   "texto": "motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 20 dia(s) (500 h); última leitura 24/10 08:16",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1183,7 +1216,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 27 dia(s) (650 h); última leitura 18/10 01:29",
+   "texto": "motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 27 dia(s) (651 h); última leitura 18/10 01:29",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1191,7 +1224,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 26 dia(s) (647 h); última leitura 18/10 03:55",
+   "texto": "motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:55",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1199,7 +1232,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 27 dia(s) (648 h); última leitura 18/10 03:54",
+   "texto": "motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:54",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1207,7 +1240,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 6 dia(s) (161 h); última leitura 07/11 10:28",
+   "texto": "motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 6 dia(s) (162 h); última leitura 07/11 10:28",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1215,7 +1248,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 27 dia(s) (648 h); última leitura 18/10 03:49",
+   "texto": "motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:49",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1223,7 +1256,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 21 dia(s) (522 h); última leitura 23/10 08:58",
+   "texto": "motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 21 dia(s) (524 h); última leitura 23/10 08:58",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1231,7 +1264,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: CapitaAI — editais e oportunidades de captação, incluindo a lista pública dos editais do Prosas — falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37",
+   "texto": "motor em falha: Farol Cultural — editais de cultura de todo o Brasil, pela API pública do portal — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1239,7 +1272,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Observatório do Terceiro Setor — editais publicados na seção temática do portal — falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37",
+   "texto": "motor em falha: CapitaAI — editais e oportunidades de captação, incluindo a lista pública dos editais do Prosas — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1247,7 +1280,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: ABCR — Associação Brasileira de Captadores de Recursos — editais divulgados pela associação dos captadores — falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37",
+   "texto": "motor em falha: Observatório do Terceiro Setor — editais publicados na seção temática do portal — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1255,7 +1288,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Funarte — editais da Fundação Nacional de Artes — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41",
+   "texto": "motor em falha: Mapas Culturais — editais das redes estaduais e municipais de cultura que usam a plataforma — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1263,7 +1296,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Transferegov — programas e parcerias com OSC abertos na plataforma federal (dados abertos) — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41",
+   "texto": "motor em falha: ABCR — Associação Brasileira de Captadores de Recursos — editais divulgados pela associação dos captadores — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1271,7 +1304,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Editais Culturais — editais de cultura reunidos no portal — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41",
+   "texto": "motor em falha: Funarte — editais da Fundação Nacional de Artes — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1279,7 +1312,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: CESE — Coordenadoria Ecumênica de Serviço — editais de apoio a projetos populares — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41",
+   "texto": "motor em falha: Transferegov — programas e parcerias com OSC abertos na plataforma federal (dados abertos) — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1287,7 +1320,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: BrazilFoundation — editais de apoio a organizações brasileiras — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41",
+   "texto": "motor em falha: Rede Comuá — editais dos fundos independentes de filantropia — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1295,7 +1328,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Rede Filantropia — editais divulgados pela rede (lida pelo computador do titular: recusa IP estrangeiro) — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41",
+   "texto": "motor em falha: Fundo Baobá — editais para equidade racial — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1303,7 +1336,7 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Mapa das OSC (Ipea) — editais reunidos no portal — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41",
+   "texto": "motor em falha: Editais Culturais — editais de cultura reunidos no portal — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1311,7 +1344,63 @@
   {
    "codigo": "motor_em_falha",
    "gravidade": "alta",
-   "texto": "motor em falha: Prosas — editais e prêmios para OSCs (três caminhos indiretos: listagem da CapitaAI, ângulo do Piloto e coleta assistida) — falha — a rota indireta (capitaai) não lê há 31 h",
+   "texto": "motor em falha: Fundo Brasil de Direitos Humanos — editais de direitos humanos — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: IDIS — Instituto para o Desenvolvimento do Investimento Social — chamadas e editais de investimento social — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: Fundo Casa Socioambiental — chamadas socioambientais — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: CESE — Coordenadoria Ecumênica de Serviço — editais de apoio a projetos populares — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: BrazilFoundation — editais de apoio a organizações brasileiras — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: Rede Filantropia — editais divulgados pela rede (lida pelo computador do titular: recusa IP estrangeiro) — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: Mapa das OSC (Ipea) — editais reunidos no portal — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41",
+   "correcao": "investigar o motor (sem correção automática)",
+   "quantidade": null,
+   "exemplos": []
+  },
+  {
+   "codigo": "motor_em_falha",
+   "gravidade": "alta",
+   "texto": "motor em falha: Prosas — editais e prêmios para OSCs (três caminhos indiretos: listagem da CapitaAI, ângulo do Piloto e coleta assistida) — falha — a rota indireta (capitaai) não lê há 32 h",
    "correcao": "investigar o motor (sem correção automática)",
    "quantidade": null,
    "exemplos": []
@@ -1339,23 +1428,15 @@
   {
    "codigo": "atrasado_fluxo",
    "gravidade": "media",
-   "texto": "fluxo sem atualização há 651.1 h (limite 3 h)",
+   "texto": "fluxo sem atualização há 652.4 h (limite 3 h)",
    "correcao": "refazer a tela",
-   "quantidade": null,
-   "exemplos": []
-  },
-  {
-   "codigo": "atrasado_maestro",
-   "gravidade": "media",
-   "texto": "maestro sem atualização há 6.4 h (limite 3 h)",
-   "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
   },
   {
    "codigo": "atrasado_rede_neural",
    "gravidade": "media",
-   "texto": "rede_neural sem atualização há 651.1 h (limite 26 h)",
+   "texto": "rede_neural sem atualização há 652.4 h (limite 26 h)",
    "correcao": "ver o fluxo que gera este dado",
    "quantidade": null,
    "exemplos": []
@@ -1363,24 +1444,24 @@
   {
    "codigo": "decisao_decidir",
    "gravidade": "media",
-   "texto": "[decidir] motores escolhidos para ler na passagem: 114 de 124 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
+   "texto": "[decidir] motores escolhidos para ler na passagem: 124 de 124 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda)",
    "correcao": "investigar o comando (sem correção automática)",
-   "quantidade": 114,
+   "quantidade": 124,
    "exemplos": [
     "plat-piloto-aberto",
     "pncp-api",
+    "do-goiania",
     "plat-prefeituras-50-go",
     "plat-estaduais-go-gov",
+    "outras-oportunidades-4",
     "plat-empresas-editais-incentivados",
-    "outras-oportunidades-7",
-    "f260-curadoria-009",
-    "plataforma-wordpress"
+    "outras-oportunidades-7"
    ]
   },
   {
    "codigo": "gabarito_desatualizado",
    "gravidade": "media",
-   "texto": "avaliação do Cartório com gabarito tem 707.0 h (semanal)",
+   "texto": "avaliação do Cartório com gabarito tem 708.4 h (semanal)",
    "correcao": "disparar o fluxo 39",
    "quantidade": null,
    "exemplos": []
@@ -1536,8 +1617,8 @@
   }
  ],
  "contagem_problemas": {
-  "alta": 24,
-  "media": 16,
+  "alta": 31,
+  "media": 15,
   "baixa": 2
  },
  "corrigiveis": [

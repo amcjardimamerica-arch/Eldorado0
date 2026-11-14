@@ -1,8 +1,8 @@
-# Diagnóstico do sistema · 2026-11-14 06:55 UTC
+# Diagnóstico do sistema · 2026-11-14 08:16 UTC
 
-## Cumprimento da finalidade · índice geral 55%
-- Motores: 53% (falha) — todo motor ativo lê dentro da sua cadência
-- Maestro: 8% (falha) — cobertura completa do dia planejado
+## Cumprimento da finalidade · índice geral 53%
+- Motores: 37% (falha) — todo motor ativo lê dentro da sua cadência
+- Maestro: 0% (falha) — cobertura completa do dia planejado
 - Rede neural: 99% (ok) — discernimento (AUC) de pelo menos 0,85
 - Biblioteca: 100% (ok) — toda oportunidade aberta aplicável com livro existente
 - Validação: 17% (falha) — toda oportunidade aberta validada
@@ -74,67 +74,80 @@
 - itens que mais faltam: {'Prazo de recurso': 140, 'Anexos': 131, 'Requisitos': 129, 'Prazo de inscrição': 128, 'Valor': 124, 'Resultado': 122, 'Objeto': 119, 'Território': 117, 'Modalidade': 95, 'Área de atuação': 86, 'Órgão / financiador': 82, 'Esfera': 78}
 
 ## Sistemas
-- motores: 23 funcionando · 20 em falha · 2 inativos · 0 com leitura parcial
-  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 27 dia(s) (651 h); última leitura 18/10 00:25
-  - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 27 dia(s) (650 h); última leitura 18/10 01:27
-  - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 20 dia(s) (499 h); última leitura 24/10 08:16
-  - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 27 dia(s) (650 h); última leitura 18/10 01:29
-  - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 26 dia(s) (647 h); última leitura 18/10 03:55
-  - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 27 dia(s) (648 h); última leitura 18/10 03:54
-  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 6 dia(s) (161 h); última leitura 07/11 10:28
-  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 27 dia(s) (648 h); última leitura 18/10 03:49
-  - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 21 dia(s) (522 h); última leitura 23/10 08:58
-  - em falha: CapitaAI — editais e oportunidades de captação, incluindo a lista pública dos editais do Prosas — falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37
-  - em falha: Observatório do Terceiro Setor — editais publicados na seção temática do portal — falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37
-  - em falha: ABCR — Associação Brasileira de Captadores de Recursos — editais divulgados pela associação dos captadores — falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37
-  - em falha: Funarte — editais da Fundação Nacional de Artes — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41
-  - em falha: Transferegov — programas e parcerias com OSC abertos na plataforma federal (dados abertos) — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41
-  - em falha: Editais Culturais — editais de cultura reunidos no portal — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41
-  - em falha: CESE — Coordenadoria Ecumênica de Serviço — editais de apoio a projetos populares — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41
-  - em falha: BrazilFoundation — editais de apoio a organizações brasileiras — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41
-  - em falha: Rede Filantropia — editais divulgados pela rede (lida pelo computador do titular: recusa IP estrangeiro) — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41
-  - em falha: Mapa das OSC (Ipea) — editais reunidos no portal — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41
-  - em falha: Prosas — editais e prêmios para OSCs (três caminhos indiretos: listagem da CapitaAI, ângulo do Piloto e coleta assistida) — falha — a rota indireta (capitaai) não lê há 31 h
-- maestro: cobertura 8.1% · esgotados 0
+- motores: 16 funcionando · 27 em falha · 2 inativos · 0 com leitura parcial
+  - em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 27 dia(s) (652 h); última leitura 18/10 00:25
+  - em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 27 dia(s) (651 h); última leitura 18/10 01:27
+  - em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 20 dia(s) (500 h); última leitura 24/10 08:16
+  - em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 27 dia(s) (651 h); última leitura 18/10 01:29
+  - em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:55
+  - em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:54
+  - em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 6 dia(s) (162 h); última leitura 07/11 10:28
+  - em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:49
+  - em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 21 dia(s) (524 h); última leitura 23/10 08:58
+  - em falha: Farol Cultural — editais de cultura de todo o Brasil, pela API pública do portal — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37
+  - em falha: CapitaAI — editais e oportunidades de captação, incluindo a lista pública dos editais do Prosas — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37
+  - em falha: Observatório do Terceiro Setor — editais publicados na seção temática do portal — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37
+  - em falha: Mapas Culturais — editais das redes estaduais e municipais de cultura que usam a plataforma — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37
+  - em falha: ABCR — Associação Brasileira de Captadores de Recursos — editais divulgados pela associação dos captadores — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37
+  - em falha: Funarte — editais da Fundação Nacional de Artes — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41
+  - em falha: Transferegov — programas e parcerias com OSC abertos na plataforma federal (dados abertos) — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41
+  - em falha: Rede Comuá — editais dos fundos independentes de filantropia — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35
+  - em falha: Fundo Baobá — editais para equidade racial — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35
+  - em falha: Editais Culturais — editais de cultura reunidos no portal — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41
+  - em falha: Fundo Brasil de Direitos Humanos — editais de direitos humanos — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35
+  - em falha: IDIS — Instituto para o Desenvolvimento do Investimento Social — chamadas e editais de investimento social — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37
+  - em falha: Fundo Casa Socioambiental — chamadas socioambientais — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35
+  - em falha: CESE — Coordenadoria Ecumênica de Serviço — editais de apoio a projetos populares — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41
+  - em falha: BrazilFoundation — editais de apoio a organizações brasileiras — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41
+  - em falha: Rede Filantropia — editais divulgados pela rede (lida pelo computador do titular: recusa IP estrangeiro) — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41
+  - em falha: Mapa das OSC (Ipea) — editais reunidos no portal — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41
+  - em falha: Prosas — editais e prêmios para OSCs (três caminhos indiretos: listagem da CapitaAI, ângulo do Piloto e coleta assistida) — falha — a rota indireta (capitaai) não lê há 32 h
+- maestro: cobertura 0.0% · esgotados 0
 - rede neural: AUC 0.843 · rotulados 1699 · treinada em 2026-10-14T05:54:08+00:00
 - Cartório: 0.6646 certificado · fluxos do GitHub com falha: []
-- saúde: 7 alerta(s) · índice da sala de controle: 46
+- saúde: 7 alerta(s) · índice da sala de controle: 49
 
 ## Integração
 - contagens: {'repositorio_abertas': 192, 'diagnostico_abertas': 192, 'tela_cartoes': 224, 'fichas': 194, 'sala_controle_abertas': 192}
-- idade (h): {'repositorio': 0.0, 'fluxo': 651.1, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 6.4, 'rede_neural': 651.1, 'saude': 13.8}
+- idade (h): {'repositorio': 0.0, 'fluxo': 652.4, 'fichas': 0.0, 'sala_controle': 0.0, 'status_motores': 0.0, 'maestro': 0.7, 'rede_neural': 652.4, 'saude': 15.2}
 - decisões da titular: 0 · não aplicadas: 0
 
-## Problemas (42)
-- [alta] o comando único não fecha um ciclo há 629.3 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
+## Problemas (48)
+- [alta] o comando único não fecha um ciclo há 630.7 h (passa a cada 30 min) → investigar o fluxo 22 (sem correção automática)
 - [alta] 14 abertas no repositório que não aparecem na tela de oportunidades → refazer a tela
-- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 27 dia(s) (651 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 27 dia(s) (650 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 20 dia(s) (499 h); última leitura 24/10 08:16 → investigar o motor (sem correção automática)
-- [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 27 dia(s) (650 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 26 dia(s) (647 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 27 dia(s) (648 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 6 dia(s) (161 h); última leitura 07/11 10:28 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 27 dia(s) (648 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 21 dia(s) (522 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
-- [alta] motor em falha: CapitaAI — editais e oportunidades de captação, incluindo a lista pública dos editais do Prosas — falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Observatório do Terceiro Setor — editais publicados na seção temática do portal — falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37 → investigar o motor (sem correção automática)
-- [alta] motor em falha: ABCR — Associação Brasileira de Captadores de Recursos — editais divulgados pela associação dos captadores — falha — não lê há 1 dia(s) (31 h); última leitura 12/11 20:37 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Funarte — editais da Fundação Nacional de Artes — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Transferegov — programas e parcerias com OSC abertos na plataforma federal (dados abertos) — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Editais Culturais — editais de cultura reunidos no portal — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
-- [alta] motor em falha: CESE — Coordenadoria Ecumênica de Serviço — editais de apoio a projetos populares — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
-- [alta] motor em falha: BrazilFoundation — editais de apoio a organizações brasileiras — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Rede Filantropia — editais divulgados pela rede (lida pelo computador do titular: recusa IP estrangeiro) — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Mapa das OSC (Ipea) — editais reunidos no portal — falha — não lê há 2 dia(s) (54 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
-- [alta] motor em falha: Prosas — editais e prêmios para OSCs (três caminhos indiretos: listagem da CapitaAI, ângulo do Piloto e coleta assistida) — falha — a rota indireta (capitaai) não lê há 31 h → investigar o motor (sem correção automática)
+- [alta] motor em falha: PNCP — API de contratações (chamamentos e credenciamentos) — falha — não lê há 27 dia(s) (652 h); última leitura 18/10 00:25 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MP-GO — Programa Destina (cadastro de entidades para receber bens e valores de acordos) — falha — não lê há 27 dia(s) (651 h); última leitura 18/10 01:27 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MPT-GO — editais de 5 dias para indicação de destinação de recursos ou bens (PRT 18ª Região) — falha — não lê há 20 dia(s) (500 h); última leitura 24/10 08:16 → investigar o motor (sem correção automática)
+- [alta] motor em falha: MPU — MPF, MPDFT, MPM e MPT nacional: destinação de bens e valores (com CNMP e FDD) — falha — não lê há 27 dia(s) (651 h); última leitura 18/10 01:29 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Adaptador WordPress — sites oficiais pela API pública — falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:55 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Adaptador Mapas Culturais — oportunidades com inscrição aberta — falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:54 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Lei Rouanet — janela de propostas no SALIC e projetos de Goiás (Ministério da Cultura) — falha — não lê há 6 dia(s) (162 h); última leitura 07/11 10:28 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Prefeituras das 25 maiores cidades de Goiás — portais de editais — falha — não lê há 27 dia(s) (649 h); última leitura 18/10 03:49 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Oportunidade Estaduais Governamentais de Goiás — falha — não lê há 21 dia(s) (524 h); última leitura 23/10 08:58 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Farol Cultural — editais de cultura de todo o Brasil, pela API pública do portal — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37 → investigar o motor (sem correção automática)
+- [alta] motor em falha: CapitaAI — editais e oportunidades de captação, incluindo a lista pública dos editais do Prosas — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Observatório do Terceiro Setor — editais publicados na seção temática do portal — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Mapas Culturais — editais das redes estaduais e municipais de cultura que usam a plataforma — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37 → investigar o motor (sem correção automática)
+- [alta] motor em falha: ABCR — Associação Brasileira de Captadores de Recursos — editais divulgados pela associação dos captadores — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Funarte — editais da Fundação Nacional de Artes — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Transferegov — programas e parcerias com OSC abertos na plataforma federal (dados abertos) — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Rede Comuá — editais dos fundos independentes de filantropia — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Fundo Baobá — editais para equidade racial — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Editais Culturais — editais de cultura reunidos no portal — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Fundo Brasil de Direitos Humanos — editais de direitos humanos — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35 → investigar o motor (sem correção automática)
+- [alta] motor em falha: IDIS — Instituto para o Desenvolvimento do Investimento Social — chamadas e editais de investimento social — falha — não lê há 1 dia(s) (32 h); última leitura 12/11 20:37 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Fundo Casa Socioambiental — chamadas socioambientais — falha — não lê há 1 dia(s) (38 h); última leitura 12/11 14:35 → investigar o motor (sem correção automática)
+- [alta] motor em falha: CESE — Coordenadoria Ecumênica de Serviço — editais de apoio a projetos populares — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
+- [alta] motor em falha: BrazilFoundation — editais de apoio a organizações brasileiras — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Rede Filantropia — editais divulgados pela rede (lida pelo computador do titular: recusa IP estrangeiro) — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Mapa das OSC (Ipea) — editais reunidos no portal — falha — não lê há 2 dia(s) (55 h); última leitura 11/11 21:41 → investigar o motor (sem correção automática)
+- [alta] motor em falha: Prosas — editais e prêmios para OSCs (três caminhos indiretos: listagem da CapitaAI, ângulo do Piloto e coleta assistida) — falha — a rota indireta (capitaai) não lê há 32 h → investigar o motor (sem correção automática)
 - [alta] tela mostra 224 oportunidades e o repositório conta 192 → refazer a tela
 - [alta] 3 módulos de teste em quarentena por DEFEITO REAL → corrigir o código e tirar da quarentena (sem correção automática)
-- [media] fluxo sem atualização há 651.1 h (limite 3 h) → refazer a tela
-- [media] maestro sem atualização há 6.4 h (limite 3 h) → ver o fluxo que gera este dado
-- [media] rede_neural sem atualização há 651.1 h (limite 26 h) → ver o fluxo que gera este dado
-- [media] [decidir] motores escolhidos para ler na passagem: 114 de 124 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
-- [media] avaliação do Cartório com gabarito tem 707.0 h (semanal) → disparar o fluxo 39
+- [media] fluxo sem atualização há 652.4 h (limite 3 h) → refazer a tela
+- [media] rede_neural sem atualização há 652.4 h (limite 26 h) → ver o fluxo que gera este dado
+- [media] [decidir] motores escolhidos para ler na passagem: 124 de 124 contrariam a regra — todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) → investigar o comando (sem correção automática)
+- [media] avaliação do Cartório com gabarito tem 708.4 h (semanal) → disparar o fluxo 39
 - [media] 55 livros municipais de outros estados no catálogo (só Goiás tem livros municipais) → refazer a tela
 - [media] 126 página(s)/documento(s) fora da fila após 5 erros iguais → corrigir a rota ou ler no Chrome (sem correção automática)
 - [media] saúde · claude: 239 item(ns) esperando a análise do Claude (próxima: 2026-11-13) → ver o fluxo/arquivo indicado
@@ -151,7 +164,7 @@
 
 ## Workflow (estrutura de 15/10)
 - comando único: 0 ciclo(s) hoje · 48 vermelho(s) · 0 etapa(s) com erro · fases puladas {}
-- cobertura do dia: 8.1% de 124 motores
+- cobertura do dia: 0.0% de 124 motores
 - retentativa: {'aguardando_retentativa': 1184, 'fora_da_fila': 126, 'fora_da_fila_por_escopo': {'outras-oportunidades-1': 8, 'outras-oportunidades-6': 7, 'recorrencia': 4, 'outras-oportunidades-5': 10, 'outras-oportunidades-8': 9, 'outras-oportunidades-3': 11, 'f260-captacao-044': 1, 'outras-oportunidades-2': 4, 'plat-empresas-editais-incentivados': 3, 'f260-captacao-238': 2, 'cartorio': 46, 'outras-oportunidades-7': 7, 'f260-captacao-242': 1, 'f260-captacao-224': 1, 'empresas-incentivadas': 4, 'f260-espalhado-sistema-mirassoldoeste-mt-gov-br': 1, 'f260-captacao-218': 1, 'f260-captacao-113': 3, 'outras-oportunidades-4': 1, 'f260-captacao-001': 1, 'alego-pl': 1}, 'regra': 'volta em 30 min; sai após 5 tentativas com o mesmo erro'} · leitura parcial na fila: 1054
 - curadoria do link oficial: {'em curadoria': 74, 'reprovado': 50, 'aprovado': 40, 'sem link oficial': 26}
 - validação por exceção: trava fechada: acerto do Cartório 77.4% < 85.0% — candidatas vão à frente da conferência humana
@@ -159,7 +172,7 @@
 - legislativo: {'atualizado_em': '2026-10-19T01:36:02+00:00', 'proposicoes': 11}
 
 ## Decisões do Eldorado: agiu como deveria?
-- decidir · motores escolhidos para ler na passagem: **incorreto** (114 de 124) — regra: todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) · ex.: plat-piloto-aberto; pncp-api
+- decidir · motores escolhidos para ler na passagem: **incorreto** (124 de 124) — regra: todo motor pendente ou parcial com tentativa sobrando entra na passagem (sem agenda) · ex.: plat-piloto-aberto; pncp-api
 - qualificar · oportunidades abertas para associação: **correto** (0 de 192) — regra: pregão, registro de preços, credenciamento de prestadores, contratação de empresa, OS da saúde e seleção de pessoal não são oportunidade (ruído ou acompanhar)
 - legislativo · atos legislativos fora das oportunidades: **correto** (0 de 192) — regra: projeto de lei, utilidade pública e orçamento vão ao acompanhamento legislativo, nunca às abertas
 - prazo · oportunidades contadas como abertas: **correto** (0 de 192) — regra: prazo vencido sai das abertas
